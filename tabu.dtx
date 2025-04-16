@@ -177,7 +177,7 @@ lppl copyright 2010-2011 by FC <florent.chervet@free.fr>
 \usepackage{numprint,xfrac,siunitx}                                        % numbers / units / fractions
 \usepackage{embedfile}                                                     % .dtx enclosed in .pdf
 \usepackage{fancyvrb}\fvset{gobble=0,listparameters={\topsep=0pt}}         % verbatim
-\usepackage{interfaces}                                                    % interfaces (à tester aussi avant \documentclass)
+\usepackage{interfaces}                                                    % interfaces (Ã  tester aussi avant \documentclass)
 \usetikz{basic,chains,positioning}                                         % pgf / TikZ
 \usepackage{nccfoots}                                                      % \Footnote{marker}{text}
 \usepackage{embedfile}
@@ -303,7 +303,7 @@ morekeywords=[7]{yellow},
 % \colorlet{pkgcolor}{reflink}
 % \colorlet{refurl}{CornflowerBlue}
 % \def\pkgcolor{\texorpdfstring{\color{pkgcolor}}{}}
-% \catcode`\§ \active   \def§{\@ifnextchar §{\par\nobreak\vskip-2\parskip}{\par\nobreak\vskip-\parskip}}
+% \catcode`\Â§ \active   \defÂ§{\@ifnextchar Â§{\par\nobreak\vskip-2\parskip}{\par\nobreak\vskip-\parskip}}
 % \def\thispackage{\xpackage{{\TabU}}\Xspace}
 % \def\Xpackage#1{\href{http://www.ctan.org/tex-archive/help/Catalogue/entries/#1.html}{\xpackage{#1}}}
 % \def\Underbrace#1_#2{$\underbrace{\vtop to2ex{}\hbox{#1}}_{\footnotesize\hbox{#2}}$}
@@ -541,7 +541,7 @@ morekeywords=[7]{yellow},
 % \smex To get the package,                   &run:          &\textt{etex \thisfile.dtx}                  \\
 % \smex To get the documentation              &run (thrice): &\textt{pdflatex \thisfile.dtx}               \\
 % \leavevmode\hphantom\smex To get the index, &run:          &\textt{makeindex -s gind.ist \thisfile.idx}
-% \end{tabu}§
+% \end{tabu}Â§
 % The \xext{dtx} file is embedded into this pdf file thank to \Xpackage{embedfile} by H. Oberdiek.}
 % }
 %
@@ -3263,7 +3263,7 @@ morekeywords=[7]{yellow},
 %
 % \subsection{Some constants}
 % \label{Some constants}
-%¤<package>%% Constants --------------------------------------------------------
+%Â¤<package>%% Constants --------------------------------------------------------
 %
 %    Here we define the constants used by \thispackage: \TeX{} registers and a few \emph{helper} macros.
 %
@@ -3564,7 +3564,7 @@ morekeywords=[7]{yellow},
 %    \end{macro}
 %
 % \subsubsection{Some helper macros}
-%¤<package>%% Utilities (for internal usage) -----------------------------------
+%Â¤<package>%% Utilities (for internal usage) -----------------------------------
 %
 %    \begin{macro}{\tabu@gobblespace}
 %    \begin{macro}{\tabu@gobbletoken}
@@ -3822,7 +3822,7 @@ morekeywords=[7]{yellow},
 % \label{Rules, colors and vertical adjustment}
 %
 % \subsubsection{\cs{extrarowsep} and \cs{tabulinesep}}
-%¤<package>%% Fixed vertical spacing adjustment: \extrarowsep ------------------
+%Â¤<package>%% Fixed vertical spacing adjustment: \extrarowsep ------------------
 %
 %    \begin{macro}{\extrarowsep}
 %
@@ -3865,7 +3865,7 @@ morekeywords=[7]{yellow},
 %    \end{macrocode}
 %    \end{macro}
 %
-%¤<package>%% Dynamic vertical spacing adjustment: \tabulinesep ----------------
+%Â¤<package>%% Dynamic vertical spacing adjustment: \tabulinesep ----------------
 %
 %    \begin{macro}{\tabulinesep}
 %
@@ -3908,7 +3908,7 @@ morekeywords=[7]{yellow},
 %    \end{macrocode}
 %    \end{macro}
 %
-%¤<package>%% \global\extrarowsep  and  \global\tabulinesep  -------------------
+%Â¤<package>%% \global\extrarowsep  and  \global\tabulinesep  -------------------
 %
 %    \begin{macro}{\tabu@Gsave}
 %    \begin{macro}{\tabu@Grestore}
@@ -3931,7 +3931,7 @@ morekeywords=[7]{yellow},
 %    \end{macro}
 %
 % \subsubsection{Setting code for every row}
-%¤<package>%% Setting code for every row ---------------------------------------
+%Â¤<package>%% Setting code for every row ---------------------------------------
 %
 %    \begin{macro}{\everyrow}
 %
@@ -3981,7 +3981,7 @@ morekeywords=[7]{yellow},
 %    \end{macro}
 %
 % \subsubsection{Setting line styles and colors}
-%¤<package>%% line style and leaders -------------------------------------------
+%Â¤<package>%% line style and leaders -------------------------------------------
 %
 %    \begin{macro}{\newtabulinestyle}
 %
@@ -4170,7 +4170,7 @@ morekeywords=[7]{yellow},
 %    \end{macro}
 %
 % \subsubsection{Parsing line styles}
-%¤<package>%% Parsing the line styles ------------------------------------------
+%Â¤<package>%% Parsing the line styles ------------------------------------------
 %
 %    \begin{macro}{\tabu@getline}
 %
@@ -4414,7 +4414,7 @@ morekeywords=[7]{yellow},
 %    \end{macro}
 %    \end{macro}
 %
-%¤<package>%% The leaders boxes ------------------------------------------------
+%Â¤<package>%% The leaders boxes ------------------------------------------------
 %    \begin{macro}{\tabu@LEADERS}
 %
 %    Here the two leaders boxes \cs\tabu@hleads and \cs\tabu@vleads are built, as well as the leaders macros
@@ -4461,7 +4461,7 @@ morekeywords=[7]{yellow},
 % \subsection{The entry inside \env{tabu}}
 %
 % \subsubsection{\cs{tabu}, \cs{endtabu}, \cs{longtabu} and \cs{endlontabu}}
-%¤<package>%% \tabu \endtabu \tabu* \longtabu \endlongtabu \longtabu* ----------
+%Â¤<package>%% \tabu \endtabu \tabu* \longtabu \endlongtabu \longtabu* ----------
 %
 %    \begin{macro}{\tabu}
 %
@@ -4498,7 +4498,7 @@ morekeywords=[7]{yellow},
 %    \end{macro}
 %
 % \subsubsection{Setting the \env{tabu} target}
-%¤<package>%% Read the target and  then : \tabular or \@array ------------------
+%Â¤<package>%% Read the target and  then : \tabular or \@array ------------------
 %
 %    \begin{macro}{\tabu@settarget}
 %    \begin{macro}{\tabu@begin}
@@ -4553,7 +4553,7 @@ morekeywords=[7]{yellow},
 %    \end{macro}
 %    \end{macro}
 %
-%¤<package>%% \tabu@setup  \tabu@init  \tabu@indent
+%Â¤<package>%% \tabu@setup  \tabu@init  \tabu@indent
 %    \begin{macro}{\tabu@setup}
 %    \begin{macro}{\tabu@init}
 %    \begin{macro}{\tabu@indent}
@@ -4767,7 +4767,7 @@ morekeywords=[7]{yellow},
 %
 %
 % \subsection{The rewriting process: inside the ``\cs{@mkpream} group''}
-%¤<package>%% The Rewritting Process -------------------------------------------
+%Â¤<package>%% The Rewritting Process -------------------------------------------
 %
 % \subsubsection{New column types and private (new) column types}
 %
@@ -4830,7 +4830,7 @@ morekeywords=[7]{yellow},
 %
 %
 % \subsubsection{Rewriting vertical lines and leaders}
-%¤<package>%% The  |  ``column'' : rewriting process --------------------------
+%Â¤<package>%% The  |  ``column'' : rewriting process --------------------------
 %
 %    \begin{macro}{| (private column type)}
 %
@@ -4900,7 +4900,7 @@ morekeywords=[7]{yellow},
 %    \end{macro}
 %
 % \subsubsection{Vertical lines and leaders in the \cs{multicolumn} preamble}
-%¤<package>%% \multicolumn inside tabu environment -----------------------------
+%Â¤<package>%% \multicolumn inside tabu environment -----------------------------
 %
 %    \begin{macro}{\tabu@rewritemulticolumn}
 %
@@ -4938,7 +4938,7 @@ morekeywords=[7]{yellow},
 %
 % \subsubsection{Rewriting \env{tabu X} columns}
 % \label{tabu X column definition}
-%¤<package>%% The X column(s): rewriting process -----------------------------
+%Â¤<package>%% The X column(s): rewriting process -----------------------------
 %
 %    \begin{macro}{X (private column type)}
 %
@@ -5143,7 +5143,7 @@ morekeywords=[7]{yellow},
 %    \end{macro}
 %
 % \subsubsection{Rewritting \cs{usetabu} and \cs{preamble}}
-%¤<package>%% \usetabu  and  \preamble: rewritting process ---------------------
+%Â¤<package>%% \usetabu  and  \preamble: rewritting process ---------------------
 %
 %    The rewritting process is very simple, when all the job has been done
 %    cleverly at the time of \cs\savetabu !!
@@ -5185,7 +5185,7 @@ morekeywords=[7]{yellow},
 %
 % \subsubsection{Controlling the rewritting process}
 %
-%¤<package>%% Controlling the rewritting process -------------------------------
+%Â¤<package>%% Controlling the rewritting process -------------------------------
 %
 %    \begin{macro}{\tabu@rewritefirst}
 %
@@ -5273,7 +5273,7 @@ morekeywords=[7]{yellow},
 %    \end{macro}
 %
 % \subsubsection{The end of the rewritting process: determining the \env{tabu} strategy}
-%¤<package>%% Choosing the strategy --------------------------------------------
+%Â¤<package>%% Choosing the strategy --------------------------------------------
 %
 %    \begin{macro}{\tabu@endrewrite}
 %
@@ -5356,7 +5356,7 @@ morekeywords=[7]{yellow},
 %
 % \subsection{Implementing the strategy at the exit of the \cs{@mkpream} group}
 % \label{implement the strategy}
-%¤<package>%% Implementing the strategy ----------------------------------------
+%Â¤<package>%% Implementing the strategy ----------------------------------------
 %
 % \subsubsection{\cs{tabu@select}}
 %
@@ -5443,7 +5443,7 @@ morekeywords=[7]{yellow},
 %    \end{macro}
 %
 % \subsubsection{General setup for trials: neutralisation of \cs{write} etc.}%
-%¤<package>%% Protections to set up before trials ------------------------------
+%Â¤<package>%% Protections to set up before trials ------------------------------
 %
 %    \begin{macro}{\tabu@setstrategy}
 %
@@ -5497,7 +5497,7 @@ morekeywords=[7]{yellow},
 %    \end{macro}
 %
 % \subsubsection{Collecting the \env{tabu} body}
-%¤<package>%% Collecting the environment body ----------------------------------
+%Â¤<package>%% Collecting the environment body ----------------------------------
 %
 %    The macro collect the stuff inside \cs\@array: depending on the global vertical alignment
 %    parameter for the whole tabular, the tabular is built inside a \cs\vbox, \cs\vtop or \cs\vcenter
@@ -5544,7 +5544,7 @@ morekeywords=[7]{yellow},
 %
 % \subsection{One trial after the other (\cs{tabu@strategy})}
 % \label{One trial after the other}
-%¤<package>%% The trials: switching between strategies -------------------------
+%Â¤<package>%% The trials: switching between strategies -------------------------
 %
 % \subsubsection{Switching between the strategies}
 %
@@ -5764,7 +5764,7 @@ morekeywords=[7]{yellow},
 %
 % \subsection{The algorithms: Measuring the \env{tabu} box}
 % \label{The algorithms: Measuring the tabubox}
-%¤<package>%% The algorithms: compute the widths / stop or go on ---------------
+%Â¤<package>%% The algorithms: compute the widths / stop or go on ---------------
 %
 %    At the end of each trial, we call \cs\tabu@arith (or \cs\tabu@spreadarith)
 %    to computes the widths and update the values.
@@ -5907,7 +5907,7 @@ morekeywords=[7]{yellow},
 %    \end{macro}
 %
 % \subsubsection(\xext{log} report){Reporting in the \xext{log} file (\textt{debugshow option})}
-%¤<package>%% Reporting in the .log file ---------------------------------------
+%Â¤<package>%% Reporting in the .log file ---------------------------------------
 %
 %    \begin{macro}{\tabu@message@defaulttarget}
 %    \begin{macrocode}
@@ -6068,7 +6068,7 @@ morekeywords=[7]{yellow},
 %    \end{macro}
 %
 % \subsection(Natural width measure){Measuring the natural width of columns (\xpackage{varwidth} code from D. Arseneau)}
-%¤<package>%% Measuring the natural width (varwidth) - store the results -------
+%Â¤<package>%% Measuring the natural width (varwidth) - store the results -------
 %
 %    \begin{macro}{\tabu@startpboxmeasure}
 %
@@ -6180,7 +6180,7 @@ morekeywords=[7]{yellow},
 %    \end{macro}
 %
 % \subsection(Vertical measure){Measuring the height and depths of rows}
-%¤<package>%% Measuring the heights and depths - store the results -------------
+%Â¤<package>%% Measuring the heights and depths - store the results -------------
 %
 %    \begin{macro}{\tabu@verticalmeasure}
 %
@@ -6314,7 +6314,7 @@ morekeywords=[7]{yellow},
 %    \end{macro}
 %
 % \subsection(Horizontal lines inside tabu){Horizontal lines inside \env{tabu}: \cs{tabucline}, \cs{firsthline} and \cs{lasthline}}
-%¤<package>%% \firsthline and \lasthline corrections ---------------------------
+%Â¤<package>%% \firsthline and \lasthline corrections ---------------------------
 %
 % \subsubsection{Horizontal lines: multiple \cs{firsthline} / \cs{lasthline}}
 %
@@ -6485,7 +6485,7 @@ morekeywords=[7]{yellow},
 %    \end{macro}
 %
 % \subsubsection{Horizontal lines: \cs{tabucline}}
-%¤<package>%% Horizontal lines : \tabucline ------------------------------------
+%Â¤<package>%% Horizontal lines : \tabucline ------------------------------------
 %
 %    \begin{macro}{\tabucline}
 %
@@ -6583,7 +6583,7 @@ morekeywords=[7]{yellow},
 %
 %
 % \subsection{Numbers in \env{tabu}}
-%¤<package>%% Numbers: siunitx S columns  (and \tabudecimal) -------------------
+%Â¤<package>%% Numbers: siunitx S columns  (and \tabudecimal) -------------------
 %
 % \subsubsection{\cs{tabudecimal}}
 %
@@ -6663,7 +6663,7 @@ morekeywords=[7]{yellow},
 %
 %
 % \subsection(Verbatim with X columns){Verbatim inside \textt{tabu} with \textt X columns}
-%¤<package>%% Verbatim inside X columns ----------------------------------------
+%Â¤<package>%% Verbatim inside X columns ----------------------------------------
 %
 %    \begin{macro}{\tabu@verbatim}
 %
@@ -6773,7 +6773,7 @@ morekeywords=[7]{yellow},
 % \sectionformat\subsection{bookmark={color*=DarkRed}}
 % \subsection{\cs{savetabu}}
 %
-%¤<package>%% \savetabu --------------------------------------------------------
+%Â¤<package>%% \savetabu --------------------------------------------------------
 %
 %    \begin{macro}{\savetabu}
 %
@@ -6872,7 +6872,7 @@ morekeywords=[7]{yellow},
 % \subsection(\cs{rowfont}){\csbf{rowfont}}
 %
 % \subsubsection(Font and alignment){Setting font and alignment specification}
-%¤<package>%% \rowfont ---------------------------------------------------------
+%Â¤<package>%% \rowfont ---------------------------------------------------------
 %
 %    \begin{macro}{\rowfont}
 %
@@ -6934,7 +6934,7 @@ morekeywords=[7]{yellow},
 %    \end{macro}
 %
 % \subsubsection(Tokens preparation){Preparing stuff to be able to use \cs{rowfont}}
-%¤<package>%% \tabu@prepnext@tok -----------------------------------------------
+%Â¤<package>%% \tabu@prepnext@tok -----------------------------------------------
 %
 %    \begin{macro}{\tabu@prepnext@tok}
 %
@@ -7037,7 +7037,7 @@ morekeywords=[7]{yellow},
 %    \end{macro}
 %
 % \subsubsection(Glue neutralisation){Neutralisation of glues and alignment modification}
-%¤<package>%% Neutralisation of glues ------------------------------------------
+%Â¤<package>%% Neutralisation of glues ------------------------------------------
 %
 %    \begin{macro}{\tabu@cellleft}
 %    \begin{macro}{\tabu@celllalign}
@@ -7198,7 +7198,7 @@ morekeywords=[7]{yellow},
 % \label{Taking care of footnotes and arraybackslash}
 %
 % \subsubsection{Footnotes and hyperfootnotes}
-%¤<package>%% Taking care of footnotes and hyperfootnotes ----------------------
+%Â¤<package>%% Taking care of footnotes and hyperfootnotes ----------------------
 %
 %    \begin{macro}{\tabu@footenotetext}
 %
@@ -7261,7 +7261,7 @@ morekeywords=[7]{yellow},
 %    \end{macro}
 %
 % \subsubsection{\cs{centering}, \cs{raggedright}, \cs{raggedleft} and \cs{@normalcr}}
-%¤<package>%% No need for \arraybackslash ! ------------------------------------
+%Â¤<package>%% No need for \arraybackslash ! ------------------------------------
 %
 % Inside \env*{tabu}, no need to add \cs\arraybackslash after such commands.
 %
@@ -7285,7 +7285,7 @@ morekeywords=[7]{yellow},
 %    \end{macrocode}
 %
 % \subsubsection{Utilities: \env{tabu} \cs{fbox}}
-%¤<package>%% Utilities: \fbox  \fcolorbox  and \tabudecimal -------------------
+%Â¤<package>%% Utilities: \fbox  \fcolorbox  and \tabudecimal -------------------
 %
 % \cs\tabu@fbox works exactly like \LaTeX{} \cs\fbox but allows the syntax: \cs\fbox\cs\bgroup...\cs\egroup
 % suitable for use inside tabular columns. \cs\fbox is \cs\let to \cs\tabu@fbox at the entry inside a \env*{tabu}.
@@ -7320,7 +7320,7 @@ morekeywords=[7]{yellow},
 %
 % \subsection{Corrections}
 % \label{Corrections}
-%¤<package>%% Corrections (arydshln, delarray, colortbl) -----------------------
+%Â¤<package>%% Corrections (arydshln, delarray, colortbl) -----------------------
 %
 % \subsubsection(delarray compatibility fix){delarray comptability fix for \xpackage{colortbl} and \xpackage{arydshln}}
 %
@@ -7418,8 +7418,8 @@ morekeywords=[7]{yellow},
 %    \end{macrocode}
 %
 % \subsubsection{\xpackage{longtable} \cs{@startpbox}: \cs{everypar} needed}
-%¤<package>%% Correction for longtable' \@startbox definition ------------------
-%¤<package>%%    => \everypar is ``missing'' : TeX should be in vertical mode
+%Â¤<package>%% Correction for longtable' \@startbox definition ------------------
+%Â¤<package>%%    => \everypar is ``missing'' : TeX should be in vertical mode
 %
 %    \begin{macro}{\tabu@LT@startpbox}
 %
@@ -7444,7 +7444,7 @@ morekeywords=[7]{yellow},
 % \label{Package options and Initialisation}
 %
 % \subsubsection{\cs{tracingtabu} and the package options}
-%¤<package>%% \tracingtabu  and  the package options ------------------
+%Â¤<package>%% \tracingtabu  and  the package options ------------------
 %
 %    \begin{macro}{delarray (package option)}
 %
@@ -7521,7 +7521,7 @@ morekeywords=[7]{yellow},
 %    \end{macro}
 %
 % \subsubsection{Initialisation and setup \cs{AtBeginDocument}}
-%¤<package>%% Setup \AtBeginDocument
+%Â¤<package>%% Setup \AtBeginDocument
 %
 % At the end of the \xpackage{tabu} package:
 % \begin{itemize}
@@ -7599,7 +7599,7 @@ morekeywords=[7]{yellow},
 }% \tabu@warn@cellspace
 %    \end{macrocode}
 %
-%¤<package>%% tabu Package initialisation
+%Â¤<package>%% tabu Package initialisation
 %
 %    \cs\ProcessOption\stform* is much quicker than without the star...
 %

@@ -1,0 +1,253 @@
+\chapter{Magnetische Räumliche Signalmerkmale}
+\label{chap:raeumliches_merkmal} 
+Ziel dieser Arbeit ist es, Orientierungen von kinematischen Elementen und der Positionen zu schätzen. Die Orientierungen lassen sich mit räumlichen Vektoren beschreiben. Die Merkmale für die Signalverarbeitung sollen sich daran orientieren. In diesem Kapitel werden zunächst Verfahren beschrieben mit denen magnetische Felder analytisch beschrieben werden können. Daraus abgeleitet wird ein räumliches Signalverarbeitungsmerkmal eingeführt und die Zusammenhänge zwischen Position, Orientierung und diesem Merkmal vorgestellt und diskutiert.
+
+\section{Modellierung magnetischer Felder}
+
+\subsection{Biot-Savart}
+
+Theoretische
+Elektrotechnik
+Marco Leone
+Elektromagnetische Feldtheorie für
+Ingenieure
+- kurze Beschreibung wie mit Biot-Savart magnetische Felder beschrieben werden, nur für einen Stromfaden 
+
+Bild von Biot Savart
+
+\subsection{Magnetischer Dipol}
+Nolting
+Grundkurs
+Theoretische Physik 3
+
+Bild Dipol Berechnung
+\subsubsection{Herleitung des Dipolfeldes}
+
+\subsubsection{Bestimmung des Dipolmoment}
+\subsubsection{Betrag des Magnetfeldes}
+
+\subsection{Quasistationäre Felder}
+Nolting
+Grundkurs
+Theoretische Physik 3
+
+\section{3D Spule}
+Bild und Simulationsbild
+Wieso ist das gut? Lokalisierungsansätze mit 3D- Sensoren \dots
+
+In dieser Arbeit wird eine 3D-Spule zur Anregung künstlicher Magnetfelder verwendet. 3D-Spule sind 3 ineinander verschachtelte Spulen. Jede einzelne hat ihre Öffnung in eine unterschiedliche Richtung, und die Normalenvektoren dieser Flächen stehen senkrecht zueinander. Damit stehen auch die resultierenden Dipolmomente senkrecht zueinander und diese drei Dipolmomente spannen ein Koordinatensystem auf. In Abbildung \ref{fig:3DCoil} ist eine kleine 3D-Spule und das zugehörige Simulationsobjekt dargestellt. 
+
+\begin{figure}
+    \centering
+    \subfloat[Simulation Object]{
+        \inputTikZ{0.6}{03_raeumliches_merkmal/images/3DCoil.tikz}
+        \label{fig:Sim3D}
+    }
+    \subfloat[3D coil]{
+        \begin{overpic}[width=0.5\textwidth,trim = 0 0 0 0]{03_raeumliches_merkmal/images/Real_3D_Coil_with_legend.pdf}
+            \put(10,10){3\,cm}
+            %\put(2,25){3\,cm}
+        \end{overpic}
+        \label{fig:Real3D}
+    }
+    \caption{3D-Spule: \subref{fig:Sim3D} skizziert das modellierte Simulationsobjekt. Ein Foto der entsprechenden Realisierung ist in \subref{fig:Real3D} zu sehen. Beide Objekte bestehen aus drei zueinander orthogonal stehenden Spulen. Die rote Spule steht für die X-Spule, die grüne für die Y-Spule und die blaue für die Z-Spule. Somit  }
+    \label{fig:3DCoil}
+\end{figure}
+
+Die Spule kann unterschiedlich angesteuert werden. Zum einen gibt es die Möglichkeit, die drei Spulen einzeln anzusteuern und diese auf Sensorseite wieder voneinander zu trennen. Zum anderen können die drei Dipole so angesteuert werden, sodass durch Überlagerung ein resultierender Dipol in beliebiger Richtung erzeugt werden kann. Die zweite Ansteuerung wird in dieser Arbeit verwendet.
+
+\section{Sensormodellierung}
+In diesem Kapitel werden Zusammenhänge zwischen magnetischen Aktuatoren und magnetischen Sensoren hergeleitet. Um die Herleitung möglichst einfach zu halten wird der Sensor als ideal angenommen. „Ideal“ bedeutet, dass der Sensor in einem einzigen Punkt lokalisiert ist und dass die Ausgabe des Sensors eine ungestörte Projektion des Dipolfeldes auf die Hauptsensorachse ist. Der Ausgang $B\tindex{sensor}(\vec{r},\vec{e}\tindex{s})$ ergibt sich dann als
+
+\begin{equation}
+    B\tindex{sensor}(\vec{r},\vec{e}_s) =  \vec{B}\tindex{dip}(\vec{r}) \cdot \vec{e}_s.
+    \label{eq:Sensorprojektion}
+ \end{equation}
+
+\section{Maximalvektor}
+\label{sec:maximum_vector}
+Der Maximalvektor ist ein Signalmerkmal, das verwendet werden kann, wenn 3D-Aktuatoren und 1D-Sensoren verwendet werden. Dabei sei angenommen, dass der Aktuator im Ursprung und der Sensor am Ort $\vec{r}$ mit der Sensorachse $\vec{e}\tindex{s}$ lokalisiert ist. Der Maximalvektor beschreibt die Polarisierungsrichtung des magnetischen Dipols in welcher das Sensorausgangssignal maximal wird.
+
+\subsection{Lokalisierungszusammenhänge}
+\label{subsec:Lokalisierungszusammenhänge}
+    \subsubsection{Orientierung und normierte Position}
+Im Folgenden soll der Zusammenhang zwischen dem Maximalvektor (MV) $\vec{e}\tindex{max}$, dem normierten Positionsvektor $\vec{e}\tindex{r}$ und der Sensororientierung $\vec{e}\tindex{s}$ hergeleitet werden. 
+
+Da ein Zusammenhang zwischen den einzelnen normierten Vektoren gesucht wird, nutzen wir eine normierte Beschreibung des Dipolfeldes und kommen zu folgender Beschreibung
+
+\begin{equation}
+    \vec{B}\tindex{norm} = \frac{4 \pi r^3}{ m } \vec{B}\tindex{dip}(\vec{r}) =  3\vec{e}_r(\vec{e}_\text{m}\cdot\vec{e}_r)-\vec{e}_\text{m}.
+    \label{eq:magDipNorm}
+\end{equation}
+
+
+\begin{figure}[h!]
+    \centering
+    \begin{overpic}[width=0.7\textwidth,trim = 0 0 0 0]{04_lokalisierung/images/Angledescription.pdf}
+        \put(82,44){$\phi\tindex{s}$}
+        \put(62,25){$\phi$}
+        \put(20,14){$\phi\tindex{m}$}
+        \put(6,30){$\theta\tindex{m}$}
+        \put(13,26){$\vec{m}$}
+        \put(90,5){$x$}
+        \put(57,60){$y$}
+        \put(2,62){$z$}
+        \put(40,30){$\vec{r}$}
+        \put(75,47){$\vec{e}\tindex{s}$}
+    \end{overpic}
+    \caption{
+    Verwendetes Setup für die Herleitung: $\vec{e}\tindex{r}$ und $\vec{e}\tindex{s}$ liegen beide in der $xy$-Ebene. $\phi\tindex{m}$ und $\theta\tindex{m}$ definieren die Richtung des rotierenden magnetischen Dipols $\vec{e}\tindex{m}$ in Kugelkoordinaten.}
+    \label{fig:Winkelbeschreibung}
+\end{figure}
+
+Für die Herleitung werden zunächst einige Annahmen getroffen. Zwei nicht kolineare Vektoren spannen immer eine Ebene auf. Daher kann das Koordinatensystem so gelegt werden, dass $\vec{e}\tindex{r}$ und $\vec{e}\tindex{s}$ in der $xy$-Ebene liegen. Die beiden Vektoren seien daher wie folgt definiert.
+\begin{equation}
+    \vec{e}_r = \left[\begin{array}{c} \cos(\phi)\\ \sin(\phi) \\ 0\end{array}\right] \quad \textrm{and} \quad
+    \vec{e}_s = \left[\begin{array}{c} \cos(\phi\tindex{s})\\ \sin(\phi\tindex{s}) \\ 0\end{array}\right].
+    \label{eq:defErEs}
+\end{equation}
+Die dreidimensionale magnetische Quelle hat ein konstantes magnetisches Dipolmoment der Stärke $m$ die jedoch in jede beliebige Richtung zeigen kann. Die Definition der Richtung ist an die Rücktransformation von Kugelkoordinaten in kartesische Koordinaten angelehnt. Das Dipolmoment ist in kartesischen Koordinaten definiert wie folgt
+\begin{equation}
+    \vec{e}_m = \left[\begin{array}{c} \cos(\phi\tindex{m})\sin(\theta\tindex{m})\\ \sin(\phi\tindex{m})\sin(\theta\tindex{m}) \\ \cos(\theta\tindex{m}) \end{array}\right].
+    \label{eq:defEm}
+ \end{equation}
+Durch einsetzen der Vektordefinition in Gl. \ref{eq:magDipNorm} kommt man zu den folgenden vektoriellen Komponenten des Dipolfeldes
+
+ \begin{eqnarray}
+    B\tindex{norm,x}(\phi,\phi\tindex{m},\theta\tindex{m})&=&\big[3\cos(\phi)^2-1\big]\,\cos(\phi\tindex{m})\,\sin(\theta\tindex{m}) \nonumber \\ &+&  3 \,\sin(\phi\tindex{m})\,\sin(\theta\tindex{m})\,\sin(\phi)\,\cos(\phi),
+    \label{eq:magNormX} \\[2mm]
+    B\tindex{norm,y}(\phi,\phi\tindex{m},\theta\tindex{m})&=&\big[3\sin(\phi)^2-1\big]\,\sin(\phi\tindex{m})\,\sin(\theta\tindex{m}) \nonumber\\ &+& 3 \,\cos(\phi\tindex{m})\,\sin(\theta\tindex{m})\,\cos(\phi)\,\sin(\phi),
+    \label{eq:magNormY} \\[2mm]
+    B\tindex{norm,z}(\theta\tindex{m}) &=& - \cos(\theta\tindex{m}).
+    \label{eq:magNormZ}
+\end{eqnarray}
+Mit Gl. \ref{eq:magDipSensor} kommt man zum Sensorsignal $B\tindex{sensor}$
+
+\begin{equation}
+    B\tindex{sensor}(\phi,\phi\tindex{s},\phi\tindex{m},\theta\tindex{m},r) =  \frac{ m }{4 \pi r^3} \big((\cos(\phi\tindex{s})\, B\tindex{norm,x}(\phi,\phi\tindex{m},\theta\tindex{m}) + \sin(\phi\tindex{s})\, B\tindex{norm,y}(\phi,\phi\tindex{m},\theta\tindex{m})\big).
+    \label{eq:normSensor}
+\end{equation}
+
+Bezüglich einer Varierung von $\theta\tindex{m}$, wird das Sensorsignal maximal wenn $\theta\tindex{m} = \frac{\pi}{2}$. Dies zeigt außerdem, dass die Komponente des rotierenden Dipols, die senkrecht zur von $\vec{e}\tindex{r}$ und $\vec{e}\tindex{s}$ aaufgespannten Ebene liegt, keinen Einfluss auf das Sensorsignal hat. Diese Beobachtung zeigt, dass der MV in dieser aufgespannten Ebene liegen muss. Diese Erkenntnis vereinfacht die Problemstellung zu einem 2D-Problem und kann daher in einer Ebene weiter betrachtet werden.
+
+Um einen Zusammenhang zwischen den drei Vektoren zu erhalten wird nun angenommen, dass der Sensor auf $x$-Achse lokalisiert sei. Die Vektoren sind in kartesischen Koordinaten wie folgt definiert
+
+\begin{equation}
+    \vec{e}_r = \left[\begin{array}{c} 1\\ 0 \end{array}\right],\qquad
+    \vec{e}_m = \left[\begin{array}{c} \cos(\phi\tindex{m}) \\ \sin(\phi\tindex{m}) \end{array}\right],\qquad
+    \vec{e}_s = \left[\begin{array}{c} \cos(\phi\tindex{s})\\ \sin(\phi\tindex{s})\end{array}\right].
+    \label{eq:defErEmEs}
+\end{equation}
+Dies führt zum folgenden magnetischen normierten Feld für die einzelnen Komponenten $B\tindex{norm,x},B\tindex{norm,y},B\tindex{norm,z}$ führt 
+
+\begin{eqnarray}
+    B\tindex{norm,x}(\phi) &=& 2  \cos(\phi\tindex{m}),
+    \label{eq:magNorm2DX}\\
+    B\tindex{norm,y}(\phi) &=& - \sin(\phi\tindex{m}),
+    \label{eq:magNorm2DY}\\
+    B\tindex{norm,z}(\phi) &=& 0.
+    \label{eq:magNorm2DZ}\\
+\end{eqnarray}
+Die Projektion auf die Sensorachse führt zu:
+\begin{equation}
+    B\tindex{sensor}(\phi\tindex{s},\phi\tindex{m})= \frac{ m }{4 \pi r^3} \big( 2  \cos(\phi\tindex{m})  \cos(\phi\tindex{s}) - \sin(\phi\tindex{m})  \sin(\phi\tindex{s}) \big).
+    \label{eq:formel12}
+\end{equation}
+Es wird der Wert $\phi\tindex{max}$ von $\phi\tindex{m}$ gesucht, für den $B\tindex{sensor}$ maximal wird. Dafür wird Gleichung \ref{eq:formel12} nach $\phi\tindex{m}$ differenziert und man erhält einen Zusammenhang zwischen $\phi\tindex{max}$ und $\phi\tindex{s}$.
+\begin{equation}
+    \frac{\text{d}B_\text{sensor}(\phi\tindex{m})}{d\phi\tindex{m}}=\frac{ m }{4 \pi r^3}\left ( -2 \sin(\phi\tindex{m})\cos(\phi\tindex{s})-\sin(\phi\tindex{s})  \cos(\phi\tindex{m})\right )
+    \label{eq:formel13}
+\end{equation}
+
+\begin{equation}
+    -2 \sin(\phi\tindex{max})\cos(\phi\tindex{s})-\sin(\phi\tindex{s})  \cos(\phi\tindex{max}) = 0.
+\end{equation}
+\begin{equation}
+    -2\cdot\tan(\phi\tindex{max})= \tan(\phi\tindex{s}).
+    \label{eq:relMaxS}
+\end{equation}
+    
+    Gleichung \ref{eq:relMaxS} zeigt einen Zusammenhang zwischen $\vec{e}\tindex{max}$,$\vec{e}\tindex{r}$ und $\vec{e}\tindex{s}$. Dieser Zusammenhang gilt nicht nur für $\phi = 0$ sondern gilt auch wenn der Sensor nicht auf der $x$-Achse lokalisiert sind. In Abbildung \ref{fig:maxvectorAcngles} ist diese Veralgemeinerung gezeigt. 
+    
+    \begin{figure}[h!]
+\centering
+\begin{overpic}[width=1\textwidth,trim = 0 0 0 0]{04_lokalisierung/images/MaxvectorAngles.pdf}
+    \put(75,24){$\phi\tindex{s}$}
+    \put(78,20.5){$\phi\tindex{max}$}
+    \put(90,2){$x$}
+    \put(44,2){$x$}
+    \put(48,20){$y$}
+    \put(0,20){$y$}
+    \put(20,2){$\vec{r}$}
+    \put(55,10){$\vec{r}$}
+    \put(69,22){$\vec{e}\tindex{s}$}
+    \put(30,10){$\vec{e}\tindex{s}$}
+    \put(33,7){$\phi\tindex{s}$}
+    \put(37,2.5){$\phi\tindex{max}$}
+    \put(63,8){$\phi$}
+    \put(5,2){3D-Spule}
+    \put(50,2){3D-Spule}
+    \put(20,6){Sensor}
+    \put(63,18){Sensor}
+    \put(75,16){$\vec{e}\tindex{max}$}
+    \put(28,1){$\vec{e}\tindex{max}$}
+\end{overpic}
+\caption{ Die Beziehung in Gleichung\,\ref{eq:formel14} ist unabhängig vom Winkel $\phi$. Außerdem wird die eindeutige Beziehung zwischen den 3 Einheitsvektoren $\vec{e}_s, \vec{e}_{max},$ und $\vec{e}_r$ gezeigt.}
+\label{fig:maxvectorAcngles}
+\end{figure}
+    
+    Dieser kann genutzt werden um bei bekanntem $\vec{e}\tindex{r}$ und detektiertem Maximalvektor $\vec{e}\tindex{max}$ das zugehörige $\vec{e}\tindex{s}$ zu bestimmen. Die zugehörige Berechnungsvorschrift wird im folgenden einmal gezeigt. Hinzufügen Verallgemeinerung Formel relmaxs
+
+
+\begin{enumerate}
+
+    \item Zunächst wird die Rotationsachse bestimmt $\vec{e}_\text{n}$:
+    %
+    \begin{equation}
+        \vec{e}_n = \frac{\vec{e}\tindex{max} \times \vec{e}_r }{\|\vec{e}\tindex{max} \times \vec{e}_r\|}.
+        \label{eq:formel15}
+    \end{equation}
+    
+    \item Im zweiten Schritt wird der Winkel zwischen MV und dem normierten Positionsvektor bestimmt:
+    %
+    \begin{equation}
+        \phi\tindex{max} = \arccos(\vec{e}\tindex{max} \cdot \vec{e}_r).
+        \label{eq:formel16}
+    \end{equation}
+    
+    \item Anschließend wird der Winkel zwischen dem Ortseinheitsvektor und der Sensorausrichtung aus Gl. \ref{eq:relMaxS}:
+    %
+    \begin{equation}
+        \phi\tindex{s} = \arctan\big(-2\tan(\phi\tindex{max})\big).
+        \label{eq:formel17}
+    \end{equation}
+    
+    \item  Abschließend kann für jeden $\vec e_r$ die Sensororientierung $\vec e_\text{s}$ wie folgt berechnet werden:
+    %m
+    \begin{equation}
+        \vec{e}_\text{s} = \cos(\phi\tindex{s})(\vec{e}_n \times \vec{e}_r)\times \vec{e}_n + \sin(\phi\tindex{s}) (\vec{e}_n \times\vec{e}_r).
+        \label{eq:formel18}
+    \end{equation}
+    \end{enumerate}
+
+    Daraus ergibt sich, dass mit dem MV für jede relative Position eine Sensororientierung bestimmt werden kann. Die Verteilung der möglichen Positions- Orientierungspaare sind in Abbildung \ref{fig:PotentialPoses} dargestellt.
+    
+    \begin{figure}[h]
+        \centering
+        \inputTikZ{0.5}{04_lokalisierung/images/potentialposes.tikz}
+        \caption{ Blaue Vektoren: Berechnete Sensorausrichtungen $\vec e_s$ für verschiedene Werte der Sensorposition $\vec r$. Der Startpunkt jedes blauen Vektors entspricht dem entsprechenden $\vec r$. Gelber Vektor: Der maximale Vektor im Ursprung, immer in $y$-Richtung polarisiert. Beachten Sie, dass die Längen der blauen Vektoren hier nicht von Interesse sind, da nur die Richtungen relevant sind.}
+        \label{fig:PotentialPoses}
+    \end{figure} 
+
+	\subsubsection{Distanz zwischen Sensor und Quelle}
+        Die Ausrichtung eines Einheitsvektors lässt sich mit 2 Winkeln beschreiben und enthält daher zwei Informationen. Mit einer 3D-Spule lassen sich wie im Grundlagenkapitel gezeigt, drei orthogonale Signale erzeugen aus denen sich dann drei Informationen extrahieren lassen. Als dritte Information definieren wir die Länge $A$ des Maximalvektors. Diese ist in den Grundlagen als Betrag eines 3D-Spulenfeldes eingeführt worden. Der Sensor misst eine gewichtete Überlagerung der drei Spulensignale. Die Gewichtung erfolgt über die in den Grundlagen beschriebenen Übertragungsfaktoren. Mit den einzelnen Übertragungsfaktoren $G\tindex{x}(\vec{r}),G\tindex{y}(\vec{r}),G\tindex{z}(\vec{r})$ und den Spulensignalen lässt sich das Signal am Sensor wie folgt beschreiben:
+        \begin{equation}
+            B\tindex{sensor}(t,\vec{r}) = G\tindex{x}(\vec{r}) S\tindex{x}(t) +G\tindex{y}(\vec{r}) S\tindex{y}(t) + G\tindex{z}(\vec{r}) S\tindex{z}(t).
+            \label{eq:GewSensSignal}
+        \end{equation}
+        Hier muss nochmal nachgearbeitet werden.
+        
+        Definition der Intensität, Zusammenhang zwischen Intensität und Distanz, Zusammenhang zwischen normierter Position und Distanz.
+
+        Der Sensor misst eine gewichtete Summe $B\tindex{sensor}$ der drei Spulensignale $S\tindex{x}t),S\tindex{y}(t),S\tindex{z}(t)$. Die Gewichtung der einzelnen Signale wird durch die Dipolnäherung beschrieben $G\tindex{x}(\vec{r}),G\tindex{y}(\vec{r}),G\tindex{z}(\vec{r})$
+ 

@@ -1,10 +1,10 @@
  \documentclass[
 	twoside,
-	numbers=noenddot,
+	numbers=noenddot, 
 	a4paper, 12pt,
 	chapterprefix=true, appendixprefix=true,    % Kapitel 1 Einleitung oder 1 Einleitung 
 	listof=totoc                                % Abbildungs/Tabellenverzeichnis
-]{scrbook}
+]{scrbook} 
 
 %========================================================================================
 % How-to-compile
@@ -39,6 +39,7 @@
 \usepackage{amssymb}
 \usepackage{bm}
 \usepackage{blindtext}
+\usepackage{cases}
 %\usepackage[caption=false,font=footnotesize]{subfig}                                           % sfrac
 \usepackage{color}
 \usepackage[section]{placeins}        % nicht zu weit "floaten..."
@@ -230,12 +231,12 @@
    %========================================================================================
    % Konzept
    %========================================================================================
-   \input{03_konzept/konzeption}
+   \input{03_raeumliches_merkmal/raeumliches_merkmal}
 
       %========================================================================================
    % Konzept
    %========================================================================================
-   \input{04_algorithmik/algorithmik}
+   \input{04_lokalisierung/lokalisierung}
    
    %========================================================================================
    % Simulationen

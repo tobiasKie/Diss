@@ -1,13 +1,131 @@
-\chapter{Umsetzung}
-\label{chap:umsetzung}
+\chapter{Signalverarbeitung}
+\label{chap:signalverarbeitung}
 
   \section{Allgemeines zum Kapitel}
   \label{sec:allgemeines}  
   \section{Hardware}
 	\section{Implementierung}
+  \subsection{Vorverarbeitung}
+  \subsection{Merkmalsextraktion}
+Das vorgestellte Signalmerkmal muss für eine Echtzeitanwendung effizient aus dem Signalverlauf extrahiert werden können. Dafür werden zunächst zwei unterschiedliche Verfahren gezeigt. Zum einen ein räumliches Verfahren welches ein zeitlich rotierenden Dipol erzeugt und eines welches drei orthogonale Signale verwendet, die auf Sensorseite wieder voneinander getrennt werden. 
 
-  \section{Diskussion}
-  \label{sec:diskussion}
+In beiden Fällen gibt es drei Merkmale zu extrahieren. Diese können entweder in sphärischen Koordinaten (wie beim MV) oder in kartesischen Koordinaten. Diese lassen sich beliebig ineinander umrechnen. In beiden Fällen wird eine 3D-Spule verwendet
+	\subsubsection{Zeitlich Räumlich rotierendes Feld}
+  Die 3D-Spule wird so angesteuert, dass der resultierende magnetische Dipol zum einen eine konstante Intensität und zum anderen im dreidimensionalen Raum rotiert. 
+  \begin{equation}
+    \vec{m}(t) = m_0 \left[\begin{array}{c} \cos(\omega_\phi t) \sin(\omega_\theta t)\\ \sin(\omega_\phi t)\sin(\omega_\theta t)\\ \cos(\omega_\theta t) \end{array}\right].
+    \label{eq:rotDipole}
+  \end{equation}
+        Die Ansteuerung orientiert sich dabei an der Rücktransformation von Kugelkoordinaten in kartesische Koordinaten. So wird ein konstantes magnetisches Dipolmoment sichergestellt und der Dipol in allen drei Dimensionen rotiert. 
+
+        Die Frequenzen werden so gewählt, dass $\omega_\phi<\omega_\phi$ ist. Die Frequenzen müssen entsprechend der verfügbaren Bandbreite gewählt werden. Je größer die Bandbreite, desto größer kann $\omega_\phi$ gewählt werden. Sinnvoll ist es das Verhältnis der beiden Frequenzen $N_\omega>\omega_\theta / \omega_\phi = 10$ zu wählen.
+
+        Das triviale Verfahren den MV zu bestimmen wäre es, eine Periode der langsameren Frequenz abzuwarten und den Zeitpunkt des maximalen Wertes zu speichern und die zugehörigen Stromwerte zu normieren und als MV zu verwenden. An diesem Verfahren gibt es ein Problem, in einer begrenzten Zeit kann der Raum nur quantisiert abgetastet werden. Mit unendlich kleiner Abtastung würde die Detektion entsprechend lange dauern. In Abbildung \ref{fig:DipoleTrack} ist ein Verlauf des Dipolmoments über die Zeit zu sehen. In dieser Abbildung ist gut zu sehen, dass nur ein Bruchteil des Raumes abgetastet wird.
+
+        \begin{figure}[htb]
+            \centering
+            \scalefont{1.3}
+            \inputTikZ{0.6}{04_lokalisierung/images/DipoleTrack.tikz}
+            \caption{ Bahn des magnetischen Dipols $\vec m (t)$ mit Startpunkt im Ursprung als Funktion der Zeit. Die Spitze von $\vec m$ bewegt sich auf der Oberfläche einer Kugel mit Radius $m_0$ für $N_\omega=\omega_\theta / \omega_\phi = 10$.}
+            \label{fig:DipoleTrack}
+        \end{figure}
+        Die Idee ist, die Nulldurchgänge des Signals zu detektieren. Es wurd angenommen, dass die Nulldurchgangsvektoren $\vec{e}\tindex{zc}$ (Dipolrichtungen in denen das detektierte Feld 0 ist) räumlich orthogonal zum MV ist. Dies würde bedeuten, dass nach zwei Nulldurchgängen aus den beiden Nulldurchgangsvektoren eine Ebene bestimmt werden kann, deren Normalvektor der MV ist. Die Orthogonalität muss zunächst nachgewiesen werden.
+
+        Dafür wird ausgegangen von den Formel \ref{eq:formel12} zu Null gesetzt wird und führen den Nullfeldwinkel $\phi\tindex{zero}$ ein
+
+        \begin{eqnarray}
+            0 &=& 2 \, \cos(\phi\tindex{zero})\,\cos(\phi\tindex{s}) - \sin(\phi\tindex{zero}) \, \sin(\phi\tindex{s})
+            \label{eq:DipoletoZero}\\
+            2 \cot(\phi\tindex{zero})&=&\tan(\phi\tindex{s}).
+        \label{eq:DipToZeroConv}
+        \end{eqnarray}
+        In Formel \ref{eq:relMaxS} ist die rechte Seite gleich der rechten Seite von Formel \ref{eq:DipToZeroConv} und können deshalb gleichgesetzt werden: 
+        \begin{eqnarray}
+            \cot\big(\phi\tindex{zero}\big) &=& \tan\big(-\phi\tindex{max}\big)
+            \label{eq:equateMaxAndZero}\\
+            \cot\Big(\phi\tindex{zero}\Big) &=& \cot\big(\frac{\pi}{2}+\phi\tindex{max}\big)
+            \label{eq:showAngel}\\
+            \phi\tindex{zero} &=& \phi\tindex{max} \pm \frac{\pi}{2}.
+            \label{eq:resultZeroMax}
+        \end{eqnarray}
+        Das Gleichungen \ref{eq:equateMaxAndZero}-\ref{eq:resultZeroMax} zeigt, dass in der relevanten Ebene die $\vec{e}\tindex{zc}$ orthogonal zum $\vec{e}\tindex{max}$ steht. Aufgrund der Zylindersymmetrie ergibt sich so eine  Nulldurchgangsebene mit der dem MV als Normalenvektor. Eine Beispielsimulation wurde durchgeführt. Die Ergebnisse sind in Abbildung \ref{fig:ZeroCrossingVis} dargestellt. Darin ist gut zu sehen, dass die $\vec{e}\tindex{zc}$s eine Ebene aufspannen und der MV orthogonal dazu steht. 
+
+
+    \begin{figure}[h]
+    \centering
+    \subfloat[Setup with introduced vectors]{
+        \inputTikZ{0.35}{04_lokalisierung/images/Zerocrossingfinal.tikz}
+        \label{fig:ZeroCrossings}
+    }
+    \subfloat[Simulated signal]{
+        \inputTikZ{0.35}{04_lokalisierung/images//ZerocrossingSig.tikz}
+        \label{fig:ZeroCrossingSignal}
+    }
+    \caption{ Die linke Abbildung zeigt beispielhaft einen Max-Vektor im Ursprung (gelb), die Position und Orientierung (orange) des Sensors und die entsprechende Ebene der Nulldurchgangsvektoren (lila). Auf der rechten Seite ist das entsprechende Sensorsignal als Funktion der Zeit dargestellt. Die Zeiten, in denen ein Nulldurchgang erreicht wird, sind mit einem lila Punkt markiert. Die Simulation arbeitet mit einer Quelle, die mit $N_\omega=\omega_\theta / \omega\phi = 10$ angesteuert wird. Die absoluten Werte/Längen sind nicht relevant, da zum einen das relative Verhältnis zwischen den Vektoren und zum anderen die Nulldurchgänge von Interesse sind.}
+    \label{fig:ZeroCrossingVis}
+\end{figure}
+Es bleibt noch, die Polarität dieses Vektors zu bestimmen. Als Beispiel hat die $XY$-Ebene die $Z$-Achse, aber auch die $-Z$-Achse als Normalenvektor. An dieser Stelle muss noch die Polarität bestimmt werden. Die $\vec{e}\tindex{zc},k$ werden dafür mit dem Index $k$ nummeriert. Jedem Vektor $\vec{e}\tindex{zc}$ wird eine Polarität zugeordnet, diese sagt aus, ob der Verlauf von positiv nach negativ ($\text{z}+$) oder von negativ nach positiv ($\text{z}-$). Des weiteren wird der zugehörige Strom durch die $z$-Spule $Z\tindex{z}$ betrachtet. Je nach Polarität wird nun die Reihenfolge des Kreuzproduktes getauscht. Dies erfolgt nach der folgenden Regel:
+
+\begin{numcases}
+{\vec{e}_\text{max} = }
+    \frac{\vec{e}\tindex{zero,k}\times\vec{e}\tindex{zero,k-1}}{\|\vec{e}\tindex{zero,k}\times\vec{e}\tindex{zero,k-1}\|}, & for \text{z+ $\wedge$ } $\frac{\text{d}I_\text{z}}{\text{d}t} > 0 $, 
+    \text{ or }\text{z- $\wedge$ } $\frac{\text{d}I_\text{z}}{\text{d}t} < 0 $ \nonumber \\
+    \frac{\vec{e}\tindex{zero,k-1}\times\vec{e}\tindex{zero,k}}{\|\vec{e}\tindex{zero,k-1}\times\vec{e}\tindex{zero,k}\|} & ,else \nonumber.
+\end{numcases}
+
+Die Richtung des MV ist nun eindeutig definiert. Es fehlt die Bestimmung des Betrages, welcher nun hergeleitet werden soll. Der Betrag wurde im Grundlagenkapitel in Gleichung XX definiert. Der Sensor detektiert eine gewichtete Überlagerung der Spulensignale. Die Spulensignale werden mit Gleichung \ref{eq:rotDipole} beschrieben und Gleichung XX schreibt sich um zu:
+
+\begin{equation}
+     B\tindex{sensor}(t,\vec{r}) = m_0 ( G\tindex{x}(\vec{r}) \cos(\omega_\phi t) \sin(\omega_\theta t) +G\tindex{y}(\vec{r}) \sin(\omega_\phi t)\sin(\omega_\theta t) + G\tindex{z}(\vec{r}) \cos(\omega_\theta t))
+    \label{eq:Richtungssignal}
+\end{equation}
+mit $\omega_\phi t = \phi$ und $\omega_\theta t = \theta$ schreiben wir:
+\begin{equation}
+     B\tindex{sensor}(t,\vec{r}) = m_0 ( G\tindex{x}(\vec{r}) \cos(\phi ) \sin(\theta ) +G\tindex{y}(\vec{r}) \sin(\phi)\sin(\theta) + G\tindex{z}(\vec{r}) \cos(\theta)).
+     \label{eq:Richtungssignal_Angle}
+\end{equation}
+Der MV wird beschrieben wie folgt:
+\begin{equation}
+                \vec{e}\tindex{max} =  \left[\begin{array}{c} \cos(\phi\tindex{max}) \sin(\theta \tindex{max})\\ \sin(\phi\tindex{max})\sin(\theta\tindex{max})\\ \cos(\theta\tindex{max}) \end{array}\right].
+    \label{eq:rotDipole}
+\end{equation}
+Am Sensor wird das maximale Feld detektiert, wenn der Dipol in Richtung von $\vec{e}\tindex{max}$ polarisiert ist. Gleichung \ref{eq:Richtungssignal_Angle} wird daher nach $\phi$ und $\theta$ differenziert und zu Null gesetzt:
+\begin{equation}
+    0 = m_0 ( G\tindex{x}(\vec{r}) (-\sin(\phi\tindex{max} )) \sin(\theta\tindex{max} ) +G\tindex{y}(\vec{r}) \cos(\phi\tindex{max})\sin(\theta\tindex{max})) ,
+    \label{eq:diffPhi}
+\end{equation}
+\begin{equation}
+\begin{split}
+    0 = m_0 ( G\tindex{x}(\vec{r}) (\cos(\phi\tindex{max} )) \cos(\theta\tindex{max} ) \\  +G\tindex{y}(\vec{r}) \sin(\phi\tindex{max})\cos(\theta\tindex{max}) \\ - G\tindex{z}(\vec{r})\sin(\theta\tindex{max} )).
+    \label{eq:diffTheta}
+\end{split}
+\end{equation}
+Aus den Gleichungen \ref{eq:diffPhi} und \ref{eq:diffTheta} lassen sich Faktoren $F\tindex{XY},F\tindex{XZ}$ zwischen den einzelnen Übertragungsfaktoren ableiten:
+\begin{equation}
+    G\tindex{y}(\vec{r}) = G\tindex{x}(\vec{r}) \frac{\sin(\phi\tindex{max})}{\cos(\phi\tindex{max}} = F\tindex{XY} G\tindex{x}(\vec{r}),
+    \label{eq:FaktorYX}
+\end{equation}
+\begin{equation}
+    G\tindex{z}(\vec{r}) = G\tindex{x}(\vec{r}) \frac{\cos(\theta\tindex{max})}{\sin(\theta\tindex{max})} (\cos(\phi\tindex{max}+\frac{\sin^2(\phi\tindex{max})}{\cos(\phi\tindex{max})}) = F\tindex{XZ}G\tindex{x}(\vec{r}).
+    \label{eq:FaktorXZ}
+\end{equation}
+Somit schreibt sich Gleichung \ref{eq:Richtungssignal_Angle} um zu 
+\begin{equation}
+    B\tindex{sensor}(t,\vec{r}) = m_0 ( G\tindex{x}(\vec{r}) \cos(\phi ) \sin(\theta ) + F\tindex{XY}G\tindex{x}(\vec{r}) \sin(\phi)\sin(\theta) + F\tindex{XZ}G\tindex{x}(\vec{r}) \cos(\theta)).
+\end{equation}
+Bei der Detektion des MV wurden bisher nur die Nulldurchgänge betrachtet. Für den Betrag wird nun die Amplitude des Signals betrachtet. Dafür wird der Zeitpunkt$t\tindex{p}$ genau in der Mitte zwischen zwei Nulldurchgängen betrachtet. Die einzelnen Werte werden eingesetzt und nach $G\tindex{x}(\vec{r})$ umgestellt:
+\begin{equation}
+    G\tindex{x}(\vec{r}) = \frac{B\tindex{sensor}(t,\vec{r})}{m_0} \frac{1}{\cos(\phi ) \sin(\theta )+F\tindex{XY}+\sin(\phi)\sin(\theta)+F\tindex{XZ}\cos(\theta)} .
+\end{equation}
+Damit lassen sich die einzelnen Übertragungsfaktoren bestimmen und der Betragswert bestimmen. 
+
+\subsubsection{FDMA}
+Einordnung in übliche FDMA Ansätze
+\subsubsection{Vergleich}
+Matlab Simulation, Vergleich 
+  \subsection{Lokalisierung}
+  \subsection{Nachverarbeitung}
+
      
          
       
