@@ -1,0 +1,292 @@
+\chapter{Algorithmik}
+\label{chap:char_algorithmik}
+Im Folgenden Kapitel soll die verwendete Algorithmik vorgestellt werden.     
+\section{Simulationsetup}
+Die Herleitung des Algorithmus soll mit kleinen Simulationen veranschaulicht werden. Die Simulation besteht aus 3 idealen Dipolquellen, die die verwendete Quelle modellieren, sowie zunächst einem ideal angenommenen Punktsensor. Dies bedeutet, dass der Sensor die Projektion des magnetischen Feldes auf die sensitive Achse des Sensors detektiert. Im späteren Verlauf wird für die Herleitung des Schätzalgorithmus eine kinematische Kette mit zwei Elementen verwendet. 
+
+\section{Maximalvektor}
+	In der vorgestellten Algorithmik wird ein räumliches Feature eingeführt. Der Hauptgedanke dahinter ist, dass eine kinematische Kette durch die Ausrichtung der einzelnen Elemente beschrieben werden können. Die Ausrichtung der einzelnen Elemente kann in kartesischen Koordinaten mit einem Vektor der Länge 1 beschrieben werden. Die Zielgröße ist dementsprechend eine Anzahl an räumlichen 3D-Vektoren, daher wurde als Eingangsgröße ebenfalls ein räumlicher Vektor ausgewählt.
+	Der Maximalvektor (MV) wird wie folgt definiert. Es sei eine dreidimensionale Quelle $\vec{m} = \left[\begin{array}{c} m\tindex{x}\\ m\tindex{y} \\ m\tindex{z}\end{array}\right] $, lokalisiert im Koordinatenursprung, sowie ein Sensor am Ort $\vec{r}$ mit einer Orientierung der sensitiven Achse $\vec{e}_\text{s}$. 
+	Ein magnetischer Dipol sei definiert wie folgt [Zitat]
+	\begin{equation}
+		\vec{B}\tindex{dip}(\vec{r},\vec{m}) = \frac{1}{4\pi r^2}\frac{3\vec{r}(\vec{m}\cdot\vec{r})-\vec{m}r^2}{r^3}.
+		\label{eq:magDipolDef}
+	\end{equation}
+	Ein idealer Sensor misst die Projektion des magnetischen Feldes auf die Sensorachse
+	\begin{equation}
+		B\tindex{sensor}(\vec{r},\vec{e}_s,\vec{m}) =  \vec{B}\tindex{dip}(\vec{r}) \cdot \vec{e}_s.
+		\label{eq:magDipSensor}
+	 \end{equation}
+	Der MV ist in diesem Fall, die Dipolorientierung $\frac{\vec{m}}{|\vec{m}|}$ für die $B\tindex{sensor}(\vec{r},\vec{e}_s,\vec{m})$ maximal wird.
+
+	\subsection{Lokalisierungszusammenhänge}
+	\label{subsec:Lokalisierungszusammenhänge}
+	Im Folgenden soll der Zusammenhang zwischen dem MV $\vec{e}\tindex{max}$, dem normierten Positionsvektor $\vec{e}\tindex{r}$ und der Sensororientierung $\vec{e}\tindex{s}$ hergeleitet werden. 
+
+	Da ein Zusammenhang zwischen den einzelnen normierten Vektoren gesucht wird, nutzen wir eine normierte Beschreibung des Dipolfeldes und kommen zu folgender Beschreibung
+
+	\begin{equation}
+        \vec{B}\tindex{norm} = \frac{4 \pi r^3}{ m } \vec{B}\tindex{dip}(\vec{r}) =  3\vec{e}_r(\vec{e}_\text{m}\cdot\vec{e}_r)-\vec{e}_\text{m}.
+        \label{eq:magDipNorm}
+	\end{equation}
+
+
+	\begin{figure}[h!]
+		\centering
+		\begin{overpic}[width=0.7\textwidth,trim = 0 0 0 0]{04_algorithmik/images/Angledescription.pdf}
+			\put(82,44){$\phi\tindex{s}$}
+			\put(62,25){$\phi$}
+			\put(20,14){$\phi\tindex{m}$}
+			\put(6,30){$\theta\tindex{m}$}
+			\put(13,26){$\vec{m}$}
+			\put(90,5){$x$}
+			\put(57,60){$y$}
+			\put(2,62){$z$}
+			\put(40,30){$\vec{r}$}
+			\put(75,47){$\vec{e}\tindex{s}$}
+		\end{overpic}
+		\caption{
+		Verwendetes Setup für die Herleitung: $\vec{e}\tindex{r}$ und $\vec{e}\tindex{s}$ liegen beide in der $xy$-Ebene. $\phi\tindex{m}$ und $\theta\tindex{m}$ definieren die Richtung des rotierenden magnetischen Dipols $\vec{e}\tindex{m}$ in Kugelkoordinaten.}
+		\label{fig:Winkelbeschreibung}
+	\end{figure}
+
+	Für die Herleitung werden zunächst einige Annahmen getroffen. Zwei nicht kolineare Vektoren spannen immer eine Ebene auf. Daher kann das Koordinatensystem so gelegt werden, dass $\vec{e}\tindex{r}$ und $\vec{e}\tindex{s}$ in der $xy$-Ebene liegen. Die beiden Vektoren seien daher wie folgt definiert.
+	\begin{equation}
+		\vec{e}_r = \left[\begin{array}{c} \cos(\phi)\\ \sin(\phi) \\ 0\end{array}\right] \quad \textrm{and} \quad
+		\vec{e}_s = \left[\begin{array}{c} \cos(\phi\tindex{s})\\ \sin(\phi\tindex{s}) \\ 0\end{array}\right].
+		\label{eq:defErEs}
+	\end{equation}
+	Die dreidimensionale magnetische Quelle hat ein konstantes magnetisches Dipolmoment der Stärke $m$ die jedoch in jede beliebige Richtung zeigen kann. Die Definition der Richtung ist an die Rücktransformation von Kugelkoordinaten in kartesische Koordinaten angelehnt. Das Dipolmoment ist in kartesischen Koordinaten definiert wie folgt
+	\begin{equation}
+		\vec{e}_m = \left[\begin{array}{c} \cos(\phi\tindex{m})\sin(\theta\tindex{m})\\ \sin(\phi\tindex{m})\sin(\theta\tindex{m}) \\ \cos(\theta\tindex{m}) \end{array}\right].
+		\label{eq:defEm}
+	 \end{equation}
+	Durch einsetzen der Vektordefinition in Gl. \ref{eq:magDipNorm} kommt man zu den folgenden vektoriellen Komponenten des Dipolfeldes
+
+	 \begin{eqnarray}
+		B\tindex{norm,x}(\phi,\phi\tindex{m},\theta\tindex{m})&=&\big[3\cos(\phi)^2-1\big]\,\cos(\phi\tindex{m})\,\sin(\theta\tindex{m}) \nonumber \\ &+&  3 \,\sin(\phi\tindex{m})\,\sin(\theta\tindex{m})\,\sin(\phi)\,\cos(\phi),
+		\label{eq:magNormX} \\[2mm]
+		B\tindex{norm,y}(\phi,\phi\tindex{m},\theta\tindex{m})&=&\big[3\sin(\phi)^2-1\big]\,\sin(\phi\tindex{m})\,\sin(\theta\tindex{m}) \nonumber\\ &+& 3 \,\cos(\phi\tindex{m})\,\sin(\theta\tindex{m})\,\cos(\phi)\,\sin(\phi),
+		\label{eq:magNormY} \\[2mm]
+		B\tindex{norm,z}(\theta\tindex{m}) &=& - \cos(\theta\tindex{m}).
+		\label{eq:magNormZ}
+	\end{eqnarray}
+	Mit Gl. \ref{eq:magDipSensor} kommt man zum Sensorsignal $B\tindex{sensor}$
+
+	\begin{equation}
+		B\tindex{sensor}(\phi,\phi\tindex{s},\phi\tindex{m},\theta\tindex{m},r) =  \frac{ m }{4 \pi r^3} \big((\cos(\phi\tindex{s})\, B\tindex{norm,x}(\phi,\phi\tindex{m},\theta\tindex{m}) + \sin(\phi\tindex{s})\, B\tindex{norm,y}(\phi,\phi\tindex{m},\theta\tindex{m})\big).
+		\label{eq:normSensor}
+	\end{equation}
+
+	Bezüglich einer Varierung von $\theta\tindex{m}$, wird das Sensorsignal maximal wenn $\theta\tindex{m} = \frac{\pi}{2}$. Dies zeigt außerdem, dass die Komponente des rotierenden Dipols, die senkrecht zur von $\vec{e}\tindex{r}$ und $\vec{e}\tindex{s}$ aaufgespannten Ebene liegt, keinen Einfluss auf das Sensorsignal hat. Diese Beobachtung zeigt, dass der MV in dieser aufgespannten Ebene liegen muss. Diese Erkenntnis vereinfacht die Problemstellung zu einem 2D-Problem und kann daher in einer Ebene weiter betrachtet werden.
+
+	Um einen Zusammenhang zwischen den drei Vektoren zu erhalten wird nun angenommen, dass der Sensor auf $x$-Achse lokalisiert sei. Die Vektoren sind in kartesischen Koordinaten wie folgt definiert
+
+	\begin{equation}
+		\vec{e}_r = \left[\begin{array}{c} 1\\ 0 \end{array}\right],\qquad
+		\vec{e}_m = \left[\begin{array}{c} \cos(\phi\tindex{m}) \\ \sin(\phi\tindex{m}) \end{array}\right],\qquad
+		\vec{e}_s = \left[\begin{array}{c} \cos(\phi\tindex{s})\\ \sin(\phi\tindex{s})\end{array}\right].
+		\label{eq:defErEmEs}
+	\end{equation}
+	Dies führt zum folgenden magnetischen normierten Feld für die einzelnen Komponenten $B\tindex{norm,x},B\tindex{norm,y},B\tindex{norm,z}$ führt 
+
+	\begin{eqnarray}
+		B\tindex{norm,x}(\phi) &=& 2  \cos(\phi\tindex{m}),
+		\label{eq:magNorm2DX}\\
+		B\tindex{norm,y}(\phi) &=& - \sin(\phi\tindex{m}),
+		\label{eq:magNorm2DY}\\
+		B\tindex{norm,z}(\phi) &=& 0.
+		\label{eq:magNorm2DZ}\\
+	\end{eqnarray}
+	Die Projektion auf die Sensorachse führt zu:
+	\begin{equation}
+		B\tindex{sensor}(\phi\tindex{s},\phi\tindex{m})= \frac{ m }{4 \pi r^3} \big( 2  \cos(\phi\tindex{m})  \cos(\phi\tindex{s}) - \sin(\phi\tindex{m})  \sin(\phi\tindex{s}) \big).
+		\label{eq:formel12}
+	\end{equation}
+	Es wird der Wert $\phi\tindex{max}$ von $\phi\tindex{m}$ gesucht, für den $B\tindex{sensor}$ maximal wird. Dafür wird Gleichung \ref{eq:formel12} nach $\phi\tindex{m}$ differenziert und man erhält einen Zusammenhang zwischen $\phi\tindex{max}$ und $\phi\tindex{s}$.
+	\begin{equation}
+		\frac{\text{d}B_\text{sensor}(\phi\tindex{m})}{d\phi\tindex{m}}=\frac{ m }{4 \pi r^3}\left ( -2 \sin(\phi\tindex{m})\cos(\phi\tindex{s})-\sin(\phi\tindex{s})  \cos(\phi\tindex{m})\right )
+		\label{eq:formel13}
+	\end{equation}
+
+	\begin{equation}
+		-2 \sin(\phi\tindex{max})\cos(\phi\tindex{s})-\sin(\phi\tindex{s})  \cos(\phi\tindex{max}) = 0.
+	\end{equation}
+	\begin{equation}
+		-2\cdot\tan(\phi\tindex{max})= \tan(\phi\tindex{s}).
+		\label{eq:relMaxS}
+	\end{equation}
+	Der gefundene Zusammenhang zeigt einen Zusammenhangzwischen $\vec{e}\tindex{max}$,$\vec{e}\tindex{r}$ und $\vec{e}\tindex{s}$. Dieser kann genutzt werden um bei bekanntem $\vec{e}\tindex{r}$ und detektiertem Maximalvektor $\vec{e}\tindex{max}$ das zugehörige $\vec{e}\tindex{s}$ zu bestimmen. Die zugehörige Berechnungsvorschrift wird im folgenden einmal gezeigt.
+
+
+	\begin{enumerate}
+
+		\item Zunächst wird die Rotationsachse bestimmt $\vec{e}_\text{n}$:
+		%
+		\begin{equation}
+			\vec{e}_n = \frac{\vec{e}\tindex{max} \times \vec{e}_r }{\|\vec{e}\tindex{max} \times \vec{e}_r\|}.
+			\label{eq:formel15}
+		\end{equation}
+		
+		\item Im zweiten Schritt wird der Winkel zwischen MV und dem normierten Positionsvektor bestimmt:
+		%
+		\begin{equation}
+			\phi\tindex{max} = \arccos(\vec{e}\tindex{max} \cdot \vec{e}_r).
+			\label{eq:formel16}
+		\end{equation}
+		
+		\item Anschließend wird der Winkel zwischen dem Ortseinheitsvektor und der Sensorausrichtung aus Gl. \ref{eq:relMaxS}:
+		%
+		\begin{equation}
+			\phi\tindex{s} = \arctan\big(-2\tan(\phi\tindex{max})\big).
+			\label{eq:formel17}
+		\end{equation}
+		
+		\item  Abschließend kann für jeden $\vec e_r$ die Sensororientierung $\vec e_\text{s}$ wie folgt berechnet werden:
+		%m
+		\begin{equation}
+			\vec{e}_\text{s} = \cos(\phi\tindex{s})(\vec{e}_n \times \vec{e}_r)\times \vec{e}_n + \sin(\phi\tindex{s}) (\vec{e}_n \times\vec{e}_r).
+			\label{eq:formel18}
+		\end{equation}
+		
+		\end{enumerate}
+	\subsection{Merkmalsextraktion}
+
+	\subsubsection{Zeitlich Räumlich rotierendes Feld}
+	Einführung von kartesischen und spherischen magnetischen Koordinaten		
+	\subsubsection{FDMA}
+	Einordnung in übliche FDMA Ansätze
+	\subsubsection{Vergleich}
+		
+\section{Relative Lokalisierung}
+In diesem Kapitel wird ein Ansatz aufbauend auf den theoretischen Grundlagen des vorherigen Kapitels vorgestellt. Zunächst wird ein iterativer Ansatz gezeigt, mit dem die Haltung einer kinematischen Kette effizient geschätzt werden kann. Desweiteren werden die Eindeutigkeit, Optimierungen (des Modells und des Rechenbedarfs) und eine Nachverarbeitung vorgestellt. 
+	\subsection{Iterativer Algorithmus}
+	Es wurde ein iterativer Algorithmus entwickelt, der Vorwissen über die Anatomie integriert und so effizient die Haltung schätzt. Die Prämisse für den Algorithmus ist, dass jedes kinematische Element, mit Ausnahme des ersten, mit einem Magnetfeldsensor ausgestattet wird. Am ersten kinematischen Element ist eine 3D-Spule befestigt. Desweiteren wird zunächst angenommen, dass die Sensorachse diesselbe Orientierung wie das zugehörige kinematische Element und der Sensor genau in der Mitte des kinematischen Elements lokalisiert. Im Allgemeinen hat die Pose eines Sensors fünf Freiheitsgrade, drei für die Position, sowie 2 für die Orientierung der Sensorachse. Durch die Kopplung des Sensors an die Elemente wird die Anzahl der Freiheitsgrade reduziert zur Anzahl der Freiheitsgrade des Gelenks. Bei einem Sattelgelenk sind dies zwei.
+
+Bild einfügen Sensorplacement 
+
+	Der Algorithmus kombiniert die magnetischen Zusammenhänge und das Vorwissen über die Anatomie. Die Grundidee ist, dass bei korrekt angenommener Position des Sensors die korrekte Orientierung mit Hilfe des MVs bestimmt werden kann. Es wird zunächst eine zufällige Orientierung des Sensors angenommen. Mit der Anatomie wird die zugehörige Sensorposition bestimmt. Im nächsten Schritt wird die Sensororientierung für die Position mit den magnetischen Zusammhängen bestimmt. Diese Porzedur wird mit der jeweils neuen Orientierung wiederholt bis die Veränderung der Orientierung einen Schwellwert unterschreitet. Der Ablauf des Algorithmus ist in Abbildung X zu sehen.
+
+Bild einfügen Programmablaufplan 
+
+	Eine Visualisierung dieser Prozedur ist in Abbildung, wo die Orientierungen und Positionen für die einzelnen Iterationen dargestellt ist. Nach etwa 15 Iterationen stimmt die Sensorpose mit einer potentiellen Pose überein.
+
+Bild Visualisierung des Prozesses
+
+Einfluss der Längenänderungen auf die Konvergenzgeschwindigkeit
+
+
+	\subsection{Eindeutigkeit der Lösung}
+	Im folgenden wird die die Eindeutigkeit des vorgestellten iterativen Algorithmus geprüft. Der Algorithmus ist eindeutig, wenn jedem möglichen Eingangsvektor $\vec{e}\tindex{max}$ eine Sensororientierung $\vec{e}\tindex{s}$ zu geordnet werden kann. Die Eingangs- und Ausgangsvektoren werden dafür in jeweils zwei Winkel aufgeteilt. 
+
+	Zunächst definieren wir zur Darstellung, dass ein  Beispielgelenk auf der $x$-Achse lokalisiert sei und $\vec{e}\tindex{jr} = \vec{e}\tindex{x}$. Außedem werde ein dazu orthogonaler Vektor definiert, der im weiteren als Bezugsvektor $\vec{e}\tindex{Orth,B}$ dient. Um dies leichter darzustellen wird $\vec{e}\tindex{Orth,B}=\vec{e}\tindex{z}$ angenommen. Es werden nun zwei Projektionen von $\vec{e}\tindex{max}$ erstellt. Zum einen in die Projektion $\vec{e}\tindex{max,pyz}$ von $\vec{e}\tindex{r}$ aufgespannte Ebene, die $yz$-Ebene. Die zweite Projektion $\vec{e}\tindex{max,pxz}$ ist in die von $\vec{e}\tindex{r}$ und $\vec{e}\tindex{Orth,B}$ aufgespannten Ebene, die $xz$-Ebene. Aus den zwei projizierten Vektoren, werden nun zwei Winkel abgeleitet. Der Winkel $\phi\tindex{max,1}$ zwischen dem Bezugsvektor und $\vec{e}\tindex{max,pyz}$, sowie der Winkel zwischen $\vec{e}\tindex{rj}$ und $\vec{e}\tindex{max,pxz}$. Die Darstellung des Vektors ähnelt an dieser Stelle der Darstellung in Kugelkoordinaten, in der auch zwei Winkel verwendet werden um die Richtung zu definieren. Der Wertebereich der beiden Winkel ist $0 < \phi\tindex{max,1}< \pi$, sowie $0< \phi\tindex{max,2} < 2\pi$. 
+	Die projizierten Vektoren und die verwendeten Winkel sind in der Abbildung \ref{fig:Visualisierung_Winkelbeschreibung} dargestellt.
+	
+	\begin{figure}[h!]
+		\centering
+		\begin{overpic}[width=0.7\textwidth,trim = 0 0 0 0]{04_algorithmik/images/Visualisierung_Eindeutigkeit.pdf}
+			\put(82,44){$\phi\tindex{s}$}
+			\put(62,25){$\phi$}
+			\put(20,14){$\phi\tindex{m}$}
+			\put(6,30){$\theta\tindex{m}$}
+			\put(13,26){$\vec{m}$}
+			\put(90,5){$x$}
+			\put(57,60){$y$}
+			\put(2,62){$z$}
+			\put(40,30){$\vec{r}$}
+			\put(75,47){$\vec{e}\tindex{s}$}
+		\end{overpic}
+		\caption{
+			Einfaches Beispiel einer kinematischen Kette aus zwei Elementen: Die Abbildung zeigt eine im Ursprung lokalisierte Quelle, mit detektiertem Maximalvektor(gelb). Die Quelle ist am ersten kinematischen Element befestigt. Auf dem zweiten Element ist ein Magnetfeldsensor angebracht. In rot ist die Projektion $\vec{e}\tindex{max,pyz}$ mit dem zugehörigen Winkel $\phi\tindex{max,1}$ dargestellt. Die zweite Projektion $\vec{e}\tindex{max,pxz}$ ist in blau dargestellt, mit zugehörigem Winkel $\phi\tindex{max,2}$. 
+			}
+		\label{fig:Visualisierung_Winkelbeschreibung}
+	\end{figure}
+	Der Ausgangsvektor, die Sensororientierung wird wie der Maximalvektor aufgeteilt. So ergeben sich auf Sensorseite die Winkel $\phi\tindex{s,1}$ und $\phi\tindex{s,2}$. Der Vorteil dieser Darstellung ist nun, dass es eine Entkopplung gibt. $\phi\tindex{s,1}$ hängt nur von $\phi\tindex{max,1}$, und $\phi\tindex{s,2}$ nur von $\phi\tindex{max,2}$. 
+	
+	Wie bereits in Kapitel \ref{subsec:Lokalisierungszusammenhänge} gezeigt, liegen Sensorposition, Maximalvektor und Sensororientierung in einer Ebene. Daher liegt auch die Position des Gelenks in dieser Ebene, da deser Ort von der Sensorposition in Richtung der Sensororientierung liegt. Das Kreuzprodukt aus Maximalvektor und Gelenksposition ergibt den Normalenvektor dieser Ebene. Diese Ebene ist in diesem Fall, die $xz$-Ebene um den Winkel $\phi\tindex{max,1}$ geneigt. Das führt zu 
+	\begin{equation}
+		\phi\tindex{s,1}  = \phi\tindex{max,1},
+	\end{equation} 
+	und somit gibt es eine eindeutige Zuordnung des ersten Winkels.
+
+	Im zweiten Schritt wird ein Zusammenhang zwischen $\phi\tindex{max,2}$ und $\phi\tindex{s,2}$ gesucht. In Abbildung \ref{fig:Visualisierung_Winkelbeschreibung_2} sind die Winkel skizziert.
+	\begin{figure}[h!]
+		\centering
+		\begin{overpic}[width=0.7\textwidth,trim = 0 0 0 0]{04_algorithmik/images/Visualisierung_Eindeutigkeit_Winkel_2.pdf}
+			\put(82,44){$\phi\tindex{s}$}
+			\put(62,25){$\phi$}
+			\put(20,14){$\phi\tindex{m}$}
+			\put(6,30){$\theta\tindex{m}$}
+			\put(13,26){$\vec{m}$}
+			\put(90,5){$x$}
+			\put(57,60){$y$}
+			\put(2,62){$z$}
+			\put(40,30){$\vec{r}$}
+			\put(75,47){$\vec{e}\tindex{s}$}
+		\end{overpic}
+		\caption{
+			Einfacher Aufbau: Im Ursprung ist ein magnetischer Aktuator lokalisiert. In blau ist die Projektion $\vec{e}\tindex{max,pxz}$ mit dem zugehörigen Winkel $\phi\tindex{max,2}$. Auf der Sensorseite ist die Projektion der Sensorachse in die $xz$-Ebene mit dem Winkel $\phi\tindex{s,2}$.
+			}
+		\label{fig:Visualisierung_Winkelbeschreibung_2}
+	\end{figure}
+	Die Betrachtungen des zweiten Winkels erfolgt im zweidimensionalen, da nach Betrachtung des ersten Winkels bereits eine Ebene definiert wurde. Im Folgenden wird zunächst ein funktionaler Zusammenhang $\phi\tindex{max,2} = f(\phi\tindex{s,2})$ aufgestellt. Zu nächst sei die Gelenksposition $\vec{r}\tindex{j}$ wie folgt definiert, wobei $l\tindex{aj}$, der Distanz von Quelle zu Gelenk entspricht 
+	\begin{equation}
+		\vec{r}\tindex{j} = \left[\begin{array}{c} l\tindex{aj}\\ 0 \end{array}\right] 
+	\end{equation}
+	Die Position des Sensors $\vec{r}\tindex{s}$ kann mit der Länge zwischen Sensor und Gelenk $l\tindex{js}$ wie folgt beschrieben werden.
+	\begin{equation}
+		\vec{r}\tindex{s} = \left[\begin{array}{c} l\tindex{aj}+l\tindex{js}\cos(\phi\tindex{s,2})\\ l\tindex{js}\sin(\phi\tindex{s,2}) \end{array}\right] 
+	\end{equation}
+	Nun wird zunächst die Winkel zwischen $x$-Achse und $\vec{r}\tindex{s}$ bestimmt.
+	\begin{equation}
+		\phi\tindex{r} = \arctan\big(\frac{l\tindex{js}\cos(\phi\tindex{s,2})}{l\tindex{aj}+l\tindex{js}\sin(\phi\tindex{s,2})}\big)
+	\end{equation}
+	mit Gleichung \ref{eq:relMaxS} kann nun $\phi\tindex{max,2}$ bestimmt werden 
+	\begin{equation}
+		\phi\tindex{max,2} = -\arctan(\frac{1}{2} \tan(\phi\tindex{s,2} - \phi\tindex{r} ).
+	\end{equation}
+	Dieser Zusammenhang ist nicht trivial und nicht einfach umkehrbar.
+	
+\begin{figure}
+	\begin{subfigure}{0.5\textwidth}
+	\scalefont{4}
+		\centering
+		\inputTikZ{0.225}{04_algorithmik/images/q0_05_Unique.tikz}
+		\caption{$0<Q<=0.5$}
+		\label{fig:0_05_Unique}
+	\end{subfigure}
+	\hspace{0.25cm}
+	\begin{subfigure}{0.5\textwidth}
+	\scalefont{4}
+		\centering
+		\inputTikZ{0.225}{04_algorithmik/images/q05_10_Unique.tikz}
+		\caption{$0.5<Q<=1$}
+		\label{fig:05_10_unique}
+	\end{subfigure}
+	\begin{subfigure}{0.5\textwidth}
+	\scalefont{4}
+		\centering
+		\inputTikZ{0.225}{04_algorithmik/images/q11_16_Unique.tikz}
+		\caption{$1<Q$}
+		\label{fig:bigger1_unique}
+	\end{subfigure}
+	\caption{ The relation between $\phi\tindex{s,j}$ and $\phi\tindex{max,j}$ is represented for different values of Q. The plots are subdivided for different values of $Q$. In the ranges $0 < Q < 0.5$ and $Q>1$ there is a clear assignment, i.e., there is a unique bidirectional relation between $\phi\tindex{max,j}$ and $\phi\tindex{s,j}$. However, between $0.5$ and $1$ we observe a non-unique relation.}
+	\label{fig:uniqueness}
+\end{figure}
+
+	\subsection{Optimierungen}
+		Laufzeitoptimierung(LookUpTable), Korrektur von Modellfehlern (Dicke des Fingers, Verdrehung des Sensors)
+		Diskussion...
+	\subsection{Analyse der Unsicherheiten}
+		Einführung virtuelle/mechanische Achsen,
+
+	\subsection{Nachverarbeitung}
+		Kalman Filter
+
+	\section{Absolute Lokalisierung}
+		Übersicht, Schätzung der Koordinaten separat, 
+		\subsection{Sender Empfänger Dualismus}
+
+		\subsection{Äquibetragsflächen}
+
+		\subsection{Schätzalgorithmus}

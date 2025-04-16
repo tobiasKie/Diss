@@ -1,0 +1,111 @@
+%========================================================================================
+% Titel, Name
+%========================================================================================
+\newcommand{\tit}{{Signalverarbeitung f\"ur das Bewegungstracking von kinematischen Ketten}}
+\newcommand{\subtit}{}
+\newcommand{\ath}{Vorname Nachname}
+\newcommand{\locdate}{Kiel, 2024}
+
+%========================================================================================
+% Mathe Formatierungen
+%========================================================================================
+\newcommand{\transp}{^\textrm{\footnotesize{T}}}                              % Transpose
+\newcommand{\herm}{^\textrm{\footnotesize{H}}}                                % Hermitrian
+\newcommand{\expect}[1]{\textrm{E}\left\{\,\displaystyle{{#1}}\,\right\}}     % Erwartungswert
+\newcommand{\mse}[1]{\textrm{E}\left\{\left|{#1}(n)\right|^{2}\right\}}       % Mittlerer Qudratische Erwartungswert
+\newcommand{\E}{\operatorname{E}}
+
+\newcommand{\tindex}[1]{_{\textrm{\footnotesize{#1}}}}                        % Text tiefgestellt, nicht kursiv
+\newcommand{\exponent}[1]{^{\textrm{\footnotesize{#1}}}}                      % Text tiefgestellt, nicht kursiv
+\newcommand{\tindexTwo}[2]{_{\footnotesize{#1}\textrm{\footnotesize{#2}}}}    % Text tiefgestelt, erst kursiv, dann nicht kursiv
+\newcommand{\subit}[1]{_{\mathit{#1}}}                                        % Text tiefgestellt, kursiv
+
+\newcommand{\Exp}[1]{\mathrm{E}\!\left\{{#1}\right\}}                         % Ewartungswert
+\newcommand{\ExpLeft}{\mathrm{E}\!\left\{\right\}}                            % Ewartungswert Klammer links
+\newcommand{\ExpRight}{\mathrm{E}\!\right\}}                                  % Ewartungswert Klammer rechts
+\newcommand{\ExpSmall}[1]{\mathrm{E}$\,$\!\{{#1}\}}                           % Ewartungswert, klein
+
+\newcommand{\abs}[1]{\lvert {#1} \rvert}                                      % Betrag
+\newcommand{\absSq}[1]{\abs{#1}\exponent{2}}                                  % Betragsquadrat
+\newcommand{\norm}[1]{\lVert {#1} \rVert}                                     % Norm
+\newcommand{\normSq}[1]{\norm{#1}\exponent{2}}                                % Quadratnorm
+\newcommand{\Smo}[1]{\overline{#1}}                                           % Geglättete Variable
+\newcommand{\SmoSq}[1]{\Smo{#1\exponent{2}}}                                  % Geglättetes Betragsquadrat
+\newcommand{\unl}[1]{\underline{#1}}                                          % Variable unterstrichen
+\newcommand{\round}[1]{\ensuremath\left\lfloor#1\right\rceil}                 % Runden einer Variable
+\newcommand{\eExpOmega}{\big( e^{\footnotesize{\, j \Omega}} \big) }          % e hoch Omega
+\newcommand{\freqMu}{\big( \mu \big) }
+
+\newcommand{\vectorize}[1]{\textrm{VEC}\left\{\displaystyle{{#1}}\right\}}    % Vektorisieren
+\newcommand{\diagonalize}[1]{\textrm{DIAG}\left\{\displaystyle{{#1}}\right\}} % Diagonaliseren
+
+%========================================================================================
+% Matrizen und Vektoren
+%========================================================================================
+\newcommand{\bvec}[1]{\mbox{\boldmath ${#1}$}}                 % Vektoren fett
+\newcommand{\bmat}[1]{\mbox{\boldmath \underline{${#1}$}}}     % Matrizen fett, roman
+
+%========================================================================================
+% Misc commands
+%========================================================================================
+\newcommand{\red}[1]{\textcolor{red}{[#1]}}        % Notes and ToDos
+\newcommand{\qm}[1]{``#1''}                        % Anführungszeichen
+\newcommand{\engl}{engl.}                          % Englische abgekürzt
+\newcommand{\OverSqrtHz}{/$\sqrt{\text{Hz}}$}      % Wurzel-Hertz
+
+%========================================================================================
+% General defines
+%========================================================================================
+\newcommand{\ffsAxes}{0.7}
+\newcommand{\ffsLegend}{0.7}
+\newcommand{\ffsNumbers}{0.7}
+\newcommand{\ffsFormula}{0.7}
+\newcommand{\ffsFormulaSFrac}{0.8}
+\newcommand{\ffsExp}{0.5}	
+
+%========================================================================================
+% Legacy defines 
+%========================================================================================
+\newcommand{\tsup}[1]{^{\text{#1}}}
+\newcommand{\tidx}[1]{_{\text{{#1}}}}
+
+\newcommand{\argx}[1]{\ensuremath{\text{arg}\left\{#1\right\}}}
+\newcommand{\absx}[1]{\ensuremath{\left|#1\right|}}
+\newcommand{\absxnormal}[1]{\ensuremath{|#1|}}
+\newcommand{\lgx}[1]{\ensuremath{\text{lg} \left( #1\right) }}
+\newcommand{\maxx}[1]{\ensuremath{\text{max}\left\{#1\right\}}}
+\newcommand{\minx}[1]{\ensuremath{\text{min}\left\{#1\right\}}}
+\newcommand{\normx}[1]{\ensuremath{\left\|#1\right\|}}
+
+%========================================================================================
+% Abkürzungen
+%========================================================================================
+\newcommand{\AD}{AD}
+\newcommand{\DA}{DA}
+
+\newcommand{\EBASNR}{EBASNR}
+\newcommand{\SNR}{$\text{SNR}$}
+\newcommand{\DNR}{$\text{DNR}$}
+\newcommand{\LOD}{$\text{LOD}$}
+
+\newcommand{\MEMS}{MEMS}
+
+\newcommand{\MVDR}{MVDR}
+
+\newcommand{\NLMS}{NLMS}
+\newcommand{\LMS}{LMS}
+\newcommand{\AP}{AP}
+\newcommand{\RLS}{RLS}
+
+%========================================================================================
+% Allgemeine Größen
+%========================================================================================
+
+%% Allgemein
+\newcommand{\fs}{\ensuremath{f\tidx{s}}}
+
+%% Indizes
+\newcommand{\td}{\ensuremath{n}}	   % Digital time
+\newcommand{\ta}{\ensuremath{t}}    % Analog time
+\newcommand{\fb}{\ensuremath{\mu}}  % Frequency bin
+\newcommand{\fri}{\ensuremath{k}}   % Frame index

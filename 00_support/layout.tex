@@ -1,0 +1,72 @@
+
+%-------------------------------------------------------------------------
+% Header and footer style
+%-------------------------------------------------------------------------
+\pagestyle{scrheadings}
+\automark[section]{chapter}
+\ihead[]{\headmark}
+\chead[]{}
+\ohead[]{\rev}
+\ifoot[]{}
+\cfoot[]{}
+\ofoot[]{\pagemark}
+\setheadsepline{0.4pt}
+%\setfootsepline{0.4pt}
+
+%-------------------------------------------------------------------------
+% Figure-related stuff
+%-------------------------------------------------------------------------
+
+% --- "Subfigure legend", naming convention sfleg<Num figs Row 1><Num figs Row 2>...
+%\newcommand{\sflegElem}[2][1em]{%
+	%\fcolorbox{black}{white}{\makebox[#1]{\vphantom{hq}#2}}%
+%}
+\newcommand{\sflegElem}[2][1.2em]{%
+	\begin{tikzpicture}
+		\figfont
+    %\node[fill=col_gray_light!30, minimum height=#1, minimum width=#1, inner sep=0pt, draw]{\strut#2};
+    \node[fill=col_gray_light, text=black, minimum height=#1, minimum width=#1, inner sep=2pt]{(#2)};
+\end{tikzpicture}%
+}
+
+\newcommand{\sflegTwo}[1][0ex]{
+\begin{minipage}{0.2\textwidth}
+	\vspace{#1}
+	\sflegElem{a}\,\sflegElem{b}
+\end{minipage}
+\vspace{-2ex}
+}
+\newcommand{\sflegOneTwo}[1][0ex]{
+	\begin{flushleft}
+	\vspace{#1}
+	\sflegElem[2.75em]{a}\\[0.75pt]
+	\sflegElem{b}\,\sflegElem{c}
+	\end{flushleft}
+}
+\newcommand{\sflegTwoTwo}[1][0ex]{
+\begin{minipage}{0.2\textwidth}
+	\vspace{#1}
+	\sflegElem{a}\,\sflegElem{b}\\[0.75pt]
+	\sflegElem{c}\,\sflegElem{d}
+\end{minipage}
+\vspace{-2ex}
+}
+
+% --- Placeholder for figures to come
+\newcommand{\figplaceholder}[2][10mm]{\centering\fbox{\parbox{0.7\textwidth}{%
+\centering \quad\vspace{#1} \\#2\\\vspace{#1}}}%
+}
+
+%-------------------------------------------------------------------------
+% Special two-column table for notation, abbreviations etc.
+%-------------------------------------------------------------------------
+\newenvironment{tabularabbreviation}
+	{\begin{longtabu} to \textwidth {X[-1] X[2,l]} 
+	 \hphantom{1234567890} & \\[-3ex] % Bad hack for a fixed minimum width
+	}
+	{\end{longtabu}}
+\newenvironment{tabularnotation}
+	{\begin{longtabu} to \textwidth {X[-1,$$] X[2,l]} 
+	 \hphantom{1234567890} & \\[-3ex] % Bad hack for a fixed minimum width
+	}
+	{\end{longtabu}}

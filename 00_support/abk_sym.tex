@@ -1,0 +1,595 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\nomenclature[aAD]{\AD}{Analog-Digital}
+\nomenclature[aDA]{\DA}{Digital-Analog}
+
+\nomenclature[aECG]{\ECG}{Elektrokardiogram (\engl{}: \textit{Electrocardiogram})}
+\nomenclature[aMCG]{\MCG}{Magnetokardiogram (\engl{}: \textit{Magnetocardiogram})}
+\nomenclature[aBSPM]{\BSPM}{Körperoberflächenpotential (\engl{}: \textit{Body Surface Potentail Mapping}) }
+
+\nomenclature[aEBASNR]{\EBASNR}{geschätztes, biomagnetisches und gemitteltes \SNR{}  (\engl{}: \textit{Estimated Biomagnetic Averaged Signal-to-Noise Ratio})}
+\nomenclature[aSNR]{\SNR}{Signal-zu-Rausch-Verhältnis (\engl{}: \textit{Signal-to-Noise Ratio})}
+\nomenclature[aDNR]{\DNR}{Störung-zu-Rausch-Verhältnis (\engl{}: \textit{Distortion-to-Noise Ratio})}
+\nomenclature[aLOD]{\LOD}{Detektionslimit (\engl{}: \textit{Limit of Detection})}
+
+\nomenclature[aMI]{\MI}{Magnetoimpedanz (\engl{}: \textit{Magnetoimpedance})}
+\nomenclature[aOPM]{\OPM}{ optisch gepumpte Magnetometer (\engl{}: \textit{Optical Pumped Magnetometer})}
+\nomenclature[aSQUID]{\SQUID}{supraleitende Quanteninterferometers (\engl{}: \textit{Super-Conducting Quantum Interference Devices})}
+
+\nomenclature[aMEMS]{\MEMS}{mikro-elektromechanische Systeme (\engl{}: \textit{Microelectromechanical Systems})}
+
+\nomenclature[aME]{\ME}{magnetoelektrisch (\engl{}: \textit{Magnetoelectric})}
+\nomenclature[aPE]{\PE}{piezoelektrisch (\engl{}: \textit{Piezoelectric})}
+
+\nomenclature[aDFT]{\DFT}{diskrete Fourier-Transformation (\engl{}: \textit{Digital Fourier-Transformation})}
+\nomenclature[aDSTFT]{\DSTFT}{diskrete Kurzzeit-Fouriertransformation (\engl{}: \textit{Discrete Short-Term Fourier Transformation})}
+
+\nomenclature[aMVDC]{\MVDC}{störungsfreie Kombinierung mit minimaler Varianz (\engl{}: \textit{Mimimum Variance Distortionsless Combination})}
+\nomenclature[aMRC]{\MRC}{\SNR{}-basierte Kombination (\engl{}: \textit{Maximum Ratio Combination})}
+\nomenclature[aEGC]{\EGC}{ungewichtete Kombination (\engl{}: \textit{Equal Gain Combination})}
+
+\nomenclature[aMM]{\MM}{Mehr-Moden (\engl{}: \textit{Multi-Mode})}
+\nomenclature[aMC]{\MC}{Mehr-Träger (\engl{}: \textit{Multi-Carrier})}
+\nomenclature[aBSC]{\BSC}{Bester Einzelträger-Ansatz (\engl{}: \textit{Best Single Carrier})}					%%%%%%%%%%%%%%%%%%%Abkürzung?
+
+\nomenclature[aFA]{\FB}{Vollbandansatz (\engl{}: \textit{Fullband Approach})}
+\nomenclature[aSA]{\SB}{Teillbandansatz (\engl{}: \textit{Subband Approach})}
+
+\nomenclature[aNLMS]{\NLMS}{normalisierter stochastischer Gradientenalgorithmus (\engl{}: \textit{Normalized Least Mean Square Algorithm})}
+\nomenclature[aLMS]{\LMS}{stochastischer Gradientenalgorithmus (\engl{}: \textit{Least Mean Square Algorithm})}
+\nomenclature[aAP]{\AP}{Affine Projektion (\engl{}: \textit{Affine Projection})}
+\nomenclature[aRLS]{\RLS}{rekursivess stochastisches Gradientenverfahren (\engl{}: \textit{Recursive Least Squares Algorithm})}
+
+\nomenclature[awE]{w.E.}{willkürliche Einheit}
+\nomenclature[aengl]{Engl.}{Englisch}
+
+
+\nomenclature[aAlN]{AlN}{Aliminiumnitrid}
+\nomenclature[aFeCoSiB]{FeCoSiB}{metallisches Glas (Eisen-Cobalt-Silizium-Bor)}
+\nomenclature[aPZT]{PZT}{Blei-Zirkonat-Titanat}
+\nomenclature[aAu]{Au}{Gold}
+\nomenclature[aCr]{Cr}{Chrom}
+\nomenclature[aCu]{Cu}{Kupfer}
+\nomenclature[aTa]{Ta}{Tantal}
+\nomenclature[aMnIr]{MnIr}{Mangan-Iridium}
+
+\nomenclature[aSAW]{\SAW}{akustische Oberflächenwelle (\engl{}: \textit{Surface Acoustic Wave} (\SAW{}))}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%% Sensordimension
+\nomenclature[sdt]{\sendicke}{Dicke des \MESE{}s} 
+\nomenclature[sdl]{\senlaenge}{Länge des \MESE{}s} 
+\nomenclature[sE]{\Emodule}{E-Modul des \MESE{}s} 
+\nomenclature[srho]{\sendichte}{Dichte des \MESE{}s} 
+
+%% Elektroden
+\nomenclature[szeta]{\Elec{l}}{$l$-te Elektrode} 
+\nomenclature[sM]{\Mode{l}}{$l$-te Mode} 
+
+%% Längen
+\nomenclature[sNfr]{\Nfr}{Blocklänge} 
+\nomenclature[sNdft]{\Ndft}{DFT-Länge} 
+\nomenclature[sNave]{\Nave}{Anzahl Mittelung} 
+
+\nomenclature[sNcb]{\Ncb}{Anzahl kombinierter Signale} 
+\nomenclature[sNm]{\Nm}{Anzahl ausgelesener Moden} 
+\nomenclature[sNc]{\Nc}{Anzahl verwendeter Träger} 
+
+\nomenclature[sNr]{\Nr}{Anzahl der Referenzen} 
+\nomenclature[sNf]{\Nf}{Filterlänge der Kompensation} 
+\nomenclature[sNv]{\Ndelay}{Verzögerung der Kompensation} 
+
+\nomenclature[sNd]{\Nd}{Verwendete Teilbänder} 
+
+\nomenclature[sNper]{\Nper}{Periodenlänge} 
+\nomenclature[sNrwave]{\Nrwave}{Länge der R-Zacken-Erkennung} 
+\nomenclature[sNrv]{\Nrdelay}{Laufzeitausgleich} 
+\nomenclature[sNwin]{\Nrwin}{Halbe Fensterbreite der Mittelung} 
+\nomenclature[sNhys]{\Nrhys}{Hystereselänge} 
+
+%% Indizes
+\nomenclature[sn]{\td}{Zeitindex} 
+\nomenclature[st]{\ta}{Zeit} 
+\nomenclature[smu]{\fb}{Frequenzstützstelle} 
+\nomenclature[sk]{\fri}{Blockindex} 
+
+%% B-Felder
+\nomenclature[sbd]{\bd{\td}, \bd{\ta}}{Magnetisches Nutzsignal} 
+\nomenclature[sbd]{\bdamp}{Amplitude des magnetischen Nutzsignals} 
+\nomenclature[sfd]{\fd}{Frequenz des magnetischen Nutzsignals} 
+\nomenclature[sBd]{\Bd{f}}{Fourier-Transformierte des magnetischen Nutzsignals} 
+\nomenclature[sBd]{\Bd{\fb,\fri}}{\DSTFT{} des magnetischen Nutzsignals} 
+\nomenclature[sbspp]{\bspp}{Magnetisches Hilfsfeld} 
+\nomenclature[sBop]{\Bop}{Magnetische Vorspannung zur Arbeitspunkteinstellung} 
+\nomenclature[sb]{\bsum}{Magnetisches Eingangssignal}
+
+\nomenclature[sfbwb]{\fbwb}{Bandbreite des magnetisches Nutzsignals}
+
+\nomenclature[sbm]{\bmeasuredamp{x}}{Gemessene Amplitude des $x$-ten Sensors}
+\nomenclature[sbs]{\bsourceamp}{Amplitude der Quelle}
+
+%% Magnetostriktion
+\nomenclature[smu]{\magneto}{geschätzte Magnetostriktion}
+\nomenclature[smu]{\magnetores}{Magnetostriktion}
+
+%% deltaE
+\nomenclature[sDeltab]{\deltaB}{Veränderung des magnetisches Feldes} 
+\nomenclature[sDeltafrm]{\deltafr{l}}{Veränderung der Resonanzfrequenz} 
+\nomenclature[sDeltaY]{\deltaYabs{l}}{Veränderung des Betrag der Admittanz} 
+\nomenclature[sDeltaY]{\deltaYarg{l}}{Veränderung des Arguments der Admittanz} 
+\nomenclature[shtpdE]{\hdE}{Tiefpass des deltaE-Effekts} 
+\nomenclature[sfcdE]{\fcdE{l}}{3-dB Grenzfrequenz des deltaE-Effekts der $l$-ten Resonanzmode} 
+
+%\nomenclature[sfrde]{\frdE{l}}{Referenzfrequenz zum deltaE-Effekt} 
+
+%% IQ-Demodulation
+\nomenclature[scex]{\cex}{Digitales Replikat des Trägersignals zur IQ-Demodulation} 
+\nomenclature[ssex]{\sex}{Phasenverschobenes, digitales Replikat des Trägersignals zur IQ-Demodulation} 
+
+%% Analog
+\nomenclature[sZme]{\Zme}{\MESE{} Klemmenimpedanz}
+\nomenclature[sYme]{\Yme}{\MESE{} Klemmenadmittanz}
+\nomenclature[sCme]{\Cme}{\MESE{} Kapazität}
+\nomenclature[sCmep]{\Cmep}{\MESE{} Kapazität (parallel)}
+\nomenclature[sRmep]{\Rmep}{\MESE{} Widerstand (parallel)}
+\nomenclature[sCmes]{\Cmes}{\MESE{} Kapazität (Reihenschwingkreis)}
+\nomenclature[sLmes]{\Lmes}{\MESE{} Induktivität (Reihenschwingkreis)}
+\nomenclature[sRmes]{\Rmes}{\MESE{} Widerstand (Reihenschwingkreis)}
+
+\nomenclature[sime]{\ime}{\MESE{} Strom}
+\nomenclature[sqme]{\qme}{\MESE{} Ladung}
+\nomenclature[sum]{\ume}{\MESE{} Spannung}
+
+\nomenclature[sCcc]{\Ccc}{Einkopplungskapazität der Trägerkompensation}
+\nomenclature[sCf]{\Cf}{Rückkopplungskapazität des Ladungsverstärkers}
+\nomenclature[sRf]{\Rf}{Rückkopplungswiderstand des Ladungsverstärkers}
+
+\nomenclature[sKp]{\Kpiezo}{Konvertierungsfaktor Piezoelektrikum}
+\nomenclature[sKamp]{\Kamp}{Konvertierungsfaktor Verstärker}
+
+\nomenclature[sum]{\um}{Gemessene \MESE{} Spannung}
+\nomenclature[sUm]{\Um{\cdot}}{Fourier-Transformierte der gemessenen \MESE{}spannung}
+
+\nomenclature[suex]{\uex}{Anregungsspanung}
+\nomenclature[suex]{\uexamp{}, \uexamp{l}}{Amplitude (des $l$-ten Trägers) der Anregungsspanung}
+\nomenclature[sphiex]{\uexphase{},\uexphase{l}}{Phase (des $l$-ten Trägers) der Anregungsspanung}
+\nomenclature[succ]{\ucc}{Spannung zur Trägerkompensation}
+\nomenclature[succ]{\uccamp}{Amplitude der Spannung zur Trägerkompensation}
+\nomenclature[sphicc]{\uccphase}{Phase der Spannung zur Trägerkompensation}
+
+\nomenclature[smr]{\mr}{Impulsantwort der mechanischen Resonanz}
+\nomenclature[sMr]{\Mr{\cdot}}{Fourier-Transformiete der mechanischen Resonanz}
+
+\nomenclature[sfs]{\fs}{Abtastrate}
+
+\nomenclature[sQ]{\Qm{}, \Qm{l}}{Güte der ($l$-ten) Resonanzmode}
+
+\nomenclature[sfbw]{\fbwm{}, \fbwm{l}}{Bandbreite der ($l$-ten) Resonanzmode}
+\nomenclature[sfr]{\frm{}, \frm{l}}{Resonanzfrequenz der ($l$-ten) Resonanzmode}
+\nomenclature[somegar]{\wrm{l}}{Resonanzkreisfrequenz der ($l$-ten) Resonanzmode}
+\nomenclature[sfex]{\fex{},\fex{l}}{Frequenz (des $l$-ten Trägers) der Anregungsspanung}
+\nomenclature[sDeltafex]{\fexdelta}{Grundfrequenzabstand der Träger der Anregungsspanung}
+\nomenclature[somegaex]{\wex{}, \wex{l}}{Kreisfrequenz (des $l$-ten Trägers) der Anregungsspanung}
+\nomenclature[sOmegaex]{\Wex{}, \Wex{l}}{Normierte Frequenz (des $l$-ten Trägers) der Anregungsspanung}
+\nomenclature[smuex]{\fbex, \fbex{l}}{Frequenzstützstelle (des $l$-ten Trägers) der Anregungsspanung}
+
+\nomenclature[sfc]{\fcdemod}{Grenzfrequenz der Demodulation}
+
+\nomenclature[sbex]{\bex{}, \bex{l}}{Magnetische Amplitude (des $l$-ten Trägers) der Anregungsspanung}
+
+%% Rauschen
+\nomenclature[sxiuex]{\uexnoise}{Rauschen der elektrischen Anregung}
+\nomenclature[sxibex]{\bexnoise}{Rauschen der magnetischen Anregung}
+\nomenclature[sxibbark]{\bbarknoise}{magnetisches Rauschen}
+\nomenclature[sxielec]{\elecnoise}{Rauschen der \AD{}-Umsetzung und des Verstärkers}
+
+%% Störungen
+\nomenclature[sbs]{\bs}{Magnetische Störung}
+\nomenclature[slambdas]{\mechs}{Mechanische Störung}
+\nomenclature[sus]{\us}{Elektrische Störung}
+
+%% Kompensation
+\nomenclature[sxir]{\refnoise{l}, \refnoise{l}}{Eigenrauschen der ($l$-ten) Referenz}
+\nomenclature[sXir]{\Rrefnoise{l}}{\DSTFT{} des Eigenrauschens der $l$-ten Referenz}
+\nomenclature[sXir]{\bvecRrefnoise{l}}{Vektor über die letzten Werte von \Rrefnoise{l}}
+%\nomenclature[sbs]{\refnoisen{}}{Magnetische Störung}
+\nomenclature[sxir]{\bvecrefnoise{l}}{Vektor über die letzten Werte von \refnoise{l}}
+\nomenclature[sxim]{\menoise}{Eigenschrauschen des \MESE{}s}
+\nomenclature[sXim]{\MEnoise}{\DSTFT{} des Eigenrauschens des \MESE{}s}
+
+%\nomenclature[sus]{\us}{Elektrische Störung}
+%\nomenclature[sbs]{\bs}{Magnetische Störung}
+%\nomenclature[slambdas]{\mechs}{Mechanische Störung}
+%\nomenclature[sus]{\us}{Elektrische Störung}
+%\nomenclature[sbs]{\bs}{Magnetische Störung}
+
+\nomenclature[ssigmaxir]{\powrefnoise{}, \powrefnoise{l}}{Varianz des Eigenrauschens der ($l$-ten) Referenz}
+\nomenclature[ssigmaxim]{\powmenoise}{Varianz des Eigenrauschens des \MESE{}}
+\nomenclature[ssigmarsu]{\powrefu{}, \powrefu{l}}{Varianz des ungestörten ($l$-ten) Referenzsignals}
+\nomenclature[ssigmae]{\powe}{Varianz des Fehlersignals}
+\nomenclature[ssigmab]{\powb}{Varianz des Nutzsignals}
+
+\nomenclature[ss]{\s{}, \s{l}}{Störungssignale der ($l$-ten) Störung}
+\nomenclature[ss]{\bvecs{l}}{Vektor über die letzten Werte von \s{l}}
+
+\nomenclature[sxca]{\caout}{Ausgangssignal der Kompensation}
+
+\nomenclature[se]{\e}{Fehlersignal der Kompensation}
+\nomenclature[sE]{\efreq}{\DSTFT{} des Fehlersignals der Kompensation}
+\nomenclature[seu]{\eu}{ungestörtes Fehlersignal der Kompensation}
+\nomenclature[sEu]{\eufreq}{\DSTFT{} des ungestörtes Fehlersignals der Kompensation}
+\nomenclature[se]{\el{l}}{Fehler unter Verwendung der $l$-ten Referenz}
+\nomenclature[seu]{\elu{l}}{ungestörter Fehler unter Verwendung der $l$-ten Referenz}
+
+\nomenclature[shr]{\hrsin{}{}, \hr{l}{p}}{zeitvariante Impulsantwort zwischen der ($l$-ten) Störungsquelle und ($p$-ten) Referenz}
+\nomenclature[shr]{\hrnsin{}{}{o}, \hrn{l}{p}{o}}{$o$-te Element der Impulsantwort zwischen der ($l$-ten) Störungsquelle und ($p$-ten) Referenz}
+\nomenclature[shp]{\hm{}, \hm{l}}{zeitvariante Impulsantwort zwischen der ($l$-ten) Störungsquelle und dem \MESE{} }
+\nomenclature[shp]{\hmn{}{o}, \hmn{l}{o}}{$o$-te Element der Impulsantwort zwischen der ($l$-ten) Störungsquelle und dem \MESE{}}
+
+\nomenclature[sHr]{\Hr{}{}}{z-Transformierte von \hr{}{}}
+\nomenclature[sHp]{\Hm{}}{z-Transformierte von \hm{}}
+
+\nomenclature[sgrp]{\hrm{}, \hrm{l}}{zeitvariante Impulsantwort zwischen der ($l$-ten) Referenz und dem \MESE{}}
+\nomenclature[sgrp]{\hrmfixed{}, \hrmfixed{l}}{zeitinvariante Impulsantwort zwischen der ($l$-ten) Referenz und dem \MESE{}}
+\nomenclature[sgrp]{\hrmest{}, \hrmest{l}}{geschätzte Impulsantwort zwischen der ($l$-ten) Referenz und dem \MESE{}}
+\nomenclature[sgrp]{\hrmest{\text{m}}}{geschätzte Impulsantwort zwischen den Referenzen und dem \MESE{}}
+\nomenclature[sGrp]{\Hrmest{l}}{geschätzte Impulsantwort zwischen der $l$-ten Referenz und dem \MESE{} der Frequenzstützstelle \fb{}}
+\nomenclature[sGrp]{\Hrmestn{l}{o}}{$o$-tes Element der geschätzten Impulsantwort zwischen der $l$-ten Referenz und dem \MESE{} der Frequenzstützstelle \fb{}}
+
+%\nomenclature[sgrp]{\hrmestnext{l}}{...}
+%\nomenclature[sGrp]{\Hrmestnext{l}}{...}
+\nomenclature[sGrp]{\Hrmestpre{l}}{korrigierte, geschätzte Impulsantwort zwischen der $l$-ten Referenz und dem \MESE{} des Teilbands \fb{}}
+\nomenclature[sgrpopt]{\hrmestopt{}}{Wiener-Lösung}
+\nomenclature[sgrpopteu]{\hrmestopteu{}}{Ungestörte Wiener-Lösung}
+\nomenclature[sDeltagrp]{\sysdis{}}{Systemabstand}
+%\nomenclature[sDeltagrp]{\sysdisnext{l}}{...}
+
+\nomenclature[sgamma]{\whrm{l}}{Filtergewicht $\E{ \hrm{l}\herm  \hrm{l} }$}
+
+\nomenclature[sSbp]{\hbme}{Impulsantwort zwischen Nutzsignalquelle und \MESE{}}
+\nomenclature[sSbr]{\hbref{l}}{Impulsantwort zwischen Nutzsignalquelle und $l$-ten Referenz}
+
+\nomenclature[sbetabp]{\hbmefact}{Dämpfungsfaktor der Signalamplitude zwischen Nutzsignalquelle und \MESE{}}
+\nomenclature[sbetabr]{\hbreffact{}}{Dämpfungsfaktor der Signalamplitude zwischen Nutzsignalquelle und Referenz}
+\nomenclature[sbeta]{\relhbmeref{l}}{Quotient zwischen \hbmefact{} und \hbreffact{l}}
+
+\nomenclature[snu]{\powerbdecrease}{Exponent der Potenzfunktion zur Abhängigkeit vom Abstand der magnetischen Amplitude}
+
+\nomenclature[sd]{\dis}{Abstand}
+\nomenclature[sdm]{\disbm}{Abstand der Quelle zum Sensor}
+\nomenclature[sDeltadmr]{\dismr{l}}{Abstand zwischen der Quelle und dem ersten, körpernahen Sensor}
+%\nomenclature[sdr]{\disbr{l}}{Abstand zwischen dem ersten (körpernah) und $x$-ten Sensor}
+
+\nomenclature[sepsilone]{\coste}{allgemeine Kostenfunktion der Kompensation auf Basis des mittleren, quadratischen Fehlers}
+\nomenclature[sepsiloneu]{\costeu}{Kostenfunktion der Kompensation auf Basis des mittleren, quadratischen und ungestörten Fehlers}
+\nomenclature[sepsilonDeltag]{\costsysdis}{Kostenfunktion der Kompensation bei Minimierung des Systemabstands}
+
+\nomenclature[smu]{\step}{Schrittweite des \NLMS{} im Zeitbereich}
+\nomenclature[sGamma]{\Step{}}{Schrittweite des \NLMS{} im Teilbandbereich}
+
+\nomenclature[schi]{\steplms{l}}{Schrittweite des \LMS{} im Zeitbereich}
+\nomenclature[sUpsilon]{\Steplms{l}}{Schrittweite der $l$-ten Referenz des \LMS{} im Teilbandbereich}
+
+\nomenclature[sTheta]{\Activeref{l}}{Aktierungssignal der $l$-Referenz zur Kompensation}
+
+\nomenclature[sPsi]{\Activerescue}{Aktierungssignal des Sicherungsalgorithmus der Kompensation}
+\nomenclature[sPsith]{\Activerescuetol}{Toleranz zur Aktivierung von \Activerescue{} }
+\nomenclature[sPsiatt]{\Activerescueatt}{Dämpfung des Sicherungsalgorithmus}
+
+\nomenclature[smuopt]{\stepopt}{optimale Schrittweite im Zeitbereich}
+\nomenclature[sGammaopt]{\Stepopt}{optimale Schrittweite im Teilbandbereich}
+
+\nomenclature[sGammamax]{\Stepmax}{maximale Schrittweite}
+\nomenclature[sGammamin]{\Stepmin}{minimale Schrittweite}
+
+\nomenclature[sGamma]{\Stepoptest}{geschätze optimale Schrittweite}
+
+\nomenclature[sc]{\corr}{Maß der Korrelation}
+\nomenclature[salphas]{\ampsref{l}}{Amplitude des $l$-ten Referenz}
+\nomenclature[salpha]{\ampsrefrel}{Amplitudenverhältnis}
+
+\nomenclature[sm]{\caspeed}{normierte Konvergenzgeschwindigkeit}
+\nomenclature[sm]{\caspeedid}{ideale, normierte Konvergenzgeschwindigkeit}
+
+\nomenclature[sDeltafr]{\deltafmr}{Differenz der Resonanzfrequenzen eines \MESE{}s und \PESE{}s}
+
+\nomenclature[sSigmae]{\powefreq}{Geschätze Leistung des Fehlersignals}
+
+\nomenclature[sSigmaxim]{\powmenoisefreq}{Geschätzte Leistung des Eigenrauschens des \MESE{}s}
+\nomenclature[sSigmaxir]{\powrefnoisefreq{l}}{Geschätzte Leistung des Eigenrauschens der $l$-ten Referenz}
+\nomenclature[sSigmaxir]{\powrefnoisefreqsum}{Summierte, geschätzte und gewichtete Leistung des Eigenrauschens der Referenzen}
+\nomenclature[sSigmar]{\powreffreq{l}}{Geschätzte Leistung der $l$-Referenz}
+\nomenclature[sSigmab]{\powbfreq}{Geschätzte Leistung des Nutzsignals}
+%\nomenclature[sSigmab]{\powbfreqold}{...}
+
+%\nomenclature[sSigmae]{\powefreqold}{...}
+
+\nomenclature[sGammacafa]{\smoothingcafast}{Glättungskonstante zur schnellen Adaption der Schätzung}
+\nomenclature[sGammacasl]{\smoothingcaslow}{Glättungskonstante zur langsamen Adaption der Schätzung}
+
+\nomenclature[sDeltacasth]{\smoothingcathreshold}{Schwellenwert zur Wahl der Glättungskonstanten \smoothingcafast{} und \smoothingcaslow{}}
+
+\nomenclature[sVfl]{\Noisefloor}{Parameter zur Skalierung der konstanten Rauschamplitudendichte}
+\nomenclature[sVp]{\Noisepeak}{Parameter zur Skalierung von resonant-verstärkten Rauschamplitudendichte}
+
+%% Kombination
+%\nomenclature[snub]{\bbetanoise{l}}{...}
+
+\nomenclature[snub]{\xbbetanoise{l}}{Rauschen des $l$-ten Messsignals}
+\nomenclature[sNb]{\Xbbetanoise{l}}{\DSTFT{} von \xbbetanoise{l} }
+\nomenclature[snub]{\bvecxbbetanoise}{Vektor über die letzten Werte von \xbbetanoise{l}}
+\nomenclature[snucb]{\xbcbnoise}{Rauschen des kombinierten Signals}
+
+\nomenclature[salphacb]{\wcb{l}}{Kombinierungsgewicht des $l$-ten Messsignals}
+\nomenclature[salphacb]{\bvecwcb}{Vektor aller Kombinierungsgewichte}
+\nomenclature[sAcb]{\bvecWcb}{Vektor aller Kombinierungsgewichte im Teilbandbereich}
+
+\nomenclature[salphacbopt]{\bvecwcbopt}{Vektor aller optimalen Kombinierungsgewichte}
+\nomenclature[salphacbmrc]{\wcbmrc{l}}{\MRC{}-Gewicht des $l$-ten Messsignals}
+\nomenclature[sAcbmrc]{\Wcbmrc{l}}{\MRC{}-Gewicht des $l$-ten Messsignals im Teilbandbereich}
+\nomenclature[salphacbegc]{\wcbegc{l}}{\EGC{}-Gewicht des $l$-ten Messsignals}
+
+%\nomenclature[salphacbegc]{\stdbbetanoise{l}}{...}
+\nomenclature[ssigmanub]{\powbbetanoise{l}}{Rauschleistung des $l$-ten Messsignals}
+
+%\nomenclature[salphacbegc]{\Stdbbetanoise{l}}{...}
+%\nomenclature[sSigmanub]{\Powbbetanoise{l}}{Leistungsdichte des $l$-ten Messsignals}
+
+%\nomenclature[salphacbegc]{\estStdbbetanoisekon{l}}{...}
+\nomenclature[sSigmanub]{\estPowbbetanoisekon{l}}{frequenzunabhängige und geschätzte Leistungsdichte des $l$-ten Messsignals}
+
+%\nomenclature[salphacbegc]{\estoldStdbbetanoisekon{l}}{...}
+%\nomenclature[sSigmanub]{\estoldPowbbetanoisekon{l}}{...}
+
+%\nomenclature[salphacbegc]{\estStdbbetanoise{l}}{...}
+\nomenclature[sSigmanub]{\estPowbbetanoise{l}}{geschätzte Leistungsdichte des $l$-ten Messsignals}
+
+%\nomenclature[salphacbegc]{\estoldStdbbetanoise{l}}{...}
+%\nomenclature[sSigmanub]{\estoldPowbbetanoise{l}}{...}
+
+
+\nomenclature[sGammacb]{\smoothcb}{Glättungskonstante (\FB{} Kombination)}
+\nomenclature[sGammacbfa]{\smoothcbfast}{Glättungskonstante zur schnellen Adaption der Schätzung (\SB{} Kombination)}
+\nomenclature[sGammacbsl]{\smoothcbslow}{Glättungskonstante zur langsamen Adaption der Schätzung (\SB{} Kombination)}
+\nomenclature[sDeltasth]{\smoothingcbthreshold}{Schwellenwert zur Wahl der Glättungskonstanten \smoothcbfast{} und \smoothcbslow{}}
+
+\nomenclature[smumin]{\freqbinestmin}{Minimale Frequenzstelle zur Schätzung des Rauschlevels}
+\nomenclature[smumax]{\freqbinestmax}{Maximale Frequenzstelle zur Schätzung des Rauschlevels}
+
+\nomenclature[sDeltaLOD]{\DeltaLOD}{Veränderung des \LOD{}s}
+
+%%  Mittelung
+\nomenclature[sxm]{\bvecxm{l}}{Signalvektor der $l$-ten Periode}
+
+\nomenclature[sxmcg]{\bvecxmcg}{Nutzsignalvektor}
+\nomenclature[sxmcg]{\xmcg{\td{}}}{Nutzsignal}
+
+\nomenclature[srmcg]{\rmcg{l}{\td{}}}{Rauschen des ungemittelten Signals der $l$-ten Periode}
+\nomenclature[srmcg]{\bvecrmcg{l}}{Rauschsignalvektor der $l$-ten Periode}
+\nomenclature[srave]{\rave{l}{\td{}}}{Rauschsignal nach der $l$-ten  Mittelung}
+\nomenclature[srave]{\bvecrave{l}}{Rauschsignalvektor nach der $l$-ten   Mittelung}
+
+\nomenclature[sxave]{\bvecxave{l}}{Signalvektor nach der $l$-ten Mittelung}
+
+\nomenclature[sgammath]{\rwaveth}{Dämpfungsfaktor zur R-Zacken-Detektion}
+\nomenclature[salphasth]{\rwavesmooth}{Glättungsfaktor zur R-Zacken-Detektion}
+
+\nomenclature[srth]{\avethreshold}{Schwellenwert zur R-Zacken-Detektion}
+\nomenclature[srthsth]{\avethresholdsth}{geglätteter Schwellenwert zur R-Zacken-Detektion}
+%\nomenclature[srth]{\avethresholdsthold}{...}
+
+\nomenclature[srtrig]{\avetrig}{Triggersignal der Mittelung}
+%\nomenclature[sDeltaLOD]{\avetrign{l}}{...}
+
+\nomenclature[sc]{\aveconditionrwave{l}}{$l$-te Bedingung der R-Zacken-Detektion}
+\nomenclature[sc]{\aveconditionF{l}{o}}{$l$-te Bedingung der Signalmittelung im Zeit-Frequenz-Bereich}
+\nomenclature[sc]{\aveconditionTF{l}{o}}{$l$-te Bedingung der Signalmittelung im Zeit-Frequenz-Bereich}
+
+\nomenclature[sp]{\rwavepos{l}}{R-Zacken-Position}
+
+\nomenclature[sx]{\bvecxuo{p}{o}{l}}{\MESE{}signal nach $l$ Mittelungen entsprechend der Methode $o \in \{\AT, \WAT, \WATF, \WAETF \}$ und Vorverarbeitung nach $p$}
+\nomenclature[sr]{\bvecruo{p}{o}{l}}{Referenzsignal nach $l$ Mittelungen entsprechend der Methode $o \in \{\AT, \WAT, \WATF, \WAETF \}$ und Vorverarbeitung nach $p$}
+
+\nomenclature[schi]{\weightaveGEN{l}{o}}{unnormiertes Gewicht der $l$-ten Periode entsprechend der Methode $o \in \{\AT, \WAT, \WATF, \WAETF \}$}
+
+\nomenclature[ssigmasig]{\powsig{l}}{Signalleistung der $l$-ten Periode}
+\nomenclature[ssigmanoise]{\pownoise{l}}{Rauschleistung der $l$-ten Periode}
+
+\nomenclature[sDeltaincfa]{\aveestincfast}{Inkrementierungsfaktor zur schnelle Adaption der Schätzung}
+\nomenclature[sDeltaincsl]{\aveestincslow}{Inkrementierungsfaktor zur langsamen Adaption der Schätzung}
+\nomenclature[sDeltadec]{\aveestdec}{Dekrementierungsfaktor zur Adaption der Schätzung}
+\nomenclature[sGammathf]{\aveestth}{Schwellenwert zur Unterscheidung der Inkrementierungsfaktoren}
+
+\nomenclature[sGammatht]{\aveestthtime}{Schwellenwert zur Deaktivierung der Adaption der Schätzung}
+
+\nomenclature[snhys]{\nhyscount{l}}{Zähler}
+
+\nomenclature[sp]{\mcgpp}{Spitze-Spitze-Amplitude des (synthetischen) \MCG{}s}
+\nomenclature[sbeta]{\ebasnrcorrectionfactor}{Korrekturfaktor zur Bestimmung der Effektivamplitude eines \MCG{}s auf Basis der Spitze-Spitze-Amplitude}
+
+\nomenclature[szeta]{\ebasnr{p}{o}{l}}{\EBASNR{} nach $l$-Mittelungen unter der Annahme, dass das \MCG{} eine Spitze-Spitze-Amplitude von $p$, die Mittelungsmethode $o \in \{\AT, \WAT, \WATF, \WAETF \}$ entspricht}
+\nomenclature[sw]{\ebasnrnoisewindow}{Fenster zur Differenzierung zwischen Signal und Rauschen}
+
+% Varianten
+%\nomenclature[sw]{\ebasnrnoisewindow}{...}
+%\nomenclature[sw]{\ebasnrnoisewindow}{...}
+%\nomenclature[sw]{\ebasnrnoisewindow}{...}
+%\nomenclature[sw]{\ebasnrnoisewindow}{...}
+
+%\newcommand{\bvecmou}[3]{\ensuremath{\bvec{#1}_{#2}^{ave}(#3)}}				
+%\nomenclature[sx]{\bvecmou{x}{o}{l}}{\MESE{}signal nach $l$ Mittelungen entsprechend ave$\in \left$ }
+
+
+% Klassich
+%\nomenclature[sx]{\bvecmat{x}{b}{l}}{\MESE{}signal nach $l$ Mittelungen } 	\nomenclature[srd]{\bvecmat{r}{b}{l}}{Referenzsignal nach $l$ Mittelungen}
+
+% WA Zeitbereich
+%\nomenclature[sxwat]{\bvecmwat{x}{b}{l}}{\MESE{}signal nach $l$ adaptiven Mittelungen im Zeitbereich}	
+%\nomenclature[srdwat]{\bvecmwat{r}{b}{l}}{Referenzsignal nach $l$ adaptiven Mittelungen im Zeitbereich}
+%\nomenclature[schiwat]{\weightavewat{l}}{Gewicht der $l$-ten Periode der adaptiven Mittelung im Zeitbereich}
+
+% WA Zeit/Frequenzbereich
+%\nomenclature[sxwatf]{\bvecmwatf{x}{b}{l}}{\MESE{}signal nach $l$ adaptiven Mittelungen im Zeit-Frequenz-Bereich}	\nomenclature[srdwatf]{\bvecmwatf{r}{p}{l}}{Referenzsignal nach $l$ Mittelungen im  Zeit-Frequenz-Bereich}
+%\nomenclature[schiwatf]{\weightavetf{l}}{Gewicht der $l$-ten Periode der adaptiven Mittelung im Zeit-Frequenz-Bereich}
+
+\nomenclature[sXwatf]{\Xwatf{p}{l}}{\DFT{} von \bvecmwatf{x}{p}{l}}
+\nomenclature[sXwatf]{\Xwatfest{p}{l}}{Schätzung der Rauschamplitudendichte}
+
+% WA Enahnced Zeit/Frequenzbereich
+%\nomenclature[sxwaetf]{\bvecmwaetf{x}{b}{o}}{\MESE{}signal nach $l$ adaptiven Mittelungen im Zeit-Frequenz-Bereich (verbessert)}	
+%\nomenclature[srdwaetf]{\bvecmwaetf{r}{b}{o}}{Referenzsignal nach $l$ Mittelungen im  Zeit-Frequenz-Bereich  (verbessert)}
+%\nomenclature[schiwaetf]{\weightaveetf{l}}{Gewicht der $l$-ten Periode der verbesserten adaptiven Mittelung im Zeit-Frequenz-Bereich}
+
+\nomenclature[sXwaetf]{\Xwaetf{p}{l}}{\DFT{} von \bvecmwaetf{x}{p}{l}}
+\nomenclature[sXwaetf]{\Xwaetfest{p}{l}}{Schätzung der Rauschamplitudendichte}
+
+%% Eingangssignal
+%\nomenclature[snhys]{\xmXXX{l}}{...}
+\nomenclature[sxm]{\xm}{gemessenes \MESE{}signal}
+\nomenclature[sXm]{\Xm}{\DSTFT{} von \xm{}}
+%\nomenclature[snhys]{\XmXXX{l}}{...}
+
+\nomenclature[srs]{\rs{}, \rs{l}}{Signal der ($l$-ten) Referenz}
+\nomenclature[srsu]{\rsu{}, \rsu{l}}{ungestörtes Signal der ($l$-ten) Referenz}
+%\nomenclature[snhys]{\rsn{l}{p}}{...}
+%\nomenclature[snhys]{\rsun{l}{p}}{...}
+\nomenclature[srs]{\bvecrs{l}}{Vektor über die letzten Werte von \rs{l}}
+\nomenclature[srs]{\bvecrs{\text{m}}}{Vektor aller \bvecrs{l}}
+%\nomenclature[snhys]{\bvecrsnext{l}}{...}
+\nomenclature[srsu]{\bvecrsu{}}{Vektor über die letzten Wert von \rsu{}}
+\nomenclature[sRs]{\Rs{l}}{\DSTFT{} von \rs{l}}
+
+\nomenclature[sCs]{\ScaleRs{l}}{Skalierungsfaktor von \Rs{l}}
+\nomenclature[sCs]{\bvecScaleRs}{Vektor aller \ScaleRs{l}}
+
+\nomenclature[srsb]{\rsbeta{l}{p}}{Runtergemischtes Signal der $l$-ten Referenz entsprechend des $p$-ten Trägers}
+\nomenclature[sRsus]{\Rsus{l}{p}}{\DSTFT{} des runtergemischten Signals der $l$-ten Referenz entsprechend des $p$-ten Trägers (Frequenzbereichsdemodulation)}
+\nomenclature[sRsb]{\Rsbeta{l}{p}}{\DSTFT{} des runtergemischten Signals der $l$-ten Referenz entsprechend des $p$-ten Trägers}
+%\nomenclature[snhys]{\Rsbetan{l}{p}{o}}{...}
+\nomenclature[sRsb]{\bvecRsbeta}{Vektor aller \Rsbeta{l}{p}}
+\nomenclature[sRsb]{\bvecRsbetakomp{l}{p}}{Vektor über die letzten Werte von \Rsbeta{l}{p}}
+
+\nomenclature[srd]{\rd}{Referenzsignal des Nutzsignal}
+%\nomenclature[snhys]{\nhyscount{l}}{...}
+\nomenclature[sRd]{\Rd}{\DSTFT{} von \rd{}}
+
+\nomenclature[sCd]{\ScaleRd}{Skalierungsfaktor von \Rd{}}
+
+%% Demoduliert
+%\nomenclature[sxus]{\xus{}, \xus{l}}{demoduliertes (Frequenzdemodulation, oberes Seitenband) \MESE{}signal (des $l$-ten Trägers)}
+%\nomenclature[sxls]{\xls{}, \xls{l}}{demoduliertes (Frequenzdemodulation, unteres Seitenband) \MESE{}signal (des $l$-ten Trägers)}
+%\nomenclature[sxam]{\xam{}, \xam{l}}{demoduliertes (IQ-Demodulation, Amplitudenmodulation) \MESE{}signal (des $l$-ten Trägers)}
+%\nomenclature[sxpm]{\xpm{}, \xpm{l}}{demoduliertes (IQ-Demodulation, Phasenmodulation) \MESE{}signal (des $l$-ten Trägers)}
+
+\nomenclature[sxb]{\xbeta{}, \xbeta{l}}{demoduliertes \MESE{}signal (des $l$-ten Trägers) mit $b\in\left\{\text{us},\text{ls},\text{am},\text{pm} \right\}$}
+\nomenclature[sxb]{\bvecxbeta}{Vektor aller \xbeta{l}}
+
+%\nomenclature[sXus]{\Xus{}, \Xus{l}}{\DSTFT{} von \xus{l}}
+%\nomenclature[sXls]{\Xls{}, \Xls{l}}{\DSTFT{} von \xls{l}}
+%\nomenclature[sXam]{\Xam{}, \Xam{l}}{\DSTFT{} von \xam{l}}
+%\nomenclature[sXpm]{\Xpm{}, \Xpm{l}}{\DSTFT{} von \xpm{l}}
+
+\nomenclature[sXb]{\Xbeta{}, \Xbeta{l}}{\DSTFT{} von \xbeta{l}}
+%\nomenclature[snhys]{\Xbetak{l}}{...}
+\nomenclature[sXb]{\bvecXbeta{}}{Vektor aller \Xbeta{l}}
+
+%% Demoduliert und kompensiert
+%\nomenclature[sxusaca]{\xusca{}, \xusca{l}}{demoduliertes (Frequenzdemodulation, oberes Seitenband) und kompensiertes \MESE{}signal (des $l$-ten Trägers)}
+%\nomenclature[sxlsca]{\xlsca{}, \xlsca{l}}{demoduliertes (Frequenzdemodulation, unteres Seitenband) und kompensiertes \MESE{}signal  (des $l$-ten Trägers)}
+%\nomenclature[sxamca]{\xamca{}, \xamca{l}}{demoduliertes (IQ-Demodulation, Amplitudenmodulation) und kompensiertes \MESE{}signal  (des $l$-ten Trägers)}
+%\nomenclature[sxpmca]{\xpmca{}, \xpmca{l}}{demoduliertes (IQ-Demodulation, Phasenmodulation) und kompensiertes \MESE{}signal (des $l$-ten Trägers)}
+
+\nomenclature[sxbca]{\xbetaca{}, \xbetaca{l}}{demoduliertes und kompensiertes \MESE{}signal (des $l$-ten Trägers) mit $b\in\left\{\text{us},\text{ls},\text{am},\text{pm} \right\}$}
+
+%\nomenclature[sXusaca]{\Xusca{}, \Xusca{l}}{\DSTFT{} von \xusca{l}}
+%\nomenclature[sXlsca]{\Xlsca{}, \Xlsca{l}}{\DSTFT{} von \xlsca{l}}
+%\nomenclature[sXamca]{\Xamca{}, \Xamca{l}}{\DSTFT{} von \xamca{l}}
+%\nomenclature[sXpmca]{\Xpmca{}, \Xpmca{l}}{\DSTFT{} von \xpmca{l}}
+
+\nomenclature[sXb]{\Xbetaca{}, \Xbetaca{l}}{\DSTFT{} von \xbetaca{l}}
+%\nomenclature[sXb]{\Xbetacaave{l}}{...}
+
+\nomenclature[sXbca]{\bvecXbetaca{}}{Vektor aller \Xbetaca{l}}
+
+%% Demoduliert und entzerrt
+%\nomenclature[sxls]{\xbus{}, \xbus{l}}{demoduliertes und entzerrtes \MESE{}signal (Frequenzbereichsdemodulation, oberes Seitenband)}
+%\nomenclature[sxls]{\xbls{}, \xbls{l}}{demoduliertes und entzerrtes \MESE{}signal (Frequenzbereichsdemodulation, unteres Seitenband)}
+%\nomenclature[sxam]{\xbam{}, \xbam{l}}{demoduliertes und entzerrtes \MESE{}signal (IQ-Demodulation, Amplitudenmodulation)}
+%\nomenclature[sxpm]{\xbpm{}, \xbpm{l}}{demoduliertes und entzerrtes \MESE{}signal (IQ-Demodulation, Phasenmodulation)}
+
+\nomenclature[sxb]{\xbbeta{}, \xbbeta{l}}{demoduliertes und entzerrtes \MESE{}signal mit $b\in\left\{\text{us},\text{ls},\text{am},\text{pm} \right\}$}
+%\nomenclature[snhys]{\nhyscount{l}}{...}
+\nomenclature[sxb]{\bvecxbbeta{}}{Vektor aller \xbbeta{l} }
+\nomenclature[sXb]{\bvecxbbetaave{l}}{Signalvektor zur Mittelung der $l$-ten Periode}
+\nomenclature[sXb]{\Xbbetaave{l}}{\DFT{} von \bvecxbbetaave{l} }
+
+%\nomenclature[sXus]{\Xbus{}, \Xbus{l}}{\DSTFT{} von \xbus{l}}
+%\nomenclature[sXls]{\Xbls{}, \Xbls{l}}{\DSTFT{} von \xbls{l}}
+%\nomenclature[sXam]{\Xbam{}, \Xbam{l}}{\DSTFT{} von \xbam{l}}
+%\nomenclature[sXpm]{\Xbpm{}, \Xbpm{l}}{\DSTFT{} von \xbpm{l}}
+
+\nomenclature[sXb]{\Xbbeta{}, \Xbbeta{l}}{\DSTFT{} von \xbbeta{l}}
+\nomenclature[sXb]{\bvecXbbeta{}}{Vektor aller \Xbbeta{l}}
+
+%% Demoduliert, kompensiert und entzerrt
+%\nomenclature[sxbusca]{\xbusca{}, \xbusca{l}}{demoduliertes, entzerrtes und kompensiertes \MESE{}signal (Frequenzbereichsdemodulation, oberes Seitenband)}
+%\nomenclature[sxblsca]{\xblsca{}, \xblsca{l}}{demoduliertes, entzerrtes und kompensiertes \MESE{}signal (Frequenzbereichsdemodulation, unteres Seitenband)}
+%\nomenclature[sxbamca]{\xbamca{}, \xbamca{l}}{demoduliertes, entzerrtes und kompensiertes \MESE{}signal (IQ-Demodulation, Amplitudenmodulation)}
+%\nomenclature[sxbpmca]{\xbpmca{}, \xbpmca{l}}{Demoduliertes, entzerrtes und kompensiertes \MESE{}signal (IQ-Demodulation, Phasenmodulation)}
+
+\nomenclature[sxbca]{\xbbetaca{}, \xbbetaca{l}}{demoduliertes, entzerrtes und kompensiertes \MESE{}signal mit $b\in\left\{\text{us},\text{ls},\text{am},\text{pm} \right\}$ }
+
+%\nomenclature[sXusca]{\Xbusca{}, \Xbusca{l}}{\DSTFT{} von \xbusca{l}}
+%\nomenclature[sXlsca]{\Xblsca{}, \Xblsca{l}}{\DSTFT{} von \xblsca{l}}
+%\nomenclature[sXamca]{\Xbamca{}, \Xbamca{l}}{\DSTFT{} von \xbamca{l}}
+%\nomenclature[sXpmca]{\Xbpmca{}, \Xbpmca{l}}{\DSTFT{} von \xbpmca{l}}
+
+\nomenclature[sXbca]{\Xbbetaca{}, \Xbbetaca{l}}{\DSTFT{} von \xbbetaca{l}}
+\nomenclature[sXbca]{\Xbbetacaave{l}}{gemittelte Amplitudendichte über die Frequenz von \Xbbetaca{l}}
+
+\nomenclature[sXbca]{\bvecXbbetaca}{Vektor aller \Xbbetaca{l}}
+
+%% Demoduliert, kompensiert, entzerrt und kombiniert
+%\nomenclature[sxcbsca]{\xbcbsca}{demoduliertes, entzerrtes, kompensiertes und kombiniertes \MESE{}signal (\SB{})}
+%\nomenclature[sXcbsca]{\Xbcbsca}{\DSTFT{} von \xbcbsca{}}
+%\nomenclature[sxcbfca]{\xbcbfca}{demoduliertes, entzerrtes, kompensiertes und kombiniertes \MESE{}signal  (\FB{})}
+%\nomenclature[sXcbfca]{\Xbcbfca}{\DSTFT{} von \xbcbfca{}}
+
+\nomenclature[sxcbca]{\xbcbca}{demoduliertes, entzerrtes, kompensiertes und kombiniertes \MESE{}signal }
+\nomenclature[sXcbca]{\Xbcbca}{\DSTFT{} von \xbcbca{}}
+
+%% Demoduliert, entzerrt und kombiniert
+%\nomenclature[sxcbs]{\xbcbs}{demoduliertes, entzerrtes und kombiniertes \MESE{}signal (\SB{})}
+%\nomenclature[sXcbs]{\Xbcbs}{\DSTFT{} von \xbcbs{}}
+%\nomenclature[sxcbf]{\xbcbf}{demoduliertes, entzerrtes und kombiniertes \MESE{}signal (\FB{})}
+%\nomenclature[sXcbf]{\Xbcbf}{\DSTFT{} von \xbcbf{}}
+
+\nomenclature[sxcb]{\xbcb}{demoduliertes, entzerrtes und kombiniertes \MESE{}signal}
+\nomenclature[sXcb]{\Xbcb}{\DSTFT{} von \xbcb{}}
+
+%% Equalizer
+\nomenclature[sHeq]{\Heq}{Frequenzgang eines Entzerrers}
+
+\nomenclature[sSNRm]{\SNRp}{\SNR{} des Primärsensors}
+\nomenclature[sDNRp]{\DNRp}{\DNR{} des Primärsensors}
+\nomenclature[sDNRr]{\DNRr}{\DNR{} des Referenzsensors}
+
+\nomenclature[sDeltaSNRavedB]{\DeltaSNRave, \DeltaSNRavedB}{\SNR{}-Verbesserung der Mittelung (in dB)}
+\nomenclature[sDeltaSNRcbdB]{\DeltaSNRcb, \DeltaSNRcbdB}{\SNR{}-Verbesserung der Kombination (in dB)}
+%\nomenclature[sDeltaSNRcbmaxdB]{\DeltaSNRcbmaxdB}{maximale \SNR{}-Verbesserung der Kombination in dB}
+\nomenclature[sDeltaSNRcadB]{\DeltaSNRca, \DeltaSNRcadB}{\SNR{}-Verbesserung der Kompensation (in dB)}
+
+
+

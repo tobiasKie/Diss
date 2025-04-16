@@ -1,0 +1,60 @@
+\babel@toc {ngerman}{}\relax 
+\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{xi}{chapter*.5}%
+\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{xiii}{chapter*.6}%
+\contentsline {chapter}{Abkürzungsverzeichnis}{xv}{section*.7}%
+\contentsline {chapter}{Notation}{xvii}{section*.9}%
+\contentsline {chapter}{Symbolverzeichnisse}{xix}{chapter*.11}%
+\contentsline {section}{Verzeichnis lateinischer Symbole}{xix}{section*.12}%
+\contentsline {section}{Verzeichnis griechischer Symbole}{xix}{section*.14}%
+\contentsline {chapter}{\numberline {1}Einleitung}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Motivation}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Einordnung der Arbeit}{1}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Aufbau der Arbeit}{1}{section.1.3}%
+\contentsline {chapter}{\numberline {2}Grundlagen}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Feldtheoretische Grundlagen}{3}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Grundlagen der Signalverarbeitung}{3}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Grundlagen Lokalisierung}{3}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}optisch}{3}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}IMU}{3}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}magnetisch}{3}{subsection.2.3.3}%
+\contentsline {section}{\numberline {2.4}Anatomie}{3}{section.2.4}%
+\contentsline {chapter}{\numberline {3}Konzeption}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Einordnung und Unterteilung in Aufgabenpakete}{5}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Relative Lokalisierung}{5}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Absolute Lokalisierung}{5}{subsection.3.1.2}%
+\contentsline {chapter}{\numberline {4}Algorithmik}{7}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Simulationsetup}{7}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Maximalvektor}{7}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Lokalisierungszusammenhänge}{8}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Merkmalsextraktion}{10}{subsection.4.2.2}%
+\contentsline {subsubsection}{\nonumberline Zeitlich Räumlich rotierendes Feld}{10}{subsubsection*.18}%
+\contentsline {subsubsection}{\nonumberline FDMA}{10}{subsubsection*.20}%
+\contentsline {subsubsection}{\nonumberline Vergleich}{10}{subsubsection*.22}%
+\contentsline {section}{\numberline {4.3}Relative Lokalisierung}{10}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Iterativer Algorithmus}{11}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Eindeutigkeit der Lösung}{11}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Optimierungen}{13}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}Analyse der Unsicherheiten}{13}{subsection.4.3.4}%
+\contentsline {subsection}{\numberline {4.3.5}Nachverarbeitung}{13}{subsection.4.3.5}%
+\contentsline {section}{\numberline {4.4}Absolute Lokalisierung}{15}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Sender Empfänger Dualismus}{15}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Äquibetragsflächen}{15}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Schätzalgorithmus}{15}{subsection.4.4.3}%
+\contentsline {chapter}{\numberline {5}Umsetzung}{17}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Allgemeines zum Kapitel}{17}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Hardware}{17}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Implementierung}{17}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Diskussion}{17}{section.5.4}%
+\contentsline {chapter}{\numberline {6}Evaluierung}{19}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Messszenarios}{19}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Messergebnisse}{19}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Fehlerdiskussion}{19}{section.6.3}%
+\contentsline {chapter}{\numberline {7}Zusammenfassung und Ausblick}{21}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Zusammenfassung}{21}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Ausblick}{21}{section.7.2}%
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{23}{chapter*.26}%
+\contentsline {chapter}{\numberline {A}Weitere Messdaten}{I}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Tmp}{I}{section.A.1}%
+\contentsline {chapter}{\numberline {B}Herleitung XXX}{III}{appendix.B}%
+\contentsline {section}{\numberline {B.1}Tmp}{III}{section.B.1}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

@@ -1,0 +1,275 @@
+ \documentclass[
+	twoside,
+	numbers=noenddot,
+	a4paper, 12pt,
+	chapterprefix=true, appendixprefix=true,    % Kapitel 1 Einleitung oder 1 Einleitung 
+	listof=totoc                                % Abbildungs/Tabellenverzeichnis
+]{scrbook}
+
+%========================================================================================
+% How-to-compile
+% Compilation is the easiest and newest with xelatex:
+%   1. Install inkscape and set path to inkscape folder (only for the svg-package)
+%   2. Set command
+%    xelatex.exe -shell-escape -synctex=1 -interaction=nonstopmode %.tex
+%   3. Set default bibliography tool to "biber"
+%
+% Notes:
+% 		- in theory you can remove "-shell-escape" as it is only used for the svg-package
+%     - you could switch to pdflatex or lualtex, but you have to change the fontspec-package
+%========================================================================================	
+
+%========================================================================================
+% Makros
+%========================================================================================	
+\input{00_support/macros}
+
+%========================================================================================
+% Custom Packages
+%========================================================================================
+\usepackage{tabu}
+\usepackage{upgreek}
+\usepackage{textgreek}
+\usepackage{xfrac}
+\usepackage{mathrsfs}
+\usepackage{fontenc} % calls \usepackage[EU1]{fontenc}
+\usepackage{lmodern}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{blindtext}
+%\usepackage[caption=false,font=footnotesize]{subfig}                                           % sfrac
+\usepackage{color}
+\usepackage[section]{placeins}        % nicht zu weit "floaten..."
+\usepackage[
+	hidelinks,
+	pdftitle = {\tit - \subtit},
+	pdfauthor = {\ath},
+	bookmarks = true,
+	bookmarksopen = true
+	]{hyperref} 
+
+\newlength{\figurewidth}
+\usepackage{psfrag}
+\usepackage[process=auto, cleanup={.tex,.dvi,.ps,.pdf,.log,.out, .bbl}]{pstool} % process=all -> render all psfrag replacements, auto all none
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{textgreek}
+
+% Set folders for svg images
+\usepackage[usetransparent=false]{svg}
+\svgpath{{01_einleitung/images/}{02_grundlagen/images/}{03_konzept/images/}{04_simulationen/images/}{05_eval/images/}{06_ende/images/}{07_appendix/images/}}
+
+% For including .tikz files
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest,compat/show suggested version=false}
+\usepackage{tikzscale}
+
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usetikzlibrary{plotmarks}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary[patterns,shapes.arrows,external]
+\usetikzlibrary{decorations.pathreplacing,calligraphy}
+\usepackage{scalefnt}
+
+% Externalization is to compile each plot as a separate TeX job
+\usepgfplotslibrary{external}
+
+\usepackage{csquotes}
+\usepackage[maxnames = 1, maxbibnames = 15, backend=biber, style=alphabetic, backref=true, doi=false,isbn=false,url=false, bibencoding=ascii]{biblatex}% style=numeric
+\addbibresource{literatur.bib}
+
+\usepackage{epsfig}
+\usepackage{xcolor,import}
+%\usepackage{transparent}
+\usepackage{tabularx}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\usepackage{multirow}
+\usepackage{colortbl}
+
+\usepackage[toc,nonumberlist,automake,nopostdot,style=listdotted]{glossaries}[=v4.46]%
+\renewcommand*{\glsnamefont}[1]{\textmd{\textrm{#1}}}
+\setlength{\glslistdottedwidth}{.3\linewidth}
+%\setlength{\glsdescwidth}{0.8\linewidth}
+
+%\usepackage[pass]{geometry}
+\usepackage[top=25mm, bottom=35mm, left=25mm, right=25mm]{geometry} % offenbar default bei scrbook: top=25mm, bottom=35mm
+
+\usepackage{scrwfile}
+\usepackage{calc} 
+\usepackage[Option]{overpic}
+\usepackage{siunitx}
+\usepackage{multicol}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{subcaption}
+%\usepackage{subfigure}
+\newcommand{\inputTikZ}[2]{%
+     \scalebox{#1}{\input{#2}}}  
+%========================================================================================
+% Custom Glossar-Style
+%========================================================================================
+\newglossarystyle{altlistdotted}%
+{%
+   \glossarystyle{tree}%
+   \renewcommand{\glossaryentryfield}[5]{%
+     \hangindent0pt\relax
+     \parindent0pt\relax
+     \makebox[\glslistdottedwidth][l]%
+     {%
+       \glsentryitem{##1}\textbf{\glstarget{##1}{##2}}%
+       \unskip\leaders\hbox to 2.1mm{\hss.}\hfill\strut
+     }%
+     \parbox[t]{\linewidth-\glslistdottedwidth}{##3}\par \vspace{0.5mm}}%
+}
+\setglossarystyle{altlistdotted} 
+
+%========================================================================================
+% Anlegen der Glossare
+%========================================================================================
+\newglossary[slg]{lat}{sls}{slo}{Verzeichnis lateinischer Symbole}
+\newglossary[olg]{gre}{ols}{olo}{Verzeichnis griechischer Symbole}
+\newglossary[alg]{abk}{als}{alo}{Abkürzungsverzeichnis}
+\newglossary[plg]{notation}{pls}{plo}{Notation}
+\makeglossaries
+
+%========================================================================================
+% Glossar und Farben
+%========================================================================================
+\input{00_support/abk_sym_gls}
+\input{00_support/colors} 
+
+%========================================================================================
+% Titel und Autor
+%========================================================================================
+\title{\tit}
+\subtitle{\subtit}
+\author{\ath}
+
+%========================================================================================
+% Setzen von custom Größen
+%========================================================================================
+\renewcommand{\floatpagefraction}{.6}% vorher: .5 
+\renewcommand{\textfraction}{.15} % vorher: .2 
+\renewcommand{\topfraction}{.85}     % vorher: .7 
+\renewcommand{\bottomfraction}{.5}  % vorher: .3 
+\setcounter{topnumber}{3} % vorher: 2 
+\setcounter{bottomnumber}{1} % vorher: 1 
+\setcounter{totalnumber}{5} % vorher: 3
+\renewcommand{\dbltopfraction}{.8} % vorher: .7 
+\renewcommand{\dblfloatpagefraction}{.6}% vorher: .5 
+
+% Begin des Dokuments
+\begin{document}
+
+   \pagenumbering{roman}
+   
+   %========================================================================================
+   % Trennung von bestimmten Wörtern
+   %========================================================================================
+   \hyphenation{Sig-nal}
+   \hyphenation{Sig-na-le}
+   \hyphenation{Nutz-sig-nal-kom-po-nen-te}
+   
+   %========================================================================================
+   % Titelseite
+   %========================================================================================
+   \input{00_support/titelseite}
+   \newpage
+   
+   %========================================================================================
+   % Erklärung (Einbinden, wenn eingereicht wird)
+   %========================================================================================
+   \input{00_support/declaration}
+   \cleardoubleevenpage
+   
+   %========================================================================================
+   % Danksagung (Einbinden, wenn wirklich veröffentlicht wird)
+   %========================================================================================
+   %\input{00_support/danksagung}
+   %\cleardoubleevenpage
+   
+   %========================================================================================
+   % Kurzfassung und Abstract
+   %========================================================================================
+   \input{00_support/abstract}
+   
+   %========================================================================================
+   % Inhaltsverzeichnis, Abbildungsverzeichnis, Tabellenverzeichnis
+   %========================================================================================
+   \pdfbookmark[0]{Inhaltsverzeichnis}{toc}
+   \tableofcontents 
+   \listoffigures
+   \listoftables
+   
+   %========================================================================================
+   % Abkürzungen, Notation und Symbole
+   %========================================================================================
+   \printglossary[type=abk]
+   \printglossary[type=notation]
+   
+   \chapter*{Symbolverzeichnisse}
+   \addcontentsline{toc}{chapter}{Symbolverzeichnisse}
+   
+   \setglossarysection{section}
+   \printglossary[type=lat]
+   \printglossary[type=gre]
+    
+   %========================================================================================
+   % Einleitung
+   %========================================================================================
+   \input{01_einleitung/einleitung}
+   
+   %========================================================================================
+   % Grundlagen
+   %========================================================================================
+   \input{02_grundlagen/grundlagen}
+   
+   %========================================================================================
+   % Konzept
+   %========================================================================================
+   \input{03_konzept/konzeption}
+
+      %========================================================================================
+   % Konzept
+   %========================================================================================
+   \input{04_algorithmik/algorithmik}
+   
+   %========================================================================================
+   % Simulationen
+   %========================================================================================
+   \input{04_umsetzung/umsetzung}
+   
+   %=================================== =====================================================
+   % Evaluierung 
+   %========================================================================================
+   \input{05_eval/eval}
+   
+   %========================================================================================
+   % Zusammenfassung und Ausblick
+   %========================================================================================
+   \input{06_ende/zusammenfassung_ausblick}
+   
+   %========================================================================================
+   % Literaturverzeichnis
+   %========================================================================================
+   \printbibheading[title={Literaturverzeichnis},heading=bibintoc]%bibnumbered]
+   \printbibliography[title={Publikationen mit Eigenbeteiligung},heading=subbibintoc,keyword=own]%subbibnumbered,subbibliography
+   \printbibliography[title={Weitere Literatur}, heading=subbibintoc, notkeyword=own]
+   
+   %========================================================================================
+   % Anhänge
+   %========================================================================================
+   \appendix
+   \input{07_appendix/appendix_a}
+   \input{07_appendix/appendix_b}
+   
+   %========================================================================================
+   % Deprecated
+   %========================================================================================
+   %\input{00_support/declaration}
+   %\input{00_support/shaker_reihe}
+
+\end{document}
