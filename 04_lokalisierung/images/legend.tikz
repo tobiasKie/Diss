@@ -5,13 +5,13 @@
 \begin{tikzpicture}
 \draw (-16,0) rectangle (16,5);
 \fill[blue] (-15,2.5) circle (0.5cm);
-\draw (-12.7,2.5) node[scale=2, text width = 1.5cm] {Potential Poses}; 
+\draw (-12.7,2.5) node[scale=2, text width = 1.5cm] {Mögliche Posen}; 
 \draw[green,opacity = 0.5,line width = 2] (-9,2.5) circle (0.5cm);
 \draw (-6.5,2.5) node[scale=2, text width = 1.5cm] {Ground Truth}; 
 \fill[red] (-3,2.5) circle (0.5cm);
-\draw (0,2.5) node[scale=2, text width = 1.5cm] {Normalized Position Vector}; 
+\draw (0,2.5) node[scale=2, text width = 1.5cm] {Normierter Positions Vektor}; 
 \draw[line width =2] (3,2.5) circle (0.5cm);
-\draw (6.5,2.5) node[scale=2, text width = 1.5cm] {Estimated Kinematic Chain}; 
+\draw (6.5,2.5) node[scale=2, text width = 1.5cm] {Geschätzte kinematische Kette}; 
 \fill (9.5,2.5) circle (0.5cm);
 \draw (12,2.5) node[scale=2, text width = 1.5cm] {Sensor}; 
 \end{tikzpicture}

@@ -1,0 +1,94 @@
+% This file was created by matlab2tikz.
+%
+%The latest updates can be retrieved from
+%  http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz
+%where you can also make suggestions and rate matlab2tikz.
+%
+\definecolor{mycolor1}{rgb}{0.00000,0.44700,0.74100}%
+\definecolor{mycolor2}{rgb}{0.85000,0.32500,0.09800}%
+\definecolor{mycolor3}{rgb}{0.92900,0.69400,0.12500}%
+\definecolor{mycolor4}{rgb}{0.49400,0.18400,0.55600}%
+\definecolor{mycolor5}{rgb}{0.46600,0.67400,0.18800}%
+\definecolor{mycolor6}{rgb}{0.30100,0.74500,0.93300}%
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=5.0in,
+height=5.0in,
+at={(0.0,0.0)},
+scale only axis,
+plot box ratio=1 1 1,
+xmin=-1,
+xmax=1,
+xtick={-1,-0.5,...,1},
+tick align=outside,
+xlabel style={font=\color{white!15!black}},
+xlabel={X},
+ymin=-1,
+ymax=1,
+ytick={-1,-0.5,...,1},
+ylabel style={font=\color{white!15!black}},
+ylabel={Y},
+zmin=-1,
+zmax=1,
+ztick={-1,-0.5,...,1},
+zlabel style={font=\color{white!15!black}},
+zlabel={Z},
+view={-120}{35},
+axis background/.style={fill=white},
+axis x line*=bottom,
+axis y line*=left,
+axis z line*=left,
+xmajorgrids,
+ymajorgrids,
+zmajorgrids
+]
+\addplot3[-Straight Barb, color=mycolor1, line width=4.0pt, point meta={sqrt((\thisrow{u})^2+(\thisrow{v})^2+(\thisrow{w})^2)}, point meta min=0, quiver={u=\thisrow{u}, v=\thisrow{v}, w=\thisrow{w}, every arrow/.append style={-{Straight Barb[angle'=18.263, scale={3/1000*\pgfplotspointmetatransformed}]}}}]
+ table[row sep=crcr] {%
+x	y	z	u	v	w\\
+0	0	0	0.0839674654811139	-0.559773511905216	-0.699716428355072\\
+};
+\addplot3[-Straight Barb, color=mycolor2, line width=4.0pt, point meta={sqrt((\thisrow{u})^2+(\thisrow{v})^2+(\thisrow{w})^2)}, point meta min=0, quiver={u=\thisrow{u}, v=\thisrow{v}, w=\thisrow{w}, every arrow/.append style={-{Straight Barb[angle'=18.263, scale={3/1000*\pgfplotspointmetatransformed}]}}}]
+ table[row sep=crcr] {%
+x	y	z	u	v	w\\
+0	0	0	0.735749977887681	0.323801918463894	0.404752131109126\\
+};
+\addplot3[-Straight Barb, color=mycolor3, line width=4.0pt, point meta={sqrt((\thisrow{u})^2+(\thisrow{v})^2+(\thisrow{w})^2)}, point meta min=0, quiver={u=\thisrow{u}, v=\thisrow{v}, w=\thisrow{w}, every arrow/.append style={-{Straight Barb[angle'=18.263, scale={3/1000*\pgfplotspointmetatransformed}]}}}]
+ table[row sep=crcr] {%
+x	y	z	u	v	w\\
+0	0	0	-0.62709717314487	0.153291457255209	-0.62709717314487\\
+};
+\addplot3[-Straight Barb, color=mycolor4, line width=4.0pt, point meta={sqrt((\thisrow{u})^2+(\thisrow{v})^2+(\thisrow{w})^2)}, point meta min=0, quiver={u=\thisrow{u}, v=\thisrow{v}, w=\thisrow{w}, every arrow/.append style={-{Straight Barb[angle'=18.263, scale={3/1000*\pgfplotspointmetatransformed}]}}}]
+ table[row sep=crcr] {%
+x	y	z	u	v	w\\
+0	0	0	0.417264019577997	0.679545050700265	0.417264019577997\\
+};
+\addplot3[-Straight Barb, color=mycolor5, line width=4.0pt, point meta={sqrt((\thisrow{u})^2+(\thisrow{v})^2+(\thisrow{w})^2)}, point meta min=0, quiver={u=\thisrow{u}, v=\thisrow{v}, w=\thisrow{w}, every arrow/.append style={-{Straight Barb[angle'=18.263, scale={3/1000*\pgfplotspointmetatransformed}]}}}]
+ table[row sep=crcr] {%
+x	y	z	u	v	w\\
+0	0	0	-0.699716428355072	-0.559773511905216	0.0839674654811139\\
+};
+\addplot3[-Straight Barb, color=mycolor6, line width=4.0pt, point meta={sqrt((\thisrow{u})^2+(\thisrow{v})^2+(\thisrow{w})^2)}, point meta min=0, quiver={u=\thisrow{u}, v=\thisrow{v}, w=\thisrow{w}, every arrow/.append style={-{Straight Barb[angle'=18.263, scale={3/1000*\pgfplotspointmetatransformed}]}}}]
+ table[row sep=crcr] {%
+x	y	z	u	v	w\\
+0	0	0	0.404752131109126	0.323801918463894	0.735749977887681\\
+};
+\end{axis}
+
+\begin{axis}[%
+width=5.0in,
+height=5.0in,
+at={(0in,0in)},
+scale only axis,
+xmin=0,
+xmax=1,
+ymin=0,
+ymax=1,
+axis line style={draw=none},
+ticks=none,
+axis x line*=bottom,
+axis y line*=left
+]
+\end{axis}
+\end{tikzpicture}%

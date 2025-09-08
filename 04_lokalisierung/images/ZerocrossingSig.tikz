@@ -22,7 +22,7 @@ xlabel={\huge Time in s},
 ymin=-1,
 ymax=1,
 ylabel style={font=\color{white!15!black}},
-ylabel={\huge magnetic Field},
+ylabel={\huge Sensorsignal},
 axis background/.style={fill=white},
 tick label style={black, font=\huge},
 axis x line*=bottom,
@@ -700,7 +700,7 @@ legend style={legend cell align=left, align=left, draw=white!15!black}
 0.997497744360902	0.0116558274408783\\
 0.999	0.0542848376632287\\
 };
-\addlegendentry{\huge Signal at sensor}
+\addlegendentry{\huge $b$}
 
 \addplot[only marks, mark=*, mark options={}, mark size=5pt, draw=mycolor2, fill=mycolor2] table[row sep=crcr]{%
 x	y\\
@@ -719,7 +719,7 @@ x	y\\
 0.9255	0\\
 0.9975	0\\
 };
-\addlegendentry{\huge Zeromarker}
+\addlegendentry{\huge Nullmarker}
 
 \end{axis}
 

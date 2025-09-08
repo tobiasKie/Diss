@@ -540,7 +540,7 @@ x	y	z\\
 -0.0313946400491032	-0.000197260936937401	0.499013364214136\\
 6.12323399573677e-16	-7.49879891330929e-32	0.5\\
 };
-\addlegendentry{Dipole tip track}
+\addlegendentry{Verlauf der Dipolspitze}
 
 \end{axis}
 

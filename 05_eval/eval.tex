@@ -1,19 +1,290 @@
 \chapter{Evaluierung}
 \label{chap:Messergebnisse}
+Die entwickelten Algorithmen sollen nun evaluiert werden. Dafür werden die neuen magnetischen Verfahren mit etablierten Verfahren verglichen werden.
+\section{Verwendete Hardware}
+Die Hardware besteht aus drei Komponenten, zum einen ein Auswertecomputer, eine AD/DA-Wandeleinheit und eine Stromverstärkereinheit. Der Auswertecomputer ist ein XXXX. Als AD/DA-Einheit werden zwei Soundkarten des Hersteller $RME\,Audio$ eingesetzt, eine M32 AD Pro und eine M1610 Pro. Diese sind über MADI miteinander verbunden, die Eingangsdaten der M1610 Pro werden dadurch über ein Lichtwellenleiter in Echtzeit an die M32 AD Pro gesendet. Das sorgt dafür, dass die Signale der beiden Einheiten synchronisiert am Auswertecomputer ankommen. Der Auswertecomputer generiert die Anregungssignale für die 3D-Spule und sendet diese an die DA-Einheit. Über die DA-Einheit werden über eine Verstärkereinheit in einen Strom gewandelt. Der Verstärker\footnote{Der Verstärker wurde in Projekt B1/B9 des SFB1261 an der CAU Kiel entwickelt und ein Exemplar für diesen Aufbau überlassen.} ist ein sechskanaliger Verstärker, von dem in der Evaluierung die ersten drei verwendet werden.
+
+In Abbildung XX ist der Aufbau kurz dargestellt.
+
+Abbildung Der Hardware
 
 \section{Relative Lokalisierung}
 \label{sec:rel_lok}
 
+
+
+
 \subsection{Simulative Evaluierung}
-\subsection{Experimentelle Evaluierung}
 \subsubsection{Szenarios}
-\subsubsection{Kalibrierung}
+In der simulativen Evaluierung sollen 3 unterschiedliche Szenarios untersucht werden, die zunächst kurz definiert werden. 
+
+\paragraph{Robustheit gegenüber Rauschen}
+Es wird ein Aufbau mit einem Gelenk simuliert, also eine 3D-Spule im Ursprung and dem auch ein kinematisches Element beginnt und ein Gelenk das dieses mit einem weiteren Element verbindet. Die Ansteuerung der Spule erfolgt wie in Kapitel\,\ref{sec:featureExtract} beschrieben. Auf Sensorseite wird WGN (\textit{White Gaussian Noise}) addiert. Diese wird einmal so skaliert, dass das Sensorsignal ein SNR von $10\,\text{dB}$ besitzt und einmal ohne Rauschen durchgeführt. Es wird mit einem Raster von $1^\circ$ der Wertebereich überprüft. Die Ergebnisse der Simulation sind jeweils der absolute Fehler und bei der Simulation mit addiertem Rauschen wird zudem die Varianz des Ergebnis betrachtet.
+
+\paragraph{Einfluss von Fehlerfortpflanzung}
+Ein Problem bei der Schätzung einer kinematischen Kette ist die Fehlerfortpflanzung. Die Position des ersten Gelenks ist bekannt und wird vor der Laufzeit ausgemessen. Die weiteren Gelenkspositionen werden nach und nach rekonstruiert, schwanken aber je nach Signalqualität. Dieser Effekt soll anhand einer Simulation evaluiert werden. Gegeben sei eine kinematische Kette aus 3 Elementen. Die Haltung sei so, dass diese komplett gestreckt sei. Es wird das Sensorsignal für den zweiten Sensor simuliert. Die Orientierungsschätzung des ersten Elements wird zufällig vorgenommen, also die beiden Winkel werden zufällig generiert. So wird untersucht wie sich der Fehler aus dem ersten Element auf die Schätzung des folgenden Elements auswirkt.
+
+\paragraph{Einfache Bewegung}
+Bewegungen führen zu einer gewissen Unschärfe. Der Algorithmus basiert auf der Detektion von Vorzeichenwechseln, da mindestens zwei Vorzeichenwechsel benötigt werden ist zwischen den $\vec{e}\tindex{zc}$, vergeht zwischen den beiden Nulldurchgängen mindestens eine halbe Periodendauer des Ansteuersignal. Daher gehören die $\vec{e}\tindex{zc}$ zu leicht unterschiedlichen Positionen/Orientierungen. Die Bewegung soll eine Beugung sein, die zyklisch ablaüft. In der Simulation wird $\theta\tindex{Beu} = \omega\,n\,\Delta \,t$ gesetzt.
+
 \subsubsection{Ergebnisse}
+\paragraph{Robustheit gegenüber Rauschen}
+\paragraph{Einfluss von Fehlerfortpflanzung}
+\paragraph{Einfache Bewegung}
+
+\subsection{Experimentelle Evaluierung}
+Die relative Lokalisierung wurde entwickelt um die Bewegung von Fingern aufzunehmen. Um in einem ersten Test die Algorithmik zu evaluieren, wurde an dieser Stelle ein einfacher Demonstrator bestehend aus drei Elementen, ein längeres Element mit einer 3D-Spule und zwei kürzere mit jeweils einem Sensor. Die Elemente sind durch Gelenke verbunden, die Bewegung in zwei Richtungen ermöglichen, wie bei einem Sattelgelenk. In Abbildung \ref{fig:Demonstrator} ist dieser Aufbau einmal dargestellt.
+
+\begin{figure}
+    \centering
+    \begin{overpic}[width=0.75\textwidth,trim = 0 0 0 0]{05_eval/images/demonstrator.png}
+        \put(5,60){3D-Spule}
+        \put(78,32){\parbox{.5in}{Fluxgatemagnetometer}}
+        \put(89,6){2\,cm}
+        \put(25,25){$\textbf{1}$}
+        \put(18,32){$\textbf{2}$}
+        \put(6,25){$\textbf{3}$}
+        \put(6.5,18){$\textbf{5}$}
+        \put(18,15){$\textbf{4}$}
+        \put(58,19){$\textbf{1}$}
+        \put(48,19){$\textbf{2}$}
+        \put(60.5,4){$\textbf{3}$}
+        \put(50,4){$\textbf{4}$}
+        \put(66,49){$\textcolor{blue}{z}$}
+        \put(86,44){$\textcolor{green}{y}$}
+    \end{overpic}
+    \caption{Demonstrator: Die Abbildung zeigt den Demonstrator, der für die Evaluierung verwendet wird. Die 3D-Spule und die kinematischen Elemente sind mit optischen Markern ausgerüstet.  }
+    \label{fig:Demonstrator}
+\end{figure}
+
+Zum Vergleich wird ein optisches System der Firma $Qualisys AB$ verwendet, bestehend aus 8 Miqus Kameras. Diese sind um den Demonstrator herum aufgebaut. Für die optische Bewegungsaufnahme wurden optische Marker zum einen auf der 3D-Spule und zum anderen auf den kinematischen Elementen befestigt, diese werden verwendet um die Orientierung der Elemente aufzunehmen und werden als $Ground Truth$ verwendet.
+
+Foto des Aufbaus machen und einfügen
+
+Es wurden zum einen statische und dynamische Messungen durchgeführt. Die Länge der Aufnahmen waren immer 15\,s. 
+
+\subsubsection{Räumliche Synchronisierung und Schätzung der räumlichen Größen}
+
+Die beiden Systeme arbeiten in unterschiedlichen Koordinatensystemen. Das magnetische System spannt ein Koordinatensystem basierend auf der Ausrichtung der 3D-Spule auf, also $X$-Richtung = Ausrichtung der X-Spule\dots . Das Koordinatensystem des optischen Systems wird in einer Kalibrierungsprozedur definiert, durch eine festgelegte Markeranordnung. Die Definition der beiden Koordinatensysteme ist in Abbildung \ref{fig:CoordSystems}.
+
+\begin{figure}
+    \centering
+    \subfloat[Magnetisches Koordinatensystem]{
+        \begin{overpic}
+            [width=0.5\textwidth,trim = 0 0 0 0]{05_eval/images/Coordinate_transformation.png}
+        \end{overpic}
+        \label{fig:MagCoord}
+    }
+    \subfloat[Optisches Koordinatensystem]
+    {
+        \begin{overpic}
+            [width=0.5\textwidth,trim = 0 0 0 0]{05_eval/images/OptischesKoord.png}
+        \end{overpic}
+        \label{fig:OptCoord}
+    }
+    \caption{Definition der Koordinatensysteme: Der rote Pfeil ist jeweils die $x$-Asches, grün die $y$-Achse und blau die $z-Achse$. In \subref{fig:MagCoord} ist eine 3D-Spule mit einem 3D-Druckaufsatz, an dem optische Marker befestigt sind. Mit den farbigen Pfeilen ist das lokale Koordinatensystem der Spule dargestellt. In \subref{fig:OptCoord} ist der Kalibrierungsaufbau dargestellt. Während der Kalibrierung wird die Platte mit den Markern in der Mitte des Messvolumens platziert. Währenddessen wird dann der Stab mit den zwei Markern durch den Messbereich bewegt. Die Lage und Orientierung der Platte während der Kalibrierung definiert dann die Orientierung des optischen Koordinatensystem.}
+    \label{fig:CoordSystems}
+\end{figure}
+
+Um die beiden Ergebnisse miteinander vergleichen zu können, müssen diese im gleichen Koordinatensystem sein. Ein Problem ist, dass der Demonstrator aus Abbildung \ref{fig:Demonstrator} nur schwer so positionert werden kann, dass beide Koordinatensysteme miteinander ausgerichtet sind. Daher sind an der 3D-Spule optische Marker angebracht, mit deren Hilfe die magnetischen Koordinatenachsen im optischen Koordinatensytem detektiert werden können. Aus den so detektierten Einheitsvektoren ($\vec{e}\tindex{x,Mag},\vec{e}\tindex{y,Mag},\vec{e}\tindex{z,Mag}$) ergibt sich eine Rotationsmatrix $\bvec{R}\tindex{Opt$\rightarrow$ Mag}$ zwischen den beiden Koordinatensystemen 
+
+\begin{equation}
+    \bvec{R}\tindex{Opt$\rightarrow$ Mag} = \left[\begin{array}{c} \vec{e}\tindex{x,Mag}^\text{\,T} \\ \vec{e}\tindex{y,Mag}^\text{\,T} \\ \vec{e}\tindex{z,Mag}^\text{\,T} \end{array}\right].
+\end{equation}
+
+Die optische Orientierung der kinematischen Elemente wird mithilfe der Positionen $\vec{r}\tindex{$i,j$}$ der optischen Marker bestimmt, wobei $i$ die Nummer des Elements ist und $j$ die Nummer des jeweiligen Markers ist. Die Orientierungsschätzung $\hat{\vec{e}}_{\text{opt},i}$ des jeweiligen Elements ergibt sich wie folgt
+\begin{equation}
+    \hat{\vec{e}}_{\text{opt},i} = \frac{(\vec{r}_{i,1} - \vec{r}_{i,2}) + (\vec{r}_{i,3} - \vec{r}_{i,4}) }{ |(\vec{r}_{i,1} - \vec{r}_{i,2}) + (\vec{r}_{i,3} - \vec{r}_{i,4})|  }.
+\end{equation}
+Durch Anwendung von $\bvec{R}\tindex{Opt$\rightarrow$ Mag}$ wird diese in das magnetische Koordinatensystem transformiert
+
+\begin{equation}
+    \hat{\vec{e}}\tindex{opt,$i$,mag} =  \bvec{R}\tindex{Opt$\rightarrow$ Mag}\,\hat{\vec{e}}_{\text{opt},i},
+\end{equation}
+und kann mit der magnetischen Schätzung verglichen werden.
+\subsubsection{Kalibrierung}
+Der Algorithmus für die Schätzung einer kinematischen Kette benötigt als Vorwissen die Abmessungen der kinematischen Kette. Die benötigten Parameter sind die zum einen die Position des ersten Gelenks $\vec{r}\tindex{j}$, sowie für jedes Element der Abstand von Gelenk zu Sensor $l\tindex{js,$i$}$, die Länge der Elemente $l\tindex{ke,$i$}$ und die Dicke der Elemente $d\tindex{ke,$i$}$.
+
+\begin{figure}
+    \centering
+    \begin{overpic}[width=0.75\textwidth]{05_eval/images/Kalibrierung.pdf}
+      \put(20,17){$r\tindex{j}$}
+      \put(45,25){$l\tindex{js,1}$}
+      \put(60,17){$d\tindex{ke,1}$}
+      \put(68,28){$l\tindex{ke,1}$}
+      \put(60,45){$l\tindex{js,2}$}
+      \put(75,42){$d\tindex{ke,2}$}
+      \put(58,10){$x$}
+      \put(27,48){$y$}
+      \put(12,60){$z$}
+    \end{overpic}
+    \caption{Kalibrierung der kinematischen Kette: Die Abbildung zeigt eine kinematische Kette bestehend aus drei Elementen. Die Roten Pfeile zeigen alle Größen die für den Algorithmus vor der Laufzeit bestimmt werden müssen.}
+    \label{fig:TBCalibrated}
+\end{figure}
+Für die Kalibrierung wurden zunächst alle Größen händisch mit einem Lineal ausgemessen. Zwei Schwierigkeiten dabei sind, dass es nicht möglich ist von der Mitte der Quelle aus zu messen und die Länge des Sensorelements beträgt ca. 2\,cm, hier ist es unklar an welcher Stelle genau die Position für einen modellhaften Punktsensor optimal gelegt werden soll. Die gemessenen Initialwerte waren $\vec{r}\tindex{j} = (-0.02,0.00,0.29)\,\text{m}$, $d\tindex{ke,1}=0.015\,\text{m}$, $l\tindex{js,1}=0.065\,\text{m}$, $d\tindex{ke,2}=0.015\,\text{m}$, $l\tindex{js,2}=0.065\,\text{m}$.
+
+Daher wurden die statischen Messungen verwendet um die Kalibrierung durchzuführen. Begonnen wurde mit dem ersten Element, dafür wurden 13 Aufnahmen in unterschiedlichen Ausrichtungen verwendet. Die optimale Kalibrierung sei definiert, dass für diese die optische $\hat{\vec{e}}\tindex{opt,mag}^{\,(j)}$ und die magnetische $\hat{\vec{e}}\tindex{mag}^{\,(j)}$ Schätzung am besten miteinander übereinstimmen. Als Differenz zwischen den jeweiligen Schätzungen wird der Winkel zwischen diesen verwendet. Also Kostenfunktion ergibt sich daraus dann die folgende Gleichung, wobei $N$ die Anzahl der Messungen und $j$ die Nummer des Elements ist
+
+\begin{equation}
+    e = \frac{1}{N} \sum_{j=1}^{N} \arccos(\hat{\vec{e}}\tindex{opt,mag}^{\,(j)}\cdot\hat{\vec{e}}\tindex{mag}^{\,(j)}).
+        \label{eq:CostFkt}
+\end{equation}
+In einem Bereich von $\pm 2\,cm$ zu den gemessenen Werten wurden in einem Raster von 1\,mm untersucht und die Kombination mit dem geringsten Fehler wurde übernommen. Mit den Werten des ersten Elements wurde dann das zweite Element auf die selbe Art kalibriert, hier mit $N=8$ Aufnahmen. Die Kalibriertenwerte unterscheiden sich leicht zu den händisch gemessenen Werten und lauten wie folgt $\vec{r}_j = (-0.0137,0.0029,0.2960)\,\text{m}$, $d\tindex{ke,1}=0.008\,\text{m}$, $l\tindex{js,1}=0.063\,\text{m}$, $d\tindex{ke,2}=0.008\,\text{m}$, $l\tindex{js,2}=0.063\,\text{m}$.
+
+\subsubsection{Ergebnisse}
+In den Tabellen\,\ref{tab:Ergebnisse1},\ref{tab:Ergebnisse2} sind die Ergebnisse der statischen Messungen zu sehen. Darin sind die Gelenkswinkel der magnetischen und der optischen Schätzung aufgetragen. Der mittlere Fehler (\textit{Mean Absolute Error}) für das erste Element beträgt . Der mittlere Fehler für das zweite Element beträgt .
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c| c| c| c| c|}
+    \hline 
+     $\hat{\theta}_{opt,1}$ & $\hat{\theta}_{mag,1}$ & $\hat{\phi}_{opt,1}$ & $\hat{\phi}_{mag,1}$ & Fehler \\ 
+     \hline
+     $-3.5^\circ$ & $-3.7^\circ$ & $1.2^\circ$  & $1.7^\circ$ & $0.5^\circ$ \\ 
+     \hline
+     $-3.6^\circ$ & $-3.8^\circ$ & $42.3^\circ$   & $42.1^\circ$ & $0.3^\circ$ \\
+     \hline
+     $-3.9^\circ$ & $-4.4^\circ$ & $88.5^\circ$  & $86.6^\circ$ & $1.9^\circ$ \\
+     \hline
+     $-1.3^\circ$ & $-1.9^\circ$ & $-39.2^\circ$ & $-39.6^\circ$ & $0.7^\circ$ \\
+     \hline
+     $-0.2^\circ$ & $-0.1^\circ$ & $-88.0^\circ$ & $-88.4^\circ$ & $0.4^\circ$ \\ 
+     \hline
+     $-45.6^\circ$ & $-46.0^\circ$ & $5.9^\circ$ & $3.1^\circ$ & $2.0^\circ$  \\ 
+     \hline
+     $-45.4^\circ$ & $-45.3^\circ$ & $44.1^\circ$  & $42.9^\circ$ & $0.8^\circ$ \\
+     \hline
+     $-46.5^\circ$ & $-46.3^\circ$ & $-32.3^\circ$ & $-35.6^\circ$ & $2.3^\circ$ \\
+     \hline
+     $35.0^\circ$ & $34.9^\circ$ & $2.6^\circ$ & $3.9^\circ$ & $1.1^\circ$ \\
+     \hline
+     $35.6^\circ$ & $34.7^\circ$ & $41.2^\circ$  & $41.2^\circ$ & $0.8^\circ$ \\ 
+     \hline
+     $34.7^\circ$ & $35.4^\circ$ & $-48.7^\circ$  & $-47.7^\circ$ & $1.1^\circ $ \\ 
+     \hline
+     $86.6^\circ$ & $85.8^\circ$ & $171.2^\circ$ & $132.6^\circ$ & $2.6^\circ$ \\
+     \hline
+     $-89.4^\circ$ & $-87.1^\circ$ & $-14.5^\circ$ & $-57.6^\circ$ & $2.4^\circ$ \\
+     \hline
+    \end{tabular}
+    \caption{Ergebnisse der statischen Messung des ersten kinematischen Elements.}
+    \label{tab:Ergebnisse1}
+  \end{table}
+
+  \begin{table}[h]
+    \centering
+    \begin{tabular}{|c| c| c| c| c|} 
+      \hline
+      $\hat{\theta}_{\text{opt},2}$ & $\hat{\theta}_{\text{mag},2}$ & $\hat{\phi}_{\text{opt},2}$ & $\hat{\phi}_{\text{mag},2}$ & Fehler \\ 
+     \hline
+     $3.7^\circ$ & $3.8^\circ$ & $89.3^\circ$ & $86.3^\circ$ & $3.0^\circ$ \\ 
+     \hline
+     $0.0^\circ$ & $2.3^\circ$ & $-89.2^\circ$ & $-89.3^\circ$ & $2.2^\circ$ \\
+     \hline
+     $-1.1^\circ$ & $1.1^\circ$ & $-54.6^\circ$ & $-54.9^\circ$ & $1.9^\circ$ \\
+     \hline
+     $1.6^\circ$ & $3.7^\circ$  & $40.2^\circ$ & $40.0^\circ$ & $2.0^\circ$ \\
+     \hline
+     $86.8^\circ$ & $84.1^\circ$ & $6.1^\circ$ & $40.3^\circ$ & $2.8^\circ$ \\ 
+     \hline
+     $32.1^\circ$ & $34.8^\circ$ & $1.7^\circ$ & $3.3^\circ$ & $2.7^\circ$ \\ 
+     \hline
+     $-35.8^\circ$ & $-33.8^\circ$ & $2.5^\circ$ & $0.5^\circ$ & $2.1^\circ$ \\
+     \hline
+     $-85.5^\circ$ & $-86.5^\circ$ & $165.4^\circ$ & $-116.0^\circ$ & $4.1^\circ$ \\
+     \hline
+    \end{tabular}
+    \caption{Ergebnisse der statischen Messung des zweiten kinematischen Elements.}
+    \label{tab:Ergebnisse2}
+  \end{table}
+
+  \begin{figure}
+    \centering
+    \subfloat[Angle of movement for the first element]{
+      \inputTikZ{0.425}{05_eval/images/FirstElementAnglesRaw.tikz}
+      \label{fig:AngleFirst}
+    }
+    \subfloat[Magnitude of the angular error between optical and magnetic estimation]{
+      \inputTikZ{0.425}{05_eval/images/SecondElementAngleRaw.tikz}
+      \label{fig:ErrorFirst}
+    }
+    \caption{Results for the first element: \ref{fig:AngleFirst} shows the angle estimates in comparison. The optical estimates are shown with dashed lines and the magnetic estimates with solid lines. In \ref{fig:ErrorFirst} the angle error is shown between the orientation estimates.}
+    \label{fig:ResultsFirstElement}
+  \end{figure}
+
+  \begin{figure}
+    \centering
+    \subfloat[Angle of movement for the first element]{
+      \inputTikZ{0.425}{05_eval/images/FirstElement_Angle}
+      \label{fig:AngleFirst}
+    }
+    \subfloat[Magnitude of the angular error between optical and magnetic estimation]{
+      \inputTikZ{0.425}{05_eval/images/FirstElement_Error}
+      \label{fig:ErrorFirst}
+    }
+    \caption{Results for the first element: \ref{fig:AngleFirst} shows the angle estimates in comparison. The optical estimates are shown with dashed lines and the magnetic estimates with solid lines. In \ref{fig:ErrorFirst} the angle error is shown between the orientation estimates.}
+    \label{fig:ResultsFirstElement}
+  \end{figure}
+  
+  
+  \begin{figure}
+    \centering
+    \subfloat[Angle of movement for the second element]{
+      \inputTikZ{0.425}{05_eval/images/SecondElement_Angle}
+      \label{fig:AngleSecond} 
+    }
+    \subfloat[Magnitude of the angular error between optical and magnetic estimation]{
+      \inputTikZ{0.425}{05_eval/images/SecondElement_Error}
+      \label{fig:ErrorSecond}
+    }
+    \caption{Results for the second element: The presentation of the results is as in \ref{fig:ResultsSecondElement}.}
+    \label{fig:ResultsSecondElement}
+  \end{figure}
 \subsection{Diskussion}
 
 \section{Absolute Lokalisierung}
+
+\subsection{Fehlermaß}
+Bei der Auswertung der absoluten Lokalisierung müssen zum einen die Position und die Orientierung evaluiert werden. Um eine Evaluierung durchführen zu können, muss ein Fehlermaß eingeführt werden. Bei der Position ist dieses naheliegend die euklidische Abstand zwischen der magnetischen Schätzung und dem Ergebnis der optischen Schätzung. Beim Vergleich der Orientierung ist dies komplexer, da bei Eulerwinkeln keine euklidische Distanz existiert. Hier soll ein Skalar eingeführt werden, der ein Maß für die Qualität der Schätzung ist. 
+
+Die Orientierung der 3D-Spule $\bvec{R}\tindex{RPY}$ ist die Verdrehung des Spulekoordinatensystem im Vergleich zum globalen Koordinatensystem. Die einzelnen Achsen des lokalen Koordinatensystems beschrieben im globalen Koordinatensystem sind die Spalten der Rotationsmatrix
+
+\begin{equation}
+    \bvec{R}\tindex{RPY} = \begin{pmatrix}
+        \vec{e}_x^{\,\text{glob}} & \vec{e}_y^{\,\text{glob}} & \vec{e}_z^{\,\text{glob}}.
+    \end{pmatrix}
+\end{equation}
+
+In der Evaluierung werden diese magnetisch und optische geschätzt, also die Koordinatenachsen der magnetischen und optischen Schätzung. Als Maß wird der absolute Winkel verwendet um den die beiden Koordinatensysteme zueinander verdreht sind. Dafür wird zunächst Die Rotationsmatrix $\bvec{R}\tindex{Eval}$ zwischen den beiden Koordinatensystemen bestimmt
+
+\begin{equation}
+    \bvec{R}\tindex{Eval} = \bvec{R}\tindex{RPY,mag} (\bvec{R}\tindex{RPY,opt})^{-1}.
+\end{equation}
+Aus $\bvec{R}\tindex{Eval}$ wird ein äquivalentes Quaternion bestimmt. Quaternionen sind Vektoren mit vier Komponenten, die in der Informatik häufig eingesetzt werden um räumliche Rotationen zu beschreiben. Der Vorteil ist, dass diese weniger Speicherplatz benötigen Referenz. Die Komponenten eines Quaternions $\bvec{q}$ kann mit der Rotationsachse $\vec{e}\tindex{Rot}$ und dem Drehwinkel $\phi$ beschrieben werden
+
+\begin{equation}
+    \bvec{q} = \begin{pmatrix}
+        \cos(\frac{\phi}{2}) \\
+        \sin(\frac{\phi}{2})\,e\tindex{Rot,x} \\
+        \sin(\frac{\phi}{2})\,e\tindex{Rot,y} \\
+        \sin(\frac{\phi}{2})\,e\tindex{Rot,z} 
+    \end{pmatrix}.
+\end{equation}
+
+Aus $\bvec{R}\tindex{Eval}$ wird das zugehörige Quaternion $\bvec{q}\tindex{Eval}$ bestimmt
+
+Formel.
+
+Die Komponenten zwei bis vier werden verworfen und aus der ersten wird der Winkel $\phi\tindex{Eval}$ bestimmt. Dieser Winkel ist das Fehlermaß für die Orientierungsschätzung. 
+ 
+
 \subsection{Simulative Evaluierung}
+\paragraph{Robustheit gegen Rauschen}
+\paragraph{Einfluss eines Positionsfehler auf die Orientierungsschätzung}
+\paragraph{Einfache Bewegung}
+
 \subsection{Experimentelle Evaluierung}
+\subsubsection{Räumliche Synchronisierung}
+\subsubsection{Ergebnisse}
 \subsection{Diskussion}
 
 

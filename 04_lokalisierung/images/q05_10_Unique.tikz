@@ -22,12 +22,12 @@ xmin=-20,
 xmax=180,
 xtick = {-20,0,20,...,180},
 xlabel style={font=\color{white!15!black}},
-xlabel={$\phi_{\text{max,j}}$ (°)},
+xlabel={$\phi_{\text{max,2}}$ (°)},
 ymin=0,
 ymax=180,
 ytick={0,20,...,180},
 ylabel style={font=\color{white!15!black}},
-ylabel={$\phi_{\text{s,j}}$ (°)},
+ylabel={$\phi_{\text{s,2}}$ (°)},
 axis background/.style={fill=white},
 axis x line*=bottom,
 axis y line*=left,
@@ -35,7 +35,7 @@ xmajorgrids,
 ymajorgrids,
 legend style={at={(0.6,0.1)}, anchor=south west, legend cell align=left, align=left, draw=white!15!black}
 ]\addlegendimage{white, fill=white} % Dummy entry for legend title
-\addlegendentry{Lenght ratios}
+\addlegendentry{$Qs$\,\,\,\,}
 \addplot [color=mycolor1,line width=5]
   table[row sep=crcr]{%
 3.50835464926744e-15	0\\

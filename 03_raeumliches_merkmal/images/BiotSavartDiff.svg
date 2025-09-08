@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="297mm"
+   height="210mm"
+   viewBox="0 0 297 210"
+   version="1.1"
+   id="svg2745"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   sodipodi:docname="BiotSavartDiff.svg"
+   inkscape:export-filename="BiotSavartDiff.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview2747"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="3.659624"
+     inkscape:cx="291.28675"
+     inkscape:cy="145.37012"
+     inkscape:window-width="3440"
+     inkscape:window-height="1377"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2742">
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect3836"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect3790"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <marker
+       style="overflow:visible"
+       id="TriangleStart"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="TriangleStart"
+       markerWidth="5.3244081"
+       markerHeight="6.155385"
+       viewBox="0 0 5.3244081 6.1553851"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.2;stroke-linejoin:bevel;paint-order:fill markers stroke;stroke-opacity:1;marker-end:url(#TriangleStart);marker-start:url(#TriangleStart)"
+       d="m 34.703017,12.72444 v 162.23661 l 245.234663,0"
+       id="path2920" />
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.44333;stroke-linejoin:bevel;stroke-dasharray:1.44333, 8.65998;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleStart);paint-order:fill markers stroke"
+       d="M 34.825807,174.68906 100.5196,48.867475"
+       id="path3634" />
+    <circle
+       id="path3782"
+       style="fill:#000000;stroke:#000000;stroke-width:0.264583"
+       cx="253.56699"
+       cy="137.21246"
+       r="0.12353524" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:1.6809;stroke-linejoin:bevel;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleStart);paint-order:fill markers stroke"
+       d="m 179.24957,92.239779 c 19.33485,4.917233 55.04416,19.525591 63.35052,32.176601 8.30636,12.651 -10.78915,23.34449 -24.96788,20.76664 -14.17873,-2.57785 -23.44005,-18.42713 -33.2267,-28.69133 -9.78664,-10.2642 -20.09823,-14.9426 -23.77441,-19.668933 -3.67619,-4.726328 -0.71638,-9.50021 18.61847,-4.582978 z"
+       id="path3788"
+       inkscape:path-effect="#path-effect3790"
+       inkscape:original-d="m 162.87464,82.548468 c 35.7097,14.60873 71.41901,29.217092 107.12796,43.825072 -19.0959,10.69429 -38.19141,21.38778 -57.28768,32.0811 -9.26132,-15.84954 -18.52265,-31.69881 -27.78452,-47.54877 -10.31161,-4.67821 -20.6232,-9.35661 -30.93534,-14.035476 2.96029,-4.773695 5.9201,-9.547572 8.87958,-14.321926 z" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.1206;stroke-linejoin:bevel;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect3828"
+       width="14.894795"
+       height="20.050686"
+       x="190.45245"
+       y="32.526455"
+       transform="rotate(15)" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:1.38875;stroke-linejoin:bevel;stroke-dasharray:1.38875, 4.16623;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleStart);paint-order:fill markers stroke"
+       d="M 179.36767,92.750259 C 157.2527,77.298011 135.1374,61.845531 113.02175,46.392812"
+       id="path3834"
+       inkscape:path-effect="#path-effect3836"
+       inkscape:original-d="M 179.36767,92.750259 C 157.25276,77.297922 135.13746,61.84544 113.02175,46.392812" />
+    <g
+       id="g4894"
+       transform="matrix(1.4007486,0,0,1.4007486,5.2473821,6.4631037)">
+      <circle
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.408607;stroke-linejoin:bevel;stroke-opacity:1;paint-order:fill markers stroke"
+         id="path3578"
+         cx="70.957855"
+         cy="24.334249"
+         r="1.0831885" />
+      <circle
+         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.604061;stroke-linejoin:bevel;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+         id="path4682"
+         cx="70.957855"
+         cy="24.334249"
+         r="3.1653113" />
+    </g>
+  </g>
+</svg>

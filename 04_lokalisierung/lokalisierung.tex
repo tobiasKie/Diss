@@ -1,6 +1,5 @@
 \chapter{Lokalisierungsalgorithmen}
 \label{chap:char_localization}
-Im Folgenden Kapitel soll die verwendete Algorithmik vorgestellt werden. Dabei wird zunächst ein magnetisch räumliches Signalverarbeitungsmerkmal vorgestellt. Dieses Merkmal wird für eine relative Lokalisierung (Rekonstruktion der einer kinematischen Kette) und eine absolute Lokalisierung innerhalb eines definierten Arbeitsraums genutzt. In diesem Kapitel werden die Sensoren als ideal angenommen, um die algorithmische Herleitung nicht unnötig kompliziert zu machen. 
 
 Es wurde ein iterativer Algorithmus entwickelt, der Vorwissen über die Anatomie integriert und so effizient die Haltung schätzt. Die Prämisse für den Algorithmus ist, dass jedes kinematische Element, mit Ausnahme des ersten, mit einem Magnetfeldsensor ausgestattet wird. Am ersten kinematischen Element ist eine 3D-Spule befestigt. Desweiteren wird zunächst angenommen, dass die Sensorachse diesselbe Orientierung wie das zugehörige kinematische Element und der Sensor genau in der Mitte des kinematischen Elements lokalisiert. Im Allgemeinen hat die Pose eines Sensors fünf Freiheitsgrade, drei für die Position, sowie 2 für die Orientierung der Sensorachse. Durch die Kopplung des Sensors an die Elemente wird die Anzahl der Freiheitsgrade reduziert zur Anzahl der Freiheitsgrade des Gelenks.
 
@@ -24,23 +23,6 @@ Die Herleitung des Algorithmus soll mit kleinen Simulationen veranschaulicht wer
 		}
 		\label{fig:Sensorplacement}
 	\end{figure}
-
-\section{Maximalvektor}
-	In der vorgestellten Algorithmik wird ein räumliches Feature eingeführt. Der Hauptgedanke dahinter ist, dass eine kinematische Kette durch die Ausrichtung der einzelnen Elemente beschrieben werden können. Die Ausrichtung der einzelnen Elemente kann in kartesischen Koordinaten mit einem Vektor der Länge 1 beschrieben werden. Die Zielgröße ist dementsprechend eine Anzahl an räumlichen 3D-Vektoren, daher wurde als Eingangsgröße ebenfalls ein räumlicher Vektor ausgewählt.
-	Der Maximalvektor (MV) wird wie folgt definiert. Es sei eine dreidimensionale Quelle $\vec{m} = \left[\begin{array}{c} m\tindex{x}\\ m\tindex{y} \\ m\tindex{z}\end{array}\right] $, lokalisiert im Koordinatenursprung, sowie ein Sensor am Ort $\vec{r}$ mit einer Orientierung der sensitiven Achse $\vec{e}_\text{s}$. 
-	Ein magnetischer Dipol sei definiert wie folgt [Zitat]
-	\begin{equation}
-		\vec{B}\tindex{dip}(\vec{r},\vec{m}) = \frac{1}{4\pi r^2}\frac{3\vec{r}(\vec{m}\cdot\vec{r})-\vec{m}r^2}{r^3}.
-		\label{eq:magDipolDef}
-	\end{equation}
-	Ein idealer Sensor misst die Projektion des magnetischen Feldes auf die Sensorachse
-	\begin{equation}
-		B\tindex{sensor}(\vec{r},\vec{e}_s,\vec{m}) =  \vec{B}\tindex{dip}(\vec{r}) \cdot \vec{e}_s.
-		\label{eq:magDipSensor}
-	 \end{equation}
-	Der MV ist in diesem Fall, die Dipolorientierung $\frac{\vec{m}}{|\vec{m}|}$ für die $B\tindex{sensor}(\vec{r},\vec{e}_s,\vec{m})$ maximal wird.
-
-
         
         
 \section{Relative Lokalisierung}
@@ -223,8 +205,8 @@ Analyse mit einer Matlabsimulation
 
 	\section{Absolute Lokalisierung}
 		\subsection{Grundsätzliche Gedanken}
-		\subsection{Ebenenschnitt}
-		\subsection{Orientierung}
+		\subsection{Positionsschätzung}
+		\subsection{Orientierungsschätzung}
 		
 
 	

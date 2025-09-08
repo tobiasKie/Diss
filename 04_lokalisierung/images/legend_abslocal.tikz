@@ -1,0 +1,18 @@
+\definecolor{green}{rgb}{0.0,1,0.0}
+\definecolor{red}{rgb}{1,0,0}
+\definecolor{blue}{rgb}{0.00000,0.22656,0.89453}
+
+\begin{tikzpicture}
+\draw (-16,0) rectangle (8,5);
+\fill[blue] (-15,2.5) circle (0.5cm);
+\draw (-12.7,2.5) node[scale=2, text width = 1.5cm] {$\hat{\vec{r}}\tindex{Q,2}^{\, i}$}; 
+\fill[red] (-10,2.5) circle (0.5cm);
+\draw (-8,2.5) node[scale=2, text width = 1.5cm] {$\hat{\vec{r}}\tindex{Q,1}^{\, i}$}; 
+\draw[blue,opacity = 0.5,line width = 2] (-6.5,2) -- (-5.5,2);
+\draw[red,opacity = 0.5,line width = 2] (-6.5,3) -- (-5.5,3);
+\draw (-3.5,2.5) node[scale=2, text width = 1.5cm] {Äquibetrags- kurven}; 
+
+\draw[red,-{Stealth[red]}] (1.5,2)   -- (1.5,3);
+\draw[blue,-{Stealth[blue]}] (2,2)   -- (2,3);
+\draw (4.5,2.5) node[scale=2, text width = 1.5cm] {Sensoren}; 
+\end{tikzpicture}

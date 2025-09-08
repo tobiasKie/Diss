@@ -2361,3 +2361,24 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">literatur.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
+    <bcf:citekey order="1" intorder="1">wolfgang_nolting_grundkurs_nodate</bcf:citekey>
+    <bcf:citekey order="2" intorder="1">pinheiro_extended_2024</bcf:citekey>
+    <bcf:citekey order="3" intorder="1">wolfgang_nolting_grundkurs_nodate</bcf:citekey>
+    <bcf:citekey order="4" intorder="1">henke_elektromagnetische_nodate</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">marco_leone_theoretische_nodate</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">john_david_jackson_klassische_nodate</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">wolfgang_nolting_grundkurs_nodate</bcf:citekey>
+    <bcf:citekey order="7" intorder="2">paperno_cylindrical_2004</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">zeidler_springer-taschenbuch_2013</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">chan_legendre_2013</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">john_david_jackson_klassische_nodate</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">wolfgang_nolting_grundkurs_nodate</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">wolfgang_nolting_grundkurs_nodate</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">wolfgang_nolting_grundkurs_nodate</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">henke_elektromagnetische_nodate</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">wolfgang_nolting_grundkurs_nodate</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">hoffmann_concept_2022</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">raab_magnetic_1979</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">paperno_new_2001</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">paperno_three-dimensional_2004</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">schmidt_real-time_nodate</bcf:citekey>

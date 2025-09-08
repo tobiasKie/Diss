@@ -31,8 +31,8 @@ axis y line*=left,
 legend style={font=\small},
 legend cell align=left,
 legend pos=south east]
-\addlegendimage{line legend,blue}\addlegendentry{\huge Potential Poses}
-\addlegendimage{line legend,mycolor1}\addlegendentry{\huge Maxvector}
+\addlegendimage{line legend,blue}\addlegendentry{\huge Mögliche Posen}
+\addlegendimage{line legend,mycolor1}\addlegendentry{\huge MV}
 
 ]
 \addplot[-Straight Barb, color=blue, line width=1.5pt, point meta={sqrt((\thisrow{u})^2+(\thisrow{v})^2)}, point meta min=0, quiver={u=\thisrow{u}, v=\thisrow{v}, every arrow/.append style={-{Straight Barb[angle'=18.263, scale={10/1000*\pgfplotspointmetatransformed}]}}}]

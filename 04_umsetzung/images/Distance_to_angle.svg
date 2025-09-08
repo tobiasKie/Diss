@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="297mm"
+   height="210mm"
+   viewBox="0 0 297 210"
+   version="1.1"
+   id="svg20827"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   sodipodi:docname="Distance_to_angle.svg"
+   inkscape:export-filename="Distance_to_angle.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview20829"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.2938725"
+     inkscape:cx="677.03735"
+     inkscape:cy="391.84696"
+     inkscape:window-width="3440"
+     inkscape:window-height="1377"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs20824">
+    <marker
+       style="overflow:visible"
+       id="TriangleStart-8-1-2"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="TriangleStart"
+       markerWidth="5.3244081"
+       markerHeight="6.155385"
+       viewBox="0 0 5.3244081 6.1553851"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135-4-8-4" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <circle
+       style="fill:none;stroke:#000d00;stroke-width:1.06421;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="path23603"
+       cx="96.82666"
+       cy="170.67578"
+       r="9.1302404" />
+    <circle
+       style="fill:none;stroke:#000d00;stroke-width:2.03568;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="path23603-4"
+       cx="97.313049"
+       cy="69.550629"
+       r="17.464855" />
+    <path
+       style="fill:none;stroke:#000d00;stroke-width:1.06421;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       d="M 87.696419,171.03052 V 84.241929"
+       id="path23919" />
+    <path
+       style="fill:none;stroke:#000d00;stroke-width:1.06421;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       d="M 105.95689,171.03051 V 84.241936"
+       id="path23919-2" />
+    <path
+       style="fill:none;stroke:#000d00;stroke-width:1.06421;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       d="m 105.63135,54.27699 75.16112,-43.3943"
+       id="path23919-3" />
+    <path
+       style="fill:none;stroke:#000d00;stroke-width:1.06421;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       d="M 114.76159,70.09101 189.9227,26.69673"
+       id="path23919-2-3" />
+    <path
+       style="fill:none;stroke:#000d00;stroke-width:1.56481;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       d="m 179.90529,10.644134 9.72938,16.668158"
+       id="path24041" />
+    <circle
+       style="fill:#ff8000;fill-opacity:1;stroke:#ff8000;stroke-width:1.06899;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="path3060-2-2-3"
+       cx="130.72978"
+       cy="77.805153"
+       r="3.2789738"
+       transform="rotate(-15)" />
+    <path
+       style="fill:#ff8000;fill-opacity:1;stroke:#ff8000;stroke-width:1.06899;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleStart-8-1-2);paint-order:fill markers stroke"
+       d="m 148.01332,40.519528 11.96841,-6.90997"
+       id="path4568-8-5-2" />
+    <path
+       style="fill:none;stroke:#fffc00;stroke-width:1.5;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       d="M 96.928021,171.56669 V 69.321938 l 48.649619,-28.08787 z"
+       id="path24869" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="path24923"
+       sodipodi:type="arc"
+       sodipodi:cx="96.194366"
+       sodipodi:cy="69.526428"
+       sodipodi:rx="10.019985"
+       sodipodi:ry="10.019985"
+       sodipodi:start="4.712389"
+       sodipodi:end="5.8503437"
+       sodipodi:arc-type="arc"
+       d="m 96.194366,59.506443 a 10.019985,10.019985 0 0 1 9.095914,5.817082"
+       sodipodi:open="true" />
+    <g
+       id="g13420-9"
+       transform="matrix(2.4872086,0,0,2.4872086,-379.08768,-13.572157)">
+      <ellipse
+         style="fill:none;fill-opacity:1;stroke:#0007ff;stroke-width:0.489471;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+         id="path13287-6"
+         cx="191.88988"
+         cy="74.388039"
+         rx="3.0408843"
+         ry="5.8081908" />
+      <circle
+         style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:0.481299;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+         id="path13289-3"
+         cx="191.7966"
+         cy="74.354179"
+         r="6.2703161" />
+      <ellipse
+         style="fill:none;fill-opacity:1;stroke:#00ff00;stroke-width:0.450303;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+         id="path13343-3"
+         cx="191.68095"
+         cy="74.570099"
+         rx="5.9983191"
+         ry="0.97347927" />
+    </g>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linejoin:bevel;stroke-dasharray:1.5, 1.5;stroke-opacity:1;paint-order:fill markers stroke;stroke-dashoffset:0"
+       d="M 96.928021,69.11745 V 55.825633"
+       id="path26651" />
+  </g>
+</svg>

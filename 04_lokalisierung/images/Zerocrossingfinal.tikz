@@ -45,8 +45,8 @@ legend style={font=\small},
 legend cell align=left,
 legend pos=north east]
 \addlegendimage{line legend,mycolor1,line width = 10}\addlegendentry{\huge Sensor}
-\addlegendimage{line legend,mycolor2, line width = 10}\addlegendentry{\huge Zerocrossing vectors}
-\addlegendimage{line legend,mycolor3, line width = 10}\addlegendentry{\huge Maxvector}
+\addlegendimage{line legend,mycolor2, line width = 10}\addlegendentry{\huge $\vec{e}_\text{zc}$}
+\addlegendimage{line legend,mycolor3, line width = 10}\addlegendentry{\huge $\vec{e}_\text{max}$}
 ]
 \addplot3[-Straight Barb, color=mycolor1, line width=3.0pt, point meta={sqrt((\thisrow{u})^2+(\thisrow{v})^2+(\thisrow{w})^2)}, point meta min=0, quiver={u=\thisrow{u}, v=\thisrow{v}, w=\thisrow{w}, every arrow/.append style={-{Straight Barb[angle'=45, scale={5/1000*\pgfplotspointmetatransformed}]}}}]
  table[row sep=crcr] {%
