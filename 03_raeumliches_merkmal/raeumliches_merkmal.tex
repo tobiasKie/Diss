@@ -6,18 +6,18 @@ Ziel dieser Arbeit ist es, Orientierungen von kinematischen Elementen und der Po
 \label{sec:modMagFeld}
 \subsection{Biot-Savart}
 \label{subsec:Biot_Savart}
-Um Magnetgfelder $\vec{b}(\vec{r})$ zu beschreiben wird oft ein Vektorpotential $\vec{a}(\vec{r})$ verwendet, \cite{wolfgang_nolting_grundkurs_nodate} 
+Um Magnetgfelder $\vec{b}(\vec{r})$ zu beschreiben kann ein Vektorpotential $\vec{a}(\vec{r})$ verwendet werden, \cite{wolfgang_nolting_grundkurs_nodate} 
 \begin{equation}
     \vec{b}(\vec{r}) = \text{rot}(\vec{a}(\vec{r})).
     \label{eq:VekPot}
 \end{equation}
-Das Vektorpotential ist angelehnt an das elektrostatische Potential und kann analog zur Poisson-Gleichung \cite{pinheiro_extended_2024} mithilfe einer gegebenen Stromdichteverteilung $\vec{j}(\vec{r})$ geschrieben werden \cite{wolfgang_nolting_grundkurs_nodate} 
+Das Vektorpotential ist angelehnt an das elektrostatische Potential und kann analog zur Poisson-Gleichung \cite{pinheiro_extended_2024} mithilfe einer gegebenen Stromdichteverteilung $\vec{j}(\vec{r})$ in einem homogenen Medium mit der magnetischen Permeabilität $\mu$ (Das Medium in dieser Arbeit ist immer Luft $\mu = \mu_0$.) geschrieben werden \cite{wolfgang_nolting_grundkurs_nodate} 
 
 \begin{equation}
     \Laplace \vec{a}(\vec{r}) = -\mu \vec{j}(\vec{r}).
     \label{eq:vekPotLap}
 \end{equation}
-Im freien Raum ergibt sich die Lösung dieser Differentialgleichung wie folgt, wobei $v'$ das Volumen der Stromverteilung beschreibt,\cite{henke_elektromagnetische_nodate} 
+Im freien Raum  ergibt sich die Lösung dieser Differentialgleichung wie folgt, wobei $v'$ das Volumen der Stromverteilung beschreibt,\cite{henke_elektromagnetische_nodate} 
 
 \begin{eqnarray}
     a_{x} = \frac{\mu}{4 \pi} \iiint_{V'} \frac{J_x(\vec{r}')}{|\vec{r}-\vec{r'}|} dv',
@@ -33,7 +33,7 @@ Durch einsetzen der Gleichungen \ref{eq:VekPotX} bis \ref{eq:VekPotZ} in Gleichu
     \vec{b}(\vec{r}) = \frac{\mu}{4 \pi} \iiint_{V'} \text{rot}\frac{\vec{j}(\vec{r'})}{|\vec{r}-\vec{r'}|} dv'
     \label{eq:BiotSavartRot}
 \end{equation}
-mit auswerten des Rotationsoperator
+mit Auswerten des Rotationsoperator
 \begin{equation}
     \vec{b}(\vec{r}) = \frac{\mu}{4 \pi} \iiint_{V'} \vec{j}(\vec{r'}) \times \frac{\vec{r}-\vec{r'}}{|\vec{r}-\vec{r'}|} dv'.
     \label{eq:BiotSavart}
@@ -82,12 +82,16 @@ Das Dipolmoment $\vec{m}$ einer Stromdichteverteilung wird definiert als \cite{w
     \vec{m} = \frac{1}{2} \iiint \vec{r'} \times \vec{J}(\vec{r'})dv',
     \label{eq:Dipolemoment}
 \end{equation}
-ergibt sich für das Vektorpotential \cite{wolfgang_nolting_grundkurs_nodate}
+wobei vereinfacht das magnetische Dipolmoment anhand der Anzahl der Windungen $K$, der Querschnittsfläche $A$, dem Strom $I$ und der Öffnungsrichtung der Spule $\vec{e}\tindex{Spule}$ beschrieben wird
+\begin{equation}
+    \vec{m} = I\,A\,K\, \vec{e}\tindex{Spule} ,
+\end{equation}
+für das Vektorpotential ergibt sich \cite{wolfgang_nolting_grundkurs_nodate}
 \begin{equation}
     \vec{a}\tindex{Dip} = \frac{\mu}{4 \pi} \frac{1}{r^3} \vec{m} \times \vec{r}.
     \label{eq:VekPotDipoleMom}
 \end{equation}
-Daraus ergibt sich dann ein zugehöriges Magnetfeld \cite{wolfgang_nolting_grundkurs_nodate}
+Daraus ergibt sich ein zugehöriges Magnetfeld \cite{wolfgang_nolting_grundkurs_nodate}
 \begin{equation}
     \vec{b}\tindex{Dip}(\vec{r}) = \frac{\mu}{4 \pi} (\frac{3\,(\vec{m}\,\vec{r})\vec{r}}{r^5}-\frac{\vec{m}}{r^3}).
     \label{eq:MagDipoleFeld}
@@ -150,7 +154,7 @@ Die Beschreibung des Abstands in Abhängigkeit von $\phi$ und $b\tindex{Dip}$ f�
         \caption{Die Abbildung zeigt exemplarisch den Verlauf des Magnetfeldbetragse. In der Mitte (roter Pfeil) ist ein magnetischer Dipol in $y$-Richtung polarisiert. Je weiter entfernt von der Mitte, desto schwächer wird das Magnetfeld(blau). Die grüne Kurve zeigt beispielhaft den Verlauf von $r(b\tindex{Dip},\phi)$.}
         \label{fig:BetragMagfield}
 \end{figure}
-Aufgrund der Zylindersymetrie des Dipolfeldes lassen sich die Kurven durch eine Rotation um die Dipolachse zu Flächen erweitern. Es entsteht ein Rotationskörper auf dem $b\tindex{Dip}$ konstant ist, also eine Äquibetragsfläche. Ein Beispielkörper ist in Abbildung \ref{fig:Aequibetragsflaeche} dargestellt.
+Aufgrund der Zylindersymetrie des Dipolfeldes lassen sich die Kurven durch eine Rotation um die Dipolachse zu Flächen erweitern. Es entsteht ein Rotationskörper auf dem $b\tindex{Dip}$ konstant ist, eine Äquibetragsfläche. Ein Beispielkörper ist in Abbildung \ref{fig:Aequibetragsflaeche} dargestellt.
 \begin{figure}[h]
     \centering
     \scalefont{2}
@@ -161,7 +165,7 @@ Aufgrund der Zylindersymetrie des Dipolfeldes lassen sich die Kurven durch eine 
  
 \subsection{Quasistationäre Felder}
 \label{subsec:Quasistationairy}
-Die Beschreibung statischer  magnetischer Felder wurde bisher gezeigt. Da es bei aktiven Anwendungen Sinn macht zeitveränderliche Signale zu verwenden, um die verwendeten Signale von z.B. dem Erdmagnetfeld trennen zu können. Bei der Beschreibung von Magnetfeldern wird bei statischen Fällen der Verschiebungsstrom $\frac{d \vec{D}}{d t}$ weggelassen. An dieser Stelle führen wir den Begriff der Quasistationärität ein. Dieser Begriff beschreibt, dass zeitveränderliche Felder beschrieben werden, diese jedoch langsam genug, im Vergleich zu den Abmessungen des betrachteten Aufbaus, dass diese mit genügender Genauigkeit weiter mit den Formeln für den statischen Fall beschrieben werden können \cite{wolfgang_nolting_grundkurs_nodate}. Dabei wird die Ausbreitungzeit $t$ von elektromagnetischen Feldern, mit Lichtgeschwindigkeit $c = 3\,\cdot 10^8 \frac{\text{m}}{\text{s}}$, die es benötigt um die Länge des Aufbaus $d$ zu durchqueren. Die bestimmte Zeit wird verglichen mit der Periodendauer der höchsten verwendeten Frequenz verglichen. In dieser Arbeit ist der Aufbau im Durchmesser ca. 1m groß und die Frequenzen sind aufgrund der verwendeten Sensorik auf 1000 Hz beschränkt. Daher ist die kleinste Periodendauer 1 ms und die Ausbreitungzeit ca. 3 ns. Zwischen den beiden Werten liegen 6 Größenordnungen, daher wird im weiteren die Quasistationärität als gegeben angenommen. Daher können die vorherigen Beschreibungen des magnetischen Dipolfeldes verwendet werden.
+Die Beschreibung statischer  magnetischer Felder wurde bisher gezeigt. Da es bei aktiven Anwendungen Sinn macht zeitveränderliche Signale zu verwenden, um die verwendeten Signale von z.B. dem Erdmagnetfeld trennen zu können. Bei der Beschreibung von Magnetfeldern wird bei statischen Fällen der Verschiebungsstrom $\frac{d \vec{D}}{d t}$ vernachlässigt. An dieser Stelle führen wir den Begriff der Quasistationärität ein. Dieser Begriff beschreibt, dass zeitveränderliche Felder beschrieben werden, diese jedoch langsam genug, im Vergleich zu den Abmessungen des betrachteten Aufbaus, dass diese mit genügender Genauigkeit weiter mit den Formeln für den statischen Fall beschrieben werden können \cite{wolfgang_nolting_grundkurs_nodate}. Dabei wird die Ausbreitungzeit $t$ von elektromagnetischen Feldern, mit Lichtgeschwindigkeit $c = 3\,\cdot 10^8 \frac{\text{m}}{\text{s}}$, die es benötigt um die Länge des Aufbaus $d$ zu durchqueren. Die bestimmte Zeit wird verglichen mit der Periodendauer der höchsten verwendeten Frequenz verglichen. In dieser Arbeit ist der Aufbau im Durchmesser ca. 1m groß und die Frequenzen sind aufgrund der verwendeten Sensorik auf 1000 Hz beschränkt. Daher ist die kleinste Periodendauer 1 ms und die Ausbreitungzeit ca. 3 ns. Zwischen den beiden Werten liegen 6 Größenordnungen, daher wird im weiteren die Quasistationärität als gegeben angenommen. Daher können die vorherigen Beschreibungen des magnetischen Dipolfeldes verwendet werden.
 
 \section{3D-Spule}
 \label{sec:3d_Spule}
@@ -190,7 +194,7 @@ Die Spule kann unterschiedlich angesteuert werden. Zum einen gibt es die Möglic
 \begin{figure}
     \centering
     \scalefont{2}
-    \inputTikZ{0.6}{03_raeumliches_merkmal/images/Freq_Spule.tikz}
+    \inputTikZ{0.5}{03_raeumliches_merkmal/images/Freq_Spule.tikz}
     \caption{Frequenzabhängiger Impendanzverlauf der 3D-Spule}
     \label{fig:FreqSpule}
 \end{figure}
@@ -246,7 +250,8 @@ Für die Herleitung werden zunächst einige Annahmen getroffen. Zwei nicht kolin
     \vec{e}_s = \left[\begin{array}{c} \cos(\phi\tindex{s})\\ \sin(\phi\tindex{s}) \\ 0\end{array}\right].
     \label{eq:defErEs}
 \end{equation}
-Die dreidimensionale magnetische Quelle hat ein konstantes magnetisches Dipolmoment der Stärke $m = 1$ die jedoch in jede beliebige Richtung polarisiert sein kann. Die Definition der Richtung ist an die Rücktransformation von Kugelkoordinaten in kartesische Koordinaten angelehnt. Das Dipolmoment $\vec{e}\tindex{m}$ ist in kartesischen Koordinaten definiert wie folgt
+
+Das normierte magnetische Dipolmoment $\vec{e}\tindex{m}$ ist im Betrag konstant, die Richtung ist jedoch beliebig. Die Definition der Richtung ist an die Rücktransformation von Kugelkoordinaten in kartesische Koordinaten angelehnt. $\vec{e}\tindex{m}$ ist in kartesischen Koordinaten definiert wie folgt
 \begin{equation}
     \vec{e}\tindex{m} = \left[\begin{array}{c} \cos(\phi\tindex{m})\sin(\theta\tindex{m})\\ \sin(\phi\tindex{m})\sin(\theta\tindex{m}) \\ \cos(\theta\tindex{m}) \end{array}\right].
     \label{eq:defEm}
@@ -261,7 +266,7 @@ Durch einsetzen der Vektordefinition in Gleichung \ref{eq:magDipNorm} kommt man 
     b\tindex{norm,z}(\theta\tindex{m}) &=& - \cos(\theta\tindex{m}).
     \label{eq:magNormZ}
 \end{eqnarray}
-Mit Gl. \ref{eq:Sensorprojektion} kommt man zum Sensorsignal $B\tindex{sensor}$
+Mit Gl. \ref{eq:Sensorprojektion} kommt man zum Sensorsignal $b\tindex{sensor}$
 
 \begin{equation}
     b\tindex{sensor}(\phi,\phi\tindex{s},\phi\tindex{m},\theta\tindex{m},r) =  \frac{ m }{4 \pi r^3} \big(\cos(\phi\tindex{s})\, b\tindex{norm,x}(\phi,\phi\tindex{m},\theta\tindex{m}) + \sin(\phi\tindex{s})\, b\tindex{norm,y}(\phi,\phi\tindex{m},\theta\tindex{m})\big).
@@ -270,7 +275,7 @@ Mit Gl. \ref{eq:Sensorprojektion} kommt man zum Sensorsignal $B\tindex{sensor}$
 
 Bezüglich einer Varierung von $\theta\tindex{m}$, wird das Sensorsignal maximal wenn $\theta\tindex{m} = \frac{\pi}{2}$. Dies zeigt außerdem, dass die Komponente des Dipols, die senkrecht zur von $\vec{e}\tindex{r}$ und $\vec{e}\tindex{s}$ aufgespannten Ebene liegt, keinen Einfluss auf das Sensorsignal hat. Diese Beobachtung zeigt, dass der MV in dieser aufgespannten Ebene liegen muss. Diese Erkenntnis vereinfacht die Problemstellung zu einem 2D-Problem und kann daher in einer Ebene weiter betrachtet werden.
 
-Um einen Zusammenhang zwischen den drei Vektoren zu erhalten wird nun angenommen, dass der Sensor auf $x$-Achse lokalisiert sei. Dies wird vorgenommen um die Herleitung einfacher zu zeigen,danach wird der Zusammenhang auf beliebige Positionen erweitert. Die Vektoren sind in kartesischen Koordinaten wie folgt definiert
+Um einen Zusammenhang zwischen den drei Vektoren zu erhalten wird nun angenommen, dass der Sensor auf $x$-Achse lokalisiert sei. Dies wird vorgenommen um die Herleitung zu vereinfachen, danach wird der Zusammenhang auf beliebige Positionen erweitert. Die Vektoren sind in kartesischen Koordinaten wie folgt definiert
 
 \begin{equation}
     \vec{e}_r = \left[\begin{array}{c} 1\\ 0 \end{array}\right],\qquad
@@ -278,7 +283,7 @@ Um einen Zusammenhang zwischen den drei Vektoren zu erhalten wird nun angenommen
     \vec{e}\tindex{s} = \left[\begin{array}{c} \cos(\phi\tindex{s})\\ \sin(\phi\tindex{s})\end{array}\right].
     \label{eq:defErEmEs}
 \end{equation}
-Dies führt zum folgenden magnetischen normierten Feld für die einzelnen Komponenten führt 
+Dies führt zum magnetischen normierten Feld für die einzelnen Komponenten  
 
 \begin{eqnarray}
     b\tindex{norm,x}(\phi\tindex{m}) &=& 2  \cos(\phi\tindex{m}),
@@ -286,12 +291,12 @@ Dies führt zum folgenden magnetischen normierten Feld für die einzelnen Kompon
     b\tindex{norm,y}(\phi\tindex{m}) &=& - \sin(\phi\tindex{m}),
     \label{eq:magNorm2DY}\\
 \end{eqnarray}
-Die Projektion auf die Sensorachse führt zu:
+Die Projektion auf die Sensorachse führt zu
 \begin{equation}
     b\tindex{sensor}(\phi\tindex{s},\phi\tindex{m})= \frac{ m }{4 \pi r^3} \big( 2  \cos(\phi\tindex{m})  \cos(\phi\tindex{s}) - \sin(\phi\tindex{m})  \sin(\phi\tindex{s}) \big).
     \label{eq:formel12}
 \end{equation}
-Es wird der Wert $\phi\tindex{m}$ gesucht, für den $B\tindex{sensor}$ maximal wird, dieser Winkel wird als $\phi\tindex{max}$ bezeichnet. Dafür wird Gleichung \ref{eq:formel12} nach $\phi\tindex{m}$ differenziert
+Es wird der Wert $\phi\tindex{m}$ gesucht, für den $b\tindex{sensor}$ maximal wird, dieser Winkel wird als $\phi\tindex{max}$ bezeichnet. Dafür wird Gleichung \ref{eq:formel12} nach $\phi\tindex{m}$ differenziert
 \begin{equation}
     \frac{\text{d}b\tindex{sensor}(\phi\tindex{m})}{d\phi\tindex{m}}=\frac{ m }{4 \pi r^3}\left ( -2 \sin(\phi\tindex{m})\cos(\phi\tindex{s})-\sin(\phi\tindex{s})  \cos(\phi\tindex{m})\right ),
     \label{eq:formel13}
@@ -331,12 +336,11 @@ Gleichung \ref{eq:relMaxS} zeigt einen Zusammenhang zwischen $\vec{e}\tindex{max
     \put(75,16){$\vec{e}\tindex{max}$}
     \put(28,1){$\vec{e}\tindex{max}$}
 \end{overpic}
-\caption{ Die Beziehung in Gleichung\,\ref{eq:relMaxS} ist unabhängig vom Winkel $\phi$. Außerdem wird die eindeutige Beziehung zwischen den 3 Einheitsvektoren $\vec{e}\tindex{s}, \vec{e}\tindex{max},$ und $\vec{e}\tindex{r}$ gezeigt. Auf der linken Seite ist der Sensor auf der $x$-Achse lokalisiert, wie in der Herleitung. Auf der rechten Seite ist das Ganze Setup gedreht. $\phi\tindex{s}$ und $\phi\tindex{max}$ bleiben gleich, nur die Bezugsachse dreht sich mit.}
+\caption{ Die Beziehung aus Gleichung\,\ref{eq:relMaxS} ist unabhängig vom Winkel $\phi$. Außerdem wird die eindeutige Beziehung zwischen den 3 Einheitsvektoren $\vec{e}\tindex{s}, \vec{e}\tindex{max},$ und $\vec{e}\tindex{r}$ gezeigt. Auf der linken Seite ist der Sensor auf der $x$-Achse lokalisiert, wie in der Herleitung. Auf der rechten Seite ist das Ganze Setup gedreht. $\phi\tindex{s}$ und $\phi\tindex{max}$ bleiben gleich, nur die Bezugsachse dreht sich mit.}
 \label{fig:maxvectorAcngles}
 \end{figure}
 
-Die drei Vektoren können $\vec{e}\tindex{max},\vec{e}\tindex{s},\vec{e}\tindex{r}$ nun verwendet werden um aus zweien den dritten zu berechnen.
-Bei bekanntem $\vec{e}\tindex{max},\vec{e}\tindex{r}$ wird mit einer einfachen Rotation $\vec{e}\tindex{s}$ bestimmt. Die zugehörige Berechnungsvorschrift wird im folgenden einmal gezeigt. 
+Die drei Vektoren können $\vec{e}\tindex{max},\vec{e}\tindex{s},\vec{e}\tindex{r}$ nun verwendet werden um aus zweien den dritten zu berechnen. Bei bekanntem $\vec{e}\tindex{max},\vec{e}\tindex{r}$ wird mit einer einfachen Rotation $\vec{e}\tindex{s}$ bestimmt. Die zugehörige Berechnungsvorschrift wird im folgenden einmal gezeigt. 
 
 
 \begin{enumerate}

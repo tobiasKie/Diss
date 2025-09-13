@@ -16,7 +16,7 @@ Im Laufe dieser Arbeit wurde eine Signalverarbeitungspipeline entworfen. Diese b
     \caption{Überblick der Signalverarbeitungspipeline: Auf der linken Seite kommen die Strom- und Magnetfeldsignale als Spannungen an und werden mit einem AD-Wandler die Signale mit einer konstanten Abtastrate digitalisiert. Diese Signale werden zunächst entzerrt und gefiltert(Vorverarbeitung). Die gefilterten Signale werden dann genutzt um spezifische Merkmale zu extrahieren. Die Merkmale werden  an die relative Lokalisierung und die absolute Lokalisierung gegeben. Diese schätzen Positionen und Orientierungen und geben diese an die Nachverarbeitung weiter. Die geschätzten Positionen und Orientierungen können dann von beliebigen Anwendungen verwendet werden.}
     \label{fig:OverviewSigPipe}
 \end{figure}
-Die gesamte Signalverarbeitungspipeline wurde in einer rahmenbasierten Echtzeitsignalverarbeitungssoftware implementiert Kirat\cite{schmidt_real-time_nodate}. Das bedeutet, die Analog-Digital-Wandlungseinheit wandelt die Eingangsspannung mit einer konstanten Rate ($f\tindex{SR} = 48000\,\text{Hz}$). In einem Rahmen wird eine definierte Anzahlt an Abtastungen zusammengefasst, das können 128,256,512... Abtastungen sein. In jedem Rahmen wird für jedes kinematische Element eine Position und eine Orientierung bestimmt. 
+Die gesamte Signalverarbeitungspipeline wurde in einer rahmenbasierten Echtzeitsignalverarbeitungssoftware implementiert Kirat\cite{schmidt_real-time_nodate}. Das bedeutet, die Analog-Digital-Wandlungseinheit wandelt die Eingangsspannung mit einer konstanten Rate ($f\tindex{SR} = 48000\,\text{Hz}$ und einem $\Delta t = \frac{1}{f\tindex{SR}}$ zwischen den Datenpunkten). In einem Rahmen wird eine definierte Anzahlt an Abtastungen zusammengefasst, das können 128,256,512... Abtastungen sein. In jedem Rahmen wird für jedes kinematische Element eine Position und eine Orientierung bestimmt. 
 \section{Vorverarbeitung}
 Die Vorverarbeitung ist auf die verwendete Sensorart und die entwickelte Algorithmik abestimmt. In dieser Arbeit werden Algorithmen verwendet, die Stromsignale und Magnetfeldsignale verarbeiten. Die Signale werden auf unterschiedlich Arten erzeugt und gemessen, wodurch sich Verzerrungen ergeben.
 \begin{figure}[h]
@@ -104,7 +104,7 @@ Ein Überblick über die Vorverarbeitung ist in Abbildung\,\ref{fig:SignalFlowVo
 
 \section{Signalgenerierung und Merkmalsextraktion}
 \label{sec:featureExtract}
-In Kapitel\,\ref{sec:maximum_vector} wurde bereits der Maximalvektor und die Lokalisierungszusammenhänge diskutiert. Um dieser Zusammenhänge nutzen zu können, wird ein neues Verfahren basierend auf einem zeitlich räumlich rotierenden Dipol vorgestellt.
+In Kapitel\,\ref{sec:maximum_vector} wurde bereits der Maximalvektor und die Lokalisierungszusammenhänge diskutiert. Um dieser Zusammenhänge nutzen zu können, muss dieses Merkmal aus dem Magnetfeldsignal extrahiert werden. Im Folgenden wird gezeigt, wie die Spulen angesteuert und aus dem Sensorsignal der MV extrahiert werden kann.
 
 \subsection{Generierung zeitlich räumlich rotierendes Feld}
 Eine 3D-Spule wird so angesteuert, dass der resultierende magnetische Dipol zum einen eine konstante Intensität und zum anderen im dreidimensionalen Raum rotiert. 
@@ -121,14 +121,14 @@ Die Ansteuerung orientiert sich dabei an der Rücktransformation von Kugelkoordi
             \caption{ Bahn des magnetischen Dipols $\vec m (t)$ mit Startpunkt im Ursprung als Funktion der Zeit. Die Spitze von $\vec m$ bewegt sich auf der Oberfläche einer Kugel mit Radius $m_0$ für $N_\omega=\omega_\theta / \omega_\phi = 10$.}
             \label{fig:DipoleTrack}
         \end{figure}
-Die Signalverarbeitungspipeline erzeugt drei Spannungssignale $\bvec{u}\tindex{c}$, für die jeweilige Spule
 
 
+Um einen magnetischen Dipol zu erzeugen wie in Gleichung\,\ref{eq:rotDipole} muss ein Spulenstrom fließen, der die gleiche zeitliche Abhängigkeit wie $\vec{m}(t)$ besitzt. Der Widerstand der Spulen ist frequenzabhängig(siehe Abbildung\,\ref{fig:FreqSpule}) und führt zu einer zeitlichen Verzerrung des Stroms/Dipols. Da diese Abhängigkeit jedoch im möglichen Arbeitsbereich sehr klein ist (Widerstandsänderung von weniger als 1\%), wurde an dieser Stelle auf eine Entzerrung der Ansteuersignale verzichtet. Die Ansteuersignale $\bvec{u}\tindex{c}$ können wie $\vec{m}$ geschrieben werden
 \begin{equation}
     \bvec{u}\tindex{c} = \text{u}_0 \left[\begin{array}{c} \cos(\omega_\phi \Delta t\,n) \sin(\omega_\theta \Delta t\,n)\\ \sin(\omega_\phi \Delta t\,n)\sin(\omega_\theta \Delta t\,n)\\ \cos(\omega_\theta \Delta t\,n) \end{array}\right].
     \label{eq:rotDipole}
   \end{equation}
-Die Frequenzen müssen so gewählt werden, dass diese im Frequenzbereich der Magnetfeldsensorik liegen. Diese wurden in diese Fall auf $\omega_\theta = 700\,\text{Hz}$ und $\omega_\phi = 70\,\text{Hz}$. Somit ergibt sich ein Frequenzbereich des Nutzsignals von 630\,Hz bis 770\,Hz, wie bei einer Amplitudenmodulation. Der Frequenzgang einer Spule lässt sich näherungsweise durch einen Tiefpassfilter erster Ordnung beschreiben [Referenz]. Die verwendeten Spulen in diesem Aufbau sind jedoch so klein, dass die Grenzfrequenz im Bereich zwischen 10 und 20\,kHz liegt. $\bvec{u}\tindex{c}$ wurde so gesetzt, dass die Spulen in diesem Bereich nahezu kein frequenzabhängiges Verhalten zeigen, wie in Abbildung\,\ref{fig:FreqSpule} dargestellt. Die Veränderung der Impendanz liegt in diesem Bereich bei unter 1\%, daher wurde an dieser Stelle auf eine Entzerrung von $\bvec{u}\tindex{c}$ verzichtet.
+Die Frequenzen müssen so gewählt werden, dass diese im Frequenzbereich der Magnetfeldsensorik liegen. Diese wurden in diese Fall auf $\omega_\theta = 700\,\text{Hz}$ und $\omega_\phi = 70\,\text{Hz}$. Somit ergibt sich ein Frequenzbereich des Nutzsignals von 630\,Hz bis 770\,Hz, wie bei einer Amplitudenmodulation. 
 
 
 \subsection{Merkmalsextraktion}
@@ -137,7 +137,7 @@ Die Eingagnssignale der Merkmalsextraktion sind $\bvec{b}$ und $\bvec{i}$. Diese
 \subsubsection{Vektormerkmal}
     Das triviale Verfahren die Richtung des MV zu bestimmen wäre es, eine Periode der langsameren Frequenz abzuwarten und den Zeitpunkt des maximalen Wertes zu speichern und die zugehörigen Stromwerte zu normieren und als MV zu verwenden. An diesem Verfahren gibt es ein Problem, in einer begrenzten Zeit kann der Raum nur quantisiert abgetastet werden. In Abbildung \ref{fig:DipoleTrack} ist ein Verlauf des Dipolmoments über die Zeit zu sehen. In dieser Abbildung ist gut zu sehen, dass nur ein Bruchteil des Raumes abgetastet wird.
 
-    Die Idee ist, die Nulldurchgänge des Signals zu detektieren. Es wird angenommen, dass die Nulldurchgangsvektoren $\vec{e}\tindex{zc}$ (Dipolrichtungen in denen das detektierte Feld 0 ist) räumlich orthogonal zum MV ist, was zunächst bewiesen werden muss. Dies würde bedeuten, dass nach zwei Nulldurchgängen aus den beiden Nulldurchgangsvektoren eine Ebene bestimmt werden kann, deren Normalvektor der MV ist. Die Orthogonalität muss zunächst nachgewiesen werden. Dafür wird ausgegangen von den Formel \ref{eq:formel12} zu Null gesetzt wird und führen den Nullfeldwinkel $\phi\tindex{zero}$ ein
+    Die Idee ist, die Nulldurchgänge des Signals zu detektieren. Es wird angenommen, dass die Nulldurchgangsvektoren $\vec{e}\tindex{zc}$ (Dipolrichtungen in denen das detektierte Feld 0 ist) räumlich orthogonal zum MV ist, was zunächst bewiesen werden muss. Dies würde bedeuten, dass nach zwei Nulldurchgängen aus den beiden Nulldurchgangsvektoren eine Ebene bestimmt werden kann, deren Normalvektor der MV ist. Die Orthogonalität muss zunächst nachgewiesen werden. Dafür wird ausgegangen von Formel\,\ref{eq:formel12}, die zu Null gesetzt wird. Dabei führen wir den Nullfeldwinkel $\phi\tindex{zero}$ ein
 
         \begin{eqnarray}
             0 &=& 2 \, \cos(\phi\tindex{zero})\,\cos(\phi\tindex{s}) - \sin(\phi\tindex{zero}) \, \sin(\phi\tindex{s})
@@ -145,7 +145,7 @@ Die Eingagnssignale der Merkmalsextraktion sind $\bvec{b}$ und $\bvec{i}$. Diese
             2 \cot(\phi\tindex{zero})&=&\tan(\phi\tindex{s}).
         \label{eq:DipToZeroConv}
         \end{eqnarray}
-        In Formel \ref{eq:relMaxS} ist die rechte Seite gleich der rechten Seite von Formel \ref{eq:DipToZeroConv} und können deshalb gleichgesetzt werden: 
+        In Formel \ref{eq:relMaxS} ist die rechte Seite gleich der rechten Seite von Formel \ref{eq:DipToZeroConv} und können daher gleichgesetzt werden: 
         \begin{eqnarray}
             \cot\big(\phi\tindex{zero}\big) &=& \tan\big(-\phi\tindex{max}\big)
             \label{eq:equateMaxAndZero}\\
@@ -154,7 +154,7 @@ Die Eingagnssignale der Merkmalsextraktion sind $\bvec{b}$ und $\bvec{i}$. Diese
             \phi\tindex{zero} &=& \phi\tindex{max} \pm \frac{\pi}{2}.
             \label{eq:resultZeroMax}
         \end{eqnarray}
-        Das Gleichungen \ref{eq:equateMaxAndZero}-\ref{eq:resultZeroMax} zeigt, dass in der relevanten Ebene die $\vec{e}\tindex{zc}$ orthogonal zum $\vec{e}\tindex{max}$ steht. Aufgrund der Zylindersymmetrie ergibt sich so eine  Nulldurchgangsebene mit der dem MV als Normalenvektor. Eine Beispielsimulation wurde durchgeführt. Die Ergebnisse sind in Abbildung \ref{fig:ZeroCrossingVis} dargestellt. Darin ist gut zu sehen, dass die $\vec{e}\tindex{zc}$s eine Ebene aufspannen und der MV orthogonal dazu steht. 
+        Die Gleichungen \ref{eq:equateMaxAndZero}-\ref{eq:resultZeroMax} zeigen, dass in der relevanten Ebene die $\vec{e}\tindex{zc}$ orthogonal zum $\vec{e}\tindex{max}$ steht. Aufgrund der Zylindersymmetrie ergibt sich so eine  Nulldurchgangsebene mit dem MV als Normalenvektor. Eine Beispielsimulation wurde durchgeführt. Die Ergebnisse sind in Abbildung \ref{fig:ZeroCrossingVis} dargestellt. Darin ist gut zu sehen, dass die $\vec{e}\tindex{zc}$s eine Ebene aufspannen und der MV orthogonal dazu steht. 
 
 
     \begin{figure}[h]
@@ -168,10 +168,10 @@ Die Eingagnssignale der Merkmalsextraktion sind $\bvec{b}$ und $\bvec{i}$. Diese
         \inputTikZ{0.35}{04_lokalisierung/images//ZerocrossingSig.tikz}
         \label{fig:ZeroCrossingSignal}
     }
-    \caption{ Die linke Abbildung zeigt beispielhaft einen Max-Vektor im Ursprung (gelb), die Position und Orientierung (orange) des Sensors und die entsprechende Ebene der Nulldurchgangsvektoren (lila). Auf der rechten Seite ist das entsprechende Sensorsignal als Funktion der Zeit dargestellt. Die Zeiten, in denen ein Nulldurchgang erreicht wird, sind mit einem lila Punkt markiert. Die Simulation arbeitet mit einer Quelle, die mit $N_\omega=\omega_\theta / \omega\phi = 10$ angesteuert wird. Die absoluten Werte/Längen sind nicht relevant, da zum einen das relative Verhältnis zwischen den Vektoren und zum anderen die Nulldurchgänge von Interesse sind.}
+    \caption{ Die linke Abbildung zeigt beispielhaft einen MV im Ursprung (gelb), die Position und Orientierung (orange) des Sensors und die entsprechende Ebene der Nulldurchgangsvektoren (lila). Auf der rechten Seite ist das entsprechende Sensorsignal als Funktion der Zeit dargestellt. Die Zeiten, in denen ein Nulldurchgang erreicht wird, sind mit einem lila Punkt markiert. Die Simulation arbeitet mit einer Quelle, die mit $N_\omega=\omega_\theta / \omega\phi = 10$ angesteuert wird. Die absoluten Werte/Längen sind nicht relevant, da zum einen das relative Verhältnis zwischen den Vektoren und zum anderen die Nulldurchgänge von Interesse sind.}
     \label{fig:ZeroCrossingVis}
 \end{figure}
-Die Merkmalsextraktion sucht nach einem Vorzeichenwechsel in $b$ und es wird eine lineare Interpolation durchgeführt um den Zeitpunkt des Nulldurchgangs möglichst korrekt bestimmen zu können. Im Stromsignal wird ebenfalls eine lineare Interpolation durchgeführt um den Stromwert für den Nulldurchgang $\bvec{i}_{b=0}$ zu bestimmen. Die Stromwerte werden mit dem Dipolmoment $m$ der jeweiligen Spule multipliziert und man erhält den Dipol $\vec{m}_{b=0}$ für diesen Zeitpunkt
+Die Merkmalsextraktion sucht nach einem Vorzeichenwechsel in $b$, es wird eine lineare Interpolation durchgeführt um den Zeitpunkt des Nulldurchgangs möglichst korrekt bestimmen zu können. Im Stromsignal wird ebenfalls eine lineare Interpolation durchgeführt um den Stromwert für den Nulldurchgang $\bvec{i}_{b=0}$ zu bestimmen. Die Stromwerte werden mit dem Dipolmoment $m$ der jeweiligen Spule multipliziert und man erhält den Dipol $\vec{m}_{b=0}$ für diesen Zeitpunkt
 
 \begin{equation}
     \vec{m}_{b=0} = \left[\begin{array}{c} m\tindex{x}\,i_{b=0,x}\\ m\tindex{y}\,i_{b=0,y}\\ m\tindex{z}\,i_{b=0,z} \end{array}\right].
@@ -184,7 +184,7 @@ $\vec{e}\tindex{zc}$ ist ein Einheitsvektor, daher wird $\vec{m}_{b=0}$ normiert
 \end{equation}
 
 
-Es bleibt noch, die Polarität von $\vec{e}\tindex{max}$ zu bestimmen. Als Beispiel hat die $XY$-Ebene die $Z$-Achse, aber auch die $-Z$-Achse als Normalenvektor. An dieser Stelle muss noch die Polarität bestimmt werden. Die $\vec{e}\tindex{zc},k$ werden dafür mit dem Index $k$ nummeriert. Jedem Vektor $\vec{e}\tindex{zc}$ wird eine Polarität zugeordnet, diese sagt aus, ob der Verlauf von positiv nach negativ ($\text{z}+$) oder von negativ nach positiv ($\text{z}-$). Des weiteren wird der zugehörige Strom durch die $z$-Spule $Z\tindex{z}$ betrachtet. Je nach Polarität wird nun die Reihenfolge des Kreuzproduktes getauscht. Dies erfolgt nach der folgenden Regel:
+Es bleibt noch, die Polarität von $\vec{e}\tindex{max}$ zu bestimmen. Als Beispiel hat die $XY$-Ebene die $Z$-Achse, aber auch die $-Z$-Achse als Normalenvektor. An dieser Stelle muss die Polarität bestimmt werden. Die $\vec{e}\tindex{zc},k$ werden dafür mit dem Index $k$ nummeriert. Jedem Vektor $\vec{e}\tindex{zc}$ wird eine Polarität zugeordnet, diese sagt aus, ob der Verlauf von positiv nach negativ ($\text{z}+$) oder von negativ nach positiv ($\text{z}-$). Des weiteren wird der zugehörige Strom durch die $z$-Spule $Z\tindex{z}$ betrachtet. Je nach Polarität wird nun die Reihenfolge des Kreuzproduktes getauscht. Dies erfolgt nach der folgenden Regel:
 
 \begin{numcases}
 {\vec{e}_\text{max} = }
@@ -193,7 +193,7 @@ Es bleibt noch, die Polarität von $\vec{e}\tindex{max}$ zu bestimmen. Als Beisp
     \frac{\vec{e}\tindex{zc,k-1}\times\vec{e}\tindex{zc,k}}{\|\vec{e}\tindex{zc,k-1}\times\vec{e}\tindex{zc,k}\|} & ,sonst \nonumber.
 \end{numcases}
 \subsubsection{Distanzmerkmal}
-Die Richtung des MV ist nun eindeutig definiert. Es fehlt die Bestimmung des Betrages, welcher nun hergeleitet werden soll. Der Betrag wurde in Gleichung \ref{eq:defG} definiert. Der Sensor detektiert eine gewichtete Überlagerung der Spulensignale. Die Gewichtung ergibt sich nach Gleichung Referenz abhängig von Position und Orientierung des Sensors. Um dies hier zu vereinfachen schreiben wir diese Gewichtungen als $g\tindex{x}$ für die $x$-Spule, $g\tindex{y}$ für die $y$-Spule und $g\tindex{z}$ für die $z$-Spule. Dies führt zu folgender Sensorsignalbeschreibung
+Die Richtung des MV ist nun eindeutig definiert. Es fehlt die Bestimmung des Betrages. Der Betrag wurde in Gleichung \ref{eq:defG} definiert. Der Sensor detektiert eine gewichtete Überlagerung der Spulensignale. Die Gewichtung ergibt sich nach Gleichung Referenz abhängig von Position und Orientierung des Sensors. Um dies hier zu vereinfachen schreiben wir diese Gewichtungen als $g\tindex{x}$ für die $x$-Spule, $g\tindex{y}$ für die $y$-Spule und $g\tindex{z}$ für die $z$-Spule. Dies führt zu folgender Sensorsignalbeschreibung
 
 \begin{equation}
     b(n,\vec{r}) =   m\tindex{x}\,i_x \,g\tindex{x}  + m\tindex{y}\,i_y\,g\tindex{y}  + m\tindex{z}\,i_z\,g\tindex{z}.
@@ -554,7 +554,7 @@ Daraus wird nun der Beugewinkel $\phi\tindex{BJ}$ in dieser Ebene bestimmt
     \phi\tindex{BJ} = \vec{e}\tindex{k2,p} \, \vec{e}\tindex{k1}.
 \end{equation}
 
-In Abbildung \ref{fig:BestimmungZusatz} sind zwei kongruente Dreiecke zu sehen. Der Winkel, dargestellt in der Mitte des Gelenks, ist dabei $\phi\tindex{BJ}$. Da alle Größen der Dreiecke, außer $l\tindex{z} bekannt sind$, lässt sich nun $\l\tindex{z}$ bestimmen
+In Abbildung \ref{fig:BestimmungZusatz} sind zwei kongruente Dreiecke zu sehen. Der Winkel, dargestellt in der Mitte des Gelenks, ist dabei $\phi\tindex{BJ}$. Da alle Größen der Dreiecke, außer $l\tindex{z}$ bekannt sind, lässt sich nun $\l\tindex{z}$ bestimmen
 
 \begin{equation}
     l\tindex{z} = d\tindex{e} \tan{\frac{\phi\tindex{BJ}}{2}}.
@@ -712,10 +712,10 @@ Zu Beginn wird angenommen, dass die Quelle in $y$-Richtung liegt und der Winkel 
     \end{figure}
 
     
-    Es werden daher drei Sensorpaare verwendet, bei der jede eine Koordinate schätzt und diese werden zur Position $\vec{r}\tindex{C}$ um Raum zusammengesetzt
+    Es werden drei Sensorpaare verwendet, bei der jedes eine Koordinate schätzt und zur Position $\vec{r}\tindex{C}$ um Raum zusammengesetzt
 
     \begin{equation}
-        \hat{\vec{r}}\tindex{c} = \left[\begin{array}{c} \hat{x}\tindex{c}\\ \hat{y}\tindex{c} \\ \hat{z}\tindex{c} \end{array}\right]
+        \hat{\vec{r}}\tindex{c} = \left[\begin{array}{c} \hat{x}\tindex{c}\\ \hat{y}\tindex{c} \\ \hat{z}\tindex{c} \end{array}\right].
     \end{equation}
 
 	\subsubsection{Orientierungsschätzung}
@@ -929,7 +929,7 @@ Die vorgestellte Schätzung einer kinematischen Kette liefert für jedes Element
     \caption{Filter}
     \label{fig:Filterpost}
 \end{figure}
-An dieser Stelle werden die vektoriellen Komponenten und nicht die Winkel gefiltert, da bei der Überschreitung der $z$-Achse der Winkel springt, also von $-180^\circ$ zu $+180^\circ$. Dieser Sprung würde durch einen Tiefpassfilter geglättet worden, die vektoriellen Komponenten zeigen kein solches Verhalten, sondern haben einen kontinuierlichen Verlauf. Aus der vektoriellen Beschreibung werden nun die Winkel der Gelenke bestimmt, dabei wird jedes Gelenk als Sattelgelenk mit zwei Freiheitsgraden beschrieben (auch wenn diese anatomisch nur einen besitzen. Diese Begrenzung wird später beschrieben.). Die Bewegung kann nun aufgeteilt werden in ein Beugen und ein Spreizen, wobei diese von der jeweiligen Rotationsachse definiert werden. Die $z$-Achse sei immer als die Orientierung des vorherigen Elements definiert, die Ausrichtung der $y$-Achse wird konfiguriert, dabei wird die Ausrichtung in der Nulllage angegeben. Die $x$-Achse ergibt sich dann durch das Kreuzprodukt $\vec{e}\tindex{x} = \vec{e}\tindex{y}\times \vec{e}\tindex{z}$. Zunächst wird die Orientierung in das Koordinatensystem des kinematischen Elements $\hat{\vec{e}}\tindex{k,filt,Norm}^\text{\,Elem}$ transformiert
+An dieser Stelle werden die vektoriellen Komponenten und nicht die Winkel gefiltert, da bei der Überschreitung der $z$-Achse der Winkel springt, also von $-180^\circ$ zu $+180^\circ$. Dieser Sprung würde durch einen Tiefpassfilter geglättet werden. Die vektoriellen Komponenten zeigen kein solches Verhalten, sondern haben einen kontinuierlichen Verlauf. Aus der vektoriellen Beschreibung werden nun die Winkel der Gelenke bestimmt, dabei wird jedes Gelenk als Sattelgelenk mit zwei Freiheitsgraden beschrieben (auch wenn diese anatomisch nur einen besitzen. Diese Begrenzung wird später vorgenommen). Die Bewegung kann nun aufgeteilt werden in ein Beugen und ein Spreizen, wobei diese von der jeweiligen Rotationsachse definiert werden. Die $z$-Achse sei immer als die Orientierung des vorherigen Elements definiert, die Ausrichtung der $y$-Achse wird konfiguriert, dabei wird die Ausrichtung in der Nulllage angegeben. Die $x$-Achse ergibt sich dann durch das Kreuzprodukt $\vec{e}\tindex{x} = \vec{e}\tindex{y}\times \vec{e}\tindex{z}$. Zunächst wird die Orientierung in das Koordinatensystem des kinematischen Elements $\hat{\vec{e}}\tindex{k,filt,Norm}^\text{\,Elem}$ transformiert
 
 \begin{equation}
     \hat{\vec{e}}\tindex{k,filt,Norm}^{\,Elem} = \left[\begin{array}{c} \vec{e}\tindex{x}\cdot\hat{\vec{e}}\tindex{k,filt,Norm} \\ \vec{e}\tindex{y}\cdot\hat{\vec{e}}\tindex{k,filt,Norm} \\ \vec{e}\tindex{z}\cdot\hat{\vec{e}}\tindex{k,filt,Norm} \end{array}\right].

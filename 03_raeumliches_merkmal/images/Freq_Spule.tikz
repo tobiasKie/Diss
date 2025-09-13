@@ -9,11 +9,12 @@
 \begin{tikzpicture}
 
 \begin{axis}[%
-width=5.0in,
+width=10.0in,
 height=2.5in,
 at={(0.0in,0.0in)},
 scale only axis,
 xmin=0,
+xtick = {0,250,500,...,2000},
 xmax=2000,
 xlabel style={font=\color{white!15!black}},
 xlabel={Frequenz in Hz},
@@ -29,7 +30,7 @@ title={},
 xmajorgrids,
 ymajorgrids
 ]
-\addplot [color=mycolor1, forget plot]
+\addplot [color=mycolor1, forget plot,line width = 3.0pt]
   table[row sep=crcr]{%
 0	1.2\\
 2.002002002002	1.20000002637166\\
