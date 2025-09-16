@@ -18,10 +18,10 @@
 \contentsline {section}{\numberline {2.2}Konventionelle Systeme}{6}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}Optische Systeme}{6}{subsection.2.2.1}%
 \contentsline {subsection}{\numberline {2.2.2}IMU-basierte Systeme}{7}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}Sensorhandschuhe}{7}{subsection.2.2.3}%
-\contentsline {section}{\numberline {2.3}Überblick des entwickelten System}{9}{section.2.3}%
+\contentsline {subsection}{\numberline {2.2.3}Sensorhandschuhe}{8}{subsection.2.2.3}%
+\contentsline {section}{\numberline {2.3}Überblick des entwickelten System}{8}{section.2.3}%
 \contentsline {subsection}{\numberline {2.3.1}Verwendete Sensorik}{9}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}Sensor- und Aktuatoranordnung}{10}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.2}Sensor- und Aktuatoranordnung}{9}{subsection.2.3.2}%
 \contentsline {chapter}{\numberline {3}Magnetisches räumliches Signalmerkmal}{13}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Modellierung magnetischer Felder}{13}{section.3.1}%
 \contentsline {subsection}{\numberline {3.1.1}Biot-Savart}{13}{subsection.3.1.1}%
@@ -35,7 +35,7 @@
 \contentsline {subsection}{\numberline {3.4.1}Lokalisierungszusammenhänge}{20}{subsection.3.4.1}%
 \contentsline {subsubsection}{\nonumberline Orientierung und normierte Position}{20}{subsubsection*.36}%
 \contentsline {subsubsection}{\nonumberline Distanz zwischen Sensor und Quelle}{23}{subsubsection*.41}%
-\contentsline {section}{\numberline {3.5}Zusammenfassung und Ausblick}{25}{section.3.5}%
+\contentsline {section}{\numberline {3.5}Zusammenfassung und Ausblick}{24}{section.3.5}%
 \contentsline {chapter}{\numberline {4}Signalverarbeitungspipeline}{27}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Vorverarbeitung}{28}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Signalgenerierung und Merkmalsextraktion}{31}{section.4.2}%
@@ -97,7 +97,6 @@
 \contentsline {section}{\numberline {6.2}Ausblick}{69}{section.6.2}%
 \contentsline {subsection}{\numberline {6.2.1}Prototyp}{69}{subsection.6.2.1}%
 \contentsline {chapter}{\nonumberline Literaturverzeichnis}{71}{chapter*.136}%
-\contentsline {section}{\nonumberline Weitere Literatur}{71}{section*.138}%
 \contentsline {chapter}{\numberline {A}Weitere Messdaten}{I}{appendix.A}%
 \contentsline {section}{\numberline {A.1}Tmp}{I}{section.A.1}%
 \contentsline {chapter}{\numberline {B}Herleitung XXX}{III}{appendix.B}%

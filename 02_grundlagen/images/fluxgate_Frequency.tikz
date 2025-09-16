@@ -9,7 +9,7 @@
 %
 \begin{tikzpicture}
 
-\begin{axis}[%
+\begin{axis}[% 
 width=10.0in,
 height=4.0in,
 at={(0.0in,0.0in)},

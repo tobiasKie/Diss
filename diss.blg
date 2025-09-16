@@ -1,18 +1,18 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
 [0] Config.pm:310> INFO - Logfile is 'diss.blg'
-[130] biber-MSWIN64:340> INFO - === 
-[182] Biber.pm:419> INFO - Reading 'diss.bcf'
-[290] Biber.pm:979> INFO - Found 18 citekeys in bib section 0
-[304] Biber.pm:4419> INFO - Processing section 0
-[317] Biber.pm:4610> INFO - Looking for bibtex file 'literatur.bib' for section 0
-[350] bibtex.pm:1668> INFO - Reading ascii input as UTF-8
-[392] bibtex.pm:1713> INFO - LaTeX decoding ...
-[489] bibtex.pm:1519> INFO - Found BibTeX data source 'literatur.bib'
-[620] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[620] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[621] Biber.pm:4239> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'de-DE'
-[621] Biber.pm:4245> INFO - No sort tailoring available for locale 'de-DE'
-[648] bbl.pm:660> INFO - Writing 'diss.bbl' with encoding 'UTF-8'
-[659] bbl.pm:763> INFO - Output to diss.bbl
-[659] Biber.pm:131> WARN - ISBN '978-3-8351-0123-4 978-3-8348-2359-5' in entry 'zeidler_springer-taschenbuch_2013' is invalid - run biber with '--validate_datamodel' for details.
-[659] Biber.pm:133> INFO - WARNINGS: 1
+[100] biber-MSWIN64:340> INFO - === 
+[138] Biber.pm:419> INFO - Reading 'diss.bcf'
+[236] Biber.pm:979> INFO - Found 32 citekeys in bib section 0
+[248] Biber.pm:4419> INFO - Processing section 0
+[259] Biber.pm:4610> INFO - Looking for bibtex file 'literatur.bib' for section 0
+[323] bibtex.pm:1713> INFO - LaTeX decoding ...
+[406] bibtex.pm:1519> INFO - Found BibTeX data source 'literatur.bib'
+[559] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[559] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[559] Biber.pm:4239> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'de-DE'
+[559] Biber.pm:4245> INFO - No sort tailoring available for locale 'de-DE'
+[586] bbl.pm:660> INFO - Writing 'diss.bbl' with encoding 'UTF-8'
+[600] bbl.pm:763> INFO - Output to diss.bbl
+[600] Biber.pm:131> WARN - ISBN '978-3-540-74862-5 978-3-540-74864-9' in entry 'appell_funktionelle_2008' is invalid - run biber with '--validate_datamodel' for details.
+[600] Biber.pm:131> WARN - ISBN '978-3-8351-0123-4 978-3-8348-2359-5' in entry 'zeidler_springer-taschenbuch_2013' is invalid - run biber with '--validate_datamodel' for details.
+[600] Biber.pm:133> INFO - WARNINGS: 2
