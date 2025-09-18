@@ -1,11 +1,11 @@
 \babel@toc {ngerman}{}\relax 
 \contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{xi}{chapter*.5}%
-\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{xvii}{chapter*.6}%
-\contentsline {chapter}{Abkürzungsverzeichnis}{xix}{section*.7}%
-\contentsline {chapter}{Notation}{xxi}{section*.9}%
-\contentsline {chapter}{Symbolverzeichnisse}{xxiii}{chapter*.11}%
-\contentsline {section}{Verzeichnis lateinischer Symbole}{xxiii}{section*.12}%
-\contentsline {section}{Verzeichnis griechischer Symbole}{xxiii}{section*.14}%
+\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{xix}{chapter*.6}%
+\contentsline {chapter}{Abkürzungsverzeichnis}{xxi}{section*.7}%
+\contentsline {chapter}{Notation}{xxiii}{section*.9}%
+\contentsline {chapter}{Symbolverzeichnisse}{xxv}{chapter*.11}%
+\contentsline {section}{Verzeichnis lateinischer Symbole}{xxv}{section*.12}%
+\contentsline {section}{Verzeichnis griechischer Symbole}{xxv}{section*.14}%
 \contentsline {chapter}{\numberline {1}Einleitung}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Motivation}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Einordnung der Arbeit}{1}{section.1.2}%
@@ -30,65 +30,66 @@
 \contentsline {subsubsection}{\nonumberline Betrag des Dipolfeldes}{16}{subsubsection*.30}%
 \contentsline {subsection}{\numberline {3.1.3}Quasistationäre Felder}{17}{subsection.3.1.3}%
 \contentsline {section}{\numberline {3.2}3D-Spule}{18}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Sensormodellierung}{20}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Maximalvektor}{20}{section.3.4}%
+\contentsline {section}{\numberline {3.3}Sensormodellierung}{19}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Maximalvektor}{19}{section.3.4}%
 \contentsline {subsection}{\numberline {3.4.1}Lokalisierungszusammenhänge}{20}{subsection.3.4.1}%
 \contentsline {subsubsection}{\nonumberline Orientierung und normierte Position}{20}{subsubsection*.36}%
 \contentsline {subsubsection}{\nonumberline Distanz zwischen Sensor und Quelle}{23}{subsubsection*.41}%
 \contentsline {section}{\numberline {3.5}Zusammenfassung und Ausblick}{24}{section.3.5}%
-\contentsline {chapter}{\numberline {4}Signalverarbeitungspipeline}{27}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Vorverarbeitung}{28}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Signalgenerierung und Merkmalsextraktion}{31}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Generierung zeitlich räumlich rotierendes Feld}{31}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Merkmalsextraktion}{32}{subsection.4.2.2}%
-\contentsline {subsubsection}{\nonumberline Vektormerkmal}{32}{subsubsection*.48}%
-\contentsline {subsubsection}{\nonumberline Distanzmerkmal}{34}{subsubsection*.51}%
-\contentsline {subsubsection}{\nonumberline Merkmalszusammenfassung}{35}{subsubsection*.53}%
-\contentsline {section}{\numberline {4.3}Lokalisierung}{37}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Schätzung einer kinematischen Kette}{37}{subsection.4.3.1}%
-\contentsline {subsubsection}{\nonumberline Iterativer Algorithmus}{37}{subsubsection*.58}%
-\contentsline {subsubsection}{\nonumberline Eindeutigkeit der Lösung}{39}{subsubsection*.63}%
-\contentsline {subsubsection}{\nonumberline Korrektur von Modellfehlern}{43}{subsubsection*.68}%
-\contentsline {subsubsection}{\nonumberline Laufzeitoptimierung}{44}{subsubsection*.71}%
-\contentsline {subsection}{\numberline {4.3.2}Lokalisierung einer 3D-Spule}{46}{subsection.4.3.2}%
-\contentsline {subsubsection}{\nonumberline Grundsätzliche Gedanken}{46}{subsubsection*.74}%
-\contentsline {subsubsection}{\nonumberline Positionsschätzung}{46}{subsubsection*.76}%
-\contentsline {subsubsection}{\nonumberline Orientierungsschätzung}{48}{subsubsection*.81}%
-\contentsline {subsection}{\numberline {4.3.3}Kombination der Lokalisierungsalgorithmen}{52}{subsection.4.3.3}%
-\contentsline {section}{\numberline {4.4}Nachverarbeitung}{53}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Schätzung einer kinematischen Kette}{53}{subsection.4.4.1}%
-\contentsline {subsubsection}{\nonumberline Einbeziehung der Distanzinformation}{53}{subsubsection*.85}%
-\contentsline {subsubsection}{\nonumberline Glättung und Winkelumrechnung}{54}{subsubsection*.89}%
-\contentsline {subsubsection}{\nonumberline Einbeziehung der Anatomie}{56}{subsubsection*.92}%
-\contentsline {subsection}{\numberline {4.4.2}Absolut Lokalisierung}{57}{subsection.4.4.2}%
-\contentsline {subsubsection}{\nonumberline Glättung}{57}{subsubsection*.94}%
-\contentsline {subsection}{\numberline {4.4.3}Übersicht Nachverarbeitung}{57}{subsection.4.4.3}%
-\contentsline {chapter}{\numberline {5}Evaluierung}{59}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Verwendete Hardware}{59}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Relative Lokalisierung}{59}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Simulative Evaluierung}{59}{subsection.5.2.1}%
-\contentsline {subsubsection}{\nonumberline Szenarios}{59}{subsubsection*.97}%
-\contentsline {paragraph}{\nonumberline Robustheit gegenüber Rauschen}{59}{paragraph*.99}%
-\contentsline {paragraph}{\nonumberline Einfluss von Fehlerfortpflanzung}{60}{paragraph*.101}%
-\contentsline {paragraph}{\nonumberline Einfache Bewegung}{60}{paragraph*.103}%
-\contentsline {subsubsection}{\nonumberline Ergebnisse}{60}{subsubsection*.105}%
-\contentsline {paragraph}{\nonumberline Robustheit gegenüber Rauschen}{60}{paragraph*.107}%
-\contentsline {paragraph}{\nonumberline Einfluss von Fehlerfortpflanzung}{60}{paragraph*.109}%
-\contentsline {paragraph}{\nonumberline Einfache Bewegung}{60}{paragraph*.111}%
-\contentsline {subsection}{\numberline {5.2.2}Experimentelle Evaluierung}{60}{subsection.5.2.2}%
-\contentsline {subsubsection}{\nonumberline Räumliche Synchronisierung und Schätzung der räumlichen Größen}{61}{subsubsection*.114}%
-\contentsline {subsubsection}{\nonumberline Kalibrierung}{62}{subsubsection*.117}%
-\contentsline {subsubsection}{\nonumberline Ergebnisse}{63}{subsubsection*.120}%
-\contentsline {subsection}{\numberline {5.2.3}Diskussion}{63}{subsection.5.2.3}%
+\contentsline {chapter}{\numberline {4}Signalverarbeitungspipeline}{25}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Vorverarbeitung}{26}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Signalgenerierung und Merkmalsextraktion}{29}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Generierung zeitlich räumlich rotierendes Feld}{29}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Merkmalsextraktion}{30}{subsection.4.2.2}%
+\contentsline {subsubsection}{\nonumberline Vektormerkmal}{30}{subsubsection*.48}%
+\contentsline {subsubsection}{\nonumberline Distanzmerkmal}{32}{subsubsection*.51}%
+\contentsline {subsubsection}{\nonumberline Merkmalszusammenfassung}{33}{subsubsection*.53}%
+\contentsline {section}{\numberline {4.3}Lokalisierung}{35}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Schätzung einer kinematischen Kette}{35}{subsection.4.3.1}%
+\contentsline {subsubsection}{\nonumberline Iterativer Algorithmus}{35}{subsubsection*.58}%
+\contentsline {subsubsection}{\nonumberline Eindeutigkeit der Lösung}{37}{subsubsection*.63}%
+\contentsline {subsubsection}{\nonumberline Korrektur von Modellfehlern}{41}{subsubsection*.68}%
+\contentsline {subsubsection}{\nonumberline Laufzeitoptimierung}{42}{subsubsection*.71}%
+\contentsline {subsection}{\numberline {4.3.2}Lokalisierung einer 3D-Spule}{44}{subsection.4.3.2}%
+\contentsline {subsubsection}{\nonumberline Grundsätzliche Gedanken}{44}{subsubsection*.74}%
+\contentsline {subsubsection}{\nonumberline Positionsschätzung}{44}{subsubsection*.76}%
+\contentsline {subsubsection}{\nonumberline Orientierungsschätzung}{46}{subsubsection*.81}%
+\contentsline {subsection}{\numberline {4.3.3}Kombination der Lokalisierungsalgorithmen}{50}{subsection.4.3.3}%
+\contentsline {section}{\numberline {4.4}Nachverarbeitung}{51}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Schätzung einer kinematischen Kette}{51}{subsection.4.4.1}%
+\contentsline {subsubsection}{\nonumberline Einbeziehung der Distanzinformation}{51}{subsubsection*.85}%
+\contentsline {subsubsection}{\nonumberline Glättung und Winkelumrechnung}{52}{subsubsection*.89}%
+\contentsline {subsubsection}{\nonumberline Einbeziehung der Anatomie}{54}{subsubsection*.92}%
+\contentsline {subsection}{\numberline {4.4.2}Absolut Lokalisierung}{55}{subsection.4.4.2}%
+\contentsline {subsubsection}{\nonumberline Glättung}{55}{subsubsection*.94}%
+\contentsline {subsection}{\numberline {4.4.3}Übersicht Nachverarbeitung}{55}{subsection.4.4.3}%
+\contentsline {chapter}{\numberline {5}Evaluierung}{57}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Verwendete Hardware}{57}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Relative Lokalisierung}{58}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Simulative Evaluierung}{58}{subsection.5.2.1}%
+\contentsline {subsubsection}{\nonumberline Szenarios}{58}{subsubsection*.98}%
+\contentsline {paragraph}{\nonumberline Robustheit gegenüber Rauschen}{58}{paragraph*.100}%
+\contentsline {paragraph}{\nonumberline Einfluss von Fehlerfortpflanzung}{58}{paragraph*.102}%
+\contentsline {paragraph}{\nonumberline Einfache Bewegung}{59}{paragraph*.104}%
+\contentsline {subsubsection}{\nonumberline Ergebnisse}{59}{subsubsection*.106}%
+\contentsline {paragraph}{\nonumberline Robustheit gegenüber Rauschen}{59}{paragraph*.108}%
+\contentsline {paragraph}{\nonumberline Einfluss von Fehlerfortpflanzung}{59}{figure.caption.113}%
+\contentsline {paragraph}{\nonumberline Einfache Bewegung}{59}{paragraph*.115}%
+\contentsline {subsubsection}{\nonumberline Diskussion}{59}{subsubsection*.117}%
+\contentsline {subsection}{\numberline {5.2.2}Experimentelle Evaluierung}{59}{subsection.5.2.2}%
+\contentsline {subsubsection}{\nonumberline Räumliche Synchronisierung und Schätzung der räumlichen Größen}{61}{subsubsection*.120}%
+\contentsline {subsubsection}{\nonumberline Kalibrierung}{62}{subsubsection*.123}%
+\contentsline {subsubsection}{\nonumberline Ergebnisse}{63}{subsubsection*.126}%
+\contentsline {subsubsection}{\nonumberline Diskussion}{63}{subsubsection*.133}%
 \contentsline {section}{\numberline {5.3}Absolute Lokalisierung}{66}{section.5.3}%
 \contentsline {subsection}{\numberline {5.3.1}Fehlermaß}{66}{subsection.5.3.1}%
 \contentsline {subsection}{\numberline {5.3.2}Simulative Evaluierung}{66}{subsection.5.3.2}%
-\contentsline {paragraph}{\nonumberline Robustheit gegen Rauschen}{66}{paragraph*.127}%
-\contentsline {paragraph}{\nonumberline Einfluss eines Positionsfehler auf die Orientierungsschätzung}{66}{paragraph*.129}%
-\contentsline {paragraph}{\nonumberline Einfache Bewegung}{66}{paragraph*.131}%
+\contentsline {paragraph}{\nonumberline Robustheit gegen Rauschen}{66}{paragraph*.135}%
+\contentsline {paragraph}{\nonumberline Einfluss eines Positionsfehler auf die Orientierungsschätzung}{66}{paragraph*.137}%
+\contentsline {paragraph}{\nonumberline Einfache Bewegung}{66}{paragraph*.139}%
 \contentsline {subsection}{\numberline {5.3.3}Experimentelle Evaluierung}{67}{subsection.5.3.3}%
-\contentsline {subsubsection}{\nonumberline Räumliche Synchronisierung}{67}{subsubsection*.133}%
-\contentsline {subsubsection}{\nonumberline Ergebnisse}{67}{subsubsection*.135}%
+\contentsline {subsubsection}{\nonumberline Räumliche Synchronisierung}{67}{subsubsection*.141}%
+\contentsline {subsubsection}{\nonumberline Ergebnisse}{67}{subsubsection*.143}%
 \contentsline {subsection}{\numberline {5.3.4}Diskussion}{67}{subsection.5.3.4}%
 \contentsline {chapter}{\numberline {6}Zusammenfassung und Ausblick}{69}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Zusammenfassung}{69}{section.6.1}%
@@ -96,7 +97,7 @@
 \contentsline {subsection}{\numberline {6.1.2}Ungelöste Probleme}{69}{subsection.6.1.2}%
 \contentsline {section}{\numberline {6.2}Ausblick}{69}{section.6.2}%
 \contentsline {subsection}{\numberline {6.2.1}Prototyp}{69}{subsection.6.2.1}%
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{71}{chapter*.136}%
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{71}{chapter*.144}%
 \contentsline {chapter}{\numberline {A}Weitere Messdaten}{I}{appendix.A}%
 \contentsline {section}{\numberline {A.1}Tmp}{I}{section.A.1}%
 \contentsline {chapter}{\numberline {B}Herleitung XXX}{III}{appendix.B}%

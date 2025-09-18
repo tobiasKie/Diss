@@ -172,7 +172,7 @@ Die Beschreibung statischer  magnetischer Felder wurde bisher gezeigt. Da es bei
 
 In dieser Arbeit wird eine 3D-Spule zur Anregung künstlicher Magnetfelder verwendet. 3D-Spule sind 3 ineinander verschachtelte Spulen. Jede einzelne hat ihre Öffnung in eine unterschiedliche Richtung, und die Normalenvektoren dieser Flächen stehen senkrecht zueinander. Damit stehen auch die resultierenden Dipolmomente senkrecht zueinander und diese drei Dipolmomente spannen ein Koordinatensystem auf. In Abbildung \ref{fig:3DCoil} ist eine kleine 3D-Spule und das zugehörige Simulationsobjekt dargestellt. 
 
-\begin{figure}
+\begin{figure}[h]
     \centering
     \subfloat[Simulationsobjekt]{
         \inputTikZ{0.6}{03_raeumliches_merkmal/images/3DCoil.tikz}
@@ -189,9 +189,9 @@ In dieser Arbeit wird eine 3D-Spule zur Anregung künstlicher Magnetfelder verwe
     \label{fig:3DCoil}
 \end{figure}
 
-Die Spule kann unterschiedlich angesteuert werden. Zum einen gibt es die Möglichkeit, die drei Spulen einzeln anzusteuern und diese auf Sensorseite, über einen FDMA(\textit{Frequency Domain Multiple Access}), wieder voneinander zu trennen \cite{hoffmann_concept_2022}. Zum anderen können die drei Dipole so angesteuert werden, sodass durch Überlagerung ein resultierender Dipol in beliebiger Richtung erzeugt werden kann, und dieser sich über die Zeit hinweg im Raum rotiert. Die zweite Ansteuerung wird in dieser Arbeit verwendet. Um die Zusammenhänge zwischen Sensor und Aktuator herzuleiten, werden die Quellen in diesem Kapitel als ideale Punktdipolquellen angenommen und eine 3D-Spule ist dann die Überlagerung aus drei einzelnen Dipolen. Diese Mehrdimensionalenquellen werden häufig bei Lokalisierungsproblemen eingesetzt, da sich durch die Anordnung analytische Methoden zur Bestimmung der Position ergeben. Beispiele dafür sind hier zu finden \cite{raab_magnetic_1979},\cite{paperno_new_2001},\cite{paperno_three-dimensional_2004}. In dieser Arbeit werden kleine würfelförmige Spulen mit einer Kantenlänge von 2.5\,cm mit jeweils 80 Windungen. Aus dieser Geometrie ergeben sich elektrische Parameter von 20\,$\mu$H und einem ohmschen Widerstand von 1.2\,$\Omega$. Der frequenzabhängige Widerstand ist in Abbildung\,\ref{fig:FreqSpule} dargestellt.
+Die Spule kann unterschiedlich angesteuert werden. Zum einen gibt es die Möglichkeit, die drei Spulen einzeln anzusteuern und diese auf Sensorseite, über einen FDMA(\textit{Frequency Domain Multiple Access}), wieder voneinander zu trennen und so die Singalmerkmale zu extrahieren\,\cite{hoffmann_concept_2022}. Zum anderen können die drei Dipole so angesteuert werden, sodass durch Überlagerung ein resultierender Dipol in beliebiger Richtung erzeugt werden kann, und dieser sich über die Zeit hinweg im Raum rotiert. Die zweite Ansteuerung wird in dieser Arbeit verwendet. Um die Zusammenhänge zwischen Sensor und Aktuator herzuleiten, werden die Quellen in diesem Kapitel als ideale Punktdipolquellen angenommen und eine 3D-Spule ist dann die Überlagerung aus drei einzelnen Dipolen. Diese Mehrdimensionalenquellen werden häufig bei Lokalisierungsproblemen eingesetzt, da sich durch die Anordnung analytische Methoden zur Bestimmung der Position ergeben. Beispiele dafür sind hier zu finden \cite{raab_magnetic_1979},\cite{paperno_new_2001},\cite{paperno_three-dimensional_2004}. In dieser Arbeit werden kleine würfelförmige Spulen mit einer Kantenlänge von 2.5\,cm mit jeweils 80 Windungen. Aus dieser Geometrie ergeben sich elektrische Parameter von 20\,$\mu$H und einem ohmschen Widerstand von 1.2\,$\Omega$. Der frequenzabhängige Widerstand ist in Abbildung\,\ref{fig:FreqSpule} dargestellt.
  
-\begin{figure}
+\begin{figure}[h]
     \centering
     \scalefont{2}
     \inputTikZ{0.5}{03_raeumliches_merkmal/images/Freq_Spule.tikz}
@@ -217,8 +217,7 @@ Der Maximalvektor ist ein Signalmerkmal, das verwendet werden kann, wenn 3D-Aktu
     \subsubsection{Orientierung und normierte Position}
 Im Folgenden soll der Zusammenhang zwischen dem Maximalvektor (MV) $\vec{e}\tindex{max}$, dem normierten Positionsvektor $\vec{e}\tindex{r}$ und der Sensororientierung $\vec{e}\tindex{s}$ hergeleitet werden. 
 
-Da ein Zusammenhang zwischen den einzelnen normierten Vektoren gesucht wird, nutzen wir eine normierte Beschreibung des Dipolfeldes $\vec{b}\tindex{norm}$ und kommen zu folgender Beschreibung
-
+Da ein Zusammenhang zwischen den einzelnen normierten Vektoren gesucht wird, nutzen wir eine normierte Beschreibung des Dipolfeldes $\vec{b}\tindex{norm}$
 \begin{equation}
     \vec{b}\tindex{norm} = \frac{4 \pi r^3}{ m } \vec{b}\tindex{dip}(\vec{r}) =  3\vec{e}_r(\vec{e}_\text{m}\cdot\vec{e}_r)-\vec{e}_\text{m}.
     \label{eq:magDipNorm}

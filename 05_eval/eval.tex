@@ -1,12 +1,20 @@
 \chapter{Evaluierung}
 \label{chap:Messergebnisse}
-Die entwickelten Algorithmen sollen nun evaluiert werden. Dafür werden die neuen magnetischen Verfahren mit etablierten Verfahren verglichen werden.
+Die entwickelten Algorithmen sollen evaluiert werden. Dafür werden zunächst simulative Evaluierung durchgeführt um die Robustheit gegenüber Rauschen und anderem zu überprüfen. Im Anschluss wird das entwickelte System mit einem kommerziell verfügbaren optischen System verglichen. Optische Systeme gelten aktuell als der Goldstandard im Bereich der Bewegungsanalyse.
+
+
 \section{Verwendete Hardware}
-Die Hardware besteht aus drei Komponenten, zum einen ein Auswertecomputer, eine AD/DA-Wandeleinheit und eine Stromverstärkereinheit. Der Auswertecomputer ist ein XXXX. Als AD/DA-Einheit werden zwei Soundkarten des Hersteller $RME\,Audio$ eingesetzt, eine M32 AD Pro und eine M1610 Pro. Diese sind über MADI miteinander verbunden, die Eingangsdaten der M1610 Pro werden dadurch über ein Lichtwellenleiter in Echtzeit an die M32 AD Pro gesendet. Das sorgt dafür, dass die Signale der beiden Einheiten synchronisiert am Auswertecomputer ankommen. Der Auswertecomputer generiert die Anregungssignale für die 3D-Spule und sendet diese an die DA-Einheit. Über die DA-Einheit werden über eine Verstärkereinheit in einen Strom gewandelt. Der Verstärker\footnote{Der Verstärker wurde in Projekt B1/B9 des SFB1261 an der CAU Kiel entwickelt und ein Exemplar für diesen Aufbau überlassen.} ist ein sechskanaliger Verstärker, von dem in der Evaluierung die ersten drei verwendet werden.
+Die Hardware besteht aus drei Komponenten, zum einen ein Auswertecomputer, eine AD/DA-Wandeleinheit und eine Stromverstärkereinheit. Der Auswertecomputer ist ein XXXX. Als AD/DA-Einheit werden zwei Soundkarten des Hersteller $RME\,Audio$ eingesetzt, eine M32 AD Pro und eine M1610 Pro. Diese sind über MADI miteinander verbunden, die Eingangsdaten der M1610 Pro werden dadurch über ein Lichtwellenleiter in Echtzeit an die M32 AD Pro gesendet. Das sorgt dafür, dass die Signale der beiden Einheiten synchronisiert am Auswertecomputer ankommen. Der Auswertecomputer generiert die Anregungssignale für die 3D-Spule und sendet diese an die DA-Einheit. Über die DA-Einheit werden über eine Verstärkereinheit in einen Strom gewandelt. Der Verstärker\footnote{Der Verstärker wurde in Projekt B1/B9 des SFB1261 an der CAU Kiel entwickelt und ein Exemplar für diesen Aufbau überlassen.} ist ein sechskanaliger Verstärker, von dem die ersten drei Kanäle verwendet werden. In Abbildung\,\ref{fig:UsedHardware} ist der Aufbau kurz dargestellt.
 
-In Abbildung XX ist der Aufbau kurz dargestellt.
+\begin{figure}[h!]
+  \centering
+  \begin{overpic}[width=0.7\textwidth,trim = 0 5cm 0 0]{05_eval/images/UsedHardware.png}
+  \end{overpic}
+  \caption{Die Abbildung zeigt die verwendete Hardware bestehend aus einem Labornetzteil (rot), einer 32-Kanal-AD-Wandlerkarte (grün), einer 10-Kanal-DA-Wandlerkarte (blau), einer Stromverstärkereinheit (gelb) und eine AVB-Router mit Interface zum Auswertecomputer (pink).}
+  \label{fig:UsedHardware}
+\end{figure}
 
-Abbildung Der Hardware
+Alle Messungen und Simulationen werden mit einem 
 
 \section{Relative Lokalisierung}
 \label{sec:rel_lok}
@@ -16,26 +24,72 @@ Abbildung Der Hardware
 
 \subsection{Simulative Evaluierung}
 \subsubsection{Szenarios}
-In der simulativen Evaluierung sollen 3 unterschiedliche Szenarios untersucht werden, die zunächst kurz definiert werden. 
+In der simulativen Evaluierung sollen 3 unterschiedliche Szenarios untersucht werden, die zunächst kurz definiert werden. Alle Simulationen werden mit einer Abtastrate von $f\tindex{SR}=48000\,\text{kHz}$ und einer Rahmenlänge $i\tindex{Frame} = 512$ durchgeführt. Der Abstand zwischen Quelle und erstem Gelenk wird in allen Simulationen normiert auf 1\,m. Der Asbtand zwischen Sensor und Gelenk wird auf 0.2\,m gesetzt.
 
 \paragraph{Robustheit gegenüber Rauschen}
-Es wird ein Aufbau mit einem Gelenk simuliert, also eine 3D-Spule im Ursprung and dem auch ein kinematisches Element beginnt und ein Gelenk das dieses mit einem weiteren Element verbindet. Die Ansteuerung der Spule erfolgt wie in Kapitel\,\ref{sec:featureExtract} beschrieben. Auf Sensorseite wird WGN (\textit{White Gaussian Noise}) addiert. Diese wird einmal so skaliert, dass das Sensorsignal ein SNR von $10\,\text{dB}$ besitzt und einmal ohne Rauschen durchgeführt. Es wird mit einem Raster von $1^\circ$ der Wertebereich überprüft. Die Ergebnisse der Simulation sind jeweils der absolute Fehler und bei der Simulation mit addiertem Rauschen wird zudem die Varianz des Ergebnis betrachtet.
+Es wird ein Aufbau mit einem Gelenk simuliert, also eine 3D-Spule im Ursprung and dem auch ein kinematisches Element beginnt und ein Gelenk das dieses mit einem weiteren Element verbindet. Die Ansteuerung der Spule erfolgt wie in Kapitel\,\ref{sec:featureExtract} beschrieben. Auf Sensorseite wird WGN (\textit{White Gaussian Noise}) addiert. Diese wird so skaliert, dass das Sensorsignal ein SNR von $10\,\text{dB}$ besitzt. Es wird mit einem Raster von $1^\circ$ der Wertebereich überprüft. Die Simulation wird für 100 Rahmen durchgeführt.
 
 \paragraph{Einfluss von Fehlerfortpflanzung}
-Ein Problem bei der Schätzung einer kinematischen Kette ist die Fehlerfortpflanzung. Die Position des ersten Gelenks ist bekannt und wird vor der Laufzeit ausgemessen. Die weiteren Gelenkspositionen werden nach und nach rekonstruiert, schwanken aber je nach Signalqualität. Dieser Effekt soll anhand einer Simulation evaluiert werden. Gegeben sei eine kinematische Kette aus 3 Elementen. Die Haltung sei so, dass diese komplett gestreckt sei. Es wird das Sensorsignal für den zweiten Sensor simuliert. Die Orientierungsschätzung des ersten Elements wird zufällig vorgenommen, also die beiden Winkel werden zufällig generiert. So wird untersucht wie sich der Fehler aus dem ersten Element auf die Schätzung des folgenden Elements auswirkt.
+Ein Problem bei der Schätzung einer kinematischen Kette ist die Fehlerfortpflanzung. Die Position des ersten Gelenks ist bekannt und wird vor der Laufzeit ausgemessen. Die weiteren Gelenkspositionen werden nach und nach rekonstruiert, schwanken aber je nach Signalqualität. Dieser Effekt soll anhand einer Simulation evaluiert werden. Gegeben sei eine kinematische Kette aus 3 Elementen. Die Haltung sei so, dass diese gestreckt sei(Nulllage). Es wird das Sensorsignal für den zweiten Sensor simuliert. Die Orientierungsschätzung des ersten Elements wird zufällig vorgenommen, also die beiden Winkel werden zufällig generiert. Dabei wird die Länge des mittleren Elements variiert, sowie die Amplitude der Winkelvariation.
 
 \paragraph{Einfache Bewegung}
-Bewegungen führen zu einer gewissen Unschärfe. Der Algorithmus basiert auf der Detektion von Vorzeichenwechseln, da mindestens zwei Vorzeichenwechsel benötigt werden ist zwischen den $\vec{e}\tindex{zc}$, vergeht zwischen den beiden Nulldurchgängen mindestens eine halbe Periodendauer des Ansteuersignal. Daher gehören die $\vec{e}\tindex{zc}$ zu leicht unterschiedlichen Positionen/Orientierungen. Die Bewegung soll eine Beugung sein, die zyklisch ablaüft. In der Simulation wird $\theta\tindex{Beu} = \omega\,n\,\Delta \,t$ gesetzt.
+Bewegungen führen zu einer gewissen Unschärfe. Der Algorithmus basiert auf der Detektion von Vorzeichenwechseln, da mindestens zwei Vorzeichenwechsel benötigt werden ist zwischen den $\vec{e}\tindex{zc}$, vergeht zwischen den beiden Nulldurchgängen mindestens eine halbe Periodendauer des Ansteuersignal. Daher gehören die $\vec{e}\tindex{zc}$ zu leicht unterschiedlichen Positionen/Orientierungen. Die Bewegung soll eine Beugung sein, die zyklisch ablaüft. In der Simulation wird $\theta\tindex{Beu} = \omega\,n\,\Delta \,t$ gesetzt. $\omega$ wird dabei auf 2\,Hz mit einem Weg von $90^\circ$ gesetzt. Dies entspricht der natürlichen Bewegungsfrequenz\cite{hager-ross_quantifying_2000} und die MCP-Elemente haben einen Bewegungsspielraum von $90^\circ$\cite{lin_modeling_2000}.
 
 \subsubsection{Ergebnisse}
-\paragraph{Robustheit gegenüber Rauschen}
-\paragraph{Einfluss von Fehlerfortpflanzung}
-\paragraph{Einfache Bewegung}
 
+\paragraph{Robustheit gegenüber Rauschen} Um zu prüfen wie robust das Verfahren gegenüber Rauschen ist, werden verschiedene Größen betrachtet. Zunächst wird die Variation des MVs betrachtet. Dafür wird der 
+
+\begin{figure}[h]
+  \centering
+  \subfloat[Varianz des MV]{
+      \inputTikZ{0.6}{05_eval/images/VarianceMV.tikz}
+      \label{fig:VarMV}
+  }
+  \subfloat[Varianz der Orientierung]{
+      \inputTikZ{0.6}{05_eval/images/VarianceProj.tikz}
+      \label{fig:VarProj} 
+  }
+  \caption{ }
+  \label{fig:Variance}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \subfloat[Fehler des Mittelwert]{
+      \inputTikZ{0.6}{05_eval/images/ErrorProj.tikz}
+      \label{fig:VarMV}
+  }
+  \subfloat[Varianz in Abhängigkeit des Ortes]{
+      \inputTikZ{0.6}{05_eval/images/FaktorVar.tikz}
+      \label{fig:VarProj} 
+  }
+  \caption{ }
+  \label{fig:Variance}
+\end{figure}
+
+
+
+
+\paragraph{Einfluss von Fehlerfortpflanzung}
+\begin{figure}[h]
+  \centering
+  \subfloat[Standardabweichung]{
+      \inputTikZ{0.6}{05_eval/images/FehlerfortStdAb.tikz}
+      \label{fig:FehlerfortStd}
+  }
+  \subfloat[Varianz in Abhängigkeit des Ortes]{
+      \inputTikZ{0.6}{05_eval/images/FehlerfortMaxAb.tikz}
+      \label{fig:FehlerfortMaxAb} 
+  }
+  \caption{ }
+  \label{fig:Fehlerfort}
+\end{figure}
+\paragraph{Einfache Bewegung}
+\subsubsection{Diskussion}
 \subsection{Experimentelle Evaluierung}
 Die relative Lokalisierung wurde entwickelt um die Bewegung von Fingern aufzunehmen. Um in einem ersten Test die Algorithmik zu evaluieren, wurde an dieser Stelle ein einfacher Demonstrator bestehend aus drei Elementen, ein längeres Element mit einer 3D-Spule und zwei kürzere mit jeweils einem Sensor. Die Elemente sind durch Gelenke verbunden, die Bewegung in zwei Richtungen ermöglichen, wie bei einem Sattelgelenk. In Abbildung \ref{fig:Demonstrator} ist dieser Aufbau einmal dargestellt.
 
-\begin{figure}
+\begin{figure}[h]
     \centering
     \begin{overpic}[width=0.75\textwidth,trim = 0 0 0 0]{05_eval/images/demonstrator.png}
         \put(5,60){3D-Spule}
@@ -239,7 +293,7 @@ In den Tabellen\,\ref{tab:Ergebnisse1},\ref{tab:Ergebnisse2} sind die Ergebnisse
     \caption{Results for the second element: The presentation of the results is as in \ref{fig:ResultsSecondElement}.}
     \label{fig:ResultsSecondElement}
   \end{figure}
-\subsection{Diskussion}
+\subsubsection{Diskussion}
 
 \section{Absolute Lokalisierung}
 

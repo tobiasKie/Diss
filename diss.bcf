@@ -2419,6 +2419,8 @@
     <bcf:citekey order="57" intorder="1">hager-ross_quantifying_2000</bcf:citekey>
     <bcf:citekey order="58" intorder="1">lin_modeling_2000</bcf:citekey>
     <bcf:citekey order="59" intorder="1">lin_modeling_2000</bcf:citekey>
+    <bcf:citekey order="60" intorder="1">hager-ross_quantifying_2000</bcf:citekey>
+    <bcf:citekey order="61" intorder="1">lin_modeling_2000</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">
