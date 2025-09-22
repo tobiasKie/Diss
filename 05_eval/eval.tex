@@ -85,6 +85,21 @@ Bewegungen führen zu einer gewissen Unschärfe. Der Algorithmus basiert auf der
   \label{fig:Fehlerfort}
 \end{figure}
 \paragraph{Einfache Bewegung}
+\begin{figure}[h]
+  \centering
+  \subfloat[Standardabweichung]{
+      \inputTikZ{0.6}{05_eval/images/SimpleMoveVekt.tikz}
+      \label{fig:FehlerfortStd} 
+  }
+  \subfloat[Varianz in Abhängigkeit des Ortes]{
+      \inputTikZ{0.6}{05_eval/images/SimpleMoveVektSecond.tikz}
+      \label{fig:FehlerfortMaxAb} 
+  }
+  \caption{ } 
+   
+  \label{fig:Fehlerfort}
+\end{figure}
+
 \subsubsection{Diskussion}
 \subsection{Experimentelle Evaluierung}
 Die relative Lokalisierung wurde entwickelt um die Bewegung von Fingern aufzunehmen. Um in einem ersten Test die Algorithmik zu evaluieren, wurde an dieser Stelle ein einfacher Demonstrator bestehend aus drei Elementen, ein längeres Element mit einer 3D-Spule und zwei kürzere mit jeweils einem Sensor. Die Elemente sind durch Gelenke verbunden, die Bewegung in zwei Richtungen ermöglichen, wie bei einem Sattelgelenk. In Abbildung \ref{fig:Demonstrator} ist dieser Aufbau einmal dargestellt.
@@ -332,7 +347,7 @@ Die Komponenten zwei bis vier werden verworfen und aus der ersten wird der Winke
  
 
 \subsection{Simulative Evaluierung}
-\paragraph{Robustheit gegen Rauschen}
+\paragraph{Robustheit der Positionsschätzung gegen Rauschen}
 \paragraph{Einfluss eines Positionsfehler auf die Orientierungsschätzung}
 \paragraph{Einfache Bewegung}
 
