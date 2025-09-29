@@ -29,14 +29,14 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {2.4}{\ignorespaces Optisches System: \subref {fig:Camera} zeigt beispielhaft eine Kamera für die Bewegungsanalyse. \subref {fig:Opticalmarker} zeigt einen optischen Marker, dessen Bewegung von einem Kamerasystem aufgenommen werden kann. Referenz}}{6}{figure.caption.19}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {2.5}{\ignorespaces Aufbau OMC: \subref {fig:CameraPositioning} zeigt eine mögliche Kameraanordnung. Der grüne Bereich ist dabei von allen Kameras einsehbar und die Marker können hier optimal lokalisiert werden. In \subref {fig:RigigBody} ist beispielhaft ein Rigidbody dargestellt. Dieser besteht aus einem 3D-Druckteil an dem insgesamt 4 optische Marker angebracht sind.}}{7}{figure.caption.20}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2.2}IMU-basierte Systeme}{7}{subsection.2.2.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {2.6}{\ignorespaces IMU-System: In einem Ganzkörperanzug sind bis zu 17 IMUs integriert. Diese sind jeweils einem Körperteil zugeordnet und detektieren die Bewegung.\blx@tocontentsinit {0}\cite {roetenberg_xsens_2013}}}{7}{figure.caption.21}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.3}Sensorhandschuhe}{8}{subsection.2.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.3}Sensorhandschuhe}{7}{subsection.2.2.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2.6}{\ignorespaces IMU-System: In einem Ganzkörperanzug sind bis zu 17 IMUs integriert. Diese sind jeweils einem Körperteil zugeordnet und detektieren die Bewegung.\blx@tocontentsinit {0}\cite {roetenberg_xsens_2013}}}{8}{figure.caption.21}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {2.7}{\ignorespaces Kommerzielle Sensorhandschuhe: Auf der linken Seite ist der Manus Meta Glove zu sehen. Auf dem Handrücken ist die Elektronik mit magnetischer Aktuatorik. An den Fingerspitzen ist jeweils magnetische Sensorik angebracht. Auf der rechten Seite ist der SmartGlove von Rokoko zu sehen, dieser hat ebenfals Aktuatorik auf dem Handrücken und Sensorik auf dem zweiten Fingerelement.}}{8}{figure.caption.22}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {2.3}Überblick des entwickelten System}{8}{section.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2.3}Überblick des entwickelten System}{9}{section.2.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.3.1}Verwendete Sensorik}{9}{subsection.2.3.1}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {2.8}{\ignorespaces Verlauf von Sensitivität und Phase in Abhängigkeit der Frequenz. Dafür wurden im Abstand von 100\,Hz, und im Bereich zwischen 500 und 1100\,Hz im Abstand von 10\,Hz, Stützstellen aufgenommen.}}{9}{figure.caption.23}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.2}Sensor- und Aktuatoranordnung}{9}{subsection.2.3.2}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {2.9}{\ignorespaces FLC100 mit zugehörigem Rauschspektrum: Auf der rechten Seite ist ein Foto eines FLC100 dargestellt. Dazu gehört zum einen, die Spule (Sensorelement) und die zugehörige Elektronik. Auf der linken Seite ist das Rauschspektrum zu sehen. Dabei ist bei ungefähr 14\,kHz das Anregungssignal zu sehen.}}{10}{figure.caption.24}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.2}Sensor- und Aktuatoranordnung}{10}{subsection.2.3.2}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {2.10}{\ignorespaces Übersicht des entwickelten Systems: In der Abbildung ist das System mit der Sensoranordnung skizziert. In der Mitte der Abbildung ist eine Hand zu sehen, auf dem Handgelenk ist eine 3D-Spule in angebracht. An der Hand sind an jedem kinematischen Element Magnetfeldsensoren (orange) angebracht. Um das Messvolumen herum ist ein Gerüst an dem insgesamt sechs Sensoren befestigt sind. Diese sind jeweils drei Sensorpaare die gegenüber voneinander angebracht sind. Sowohl die Stromsignale (rot) und die Magnetfeldsignale (blau) werden digitalisiert und verarbeitet.}}{11}{figure.caption.25}\protected@file@percent }
 \@writefile{toc}{\contentsline {chapter}{\numberline {3}Magnetisches räumliches Signalmerkmal}{13}{chapter.3}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
@@ -104,15 +104,15 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {4.19}{\ignorespaces Ausnahmebehandlung: Die Abbildung zeigt den Fehlerfall, wenn die Kurven sich nicht schneiden. In diesem Fall wird die grüne Position als Ergebnis genommen.}}{47}{figure.caption.79}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {4.20}{\ignorespaces Beispiel für eine um 90° um die Z-Achse verdrehte Spule: Abbildung \subref {fig:MaxVecsGlob} zeigt die MVs berechnet anhand der geschätzten Position, in \subref {fig:MaxVecsLoc} sind die aus dem Signal extrahierten MVs dargestellt. Dabei ist gut zu erkennen, dass beide Abbildungen kongruent sind, jedoch um 90° verdreht. In Abbildung \subref {fig:MaxVecsGlobAnsichtRot} sind die berechneten MVs mit einer gedrehten Ansicht dargestellt und es ist gut zu erkennen, dass beide Abbildungen kongruent sind.}}{48}{figure.caption.82}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.3.3}Kombination der Lokalisierungsalgorithmen}{50}{subsection.4.3.3}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4.21}{\ignorespaces Übersicht des Lokalisierungsmodul: Die Eingangsgröße sind die MVs aller Sensoren. Im oberen Teil ist die absolute Lokalisierung schematische dargestellt. Zunächst wird aus den MVs die Position der 3D-Spule bestimmt. Im Orientierungsschätzungsmodul werden aus der Position und den MVs die Orientierung der Spule bestimmt. Im unteren Teil ist die Schätzung einer kinematischen Kette, dieser schätzt aus den MVs die Haltung dieser. Die absolute Position und die Orientierungen der kinetmatischen Elemente werden dann von einem Kombinationsmodul kombiniert und ausgegeben.}}{50}{figure.caption.83}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.21}{\ignorespaces Übersicht des Lokalisierungsmodul: Die Eingangsgröße sind die MVs aller Sensoren. Im oberen Teil ist die absolute Lokalisierung schematische dargestellt. Zunächst wird aus den MVs die Position der 3D-Spule bestimmt. Im Orientierungsschätzungsmodul werden aus der Position und den MVs die Orientierung der Spule bestimmt. Im unteren Teil ist die Schätzung einer kinematischen Kette, dieser schätzt aus den MVs die Haltung dieser. Die absolute Position und die Orientierungen der kinetmatischen Elemente werden dann von einem Kombinationsmodul kombiniert und ausgegeben.}}{51}{figure.caption.83}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {4.4}Nachverarbeitung}{51}{section.4.4}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.4.1}Schätzung einer kinematischen Kette}{51}{subsection.4.4.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Einbeziehung der Distanzinformation}{51}{subsubsection*.85}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {4.22}{\ignorespaces Distanz zu Winkel: Die Abbildung zeigt eine kinematische Kette mit zwei Elementen. Auf dem ersten Element (unten) ist ein Akktuator angebracht, auf dem zweiten ein Sensor(orange). In gelb ist ein Dreieck eingezeichnet mit den zugehörigen Längen.}}{52}{figure.caption.86}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Glättung und Winkelumrechnung}{52}{subsubsection*.89}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Einbeziehung der Distanzinformation}{52}{subsubsection*.85}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {4.23}{\ignorespaces Vergleich der unterschiedlichen Berechnungsmethoden für $\phi _{\textrm {\footnotesize \add@extra@listi {ftns}{s,2}}}$: Gelb zeigt den wahren Wert, Orange den aus dem vorgestellten Algorithmus und Blau den aus der Distanz bestimmten Wert.}}{53}{figure.caption.87}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Glättung und Winkelumrechnung}{53}{subsubsection*.89}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {4.24}{\ignorespaces Filter}}{54}{figure.caption.90}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Einbeziehung der Anatomie}{54}{subsubsection*.92}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Einbeziehung der Anatomie}{55}{subsubsection*.92}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.4.2}Absolut Lokalisierung}{55}{subsection.4.4.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\nonumberline Glättung}{55}{subsubsection*.94}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.4.3}Übersicht Nachverarbeitung}{55}{subsection.4.4.3}\protected@file@percent }
@@ -151,24 +151,30 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {5.10}{\ignorespaces Results for the first element: \ref {fig:AngleFirst} shows the angle estimates in comparison. The optical estimates are shown with dashed lines and the magnetic estimates with solid lines. In \ref {fig:ErrorFirst} the angle error is shown between the orientation estimates.}}{65}{figure.caption.131}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {5.11}{\ignorespaces Results for the second element: The presentation of the results is as in \ref {fig:ResultsSecondElement}.}}{66}{figure.caption.132}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {5.3}Absolute Lokalisierung}{66}{section.5.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.12}{\ignorespaces Setup}}{66}{figure.caption.135}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.3.1}Fehlermaß}{66}{subsection.5.3.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.3.2}Simulative Evaluierung}{67}{subsection.5.3.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{\nonumberline Robustheit der Positionsschätzung gegen Rauschen}{67}{paragraph*.136}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{\nonumberline Einfluss eines Positionsfehler auf die Orientierungsschätzung}{67}{paragraph*.138}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{\nonumberline Einfache Bewegung}{67}{paragraph*.140}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.3}Experimentelle Evaluierung}{67}{subsection.5.3.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Räumliche Synchronisierung}{67}{subsubsection*.142}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Ergebnisse}{67}{subsubsection*.144}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.4}Diskussion}{67}{subsection.5.3.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {6}Zusammenfassung und Ausblick}{69}{chapter.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Robustheit der Positionsschätzung gegen Rauschen}{67}{figure.caption.138}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Einfluss eines Positionsfehler auf die Orientierungsschätzung}{67}{figure.caption.141}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Einfache Bewegung}{67}{figure.caption.144}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.13}{\ignorespaces \relax }}{68}{figure.caption.138}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.14}{\ignorespaces \relax }}{68}{figure.caption.141}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.3}Experimentelle Evaluierung}{68}{subsection.5.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Räumliche Synchronisierung}{68}{subsubsection*.146}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Ergebnisse}{68}{subsubsection*.148}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.4}Diskussion}{68}{subsection.5.3.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.15}{\ignorespaces \relax }}{69}{figure.caption.144}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.16}{\ignorespaces \relax }}{70}{figure.caption.150}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.17}{\ignorespaces \relax }}{71}{figure.caption.151}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Zusammenfassung und Ausblick}{73}{chapter.6}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {6.1}Zusammenfassung}{69}{section.6.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.1}Neuheiten}{69}{subsection.6.1.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.2}Ungelöste Probleme}{69}{subsection.6.1.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6.2}Ausblick}{69}{section.6.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.1}Prototyp}{69}{subsection.6.2.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\nonumberline Literaturverzeichnis}{71}{chapter*.145}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.1}Zusammenfassung}{73}{section.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.1}Neuheiten}{73}{subsection.6.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.2}Ungelöste Probleme}{73}{subsection.6.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.2}Ausblick}{73}{section.6.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.1}Prototyp}{73}{subsection.6.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\nonumberline Literaturverzeichnis}{75}{chapter*.152}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{toc}{\contentsline {chapter}{\numberline {A}Weitere Messdaten}{I}{appendix.A}\protected@file@percent }

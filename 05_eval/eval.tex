@@ -74,11 +74,13 @@ Bewegungen führen zu einer gewissen Unschärfe. Der Algorithmus basiert auf der
 \begin{figure}[h]
   \centering
   \subfloat[Standardabweichung]{
-      \inputTikZ{0.6}{05_eval/images/FehlerfortStdAb.tikz}
+    \scalefont{2}
+      \inputTikZ{0.5}{05_eval/images/FehlerfortStdAb.tikz}
       \label{fig:FehlerfortStd}
   }
   \subfloat[Varianz in Abhängigkeit des Ortes]{
-      \inputTikZ{0.6}{05_eval/images/FehlerfortMaxAb.tikz}
+    \scalefont{2}
+      \inputTikZ{0.5}{05_eval/images/FehlerfortMaxAb.tikz}
       \label{fig:FehlerfortMaxAb} 
   }
   \caption{ }
@@ -88,16 +90,18 @@ Bewegungen führen zu einer gewissen Unschärfe. Der Algorithmus basiert auf der
 \begin{figure}[h]
   \centering
   \subfloat[Standardabweichung]{
-      \inputTikZ{0.6}{05_eval/images/SimpleMoveVekt.tikz}
+      \scalefont{2}
+      \inputTikZ{0.5}{05_eval/images/SimpleMoveVekt.tikz}
       \label{fig:FehlerfortStd} 
   }
   \subfloat[Varianz in Abhängigkeit des Ortes]{
-      \inputTikZ{0.6}{05_eval/images/SimpleMoveVektSecond.tikz}
+      \scalefont{2}
+      \inputTikZ{0.5}{05_eval/images/SimpleMoveVektSecond.tikz}
       \label{fig:FehlerfortMaxAb} 
   }
   \caption{ } 
    
-  \label{fig:Fehlerfort}
+  \label{fig:SimpleMove}
 \end{figure}
 
 \subsubsection{Diskussion}
@@ -311,7 +315,21 @@ In den Tabellen\,\ref{tab:Ergebnisse1},\ref{tab:Ergebnisse2} sind die Ergebnisse
 \subsubsection{Diskussion}
 
 \section{Absolute Lokalisierung}
-
+\begin{figure}[h]
+  \centering
+  \subfloat[Simulationssetup]{
+  \scalefont{2}
+  \inputTikZ{0.6}{05_eval/images/AbsSimSensorSetup.tikz}
+  \label{fig:SimAbsSetup}
+  }
+  \subfloat[Laboraufbau]{
+    \begin{overpic}[width=0.4\textwidth,trim = 0 0 0 0]{05_eval/images/AufbauAbslocal.png}
+    \end{overpic}
+    \label{fig:SimAbsSetup}
+  }
+  \caption{Setup}
+  \label{fig:AbsSetup}
+\end{figure} 
 \subsection{Fehlermaß}
 Bei der Auswertung der absoluten Lokalisierung müssen zum einen die Position und die Orientierung evaluiert werden. Um eine Evaluierung durchführen zu können, muss ein Fehlermaß eingeführt werden. Bei der Position ist dieses naheliegend die euklidische Abstand zwischen der magnetischen Schätzung und dem Ergebnis der optischen Schätzung. Beim Vergleich der Orientierung ist dies komplexer, da bei Eulerwinkeln keine euklidische Distanz existiert. Hier soll ein Skalar eingeführt werden, der ein Maß für die Qualität der Schätzung ist. 
 
@@ -347,13 +365,104 @@ Die Komponenten zwei bis vier werden verworfen und aus der ersten wird der Winke
  
 
 \subsection{Simulative Evaluierung}
+
+
 \paragraph{Robustheit der Positionsschätzung gegen Rauschen}
+
+\begin{figure}[h]
+  \centering
+  \subfloat[Angle of movement for the second element]{
+    \scalefont{2}
+    \inputTikZ{0.425}{05_eval/images/StdAbweichung_Pos.tikz}
+    \label{fig:stdAbwPosSim}
+  }
+  \subfloat[Magnitude of the angular error between optical and magnetic estimation]{
+    \scalefont{2}
+    \inputTikZ{0.425}{05_eval/images/absoluterFehler_Pos.tikz}
+    \label{fig:errorPosSim}
+  } 
+  \caption{}
+  \label{fig:PosSimEval}
+\end{figure}
+
 \paragraph{Einfluss eines Positionsfehler auf die Orientierungsschätzung}
+\begin{figure}[h]
+  \centering
+  \scalefont{2}
+  \inputTikZ{0.425}{05_eval/images/Abhängigkeit_or_Pos.tikz}
+  \label{fig:stdAbwOrPosVar}
+
+  \caption{}
+  \label{fig:PosSimEval}
+\end{figure}
 \paragraph{Einfache Bewegung}
+\begin{figure}[h]
+  \centering
+  \subfloat[Angle of movement for the second element]{
+    \scalefont{2}
+    \inputTikZ{0.45}{05_eval/images/MovementComponent.tikz}
+    \label{fig:MovementComponent}
+  }
+  \subfloat[Magnitude of the angular error between optical and magnetic estimation]{
+    \scalefont{2}
+    \inputTikZ{0.45}{05_eval/images/FehlerBewegung.tikz}
+    \label{fig:ErrorMovement}
+  } 
+  \caption{}
+  \label{fig:AbsMovement}
+\end{figure}
 
 \subsection{Experimentelle Evaluierung}
 \subsubsection{Räumliche Synchronisierung}
+
 \subsubsection{Ergebnisse}
+\begin{figure}[h]
+  \centering
+  \scalefont{2}
+  \inputTikZ{0.45}{05_eval/images/DynEvalCompsPos.tikz}
+  \label{fig:stdAbwOrPosVar}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \subfloat[$\theta$]{
+    \scalefont{2}
+    \inputTikZ{0.45}{05_eval/images/DynEvalAngleTheta.tikz}
+    \label{fig:MovementComponent}
+  }
+  \\
+  \subfloat[$\phi$]{
+    \scalefont{2}
+    \inputTikZ{0.45}{05_eval/images/DynEvalAnglePhi.tikz}
+    \label{fig:ErrorMovement}
+  } 
+  \\
+  \subfloat[$\psi$]{
+    \scalefont{2}
+    \inputTikZ{0.45}{05_eval/images/DynEvalAnglePsi.tikz}
+    \label{fig:ErrorMovement}
+  } 
+  \caption{}
+  \label{fig:AbsMovement}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \subfloat[$\theta$]{
+    \scalefont{2}
+    \inputTikZ{0.45}{05_eval/images/DynEvalPosFehler.tikz}
+    \label{fig:MovementComponent}
+  }
+  \\
+  \subfloat[$\phi$]{
+    \scalefont{2}
+    \inputTikZ{0.45}{05_eval/images/DynEvalWinkelfehler.tikz}
+    \label{fig:ErrorMovement}
+  } 
+  \caption{}
+  \label{fig:AbsMovement}
+\end{figure}
+  
 \subsection{Diskussion}
 
 

@@ -1,0 +1,79 @@
+% This file was created by matlab2tikz.
+%
+%The latest updates can be retrieved from
+%  http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz
+%where you can also make suggestions and rate matlab2tikz.
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=5.0in,
+height=5.0in,
+at={(0.0in,0.0in)},
+scale only axis,
+plot box ratio=1 1 1,
+xmin=-0.5,
+xmax=0.5,
+xtick = {-0.4,-0.2,...,0.4},
+xlabel = {x in m},
+tick align=outside,
+ymin=-0.5,
+ymax=0.5,
+ytick = {-0.4,-0.2,...,0.4},
+ylabel = {y in m},
+zmin=-0.5,
+zmax=0.5,
+ztick = {-0.4,-0.2,...,0.4},
+zlabel = {z in m},
+view={26.5912065748816}{15.373209699406},
+axis background/.style={fill=white},
+axis x line*=bottom,
+axis y line*=left,
+axis z line*=left,
+xmajorgrids,
+ymajorgrids,
+zmajorgrids,
+legend cell align=left,
+legend pos=south east]
+\addlegendimage{line legend,red}\addlegendentry{X-Sensoren}
+\addlegendimage{line legend,green}\addlegendentry{Y-Sensoren}\addlegendimage{line legend,blue}\addlegendentry{Z-Sensoren}
+]
+\addplot3[-Straight Barb, color=red, line width=5.0pt, point meta={sqrt((\thisrow{u})^2+(\thisrow{v})^2+(\thisrow{w})^2)}, point meta min=0, quiver={u=\thisrow{u}, v=\thisrow{v}, w=\thisrow{w}, every arrow/.append style={-{Straight Barb[angle'=18.263, scale={1/1000*\pgfplotspointmetatransformed}]}}}]
+ table[row sep=crcr] {%
+x	y	z	u	v	w\\
+-0.35	0	0	0.15	0	0\\
+0.35	0	0	0.15	0	0\\
+};
+
+\addplot3[-Straight Barb, color=green, line width=5.0pt, point meta={sqrt((\thisrow{u})^2+(\thisrow{v})^2+(\thisrow{w})^2)}, point meta min=0, quiver={u=\thisrow{u}, v=\thisrow{v}, w=\thisrow{w}, every arrow/.append style={-{Straight Barb[angle'=18.263, scale={1/1000*\pgfplotspointmetatransformed}]}}}]
+ table[row sep=crcr] {%
+x	y	z	u	v	w\\
+0	-0.35	0	0	0.15	0\\
+0	0.35	0	0	0.15	0\\
+};
+
+\addplot3[-Straight Barb, color=blue, line width=5.0pt, point meta={sqrt((\thisrow{u})^2+(\thisrow{v})^2+(\thisrow{w})^2)}, point meta min=0, quiver={u=\thisrow{u}, v=\thisrow{v}, w=\thisrow{w}, every arrow/.append style={-{Straight Barb[angle'=18.263, scale={1/1000*\pgfplotspointmetatransformed}]}}}]
+ table[row sep=crcr] {%
+x	y	z	u	v	w\\
+0	0	-0.35	0	0	0.15\\
+0	0	0.35	0	0	0.15\\
+};
+
+\end{axis}
+
+\begin{axis}[%
+width=5.0in,
+height=5.0in,
+at={(0in,0in)},
+scale only axis,
+xmin=0,
+xmax=1,
+ymin=0,
+ymax=1,
+axis line style={draw=none},
+ticks=none,
+axis x line*=bottom,
+axis y line*=left
+]
+\end{axis}
+\end{tikzpicture}%
