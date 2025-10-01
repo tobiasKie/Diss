@@ -263,7 +263,7 @@ Je nach verwendeter Rahmenlänge und Frequenzen der Spulensignale ist die Anzahl
         \label{fig:MedianG}
     }
 
-    \caption{Auswertung des Distanzmerkmal anhand eines Laborsignals: In \subref{fig:AusreisserG} ist der Verlauf des Distanzmerkmals ohne Medianfilter dargestellt, zum Vergleich dazu ist in \subref{fig:MedianG} der Verlauf mit Medianfilter dargestellt.}
+    \caption{Auswertung des Distanzmerkmal anhand eines Laborsignals: In (a) ist der Verlauf des Distanzmerkmals ohne Medianfilter dargestellt, zum Vergleich dazu ist in (b) der Verlauf mit Medianfilter dargestellt.}
     \label{fig:Ausreisser}
 \end{figure}
 Es hat sich herausgestellt, dass es sich bei den Ausreißern immer nur um einzelne Werte handelt. An dieser Stelle wird daher ein Medianfilter angewendet, mit diesem werden zunächst das untere und das obere Drittel eines Rahmens verworfen. Die verbliebenen Werte werden gemittelt und als Distanzinformation des jeweiligen Rahmens verwendet. 
@@ -371,7 +371,7 @@ Eine Visualisierung dieser Prozedur ist in Abbildung\,\ref{fig:Concept_Algorithm
             \label{fig:Iteration15}
         \end{overpic}
     }
-    \caption{Beispielhafter iterativer Prozess: Diese Abbildung zeigt die Iterationen für einen einfachen Aufbau. Die Unterabbildung \ref{fig:Setup} zeigt den verwendeten Aufbau mit dem Koordinatensystem. Der Ursprung dieses Aufbaus befindet sich am ersten kinematischen Kettenelement, wo sich auch die Quelle befindet. Die Quelle ist mit dem ersten kinematischen Element so verbunden, dass die relative Position der Quelle zur kinematischen Kette immer konstant ist. In den folgenden Abbildungen wurde das Koordinatensystem weggelassen. Die blauen Vektoren stellen die möglichen Posen für den detektierten MV dar. Die hellgrüne Konstruktion zeigt die Bodenwahrheit. Der rote Vektor ist ein normalisierter Positionsvektor des Sensors, der auf die potentielle Pose in dieser Richtung zeigt. Der Sensor ist am zweiten Knochen angebracht. Er wird durch ein schwarzes Rechteck mit einem Vektor in die sensitive Richtung dargestellt. Abbildung\,\subref{fig:Iteration1} beginnt mit einer Knochenorientierung in $x$-Richtung. Für einige Iterationen sind die kinematische Kette und der zugehörige Positionsvektor dargestellt. Nach 15 Iterationen (Abbildung,\subref{fig:Iteration15}) stimmt die Sensorpose mit einer potentiellen Pose (ground truth) überein und der Algorithmus konvergiert.}
+    \caption{Beispielhafter iterativer Prozess: Diese Abbildung zeigt die Iterationen für einen einfachen Aufbau. Die Unterabbildung (a) zeigt den verwendeten Aufbau mit dem Koordinatensystem. Der Ursprung dieses Aufbaus befindet sich am ersten kinematischen Kettenelement, wo sich auch die Quelle befindet. Die Quelle ist mit dem ersten kinematischen Element so verbunden, dass die relative Position der Quelle zur kinematischen Kette immer konstant ist. In den folgenden Abbildungen wurde das Koordinatensystem weggelassen. Die blauen Vektoren stellen die möglichen Posen für den detektierten MV dar. Die hellgrüne Konstruktion zeigt die Bodenwahrheit. Der rote Vektor ist ein normalisierter Positionsvektor des Sensors, der auf die potentielle Pose in dieser Richtung zeigt. Der Sensor ist am zweiten Knochen angebracht. Er wird durch ein schwarzes Rechteck mit einem Vektor in die sensitive Richtung dargestellt. Abbildung\,(b) beginnt mit einer Knochenorientierung in $x$-Richtung. Für einige Iterationen sind die kinematische Kette und der zugehörige Positionsvektor dargestellt. Nach 15 Iterationen (Abbildung\,(d)) stimmt die Sensorpose mit einer potentiellen Pose (ground truth) überein und der Algorithmus konvergiert.}
     \label{fig:Concept_Algorithm}
 \end{figure}
 
@@ -389,6 +389,7 @@ Die absolute Distanz ist dabei irrelevant, da bei der Herleitung der Zusammenhä
 \end{figure}
 
 \subsubsection{Eindeutigkeit der Lösung}
+\label{subsubsection:eindeutigkeit}
 	Im folgenden wird die die Eindeutigkeit des vorgestellten iterativen Algorithmus geprüft. Der Algorithmus ist eindeutig, wenn jedem möglichen Eingangsvektor $\vec{e}\tindex{max}$ eine Sensororientierung $\vec{e}\tindex{s}$ zu geordnet werden kann. Die Eingangs- und Ausgangsvektoren werden dafür in jeweils zwei Winkel aufgeteilt. 
 
     Der Eingangsvektor besitzt zwei Freiheitsgrade, die die Richtung definieren und mit zwei Winkeln beschrieben werden können. Die Orientierung des Sensors wird ebenfalls über zwei Winkel (Freiheitsgrade) definiert. Im folgenden wird zunächst eine Entkopplung der Ein- und Ausgangsgrößen vorgenommen, also jede Eingangsgröße hat danach nur noch Einfluss auf eine andere Ausgangsgröße. 
@@ -692,7 +693,7 @@ Zu Beginn wird angenommen, dass die Quelle in $y$-Richtung liegt und der Winkel 
             \inputTikZ{0.325}{04_umsetzung/images/AbsLocalIteration7.tikz}
             \label{fig:AbsLocalIteration7}
         }
-        \caption{Bestimmung des Schnittpunkts: (\subref{fig:AbsLocalIteration1}) zeigt die Kurven und die geschätzten Positionen. Blau gehört jeweils zu Sensor 2 und Rot zu Sensor 1. Nach der ersten Iteration wird der rote und blaue Punkt korrigiert. Mit jeder Iteration sinkt die Distanz zwischen $\hat{\vec{r}}\tindex{Q,1}^{\, i}$ und $\hat{\vec{r}}\tindex{Q,2}^{\, i}$. In (\subref{fig:AbsLocalIteration7}) liegen dann beide Punkte übereinander und der Schnittpunkt wurde gefunden.}
+        \caption{Bestimmung des Schnittpunkts: (a) zeigt die Kurven und die geschätzten Positionen. Blau gehört jeweils zu Sensor 2 und Rot zu Sensor 1. Nach der ersten Iteration wird der rote und blaue Punkt korrigiert. Mit jeder Iteration sinkt die Distanz zwischen $\hat{\vec{r}}\tindex{Q,1}^{\, i}$ und $\hat{\vec{r}}\tindex{Q,2}^{\, i}$. In (d) liegen dann beide Punkte übereinander und der Schnittpunkt wurde gefunden.}
         \label{fig:AbslocalIterations}
     \end{figure}
 
@@ -766,7 +767,7 @@ Beide Repräsentation der MVs sind damit kongruente Vektorsammlungen die mit ein
         \label{fig:MaxVecsGlobAnsichtRot}
 
     }
-    \caption{Beispiel für eine um 90° um die Z-Achse verdrehte Spule: Abbildung \subref{fig:MaxVecsGlob} zeigt die MVs berechnet anhand der geschätzten Position, in \subref{fig:MaxVecsLoc} sind die aus dem Signal extrahierten MVs dargestellt. Dabei ist gut zu erkennen, dass beide Abbildungen kongruent sind, jedoch um 90° verdreht. In Abbildung \subref{fig:MaxVecsGlobAnsichtRot} sind die berechneten MVs mit einer gedrehten Ansicht dargestellt und es ist gut zu erkennen, dass beide Abbildungen kongruent sind.}
+    \caption{Beispiel für eine um 90° um die Z-Achse verdrehte Spule: Abbildung\,(a) zeigt die MVs berechnet anhand der geschätzten Position, in\,(b) sind die aus dem Signal extrahierten MVs dargestellt. Dabei ist gut zu erkennen, dass beide Abbildungen kongruent sind, jedoch um 90° verdreht. In Abbildung\,(c) sind die berechneten MVs mit einer gedrehten Ansicht dargestellt und es ist gut zu erkennen, dass beide Abbildungen kongruent sind.}
     \label{fig:Kongruent}
 \end{figure}
   

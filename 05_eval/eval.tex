@@ -23,54 +23,46 @@ Alle Messungen und Simulationen werden mit einem
 
 
 \subsection{Simulative Evaluierung}
-\subsubsection{Szenarios}
 In der simulativen Evaluierung sollen 3 unterschiedliche Szenarios untersucht werden, die zunächst kurz definiert werden. Alle Simulationen werden mit einer Abtastrate von $f\tindex{SR}=48000\,\text{kHz}$ und einer Rahmenlänge $i\tindex{Frame} = 512$ durchgeführt. Der Abstand zwischen Quelle und erstem Gelenk wird in allen Simulationen normiert auf 1\,m. Der Asbtand zwischen Sensor und Gelenk wird auf 0.2\,m gesetzt.
-
+\subsubsection{Szenarios und Ergebnisse}
 \paragraph{Robustheit gegenüber Rauschen}
-Es wird ein Aufbau mit einem Gelenk simuliert, also eine 3D-Spule im Ursprung and dem auch ein kinematisches Element beginnt und ein Gelenk das dieses mit einem weiteren Element verbindet. Die Ansteuerung der Spule erfolgt wie in Kapitel\,\ref{sec:featureExtract} beschrieben. Auf Sensorseite wird WGN (\textit{White Gaussian Noise}) addiert. Diese wird so skaliert, dass das Sensorsignal ein SNR von $10\,\text{dB}$ besitzt. Es wird mit einem Raster von $1^\circ$ der Wertebereich überprüft. Die Simulation wird für 100 Rahmen durchgeführt.
-
-\paragraph{Einfluss von Fehlerfortpflanzung}
-Ein Problem bei der Schätzung einer kinematischen Kette ist die Fehlerfortpflanzung. Die Position des ersten Gelenks ist bekannt und wird vor der Laufzeit ausgemessen. Die weiteren Gelenkspositionen werden nach und nach rekonstruiert, schwanken aber je nach Signalqualität. Dieser Effekt soll anhand einer Simulation evaluiert werden. Gegeben sei eine kinematische Kette aus 3 Elementen. Die Haltung sei so, dass diese gestreckt sei(Nulllage). Es wird das Sensorsignal für den zweiten Sensor simuliert. Die Orientierungsschätzung des ersten Elements wird zufällig vorgenommen, also die beiden Winkel werden zufällig generiert. Dabei wird die Länge des mittleren Elements variiert, sowie die Amplitude der Winkelvariation.
-
-\paragraph{Einfache Bewegung}
-Bewegungen führen zu einer gewissen Unschärfe. Der Algorithmus basiert auf der Detektion von Vorzeichenwechseln, da mindestens zwei Vorzeichenwechsel benötigt werden ist zwischen den $\vec{e}\tindex{zc}$, vergeht zwischen den beiden Nulldurchgängen mindestens eine halbe Periodendauer des Ansteuersignal. Daher gehören die $\vec{e}\tindex{zc}$ zu leicht unterschiedlichen Positionen/Orientierungen. Die Bewegung läuft zyklisch ab. In der Simulation wird $\theta\tindex{Beu} = \omega\,n\,\Delta \,t$ gesetzt, also findet die Bewegung in der $xz$-Ebene statt. $\omega$ wird dabei auf 2\,Hz mit einem Weg von $90^\circ$ gesetzt. Dies entspricht der natürlichen Bewegungsfrequenz\cite{hager-ross_quantifying_2000} und die MCP-Elemente haben einen Bewegungsspielraum von $90^\circ$\cite{lin_modeling_2000}.
-
-\subsubsection{Ergebnisse}
-
-\paragraph{Robustheit gegenüber Rauschen} Um zu prüfen wie robust das Verfahren gegenüber Rauschen ist, werden verschiedene Größen betrachtet. Zunächst wird die Variation des MVs betrachtet. Dafür wird der 
-
+Es wird ein Aufbau mit einem Gelenk simuliert, also eine 3D-Spule im Ursprung and dem auch ein kinematisches Element beginnt und ein Gelenk das dieses mit einem weiteren Element verbindet. Die Ansteuerung der Spule erfolgt wie in Kapitel\,\ref{sec:featureExtract} beschrieben. Auf Sensorseite wird WGN (\textit{White Gaussian Noise}) addiert. Diese wird so skaliert, dass das Sensorsignal ein SNR von $10\,\text{dB}$ besitzt. Es wird mit einem Raster von $1^\circ$ der Wertebereich überprüft. Die Simulation wird für 100 Rahmen durchgeführt. Die Bewegung wird an dieser Stelle wie in Kapitel\,\ref{subsubsection:eindeutigkeit} beschrieben, zum einen die Beugung des Gelenks $\phi\tindex{s,2}$ und zum anderen die Richtung in welche das Gelenk gebeugt werden $\phi\tindex{s,1}$.
 \begin{figure}[h]
   \centering
-  \subfloat[Varianz des MV]{
-      \inputTikZ{0.6}{05_eval/images/VarianceMV.tikz}
+  \subfloat[Standardabweichung des MV]{
+      \scalefont{2.0}
+      \inputTikZ{0.45}{05_eval/images/VarianceMV.tikz}
       \label{fig:VarMV}
   }
-  \subfloat[Varianz der Orientierung]{
-      \inputTikZ{0.6}{05_eval/images/VarianceProj.tikz}
+  \subfloat[Standardabweichung der Orientierung]{
+      \scalefont{2.0}
+      \inputTikZ{0.45}{05_eval/images/VarianceProj.tikz}
       \label{fig:VarProj} 
   }
-  \caption{ }
+  \caption{Die Abbildung zeigt die Standardabweichung in Abhängigkeit der Gelenksstellung. $\phi\tindex{s,2}$ zeigt dabei wie stark das Gelenk gebeugt ist, $\phi\tindex{s,1}$ zeigt in welche Richtung das Gelenk gebeugt wird.}
   \label{fig:Variance}
 \end{figure}
 
+Es wird zunächst geprüft, wie stark der MV und die Orientierung des Elements variieren. Dafür wird zunächst der Durchschnitt von beiden Größen über die 100 simulierten Rahmen gebildet und der Winkel zwischen der Größe und dem Mittelwert gebildet. Diese Winkel werden ausgewertet und die Varianz daraus wird gebildet. Die Standardabweichungen sind in Abbildung\,\ref{fig:Variance} dargestellt. Darin ist die Standardabweichung für jede Haltung dargestellt. Gut zu sehen ist, dass die Varianz des MV relativ konstant ist, mit einem Ausreißer für $\phi\tindex{s,2}\approx 110$. Die Varianz der Orientierung zeigt einen ähnlichen Ausreißer, jedoch zusätzlich eine größere Varianz je kleiner $\phi\tindex{s,2}$ ist.
 \begin{figure}[h]
   \centering
   \subfloat[Fehler des Mittelwert]{
-      \inputTikZ{0.6}{05_eval/images/ErrorProj.tikz}
-      \label{fig:VarMV}
+      \scalefont{2.0}
+      \inputTikZ{0.45}{05_eval/images/ErrorProj.tikz}
+      \label{fig:ErrorProj}
   }
-  \subfloat[Varianz in Abhängigkeit des Ortes]{
-      \inputTikZ{0.6}{05_eval/images/FaktorVar.tikz}
-      \label{fig:VarProj} 
+  \subfloat[Standardabweichung in Abhängigkeit des Ortes]{
+      \scalefont{2.0}
+      \inputTikZ{0.45}{05_eval/images/FaktorVar.tikz}
+      \label{fig:VarOrt} 
   }
   \caption{ }
   \label{fig:Variance}
 \end{figure}
-
-
-
+Um diese Ortabhängigkeit zu zeigen wurden die beiden Varianzen zueinander ins Verhältnis gesetzt. Das Ergebnis ist in Abbildung\,\ref{fig:VarOrt} dargestellt. Darin ist gut zu sehen, dass bei gleichbleibender Signalqualität das Ergebnis stärker variiert je kleiner $\phi\tindex{s,2}$ ist. Wichtig ist außerdem, dass der Mittelwert bei genügend großer Signallänge zum richtigen Wert konvergiert, dies wurde in Abbildung\,\ref{fig:ErrorProj} ausgewertet. Der Mittelwert konvergiert in nahezu allen Gelenksstellungen mit dem wahren Wert. Abweichungen gibt es bei $\phi\tindex{s,2}\approx 110$, die bereits eine große Varianz gezeigt haben.
 
 \paragraph{Einfluss von Fehlerfortpflanzung}
+Ein Problem bei der Schätzung einer kinematischen Kette ist die Fehlerfortpflanzung. Die Position des ersten Gelenks ist bekannt und wird vor der Laufzeit ausgemessen. Die weiteren Gelenkspositionen werden nach und nach rekonstruiert, schwanken aber je nach Signalqualität. Dieser Effekt soll anhand einer Simulation evaluiert werden. Gegeben sei eine kinematische Kette aus 3 Elementen. Die Haltung sei so, dass diese gestreckt sei(Nulllage). Es wird das Sensorsignal für den zweiten Sensor simuliert. Die Orientierungsschätzung des ersten Elements wird zufällig vorgenommen, also die beiden Winkel werden zufällig generiert. Dabei wird die Länge des mittleren Elements variiert, sowie die Amplitude der Winkelvariation.
 \begin{figure}[h]
   \centering
   \subfloat[Standardabweichung]{
@@ -86,7 +78,10 @@ Bewegungen führen zu einer gewissen Unschärfe. Der Algorithmus basiert auf der
   \caption{ }
   \label{fig:Fehlerfort}
 \end{figure}
+
 \paragraph{Einfache Bewegung}
+Bewegungen führen zu einer gewissen Unschärfe. Der Algorithmus basiert auf der Detektion von Vorzeichenwechseln, da mindestens zwei Vorzeichenwechsel benötigt werden ist zwischen den $\vec{e}\tindex{zc}$, vergeht zwischen den beiden Nulldurchgängen mindestens eine halbe Periodendauer des Ansteuersignal. Daher gehören die $\vec{e}\tindex{zc}$ zu leicht unterschiedlichen Positionen/Orientierungen. Die Bewegung läuft zyklisch ab. In der Simulation wird $\theta\tindex{Beu} = \omega\,n\,\Delta \,t$ gesetzt, also findet die Bewegung in der $xz$-Ebene statt. $\omega$ wird dabei auf 2\,Hz mit einem Weg von $90^\circ$ gesetzt. Dies entspricht der natürlichen Bewegungsfrequenz\cite{hager-ross_quantifying_2000} und die MCP-Elemente haben einen Bewegungsspielraum von $90^\circ$\cite{lin_modeling_2000}.
+
 \begin{figure}[h]
   \centering
   \subfloat[Standardabweichung]{
@@ -104,7 +99,9 @@ Bewegungen führen zu einer gewissen Unschärfe. Der Algorithmus basiert auf der
   \label{fig:SimpleMove}
 \end{figure}
 
+
 \subsubsection{Diskussion}
+
 \subsection{Experimentelle Evaluierung}
 Die relative Lokalisierung wurde entwickelt um die Bewegung von Fingern aufzunehmen. Um in einem ersten Test die Algorithmik zu evaluieren, wurde an dieser Stelle ein einfacher Demonstrator bestehend aus drei Elementen, ein längeres Element mit einer 3D-Spule und zwei kürzere mit jeweils einem Sensor. Die Elemente sind durch Gelenke verbunden, die Bewegung in zwei Richtungen ermöglichen, wie bei einem Sattelgelenk. In Abbildung \ref{fig:Demonstrator} ist dieser Aufbau einmal dargestellt.
 
