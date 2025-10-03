@@ -130,33 +130,34 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces }}{59}{figure.caption.102}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{\nonumberline Einfluss von Fehlerfortpflanzung}{59}{paragraph*.104}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces }}{60}{figure.caption.105}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{\nonumberline Einfache Bewegung}{60}{paragraph*.107}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Diskussion}{60}{subsubsection*.110}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.2}Experimentelle Evaluierung}{60}{subsection.5.2.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces }}{61}{figure.caption.108}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.6}{\ignorespaces Demonstrator: Die Abbildung zeigt den Demonstrator, der für die Evaluierung verwendet wird. Die 3D-Spule und die kinematischen Elemente sind mit optischen Markern ausgerüstet. }}{61}{figure.caption.111}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.7}{\ignorespaces Definition der Koordinatensysteme: Der rote Pfeil ist jeweils die $x$-Asches, grün die $y$-Achse und blau die $z-Achse$. In \subref {fig:MagCoord} ist eine 3D-Spule mit einem 3D-Druckaufsatz, an dem optische Marker befestigt sind. Mit den farbigen Pfeilen ist das lokale Koordinatensystem der Spule dargestellt. In \subref {fig:OptCoord} ist der Kalibrierungsaufbau dargestellt. Während der Kalibrierung wird die Platte mit den Markern in der Mitte des Messvolumens platziert. Währenddessen wird dann der Stab mit den zwei Markern durch den Messbereich bewegt. Die Lage und Orientierung der Platte während der Kalibrierung definiert dann die Orientierung des optischen Koordinatensystem.}}{62}{figure.caption.114}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Räumliche Synchronisierung und Schätzung der räumlichen Größen}{62}{subsubsection*.113}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.8}{\ignorespaces Kalibrierung der kinematischen Kette: Die Abbildung zeigt eine kinematische Kette bestehend aus drei Elementen. Die Roten Pfeile zeigen alle Größen die für den Algorithmus vor der Laufzeit bestimmt werden müssen.}}{63}{figure.caption.117}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Kalibrierung}{63}{subsubsection*.116}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Ergebnisse}{64}{subsubsection*.119}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {5.1}{\ignorespaces Ergebnisse der statischen Messung des ersten kinematischen Elements.}}{64}{table.caption.120}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Diskussion}{64}{subsubsection*.126}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.9}{\ignorespaces Results for the first element: \ref {fig:AngleFirst} shows the angle estimates in comparison. The optical estimates are shown with dashed lines and the magnetic estimates with solid lines. In \ref {fig:ErrorFirst} the angle error is shown between the orientation estimates.}}{65}{figure.caption.122}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces Auf der linken Seite ist die Standardabweichung und auf der rechten Seite die maximale Abweichung in $^\circ $, die sich durch die Fehlerfortpflanzung ergeben, in Abhängigkeit von der Länge des mittleren Elements und der Variation dieses.}}{60}{figure.caption.106}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Einfache Bewegung}{61}{paragraph*.108}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Diskussion}{61}{subsubsection*.111}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.2}Experimentelle Evaluierung}{61}{subsection.5.2.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.7}{\ignorespaces Demonstrator: Die Abbildung zeigt den Demonstrator, der für die Evaluierung verwendet wird. Die 3D-Spule und die kinematischen Elemente sind mit optischen Markern ausgerüstet. }}{62}{figure.caption.112}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Räumliche Synchronisierung und Schätzung der räumlichen Größen}{62}{subsubsection*.114}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.8}{\ignorespaces Definition der Koordinatensysteme: Der rote Pfeil ist jeweils die $x$-Asches, grün die $y$-Achse und blau die $z-Achse$. In \subref {fig:MagCoord} ist eine 3D-Spule mit einem 3D-Druckaufsatz, an dem optische Marker befestigt sind. Mit den farbigen Pfeilen ist das lokale Koordinatensystem der Spule dargestellt. In \subref {fig:OptCoord} ist der Kalibrierungsaufbau dargestellt. Während der Kalibrierung wird die Platte mit den Markern in der Mitte des Messvolumens platziert. Währenddessen wird dann der Stab mit den zwei Markern durch den Messbereich bewegt. Die Lage und Orientierung der Platte während der Kalibrierung definiert dann die Orientierung des optischen Koordinatensystem.}}{63}{figure.caption.115}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Kalibrierung}{63}{subsubsection*.117}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.9}{\ignorespaces Kalibrierung der kinematischen Kette: Die Abbildung zeigt eine kinematische Kette bestehend aus drei Elementen. Die Roten Pfeile zeigen alle Größen die für den Algorithmus vor der Laufzeit bestimmt werden müssen.}}{64}{figure.caption.118}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Ergebnisse}{64}{subsubsection*.120}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Diskussion}{64}{subsubsection*.127}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {5.10}{\ignorespaces Results for the first element: \ref {fig:AngleFirst} shows the angle estimates in comparison. The optical estimates are shown with dashed lines and the magnetic estimates with solid lines. In \ref {fig:ErrorFirst} the angle error is shown between the orientation estimates.}}{65}{figure.caption.123}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {5.2}{\ignorespaces Ergebnisse der statischen Messung des zweiten kinematischen Elements.}}{66}{table.caption.121}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.11}{\ignorespaces Results for the second element: The presentation of the results is as in \ref {fig:ResultsSecondElement}.}}{66}{figure.caption.124}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5.3}Absolute Lokalisierung}{66}{section.5.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.1}Fehlermaß}{66}{subsection.5.3.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.12}{\ignorespaces Setup}}{67}{figure.caption.127}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.2}Simulative Evaluierung}{67}{subsection.5.3.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{\nonumberline Robustheit der Positionsschätzung gegen Rauschen}{67}{figure.caption.130}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{\nonumberline Einfluss eines Positionsfehler auf die Orientierungsschätzung}{68}{figure.caption.133}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{\nonumberline Einfache Bewegung}{68}{figure.caption.136}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.3}Experimentelle Evaluierung}{68}{subsection.5.3.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Räumliche Synchronisierung}{68}{subsubsection*.138}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Ergebnisse}{68}{subsubsection*.140}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.4}Diskussion}{68}{subsection.5.3.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.11}{\ignorespaces Results for the first element: \ref {fig:AngleFirst} shows the angle estimates in comparison. The optical estimates are shown with dashed lines and the magnetic estimates with solid lines. In \ref {fig:ErrorFirst} the angle error is shown between the orientation estimates.}}{65}{figure.caption.124}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {5.1}{\ignorespaces Ergebnisse der statischen Messung des ersten kinematischen Elements.}}{66}{table.caption.121}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {5.2}{\ignorespaces Ergebnisse der statischen Messung des zweiten kinematischen Elements.}}{66}{table.caption.122}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.12}{\ignorespaces Results for the second element: The presentation of the results is as in \ref {fig:ResultsSecondElement}.}}{66}{figure.caption.125}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}Absolute Lokalisierung}{67}{section.5.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.13}{\ignorespaces Setup}}{67}{figure.caption.128}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.1}Fehlermaß}{67}{subsection.5.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.2}Simulative Evaluierung}{68}{subsection.5.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Robustheit der Positionsschätzung gegen Rauschen}{68}{figure.caption.131}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Einfluss eines Positionsfehler auf die Orientierungsschätzung}{68}{figure.caption.134}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Einfache Bewegung}{68}{figure.caption.137}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.3}Experimentelle Evaluierung}{69}{subsection.5.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Räumliche Synchronisierung}{69}{subsubsection*.139}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Ergebnisse}{69}{subsubsection*.142}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.4}Diskussion}{69}{subsection.5.3.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.17}{\ignorespaces }}{70}{figure.caption.140}\protected@file@percent }
 \@writefile{toc}{\contentsline {chapter}{\numberline {6}Zusammenfassung und Ausblick}{73}{chapter.6}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
@@ -165,10 +166,10 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {6.1.2}Ungelöste Probleme}{73}{subsection.6.1.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {6.2}Ausblick}{73}{section.6.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {6.2.1}Prototyp}{73}{subsection.6.2.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\nonumberline Literaturverzeichnis}{75}{chapter*.144}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\nonumberline Literaturverzeichnis}{75}{chapter*.146}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\nonumberline Weitere Literatur}{75}{section*.146}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\nonumberline Weitere Literatur}{75}{section*.148}\protected@file@percent }
 \@writefile{toc}{\def \@chapapp {\appendixname }}
 \@writefile{lof}{\def \@chapapp {\appendixname }}
 \@writefile{lot}{\def \@chapapp {\appendixname }}

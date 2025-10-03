@@ -62,23 +62,32 @@ Es wird zunächst geprüft, wie stark der MV und die Orientierung des Elements v
 Um diese Ortabhängigkeit zu zeigen wurden die beiden Varianzen zueinander ins Verhältnis gesetzt. Das Ergebnis ist in Abbildung\,\ref{fig:VarOrt} dargestellt. Darin ist gut zu sehen, dass bei gleichbleibender Signalqualität das Ergebnis stärker variiert je kleiner $\phi\tindex{s,2}$ ist. Wichtig ist außerdem, dass der Mittelwert bei genügend großer Signallänge zum richtigen Wert konvergiert, dies wurde in Abbildung\,\ref{fig:ErrorProj} ausgewertet. Der Mittelwert konvergiert in nahezu allen Gelenksstellungen mit dem wahren Wert. Abweichungen gibt es bei $\phi\tindex{s,2}\approx 110$, die bereits eine große Varianz gezeigt haben.
 
 \paragraph{Einfluss von Fehlerfortpflanzung}
-Ein Problem bei der Schätzung einer kinematischen Kette ist die Fehlerfortpflanzung. Die Position des ersten Gelenks ist bekannt und wird vor der Laufzeit ausgemessen. Die weiteren Gelenkspositionen werden nach und nach rekonstruiert, schwanken aber je nach Signalqualität. Dieser Effekt soll anhand einer Simulation evaluiert werden. Gegeben sei eine kinematische Kette aus 3 Elementen. Die Haltung sei so, dass diese gestreckt sei(Nulllage). Es wird das Sensorsignal für den zweiten Sensor simuliert. Die Orientierungsschätzung des ersten Elements wird zufällig vorgenommen, also die beiden Winkel werden zufällig generiert. Dabei wird die Länge des mittleren Elements variiert, sowie die Amplitude der Winkelvariation.
+Ein Problem bei der Schätzung einer kinematischen Kette ist die Fehlerfortpflanzung. Die Position des ersten Gelenks ist bekannt und wird vor der Laufzeit ausgemessen. Die weiteren Gelenkspositionen werden nach und nach rekonstruiert, schwanken aber je nach Signalqualität. Dieser Effekt soll anhand einer Simulation evaluiert werden. Gegeben sei eine kinematische Kette aus 3 Elementen. 
+\begin{figure}[h!]
+  \centering
+  \begin{overpic}[width=0.7\textwidth,trim = 0 0 0 0]{05_eval/images/FehlerFort.pdf}
+  \end{overpic}
+  \caption{
+  }
+  \label{fig:FehlerfortDef}
+\end{figure}
+Die Haltung sei so, dass diese gestreckt sei(Nulllage). Es wird das Sensorsignal für den zweiten Sensor simuliert. Die Orientierungsschätzung des ersten Elements wird zufällig vorgenommen, also die beiden Winkel werden zufällig generiert. Dabei wird die Länge des mittleren Elements $l\tindex{k,1}$(0.1\,m-0.5\,m) variiert, sowie die Amplitude der Winkelvariation $\Delta\phi$ ($0^\circ - 20^\circ$). 
 \begin{figure}[h]
   \centering
   \subfloat[Standardabweichung]{
     \scalefont{2}
-      \inputTikZ{0.5}{05_eval/images/FehlerfortStdAb.tikz}
+      \inputTikZ{0.45}{05_eval/images/FehlerfortStdAb.tikz}
       \label{fig:FehlerfortStd}
   }
-  \subfloat[Varianz in Abhängigkeit des Ortes]{
+  \subfloat[Mittlerer Fehler]{
     \scalefont{2}
-      \inputTikZ{0.5}{05_eval/images/FehlerfortMaxAb.tikz}
+      \inputTikZ{0.45}{05_eval/images/MeanErrorFort.tikz}
       \label{fig:FehlerfortMaxAb} 
   }
-  \caption{ }
+  \caption{Auf der linken Seite ist die Standardabweichung und auf der rechten Seite die maximale Abweichung in $^\circ$, die sich durch die Fehlerfortpflanzung ergeben, in Abhängigkeit von der Länge des mittleren Elements und der Variation dieses.}
   \label{fig:Fehlerfort}
 \end{figure}
-
+Das Ergebnis der Simulation ist in Abbildung\,\ref{fig:Fehlerfort} dargestellt. Je größer das mittlere Element ist und je größer die Variation des Winkels, desto größer wird die Standardabweichung. Der Unterschied zwischen Mittelwert über 100 Rahmen und dem wahren Wert ist deutlich kleiner als $1^\circ$.
 \paragraph{Einfache Bewegung}
 Bewegungen führen zu einer gewissen Unschärfe. Der Algorithmus basiert auf der Detektion von Vorzeichenwechseln, da mindestens zwei Vorzeichenwechsel benötigt werden ist zwischen den $\vec{e}\tindex{zc}$, vergeht zwischen den beiden Nulldurchgängen mindestens eine halbe Periodendauer des Ansteuersignal. Daher gehören die $\vec{e}\tindex{zc}$ zu leicht unterschiedlichen Positionen/Orientierungen. Die Bewegung läuft zyklisch ab. In der Simulation wird $\theta\tindex{Beu} = \omega\,n\,\Delta \,t$ gesetzt, also findet die Bewegung in der $xz$-Ebene statt. $\omega$ wird dabei auf 2\,Hz mit einem Weg von $90^\circ$ gesetzt. Dies entspricht der natürlichen Bewegungsfrequenz\cite{hager-ross_quantifying_2000} und die MCP-Elemente haben einen Bewegungsspielraum von $90^\circ$\cite{lin_modeling_2000}.
 
@@ -94,7 +103,7 @@ Bewegungen führen zu einer gewissen Unschärfe. Der Algorithmus basiert auf der
       \inputTikZ{0.5}{05_eval/images/SimpleMoveVektSecond.tikz}
       \label{fig:FehlerfortMaxAb} 
   }
-  \caption{ } 
+  \caption{} 
    
   \label{fig:SimpleMove}
 \end{figure}
@@ -411,6 +420,15 @@ Die Komponenten zwei bis vier werden verworfen und aus der ersten wird der Winke
 
 \subsection{Experimentelle Evaluierung}
 \subsubsection{Räumliche Synchronisierung}
+
+\begin{figure}[h!]
+  \centering
+  \begin{overpic}[width=0.7\textwidth,trim = 0 0 0 0]{05_eval/images/SpatialSync_Abslocal.png}
+  \end{overpic}
+  \caption{
+  }
+  \label{fig:SpatialSyncAbslocal}
+\end{figure}
 
 \subsubsection{Ergebnisse}
 \begin{figure}[h]
