@@ -82,16 +82,16 @@ Das Dipolmoment $\vec{m}$ einer Stromdichteverteilung wird definiert als \cite{w
     \vec{m} = \frac{1}{2} \iiint \vec{r'} \times \vec{J}(\vec{r'})dv',
     \label{eq:Dipolemoment}
 \end{equation}
-wobei vereinfacht das magnetische Dipolmoment anhand der Anzahl der Windungen $K$, der Querschnittsfläche $A$, dem Strom $I$ und der Öffnungsrichtung der Spule $\vec{e}\tindex{Spule}$ beschrieben wird
+wobei bei einer Spule vereinfacht das magnetische Dipolmoment anhand der Anzahl der Windungen $K$, der Querschnittsfläche $A$, dem Strom $I$ und der Öffnungsrichtung der Spule $\vec{e}\tindex{Spule}$ beschrieben wird
 \begin{equation}
     \vec{m} = I\,A\,K\, \vec{e}\tindex{Spule} ,
 \end{equation}
 für das Vektorpotential ergibt sich \cite{wolfgang_nolting_grundkurs_nodate}
 \begin{equation}
-    \vec{a}\tindex{Dip} = \frac{\mu}{4 \pi} \frac{1}{r^3} \vec{m} \times \vec{r}.
+    \vec{a}\tindex{Dip} = \frac{\mu}{4 \pi} \frac{1}{r^3} \vec{m} \times \vec{r},
     \label{eq:VekPotDipoleMom}
 \end{equation}
-Daraus ergibt sich ein zugehöriges Magnetfeld \cite{wolfgang_nolting_grundkurs_nodate}
+und daraus ergibt sich für das Magnetfeld \cite{wolfgang_nolting_grundkurs_nodate}
 \begin{equation}
     \vec{b}\tindex{Dip}(\vec{r}) = \frac{\mu}{4 \pi} (\frac{3\,(\vec{m}\,\vec{r})\vec{r}}{r^5}-\frac{\vec{m}}{r^3}).
     \label{eq:MagDipoleFeld}
@@ -112,7 +112,7 @@ In Kugelkoordinaten ändert sich die Beschreibung, der Dipol sei angenommen als 
 \end{equation}
 Die Beschreibung in Kugelkoordinaten zeigen, dass ein Dipolfeld keine polare Komponente hat und das Feld nicht vom Polarwinkel abhängt. Das zeigt, dass Dipolfelder rotationssysmetrisch um die Polarisationsrichtung des Dipols sind. Dies bedeutet, dass das Feld nur für eine Ebene in der das Dipolmoment liegt berechnen muss. Der Rest ergibt sich durch eine Rotation. 
 
-\subsubsection{Betrag des Dipolfeldes}
+\subsubsection{Betrag eines Dipolfeldes}
 In diesem Abschnitt soll das eine Beschreibung des Magnetfeldbetrages hergeleitet werden. Diese wird bei der Bestimmung der absoluten Handposition später wiederverwendet.
 Der Betrag des Magnetfeldes $b\tindex{Dip}$ sei definiert durch 
 \begin{equation}
@@ -121,8 +121,8 @@ Der Betrag des Magnetfeldes $b\tindex{Dip}$ sei definiert durch
 \end{equation}
 Aufgrund der Zylindersymetrie wird nur eine Ebene betrachtet. Als Dipolmoment $\vec{m}$ und der Beobachtungspunkt $\vec{r}$ wie folgt definiert:
 \begin{equation}
-    \vec{r} = r\left[\begin{array}{c} \cos(\phi)\\ \sin(\phi) \\ 0\end{array}\right] \quad \textrm{and} \quad
-    \vec{m} = m\left[\begin{array}{c} 1\\ 0 \\ 0\end{array}\right].
+    \vec{r} = r\left[\begin{array}{c} \cos(\phi)\\ \sin(\phi)\end{array}\right] \quad \textrm{and} \quad
+    \vec{m} = m\left[\begin{array}{c} 1\\ 0 \end{array}\right].
     \label{eq:betragDefVeks}
 \end{equation}
 Daraus ergeben sich die folgenden Ausdrücke für die Magnetfeldkomponenten
@@ -147,8 +147,7 @@ Dabei ist der Betrag abhängig zum einen vom Abstand zwischen Quelle und Sensor 
 \end{equation}
 Die Beschreibung des Abstands in Abhängigkeit von $\phi$ und $b\tindex{Dip}$ führt, bei konstant halten von $b\tindex{Dip}$, zu einer Kurvenbeschreibung. Auf dieser Kurve ist der Betrag des Magnetfeldes konstant. Abhängig vom gewählten $b\tindex{Dip}$ ergeben sich konzentrische Kurven um den Mittelpunkt. In Abbildung \ref{fig:BetragMagfield} ist $b\tindex{Dip}$ und die beschriebene Kurve dargestellt.
 \begin{figure}[h] 
-    \centering 
-   % \includegraphics[width=0.5\textwidth,trim = 0 0 0 0]{03_raeumliches_merkmal/images/DipAbs.png} 
+   \centering 
    \scalefont{2}
    \inputTikZ{0.5}{03_raeumliches_merkmal/images/DipFieldAbsFarbBild.tikz}
         \caption{Die Abbildung zeigt exemplarisch den Verlauf des Magnetfeldbetragse. In der Mitte (roter Pfeil) ist ein magnetischer Dipol in $y$-Richtung polarisiert. Je weiter entfernt von der Mitte, desto schwächer wird das Magnetfeld(blau). Die grüne Kurve zeigt beispielhaft den Verlauf von $r(b\tindex{Dip},\phi)$.}
@@ -185,7 +184,7 @@ In dieser Arbeit wird eine 3D-Spule zur Anregung künstlicher Magnetfelder verwe
         \end{overpic}
         \label{fig:Real3D}
     }
-    \caption{3D-Spule: \subref{fig:Sim3D} skizziert das modellierte Simulationsobjekt. Ein Foto der entsprechenden Realisierung ist in \subref{fig:Real3D} zu sehen. Beide Objekte bestehen aus drei zueinander orthogonal stehenden Spulen. Die rote Spule steht für die X-Spule, die grüne für die Y-Spule und die blaue für die Z-Spule. Somit  }
+    \caption{3D-Spule: (a) skizziert das modellierte Simulationsobjekt, wobei rot für die X-Spule, grün für die Y-Spule und blau für die Z-Spule steht. Ein Foto der entsprechenden Realisierung ist in (b) zu sehen. Beide Objekte bestehen aus drei zueinander orthogonal stehenden Spulen.}
     \label{fig:3DCoil}
 \end{figure}
 
@@ -195,7 +194,7 @@ Die Spule kann unterschiedlich angesteuert werden. Zum einen gibt es die Möglic
     \centering
     \scalefont{2}
     \inputTikZ{0.5}{03_raeumliches_merkmal/images/Freq_Spule.tikz}
-    \caption{Frequenzabhängiger Impendanzverlauf der 3D-Spule}
+    \caption{Frequenzabhängiger Impendanzverlaufe einer der Spulen}
     \label{fig:FreqSpule}
 \end{figure}
 

@@ -16,8 +16,11 @@ at={(0.936in,0.481in)},
 scale only axis,
 xmin=0,
 xmax=15,
+xtick = {0,3,...,15},
+xlabel={\Large \textbf{Zeit in s}},
 ymin=-199.629026798177,
 ymax=200.370973201823,
+ylabel={\Large \textbf{Winkel in °}},
 axis background/.style={fill=white},
 axis x line*=bottom,
 axis y line*=left,
@@ -1528,7 +1531,7 @@ legend style={legend cell align=left, align=left, draw=white!15!black}
 14.98	-26.8711799015099\\
 14.99	1.66301014181319\\
 };
-\addlegendentry{data1}
+\addlegendentry{\Large $\hat{\theta}_{mag}$}
 
 \addplot [color=red, dotted]
   table[row sep=crcr]{%
@@ -3033,7 +3036,7 @@ legend style={legend cell align=left, align=left, draw=white!15!black}
 14.98	-59.1539072857689\\
 14.99	-69.1317322945751\\
 };
-\addlegendentry{data2}
+\addlegendentry{\Large $\hat{\phi}_{mag}$}
 
 \addplot [color=mycolor2, line width=2.0pt]
   table[row sep=crcr]{%
@@ -4538,9 +4541,9 @@ legend style={legend cell align=left, align=left, draw=white!15!black}
 14.98	-3.424122449186\\
 14.99	-2.54684428880384\\
 };
-\addlegendentry{data3}
+\addlegendentry{\Large $\hat{\theta}_{opt}$}
 
-\addplot [color=red, line width=1.0pt]
+\addplot [color=red, line width=2.0pt]
   table[row sep=crcr]{%
 0	-35.0667513410194\\
 0.01	-35.1147485756938\\
@@ -6043,7 +6046,7 @@ legend style={legend cell align=left, align=left, draw=white!15!black}
 14.98	-62.5232903820535\\
 14.99	-63.3798434344769\\
 };
-\addlegendentry{data4}
+\addlegendentry{\Large $\hat{\phi_{opt}}$}
 
 \end{axis}
 

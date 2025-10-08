@@ -125,7 +125,7 @@ legend style={legend cell align=left, align=left, draw=white!15!black}
 0.981333333333333	0.524040662770605\\
 0.992	0.611728755384362\\
 };
-\addlegendentry{data1}
+\addlegendentry{$x$-Schätzung}
 
 \addplot [color=mycolor1, dashed, line width=3.0pt]
   table[row sep=crcr]{%
@@ -223,7 +223,7 @@ legend style={legend cell align=left, align=left, draw=white!15!black}
 0.981333333333333	0.014102337601783\\
 0.992	0.0117347243363128\\
 };
-\addlegendentry{data2}
+\addlegendentry{$y$-Schätzung}
 
 \addplot [color=mycolor2, dashed, line width=3.0pt]
   table[row sep=crcr]{%
@@ -321,7 +321,7 @@ legend style={legend cell align=left, align=left, draw=white!15!black}
 0.981333333333333	0.851576483844587\\
 0.992	0.790980547220126\\
 };
-\addlegendentry{data3}
+\addlegendentry{$z$-Schätzung}
 
 \addplot [color=red]
   table[row sep=crcr]{%
@@ -800,7 +800,7 @@ legend style={legend cell align=left, align=left, draw=white!15!black}
 0.988687430431587	0.582910281558286\\
 0.990770807518639	0.599177111910809\\
 };
-\addlegendentry{data4}
+\addlegendentry{$x$-Ground Truth}
 
 \addplot [color=mycolor1]
   table[row sep=crcr]{%
@@ -1279,7 +1279,7 @@ legend style={legend cell align=left, align=left, draw=white!15!black}
 0.988687430431587	0\\
 0.990770807518639	0\\
 };
-\addlegendentry{data5}
+\addlegendentry{$y$-Ground Truth}
 
 \addplot [color=mycolor2]
   table[row sep=crcr]{%
@@ -1758,7 +1758,7 @@ legend style={legend cell align=left, align=left, draw=white!15!black}
 0.988687430431587	0.812536524504369\\
 0.990770807518639	0.800616505302146\\
 };
-\addlegendentry{data6}
+\addlegendentry{$z$-Ground Truth}
 
 \end{axis}
 

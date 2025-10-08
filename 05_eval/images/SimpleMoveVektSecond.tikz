@@ -124,7 +124,7 @@ legend style={legend cell align=left, align=left, draw=white!15!black}
 0.981333333333333	0.014102337601783\\
 0.992	0.0117347243363128\\
 };
-\addlegendentry{data1}
+\addlegendentry{$y$-Schätzung}
 
 \addplot [color=mycolor1]
   table[row sep=crcr]{%
@@ -603,7 +603,7 @@ legend style={legend cell align=left, align=left, draw=white!15!black}
 0.988687430431587	0\\
 0.990770807518639	0\\
 };
-\addlegendentry{data2}
+\addlegendentry{$y$-Ground Truth}
 
 \end{axis}
 

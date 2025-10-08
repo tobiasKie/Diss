@@ -25,7 +25,11 @@ ylabel={y},
 title = {Magnetfeldbetrag},
 axis background/.style={fill=white},
 axis x line*=bottom,
-axis y line*=left
+axis y line*=left,
+legend style={font=\small},
+legend cell align=left,
+legend pos=south east]
+\addlegendimage{line legend,green}\addlegendentry{\large $r(b\tindex{dip},\phi)$}
 ]
 \addplot [forget plot] graphics [xmin=-1.01, xmax=1.01, ymin=-1.01, ymax=1.01] {03_raeumliches_merkmal/images/DipFieldAbsFarbBild-1.png};
 \addplot[-Straight Barb, color=red, line width=6.0pt, point meta={sqrt((\thisrow{u})^2+(\thisrow{v})^2)}, point meta min=0, quiver={u=\thisrow{u}, v=\thisrow{v}, every arrow/.append style={-{Straight Barb[angle'=18.263, scale={2/1000*\pgfplotspointmetatransformed}]}}}]

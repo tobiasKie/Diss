@@ -46,13 +46,13 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.1.2}Magnetischer Dipol}{14}{subsection.3.1.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\nonumberline Herleitung des Dipolfeldes}{14}{subsubsection*.28}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces Berechnung des Magnetfeldes eines infinitisimal kleinen Leiterstücks: In rot ist eine Leiterschleife mit der Stromstärke $I$ zu sehen. Am Beobachtungspunkt $\vec {r}$ soll nun das resultierende Magnetfeld bestimmt werden. Beispielhaft wird dafür das Leiterstück innerhalb des schwarzen Rechtecks betrachtet. Der Pfeil darin gibt die Richtung des Stroms $d\vec {s}$ an. Der rote gestrichelte Pfeil zeigt den Weg vom Strompunkt zum Beobachtungspunkt. Am Beobachtungspunkt resultiert dann das differentielle Magnetfeld $d\vec {B}$.}}{15}{figure.caption.26}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Betrag des Dipolfeldes}{16}{subsubsection*.30}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Betrag eines Dipolfeldes}{16}{subsubsection*.30}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces Die Abbildung zeigt exemplarisch den Verlauf des Magnetfeldbetragse. In der Mitte (roter Pfeil) ist ein magnetischer Dipol in $y$-Richtung polarisiert. Je weiter entfernt von der Mitte, desto schwächer wird das Magnetfeld(blau). Die grüne Kurve zeigt beispielhaft den Verlauf von $r(b_{\textrm {\footnotesize \add@extra@listi {ftns}{Dip}}},\phi )$.}}{17}{figure.caption.31}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.1.3}Quasistationäre Felder}{17}{subsection.3.1.3}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces Äquibetragsfläche: In Blau ist die Oberfläche eines Rotationskörper dargestellt. Der Betrag sei so gewählt, dass bei $\phi = \frac {\pi }{2}$ der Abstand auf 1 normiert sei. Die Einheit ist irrelevant, da nur die Form des Körpers gezeigt werden soll.}}{18}{figure.caption.32}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {3.2}3D-Spule}{18}{section.3.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces 3D-Spule: \subref {fig:Sim3D} skizziert das modellierte Simulationsobjekt. Ein Foto der entsprechenden Realisierung ist in \subref {fig:Real3D} zu sehen. Beide Objekte bestehen aus drei zueinander orthogonal stehenden Spulen. Die rote Spule steht für die X-Spule, die grüne für die Y-Spule und die blaue für die Z-Spule. Somit }}{19}{figure.caption.33}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces Frequenzabhängiger Impendanzverlauf der 3D-Spule}}{19}{figure.caption.34}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces 3D-Spule: (a) skizziert das modellierte Simulationsobjekt, wobei rot für die X-Spule, grün für die Y-Spule und blau für die Z-Spule steht. Ein Foto der entsprechenden Realisierung ist in (b) zu sehen. Beide Objekte bestehen aus drei zueinander orthogonal stehenden Spulen.}}{19}{figure.caption.33}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces Frequenzabhängiger Impendanzverlaufe einer der Spulen}}{19}{figure.caption.34}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {3.3}Sensormodellierung}{19}{section.3.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {3.4}Maximalvektor}{19}{section.3.4}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.4.1}Lokalisierungszusammenhänge}{20}{subsection.3.4.1}\protected@file@percent }
@@ -129,47 +129,49 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces Die Abbildung zeigt die Standardabweichung in Abhängigkeit der Gelenksstellung. $\phi _{\textrm {\footnotesize \add@extra@listi {ftns}{s,2}}}$ zeigt dabei wie stark das Gelenk gebeugt ist, $\phi _{\textrm {\footnotesize \add@extra@listi {ftns}{s,1}}}$ zeigt in welche Richtung das Gelenk gebeugt wird.}}{59}{figure.caption.101}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces }}{59}{figure.caption.102}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{\nonumberline Einfluss von Fehlerfortpflanzung}{59}{paragraph*.104}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces }}{60}{figure.caption.105}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces Auf der linken Seite ist die Standardabweichung und auf der rechten Seite die maximale Abweichung in $^\circ $, die sich durch die Fehlerfortpflanzung ergeben, in Abhängigkeit von der Länge des mittleren Elements und der Variation dieses.}}{60}{figure.caption.106}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{\nonumberline Einfache Bewegung}{61}{paragraph*.108}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces Der obere Teil der Grafik zeigt, wie die kinematische Kette in der Simulation ausgerichtet ist. Der untere Teil zeigt, wie in der Auswertung das erste kinematische Element angenommen wird. Dieses wird zufällig in einem definiertem Winkelbereich variiert und somit die Position des zweiten Gelenks jeweils leicht falsch bestimmt. Die Orientierung des zweiten Elements wird mit dem beschriebenen Algorithmus bestimmt.}}{60}{figure.caption.105}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Einfache Bewegung}{60}{paragraph*.108}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces Auf der linken Seite ist die Standardabweichung und auf der rechten Seite die maximale Abweichung in $^\circ $, die sich durch die Fehlerfortpflanzung ergeben, in Abhängigkeit von der Länge des mittleren Elements und der Variation dieses.}}{61}{figure.caption.106}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.6}{\ignorespaces (a) zeigt den zeitlichen Verlauf der einzelnen Komponenten der Orientierung. (b) ist diesselbe Abbildung mit Fokus auf die $y$-Komponente.}}{61}{figure.caption.109}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\nonumberline Diskussion}{61}{subsubsection*.111}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.2}Experimentelle Evaluierung}{61}{subsection.5.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.2}Experimentelle Evaluierung}{62}{subsection.5.2.2}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {5.7}{\ignorespaces Demonstrator: Die Abbildung zeigt den Demonstrator, der für die Evaluierung verwendet wird. Die 3D-Spule und die kinematischen Elemente sind mit optischen Markern ausgerüstet. }}{62}{figure.caption.112}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Räumliche Synchronisierung und Schätzung der räumlichen Größen}{62}{subsubsection*.114}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.8}{\ignorespaces Definition der Koordinatensysteme: Der rote Pfeil ist jeweils die $x$-Asches, grün die $y$-Achse und blau die $z-Achse$. In \subref {fig:MagCoord} ist eine 3D-Spule mit einem 3D-Druckaufsatz, an dem optische Marker befestigt sind. Mit den farbigen Pfeilen ist das lokale Koordinatensystem der Spule dargestellt. In \subref {fig:OptCoord} ist der Kalibrierungsaufbau dargestellt. Während der Kalibrierung wird die Platte mit den Markern in der Mitte des Messvolumens platziert. Währenddessen wird dann der Stab mit den zwei Markern durch den Messbereich bewegt. Die Lage und Orientierung der Platte während der Kalibrierung definiert dann die Orientierung des optischen Koordinatensystem.}}{63}{figure.caption.115}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Kalibrierung}{63}{subsubsection*.117}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.9}{\ignorespaces Kalibrierung der kinematischen Kette: Die Abbildung zeigt eine kinematische Kette bestehend aus drei Elementen. Die Roten Pfeile zeigen alle Größen die für den Algorithmus vor der Laufzeit bestimmt werden müssen.}}{64}{figure.caption.118}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Ergebnisse}{64}{subsubsection*.120}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Diskussion}{64}{subsubsection*.127}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.10}{\ignorespaces Results for the first element: \ref {fig:AngleFirst} shows the angle estimates in comparison. The optical estimates are shown with dashed lines and the magnetic estimates with solid lines. In \ref {fig:ErrorFirst} the angle error is shown between the orientation estimates.}}{65}{figure.caption.123}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.11}{\ignorespaces Results for the first element: \ref {fig:AngleFirst} shows the angle estimates in comparison. The optical estimates are shown with dashed lines and the magnetic estimates with solid lines. In \ref {fig:ErrorFirst} the angle error is shown between the orientation estimates.}}{65}{figure.caption.124}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {5.1}{\ignorespaces Ergebnisse der statischen Messung des ersten kinematischen Elements.}}{66}{table.caption.121}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {5.2}{\ignorespaces Ergebnisse der statischen Messung des zweiten kinematischen Elements.}}{66}{table.caption.122}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.12}{\ignorespaces Results for the second element: The presentation of the results is as in \ref {fig:ResultsSecondElement}.}}{66}{figure.caption.125}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5.3}Absolute Lokalisierung}{67}{section.5.3}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.13}{\ignorespaces Setup}}{67}{figure.caption.128}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.1}Fehlermaß}{67}{subsection.5.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.2}Simulative Evaluierung}{68}{subsection.5.3.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{\nonumberline Robustheit der Positionsschätzung gegen Rauschen}{68}{figure.caption.131}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{\nonumberline Einfluss eines Positionsfehler auf die Orientierungsschätzung}{68}{figure.caption.134}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{\nonumberline Einfache Bewegung}{68}{figure.caption.137}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.3}Experimentelle Evaluierung}{69}{subsection.5.3.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Räumliche Synchronisierung}{69}{subsubsection*.139}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Ergebnisse}{69}{subsubsection*.142}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.4}Diskussion}{69}{subsection.5.3.4}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.17}{\ignorespaces }}{70}{figure.caption.140}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {6}Zusammenfassung und Ausblick}{73}{chapter.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Räumliche Synchronisierung und Schätzung der räumlichen Größen}{62}{subsubsection*.115}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.8}{\ignorespaces Evaluierungsaufbau: Das Foto zeigt den Demonstrator in der Mitte (rot) und im Außenbereich die Kameras (gelb).}}{63}{figure.caption.113}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.9}{\ignorespaces Definition der Koordinatensysteme: Der rote Pfeil ist jeweils die $x$-Achse, grün die $y$-Achse und blau die $z$-Achse. In (a) ist eine 3D-Spule mit einem 3D-Druckaufsatz, an dem optische Marker befestigt sind. Mit den farbigen Pfeilen ist das lokale Koordinatensystem der Spule dargestellt. In (b) ist das Kalibrationswerkzeug für das optische System. Während der Kalibrierung wird die Platte mit den Markern in der Mitte des Messvolumens platziert. Währenddessen wird der Stab mit den zwei Markern durch den Messbereich bewegt. Die Lage und Orientierung der Platte während der Kalibrierung definiert dann die Orientierung des optischen Koordinatensystem.}}{64}{figure.caption.116}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Kalibrierung}{64}{subsubsection*.118}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.10}{\ignorespaces Kalibrierung der kinematischen Kette: Die Abbildung zeigt eine kinematische Kette bestehend aus drei Elementen. Die Roten Pfeile zeigen alle Größen die für den Algorithmus vor der Laufzeit bestimmt werden müssen.}}{65}{figure.caption.119}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Ergebnisse}{65}{subsubsection*.121}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Diskussion}{65}{subsubsection*.128}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {5.1}{\ignorespaces Ergebnisse der statischen Messung des ersten kinematischen Elements.}}{66}{table.caption.122}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {5.2}{\ignorespaces Ergebnisse der statischen Messung des zweiten kinematischen Elements.}}{66}{table.caption.123}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.11}{\ignorespaces Die Abbildung zeigt die beiden Gelenkswinkel für das erste(a) und zweite Gelenk(b). Dabei sind die Schätzungen der magnetischen Lokalisierung ohne Nachverarbeitung(gestrichelt), sowie die optischen Schätzungen über der Zeit aufgetragen. }}{66}{figure.caption.124}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.12}{\ignorespaces Ergebnisse des ersten Elements: (a) zeigt die Winkelschätzungen im Vergleich. Die optischen sind in gestrichelten Linien und die magnetischen mit durchgezogenen Linien dargestellt. (b) zeigt den Winkelfehler zwischen den beiden SChätzungen.}}{67}{figure.caption.125}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.13}{\ignorespaces Ergebnisse für das zweite Element: Die Darstellung ist wie in Abbildung\,\ref {fig:ResultsFirstElement}.}}{67}{figure.caption.126}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}Absolute Lokalisierung}{68}{section.5.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.14}{\ignorespaces Setup}}{68}{figure.caption.129}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.1}Fehlermaß}{68}{subsection.5.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.2}Simulative Evaluierung}{69}{subsection.5.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Robustheit der Positionsschätzung gegen Rauschen}{69}{paragraph*.131}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Einfluss eines Positionsfehler auf die Orientierungsschätzung}{70}{figure.caption.135}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Einfache Bewegung}{70}{figure.caption.138}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.3}Experimentelle Evaluierung}{70}{subsection.5.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Räumliche Synchronisierung}{70}{subsubsection*.140}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Ergebnisse}{70}{subsubsection*.143}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.4}Diskussion}{70}{subsection.5.3.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.18}{\ignorespaces }}{71}{figure.caption.141}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Zusammenfassung und Ausblick}{75}{chapter.6}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {6.1}Zusammenfassung}{73}{section.6.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.1}Neuheiten}{73}{subsection.6.1.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.2}Ungelöste Probleme}{73}{subsection.6.1.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6.2}Ausblick}{73}{section.6.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.1}Prototyp}{73}{subsection.6.2.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\nonumberline Literaturverzeichnis}{75}{chapter*.146}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.1}Zusammenfassung}{75}{section.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.1}Neuheiten}{75}{subsection.6.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.2}Ungelöste Probleme}{75}{subsection.6.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.2}Ausblick}{75}{section.6.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.1}Prototyp}{75}{subsection.6.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\nonumberline Literaturverzeichnis}{77}{chapter*.147}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\nonumberline Weitere Literatur}{75}{section*.148}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\nonumberline Weitere Literatur}{77}{section*.149}\protected@file@percent }
 \@writefile{toc}{\def \@chapapp {\appendixname }}
 \@writefile{lof}{\def \@chapapp {\appendixname }}
 \@writefile{lot}{\def \@chapapp {\appendixname }}
