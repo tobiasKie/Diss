@@ -1427,7 +1427,7 @@ legend style={legend cell align=left, align=left, draw=white!15!black}
 14.98	145.67465394639\\
 14.99	146.252201554125\\
 };
-\addlegendentry{data1}
+\addlegendentry{$\hat{\psi}\tindex{mag}$}
 
 \addplot [color=red, line width=1.0pt]
   table[row sep=crcr]{%
@@ -2833,7 +2833,7 @@ legend style={legend cell align=left, align=left, draw=white!15!black}
 14.98	141.062984785772\\
 14.99	141.047376425277\\
 };
-\addlegendentry{data2}
+\addlegendentry{$\hat{\psi}\tindex{opt}$}
 
 \end{axis}
 

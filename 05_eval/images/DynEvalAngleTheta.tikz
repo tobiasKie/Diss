@@ -12,7 +12,7 @@
 \begin{axis}[%
 width=14.0in,
 height=2.0in,
-at={(0.0in,0.0in)},
+at={(0.9in,0.0in)},
 scale only axis,
 xmin=1,
 xmax=15,
@@ -1430,7 +1430,7 @@ legend style={legend cell align=left, align=left, draw=white!15!black}
 14.98	1.29930373729793\\
 14.99	1.68330446767942\\
 };
-\addlegendentry{data1}
+\addlegendentry{$\hat{\theta}\tindex{mag}$}
 
 \addplot [color=mycolor2, line width=1.0pt]
   table[row sep=crcr]{%
@@ -2836,7 +2836,7 @@ legend style={legend cell align=left, align=left, draw=white!15!black}
 14.98	4.32951243910598\\
 14.99	4.5298172809516\\
 };
-\addlegendentry{data2}
+\addlegendentry{$\hat{\theta}\tindex{opt}$}
 
 \end{axis}
 

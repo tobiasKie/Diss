@@ -860,7 +860,8 @@ In diesem Kapitel wurden bisher zwei unterschiedliche Lokalisierungsalgorithmen 
 Die Schätzung der kinematischen Kette liefert Orientierungen der kinematischen Elemente im Koordinatensystem der 3D-Spule. Zur Visualisierung oder Weiterverwendung ist diese Darstellung etwas umständlich, daher sollen im Kombinationsmodul alle Größen in das selbe Koordinatensystem transformiert. Die $\vec{e}\tindex{k}^\text{Glob}$ Orientierungen der kinematischen Elmente ergeben sich dann durch
 
 \begin{equation}
-    \vec{e}\tindex{k}^{\,\text{Glob}}  = \tilde{\bvec{R}}\tindex{RPY}\,\vec{e}\tindex{k}^\text{\,3DC}
+    \vec{e}\tindex{k}^{\,\text{Glob}}  = \tilde{\bvec{R}}\tindex{RPY}\,\vec{e}\tindex{k}^\text{\,3DC}.
+    \label{eq:UmrechnungLocGlob}
 \end{equation}
 
 Der Ausgang des Kombinationsmodul sind alle Orientierungen der kinematischen Elemente, repräsentiert als Einheitsvektoren, sowie die absolute Positon der Spule im Raum. Diese werden in einem Ergebnisvektor $\bvec{P}\tindex{$r,\vec{e}\tindex{k}$}$ zusammengefasst.
@@ -958,7 +959,7 @@ Die Nachverarbeitung der absolut Lokalisierung wurde einfach gehalten, zum einen
 
 
 \subsubsection{Glättung}
-Ähnlich wie bei der Nachverarbeitung zur Schätzung einer kinematischen Kette soll auch hier ein Tiefpassfilter angewendet werden um hochfrequente Signalanteile zu filtern. Hier werden die gleichen Filter wie in Kapitel \ref{subsubsection:Glattung_kin} verwendet. Die Eingangsgrößen sind dabei die drei Positionskomponenten $\hat{\vec{r}}\tindex{C} = \left[\begin{array}{c} \hat{x}\tindex{C}\\ \hat{y}\tindex{C} \\ \hat{z}\tindex{C} \end{array}\right]$ und die drei Eulerwinkel $\hat{\phi}\tindex{Ori},\hat{\theta}\tindex{Ori},\hat{\psi}\tindex{Ori}$. Die Ausgangsgrößen sind die gefilterten Werte $\hat{\vec{r}}\tindex{C,filt},\hat{\phi}\tindex{Ori,filt},\hat{\theta}\tindex{Ori,filt},\hat{\psi}\tindex{Ori,filt}$.
+Ähnlich wie bei der Nachverarbeitung zur Schätzung einer kinematischen Kette soll auch hier ein Tiefpassfilter angewendet werden um hochfrequente Signalanteile zu filtern. Hier werden die gleichen Filter wie in Kapitel \ref{subsubsection:Glattung_kin} verwendet. Die Eingangsgrößen sind dabei die drei Positionskomponenten $\hat{\vec{r}}\tindex{C} = \left[\begin{array}{c} \hat{x}\tindex{C}\\ \hat{y}\tindex{C} \\ \hat{z}\tindex{C} \end{array}\right]$. Die Ausgangsgrößen sind die gefilterten Werte $\hat{\vec{r}}\tindex{C,filt}$. Die geschätzten Eulerwinkel müssen nicht gefiltert, da diese bereits in die Orientierungen der kinematischen Elemente eingerechnet wurden (Gleichung\,\ref{eq:UmrechnungLocGlob}) und daher bei der Filterung der Orientierungen gefiltert werden.
 
 \subsection{Übersicht Nachverarbeitung}
 Die beiden Nachverarbeitungsstränge werden nun zusammengefasst und die absolute Position und die einzelnen Gelenkswinkel zu einer Ergebnisvektor $\bvec{P}\tindex{$r,\phi,\theta$}$ zusammengefasst. Das Echtzeitrahmenwerk nutzt diese dann für eine Visualisierung (siehe Anhang), die es ermöglicht nebeneinander die reale Bewegung und die Schätzung in Echtzeit miteinander zu vergleichen. Eine Übersicht der Nachverarbeitung ist in Abbildung\,\ref{fig:UebersichtPostproc} 
@@ -972,7 +973,7 @@ Die beiden Nachverarbeitungsstränge werden nun zusammengefasst und die absolute
         \put(77,57){$\phi\tindex{0-n,Sp},\theta\tindex{0-n,Beu}$}
         \put(59,53){\parbox{.5in}{Bewegungs-einschränkung}}
         \put(29,24){\parbox{1.5in}{Glättung von Position und Orientierung}}
-        \put(55,19){$\hat{\vec{r}}\tindex{C,filt},\hat{\phi}\tindex{Ori,filt},\hat{\theta}\tindex{Ori,filt},\hat{\psi}\tindex{Ori,filt}$}
+        \put(55,19){$\hat{\vec{r}}\tindex{C,filt}$}
     \end{overpic}
     \caption{Übersicht des Nachverarbeitungsmodul: Auf der linken Seite sind die ungefilterten Schätzungen als Eingangsdaten dargestellt. Sowohl die absolute Position als auch die Orientierungen der kinematischen Elemente werden mit einem Tiefpass gefiltert. Die Orientierungen werden dann in Winkel umgerechnet und anhand bekannter Anatomie eingeschränkt. Die Ausgangsdaten sind dann die gefilterte Position, sowie die gefilterten Gelenkswinkel.}
     \label{fig:UebersichtPostproc}
