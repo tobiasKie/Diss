@@ -1,0 +1,74 @@
+% This file was created by matlab2tikz.
+%
+%The latest updates can be retrieved from
+%  http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz
+%where you can also make suggestions and rate matlab2tikz.
+%
+\definecolor{mycolor1}{rgb}{0.4940, 0.1840, 0.5560}%
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=6.0in,
+height=6.0in,
+at={(0.0in,0.0in)},
+scale only axis,
+xmin=-1,
+xmax=1,
+tick align=outside,
+xlabel style={font=\color{white!15!black}},
+xlabel={$x$},
+ymin=-1,
+ymax=1,
+ylabel style={font=\color{white!15!black}},
+ylabel={$y$},
+zmin=-0.559678494930267,
+zmax=0.56316888332367,
+zlabel style={font=\color{white!15!black}},
+zlabel={$z$},
+view={-180}{0},
+axis background/.style={fill=white},
+axis x line*=bottom,
+axis y line*=left,
+axis z line*=left,
+xmajorgrids,
+ymajorgrids,
+zmajorgrids
+]
+\addplot3[-Straight Barb, color=mycolor1, line width=2.0pt, point meta={sqrt((\thisrow{u})^2+(\thisrow{v})^2+(\thisrow{w})^2)}, point meta min=0, quiver={u=\thisrow{u}, v=\thisrow{v}, w=\thisrow{w}, every arrow/.append style={-{Straight Barb[angle'=45, scale={5/1000*\pgfplotspointmetatransformed}]}}}]
+ table[row sep=crcr] {%
+x	y	z	u	v	w\\
+0	0	0	-0.128767131603298	-0.883561896406915	-0.111015368247534\\
+0	0	0	-0.128817838065159	0.883063117041194	-0.10987319271465\\
+0	0	0	0.35835475476379	-0.767120908141273	0.302334132514243\\
+0	0	0	-0.526423843099802	0.583031558820531	-0.4392049842643\\
+0	0	0	0.631657867346502	-0.372607247121512	0.521028828878942\\
+0	0	0	-0.686462353024691	0.156492156957216	-0.559678509045714\\
+0	0	0	0.698993323133051	0.0627173959459182	0.563168880374058\\
+0	0	0	-0.666596943371182	-0.28832453823348	-0.530607818698772\\
+0	0	0	0.577230229545767	0.519268754387704	0.453830323731471\\
+0	0	0	-0.408667578623102	-0.735372908963029	-0.317265429874123\\
+0	0	0	0.150875407310289	0.879160191823934	0.115626590408915\\
+0	0	0	0.15071352838945	-0.879216882562231	0.113998728079478\\
+0	0	0	-0.410031155371732	0.740073145322013	-0.306155214817863\\
+0	0	0	0.585358644919793	-0.529581501064847	0.431531323944232\\
+0	0	0	-0.685605547690702	0.300013223190873	-0.49914335536606\\
+};
+\end{axis}
+
+\begin{axis}[%
+width=6.0in,
+height=6.0in,
+at={(0in,0in)},
+scale only axis,
+xmin=0,
+xmax=1,
+ymin=0,
+ymax=1,
+axis line style={draw=none},
+ticks=none,
+axis x line*=bottom,
+axis y line*=left
+]
+\end{axis}
+\end{tikzpicture}%

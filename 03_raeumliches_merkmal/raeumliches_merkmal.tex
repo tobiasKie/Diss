@@ -113,13 +113,13 @@ In Kugelkoordinaten ändert sich die Beschreibung, der Dipol sei angenommen als 
 Die Beschreibung in Kugelkoordinaten zeigen, dass ein Dipolfeld keine polare Komponente hat und das Feld nicht vom Polarwinkel abhängt. Das zeigt, dass Dipolfelder rotationssysmetrisch um die Polarisationsrichtung des Dipols sind. Dies bedeutet, dass das Feld nur für eine Ebene in der das Dipolmoment liegt berechnen muss. Der Rest ergibt sich durch eine Rotation. 
 
 \subsubsection{Betrag eines Dipolfeldes}
-In diesem Abschnitt soll das eine Beschreibung des Magnetfeldbetrages hergeleitet werden. Diese wird bei der Bestimmung der absoluten Handposition später wiederverwendet.
+In diesem Abschnitt soll eine Beschreibung des Magnetfeldbetrages hergeleitet werden. Diese wird bei der Bestimmung der absoluten Handposition später wiederverwendet.
 Der Betrag des Magnetfeldes $b\tindex{Dip}$ sei definiert durch 
 \begin{equation}
     b\tindex{Dip} = \sqrt{b\tindex{Dip,x}^2+b\tindex{Dip,y}^2+b\tindex{Dip,z}^2}.
     \label{eq:BetragBFeld}
 \end{equation}
-Aufgrund der Zylindersymetrie wird nur eine Ebene betrachtet. Als Dipolmoment $\vec{m}$ und der Beobachtungspunkt $\vec{r}$ wie folgt definiert:
+Aufgrund der Zylindersymetrie wird nur eine Ebene betrachtet, in diesem Fall die $xy$-Ebene. Das Dipolmoment $\vec{m}$ und der Beobachtungspunkt $\vec{r}$ sind wie folgt definiert:
 \begin{equation}
     \vec{r} = r\left[\begin{array}{c} \cos(\phi)\\ \sin(\phi)\end{array}\right] \quad \textrm{and} \quad
     \vec{m} = m\left[\begin{array}{c} 1\\ 0 \end{array}\right].
@@ -184,7 +184,7 @@ In dieser Arbeit wird eine 3D-Spule zur Anregung künstlicher Magnetfelder verwe
         \end{overpic}
         \label{fig:Real3D}
     }
-    \caption{3D-Spule: (a) skizziert das modellierte Simulationsobjekt, wobei rot für die X-Spule, grün für die Y-Spule und blau für die Z-Spule steht. Ein Foto der entsprechenden Realisierung ist in (b) zu sehen. Beide Objekte bestehen aus drei zueinander orthogonal stehenden Spulen.}
+    \caption{3D-Spule: (a) skizziert das modellierte Simulationsobjekt, wobei rot für die $x$-Spule, grün für die $y$-Spule und blau für die $z$-Spule steht. Ein Foto der entsprechenden Realisierung ist in (b) zu sehen. Beide Objekte bestehen aus drei zueinander orthogonal stehenden Spulen.}
     \label{fig:3DCoil}
 \end{figure}
 
@@ -302,14 +302,24 @@ Es wird der Wert $\phi\tindex{m}$ gesucht, für den $b\tindex{sensor}$ maximal w
 zu Null gesetzt
 \begin{equation}
     -2 \sin(\phi\tindex{max})\cos(\phi\tindex{s})-\sin(\phi\tindex{s})  \cos(\phi\tindex{max}) = 0,
+    \label{eq:DiffToZero}
 \end{equation}
 und es ergibt sich ein Zusammenhang zwischen $\phi\tindex{max}$ und $\phi\tindex{s}$
 \begin{equation}
-    -2\cdot\tan(\phi\tindex{max})= \tan(\phi\tindex{s}).
+    -2\cdot\tan(\phi\tindex{max})= \tan(\phi\tindex{s}),
     \label{eq:relMaxS}
 \end{equation}
+
+\begin{equation}
+    \arctan(-2\cdot \tan(\phi\tindex{max})) = \phi\tindex{s}.
+\end{equation}
+Es muss noch geprüft werden, ob es sich bei dem gefundenen Extrmum um ein Minimum oder ein Maximum handelt. Dafür wird die zweite Ableitung nach $\phi\tindex{m}$ gebildet
+\begin{equation}
+    \frac{\text{d}^2b\tindex{sensor}(\phi\tindex{m})}{d\phi\tindex{m}^2}=\frac{ m }{4 \pi r^3}\left ( -2 \cos(\phi\tindex{m})\cos(\phi\tindex{s})+\sin(\phi\tindex{s})  \sin(\phi\tindex{m})\right )
+\end{equation}
+und die Werte für $\phi\tindex{s}$ und $\phi\tindex{max}$ eingesetzt. Wenn der Wert der zweiten Ableitung negativ handelt es sich um ein Maxima, wenn er positiv ist um ein Minima. Wenn ein Minima gefunden wurde, muss hier eine Anpassung vorgenommen werden. Aufgrund der Periodizität der $\sin \ \cos$- Funktionen sind die Nullstellen von Gleichung\,\ref{eq:formel13} immer um $\pi$ voneinander entfernt, daher ist $\phi\tindex{s}\pm\pi$ ebenfalls eine Lösung für Gleichung\,\ref{eq:DiffToZero}. Das Maxima liegt dann um $\pi$ verschoben.
     
-Gleichung \ref{eq:relMaxS} zeigt einen Zusammenhang zwischen $\vec{e}\tindex{max}$,$\vec{e}\tindex{r}$ und $\vec{e}\tindex{s}$. Dieser Zusammenhang gilt nicht nur für $\phi = 0$ sondern gilt auch wenn der Sensor nicht auf der $x$-Achse lokalisiert ist, da die Winkeldefinitionen nicht nur in Bezug auf die $x$-Achse, sondern auch in Bezug auf $\vec{e}\tindex{r}$ gewählt sind. In Abbildung \ref{fig:maxvectorAcngles} ist diese Verallgemeinerung dargestellt. 
+Gleichung \ref{eq:relMaxS} zeigt einen Zusammenhang zwischen $\vec{e}\tindex{max}$,$\vec{e}\tindex{r}$ und $\vec{e}\tindex{s}$. Dieser Zusammenhang gilt nicht nur für $\phi = 0$ sondern gilt auch wenn der Sensor nicht auf der $x$-Achse lokalisiert ist, da in diesem Fall $\vec{e}\tindex{r}=\vec{e}\tindex{x}$ ist, lässt sich der Zusammenhang verallgemeinern. Die Winkeldefinitionen werden verallgemeinert, indem diese in Bezug auf $\vec{e}\tindex{r}$ beschrieben werden. In Abbildung \ref{fig:maxvectorAcngles} ist diese Verallgemeinerung dargestellt. 
     
     \begin{figure}[h!]
 \centering
@@ -325,7 +335,7 @@ Gleichung \ref{eq:relMaxS} zeigt einen Zusammenhang zwischen $\vec{e}\tindex{max
     \put(69,22){$\vec{e}\tindex{s}$}
     \put(30,11){$\vec{e}\tindex{s}$}
     \put(36,7){$\phi\tindex{s}$}
-    \put(37,2.5){$\phi\tindex{max}$}
+    \put(38,2.5){$\phi\tindex{max}$}
     \put(63,8){$\phi$}
     \put(7,2){3D-Spule}
     \put(54,2){3D-Spule}
@@ -338,7 +348,7 @@ Gleichung \ref{eq:relMaxS} zeigt einen Zusammenhang zwischen $\vec{e}\tindex{max
 \label{fig:maxvectorAcngles}
 \end{figure}
 
-Die drei Vektoren können $\vec{e}\tindex{max},\vec{e}\tindex{s},\vec{e}\tindex{r}$ nun verwendet werden um aus zweien den dritten zu berechnen. Bei bekanntem $\vec{e}\tindex{max},\vec{e}\tindex{r}$ wird mit einer einfachen Rotation $\vec{e}\tindex{s}$ bestimmt. Die zugehörige Berechnungsvorschrift wird im folgenden einmal gezeigt. 
+Mit dem beschriebenen Zusammenhang kann jeweils einer der drei Vektoren $\vec{e}\tindex{max},\vec{e}\tindex{s},\vec{e}\tindex{r}$ mithilfe einer Rotation aus den anderen beiden berechnet werden. Die zugehörige Berechnungsvorschrift für $\vec{e}\tindex{s}$ wird im folgenden einmal gezeigt. 
 
 
 \begin{enumerate}
@@ -377,15 +387,14 @@ Daraus ergibt sich, dass mit dem MV für jede relative Position eine Sensororien
     \begin{figure}[h]
         \centering
         \inputTikZ{0.5}{04_lokalisierung/images/potentialposes.tikz}
-        \caption{Potentielle Posen der Sensoren: In der Mitte ist ein MV in $y$-Richtung polarisiert. Die Blauen Vektoren zeigen potentielle Posen, also die Vektoranfänge definieren die Sensorposition und die Pfeile die Sensororientierung.}
+        \caption{Potentielle Posen der Sensoren: In der Mitte ist ein MV in $y$-Richtung polarisiert. Die Blauen Vektoren zeigen potentielle Posen, Positionen mit den zugehörigen Orientierungen. Der Anfang der Pfeile definiert die Position und die Richtung des Pfeils die zugehörige Orientierung.}
         \label{fig:PotentialPoses}
     \end{figure} 
 
 \subsubsection{Distanz zwischen Sensor und Quelle}
-
-Die Ausrichtung eines Einheitsvektors lässt sich mit 2 Winkeln beschreiben. Eine 3D-Spule kann drei Informationen an einen Sensor übertragen. Als dritte Information definieren wir die Länge $g$ des Maximalvektors. $g$ soll ein Maß für die Distanz zwischen Sensor und Quelle sein, ähnlich wie in Gleichung \ref{eq:Bvonr}. Dort wurde gezeigt, wie sich der Magnetfeldbetrag in Bezug auf die Distanz zwischen Sensor und Spule und die Richtugnsabhängigkeit. Dies entspricht dem Verhalten, einer gewöhnlichen Spule und einem 3D-Sensor. 
+Mit einem Setup aus einer 3D-Spule und einem 1D-Sensor lassen sich drei Informationen über die Lage zueinander übertragen. Der MV ist ein Einheitsvektor und enthält daher zwei Informationen(Ausrichtung kann mit zwei Winkeln beschrieben werden) und beschreibt den Zusammenhang zwischen $\vec{e}\tindex{r}$ und $\vec{e}\tindex{s}$. Als dritte Information definieren wir die Länge $g$ des Maximalvektors. $g$ soll ein Maß für die Distanz zwischen Sensor und Quelle sein, ähnlich wie in Gleichung \ref{eq:Bvonr}. Dort wurde gezeigt, wie sich der Magnetfeldbetrag in Bezug auf die Distanz zwischen Sensor und Spule und die Richtugnsabhängigkeit.
         
-Im folgenden soll nun gezeigt werden, dass dasselbe Verhalten auch bei einer 3D-Spule in Verbindung mit einem normalen Sensor auftritt. Da bereits im vorigen Kapitel gezeigt wurde, dass die orthogonale Komponente keinen Beitrag zum Sensorsignal liefert, wird die Herleitung in der $xy$-Ebene vorgenommen, ohne die Allgemeingültigkeit einzuschränken. Dafür definieren wir die Position der 3D-Spule $\vec{r}\tindex{c}$, die Ausrichtung des Sensors $\vec{e}\tindex{s}$, und die Ausrichtung der x- und y-Spule $\vec{m}\tindex{x}$, $\vec{m}\tindex{y}$:
+Im folgenden soll nun gezeigt werden, dass sich der Betrag des Magnetfeldes bei einem. Da bereits im vorigen Kapitel gezeigt wurde, dass die orthogonale Komponente keinen Beitrag zum Sensorsignal liefert, wird die Herleitung in der $xy$-Ebene vorgenommen, ohne die Allgemeingültigkeit einzuschränken. Dafür definieren wir die Position der 3D-Spule $\vec{r}\tindex{c}$, die Ausrichtung des Sensors $\vec{e}\tindex{s}$, und die Ausrichtung der $x$- und $y$-Spule $\vec{m}\tindex{x}$, $\vec{m}\tindex{y}$:
 
     \begin{equation}
         \vec{r}\tindex{c} = r \left[\begin{array}{c} \cos(\phi)\\ \sin(\phi) \end{array}\right],\quad
@@ -410,7 +419,7 @@ Es muss nun gezeigt werden, dass eine Betragsbildung der Komponenten zum selben 
     b = \sqrt{b\tindex{x}^2 + b\tindex{y}^2} =\frac{m}{4 \pi r^3} \sqrt{1+3 \cos^2(\phi)}.
     \label{eq:BBetrag1DSen}
 \end{equation}
-Das Ergebnis lässt sich wie Gleichung \ref{eq:BetragErgebnis} interpretieren. Der Betrag ist hier wieder abhängig vom Abstand zwischen Spule und Sensor, sowie vom Winkel $\phi$. $\phi$ beschreibt den Polarwinkel der Spulenposition. Verallgemeinert ist dieser Winkel, der Winkel zwischen der Sensorachse und dem Positionsvektor von Sensor zu Spule. Aufgrund der Zylindersymetrie können wieder Äquibetragsflächen definiert werden. Um dem Merkmal $g$ direkt eine Distanzabhängigkeit zuordnen zu können, wird dieses mit dem Dipolmoment normiert, wird dies wie folgt definiert
+Das Ergebnis lässt sich wie Gleichung \ref{eq:BetragErgebnis} interpretieren. Der Betrag ist hier wieder abhängig vom Abstand zwischen Spule und Sensor, sowie vom Winkel $\phi$. $\phi$ beschreibt den Polarwinkel der Spulenposition. Verallgemeinert ist dieser Winkel, der Winkel zwischen der Sensorachse und dem Positionsvektor von Sensor zu Spule. Aufgrund der Zylindersymetrie können wieder Äquibetragsflächen definiert werden. Um dem Merkmal $g$ direkt eine Distanzabhängigkeit zuordnen zu können, wird dieses normiert
 \begin{equation}
     g = b \, \frac{4 \pi}{m}.
     \label{eq:defG}
