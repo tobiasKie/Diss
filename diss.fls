@@ -1358,6 +1358,12 @@ INPUT .\05_eval\images\SecondElement_Error.tex
 INPUT .\05_eval\images\SecondElement_Error.tex
 INPUT .\05_eval\images\SecondElement_Error.tex
 INPUT 05_eval\images\SecondElement_Error.tex
+INPUT .\05_eval\images\FFTAngles.tikz
+INPUT .\05_eval\images\FFTAngles.tikz
+INPUT 05_eval\images\FFTAngles.tikz
+INPUT .\05_eval\images\FFTMag.tikz
+INPUT .\05_eval\images\FFTMag.tikz
+INPUT 05_eval\images\FFTMag.tikz
 INPUT .\05_eval\images\AbsSimSensorSetup.tikz
 INPUT .\05_eval\images\AbsSimSensorSetup.tikz
 INPUT 05_eval\images\AbsSimSensorSetup.tikz

@@ -23,7 +23,7 @@ xmajorgrids,
 ymajorgrids,
 legend style={legend cell align=left, align=left, draw=white!15!black}
 ]
-\addplot [color=red, dashed, line width=4.0pt]
+\addplot [color=red, line width=1.0pt]
   table[row sep=crcr]{%
 0.99	-37.9542480936147\\
 1	-38.8379142669571\\
@@ -1429,7 +1429,7 @@ legend style={legend cell align=left, align=left, draw=white!15!black}
 };
 \addlegendentry{$\hat{\psi}\tindex{mag}$}
 
-\addplot [color=red, line width=1.0pt]
+\addplot [color=red, dashed , line width=4.0pt]
   table[row sep=crcr]{%
 0.99	7.7022312764394\\
 1	7.5797772192415\\

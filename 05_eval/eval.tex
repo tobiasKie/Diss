@@ -207,6 +207,7 @@ Um die beiden Ergebnisse miteinander vergleichen zu können, müssen diese im gl
 
 \begin{equation}
     \bvec{R}\tindex{Opt$\rightarrow$ Mag} = \left[\begin{array}{c} \vec{e}\tindex{x,Mag}^\text{\,T} \\ \vec{e}\tindex{y,Mag}^\text{\,T} \\ \vec{e}\tindex{z,Mag}^\text{\,T} \end{array}\right].
+    \label{eq:CoordinateTrans}
 \end{equation}
 
 Die optische Orientierung der kinematischen Elemente wird mithilfe der Positionen $\vec{r}\tindex{$i,j$}$ der optischen Marker bestimmt, wobei $i$ die Nummer des Elements ist und $j$ die Nummer des jeweiligen Markers ist. Die Orientierungsschätzung $\hat{\vec{e}}_{\text{opt},i}$ des jeweiligen Elements ergibt sich wie folgt
@@ -359,9 +360,27 @@ In den Tabellen\,\ref{tab:Ergebnisse1},\,\ref{tab:Ergebnisse2} sind die Ergebnis
     \label{fig:ResultsSecondElement}
   \end{figure}
 \subsubsection{Diskussion}
+Das magnetische System wurde mit einem kommerziellen Kamerasystem von \textit{Qualisys} verglichen. Die statischen Messungen zeigen den geringsten Fehler. Der Fehler liegt im Bereich von wenigen $^\circ$. Der restliche Fehler hat verschiedene Gründe, in der Modellbildung wurde sowohl das Sensormodell und das Spulenmodell vereinfacht. 
 
-Die statischen Messungen 
+Die dynamischen Messungen ohne Nachverarbeitung zeigen, dass die magnetischen Schätzungen stärker verrauscht sind als die optischen. Mit einer kürzeren Rahmenlänge von 256 (5.3\,ms) wurden die Daten prozessiert und damit eine Frequenzanalyse durchgeführt. Diese ist in Abbildung\,\ref{fig:FFTAngles} dargestellt. 
 
+\begin{figure}[h]
+  \scalefont{2}
+  \centering
+  \subfloat[FFT der Winkelschätzung]{
+    \inputTikZ{0.425}{05_eval/images/FFTAngles.tikz}
+    \label{fig:FFTAngles1} 
+  }
+  \subfloat[FFT eines Kanals von $\bvec{b}$]{
+    \inputTikZ{0.425}{05_eval/images/FFTMag.tikz}
+    \label{fig:FFTMag}
+  }
+  \caption{Frequenzanalyse der Winkelschätzung}
+  \label{fig:FFTAngles}
+\end{figure}
+
+Darin ist gut zu sehen, dass es tieffrequent (im Bereich bis 5\,Hz) Anteile gibt. Diese sind Teil der Bewegung. Desweiteren gibt es Spitzen bei 20\,Hz, 70\,Hz und 80\,Hz. Die Spitzen bei 20\,Hz und 80\,Hz lassen sich mit Harmonischen der Netzspannung erklären. Diese liegen bei 550\,Hz,650\,Hz,750\,Hz und 850\,Hz (siehe Abbildung\,\ref{fig:FFTAngles}). Die Anregungssignale liegen bei 630\,Hz,700\,Hz und 770\,Hz, und eine Bewegung führt zu einer Amplitudenmodulation, also zu frequenzanteilen bei den Anregungssignalen $\pm$ den Frequenzanteilen der Bewegung. Die Netzspannung bei 650\,Hz und 750\,Hz sind jeweils 20\,Hz von den Anregungssignalen entfernt, die bei 550\,Hz und 850\,Hz jeweils 80\,Hz und sorgen so für Artefakte in der Schätzung. Der Ursprung der Störungen bei 70\,Hz können unterschiedliche Ursachen haben, zum einen hat die Spule in diesem Bereich ein leichtes frequenzabhängiges Verhalten, zum Anderen zeigt auch die verwendete Sensorik ein frequenzabhängiges Verhalten. Diese verbliebenen Modellfehler können zu diesen Artefakten führen. In der Nachverarbeitung wird ein Tiefpassfilter angewendet und dieses Rauschen wird stark reduziert und sowohl beim ersten als auch beim zweiten Element korrelieren die optische und magnetische Schätzung sehr gut. 
+  
 \section{Absolute Lokalisierung}
 \begin{figure}[h]
   \centering
@@ -454,10 +473,22 @@ Dieser Winkel wird als Fehlermaß für die Orientierungsschätzung verwendet.
  
 
 \subsection{Simulative Evaluierung}
-
+Die Sensorpaare sind $0.7\,\text{m}$ voneinander entfernt. Das $x$-Sensorpaar ist lokalisiert bei $\vec{r}\tindex{s,x} = \begin{pmatrix}
+  \pm 0.35\,\text{m} \\
+  0 \\
+  0 
+\end{pmatrix}$, das $y$-Sensorpaar bei ${r}\tindex{s,y} = \begin{pmatrix}
+  0 \\
+  \pm 0.35\,\text{m} \\
+  0 
+\end{pmatrix}$ und das $z$-Sensorpaar bei  ${r}\tindex{s,z} = \begin{pmatrix}
+  0 \\
+  0 \\
+  \pm 0.35\,\text{m} 
+\end{pmatrix}$.
 
 \paragraph{Robustheit der Positionsschätzung gegen Rauschen}
-Die Robustheit der Positionsschätzung soll anhand eines Sensorpaares, also in einer Koordinate, geprüft werden. Da die drei Koordinaten unabhängig voneinander bestimmt werden, ergibt sich jeweils dasselbe Ergebnis. Auf das Sensorsignal wird weißes Rauschen addiert, mit einem konstatnten Rauschteppich von $150\,\frac{\text{pT}}{\sqrt{\text{Hz}}}$ ergibt. Die Spule wird so angesteuert, dass der maximale Strom bei 1\,A liegt. 
+Die Robustheit der Positionsschätzung soll anhand eines Sensorpaares, also in einer Koordinate ($x$), geprüft werden. Da die drei Koordinaten unabhängig voneinander bestimmt werden, ergibt sich jeweils dasselbe Ergebnis. Auf das Sensorsignal wird weißes Rauschen addiert, mit einem konstatnten Rauschteppich von $150\,\frac{\text{pT}}{\sqrt{\text{Hz}}}$ ergibt. Die Spule wird so angesteuert, dass der maximale Strom bei 1\,A liegt. Die Sensoren sind 70\,cm voneinander entfernt. In einem Raster von 1\,cm wird jede Position in der $xy$-Ebene für 100 Rahmen simuliert. Die Untersuchung wird nur in einer Ebene durchgeführt, da aufgrund der Zylindersymmetrie des Dipolfeldes alle anderen Ebenen sich äquivalent ergeben. Es wird zum einen geprüft, wie groß die Standardabweichung innerhalb der 100 Schätzungen ist und ob der Mittelwert möglichst gut zum wahren Wert konvergiert. Das Ergebnis ist Abbildung\,\ref{fig:PosSimEval} dargestellt.
 \begin{figure}[h]
   \centering
   \subfloat[Standardabweichung der Position]{
@@ -465,7 +496,7 @@ Die Robustheit der Positionsschätzung soll anhand eines Sensorpaares, also in e
     \inputTikZ{0.425}{05_eval/images/StdAbweichung_Pos.tikz}
     \label{fig:stdAbwPosSim}
   }
-  \subfloat[Abweichung der mittleren Position von Ground Truth]{
+  \subfloat[Abweichung der mittleren Position vom Ground Truth]{
     \scalefont{2}
     \inputTikZ{0.425}{05_eval/images/absoluterFehler_Pos.tikz}
     \label{fig:errorPosSim}
@@ -473,81 +504,100 @@ Die Robustheit der Positionsschätzung soll anhand eines Sensorpaares, also in e
   \caption{}
   \label{fig:PosSimEval}
 \end{figure}
+Die Simulation zeigt, dass die Positionsschätzung in der Nähe der Symmetrieachse am robustesten ist. Genau in der Mitte der Anordnung ist die Standardabweichung am geringsten. Bei einer Mittelung über 100 Rahmen liegt der Fehler im gesamten Messvolumen im sub-mm-Bereich. 
 
 \paragraph{Einfluss eines Positionsfehler auf die Orientierungsschätzung}
+Die Position der 3D-Spule geht in die Orientierungsschätzung ein. Mit einer Simulation wird überprüft, wie sich eine falsche Schätzung der Position auf die Orientierung auswirkt. Die Spule wird dafür in der Mitte des Aufbaus positioniert. Um eine falsche Position zu schätzen wird ein zufälliger räumlicher Vektor mit auf die korrekte Position addiert. Die Länge dieses Vektors wird variiert, zwischen 0\,m und 0.1\,m in 0.01\,m Schritten, und für jede Länge jeweils 100 Rahmen simuliert. Das Ergebnis ist die Standardabweichung des Orientierungsfehler in Abhängigkeit vom Positionsfehler, dargestellt in Abbildung\,\ref{fig:stdAbwOrPosVar}. 
+
 \begin{figure}[h]
   \centering
   \scalefont{2}
   \inputTikZ{0.425}{05_eval/images/Abhängigkeit_or_Pos.tikz}
+  \caption{Standardabweichung des Orientierungsfehler in Abhängigkeit vom Positionsfehler}
   \label{fig:stdAbwOrPosVar}
-
-  \caption{}
-  \label{fig:PosSimEval}
 \end{figure}
+In einem Bereich bis 0.1\,cm verhält sich der Fehler linear, ein Positionsfehler von 0.05\,m führt zu einem Orientierungsfehler von ungefähr $1^\circ$.
+
 \paragraph{Einfache Bewegung}
+Eine einfache Bewegung wurde simuliert, dabei wurde die 3D-Spule mit einer konstanten Geschwindigkeit von $v = 0.1\,\frac{\text{m}}{\text{s}}$ der Startpunkt liegt bei $\vec{r}\tindex{c,start} = \begin{pmatrix}
+  -0.3\,\text{m} \\
+  0\,\text{m} \\
+  0\,\text{m}
+\end{pmatrix}$. Die Bewegung wird für insgesamt $0.6\,\text{m}$ simuliert. 
 \begin{figure}[h]
   \centering
-  \subfloat[Angle of movement for the second element]{
+  \subfloat[Vergleich $x$-Komponente gegen Ground Truth]{
     \scalefont{2}
     \inputTikZ{0.45}{05_eval/images/MovementComponent.tikz}
     \label{fig:MovementComponent}
   }
-  \subfloat[Magnitude of the angular error between optical and magnetic estimation]{
+  \subfloat[Fehler im Vergleich zum Ground Truth]{
     \scalefont{2}
     \inputTikZ{0.45}{05_eval/images/FehlerBewegung.tikz}
     \label{fig:ErrorMovement}
   } 
-  \caption{}
+  \caption{Simulation einer Einfachen Bewegung}
   \label{fig:AbsMovement}
 \end{figure}
-
+In Abbildung\,\ref{fig:AbsMovement} ist das Ergebnis dargestellt. Bei einer Bewegung mit einer Geschwindigkeit von $0.1\,\frac{\text{m}}{\text{s}}$, kommt es zu Fehlern durch die Bewegung von maximal 0.2\,mm. In der Mitte des Aufbaus, ist der Fehler an geringsten, was mit Blick auf die Ergebnisse aus Abbildung\,\ref{fig:PosSimEval} erklären. Hier sieht man, dass die Schätzung in der Mitte des Aufbaus am robustesten ist und Störungen hier am wenigsten Einfluss auf das Ergebnis haben.
 \subsection{Experimentelle Evaluierung}
+Für die Experimentelle Synchronisierung wurden statische und dynamische Messungen durchgeführt. Jede Messsequenz hat eine Länge von 15\,s.
 \subsubsection{Räumliche Synchronisierung}
+Die Koordinatenachsen im Lokalisierungssetup sind durch die Ausrichtung der Sensorpaarachsen definiert. Das Setup ist in Abbildung\,\ref{fig:SpatialSyncAbslocal} dargestellt. Die Sensoren sind an PVC-Streben befestigt, die mit der Sensorachse ausgerichtet sind. Die zusammengehörenden Sensoren sind 0.5\,m voneinander entfernt. An den Streben sind ebenfalls an jeder Strebe zwei optische Marker, mit denen die magnetischen Koordinatenachsen im optischen System $\vec{e}\tindex{x,mag,opt},\vec{e}\tindex{y,mag,opt},\vec{e}\tindex{z,mag,opt}$ bestimmt werden können. Dafür wird die Position der Marker $\vec{r}\tindex{x,1-2},\vec{r}\tindex{y,1-2},\vec{r}\tindex{z,1-2}$ bestimmt und die Koordinatenachsen berechnet
+
+\begin{equation}
+  \vec{e}\tindex{x,mag,opt} = \frac{\vec{r}\tindex{x,2}-\vec{r}\tindex{x,1}}{|\vec{r}\tindex{x,2}-\vec{r}\tindex{x,1}|},
+\end{equation}
+\begin{equation}
+  \vec{e}\tindex{y,mag,opt} = \frac{\vec{r}\tindex{y,2}-\vec{r}\tindex{y,1}}{|\vec{r}\tindex{y,2}-\vec{r}\tindex{y,1}|},
+\end{equation}
+\begin{equation}
+  \vec{e}\tindex{z,mag,opt} = \frac{\vec{r}\tindex{z,2}-\vec{r}\tindex{z,1}}{|\vec{r}\tindex{z,2}-\vec{r}\tindex{z,1}|}.
+\end{equation}
 
 \begin{figure}[h]
   \centering
   \begin{overpic}[width=0.7\textwidth,trim = 0 0 0 0]{05_eval/images/SpatialSync_Abslocal.png}
   \end{overpic}
-  \caption{
-  }
+  \caption{Aufbau für die Evaluierung der Lokalisierung: Es ist ein würfelförmiger Aufbau, mit grauen PVC-Streben. An diesen sind die Sensoren(Rot, Grün und Blau) angebracht. An diesen Streben sind in jeder Richtung zwei optische Marker angebracht. }
   \label{fig:SpatialSyncAbslocal}
 \end{figure}
+Wie in Gleichung\,\ref{eq:CoordinateTrans} lässt sich aus den Koordinatenachsen eine Rotationsmatrix zwischen den beiden Systemen bestimmen. Es bleibt bei der absoluten Lokalisierung ein Offset ziwschen den Ursprüngen. Dafür werden die statischen Messungen verwendet und die Differenz zwischen jeweils zwischen magnetischer und optischer Schätzung bestimmt. Diese Differenz wird als Translation auf die optische Schätzung angewendet. Die Koordinatensysteme teilen somit die Ausrichtung und den Ursprung.
 
 \subsubsection{Ergebnisse}
+Es wurde mit einer statischen Evaluierung begonnen, alle Aufnahmen waren hier 10\,s lang. Es wurden zwölf Testpostionen ausgewählt, in drei unterschiedlichen Höhen ($z$-Komponente). In jeder der drei Höhen wurden vier Messungen durchgeführt, in jedem Quadrant eine. Die Ergebnisse der statischen Evaluierung sind in Tabelle\,\ref{tab:ErgebnisseAbsPos} und \ref{tab:ErgebnisseAbsOri} zu sehen. Der mittlere Fehler der Positionsschätzung beträgt 15.2\,mm und der mittlere Fehler der Orientierungsschätzung beträgt $16.1^\circ$.
 \begin{table}[h]
   \centering
   \begin{tabular}{|c| c| c| c| c| c| c|}
   \hline 
    $\hat{x}_{opt}$ & $\hat{x}_{mag}$ & $\hat{y}_{opt}$ & $\hat{y}_{mag}$ & $\hat{z}_{opt}$ & $\hat{z}_{mag}$ & Fehler \\ 
    \hline
-   $-3.5^\circ$ & $-3.7^\circ$ & $1.2^\circ$  & $1.7^\circ$ & $0.5^\circ$ \\ 
+   -70.6 & -70.5 & -58.8  & -47.4 & 37.1& 29.6  & 13.6 \\ 
    \hline
-   $-3.6^\circ$ & $-3.8^\circ$ & $42.3^\circ$   & $42.1^\circ$ & $0.3^\circ$ \\
+   125.8 & 115.5 & -100.9  & -99.0 & 40.1 & 40.71  & 10.5 \\ 
    \hline
-   $-3.9^\circ$ & $-4.4^\circ$ & $88.5^\circ$  & $86.6^\circ$ & $1.9^\circ$ \\
+   77.3 & 77.3 & 114.3  & 110.5 & 39.5 & 39.4  & 3.7 \\ 
    \hline
-   $-1.3^\circ$ & $-1.9^\circ$ & $-39.2^\circ$ & $-39.6^\circ$ & $0.7^\circ$ \\
+   -265.3 & -248.2 & 200.9  & 165.8 & 35.3 & 31.0  & 39.3 \\ 
    \hline
-   $-0.2^\circ$ & $-0.1^\circ$ & $-88.0^\circ$ & $-88.4^\circ$ & $0.4^\circ$ \\ 
+   -149.3 & 147.4 & -102.5  & -118.8 & -179.7 & -184.9  & 17.2 \\ 
    \hline
-   $-45.6^\circ$ & $-46.0^\circ$ & $5.9^\circ$ & $3.1^\circ$ & $2.0^\circ$  \\ 
+   219.4 & 203.0 & -106.6  & 100.8 & -172.6 & -156.8  & 23.5 \\ 
    \hline
-   $-45.4^\circ$ & $-45.3^\circ$ & $44.1^\circ$  & $42.9^\circ$ & $0.8^\circ$ \\
+   69.2 & 50.2 & 91.9  & 104.9 & -175.6 & -164.1  & 25.7 \\ 
    \hline
-   $-46.5^\circ$ & $-46.3^\circ$ & $-32.3^\circ$ & $-35.6^\circ$ & $2.3^\circ$ \\
+  -107.5 & -99.7 & 177.8  & 181.1 & -177.34 & -167.7  & 12.8 \\ 
    \hline
-   $35.0^\circ$ & $34.9^\circ$ & $2.6^\circ$ & $3.9^\circ$ & $1.1^\circ$ \\
+   -30.6 & -26.8 & -53.9  & -44.3 & 114.4 & 108.2  & 12.1 \\ 
    \hline
-   $35.6^\circ$ & $34.7^\circ$ & $41.2^\circ$  & $41.2^\circ$ & $0.8^\circ$ \\ 
+   211.4 & 214.1 & -119.6  & -115.8 & 119.9 & 114.2  & 7.3 \\ 
    \hline
-   $34.7^\circ$ & $35.4^\circ$ & $-48.7^\circ$  & $-47.7^\circ$ & $1.1^\circ $ \\ 
+   93.1 & 100.0 & 145.8  & 146.3 & 116.9 & 111.0  & 9.1 \\ 
    \hline
-   $86.6^\circ$ & $85.8^\circ$ & $171.2^\circ$ & $132.6^\circ$ & $2.6^\circ$ \\
-   \hline
-   $-89.4^\circ$ & $-87.1^\circ$ & $-14.5^\circ$ & $-57.6^\circ$ & $2.4^\circ$ \\
+   -142.1 & -136.7 & 128.3  & 133.9 & 114.6 & 112.1  & 8.2 \\ 
    \hline
   \end{tabular}
-  \caption{Ergebnisse der statischen Messung des ersten kinematischen Elements.}
+  \caption{Ergebnisse der statischen Positionsschätzung, alle Größen in mm, der mittlere Fehler beträgt 15.2\,mm}
   \label{tab:ErgebnisseAbsPos}
 \end{table}
 
@@ -557,85 +607,84 @@ Die Robustheit der Positionsschätzung soll anhand eines Sensorpaares, also in e
   \hline 
    $\hat{\phi}_{opt}$ & $\hat{\phi}_{mag}$ & $\hat{\theta}_{opt}$ & $\hat{\theta}_{mag}$ & $\hat{\psi}_{opt}$ & $\hat{\psi}_{mag}$ & Fehler \\ 
    \hline
-   $-3.5^\circ$ & $-3.7^\circ$ & $1.2^\circ$  & $1.7^\circ$ & $0.5^\circ$ \\ 
+   $84.4^\circ$ & $99.6^\circ$ & $87.5^\circ$  & $85.8^\circ$ & $82.6^\circ$ & $106.2^\circ$ & $8.6^\circ$ \\ 
    \hline
-   $-3.6^\circ$ & $-3.8^\circ$ & $42.3^\circ$   & $42.1^\circ$ & $0.3^\circ$ \\
+   $89.2^\circ$ & $89.9^\circ$ & $5.7^\circ$   & $3.6^\circ$ & $-172.2^\circ$& $-175.9^\circ$ & $4.4^\circ$ \\
    \hline
-   $-3.9^\circ$ & $-4.4^\circ$ & $88.5^\circ$  & $86.6^\circ$ & $1.9^\circ$ \\
+   $161.1^\circ$ & $176.0^\circ$ & $88.6^\circ$  & $87.3^\circ$ & $148.3^\circ$ & $175.4^\circ$ & $12.0^\circ$\\
    \hline
-   $-1.3^\circ$ & $-1.9^\circ$ & $-39.2^\circ$ & $-39.6^\circ$ & $0.7^\circ$ \\
+   $160.2^\circ$ & $-60.7^\circ$ & $88.1^\circ$ & $58.1^\circ$ & $-128.2^\circ$ & $13.2^\circ$ & $33.4^\circ$ \\
    \hline
-   $-0.2^\circ$ & $-0.1^\circ$ & $-88.0^\circ$ & $-88.4^\circ$ & $0.4^\circ$ \\ 
+   $120.5^\circ$ & $12.7^\circ$ & $87.8^\circ$ & $53.1^\circ$ & $76.3^\circ$ & $-49.5^\circ$ & $41.9^\circ$\\ 
    \hline
-   $-45.6^\circ$ & $-46.0^\circ$ & $5.9^\circ$ & $3.1^\circ$ & $2.0^\circ$  \\ 
+   $131.9^\circ$ & $-105.6^\circ$ & $87.8^\circ$ & $84.2^\circ$ & $71.1^\circ$ & $-167.8^\circ$& $7.2^\circ$  \\ 
    \hline
-   $-45.4^\circ$ & $-45.3^\circ$ & $44.1^\circ$  & $42.9^\circ$ & $0.8^\circ$ \\
+   $109.5^\circ$ & $141.8^\circ$ & $88.5^\circ$  & $84.2^\circ$ & $87.2^\circ$ & $131.1^\circ$ & $12.5^\circ$ \\
    \hline
-   $-46.5^\circ$ & $-46.3^\circ$ & $-32.3^\circ$ & $-35.6^\circ$ & $2.3^\circ$ \\
+   $136.2^\circ$ & $151.9^\circ$ & $88.1^\circ$ & $77.1^\circ$ & $67.1^\circ$ & $89.6^\circ$ & $13.0^\circ$ \\
    \hline
-   $35.0^\circ$ & $34.9^\circ$ & $2.6^\circ$ & $3.9^\circ$ & $1.1^\circ$ \\
+   $45.4^\circ$ & $-147.3^\circ$ & $87.2^\circ$ & $89.1^\circ$ & $43.7^\circ$ & $-139.6^\circ$ & $9.9^\circ$ \\
    \hline
-   $35.6^\circ$ & $34.7^\circ$ & $41.2^\circ$  & $41.2^\circ$ & $0.8^\circ$ \\ 
+   $170.0^\circ$ & $156.2^\circ$ & $88.4^\circ$  & $82.0^\circ$ & $150.9^\circ$ & $156.2^\circ$ & $20.1^\circ$ \\ 
    \hline
-   $34.7^\circ$ & $35.4^\circ$ & $-48.7^\circ$  & $-47.7^\circ$ & $1.1^\circ $ \\ 
+   $-154.4^\circ$ & $-134.9^\circ$ & $87.9^\circ$  & $79.7^\circ$ & $-133.9^\circ $ & $-119.8^\circ$ & $9.8^\circ$ \\ 
    \hline
-   $86.6^\circ$ & $85.8^\circ$ & $171.2^\circ$ & $132.6^\circ$ & $2.6^\circ$ \\
-   \hline
-   $-89.4^\circ$ & $-87.1^\circ$ & $-14.5^\circ$ & $-57.6^\circ$ & $2.4^\circ$ \\
+   $141.2^\circ$ & $-144.2^\circ$ & $88.7^\circ$ & $81.3^\circ$ & $168.5^\circ$ & $-99.0^\circ$ & $19.8^\circ$ \\
    \hline
   \end{tabular}
-  \caption{Ergebnisse der statischen Messung des ersten kinematischen Elements.}
+  \caption{Ergebnisse der statischen Orientierungsschätzung, der mittlere Fehler beträgt $16.1^\circ$ }
   \label{tab:ErgebnisseAbsOri}
 \end{table}
-
+Für die dynamische Evaluierung wurde eine 3D-Spule im Raum bewegt und gleichzeitig magnetische und optische Signale aufgenommen. Die Ergebnisse der Positionsschätzung sind in Abbildung\,\ref{fig:DynAbsPos} dargestellt. Die erste Sekunde der Aufnahme konnte nicht verwendet werden, da in der optischen Schätzung teilweise keine Position des Rigid-Bodies prozessiert werden konnte. Hier waren die Marker für einige Kameras teilweise verdeckt.
 
 \begin{figure}[h]
   \centering
   \scalefont{2}
-  \inputTikZ{0.45}{05_eval/images/DynEvalCompsPos.tikz}
-  \label{fig:stdAbwOrPosVar}
+  \inputTikZ{0.4}{05_eval/images/DynEvalCompsPos.tikz}
+  \caption{Ergebnis der dynamischen Evaluierung der Positionsschätzung: Es sind die drei Positionskomponenten dargestellt. Die magnetischen Schätzungen sind in durchgezogenen Linien und die optischen in gestrichelten Linien dargestellt.}
+  \label{fig:DynAbsPos}
 \end{figure}
-
+Die Orientierungsschätzung ist in Abbildung\,\ref{fig:DynAbsAngle} dargestellt. Darin sind die Eulerwinkel des optischen Systems im Vergleich zu den magnetischen Schätzungen dargestellt.
 \begin{figure}[h]
   \centering
   \subfloat[$\theta$]{
     \scalefont{2}
-    \inputTikZ{0.45}{05_eval/images/DynEvalAngleTheta.tikz}
-    \label{fig:MovementComponent}
+    \inputTikZ{0.4}{05_eval/images/DynEvalAngleTheta.tikz}
+    \label{fig:DynTheta}
   }
   \\
   \subfloat[$\phi$]{
     \scalefont{2}
-    \inputTikZ{0.45}{05_eval/images/DynEvalAnglePhi.tikz}
-    \label{fig:ErrorMovement}
+    \inputTikZ{0.4}{05_eval/images/DynEvalAnglePhi.tikz}
+    \label{fig:DynPhi}
   } 
   \\
   \subfloat[$\psi$]{
     \scalefont{2}
-    \inputTikZ{0.45}{05_eval/images/DynEvalAnglePsi.tikz}
-    \label{fig:ErrorMovement}
+    \inputTikZ{0.4}{05_eval/images/DynEvalAnglePsi.tikz}
+    \label{fig:DynPsi}
   } 
-  \caption{}
-  \label{fig:AbsMovement}
+  \caption{Ergebnis der dynamischen Evaluation der Orientierungsschätzung: Die optischen Schätzungen sind }
+  \label{fig:DynAbsAngle}
 \end{figure}
-
+Der quantitative Fehler der magnetischen Schätzung ist in Abbildung\,\ref{fig:ErrorAbsLocal} dargestellt. Der mittlere absolute Positionsfehler liegt bei 17.5\,mm, der mittlere absolute Fehler der Orientierungsschätzung liegt bei $26.1^\circ$.
 \begin{figure}[h]
   \centering
-  \subfloat[$\theta$]{
+  \subfloat[Euklidische Distanz]{
     \scalefont{2}
     \inputTikZ{0.45}{05_eval/images/DynEvalPosFehler.tikz}
     \label{fig:MovementComponent}
   }
   \\
-  \subfloat[$\phi$]{
+  \subfloat[$\alpha\tindex{Eval}$]{
     \scalefont{2}
     \inputTikZ{0.45}{05_eval/images/DynEvalWinkelfehler.tikz}
     \label{fig:ErrorMovement}
   } 
   \caption{}
-  \label{fig:AbsMovement}
+  \label{fig:ErrorAbsLocal}
 \end{figure}
   
-\subsection{Diskussion}
+\subsubsection{Diskussion}
 
 

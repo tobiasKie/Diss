@@ -1433,7 +1433,7 @@ legend style={legend cell align=left, align=left, draw=white!15!black}
 14.98	604.996351159146\\
 14.99	606.150408796778\\
 };
-\addlegendentry{$\hat{x}\tindex{opt}$}
+\addlegendentry{$\hat{x}\tindex{mag}$}
 
 \addplot [color=mycolor2, dashed, line width=3.0pt]
   table[row sep=crcr]{%
@@ -2839,7 +2839,7 @@ legend style={legend cell align=left, align=left, draw=white!15!black}
 14.98	607.567549350841\\
 14.99	607.840030109491\\
 };
-\addlegendentry{$\hat{x}\tindex{mag}$}
+\addlegendentry{$\hat{x}\tindex{opt}$}
 
 \addplot [color=mycolor3, line width=1.0pt]
   table[row sep=crcr]{%
@@ -4245,7 +4245,7 @@ legend style={legend cell align=left, align=left, draw=white!15!black}
 14.98	464.243448697525\\
 14.99	467.146085336975\\
 };
-\addlegendentry{$\hat{y}\tindex{opt}$}
+\addlegendentry{$\hat{y}\tindex{mag}$}
 
 \addplot [color=mycolor3, dashed, line width=4.0pt]
   table[row sep=crcr]{%
@@ -5651,7 +5651,7 @@ legend style={legend cell align=left, align=left, draw=white!15!black}
 14.98	474.882928307701\\
 14.99	477.804578702647\\
 };
-\addlegendentry{$\hat{y}\tindex{mag}$}
+\addlegendentry{$\hat{y}\tindex{opt}$}
 
 \addplot [color=red, line width=1.0pt]
   table[row sep=crcr]{%
@@ -7057,7 +7057,7 @@ legend style={legend cell align=left, align=left, draw=white!15!black}
 14.98	436.761695590598\\
 14.99	437.28782781562\\
 };
-\addlegendentry{$\hat{z}\tindex{opt}$}
+\addlegendentry{$\hat{z}\tindex{mag}$}
 
 \addplot [color=red, dashed, line width=4.0pt]
   table[row sep=crcr]{%
@@ -8463,7 +8463,7 @@ legend style={legend cell align=left, align=left, draw=white!15!black}
 14.98	439.44358630966\\
 14.99	439.702992099466\\
 };
-\addlegendentry{$\hat{z}\tindex{mag}$}
+\addlegendentry{$\hat{z}\tindex{opt}$}
 
 \end{axis}
 

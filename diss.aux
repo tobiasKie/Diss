@@ -598,6 +598,7 @@
 \@writefile{toc}{\contentsline {subsubsection}{\nonumberline Räumliche Synchronisierung und Schätzung der räumlichen Größen}{65}{subsubsection*.127}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {5.9}{\ignorespaces Demonstrator: Die Abbildung zeigt den Demonstrator, der für die Evaluierung verwendet wird. Die 3D-Spule und die kinematischen Elemente sind mit optischen Markern ausgerüstet. }}{66}{figure.caption.124}\protected@file@percent }
 \newlabel{fig:Demonstrator}{{5.9}{66}{Demonstrator: Die Abbildung zeigt den Demonstrator, der für die Evaluierung verwendet wird. Die 3D-Spule und die kinematischen Elemente sind mit optischen Markern ausgerüstet}{figure.caption.124}{}}
+\newlabel{eq:CoordinateTrans}{{5.1}{66}{Räumliche Synchronisierung und Schätzung der räumlichen Größen}{equation.5.1}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {5.10}{\ignorespaces Evaluierungsaufbau: Das Foto zeigt den Demonstrator in der Mitte (rot) und im Außenbereich die Kameras (gelb).}}{67}{figure.caption.125}\protected@file@percent }
 \newlabel{fig:aufbauEval}{{5.10}{67}{Evaluierungsaufbau: Das Foto zeigt den Demonstrator in der Mitte (rot) und im Außenbereich die Kameras (gelb)}{figure.caption.125}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\nonumberline Kalibrierung}{67}{subsubsection*.130}\protected@file@percent }
@@ -622,92 +623,98 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {5.14}{\ignorespaces Ergebnisse des ersten Elements: (a) zeigt die Winkelschätzungen im Vergleich. Die optischen sind in gestrichelten Linien und die magnetischen mit durchgezogenen Linien dargestellt. (b) zeigt den Winkelfehler zwischen den beiden Schätzungen.}}{70}{figure.caption.137}\protected@file@percent }
 \newlabel{fig:ResultsFirstElement}{{5.14}{70}{Ergebnisse des ersten Elements: (a) zeigt die Winkelschätzungen im Vergleich. Die optischen sind in gestrichelten Linien und die magnetischen mit durchgezogenen Linien dargestellt. (b) zeigt den Winkelfehler zwischen den beiden Schätzungen}{figure.caption.137}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\nonumberline Diskussion}{70}{subsubsection*.140}\protected@file@percent }
-\BKM@entry{id=53,open,dest={73656374696F6E2E352E33},srcline={365}}{5C3337365C3337375C303030415C303030625C303030735C3030306F5C3030306C5C303030755C303030745C303030655C3030305C3034305C3030304C5C3030306F5C3030306B5C303030615C3030306C5C303030695C303030735C303030695C303030655C303030725C303030755C3030306E5C30303067}
-\BKM@entry{id=54,open,dest={73756273656374696F6E2E352E332E31},srcline={381}}{5C3337365C3337375C303030465C303030655C303030685C3030306C5C303030655C303030725C3030306D5C303030615C3030305C333337}
 \newlabel{fig:AngleSecond}{{5.15a}{71}{Gefilterte Winkel der Bewegung für das zweite Element\caption@thelabel }{figure.caption.138}{}}
 \newlabel{fig:ErrorSecond}{{5.15b}{71}{Absoluter Fehler zwischen optischer und magnetischer Schätzung\caption@thelabel }{figure.caption.138}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {5.15}{\ignorespaces Ergebnisse für das zweite Element: Die Darstellung ist wie in Abbildung\,\ref {fig:ResultsFirstElement}.}}{71}{figure.caption.138}\protected@file@percent }
 \newlabel{fig:ResultsSecondElement}{{5.15}{71}{Ergebnisse für das zweite Element: Die Darstellung ist wie in Abbildung\,\ref {fig:ResultsFirstElement}}{figure.caption.138}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.3}Absolute Lokalisierung}{71}{section.5.3}\protected@file@percent }
-\newlabel{fig:SimAbsSetup}{{5.16a}{71}{Simulationssetup\caption@thelabel }{figure.caption.141}{}}
-\newlabel{fig:SimAbsSetup}{{5.16b}{71}{Laboraufbau\caption@thelabel }{figure.caption.141}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.16}{\ignorespaces Setup}}{71}{figure.caption.141}\protected@file@percent }
-\newlabel{fig:AbsSetup}{{5.16}{71}{Setup}{figure.caption.141}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.1}Fehlermaß}{71}{subsection.5.3.1}\protected@file@percent }
-\newlabel{eq:quatZ}{{5.8}{72}{Fehlermaß}{equation.5.8}{}}
-\newlabel{eq:quatY}{{5.9}{72}{Fehlermaß}{equation.5.9}{}}
-\BKM@entry{id=55,open,dest={73756273656374696F6E2E352E332E32},srcline={456}}{5C3337365C3337375C303030535C303030695C3030306D5C303030755C3030306C5C303030615C303030745C303030695C303030765C303030655C3030305C3034305C303030455C303030765C303030615C3030306C5C303030755C303030695C303030655C303030725C303030755C3030306E5C30303067}
-\BKM@entry{id=56,open,dest={73756273656374696F6E2E352E332E33},srcline={504}}{5C3337365C3337375C303030455C303030785C303030705C303030655C303030725C303030695C3030306D5C303030655C3030306E5C303030745C303030655C3030306C5C3030306C5C303030655C3030305C3034305C303030455C303030765C303030615C3030306C5C303030755C303030695C303030655C303030725C303030755C3030306E5C30303067}
+\newlabel{fig:FFTAngles1}{{5.16a}{71}{FFT der Winkelschätzung\caption@thelabel }{figure.caption.141}{}}
+\newlabel{fig:FFTMag}{{5.16b}{71}{FFT eines Kanals von $\bvec {b}$\caption@thelabel }{figure.caption.141}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.16}{\ignorespaces Frequenzanalyse der Winkelschätzung}}{71}{figure.caption.141}\protected@file@percent }
+\newlabel{fig:FFTAngles}{{5.16}{71}{Frequenzanalyse der Winkelschätzung}{figure.caption.141}{}}
+\BKM@entry{id=53,open,dest={73656374696F6E2E352E33},srcline={384}}{5C3337365C3337375C303030415C303030625C303030735C3030306F5C3030306C5C303030755C303030745C303030655C3030305C3034305C3030304C5C3030306F5C3030306B5C303030615C3030306C5C303030695C303030735C303030695C303030655C303030725C303030755C3030306E5C30303067}
+\BKM@entry{id=54,open,dest={73756273656374696F6E2E352E332E31},srcline={400}}{5C3337365C3337375C303030465C303030655C303030685C3030306C5C303030655C303030725C3030306D5C303030615C3030305C333337}
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}Absolute Lokalisierung}{72}{section.5.3}\protected@file@percent }
+\newlabel{fig:SimAbsSetup}{{5.17a}{72}{Simulationssetup\caption@thelabel }{figure.caption.142}{}}
+\newlabel{fig:SimAbsSetup}{{5.17b}{72}{Laboraufbau\caption@thelabel }{figure.caption.142}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.17}{\ignorespaces Setup}}{72}{figure.caption.142}\protected@file@percent }
+\newlabel{fig:AbsSetup}{{5.17}{72}{Setup}{figure.caption.142}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.1}Fehlermaß}{72}{subsection.5.3.1}\protected@file@percent }
+\BKM@entry{id=55,open,dest={73756273656374696F6E2E352E332E32},srcline={475}}{5C3337365C3337375C303030535C303030695C3030306D5C303030755C3030306C5C303030615C303030745C303030695C303030765C303030655C3030305C3034305C303030455C303030765C303030615C3030306C5C303030755C303030695C303030655C303030725C303030755C3030306E5C30303067}
+\newlabel{eq:quatZ}{{5.8}{73}{Fehlermaß}{equation.5.8}{}}
+\newlabel{eq:quatY}{{5.9}{73}{Fehlermaß}{equation.5.9}{}}
 \newlabel{eq:quatX}{{5.10}{73}{Fehlermaß}{equation.5.10}{}}
 \newlabel{eq:QuatEval}{{5.11}{73}{Fehlermaß}{equation.5.11}{}}
 \newlabel{eq:EffVerd}{{5.12}{73}{Fehlermaß}{equation.5.12}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.2}Simulative Evaluierung}{73}{subsection.5.3.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{\nonumberline Robustheit der Positionsschätzung gegen Rauschen}{73}{paragraph*.143}\protected@file@percent }
-\newlabel{fig:stdAbwPosSim}{{5.17a}{73}{Standardabweichung der Position\caption@thelabel }{figure.caption.144}{}}
-\newlabel{fig:errorPosSim}{{5.17b}{73}{Abweichung der mittleren Position von Ground Truth\caption@thelabel }{figure.caption.144}{}}
-\newlabel{fig:PosSimEval}{{5.17}{73}{}{figure.caption.144}{}}
-\@writefile{toc}{\contentsline {paragraph}{\nonumberline Einfluss eines Positionsfehler auf die Orientierungsschätzung}{73}{figure.caption.147}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{\nonumberline Einfache Bewegung}{73}{figure.caption.150}\protected@file@percent }
-\BKM@entry{id=57,open,dest={73756273656374696F6E2E352E332E34},srcline={639}}{5C3337365C3337375C303030445C303030695C303030735C3030306B5C303030755C303030735C303030735C303030695C3030306F5C3030306E}
-\newlabel{fig:stdAbwOrPosVar}{{\caption@xref {fig:stdAbwOrPosVar}{ on input line 482}}{74}{Einfluss eines Positionsfehler auf die Orientierungsschätzung}{figure.caption.147}{}}
-\newlabel{fig:PosSimEval}{{5.18}{74}{}{figure.caption.147}{}}
-\newlabel{fig:MovementComponent}{{5.19a}{74}{Angle of movement for the second element\caption@thelabel }{figure.caption.150}{}}
-\newlabel{fig:ErrorMovement}{{5.19b}{74}{Magnitude of the angular error between optical and magnetic estimation\caption@thelabel }{figure.caption.150}{}}
-\newlabel{fig:AbsMovement}{{5.19}{74}{}{figure.caption.150}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.3}Experimentelle Evaluierung}{74}{subsection.5.3.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Räumliche Synchronisierung}{74}{subsubsection*.152}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Ergebnisse}{74}{subsubsection*.155}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.4}Diskussion}{74}{subsection.5.3.4}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.20}{\ignorespaces  }}{75}{figure.caption.153}\protected@file@percent }
-\newlabel{fig:SpatialSyncAbslocal}{{5.20}{75}{}{figure.caption.153}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.3}{\ignorespaces Ergebnisse der statischen Messung des ersten kinematischen Elements.}}{75}{table.caption.156}\protected@file@percent }
-\newlabel{tab:ErgebnisseAbsPos}{{5.3}{75}{Ergebnisse der statischen Messung des ersten kinematischen Elements}{table.caption.156}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.4}{\ignorespaces Ergebnisse der statischen Messung des ersten kinematischen Elements.}}{76}{table.caption.157}\protected@file@percent }
-\newlabel{tab:ErgebnisseAbsOri}{{5.4}{76}{Ergebnisse der statischen Messung des ersten kinematischen Elements}{table.caption.157}{}}
-\newlabel{fig:stdAbwOrPosVar}{{\caption@xref {fig:stdAbwOrPosVar}{ on input line 596}}{76}{Ergebnisse}{figure.caption.158}{}}
-\newlabel{fig:MovementComponent}{{5.21a}{77}{$\theta $\caption@thelabel }{figure.caption.159}{}}
-\newlabel{fig:ErrorMovement}{{5.21b}{77}{$\phi $\caption@thelabel }{figure.caption.159}{}}
-\newlabel{fig:ErrorMovement}{{5.21c}{77}{$\psi $\caption@thelabel }{figure.caption.159}{}}
-\newlabel{fig:AbsMovement}{{5.21}{77}{}{figure.caption.159}{}}
-\newlabel{fig:MovementComponent}{{5.22a}{78}{$\theta $\caption@thelabel }{figure.caption.160}{}}
-\newlabel{fig:ErrorMovement}{{5.22b}{78}{$\phi $\caption@thelabel }{figure.caption.160}{}}
-\newlabel{fig:AbsMovement}{{5.22}{78}{}{figure.caption.160}{}}
-\BKM@entry{id=58,open,dest={636861707465722E36},srcline={1}}{5C3337365C3337375C3030305A5C303030755C303030735C303030615C3030306D5C3030306D5C303030655C3030306E5C303030665C303030615C303030735C303030735C303030755C3030306E5C303030675C3030305C3034305C303030755C3030306E5C303030645C3030305C3034305C303030415C303030755C303030735C303030625C3030306C5C303030695C303030635C3030306B}
-\BKM@entry{id=59,open,dest={73656374696F6E2E362E31},srcline={6}}{5C3337365C3337375C3030305A5C303030755C303030735C303030615C3030306D5C3030306D5C303030655C3030306E5C303030665C303030615C303030735C303030735C303030755C3030306E5C30303067}
-\BKM@entry{id=60,open,dest={73756273656374696F6E2E362E312E31},srcline={9}}{5C3337365C3337375C3030304E5C303030655C303030755C303030685C303030655C303030695C303030745C303030655C3030306E}
-\BKM@entry{id=61,open,dest={73756273656374696F6E2E362E312E32},srcline={10}}{5C3337365C3337375C303030555C3030306E5C303030675C303030655C3030306C5C3030305C3336365C303030735C303030745C303030655C3030305C3034305C303030505C303030725C3030306F5C303030625C3030306C5C303030655C3030306D5C30303065}
-\BKM@entry{id=62,open,dest={73656374696F6E2E362E32},srcline={12}}{5C3337365C3337375C303030415C303030755C303030735C303030625C3030306C5C303030695C303030635C3030306B}
-\BKM@entry{id=63,open,dest={73756273656374696F6E2E362E322E31},srcline={14}}{5C3337365C3337375C303030505C303030725C3030306F5C303030745C3030306F5C303030745C303030795C30303070}
-\@writefile{toc}{\contentsline {chapter}{\numberline {6}Zusammenfassung und Ausblick}{79}{chapter.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.2}Simulative Evaluierung}{74}{subsection.5.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Robustheit der Positionsschätzung gegen Rauschen}{74}{paragraph*.144}\protected@file@percent }
+\newlabel{fig:stdAbwPosSim}{{5.18a}{74}{Standardabweichung der Position\caption@thelabel }{figure.caption.145}{}}
+\newlabel{fig:errorPosSim}{{5.18b}{74}{Abweichung der mittleren Position vom Ground Truth\caption@thelabel }{figure.caption.145}{}}
+\newlabel{fig:PosSimEval}{{5.18}{74}{}{figure.caption.145}{}}
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Einfluss eines Positionsfehler auf die Orientierungsschätzung}{74}{paragraph*.147}\protected@file@percent }
+\BKM@entry{id=56,open,dest={73756273656374696F6E2E352E332E33},srcline={543}}{5C3337365C3337375C303030455C303030785C303030705C303030655C303030725C303030695C3030306D5C303030655C3030306E5C303030745C303030655C3030306C5C3030306C5C303030655C3030305C3034305C303030455C303030765C303030615C3030306C5C303030755C303030695C303030655C303030725C303030755C3030306E5C30303067}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.19}{\ignorespaces Standardabweichung des Orientierungsfehler in Abhängigkeit vom Positionsfehler}}{75}{figure.caption.148}\protected@file@percent }
+\newlabel{fig:stdAbwOrPosVar}{{5.19}{75}{Standardabweichung des Orientierungsfehler in Abhängigkeit vom Positionsfehler}{figure.caption.148}{}}
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Einfache Bewegung}{75}{paragraph*.150}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.3}Experimentelle Evaluierung}{75}{subsection.5.3.3}\protected@file@percent }
+\newlabel{fig:MovementComponent}{{5.20a}{76}{Vergleich $x$-Komponente gegen Ground Truth\caption@thelabel }{figure.caption.151}{}}
+\newlabel{fig:ErrorMovement}{{5.20b}{76}{Fehler im Vergleich zum Ground Truth\caption@thelabel }{figure.caption.151}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.20}{\ignorespaces Simulation einer Einfachen Bewegung}}{76}{figure.caption.151}\protected@file@percent }
+\newlabel{fig:AbsMovement}{{5.20}{76}{Simulation einer Einfachen Bewegung}{figure.caption.151}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Räumliche Synchronisierung}{76}{subsubsection*.153}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Ergebnisse}{76}{subsubsection*.156}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.21}{\ignorespaces Aufbau für die Evaluierung der Lokalisierung: Es ist ein würfelförmiger Aufbau, mit grauen PVC-Streben. An diesen sind die Sensoren(Rot, Grün und Blau) angebracht. An diesen Streben sind in jeder Richtung zwei optische Marker angebracht. }}{77}{figure.caption.154}\protected@file@percent }
+\newlabel{fig:SpatialSyncAbslocal}{{5.21}{77}{Aufbau für die Evaluierung der Lokalisierung: Es ist ein würfelförmiger Aufbau, mit grauen PVC-Streben. An diesen sind die Sensoren(Rot, Grün und Blau) angebracht. An diesen Streben sind in jeder Richtung zwei optische Marker angebracht}{figure.caption.154}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.3}{\ignorespaces Ergebnisse der statischen Positionsschätzung, alle Größen in mm, der mittlere Fehler beträgt 15.2\,mm}}{77}{table.caption.157}\protected@file@percent }
+\newlabel{tab:ErgebnisseAbsPos}{{5.3}{77}{Ergebnisse der statischen Positionsschätzung, alle Größen in mm, der mittlere Fehler beträgt 15.2\,mm}{table.caption.157}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.4}{\ignorespaces Ergebnisse der statischen Orientierungsschätzung, der mittlere Fehler beträgt $16.1^\circ $ }}{78}{table.caption.158}\protected@file@percent }
+\newlabel{tab:ErgebnisseAbsOri}{{5.4}{78}{Ergebnisse der statischen Orientierungsschätzung, der mittlere Fehler beträgt $16.1^\circ $}{table.caption.158}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.22}{\ignorespaces Ergebnis der dynamischen Evaluierung der Positionsschätzung: Es sind die drei Positionskomponenten dargestellt. Die magnetischen Schätzungen sind in durchgezogenen Linien und die optischen in gestrichelten Linien dargestellt.}}{78}{figure.caption.159}\protected@file@percent }
+\newlabel{fig:DynAbsPos}{{5.22}{78}{Ergebnis der dynamischen Evaluierung der Positionsschätzung: Es sind die drei Positionskomponenten dargestellt. Die magnetischen Schätzungen sind in durchgezogenen Linien und die optischen in gestrichelten Linien dargestellt}{figure.caption.159}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Diskussion}{78}{subsubsection*.163}\protected@file@percent }
+\newlabel{fig:DynTheta}{{5.23a}{79}{$\theta $\caption@thelabel }{figure.caption.160}{}}
+\newlabel{fig:DynPhi}{{5.23b}{79}{$\phi $\caption@thelabel }{figure.caption.160}{}}
+\newlabel{fig:DynPsi}{{5.23c}{79}{$\psi $\caption@thelabel }{figure.caption.160}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.23}{\ignorespaces Ergebnis der dynamischen Evaluation der Orientierungsschätzung: Die optischen Schätzungen sind }}{79}{figure.caption.160}\protected@file@percent }
+\newlabel{fig:DynAbsAngle}{{5.23}{79}{Ergebnis der dynamischen Evaluation der Orientierungsschätzung: Die optischen Schätzungen sind}{figure.caption.160}{}}
+\newlabel{fig:MovementComponent}{{5.24a}{80}{Euklidische Distanz\caption@thelabel }{figure.caption.161}{}}
+\newlabel{fig:ErrorMovement}{{5.24b}{80}{$\alpha \tindex {Eval}$\caption@thelabel }{figure.caption.161}{}}
+\newlabel{fig:ErrorAbsLocal}{{5.24}{80}{}{figure.caption.161}{}}
+\BKM@entry{id=57,open,dest={636861707465722E36},srcline={1}}{5C3337365C3337375C3030305A5C303030755C303030735C303030615C3030306D5C3030306D5C303030655C3030306E5C303030665C303030615C303030735C303030735C303030755C3030306E5C303030675C3030305C3034305C303030755C3030306E5C303030645C3030305C3034305C303030415C303030755C303030735C303030625C3030306C5C303030695C303030635C3030306B}
+\BKM@entry{id=58,open,dest={73656374696F6E2E362E31},srcline={6}}{5C3337365C3337375C3030305A5C303030755C303030735C303030615C3030306D5C3030306D5C303030655C3030306E5C303030665C303030615C303030735C303030735C303030755C3030306E5C30303067}
+\BKM@entry{id=59,open,dest={73756273656374696F6E2E362E312E31},srcline={9}}{5C3337365C3337375C3030304E5C303030655C303030755C303030685C303030655C303030695C303030745C303030655C3030306E}
+\BKM@entry{id=60,open,dest={73756273656374696F6E2E362E312E32},srcline={10}}{5C3337365C3337375C303030555C3030306E5C303030675C303030655C3030306C5C3030305C3336365C303030735C303030745C303030655C3030305C3034305C303030505C303030725C3030306F5C303030625C3030306C5C303030655C3030306D5C30303065}
+\BKM@entry{id=61,open,dest={73656374696F6E2E362E32},srcline={12}}{5C3337365C3337375C303030415C303030755C303030735C303030625C3030306C5C303030695C303030635C3030306B}
+\BKM@entry{id=62,open,dest={73756273656374696F6E2E362E322E31},srcline={14}}{5C3337365C3337375C303030505C303030725C3030306F5C303030745C3030306F5C303030745C303030795C30303070}
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Zusammenfassung und Ausblick}{81}{chapter.6}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{chap:ende_zusammenfassung_ausblick}{{6}{79}{Zusammenfassung und Ausblick}{chapter.6}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.1}Zusammenfassung}{79}{section.6.1}\protected@file@percent }
-\newlabel{sec:ende_zusammenfassung}{{6.1}{79}{Zusammenfassung}{section.6.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.1}Neuheiten}{79}{subsection.6.1.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.2}Ungelöste Probleme}{79}{subsection.6.1.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6.2}Ausblick}{79}{section.6.2}\protected@file@percent }
-\newlabel{sec:ende_ausblick}{{6.2}{79}{Ausblick}{section.6.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.1}Prototyp}{79}{subsection.6.2.1}\protected@file@percent }
-\BKM@entry{id=64,open,dest={636861707465722A2E313631},srcline={260}}{5C3337365C3337375C3030304C5C303030695C303030745C303030655C303030725C303030615C303030745C303030755C303030725C303030765C303030655C303030725C3030307A5C303030655C303030695C303030635C303030685C3030306E5C303030695C30303073}
-\BKM@entry{id=65,open,dest={73656374696F6E2A2E313633},srcline={262}}{5C3337365C3337375C303030575C303030655C303030695C303030745C303030655C303030725C303030655C3030305C3034305C3030304C5C303030695C303030745C303030655C303030725C303030615C303030745C303030755C30303072}
-\@writefile{toc}{\contentsline {chapter}{\nonumberline Literaturverzeichnis}{81}{chapter*.161}\protected@file@percent }
+\newlabel{chap:ende_zusammenfassung_ausblick}{{6}{81}{Zusammenfassung und Ausblick}{chapter.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.1}Zusammenfassung}{81}{section.6.1}\protected@file@percent }
+\newlabel{sec:ende_zusammenfassung}{{6.1}{81}{Zusammenfassung}{section.6.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.1}Neuheiten}{81}{subsection.6.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.2}Ungelöste Probleme}{81}{subsection.6.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.2}Ausblick}{81}{section.6.2}\protected@file@percent }
+\newlabel{sec:ende_ausblick}{{6.2}{81}{Ausblick}{section.6.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.1}Prototyp}{81}{subsection.6.2.1}\protected@file@percent }
+\BKM@entry{id=63,open,dest={636861707465722A2E313634},srcline={260}}{5C3337365C3337375C3030304C5C303030695C303030745C303030655C303030725C303030615C303030745C303030755C303030725C303030765C303030655C303030725C3030307A5C303030655C303030695C303030635C303030685C3030306E5C303030695C30303073}
+\BKM@entry{id=64,open,dest={73656374696F6E2A2E313636},srcline={262}}{5C3337365C3337375C303030575C303030655C303030695C303030745C303030655C303030725C303030655C3030305C3034305C3030304C5C303030695C303030745C303030655C303030725C303030615C303030745C303030755C30303072}
+\@writefile{toc}{\contentsline {chapter}{\nonumberline Literaturverzeichnis}{83}{chapter*.164}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\nonumberline Weitere Literatur}{81}{section*.163}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\nonumberline Weitere Literatur}{83}{section*.166}\protected@file@percent }
 \@writefile{toc}{\def \@chapapp {\appendixname }}
 \@writefile{lof}{\def \@chapapp {\appendixname }}
 \@writefile{lot}{\def \@chapapp {\appendixname }}
-\BKM@entry{id=66,open,dest={617070656E6469782E41},srcline={1}}{5C3337365C3337375C303030575C303030655C303030695C303030745C303030655C303030725C303030655C3030305C3034305C3030304D5C303030655C303030735C303030735C303030645C303030615C303030745C303030655C3030306E}
-\BKM@entry{id=67,open,dest={73656374696F6E2E412E31},srcline={5}}{5C3337365C3337375C303030545C3030306D5C30303070}
+\BKM@entry{id=65,open,dest={617070656E6469782E41},srcline={1}}{5C3337365C3337375C303030575C303030655C303030695C303030745C303030655C303030725C303030655C3030305C3034305C3030304D5C303030655C303030735C303030735C303030645C303030615C303030745C303030655C3030306E}
+\BKM@entry{id=66,open,dest={73656374696F6E2E412E31},srcline={5}}{5C3337365C3337375C303030545C3030306D5C30303070}
 \@writefile{toc}{\contentsline {chapter}{\numberline {A}Weitere Messdaten}{I}{appendix.A}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \newlabel{chap:appendix_a}{{A}{I}{Weitere Messdaten}{appendix.A}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {A.1}Tmp}{I}{section.A.1}\protected@file@percent }
 \newlabel{sec:app_a_tmp}{{A.1}{I}{Tmp}{section.A.1}{}}
-\BKM@entry{id=68,open,dest={617070656E6469782E42},srcline={1}}{5C3337365C3337375C303030485C303030655C303030725C3030306C5C303030655C303030695C303030745C303030755C3030306E5C303030675C3030305C3034305C303030585C303030585C30303058}
-\BKM@entry{id=69,open,dest={73656374696F6E2E422E31},srcline={6}}{5C3337365C3337375C303030545C3030306D5C30303070}
+\BKM@entry{id=67,open,dest={617070656E6469782E42},srcline={1}}{5C3337365C3337375C303030485C303030655C303030725C3030306C5C303030655C303030695C303030745C303030755C3030306E5C303030675C3030305C3034305C303030585C303030585C30303058}
+\BKM@entry{id=68,open,dest={73656374696F6E2E422E31},srcline={6}}{5C3337365C3337375C303030545C3030306D5C30303070}
 \@writefile{toc}{\contentsline {chapter}{\numberline {B}Herleitung XXX}{III}{appendix.B}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
@@ -757,4 +764,4 @@
 \@writefile{toc}{\providecommand\tocbasic@end@toc@file{}\tocbasic@end@toc@file}
 \@writefile{lof}{\providecommand\tocbasic@end@toc@file{}\tocbasic@end@toc@file}
 \@writefile{lot}{\providecommand\tocbasic@end@toc@file{}\tocbasic@end@toc@file}
-\gdef \@abspage@last{111}
+\gdef \@abspage@last{113}

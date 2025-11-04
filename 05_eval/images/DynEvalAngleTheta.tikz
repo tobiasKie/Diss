@@ -26,7 +26,7 @@ xmajorgrids,
 ymajorgrids,
 legend style={legend cell align=left, align=left, draw=white!15!black}
 ]
-\addplot [color=mycolor1, dashed, line width=4.0pt]
+\addplot [color=mycolor1, line width=1.0pt]
   table[row sep=crcr]{%
 0.99	76.4754816798244\\
 1	76.5647205462863\\
@@ -1432,7 +1432,7 @@ legend style={legend cell align=left, align=left, draw=white!15!black}
 };
 \addlegendentry{$\hat{\theta}\tindex{mag}$}
 
-\addplot [color=mycolor2, line width=1.0pt]
+\addplot [color=mycolor2, dashed ,line width=4.0pt]
   table[row sep=crcr]{%
 0.99	85.3176909145399\\
 1	85.3560311438169\\

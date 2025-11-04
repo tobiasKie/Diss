@@ -9,44 +9,41 @@
 \begin{tikzpicture}
 
 \begin{axis}[%
-width=10in,
-height=5.0in,
+width=10.0in,
+height=6.0in,
 at={(0.0in,0.0in)},
 scale only axis,
 xmin=0,
 xmax=0.1,
-xtick = {0,0.02,0.04,0.06,0.08,0.1},
-xlabel style={font=\color{white!15!black}},
-xlabel={Variation der Position in m},
+xtick = {0,0.01,0.02,...,0.1},
+xlabel = {Positionsfehler in m},
 ymin=0,
-ymax=2.5,
-ytick = {0,0.5,1,...,2.5},
-ticklabel style={/pgf/number format/precision=3},
-ylabel style={font=\color{white!15!black}},
-ylabel={Standardabweichung der Orientierung in},
+ymax=10,
+ytick = {0,1,2,...,10},
+ylabel = {Mittlerer Winkelfehler in $^\circ$},
+axis background/.style={fill=white},
 xmajorgrids,
-ymajorgrids,
-axis background/.style={fill=white}
+ymajorgrids
 ]
-\addplot [color=mycolor1, line width = 5.0pt]
+\addplot [color=mycolor1, forget plot ,line width = 4.0]
   table[row sep=crcr]{%
 0	0\\
-0.01	0.196529431864363\\
-0.02	0.390049813018794\\
-0.03	0.59386498868943\\
-0.04	0.788827500763964\\
-0.05	0.995947328208526\\
-0.06	1.21959106212978\\
-0.07	1.43693763111865\\
-0.08	1.65216756465465\\
-0.09	1.884027702592\\
-0.1	2.10403461336099\\
+0.01	0.896727229283438\\
+0.02	1.77955737859488\\
+0.03	2.703768176839\\
+0.04	3.68651067501236\\
+0.05	4.54408356737048\\
+0.06	5.58244836669301\\
+0.07	6.52807476917009\\
+0.08	7.68599846220089\\
+0.09	8.43052230857949\\
+0.1	9.42988955838832\\
 };
 \end{axis}
 
 \begin{axis}[%
 width=10.0in,
-height=5.0in,
+height=6.0in,
 at={(0in,0in)},
 scale only axis,
 xmin=0,

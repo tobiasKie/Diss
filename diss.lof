@@ -62,8 +62,13 @@
 \contentsline {figure}{\numberline {5.13}{\ignorespaces Die Abbildung zeigt die beiden Gelenkswinkel für das erste(a) und zweite Gelenk(b). Dabei sind die Schätzungen der magnetischen Lokalisierung ohne Nachverarbeitung(gestrichelt), sowie die optischen Schätzungen über der Zeit aufgetragen. }}{70}{figure.caption.136}%
 \contentsline {figure}{\numberline {5.14}{\ignorespaces Ergebnisse des ersten Elements: (a) zeigt die Winkelschätzungen im Vergleich. Die optischen sind in gestrichelten Linien und die magnetischen mit durchgezogenen Linien dargestellt. (b) zeigt den Winkelfehler zwischen den beiden Schätzungen.}}{70}{figure.caption.137}%
 \contentsline {figure}{\numberline {5.15}{\ignorespaces Ergebnisse für das zweite Element: Die Darstellung ist wie in Abbildung\,\ref {fig:ResultsFirstElement}.}}{71}{figure.caption.138}%
-\contentsline {figure}{\numberline {5.16}{\ignorespaces Setup}}{71}{figure.caption.141}%
-\contentsline {figure}{\numberline {5.20}{\ignorespaces }}{75}{figure.caption.153}%
+\contentsline {figure}{\numberline {5.16}{\ignorespaces Frequenzanalyse der Winkelschätzung}}{71}{figure.caption.141}%
+\contentsline {figure}{\numberline {5.17}{\ignorespaces Setup}}{72}{figure.caption.142}%
+\contentsline {figure}{\numberline {5.19}{\ignorespaces Standardabweichung des Orientierungsfehler in Abhängigkeit vom Positionsfehler}}{75}{figure.caption.148}%
+\contentsline {figure}{\numberline {5.20}{\ignorespaces Simulation einer Einfachen Bewegung}}{76}{figure.caption.151}%
+\contentsline {figure}{\numberline {5.21}{\ignorespaces Aufbau für die Evaluierung der Lokalisierung: Es ist ein würfelförmiger Aufbau, mit grauen PVC-Streben. An diesen sind die Sensoren(Rot, Grün und Blau) angebracht. An diesen Streben sind in jeder Richtung zwei optische Marker angebracht. }}{77}{figure.caption.154}%
+\contentsline {figure}{\numberline {5.22}{\ignorespaces Ergebnis der dynamischen Evaluierung der Positionsschätzung: Es sind die drei Positionskomponenten dargestellt. Die magnetischen Schätzungen sind in durchgezogenen Linien und die optischen in gestrichelten Linien dargestellt.}}{78}{figure.caption.159}%
+\contentsline {figure}{\numberline {5.23}{\ignorespaces Ergebnis der dynamischen Evaluation der Orientierungsschätzung: Die optischen Schätzungen sind }}{79}{figure.caption.160}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \def \@chapapp {\appendixname }
