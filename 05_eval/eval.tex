@@ -4,7 +4,7 @@ Die entwickelten Algorithmen sollen evaluiert werden. Dafür werden zunächst si
 
 
 \section{Verwendete Hardware}
-Die Hardware besteht aus drei Komponenten, zum einen ein Auswertecomputer, eine AD/DA-Wandeleinheit und eine Stromverstärkereinheit. Der Auswertecomputer ist ein XXXX. Als AD/DA-Einheit werden zwei Soundkarten des Hersteller $RME\,Audio$ eingesetzt, eine M32 AD Pro und eine M1610 Pro. Diese sind über MADI miteinander verbunden, die Eingangsdaten der M1610 Pro werden dadurch über ein Lichtwellenleiter in Echtzeit an die M32 AD Pro gesendet. Das sorgt dafür, dass die Signale der beiden Einheiten synchronisiert am Auswertecomputer ankommen. Der Auswertecomputer generiert die Anregungssignale für die 3D-Spule und sendet diese an die DA-Einheit. Über die DA-Einheit werden über eine Verstärkereinheit in einen Strom gewandelt. Der Verstärker\footnote{Der Verstärker wurde in Projekt B1/B9 des SFB1261 an der CAU Kiel entwickelt und ein Exemplar für diesen Aufbau überlassen.} ist ein sechskanaliger Verstärker, von dem die ersten drei Kanäle verwendet werden. In Abbildung\,\ref{fig:UsedHardware} ist der Aufbau kurz dargestellt.
+Die Hardware besteht aus drei Komponenten, zum einen ein Auswertecomputer, eine AD/DA-Wandeleinheit und eine Stromverstärkereinheit. Als AD/DA-Einheit werden zwei Soundkarten des Hersteller $RME\,Audio$ eingesetzt, eine M32 AD Pro und eine M1610 Pro. Diese sind über MADI miteinander verbunden, die Eingangsdaten der M1610 Pro werden dadurch über ein Lichtwellenleiter in Echtzeit an die M32 AD Pro gesendet. Das sorgt dafür, dass die Signale der beiden Einheiten synchronisiert am Auswertecomputer ankommen. Der Auswertecomputer generiert die Anregungssignale für die 3D-Spule und sendet diese an die DA-Einheit. Über die DA-Einheit werden über eine Verstärkereinheit in einen Strom gewandelt. Der Verstärker\footnote{Der Verstärker wurde in Projekt B1/B9 des SFB1261 an der CAU Kiel entwickelt und ein Exemplar für diesen Aufbau überlassen.} ist ein sechskanaliger Verstärker, von dem die ersten drei Kanäle verwendet werden. In Abbildung\,\ref{fig:UsedHardware} ist der Aufbau kurz dargestellt.
 
 \begin{figure}[h!]
   \centering
@@ -14,7 +14,7 @@ Die Hardware besteht aus drei Komponenten, zum einen ein Auswertecomputer, eine 
   \label{fig:UsedHardware}
 \end{figure}
 
-Alle Messungen und Simulationen werden mit einem 
+Alle Messungen und Simulationen werden mit einem PC durchgeführt, nur auf der CPU.
 
 \section{Relative Lokalisierung}
 \label{sec:rel_lok}
@@ -23,10 +23,10 @@ Alle Messungen und Simulationen werden mit einem
 
 
 \subsection{Simulative Evaluierung}
-In der simulativen Evaluierung sollen 3 unterschiedliche Szenarios untersucht werden, die zunächst kurz definiert werden. Alle Simulationen werden mit einer Abtastrate von $f\tindex{SR}=48000\,\text{kHz}$ und einer Rahmenlänge $i\tindex{Frame} = 512$ durchgeführt. Der Abstand zwischen Quelle und erstem Gelenk wird in allen Simulationen normiert auf 1\,m. Der Asbtand zwischen Sensor und Gelenk wird auf 0.2\,m gesetzt.
+In der simulativen Evaluierung sollen 3 unterschiedliche Szenarios untersucht werden, die zunächst kurz definiert werden. Alle Simulationen werden mit einer Abtastrate von $f\tindex{SR}=48000\,\text{kHz}$ und einer Rahmenlänge $i\tindex{Frame} = 512$ durchgeführt.
 \subsubsection{Szenarios und Ergebnisse}
 \paragraph{Robustheit gegenüber Rauschen}
-Es wird ein Aufbau mit einem Gelenk simuliert, also eine 3D-Spule im Ursprung and dem auch ein kinematisches Element beginnt und ein Gelenk das dieses mit einem weiteren Element verbindet. Die Ansteuerung der Spule erfolgt wie in Kapitel\,\ref{sec:featureExtract} beschrieben. Auf Sensorseite wird WGN (\textit{White Gaussian Noise}) addiert. Diese wird so skaliert, dass das Sensorsignal ein SNR von $10\,\text{dB}$ besitzt. Es wird mit einem Raster von $1^\circ$ der Wertebereich überprüft. Die Simulation wird für 100 Rahmen durchgeführt. Die Bewegung wird an dieser Stelle wie in Kapitel\,\ref{subsubsection:eindeutigkeit} beschrieben, zum einen die Beugung des Gelenks $\phi\tindex{s,2}$ und zum anderen die Richtung in welche das Gelenk gebeugt werden $\phi\tindex{s,1}$.
+Es wird ein Aufbau mit einem Gelenk simuliert, also eine 3D-Spule im Ursprung and dem auch ein kinematisches Element beginnt und ein Gelenk das dieses mit einem weiteren Element verbindet. Die Distanz zwischen Quelle und Gelenk beträgt 1\,m und der Sensor ist 0.2\,m vom Gelenk entfernt. Die Ansteuerung der Spule erfolgt wie in Kapitel\,\ref{sec:featureExtract} beschrieben. Auf Sensorseite wird WGN (\textit{White Gaussian Noise}) addiert. Diese wird so skaliert, dass das Sensorsignal ein SNR von $10\,\text{dB}$ besitzt. Es wird mit einem Raster von $1^\circ$ der Wertebereich überprüft. Die Simulation wird für 100 Rahmen durchgeführt. Die Bewegung wird an dieser Stelle wie in Kapitel\,\ref{subsubsection:eindeutigkeit} beschrieben, zum einen die Beugung des Gelenks $\phi\tindex{s,2}$ und zum anderen die Richtung in welche das Gelenk gebeugt werden $\phi\tindex{s,1}$.
 \begin{figure}[h]
   \centering
   \subfloat[Standardabweichung des MV]{
@@ -112,8 +112,7 @@ Die Ergebnisse der Simulation sind in Abbildung\,\ref{fig:SimpleMove} dargestell
 
 \subsubsection{Diskussion}
 \paragraph{Robustheit gegenüber Rauschen}
-Bei der Unteruschung der Robustheit gegenüber Rauschen fällt auf, dass sowohl die Standardabweichung des MVs als auch die der Orientierung für einen $\phi\tindex{s,2}$ sehr groß wird. In dieser Stellung ist der MV in der $xy$-Ebene. In dieser Stellung liegt der MV in der $xy$-Ebene. Das Dipolmoment durchläuft zweimal pro Periode die Nulldurchgangsebene und diese Stellen werden detektiert und können dargestellt wie in Abbildung\,\ref{fig:ZeroCrossingVis}. Es gibt immer eine Nullebene, in der das detektierte Magnetfeld 0 ist. Problem an dieser Stelle ist jedoch, wenn der MV wie hier in der $xy$-Ebene liegt und somit $\vec{e}\tindex{z}$ ein Teil der Nullebene ist, dass diese Nullebene fast immer an der selben Stelle durchquert wird, bei $\pm\vec{e}\tindex{z}$. Die Art der Ansteuerung (Gleichung\,\ref{eq:rotDipole}) sorgt dafür, dass das Dipolmoment in jeder Periode für $\omega_{\theta}\Delta t n = 0$ zu $\vec{e}\tindex{z}$ und für $\omega_{\theta}\Delta t n = \pi$ zu $-\vec{e}\tindex{z}$. Daher sind alle $\vec{e}\tindex{zc}=\pm\vec{e}\tindex{z}$ und das Kreuzprodukt daraus ergibt 0 oder durch das ergänzte Rauschen nahe 0. Das Normieren des MV ist dann entweder nicht definiert (Division durch 0) oder die Richtung des MV ergibt sich durch das Rauschen. Abbhilfe kann hier schaffen, die Rahmendauer zu erhöhen, sodass ein Rahmen eine volle Periode von $\omega_\phi$ beinhaltet. In diesem Fall sind 2 $\vec{e}\tindex{zc}$ unterschiedlich zu $\vec{e}\tindex{z}$. Diese Problematik ist in Abbildung\,\ref{fig:MerkmalUndefined} dargestellt. Eine bessere Lösung wäre es, die Ansteuerung während der Laufzeit anzupassen. Dies könnte so umgesetzt werden, dass eine Rotation auf die Ansteuerung angewendet wird, sodass die resultierende $z$-Achse möglichst parallel zu allen MV steht. Dies wurde im Rahmen dieser Arbeit nicht mehr implementiert.
-
+Bei der Unteruschung der Robustheit gegenüber Rauschen fällt auf, dass sowohl die Standardabweichung des MVs als auch die der Orientierung für einen $\phi\tindex{s,2}$ sehr groß wird. In dieser Stellung ist der MV in der $xy$-Ebene. Das Dipolmoment durchläuft zweimal pro Periode die Nulldurchgangsebene und diese Stellen werden detektiert und können dargestellt wie in Abbildung\,\ref{fig:ZeroCrossingVis}. Es gibt immer eine Nullebene, in der das detektierte Magnetfeld 0 ist. Problem an dieser Stelle ist jedoch, wenn der MV wie hier in der $xy$-Ebene liegt und somit $\vec{e}\tindex{z}$ ein Teil der Nullebene ist, dass diese Nullebene fast immer an der selben Stelle durchquert wird, bei $\pm\vec{e}\tindex{z}$. Die Art der Ansteuerung (Gleichung\,\ref{eq:rotDipole}) sorgt dafür, dass das Dipolmoment in jeder Periode für $\omega_{\theta}\Delta t n = 0$ zu $\vec{e}\tindex{z}$ und für $\omega_{\theta}\Delta t n = \pi$ zu $-\vec{e}\tindex{z}$. Daher sind alle $\vec{e}\tindex{zc}=\pm\vec{e}\tindex{z}$ und das Kreuzprodukt daraus ergibt 0 oder durch das ergänzte Rauschen nahe 0. Das Normieren des MV ist dann entweder nicht definiert (Division durch 0) oder die Richtung des MV ergibt sich durch das Rauschen. Abbhilfe kann hier schaffen, die Rahmendauer zu erhöhen, sodass ein Rahmen eine volle Periode von $\omega_\phi$ beinhaltet. In diesem Fall sind zwei $\vec{e}\tindex{zc}$ unterschiedlich zu $\vec{e}\tindex{z}$. Diese Problematik ist in Abbildung\,\ref{fig:MerkmalUndefined} dargestellt. In Abbildung\,\ref{fig:Variance} ist gut zu sehen, dass auch in der Nähe der $xy$-Ebene die Standardabweichung erhöht ist. Hier könnte mit einem "zielen" auf die Sensoren auf Senderseite dafür gesorgt werden, die Merkmalsextraktion zu verbessern. Dies wurde im Rahmen dieser Arbeit nicht untersucht.
 \begin{figure}[h]
   \centering
   \subfloat[Kurze Rahmenlänge]{
@@ -132,7 +131,9 @@ Bei der Unteruschung der Robustheit gegenüber Rauschen fällt auf, dass sowohl 
 \end{figure}
 
 \paragraph{Fehlerfortpflanzung}
-Es wurde untersucht wie sich die fehlerhafte Schätzung eines kinematischen Elements auf die weiteren Elemente auswirkt. Dabei ist gut zu erkennen, dass je länger das fehlerhaft geschätzte Element und desto größer der Fehler ist, desto größer wird auch der Fehler des nächsten Elements. Dies ist naheliegend, da beide Parameter Einfluss auf die nächste Gelenksposition haben. Diese fließt direkt ein in den Algorithmus und führt so zu Fehlern in der Schätzung. 
+Es wurde untersucht wie sich die fehlerhafte Schätzung eines kinematischen Elements auf die folgenden Elemente auswirkt. Dabei ist gut zu erkennen, dass je länger das fehlerhaft geschätzte Element und desto größer der Fehler ist, desto größer wird auch der Fehler des nächsten Elements. Dies ist naheliegend, da beide Parameter Einfluss auf die nächste Gelenksposition haben. Diese fließt direkt ein in den Algorithmus und führt so zu Fehlern in der Schätzung.
+
+ 
 \paragraph{Einfache Bewegung}
 Eine einfache Bewegung wurde untersucht, dabei wurde ein Element in einer Ebene bewegt, vergleichbar mit der Bewegung beispielsweise des MCP bei einer Greifbewegung. Bei einer optimalen Schätzung müsste die $y$-Komponente im gesamten Zeitraum $0$ sein. In Abbildung\,\ref{fig:SimpleMove} ist gut zu erkennen, dass die Schätzung Artefakte enthält und von der eigentlichen Bewegungsebene abweicht. Grund dafür ist, dass die Nullldurchgänge jeweils für leicht unterschiedliche Positionen aufgenommen wurden. Die Nulldurchgangsvektoren eines Rahmens liegen dann nicht mehr in einer Ebene, da auch nicht alle zu einer Position gehören. Dies ist in Abbildung\,\ref{fig:ZerocrossingsMotion} dargestellt.
 \begin{figure}[h]
@@ -142,7 +143,7 @@ Eine einfache Bewegung wurde untersucht, dabei wurde ein Element in einer Ebene 
   \caption{Nulldurchgangsvektoren die aus einem der simulierten Rahmen extrahiert wurden. Für einen unbewegten Sensor ohne Rauschen liegen die Vektoren immer in einer Ebene, hier ist gut zu erkennen, dass dies für einen bewegten Sensor nicht gilt.}
   \label{fig:ZerocrossingsMotion}
 \end{figure}
-Aus jeweils zwei Nulldurchgangsvektoren wird dann ein MV gebildet und alle werden gemittelt. Diese MV können dann nicht mehr identisch sein und nach der Mittelung kommen diese Artefakte in den MV und somit auch in die Schätzung.
+Aus jeweils zwei Nulldurchgangsvektoren wird dann ein MV gebildet und alle werden gemittelt. Diese MV sind nicht identisch und nach der Mittlung kommen diese Artefakte in den MV und somit auch in die Orientierungsschätzung.
 \subsection{Experimentelle Evaluierung}
 Die relative Lokalisierung wurde entwickelt um die Bewegung von Fingern aufzunehmen. Um in einem ersten Test die Algorithmik zu evaluieren, wurde an dieser Stelle ein einfacher Demonstrator bestehend aus drei Elementen, ein längeres Element mit einer 3D-Spule und zwei kürzere mit jeweils einem Sensor. Die Elemente sind durch Gelenke verbunden, die Bewegung in zwei Richtungen ermöglichen, wie bei einem Sattelgelenk. In Abbildung \ref{fig:Demonstrator} ist dieser Aufbau einmal dargestellt.
 
@@ -167,7 +168,6 @@ Die relative Lokalisierung wurde entwickelt um die Bewegung von Fingern aufzuneh
     \caption{Demonstrator: Die Abbildung zeigt den Demonstrator, der für die Evaluierung verwendet wird. Die 3D-Spule und die kinematischen Elemente sind mit optischen Markern ausgerüstet.  }
     \label{fig:Demonstrator}
 \end{figure}
-
 Zum Vergleich wird ein optisches System der Firma $Qualisys AB$ verwendet, bestehend aus 8 Miqus Kameras. Diese sind um den Demonstrator herum aufgebaut. Für die optische Bewegungsaufnahme wurden optische Marker zum einen auf der 3D-Spule und zum anderen auf den kinematischen Elementen befestigt, diese werden verwendet um die Orientierung der Elemente aufzunehmen und werden als $Ground Truth$ verwendet. Der Aufbau ist in Abbildung\,\ref{fig:aufbauEval} zu sehen.
 
 \begin{figure}[h]
@@ -177,12 +177,11 @@ Zum Vergleich wird ein optisches System der Firma $Qualisys AB$ verwendet, beste
   \caption{Evaluierungsaufbau: Das Foto zeigt den Demonstrator in der Mitte (rot) und im Außenbereich die Kameras (gelb).}
   \label{fig:aufbauEval}
 \end{figure}
-
 Es wurden zum einen statische und dynamische Messungen durchgeführt. Die Länge der Aufnahmen waren immer 15\,s. 
 
 \subsubsection{Räumliche Synchronisierung und Schätzung der räumlichen Größen}
 
-Die beiden Systeme arbeiten in unterschiedlichen Koordinatensystemen. Das magnetische System spannt ein Koordinatensystem basierend auf der Ausrichtung der 3D-Spule auf, also $x$-Richtung = Ausrichtung der X-Spule\dots . Das Koordinatensystem des optischen Systems wird in einer Kalibrierungsprozedur definiert, durch eine festgelegte Markeranordnung. Die Definition der beiden Koordinatensysteme ist in Abbildung \ref{fig:CoordSystems}.
+Die beiden Systeme arbeiten in unterschiedlichen Koordinatensystemen. Das magnetische System spannt ein Koordinatensystem basierend auf der Ausrichtung der 3D-Spule auf, also $x$-Richtung = Ausrichtung der $x$-Spule\dots . Das Koordinatensystem des optischen Systems wird in einer Kalibrierungsprozedur definiert, durch eine festgelegte Markeranordnung. Die Definition der beiden Koordinatensysteme ist in Abbildung \ref{fig:CoordSystems}.
 
 \begin{figure}
     \centering
@@ -379,7 +378,9 @@ Die dynamischen Messungen ohne Nachverarbeitung zeigen, dass die magnetischen Sc
   \label{fig:FFTAngles}
 \end{figure}
 
-Darin ist gut zu sehen, dass es tieffrequent (im Bereich bis 5\,Hz) Anteile gibt. Diese sind Teil der Bewegung. Desweiteren gibt es Spitzen bei 20\,Hz, 70\,Hz und 80\,Hz. Die Spitzen bei 20\,Hz und 80\,Hz lassen sich mit Harmonischen der Netzspannung erklären. Diese liegen bei 550\,Hz,650\,Hz,750\,Hz und 850\,Hz (siehe Abbildung\,\ref{fig:FFTAngles}). Die Anregungssignale liegen bei 630\,Hz,700\,Hz und 770\,Hz, und eine Bewegung führt zu einer Amplitudenmodulation, also zu frequenzanteilen bei den Anregungssignalen $\pm$ den Frequenzanteilen der Bewegung. Die Netzspannung bei 650\,Hz und 750\,Hz sind jeweils 20\,Hz von den Anregungssignalen entfernt, die bei 550\,Hz und 850\,Hz jeweils 80\,Hz und sorgen so für Artefakte in der Schätzung. Der Ursprung der Störungen bei 70\,Hz können unterschiedliche Ursachen haben, zum einen hat die Spule in diesem Bereich ein leichtes frequenzabhängiges Verhalten, zum Anderen zeigt auch die verwendete Sensorik ein frequenzabhängiges Verhalten. Diese verbliebenen Modellfehler können zu diesen Artefakten führen. In der Nachverarbeitung wird ein Tiefpassfilter angewendet und dieses Rauschen wird stark reduziert und sowohl beim ersten als auch beim zweiten Element korrelieren die optische und magnetische Schätzung sehr gut. 
+Darin ist gut zu sehen, dass es tieffrequent (im Bereich bis 5\,Hz) Anteile gibt. Diese sind Teil der Bewegung. Desweiteren gibt es Spitzen bei 20\,Hz, 70\,Hz und 80\,Hz. Die Spitzen bei 20\,Hz und 80\,Hz lassen sich mit Harmonischen der Netzspannung erklären. Diese liegen bei 550\,Hz, 650\,Hz, 750\,Hz und 850\,Hz (siehe Abbildung\,\ref{fig:FFTAngles}). Die Anregungssignale liegen bei 630\,Hz,  700\,Hz und 770\,Hz, und eine Bewegung führt zu einer Amplitudenmodulation, also zu frequenzanteilen bei den Anregungssignalen $\pm$ den Frequenzanteilen der Bewegung. Die Netzspannung bei 650\,Hz und 750\,Hz sind jeweils 20\,Hz von den Anregungssignalen entfernt, die bei 550\,Hz und 850\,Hz jeweils 80\,Hz und sorgen so für Artefakte in der Schätzung. Der Ursprung der Störungen bei 70\,Hz können unterschiedliche Ursachen haben, zum einen hat die Spule in diesem Bereich ein leichtes frequenzabhängiges Verhalten, zum Anderen zeigt auch die verwendete Sensorik ein frequenzabhängiges Verhalten. Diese verbliebenen Modellfehler können zu diesen Artefakten führen. In der Nachverarbeitung wird ein Tiefpassfilter angewendet und dieses Rauschen wird stark reduziert und sowohl beim ersten als auch beim zweiten Element korrelieren die optische und magnetische Schätzung gut. 
+
+Hier in den Vergleich setzen mit anderen magnetischen Ansätzen. 
   
 \section{Absolute Lokalisierung}
 \begin{figure}[h]
@@ -486,7 +487,7 @@ Die Sensorpaare sind $0.7\,\text{m}$ voneinander entfernt. Das $x$-Sensorpaar is
   0 \\
   \pm 0.35\,\text{m} 
 \end{pmatrix}$.
-
+\subsubsection{Ergebnisse}
 \paragraph{Robustheit der Positionsschätzung gegen Rauschen}
 Die Robustheit der Positionsschätzung soll anhand eines Sensorpaares, also in einer Koordinate ($x$), geprüft werden. Da die drei Koordinaten unabhängig voneinander bestimmt werden, ergibt sich jeweils dasselbe Ergebnis. Auf das Sensorsignal wird weißes Rauschen addiert, mit einem konstatnten Rauschteppich von $150\,\frac{\text{pT}}{\sqrt{\text{Hz}}}$ ergibt. Die Spule wird so angesteuert, dass der maximale Strom bei 1\,A liegt. Die Sensoren sind 70\,cm voneinander entfernt. In einem Raster von 1\,cm wird jede Position in der $xy$-Ebene für 100 Rahmen simuliert. Die Untersuchung wird nur in einer Ebene durchgeführt, da aufgrund der Zylindersymmetrie des Dipolfeldes alle anderen Ebenen sich äquivalent ergeben. Es wird zum einen geprüft, wie groß die Standardabweichung innerhalb der 100 Schätzungen ist und ob der Mittelwert möglichst gut zum wahren Wert konvergiert. Das Ergebnis ist Abbildung\,\ref{fig:PosSimEval} dargestellt.
 \begin{figure}[h]
@@ -516,7 +517,6 @@ Die Position der 3D-Spule geht in die Orientierungsschätzung ein. Mit einer Sim
   \caption{Standardabweichung des Orientierungsfehler in Abhängigkeit vom Positionsfehler}
   \label{fig:stdAbwOrPosVar}
 \end{figure}
-In einem Bereich bis 0.1\,cm verhält sich der Fehler linear, ein Positionsfehler von 0.05\,m führt zu einem Orientierungsfehler von ungefähr $1^\circ$.
 
 \paragraph{Einfache Bewegung}
 Eine einfache Bewegung wurde simuliert, dabei wurde die 3D-Spule mit einer konstanten Geschwindigkeit von $v = 0.1\,\frac{\text{m}}{\text{s}}$ der Startpunkt liegt bei $\vec{r}\tindex{c,start} = \begin{pmatrix}
@@ -540,6 +540,13 @@ Eine einfache Bewegung wurde simuliert, dabei wurde die 3D-Spule mit einer konst
   \label{fig:AbsMovement}
 \end{figure}
 In Abbildung\,\ref{fig:AbsMovement} ist das Ergebnis dargestellt. Bei einer Bewegung mit einer Geschwindigkeit von $0.1\,\frac{\text{m}}{\text{s}}$, kommt es zu Fehlern durch die Bewegung von maximal 0.2\,mm. In der Mitte des Aufbaus, ist der Fehler an geringsten, was mit Blick auf die Ergebnisse aus Abbildung\,\ref{fig:PosSimEval} erklären. Hier sieht man, dass die Schätzung in der Mitte des Aufbaus am robustesten ist und Störungen hier am wenigsten Einfluss auf das Ergebnis haben.
+\subsubsection{Diskussion}
+\paragraph{Robustheit der Position gegen Rauschen}
+Das Ergebnis ist in Abbildung\,\ref{fig:PosSimEval} dargestellt. Darin ist gut zu sehen, dass in der Mitte des Aufbaus die Schätzung am robustesten ist. Es zeigt außerdem, dass die Positionsschätzung außerdem in der Nähe der Symmetrieachse robuster ist. Das kann zum einen durch das SNR auf Senderseite erklärt werden. Das Sensorrauschen ist unabhängig vom Ort der Spule, jedoch nimmt das Nutzsignal mit $\frac{1}{r^3}$ ab. Somit ist auf der Symmetrieachse der Abstand zu den Sensoren kleiner als in den Ecken und das SNR besser. Außerdem lohnt hier ein Blick auf die Form der Äquipotentialflächen, diese sind in Abbildung\,\ref{fig:AbslocalIterations} dargestellt. Darin ist gut zu erkennen, dass in Richtung der Sensorachse der Verlauf der Kurve senkrecht dazu ist. Die zu schätzende Positionskomponente verändert sich in diesem Fall nur sehr gering. Eine Veränderung von $G$ eines Sensors hat, daher nur eine kleine Änderung. Je weiter außen man auf der Kurve ist, desto größer wird die Steigung. Hier hat eine Variation von $G$ direkt einen größeren Einfluss.
+\paragraph{Einfluss eines Positionsfehlers auf die Orientierungsschätzung}
+In Abbildung\,\ref{fig:stdAbwOrPosVar} ist dargestellt, wie sich im Mittel die Orientierung in Abhängigkeit von einem Positionsfehler verhält. Die extrahierten MV bleiben korrekt, nur die berechneten $\vec{e}^{\text{Glob}}\tindex{max}$ sind fehlerhaft. Die Simulation hat ergeben, dass wenn der Positionsfehler im Bereich bis zu 10\,cm liegt, der mittlere Winkelfehler sich nahezu linear verhält. Der Winkelfehler steigt dabei um etwa $1^\circ$ pro cm Positionsfehler. Dies ist auf einen ersten Blick relativ gering. 
+\paragraph{Einfache Bewegung}
+Abbildung\,\ref{fig:AbsMovement} zeigt das Ergebnis für eine relativ einfache Bewegung. Dabei ist zum einen die $x$-Komponente über der Zeit dargestellt. Die magnetische Schätzung und die Werte aus der Simulation liegen dabei nahezu übereinander. Der Fehler ist über den gesamten Verlauf sehr gering und bewegt sich im sub-mm-Bereich. Auffällig ist, dass in der Mitte des Aufbaus der Fehler geringer ist. Hier ist wieder zu erkennen, dass die Schätzung in der Mitte des Aufbaus robuster ist. Der Fehler durch eine Bewegung ist an dieser Stelle so gering, dass dieser vernachlässigt werden kann.
 \subsection{Experimentelle Evaluierung}
 Für die Experimentelle Synchronisierung wurden statische und dynamische Messungen durchgeführt. Jede Messsequenz hat eine Länge von 15\,s.
 \subsubsection{Räumliche Synchronisierung}
