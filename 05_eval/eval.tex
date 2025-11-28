@@ -51,15 +51,16 @@ Es wird zunächst geprüft, wie stark der MV und die Orientierung des Elements v
       \inputTikZ{0.45}{05_eval/images/ErrorProj.tikz}
       \label{fig:ErrorProj}
   }
-  \subfloat[Standardabweichung in Abhängigkeit des Ortes]{
+  \subfloat[Verhältnis der Standardabweichung]{
       \scalefont{2.0}
       \inputTikZ{0.45}{05_eval/images/FaktorVar.tikz}
       \label{fig:VarOrt} 
   }
-  \caption{ }
+  \caption{Die linke Abbildung zeigt den Fehler der Orientierung, nach einer Mittelung von 100 Schätzungen. Die rechte Seite zeigt das Verhältnis zwischen der Standardabweichung des MV und der Standardabweichung der Orientierung.}
   \label{fig:Variance}
 \end{figure}
-Um diese Ortabhängigkeit zu zeigen wurden die beiden Varianzen zueinander ins Verhältnis gesetzt. Das Ergebnis ist in Abbildung\,\ref{fig:VarOrt} dargestellt. Darin ist gut zu sehen, dass bei gleichbleibender Signalqualität das Ergebnis stärker variiert je kleiner $\phi\tindex{s,2}$ ist. Wichtig ist außerdem, dass der Mittelwert bei genügend großer Signallänge zum richtigen Wert konvergiert, dies wurde in Abbildung\,\ref{fig:ErrorProj} ausgewertet. Der Mittelwert konvergiert in nahezu allen Gelenksstellungen mit dem wahren Wert. Abweichungen gibt es bei $\phi\tindex{s,2}\approx 110$, die bereits eine große Varianz gezeigt haben.
+Um diese Ortsabhängigkeit zu zeigen wurden die beiden Varianzen zueinander ins Verhältnis gesetzt. Das Ergebnis ist in Abbildung\,\ref{fig:VarOrt} dargestellt. 
+
 
 \paragraph{Einfluss von Fehlerfortpflanzung}
 Ein Problem bei der Schätzung einer kinematischen Kette ist die Fehlerfortpflanzung. Die Position des ersten Gelenks ist bekannt und wird vor der Laufzeit ausgemessen. Die weiteren Gelenkspositionen werden nach und nach rekonstruiert, schwanken aber je nach Signalqualität. Dieser Effekt soll anhand einer Simulation evaluiert werden. Gegeben sei eine kinematische Kette aus 3 Elementen. 
@@ -83,7 +84,7 @@ Die Haltung sei so, dass diese gestreckt sei(Nulllage). Es wird das Sensorsignal
       \inputTikZ{0.45}{05_eval/images/MeanErrorFort.tikz}
       \label{fig:FehlerfortMaxAb} 
   }
-  \caption{Auf der linken Seite ist die Standardabweichung und auf der rechten Seite die maximale Abweichung in $^\circ$, die sich durch die Fehlerfortpflanzung ergeben, in Abhängigkeit von der Länge des mittleren Elements und der Variation dieses.}
+  \caption{Auf der linken Seite ist die Standardabweichung der Orientierung in Abhängigkeit des falsch angenommenen Winkels und der Länge des mittleren Elements. In der rechten Abbildung sind die Fehler des über 100 Schätzungen gemittelten Werts dargestellt.}
   \label{fig:Fehlerfort}
 \end{figure}
 Das Ergebnis der Simulation ist in Abbildung\,\ref{fig:Fehlerfort} dargestellt. Je größer das mittlere Element ist und je größer die Variation des Winkels, desto größer wird die Standardabweichung. Der Unterschied zwischen Mittelwert über 100 Rahmen und dem wahren Wert ist deutlich kleiner als $1^\circ$.
@@ -94,25 +95,25 @@ Die Ergebnisse der Simulation sind in Abbildung\,\ref{fig:SimpleMove} dargestell
 
 \begin{figure}[h]
   \centering
-  \subfloat[3-Komponenten in Abhängigkeit der Zeit]{
+  \subfloat[3-Koordinatenkomponenten]{
       \scalefont{2}
       \inputTikZ{0.5}{05_eval/images/SimpleMoveVekt.tikz}
       \label{fig:SimpMoveDreiKomp} 
   }
-  \subfloat[Y-Komponente]{
+  \subfloat[$y$-Komponente]{
       \scalefont{2}
       \inputTikZ{0.5}{05_eval/images/SimpleMoveVektSecond.tikz}
       \label{fig:SimpMoveYKomp} 
   }
   \caption{(a) zeigt den zeitlichen Verlauf der einzelnen Komponenten der Orientierung. (b) ist diesselbe Abbildung mit Fokus auf die $y$-Komponente.} 
-   
   \label{fig:SimpleMove}
 \end{figure}
 
 
 \subsubsection{Diskussion}
 \paragraph{Robustheit gegenüber Rauschen}
-Bei der Unteruschung der Robustheit gegenüber Rauschen fällt auf, dass sowohl die Standardabweichung des MVs als auch die der Orientierung für einen $\phi\tindex{s,2}$ sehr groß wird. In dieser Stellung ist der MV in der $xy$-Ebene. Das Dipolmoment durchläuft zweimal pro Periode die Nulldurchgangsebene und diese Stellen werden detektiert und können dargestellt wie in Abbildung\,\ref{fig:ZeroCrossingVis}. Es gibt immer eine Nullebene, in der das detektierte Magnetfeld 0 ist. Problem an dieser Stelle ist jedoch, wenn der MV wie hier in der $xy$-Ebene liegt und somit $\vec{e}\tindex{z}$ ein Teil der Nullebene ist, dass diese Nullebene fast immer an der selben Stelle durchquert wird, bei $\pm\vec{e}\tindex{z}$. Die Art der Ansteuerung (Gleichung\,\ref{eq:rotDipole}) sorgt dafür, dass das Dipolmoment in jeder Periode für $\omega_{\theta}\Delta t n = 0$ zu $\vec{e}\tindex{z}$ und für $\omega_{\theta}\Delta t n = \pi$ zu $-\vec{e}\tindex{z}$. Daher sind alle $\vec{e}\tindex{zc}=\pm\vec{e}\tindex{z}$ und das Kreuzprodukt daraus ergibt 0 oder durch das ergänzte Rauschen nahe 0. Das Normieren des MV ist dann entweder nicht definiert (Division durch 0) oder die Richtung des MV ergibt sich durch das Rauschen. Abbhilfe kann hier schaffen, die Rahmendauer zu erhöhen, sodass ein Rahmen eine volle Periode von $\omega_\phi$ beinhaltet. In diesem Fall sind zwei $\vec{e}\tindex{zc}$ unterschiedlich zu $\vec{e}\tindex{z}$. Diese Problematik ist in Abbildung\,\ref{fig:MerkmalUndefined} dargestellt. In Abbildung\,\ref{fig:Variance} ist gut zu sehen, dass auch in der Nähe der $xy$-Ebene die Standardabweichung erhöht ist. Hier könnte mit einem "zielen" auf die Sensoren auf Senderseite dafür gesorgt werden, die Merkmalsextraktion zu verbessern. Dies wurde im Rahmen dieser Arbeit nicht untersucht.
+
+Bei der Unteruschung der Robustheit gegenüber Rauschen fällt auf, dass sowohl die Standardabweichung des MVs als auch die der Orientierung für einen $\phi\tindex{s,2}$ sehr groß wird. In dieser Stellung ist der MV in der $xy$-Ebene. Das Dipolmoment durchläuft zweimal pro Periode die Nulldurchgangsebene und diese Stellen werden detektiert und können dargestellt wie in Abbildung\,\ref{fig:ZeroCrossingVis}. Es gibt immer eine Nullebene, in der das detektierte Magnetfeld 0 ist. Problem an dieser Stelle ist jedoch, wenn der MV wie hier in der $xy$-Ebene liegt und somit $\vec{e}\tindex{z}$ ein Teil der Nullebene ist, dass diese Nullebene fast immer an der selben Stelle durchquert wird, bei $\pm\vec{e}\tindex{z}$. Die Art der Ansteuerung (Gleichung\,\ref{eq:rotDipole}) sorgt dafür, dass das Dipolmoment in jeder Periode für $\omega_{\theta}\Delta t n = 0$ zu $\vec{e}\tindex{z}$ und für $\omega_{\theta}\Delta t n = \pi$ zu $-\vec{e}\tindex{z}$. Daher sind alle $\vec{e}\tindex{zc}=\pm\vec{e}\tindex{z}$ und das Kreuzprodukt daraus ergibt 0 oder durch das ergänzte Rauschen nahe 0. Dieses Verhalten ist in Abbildung\,\ref{fig:ShortFrame} dargestellt. Das Normieren des MV ist dann entweder nicht definiert (Division durch 0) oder die Richtung des MV ergibt sich durch das Rauschen. Abbhilfe kann hier schaffen, die Rahmendauer zu erhöhen, sodass ein Rahmen eine volle Periode von $\omega_\phi$ beinhaltet. In diesem Fall sind zwei $\vec{e}\tindex{zc}$ unterschiedlich zu $\vec{e}\tindex{z}$, wie in Abbildung\,\ref{fig:LongFrame}. Selbst wenn die längere Rahmenlänge verwendet wird, ist der Winkel zwischen den $\vec{e}\tindex{zc}$ relativ gering. Dies führt dazu, dass Rauschen einen größeren Einfluss auf das Kreuzprodukt der $\vec{e}\tindex{zc}$ hat. Abbhilfe könnte hier eine Anpassung der Ansteuersignale auf Senderseite schaffen. Die Ansteuerung ist in Gleichung\,\ref{eq:rotDipole} eingeführt. Mit einer Rotation der Ansteuerung könnte virtuell die $z$-Achse so gedreht werden, dass die $\vec{e}\tindex{MV}$ in Richtung der resultierenden $z$-Achse steht. Ein solches "Zielen" könnte die Merkmalsextraktion in diesem Bereich verbessern. Dies wurde im Rahmen dieser Arbeit nicht untersucht.
 \begin{figure}[h]
   \centering
   \subfloat[Kurze Rahmenlänge]{
@@ -120,15 +121,18 @@ Bei der Unteruschung der Robustheit gegenüber Rauschen fällt auf, dass sowohl 
       \inputTikZ{0.4}{05_eval/images/EZ_ZC.tikz}
       \label{fig:ShortFrame} 
   }
-  \subfloat[Längerer Rahmen]{
+  \subfloat[Längere Rahmenlänge]{
       \scalefont{2}
       \inputTikZ{0.4}{05_eval/images/EZ_ZC_full_period.tikz}
       \label{fig:LongFrame}
   }
-  \caption{(a) zeigt die $\vec{e}\tindex{zc}$s für eine Rahmenlänge 512, darin ist gut zu sehen, dass alles $\vec{e}\tindex{zc} = \pm\vec{e}\tindex{z}$sind. (b) zeigt dasselbe jedoch für eine Rahmenlänge von 4096. Dabei gibt es auch $\vec{e}\tindex{zc}$s die nicht in $z$-Richtung polarisiert sind. } 
-   
+  \caption{(a) zeigt die $\vec{e}\tindex{zc}$s für eine Rahmenlänge 512. (b) zeigt dasselbe für eine Rahmenlänge von 4096.} 
   \label{fig:MerkmalUndefined}
 \end{figure}
+
+In Abbildung\,\ref{fig:ErrorProj} ist der Fehler über 100 gemittelte Schätzungen dargestellt. Es ist gut zu erkennen, dass der Fehler in den meisten Stellungen gegen 0 konvergiert. Für $\phi\tindex{s,2}\approx 110$ bleibt ein verbleibender Fehler. Dieses Verhalten ist naheliegend, da das Eingangsmerkmal (MV) fehlerhaft bestimmt wurde.
+
+Die Ergebnisse aus Abbildung\,\ref{fig:VarOrt} zeigen eine Abhängigkeit der Robustheit von der Stellung der Kette. Je näher $\phi\tindex{s,2}$ bei 0 liegt, desto größer ist die Standardabweichung/ geringer die Robustheit. Dies kann erklärt werden mit Abbildung\,\ref{fig:0_05_Unique} erklären. Man erkennt hier gut, dass für ein $\phi\tindex{max,2} = 0$ die Steigung der Kurven am steilsten im gesamten Verlauf ist. Je größer $\phi\tindex{max,2}$ wird sinkt die Steigung der Kurve. Dies lässt sich wie folgt zusammenfassen, die Störung hat Einfluss auf $\phi\tindex{max,2}$, aber je nach Stellung des Gelenks ist der Einfluss von $\phi\tindex{max,2}$ auf $\phi\tindex{s,2}$ unterschiedlich groß.
 
 \paragraph{Fehlerfortpflanzung}
 Es wurde untersucht wie sich die fehlerhafte Schätzung eines kinematischen Elements auf die folgenden Elemente auswirkt. Dabei ist gut zu erkennen, dass je länger das fehlerhaft geschätzte Element und desto größer der Fehler ist, desto größer wird auch der Fehler des nächsten Elements. Dies ist naheliegend, da beide Parameter Einfluss auf die nächste Gelenksposition haben. Diese fließt direkt ein in den Algorithmus und führt so zu Fehlern in der Schätzung.
@@ -143,9 +147,10 @@ Eine einfache Bewegung wurde untersucht, dabei wurde ein Element in einer Ebene 
   \caption{Nulldurchgangsvektoren die aus einem der simulierten Rahmen extrahiert wurden. Für einen unbewegten Sensor ohne Rauschen liegen die Vektoren immer in einer Ebene, hier ist gut zu erkennen, dass dies für einen bewegten Sensor nicht gilt.}
   \label{fig:ZerocrossingsMotion}
 \end{figure}
-Aus jeweils zwei Nulldurchgangsvektoren wird dann ein MV gebildet und alle werden gemittelt. Diese MV sind nicht identisch und nach der Mittlung kommen diese Artefakte in den MV und somit auch in die Orientierungsschätzung.
+Aus jeweils zwei Nulldurchgangsvektoren wird dann ein MV gebildet und alle werden gemittelt. Diese MV sind nicht identisch und heben sich durch die Mittelung nicht auf. Der fehlerhafte MV wird dann für die Orientierungsschätzung verwendet und es entstehen die gezeigten Artefakte.
+
 \subsection{Experimentelle Evaluierung}
-Die relative Lokalisierung wurde entwickelt um die Bewegung von Fingern aufzunehmen. Um in einem ersten Test die Algorithmik zu evaluieren, wurde an dieser Stelle ein einfacher Demonstrator bestehend aus drei Elementen, ein längeres Element mit einer 3D-Spule und zwei kürzere mit jeweils einem Sensor. Die Elemente sind durch Gelenke verbunden, die Bewegung in zwei Richtungen ermöglichen, wie bei einem Sattelgelenk. In Abbildung \ref{fig:Demonstrator} ist dieser Aufbau einmal dargestellt.
+Die relative Lokalisierung wurde entwickelt um die Bewegung von Fingern aufzunehmen. Um in einem ersten Test die Algorithmik zu evaluieren, wurde an dieser Stelle ein einfacher Demonstrator bestehend aus drei Elementen, ein längeres Element mit einer 3D-Spule und zwei kürzere mit jeweils einem Sensor. Die Elemente sind durch Gelenke verbunden, die Bewegung in zwei Richtungen ermöglichen, wie bei einem Sattelgelenk. In Abbildung\,\ref{fig:Demonstrator} ist dieser Aufbau einmal dargestellt.
 
 \begin{figure}[h]
     \centering
@@ -177,12 +182,11 @@ Zum Vergleich wird ein optisches System der Firma $Qualisys AB$ verwendet, beste
   \caption{Evaluierungsaufbau: Das Foto zeigt den Demonstrator in der Mitte (rot) und im Außenbereich die Kameras (gelb).}
   \label{fig:aufbauEval}
 \end{figure}
-Es wurden zum einen statische und dynamische Messungen durchgeführt. Die Länge der Aufnahmen waren immer 15\,s. 
+Es wurden zum einen statische und dynamische Messungen durchgeführt. Die Länge der Aufnahmen sind jeweils 15\,s. 
 
 \subsubsection{Räumliche Synchronisierung und Schätzung der räumlichen Größen}
 
-Die beiden Systeme arbeiten in unterschiedlichen Koordinatensystemen. Das magnetische System spannt ein Koordinatensystem basierend auf der Ausrichtung der 3D-Spule auf, also $x$-Richtung = Ausrichtung der $x$-Spule\dots . Das Koordinatensystem des optischen Systems wird in einer Kalibrierungsprozedur definiert, durch eine festgelegte Markeranordnung. Die Definition der beiden Koordinatensysteme ist in Abbildung \ref{fig:CoordSystems}.
-
+Die beiden Systeme arbeiten in unterschiedlichen Koordinatensystemen. Das magnetische System spannt ein Koordinatensystem basierend auf der Ausrichtung der 3D-Spule auf, also $x$-Richtung = Ausrichtung der $x$-Spule\dots . Diese Definition ist in Abbildung\,\ref{fig:MagCoord} dargestellt. Das Koordinatensystem des optischen Systems wird in einer Kalibrierungsprozedur definiert. Es werden vier Marker auf einer Vorrichtung in einem "L" angeordnet. Der lange Arm definiert dabei die $x$-Achse und der kürzere Arm die $y$-Achse. In der Kalibrierung wird ein Stab mit zwei Markern durch das Messvolumen bewegt und anhand der bekannten Distanzen zwischen den Markern, die Positionen der Kameras kalibriert. Die beiden Kalibrierwerkzeuge sind in Abbildung\,\ref{fig:OptCoord}, mit der Definition des Koordiantensystems, zu sehen. 
 \begin{figure}
     \centering
     \subfloat[Magnetisches Koordinatensystem]{
@@ -198,11 +202,11 @@ Die beiden Systeme arbeiten in unterschiedlichen Koordinatensystemen. Das magnet
         \end{overpic}
         \label{fig:OptCoord}
     }
-    \caption{Definition der Koordinatensysteme: Der rote Pfeil ist jeweils die $x$-Achse, grün die $y$-Achse und blau die $z$-Achse. In (a) ist eine 3D-Spule mit einem 3D-Druckaufsatz, an dem optische Marker befestigt sind. Mit den farbigen Pfeilen ist das lokale Koordinatensystem der Spule dargestellt. In (b) ist das Kalibrationswerkzeug für das optische System. Während der Kalibrierung wird die Platte mit den Markern in der Mitte des Messvolumens platziert. Währenddessen wird der Stab mit den zwei Markern durch den Messbereich bewegt. Die Lage und Orientierung der Platte während der Kalibrierung definiert dann die Orientierung des optischen Koordinatensystem.}
+    \caption{Definition der Koordinatensysteme: Der rote Pfeil ist jeweils die $x$-Achse, grün die $y$-Achse und blau die $z$-Achse. (a) zeigt die Definition des magnetischen Koordiantensystems, (b) zeigt die Definition des optischen Koordinatensystem.}
     \label{fig:CoordSystems}
 \end{figure}
 
-Um die beiden Ergebnisse miteinander vergleichen zu können, müssen diese im gleichen Koordinatensystem sein. Ein Problem ist, dass der Demonstrator aus Abbildung \ref{fig:Demonstrator} nur schwer so positionert werden kann, dass beide Koordinatensysteme miteinander ausgerichtet sind. Daher sind an der 3D-Spule optische Marker angebracht, mit deren Hilfe die magnetischen Koordinatenachsen im optischen Koordinatensytem detektiert werden können. Aus den so detektierten Einheitsvektoren ($\vec{e}\tindex{x,Mag},\vec{e}\tindex{y,Mag},\vec{e}\tindex{z,Mag}$) ergibt sich eine Rotationsmatrix $\bvec{R}\tindex{Opt$\rightarrow$ Mag}$ zwischen den beiden Koordinatensystemen 
+Um die beiden Ergebnisse miteinander vergleichen zu können, müssen diese im gleichen Koordinatensystem sein. Ein Problem ist, dass der Demonstrator aus Abbildung \ref{fig:Demonstrator} nur schwer so positionert werden kann, dass beide Koordinatensysteme miteinander ausgerichtet sind, da nach Kalibrierung das Werkzeug entfernt wird. Daher sind an der 3D-Spule optische Marker angebracht, mit deren Hilfe die magnetischen Koordinatenachsen im optischen Koordinatensytem detektiert werden können. Aus den so detektierten Einheitsvektoren ($\vec{e}\tindex{x,Mag},\vec{e}\tindex{y,Mag},\vec{e}\tindex{z,Mag}$) ergibt sich eine Rotationsmatrix $\bvec{R}\tindex{Opt$\rightarrow$ Mag}$ zwischen den beiden Koordinatensystemen 
 
 \begin{equation}
     \bvec{R}\tindex{Opt$\rightarrow$ Mag} = \left[\begin{array}{c} \vec{e}\tindex{x,Mag}^\text{\,T} \\ \vec{e}\tindex{y,Mag}^\text{\,T} \\ \vec{e}\tindex{z,Mag}^\text{\,T} \end{array}\right].
@@ -220,7 +224,7 @@ Durch Anwendung von $\bvec{R}\tindex{Opt$\rightarrow$ Mag}$ wird diese in das ma
 \end{equation}
 und kann mit der magnetischen Schätzung verglichen werden.
 \subsubsection{Kalibrierung}
-Der Algorithmus für die Schätzung einer kinematischen Kette benötigt als Vorwissen die Abmessungen der kinematischen Kette. Die benötigten Parameter sind die zum einen die Position des ersten Gelenks $\vec{r}\tindex{j}$, sowie für jedes Element der Abstand von Gelenk zu Sensor $l\tindex{js,$i$}$, die Länge der Elemente $l\tindex{ke,$i$}$ und die Dicke der Elemente $d\tindex{ke,$i$}$.
+Der Algorithmus für die Schätzung einer kinematischen Kette benötigt als Vorwissen die Abmessungen der kinematischen Kette. Die benötigten Parameter sind zum einen die Position des ersten Gelenks $\vec{r}\tindex{j}$, sowie für jedes Element der Abstand von Gelenk zu Sensor $l\tindex{js,$i$}$, die Länge der Elemente $l\tindex{ke,$i$}$ und die Dicke der Elemente $d\tindex{ke,$i$}$.
 
 \begin{figure}
     \centering
@@ -235,21 +239,24 @@ Der Algorithmus für die Schätzung einer kinematischen Kette benötigt als Vorw
       \put(27,48){$y$}
       \put(12,60){$z$}
     \end{overpic}
-    \caption{Kalibrierung der kinematischen Kette: Die Abbildung zeigt eine kinematische Kette bestehend aus drei Elementen. Die Roten Pfeile zeigen alle Größen die für den Algorithmus vor der Laufzeit bestimmt werden müssen.}
+    \caption{Kalibrierung der kinematischen Kette: Die Abbildung zeigt eine kinematische Kette bestehend aus drei Elementen. Die roten Pfeile zeigen alle Größen die für den Algorithmus vor der Laufzeit bestimmt werden müssen.}
     \label{fig:TBCalibrated}
 \end{figure}
-Für die Kalibrierung wurden zunächst alle Größen händisch mit einem Lineal ausgemessen. Zwei Schwierigkeiten dabei sind, dass es nicht möglich ist von der Mitte der Quelle aus zu messen und die Länge des Sensorelements beträgt ca. 2\,cm, hier ist es unklar an welcher Stelle genau die Position für einen modellhaften Punktsensor optimal gelegt werden soll. Die gemessenen Initialwerte waren $\vec{r}\tindex{j} = (-0.02,0.00,0.29)\,\text{m}$, $d\tindex{ke,1}=0.015\,\text{m}$, $l\tindex{js,1}=0.065\,\text{m}$, $d\tindex{ke,2}=0.015\,\text{m}$, $l\tindex{js,2}=0.065\,\text{m}$.
 
-Daher wurden die statischen Messungen verwendet um die Kalibrierung durchzuführen. Begonnen wurde mit dem ersten Element, dafür wurden 13 Aufnahmen in unterschiedlichen Ausrichtungen verwendet. Die optimale Kalibrierung sei definiert, dass für diese die optische $\hat{\vec{e}}\tindex{opt,mag}^{\,(j)}$ und die magnetische $\hat{\vec{e}}\tindex{mag}^{\,(j)}$ Schätzung am besten miteinander übereinstimmen. Als Differenz zwischen den jeweiligen Schätzungen wird der Winkel zwischen diesen verwendet. Also Kostenfunktion ergibt sich daraus dann die folgende Gleichung, wobei $N$ die Anzahl der Messungen und $j$ die Nummer des Elements ist
+Für die Kalibrierung wurden zunächst alle Größen händisch mit einem Lineal ausgemessen. Zwei Schwierigkeiten dabei sind zum einen, dass es schwierig ist von der Mitte der Quelle aus zu messen, zum anderen beträgt die Länge des Sensorelements etwa 2\,cm. Hier ist es schwierig, an welcher Stelle die Position eines äquivalenten Punktsensors wäre, daher wurde bis zur Mitte des Sensorelements gemessen. Die gemessenen Initialwerte waren $\vec{r}\tindex{j} = (-0.02,0.00,0.29)\,\text{m}$, $d\tindex{ke,1}=0.015\,\text{m}$, $l\tindex{js,1}=0.065\,\text{m}$, $d\tindex{ke,2}=0.015\,\text{m}$, $l\tindex{js,2}=0.065\,\text{m}$.
+
+Die statischen Messungen werden nun verwendet um die händische Kalibrierung zu verbessern. Begonnen wurde mit dem ersten Element, dafür wurden 13 Aufnahmen in unterschiedlichen Ausrichtungen verwendet. Die optimale Kalibrierung sei definiert, dass für diese die optische $\hat{\vec{e}}\tindex{opt,mag}^{\,(j)}$ und die magnetische $\hat{\vec{e}}\tindex{mag}^{\,(j)}$ Schätzung am besten miteinander übereinstimmen. Als Differenz zwischen den jeweiligen Schätzungen wird der Winkel zwischen diesen verwendet. Als Kostenfunktion ergibt sich daraus dann die folgende Gleichung, wobei $N$ die Anzahl der Messungen und $j$ die Nummer des Elements ist
 
 \begin{equation}
-    e = \frac{1}{N} \sum_{j=1}^{N} \arccos(\hat{\vec{e}}\tindex{opt,mag}^{\,(j)}\cdot\hat{\vec{e}}\tindex{mag}^{\,(j)}).
+    e_{j} = \frac{1}{N} \sum_{j=1}^{N} \arccos(\hat{\vec{e}}\tindex{opt,mag}^{\,(j)}\cdot\hat{\vec{e}}\tindex{mag}^{\,(j)}).
         \label{eq:CostFkt}
 \end{equation}
-In einem Bereich von $\pm 2\,cm$ zu den gemessenen Werten wurden in einem Raster von 1\,mm untersucht und die Kombination mit dem geringsten Fehler wurde übernommen. Mit den Werten des ersten Elements wurde dann das zweite Element auf die selbe Art kalibriert, hier mit $N=8$ Aufnahmen. Die Kalibriertenwerte unterscheiden sich leicht zu den händisch gemessenen Werten und lauten wie folgt $\vec{r}_j = (-0.0137,0.0029,0.2960)\,\text{m}$, $d\tindex{ke,1}=0.008\,\text{m}$, $l\tindex{js,1}=0.063\,\text{m}$, $d\tindex{ke,2}=0.008\,\text{m}$, $l\tindex{js,2}=0.063\,\text{m}$.
+In einem Bereich von $\pm 2\,cm$ zu den gemessenen Werten wurden in einem Raster von 0.1\,mm untersucht und die Kombination mit dem geringsten Fehler wurde übernommen. Mit den Werten des ersten Elements wurde dann das zweite Element auf die selbe Art kalibriert, hier mit $N=8$ Aufnahmen. Die Kalibriertenwerte unterscheiden sich leicht zu den händisch gemessenen Werten $\vec{r}_j = (-0.0137,0.0029,0.296)\,\text{m}$, $d\tindex{ke,1}=0.008\,\text{m}$, $l\tindex{js,1}=0.063\,\text{m}$, $d\tindex{ke,2}=0.008\,\text{m}$, $l\tindex{js,2}=0.063\,\text{m}$.
 
 \subsubsection{Ergebnisse}
 In den Tabellen\,\ref{tab:Ergebnisse1},\,\ref{tab:Ergebnisse2} sind die Ergebnisse der statischen Messungen zu sehen. Darin sind die Gelenkswinkel der magnetischen und der optischen Schätzung aufgetragen. Der mittlere Fehler (\textit{Mean Absolute Error}) für das erste Element beträgt $1.3^\circ$ und für das zweite Element $2.7^\circ$.
+
+% hier noch Varianz hinzufügen
 \begin{table}[h]
     \centering
     \begin{tabular}{|c| c| c| c| c|}
@@ -314,7 +321,7 @@ In den Tabellen\,\ref{tab:Ergebnisse1},\,\ref{tab:Ergebnisse2} sind die Ergebnis
     \label{tab:Ergebnisse2}
   \end{table}
   
-  Das Kamerasystem liefert mit einer Abtastrate von 100\,Hz Positionen. Um beide System gut miteinander vergleichen zu können, wurde die Rahmenlänge der Signalverarbeitung so angepasst, dass auch die magnetische Schätzung Werte mit 100\,Hz liefert. In Abbildung\,\ref{fig:RawResults} sind die Ergebnisse der dynamischen Aufnahme ohne Nachverarbeitung dargestellt. 
+  Das Kamerasystem liefert mit einer Abtastrate von 100\,Hz Positionen. Um beide System gut miteinander vergleichen zu können, wurde die Rahmenlänge der Signalverarbeitung so angepasst, dass die magnetische Schätzung Werte mit 100\,Hz liefert. In Abbildung\,\ref{fig:RawResults} sind die Ergebnisse der dynamischen Aufnahme ohne Nachverarbeitung dargestellt. 
   \begin{figure}[h]
     \centering
     \subfloat[Gelenkwinkel für das erste Gelenk]{
@@ -328,7 +335,7 @@ In den Tabellen\,\ref{tab:Ergebnisse1},\,\ref{tab:Ergebnisse2} sind die Ergebnis
     \caption{Die Abbildung zeigt die beiden Gelenkswinkel für das erste(a) und zweite Gelenk(b). Dabei sind die Schätzungen der magnetischen Lokalisierung ohne Nachverarbeitung(gestrichelt), sowie die optischen Schätzungen über der Zeit aufgetragen. }
     \label{fig:RawResults}
   \end{figure}
-  Die rohen Schätzungen werden wie beschrieben mit einem Butterworth-Tiefpassfilter gefiltert. Die Ergebnisse nach der Filterung mit Fehlerbsetimmung für jede Schätzung sind in den Abbildungen\,\ref{fig:ResultsFirstElement} und\,\ref{fig:ResultsSecondElement} dargestellt. 
+  Die rohen Schätzungen werden wie beschrieben mit einem Butterworth-Tiefpassfilter gefiltert. Die Ergebnisse nach der Filterung mit Fehlerbestimmung für jede Schätzung sind in den Abbildungen\,\ref{fig:ResultsFirstElement} und\,\ref{fig:ResultsSecondElement} dargestellt. 
   \begin{figure}[h]
     \centering
     \subfloat[Gefilterte Winkel der Bewegung für das erste Element]{
@@ -359,9 +366,10 @@ In den Tabellen\,\ref{tab:Ergebnisse1},\,\ref{tab:Ergebnisse2} sind die Ergebnis
     \label{fig:ResultsSecondElement}
   \end{figure}
 \subsubsection{Diskussion}
-Das magnetische System wurde mit einem kommerziellen Kamerasystem von \textit{Qualisys} verglichen. Die statischen Messungen zeigen den geringsten Fehler. Der Fehler liegt im Bereich von wenigen $^\circ$. Der restliche Fehler hat verschiedene Gründe, in der Modellbildung wurde sowohl das Sensormodell und das Spulenmodell vereinfacht. 
+Das magnetische System wurde mit einem kommerziellen Kamerasystem von \textit{Qualisys} verglichen. Die statischen Messungen zeigen den geringsten Fehler, wohingegen die dynamischen Messungen einen leicht größeren Fehler haben. Die Messungen haben auch gezeigt, dass das zweite Elemente einen größeren Fehler hat als das erste. Dies ist logisch, da der Fehler des ersten Elements in die Schätzung des zweiten mit einfließt. Außerdem ist das zweite Element tendenziell weiter von der Quelle entfernt und die Signalstärke wird schwächer. Der mittlere Fehler liegt in allen Szenarien im einstelligen $^\circ$-Bereich. Der verbleibende Fehler kann unterschiedliche Gründe haben, in der Modellbildung wurden zum Beispiel die Sensoren als in einem Punkt lokalisiert angenommen, die Dipolnäherung ist nicht beliebig genau oder die Sensoren haben durch den Ferritkern selsbt eine leicht verezerrende Wirkung auf das Magnetfeld. Die quantitativen Messungen haben trotzdem gezeigt, dass mit dem vorgestellten Verfahren die Bewegung einer kinematischen Kette bestimmt werden kann.
 
-Die dynamischen Messungen ohne Nachverarbeitung zeigen, dass die magnetischen Schätzungen stärker verrauscht sind als die optischen. Mit einer kürzeren Rahmenlänge von 256 (5.3\,ms) wurden die Daten prozessiert und damit eine Frequenzanalyse durchgeführt. Diese ist in Abbildung\,\ref{fig:FFTAngles} dargestellt. 
+
+Es sollen kurz die dynamischen Messungen ohne Nachverarbeitung analysiert werden um auf potentielle Störursachen schließen zu können. Mit einer kürzeren Rahmenlänge von 256 (5.3\,ms) wurden die Daten prozessiert um eine größere Zeitauflösung zu erreichen und eine Frequenzanalyse durchgeführt. Diese ist in Abbildung\,\ref{fig:FFTAngles} dargestellt. 
 
 \begin{figure}[h]
   \scalefont{2}
@@ -374,15 +382,15 @@ Die dynamischen Messungen ohne Nachverarbeitung zeigen, dass die magnetischen Sc
     \inputTikZ{0.425}{05_eval/images/FFTMag.tikz}
     \label{fig:FFTMag}
   }
-  \caption{Frequenzanalyse der Winkelschätzung}
+  \caption{Frequenzanalyse der Winkelschätzung und der magnetischen Eingangssignale, es ist jeweils das Signal des ersten Elements dargestellt.}
   \label{fig:FFTAngles}
 \end{figure}
 
-Darin ist gut zu sehen, dass es tieffrequent (im Bereich bis 5\,Hz) Anteile gibt. Diese sind Teil der Bewegung. Desweiteren gibt es Spitzen bei 20\,Hz, 70\,Hz und 80\,Hz. Die Spitzen bei 20\,Hz und 80\,Hz lassen sich mit Harmonischen der Netzspannung erklären. Diese liegen bei 550\,Hz, 650\,Hz, 750\,Hz und 850\,Hz (siehe Abbildung\,\ref{fig:FFTAngles}). Die Anregungssignale liegen bei 630\,Hz,  700\,Hz und 770\,Hz, und eine Bewegung führt zu einer Amplitudenmodulation, also zu frequenzanteilen bei den Anregungssignalen $\pm$ den Frequenzanteilen der Bewegung. Die Netzspannung bei 650\,Hz und 750\,Hz sind jeweils 20\,Hz von den Anregungssignalen entfernt, die bei 550\,Hz und 850\,Hz jeweils 80\,Hz und sorgen so für Artefakte in der Schätzung. Der Ursprung der Störungen bei 70\,Hz können unterschiedliche Ursachen haben, zum einen hat die Spule in diesem Bereich ein leichtes frequenzabhängiges Verhalten, zum Anderen zeigt auch die verwendete Sensorik ein frequenzabhängiges Verhalten. Diese verbliebenen Modellfehler können zu diesen Artefakten führen. In der Nachverarbeitung wird ein Tiefpassfilter angewendet und dieses Rauschen wird stark reduziert und sowohl beim ersten als auch beim zweiten Element korrelieren die optische und magnetische Schätzung gut. 
+Darin ist gut zu sehen, dass es tieffrequent (im Bereich bis 5\,Hz) Anteile gibt. Diese sind Teil der Bewegung. Desweiteren gibt es Spitzen bei 20\,Hz, 70\,Hz und 80\,Hz. Die Spitzen bei 20\,Hz und 80\,Hz lassen sich mit Harmonischen der Netzspannung erklären. Diese liegen bei 550\,Hz, 650\,Hz, 750\,Hz und 850\,Hz (siehe Abbildung\,\ref{fig:FFTAngles}). Die Anregungssignale liegen bei 630\,Hz,  700\,Hz und 770\,Hz, und eine Bewegung führt zu einer Amplitudenmodulation, also zu frequenzanteilen bei den Anregungssignalen $\pm$ den Frequenzanteilen der Bewegung. Die Netzspannung bei 650\,Hz und 750\,Hz sind jeweils 20\,Hz von den Anregungssignalen entfernt, die bei 550\,Hz und 850\,Hz jeweils 80\,Hz und sorgen so für Artefakte in der Schätzung. Der Ursprung der Störungen bei 70\,Hz können unterschiedliche Ursachen haben, zum einen hat die Spule in diesem Bereich ein leichtes frequenzabhängiges Verhalten, zum Anderen zeigt auch die verwendete Sensorik ein frequenzabhängiges Verhalten. Diese verbliebenen Modellfehler können zu diesen Artefakten führen. In der Nachverarbeitung wird ein Tiefpassfilter angewendet und dieses Rauschen wird stark reduziert. Der mittlere Fehler wirkt relativ gering und wie in Abbildung\,\ref{fig:ResultsFirstElement} und \ref{fig:ResultsSecondElement} korrelieren beide Winkel gut mit den optischen Schätzungen. 
 
-Hier in den Vergleich setzen mit anderen magnetischen Ansätzen. 
   
 \section{Absolute Lokalisierung}
+
 \begin{figure}[h]
   \centering
   \subfloat[Simulationssetup]{
@@ -395,7 +403,7 @@ Hier in den Vergleich setzen mit anderen magnetischen Ansätzen.
     \end{overpic}
     \label{fig:SimAbsSetup}
   }
-  \caption{Setup}
+  \caption{Aufbauten für die absolut Lokalisierung: (a) zeigt das Simulationssetup, (b) zeigt den realen Aufbau.}
   \label{fig:AbsSetup}
 \end{figure} 
 \subsection{Fehlermaß}
@@ -465,7 +473,7 @@ Die drei einzelnen Quaternionen werden aufmultipliziert und man erhält
   \bvec{q}\tindex{Eval} = \bvec{q}\tindex{z} \circ \bvec{q}\tindex{y} \circ \bvec{q}\tindex{x}.
   \label{eq:QuatEval}
 \end{equation}
-Die Komponenten zwei bis vier von $\bvec{q}\tindex{Eval}$ werden verworfen und aus der ersten Komponente wird die effektive Verdrehung $\alpha\tindex{Eval}$ bestimmt
+Die Komponenten zwei bis vier von $\bvec{q}\tindex{Eval}$ werden verworfen, da die Richtung der Verdrehung nicht interessiert, und aus der ersten Komponente wird die effektive Verdrehung $\alpha\tindex{Eval}$ bestimmt
 \begin{equation}
   \alpha\tindex{Eval} = 2\,\arccos(q\tindex{Eval,w}).
   \label{eq:EffVerd}
@@ -489,20 +497,20 @@ Die Sensorpaare sind $0.7\,\text{m}$ voneinander entfernt. Das $x$-Sensorpaar is
 \end{pmatrix}$.
 \subsubsection{Ergebnisse}
 \paragraph{Robustheit der Positionsschätzung gegen Rauschen}
-Die Robustheit der Positionsschätzung soll anhand eines Sensorpaares, also in einer Koordinate ($x$), geprüft werden. Da die drei Koordinaten unabhängig voneinander bestimmt werden, ergibt sich jeweils dasselbe Ergebnis. Auf das Sensorsignal wird weißes Rauschen addiert, mit einem konstatnten Rauschteppich von $150\,\frac{\text{pT}}{\sqrt{\text{Hz}}}$ ergibt. Die Spule wird so angesteuert, dass der maximale Strom bei 1\,A liegt. Die Sensoren sind 70\,cm voneinander entfernt. In einem Raster von 1\,cm wird jede Position in der $xy$-Ebene für 100 Rahmen simuliert. Die Untersuchung wird nur in einer Ebene durchgeführt, da aufgrund der Zylindersymmetrie des Dipolfeldes alle anderen Ebenen sich äquivalent ergeben. Es wird zum einen geprüft, wie groß die Standardabweichung innerhalb der 100 Schätzungen ist und ob der Mittelwert möglichst gut zum wahren Wert konvergiert. Das Ergebnis ist Abbildung\,\ref{fig:PosSimEval} dargestellt.
+Die Robustheit der Positionsschätzung soll anhand eines Sensorpaares, also in einer Koordinate ($x$), geprüft werden. Da die drei Koordinaten unabhängig voneinander bestimmt werden, ergibt sich jeweils dasselbe Ergebnis. Auf das Sensorsignal wird weißes Rauschen addiert, mit einem konstatnten Rauschteppich von $150\,\frac{\text{pT}}{\sqrt{\text{Hz}}}$ ergibt. Die Spule wird so angesteuert, dass der maximale Strom bei 1\,A liegt. Die Sensoren sind 70\,cm voneinander entfernt. In einem Raster von 1\,cm wird jede Position in der $xy$-Ebene für 100 Rahmen simuliert. Die Untersuchung wird nur in einer Ebene durchgeführt, da aufgrund der Zylindersymmetrie des Dipolfeldes alle anderen Ebenen sich äquivalent ergeben. Es wird zum einen geprüft, wie groß die Standardabweichung innerhalb der 100 Schätzungen ist und ob der Mittelwert möglichst gut zum wahren Wert konvergiert. Das Ergebnis ist in Abbildung\,\ref{fig:PosSimEval} dargestellt.
 \begin{figure}[h]
   \centering
-  \subfloat[Standardabweichung der Position]{
+  \subfloat[Standardabweichung der $x$-Komponente]{
     \scalefont{2}
     \inputTikZ{0.425}{05_eval/images/StdAbweichung_Pos.tikz}
     \label{fig:stdAbwPosSim}
   }
-  \subfloat[Abweichung der mittleren Position vom Ground Truth]{
+  \subfloat[Abweichung der mittleren $x$-Komponente vom Ground Truth]{
     \scalefont{2}
     \inputTikZ{0.425}{05_eval/images/absoluterFehler_Pos.tikz}
     \label{fig:errorPosSim}
   } 
-  \caption{}
+  \caption{Ergebnisse der Simualtion zur Überprüfung der Rebustheit der Positionsschätzung gegen weißes Rauschen}
   \label{fig:PosSimEval}
 \end{figure}
 Die Simulation zeigt, dass die Positionsschätzung in der Nähe der Symmetrieachse am robustesten ist. Genau in der Mitte der Anordnung ist die Standardabweichung am geringsten. Bei einer Mittelung über 100 Rahmen liegt der Fehler im gesamten Messvolumen im sub-mm-Bereich. 
@@ -519,6 +527,7 @@ Die Position der 3D-Spule geht in die Orientierungsschätzung ein. Mit einer Sim
 \end{figure}
 
 \paragraph{Einfache Bewegung}
+
 Eine einfache Bewegung wurde simuliert, dabei wurde die 3D-Spule mit einer konstanten Geschwindigkeit von $v = 0.1\,\frac{\text{m}}{\text{s}}$ der Startpunkt liegt bei $\vec{r}\tindex{c,start} = \begin{pmatrix}
   -0.3\,\text{m} \\
   0\,\text{m} \\
@@ -536,21 +545,25 @@ Eine einfache Bewegung wurde simuliert, dabei wurde die 3D-Spule mit einer konst
     \inputTikZ{0.45}{05_eval/images/FehlerBewegung.tikz}
     \label{fig:ErrorMovement}
   } 
-  \caption{Simulation einer Einfachen Bewegung}
+  \caption{Ergebnisse der Simulation einer einfachen Bewegung}
   \label{fig:AbsMovement}
 \end{figure}
-In Abbildung\,\ref{fig:AbsMovement} ist das Ergebnis dargestellt. Bei einer Bewegung mit einer Geschwindigkeit von $0.1\,\frac{\text{m}}{\text{s}}$, kommt es zu Fehlern durch die Bewegung von maximal 0.2\,mm. In der Mitte des Aufbaus, ist der Fehler an geringsten, was mit Blick auf die Ergebnisse aus Abbildung\,\ref{fig:PosSimEval} erklären. Hier sieht man, dass die Schätzung in der Mitte des Aufbaus am robustesten ist und Störungen hier am wenigsten Einfluss auf das Ergebnis haben.
+In Abbildung\,\ref{fig:AbsMovement} ist das Ergebnis dargestellt. Bei einer Bewegung mit einer Geschwindigkeit von $0.1\,\frac{\text{m}}{\text{s}}$, kommt es zu Fehlern durch die Bewegung von maximal 0.2\,mm.
+
 \subsubsection{Diskussion}
 \paragraph{Robustheit der Position gegen Rauschen}
-Das Ergebnis ist in Abbildung\,\ref{fig:PosSimEval} dargestellt. Darin ist gut zu sehen, dass in der Mitte des Aufbaus die Schätzung am robustesten ist. Es zeigt außerdem, dass die Positionsschätzung außerdem in der Nähe der Symmetrieachse robuster ist. Das kann zum einen durch das SNR auf Senderseite erklärt werden. Das Sensorrauschen ist unabhängig vom Ort der Spule, jedoch nimmt das Nutzsignal mit $\frac{1}{r^3}$ ab. Somit ist auf der Symmetrieachse der Abstand zu den Sensoren kleiner als in den Ecken und das SNR besser. Außerdem lohnt hier ein Blick auf die Form der Äquipotentialflächen, diese sind in Abbildung\,\ref{fig:AbslocalIterations} dargestellt. Darin ist gut zu erkennen, dass in Richtung der Sensorachse der Verlauf der Kurve senkrecht dazu ist. Die zu schätzende Positionskomponente verändert sich in diesem Fall nur sehr gering. Eine Veränderung von $G$ eines Sensors hat, daher nur eine kleine Änderung. Je weiter außen man auf der Kurve ist, desto größer wird die Steigung. Hier hat eine Variation von $G$ direkt einen größeren Einfluss.
+Das Ergebnis ist in Abbildung\,\ref{fig:PosSimEval} dargestellt. Darin ist gut zu sehen, dass in der Mitte des Aufbaus die Schätzung am robustesten ist. Es zeigt außerdem, dass die Positionsschätzung außerdem in der Nähe der Symmetrieachse robuster ist. Das kann zum einen durch das SNR auf Senderseite erklärt werden. Das Sensorrauschen ist unabhängig vom Ort der Spule, jedoch nimmt das Nutzsignal mit $\frac{1}{r^3}$ ab. Somit ist auf der Symmetrieachse der Abstand zu den Sensoren kleiner als in den Ecken und das SNR besser. Außerdem lohnt hier ein Blick auf die Form der Äquipotentialflächen, diese sind in Abbildung\,\ref{fig:AbslocalIterations} dargestellt. Darin ist gut zu erkennen, dass in Richtung der Sensorachse der Verlauf der Kurve senkrecht dazu ist. Die zu schätzende Positionskomponente verändert sich in diesem Fall nur sehr gering. Eine Veränderung der Distanzinformation $G$ eines Sensors hat, daher nur eine kleine Änderung. Je weiter außen man auf der Kurve ist, desto größer wird die Steigung. Hier hat eine Variation von $G$ direkt einen größeren Einfluss.
+
 \paragraph{Einfluss eines Positionsfehlers auf die Orientierungsschätzung}
-In Abbildung\,\ref{fig:stdAbwOrPosVar} ist dargestellt, wie sich im Mittel die Orientierung in Abhängigkeit von einem Positionsfehler verhält. Die extrahierten MV bleiben korrekt, nur die berechneten $\vec{e}^{\text{Glob}}\tindex{max}$ sind fehlerhaft. Die Simulation hat ergeben, dass wenn der Positionsfehler im Bereich bis zu 10\,cm liegt, der mittlere Winkelfehler sich nahezu linear verhält. Der Winkelfehler steigt dabei um etwa $1^\circ$ pro cm Positionsfehler. Dies ist auf einen ersten Blick relativ gering. 
+In Abbildung\,\ref{fig:stdAbwOrPosVar} ist dargestellt, wie sich im Mittel die Orientierung in Abhängigkeit von einem Positionsfehler verhält. Die extrahierten MV bleiben korrekt, nur die berechneten $\vec{e}^{\text{Glob}}\tindex{max}$ sind fehlerhaft. Die Simulation hat ergeben, dass wenn der Positionsfehler im Bereich bis zu 10\,cm liegt, der mittlere Winkelfehler sich nahezu linear verhält. Der Winkelfehler steigt dabei um etwa $1^\circ$ pro cm Positionsfehler.  
+
 \paragraph{Einfache Bewegung}
-Abbildung\,\ref{fig:AbsMovement} zeigt das Ergebnis für eine relativ einfache Bewegung. Dabei ist zum einen die $x$-Komponente über der Zeit dargestellt. Die magnetische Schätzung und die Werte aus der Simulation liegen dabei nahezu übereinander. Der Fehler ist über den gesamten Verlauf sehr gering und bewegt sich im sub-mm-Bereich. Auffällig ist, dass in der Mitte des Aufbaus der Fehler geringer ist. Hier ist wieder zu erkennen, dass die Schätzung in der Mitte des Aufbaus robuster ist. Der Fehler durch eine Bewegung ist an dieser Stelle so gering, dass dieser vernachlässigt werden kann.
+Abbildung\,\ref{fig:AbsMovement} zeigt das Ergebnis für eine relativ einfache Bewegung. Dabei ist zum einen die $x$-Komponente über der Zeit dargestellt. Die magnetische Schätzung und die Werte aus der Simulation liegen dabei nahezu übereinander. Der Fehler ist über den gesamten Verlauf sehr gering und bewegt sich im sub-mm-Bereich. Auffällig ist, dass in der Mitte des Aufbaus der Fehler geringer ist. Hier ist wieder zu erkennen, dass die Schätzung in der Mitte des Aufbaus robuster ist. 
+
 \subsection{Experimentelle Evaluierung}
 Für die Experimentelle Synchronisierung wurden statische und dynamische Messungen durchgeführt. Jede Messsequenz hat eine Länge von 15\,s.
 \subsubsection{Räumliche Synchronisierung}
-Die Koordinatenachsen im Lokalisierungssetup sind durch die Ausrichtung der Sensorpaarachsen definiert. Das Setup ist in Abbildung\,\ref{fig:SpatialSyncAbslocal} dargestellt. Die Sensoren sind an PVC-Streben befestigt, die mit der Sensorachse ausgerichtet sind. Die zusammengehörenden Sensoren sind 0.5\,m voneinander entfernt. An den Streben sind ebenfalls an jeder Strebe zwei optische Marker, mit denen die magnetischen Koordinatenachsen im optischen System $\vec{e}\tindex{x,mag,opt},\vec{e}\tindex{y,mag,opt},\vec{e}\tindex{z,mag,opt}$ bestimmt werden können. Dafür wird die Position der Marker $\vec{r}\tindex{x,1-2},\vec{r}\tindex{y,1-2},\vec{r}\tindex{z,1-2}$ bestimmt und die Koordinatenachsen berechnet
+Die Koordinatenachsen im Lokalisierungssetup sind durch die Ausrichtung der Sensorpaarachsen definiert. Das Setup ist in Abbildung\,\ref{fig:SpatialSyncAbslocal} dargestellt. Die Sensoren sind an PVC-Streben befestigt, die mit der Sensorachse ausgerichtet sind (Rot = $x$,Grün = $y$,Blau = $z$). Die zusammengehörenden Sensoren sind 0.5\,m voneinander entfernt. An den Streben sind ebenfalls an jeder Strebe zwei optische Marker (Rot = $x$,Grün = $y$,Blau = $z$, mit leicht erhöhter Farbhelligkeit), mit denen die magnetischen Koordinatenachsen im optischen System $\vec{e}\tindex{x,mag,opt},\vec{e}\tindex{y,mag,opt},\vec{e}\tindex{z,mag,opt}$ bestimmt werden können. Dafür wird die Position der Marker $\vec{r}\tindex{x,1-2},\vec{r}\tindex{y,1-2},\vec{r}\tindex{z,1-2}$ bestimmt und die Koordinatenachsen berechnet
 
 \begin{equation}
   \vec{e}\tindex{x,mag,opt} = \frac{\vec{r}\tindex{x,2}-\vec{r}\tindex{x,1}}{|\vec{r}\tindex{x,2}-\vec{r}\tindex{x,1}|},
@@ -566,7 +579,7 @@ Die Koordinatenachsen im Lokalisierungssetup sind durch die Ausrichtung der Sens
   \centering
   \begin{overpic}[width=0.7\textwidth,trim = 0 0 0 0]{05_eval/images/SpatialSync_Abslocal.png}
   \end{overpic}
-  \caption{Aufbau für die Evaluierung der Lokalisierung: Es ist ein würfelförmiger Aufbau, mit grauen PVC-Streben. An diesen sind die Sensoren(Rot, Grün und Blau) angebracht. An diesen Streben sind in jeder Richtung zwei optische Marker angebracht. }
+  \caption{Aufbau für die Evaluierung der Lokalisierung: An dem Würfel sind PVC-Streben mit jeweils zwei Sensoren und zwei optischen Markern für $x$(rot),$y$(grün) und $z$(blau). Die Sensoren sind mit den helleren Rechtecken gekennzeichnet.}
   \label{fig:SpatialSyncAbslocal}
 \end{figure}
 Wie in Gleichung\,\ref{eq:CoordinateTrans} lässt sich aus den Koordinatenachsen eine Rotationsmatrix zwischen den beiden Systemen bestimmen. Es bleibt bei der absoluten Lokalisierung ein Offset ziwschen den Ursprüngen. Dafür werden die statischen Messungen verwendet und die Differenz zwischen jeweils zwischen magnetischer und optischer Schätzung bestimmt. Diese Differenz wird als Translation auf die optische Schätzung angewendet. Die Koordinatensysteme teilen somit die Ausrichtung und den Ursprung.
@@ -688,10 +701,15 @@ Der quantitative Fehler der magnetischen Schätzung ist in Abbildung\,\ref{fig:E
     \inputTikZ{0.45}{05_eval/images/DynEvalWinkelfehler.tikz}
     \label{fig:ErrorMovement}
   } 
-  \caption{}
+  \caption{Fehler der dynamischen Messsung über die Messsequenz}
   \label{fig:ErrorAbsLocal}
 \end{figure}
   
 \subsubsection{Diskussion}
+Die absolute Lokalisierung zeigt einen gesamten Fehler von 15.2\,mm. Der mittlere Fehler ist über alle drei Koordinaten relativ konstant und beträgt für $x = 7.6\,\text{mm}$, für $y = 8.2\,\text{mm}$ und für $z = 6.3\,\text{mm}$. Aufgrund des Aufbaus war aufgrund der Symmetrie davon auszugehen, dass das Verhalten aller drei Achsen ähnlich ist. Die Orientierungsschätzung hat im statischen Fall einen mittleren Fehler von $16.1^\circ$, 
+- Dynamische Messung korreliert mit Optischen Daten 
+- Orientierungsschätzung nur teilweise, Orte an denen die Abweichungen sehr groß ist
+- Teilweise Aussetzer, 
+- Erhöhte Orientierungsfehler korreliert nicht mit dem Fehler in der Position
 
 

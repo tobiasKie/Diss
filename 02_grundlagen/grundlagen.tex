@@ -108,20 +108,20 @@ Während der Laufzeit nehmen die Kameras synchronisiert Bilder auf und die Auswe
 \end{figure}
 In dieser Arbeit wird zur Evaluierung ein Kamerasystem des Herstellers \textit{Qualisys AB} bestehend aus acht Miqus-Kameras \cite{noauthor_miqus_nodate}.
 
-\subsection{IMU-basierte Systeme}
-\label{subsec:imubasedSystems}
+% \subsection{IMU-basierte Systeme}
+% \label{subsec:imubasedSystems}
 
-Checken ob das sinnvoll ist
+% Checken ob das sinnvoll ist
 
-Unter dem Begriff Inertial-Messeinheit(IMU) werden Sensorsysteme verstandenen, die aus Beschleunigungssensoren, Gysroskopen und optional Magnetfeldsensoren bestehen. In dieser Richtung gibt es verschiedene Hersteller für Bewegungsanalysesysteme wie z.B. XSens\,\cite{roetenberg_xsens_2013}, Life-Performance Research\,\cite{noauthor_welcome_nodate} oder BSnlab\,\cite{noauthor_bsnlab_nodate}. Diese verwenden IMUs die an charakteristischen Stellen, wie zum Beispiel dem Oberarm oder dem Handgelenk angebracht werden. Die Position und Orientierung des IMUs, in Bezug auf das Körperteil, wird vor der Laufzeit kalibriert\,\cite{schepers_xsens_nodate}. In der Regel werden die Beschleunigungssensoren und Gyroskope verwendet um die Beschleunigung und eine Veränderung der Lage zu detektieren. Durch zweimaliges integrieren kann die Rotation geschätzt werden und so ein Gelenekswinkel zwischen den einzelnen Elementen bestimmt werden \cite{schepers_xsens_nodate}. Ein Beispielsystem des Hersteller XSens ist in Abbildung \ref{fig:IMUSys} zu sehen.
+% Unter dem Begriff Inertial-Messeinheit(IMU) werden Sensorsysteme verstandenen, die aus Beschleunigungssensoren, Gysroskopen und optional Magnetfeldsensoren bestehen. In dieser Richtung gibt es verschiedene Hersteller für Bewegungsanalysesysteme wie z.B. XSens\,\cite{roetenberg_xsens_2013}, Life-Performance Research\,\cite{noauthor_welcome_nodate} oder BSnlab\,\cite{noauthor_bsnlab_nodate}. Diese verwenden IMUs die an charakteristischen Stellen, wie zum Beispiel dem Oberarm oder dem Handgelenk angebracht werden. Die Position und Orientierung des IMUs, in Bezug auf das Körperteil, wird vor der Laufzeit kalibriert\,\cite{schepers_xsens_nodate}. In der Regel werden die Beschleunigungssensoren und Gyroskope verwendet um die Beschleunigung und eine Veränderung der Lage zu detektieren. Durch zweimaliges integrieren kann die Rotation geschätzt werden und so ein Gelenekswinkel zwischen den einzelnen Elementen bestimmt werden \cite{schepers_xsens_nodate}. Ein Beispielsystem des Hersteller XSens ist in Abbildung \ref{fig:IMUSys} zu sehen.
 
-\begin{figure}[h]
-    \centering
-    \begin{overpic}[width=0.35\textwidth,trim = 0 0 0 0]{02_grundlagen/images/IMU-System.png}
-    \end{overpic}
-    \caption{IMU-System: In einem Ganzkörperanzug sind bis zu 17 IMUs integriert. Diese sind jeweils einem Körperteil zugeordnet und detektieren die Bewegung.\cite{roetenberg_xsens_2013}}
-    \label{fig:IMUSys}
-\end{figure}
+% \begin{figure}[h]
+%     \centering
+%     \begin{overpic}[width=0.35\textwidth,trim = 0 0 0 0]{02_grundlagen/images/IMU-System.png}
+%     \end{overpic}
+%     \caption{IMU-System: In einem Ganzkörperanzug sind bis zu 17 IMUs integriert. Diese sind jeweils einem Körperteil zugeordnet und detektieren die Bewegung.\cite{roetenberg_xsens_2013}}
+%     \label{fig:IMUSys}
+% \end{figure}
 
 
 
@@ -129,32 +129,27 @@ Unter dem Begriff Inertial-Messeinheit(IMU) werden Sensorsysteme verstandenen, d
 \label{subsec:Stateoftheart}
 \subsubsection{Kommerzielle Angebote}
 Im Bereich der Sensorhandschuhe gab es bis Anfang der 2020er Jahre unterschiedliche Ansätze. Dabei wurde auf verschiedene Sensoriken gesetzt, wie zum Beispiel Stretchsensoren, IMUs oder inkrementelle Messysteme. Eine Zusammenstellung verschiedener Ansätze kann hier gefunden werden \cite{caeiro-rodriguez_systematic_2021}. Optische Systeme haben sich bisher nicht durchgesetzt, da zwischen Kamera und Marker zu jedem Zeitpunkt Sichtkontakt vorhanden sein muss. Aufgrund der Gegebenheit der Hand und das Finger sich unter Umständen verdecken können, wird hier schnell eine große Anzahl Kameras benötigt und der finanzielle Aufwand zu groß.
-In den letzen Jahren sind verschiedene magnetische Ansätze im kommerziellen Bereich erschienen, wie zum Beispiel der SmartGlove der Firma \textit{Rokoko} \cite{noauthor_smartgloves_nodate}. Dieser nutzt eine Kombination aus IMUs und magnetischen Sensoren mit magnetischen Aktuatoren auf dem Handrücken. Ein rein magnetischer wird von der Firma \textit{Manus Meta} angewendet, die in den neusten Versionen einen Aktuator auf dem Handrücken platzieren und jeweils Magnetfeldsensoren in den Fingerspitzen \cite{noauthor_motion_nodate},\cite{saggio_quasi-static_2025}. 
-Endpunkt tracking, inverse Kinematik ....
+
+In den letzen Jahren sind verschiedene magnetische Ansätze im kommerziellen Bereich erschienen. Ein rein magnetischer wird von der Firma \textit{Manus Meta} verfolgt, die in den neusten Versionen einen Aktuator auf dem Handrücken platzieren und jeweils Magnetfeldsensoren in den Fingerspitzen \cite{noauthor_motion_nodate},\cite{saggio_quasi-static_2025}. Laut Hersteller wird eine Endpunktlokalisierung verwendet. Eine zuvor durchgeführte Kalibrierung der Antomie ermöglicht es, aus den Positionen der Fingerspitzen werden dann Gelenkwinkel bestimmt.
 
 \begin{figure}[h]
     \centering 
-    \subfloat[Manus Meta Glove\cite{noauthor_motion_nodate}]{
-        \begin{overpic}[width=0.25\textwidth,trim = 0 0 0 0]{02_grundlagen/images/Manus_Glove.png}
-        \end{overpic}
-        \label{fig:ManusGlove}
-    }
-    \subfloat[Rokoko SmartGlove\cite{noauthor_smartgloves_nodate}]{
-        \begin{overpic}[width=0.4\textwidth,trim = 0 0 0 0]{02_grundlagen/images/RokokoGlove.png}
-        \end{overpic}
-        \label{fig:Rokoko}
-    }
-    \caption{Kommerzielle Sensorhandschuhe: Auf der linken Seite ist der Manus Meta Glove zu sehen. Auf dem Handrücken ist die Elektronik mit magnetischer Aktuatorik. An den Fingerspitzen ist jeweils magnetische Sensorik angebracht. Auf der rechten Seite ist der SmartGlove von Rokoko zu sehen, dieser hat ebenfals Aktuatorik auf dem Handrücken und Sensorik auf dem zweiten Fingerelement.}
-    \label{fig:SensorGloves}
+
+    \begin{overpic}[width=0.25\textwidth,trim = 0 0 0 0]{02_grundlagen/images/Manus_Glove.png}
+    \end{overpic}
+    \label{fig:ManusGlove}
+    \caption{Kommerzieller Sensorhandschuhe: In der Abbildung ist der Sensorhandschuh von \textit{ManusMeta} zu sehen.}
 
 \end{figure}
 Die kommerziellen Systeme verwenden jeweils ein Sensor pro Finger. Durch Kalibrierung der Handanatomie, kann aus der Sensorposition direkt die Haltung des Fingers bestimmt werden.
 
-\subsubsection{Forschungsstand}
+\subsubsection{Forschung}
 In der Forschung verschiedene Arbeiten, die sich mit der Rekonstruktion von Handbewegungen basierend auf magnetischen Sensoren. Zum einen gibt es den Ansatz (Magik)ref. In diesem Ansatz werden Sendespulen auf dem Handrücken und den Fingerspitzen angebracht. In einem Holzaufbau sind 24 Sensoren angebracht. Die Sendespulen werden mit einem Optimierungsalgorithmus lokalisiert. Die Hand wird als kinematische Kette beschrieben und mit einer inversen Kinematik werden die Positionen zu Winkeln übersetzt. 
 
-+1 Magnetic Hand Tracking for Human-Computer Interface
-\subsubsection{Zusammenfassung}
+In einem anderen Ansatz [Magnetic Hand Tracking for Human-Computer Interface] werden permanent Magneten an den Fingerspitzen befestigt. Um das Handgelenk ist ein Armband mit sechs 2D-Sensoren angebracht. Dieser Ansatz ist zwei geteilt, zunächst werden die Magneten auf den Fingerspitzen lokalisiert. Dafür werden die Magneten als magnetische Dipole beschrieben und mit einem Optimierungsalgorithmus eine Kostenfunktion minimiert und so die Positionen bestimmt. In einem zweiten Schritt werden mit einem iterativen Verfahren aus den Positionen Gelenkwinkel geschätzt. Dabei wird die Abbduktion/Adduktion der Finger vernachlässigt. 
+
+\subsubsection{Zusammenfassung und Ausblick}
+Die bisher entwickelten magnetischen Ansätze für das Handbewegungstracking nutzen jeweils ähnliche Ansätze. In allen Ansätzen wird zunächst die Fingerspitze lokalisiert. Mit einer zuvor durchgeführten Kalibrierung wird eine inverse Kinematik angewendet und die Gelenkswinkel bestimmt. In allen Ansätzen wird das Vorwissen über die Anatomie erst nach der Lokalisierung in die Schätzung eingearbeitet. Die Lokalisierung kann unter Umständen sehr aufwändig sein und die nachfolgende Einbeziehung der Anatomie ebenso. In dieser Arbeit soll daher ein Lokalisierungsverfahren entwickelt werden, in dem bereits während der Lokalisierung die Anatomie berücksichtigt wird. So soll die Lokalisierung vereinfacht werden.
 
 \section{Überblick des entwickelten System}
 \label{sec:SystemOverview}

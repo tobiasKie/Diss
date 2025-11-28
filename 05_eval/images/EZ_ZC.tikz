@@ -5,7 +5,7 @@
 %where you can also make suggestions and rate matlab2tikz.
 %
 \definecolor{mycolor1}{rgb}{0.85098,0.32549,0.09804}%
-\definecolor{mycolor2}{rgb}{0.63500,0.07800,0.18400}%
+\definecolor{mycolor2}{rgb}{0.4940, 0.1840, 0.5560}%
 \definecolor{mycolor3}{rgb}{0.92900,0.69400,0.12500}%
 %
 \begin{tikzpicture}
@@ -18,18 +18,21 @@ scale only axis,
 plot box ratio=1 1 1,
 xmin=-1.5,
 xmax=1.5,
+xtick = {-1,0,1},
 tick align=outside,
 xlabel style={font=\color{white!15!black}},
 xlabel={x},
 ymin=-1.5,
 ymax=1.5,
+ytick = {-1,0,1},
 ylabel style={font=\color{white!15!black}},
 ylabel={y},
 zmin=-1.5,
 zmax=1.5,
+ztick = {-1,0,1},
 zlabel style={font=\color{white!15!black}},
 zlabel={z},
-view={-131.603155497979}{21.2068964122673},
+view={-110.603155497979}{21.2068964122673},
 axis background/.style={fill=white},
 axis x line*=bottom,
 axis y line*=left,
