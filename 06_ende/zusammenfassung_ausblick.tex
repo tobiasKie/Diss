@@ -11,10 +11,106 @@
    \subsubsection{Veralgemeinerung der Merkmalsextraktion}
 
    In dieser Arbeit wurde ein Verfahren zur Schätzung von Übertragungsfaktoren (Spule $\rightarrow$ Sensor) vorgestellt. Vorgestellt wurde das Verfahren mit einer 3D-Spule, die als rotierender Dipol angesteuert. Durch die Detektion von Nulldurchgängen, wird ein Maximalvektor extrahiert. Dieser kann wie in den Gleichungen x-y gezeigt in die Übertragungsfaktoren der einzelnen Spulen umgerechnet werden. Dies soll nun auf verteilte Spulen und auf mehr als drei Spulen erweitert werden.\\
-   Zunächst soll gezeigt werden, dass die Orthogonalität zwischen Nulldurchgängen und Maxima auch für verteilte Spulen gilt.
+   Zunächst soll gezeigt werden, dass die Orthogonalität zwischen Nulldurchgängen und Maxima auch für verteilte Spulen gilt. Dies wird mit drei Spulen begonnen, aber später erweitert auf beliebig viele Aktuatoren. Die drei Spulen seien an beliebigen Orten mit beliebiger Orientierung positioniert. Mit Gleichung\,\ref{eq:Sensorprojektion} und \ref{eq:MagDipoleFeld} ergeben sich für die drei Spulen Übertragungsfaktoren $G\tindex{1-3}$, diese werden mit den zugehörigen Strömen $i\tindex{1-3}$ multipliziert und und ergeben das Sensorsignal
+
+   \begin{equation}
+      b(\vec{r},t) = G_{1}(\vec{r})  i_{1}(t) + G_{2}(\vec{r})  i_{2}(t) + G_{3}(\vec{r})  i_{3}(t).
+      \label{eq:SensorSigDependent}
+   \end{equation}
+
+   Die Spulen werden so angesteuert wie in Kapitel \ref{sec:featureExtract} gezeigt 
+
+   \begin{equation}
+      \bvec{I}(t) = i_0 \left[\begin{array}{c} \cos(\omega_\phi t) \sin(\omega_\theta t)\\ \sin(\omega_\phi t)\sin(\omega_\theta t)\\ \cos(\omega_\theta t) \end{array}\right] = i_0 \left[\begin{array}{c} \cos(\phi) \sin(\theta)\\ \sin(\phi)\sin(\theta )\\ \cos(\theta ) \end{array}\right].
+      \label{eq:CoilCurrents}
+   \end{equation}
+   
+   Es muss nun gezeigt werden, dass die Stromvektoren $\bvec{I}(\phi\tindex{max},\theta\tindex{max})$ für das maximale Sensorsignal $b\tindex{max}$ orthogonal zu den Stromvektoren $\bvec{I}(\phi\tindex{0},\theta\tindex{0})$, für kein Signal am Sensor $b\tindex{0}$, stehen. 
+
+   An der Stelle des Maximums müssen die Ableitungen nach der $\phi$ und $\theta$ jeweils 0 sein. Der Stromvektor wird nun nach den beiden Variablen abgeleitet
+   \begin{equation}
+      \frac{\text{d}\bvec{I}}{\text{d}\phi}  = i_0 \left[\begin{array}{c} -\sin(\phi) \sin(\theta)\\ \cos(\phi)\sin(\theta )\\ 0 \end{array}\right],
+      \label{eq:DiffPhiCurr}
+   \end{equation}
+
+   \begin{equation}
+      \frac{\text{d}\bvec{I}}{\text{d}\theta}  = i_0 \left[\begin{array}{c} \cos(\phi) \cos(\theta)\\ \sin(\phi)\cos(\theta )\\ -sin(\theta) \end{array}\right].
+      \label{eq:DiffThetaCurr}
+   \end{equation}
+   Es wird nun $\phi\tindex{max}$ und $\theta\tindex{max}$ eingesetzt
+   \begin{equation}
+      0 = G_{1}(\vec{r})  i_0 (-\sin(\phi\tindex{max})) \sin(\theta\tindex{max}) + G_{2}(\vec{r})  \cos(\phi\tindex{max})\sin(\theta\tindex{max}) + G_{3}(\vec{r}) \, 0,
+      \label{eq:DiffPhieq0}
+   \end{equation}
+
+   \begin{equation}
+      0 = G_{1}(\vec{r})  i_0 \cos(\phi\tindex{max}) \cos(\theta\tindex{max}) + G_{2}(\vec{r})  \sin(\phi\tindex{max})\cos(\theta\tindex{max}) - G_{3}(\vec{r}) \, sin(\theta\tindex{max}).
+      \label{eq:DiffThetaeq0}
+   \end{equation}
 
 
-   - neue Art der Orthogonalisierung verschiedener Signale über geometrische Zusammenhänge
+   An den Gleichungen\,\ref{eq:DiffPhieq0} und \ref{eq:DiffThetaeq0} ist zu erkennen, dass wenn die Spulen mit $\frac{\text{d}\bvec{I}(\phi\tindex{max},\theta\tindex{max})}{\text{d}\phi}$, $\frac{\text{d}\bvec{I}(\phi\tindex{max},\theta\tindex{max})}{\text{d}\theta}$ oder einer Linearkombination beider Vektoren angesteuert ist am Sensor kein Signal detektiert wird. 
+
+   Die Vektoren sind daher die Nulldurchgangsvektoren, nun muss gezeigt werden, dass diese orthogonal zu $\bvec{I}(\phi\tindex{max},\theta\tindex{max})$ stehen. $\bvec{I}$ entspricht in Kugelkoordinaten einem Vektor der nur eine radiale Komponente besitzt, skaliert mit $i_0$. Die Ableitungen zeigen in Richtung von $\vec{e}_\phi$ und $\vec{e}_\theta$. Somit können diese wie folgt geschrieben werden 
+
+   \begin{equation}
+      \bvec{I} = i_0\,\vec{e}_r,
+   \end{equation}
+   \begin{equation}
+      \frac{\text{d}\bvec{I}}{\text{d}\theta} = i_0\,\vec{e}_\theta,
+   \end{equation}
+   \begin{equation}
+      \frac{\text{d}\bvec{I}}{\text{d}\phi} = i_0\,\vec{e}_\phi. 
+   \end{equation}
+
+   Kugelkoordinaten sind ein Orthonormalsystem, sodass diese Vektoren senkrecht zueinander stehen. Damit ist gezeigt, dass auch für separierte Quellen, die Nulldurchgangsvektoren orthogonal zum Maximum stehen. Es zeigt sich bei dieser Betrachtung außerdem, dass die einzelnen Komponenten des MV den relativen Übertragungsfaktoren entspricht. Wenn man die Übertragungsfaktoren nun als Vektor schreibt
+
+   \begin{equation}
+      \bvec{G} = \left[\begin{array}{c} G_1\\ G_2\\ G_3 \end{array}\right],
+      \label{eq:VekG}
+   \end{equation}
+   ist aus den Gleichungen\,\ref{eq:DiffPhieq0} und \ref{eq:DiffThetaeq0} ersichtlich, dass $\bvec{G}$ orthogonal zu den Nulldurchgangsvektoren ist. Das zeigt, dass $\bvec{G}$ und $\bvec{I}(\phi\tindex{max},\theta\tindex{max})$ in diesselbe Richtung zeigen.
+
+   Gleichung\,\ref{eq:SensorSigDependent} lässt sich somit umschreiben
+
+   \begin{equation}
+      b(\vec{r},t) = |\bvec{G}|  \biggl(i_1(t) \,i_{1}(\phi\tindex{max},\theta\tindex{max}) + i_2(t) \,i_{2}(\phi\tindex{max},\theta\tindex{max}) + i_3(t) \,i_{3}(\phi\tindex{max},\theta\tindex{max})\biggr),
+   \end{equation}
+   und lässt sich einfach nach $|\bvec{G}|$ umstellen 
+
+   \begin{equation}
+      |\bvec{G}| = \frac{b(\vec{r},t)}{\biggl(i_1(t) \,i_{1}(\phi\tindex{max},\theta\tindex{max}) + i_2(t) \,i_{2}(\phi\tindex{max},\theta\tindex{max}) + i_3(t) \,i_{3}(\phi\tindex{max},\theta\tindex{max})\biggr)}.
+   \end{equation}
+
+   Der Zusammenhang soll nun auf $n$ Aktuatoren erweitert werden. Dafür schauen wir uns die Verallgemeinerung von Kugelkoordinaten für $n$-Dimensionen an, dafür werden $n-1$ Winkel verwendet
+
+   \begin{equation}
+      \vec{e}_r =  \left[\begin{array}{c} \cos(\phi_1) \\ \sin(\phi_1)\cos(\phi_2 )\\ \sin(\phi_1)\sin(\phi_2 )\cos(\phi_3) \\ \vdots \\ \cos(\phi_1) \dots \sin(\phi_{n-2})\sin(\phi_{n-1}) \end{array}\right].
+   \end{equation}
+
+   Die Richtung ist dabei konstant und die Winkel geben die Richtung des Vektors an. In $n$-Dimensionen lässt sich ebenfalls die Ableitung nach jedem Winkel bilden, aus welchen dann die Einheitsvektoren in der jeweiligen Richtung entstehen. Die Herleitung lässt sich daher für beliebige $n$ wie oben wiederholen. 
+
+   Die Bestimmung des Kreuzprodukts ändert sich, zum einen werden $n-1$ Nulldurchgangsvektoren benötigt, die eine Hyperebene aufspannen und das Kreuzprodukt ist in $\mathbb {R} ^{n}$ ist definiert als
+   
+   \begin{equation}
+      \vec{v} \, (\vec{a}_1 , \times \vec{a}_2 \dots \times \vec{a}_{n-1}) = \text{det}\begin{pmatrix}
+         \vec{v},\,\vec{a}_1,\,\vec{a}_2,\,\dots\vec{a}_{n-1}
+         \end{pmatrix},
+   \end{equation}
+
+   die einzelnen Komponenten $x\tindex{k,MV}$ des Maximalvektor lassen sich dann wie folgt bestimmen, wobei $\vec{e}\tindex{x,k}$ der Einheitsvektor in der entsprechenden Richtung ist,
+
+   \begin{equation}
+      x\tindex{k,MV} = \text{det}\begin{pmatrix}
+         \vec{e}\tindex{x,k},\,\vec{e}\tindex{zc,1},\,\vec{e}\tindex{zc,2},\,\dots\vec{e}\tindex{zc,$n-1$}
+         \end{pmatrix}.
+   \end{equation}
+
+
+
+
+
+
    \subsubsection{Applikationsangepasste Lokalisierung}
    -iterativer Algorithmus
    -angepasst an kinematische Kette

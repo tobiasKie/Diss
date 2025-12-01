@@ -102,12 +102,12 @@
 \contentsline {section}{\numberline {6.2}Zusammenfassung}{83}{section.6.2}%
 \contentsline {subsection}{\numberline {6.2.1}Neuheiten}{83}{subsection.6.2.1}%
 \contentsline {subsubsection}{\nonumberline Veralgemeinerung der Merkmalsextraktion}{83}{subsubsection*.176}%
-\contentsline {subsubsection}{\nonumberline Applikationsangepasste Lokalisierung}{83}{subsubsection*.178}%
-\contentsline {subsection}{\numberline {6.2.2}Verbesserungspotential}{83}{subsection.6.2.2}%
-\contentsline {section}{\numberline {6.3}Ausblick}{84}{section.6.3}%
-\contentsline {subsection}{\numberline {6.3.1}Prototyp}{84}{subsection.6.3.1}%
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{85}{chapter*.179}%
-\contentsline {section}{\nonumberline Weitere Literatur}{85}{section*.181}%
+\contentsline {subsubsection}{\nonumberline Applikationsangepasste Lokalisierung}{85}{subsubsection*.178}%
+\contentsline {subsection}{\numberline {6.2.2}Verbesserungspotential}{85}{subsection.6.2.2}%
+\contentsline {section}{\numberline {6.3}Ausblick}{86}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Prototyp}{86}{subsection.6.3.1}%
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{87}{chapter*.179}%
+\contentsline {section}{\nonumberline Weitere Literatur}{87}{section*.181}%
 \def \@chapapp {\appendixname }
 \contentsline {chapter}{\numberline {A}Weitere Messdaten}{I}{appendix.A}%
 \contentsline {section}{\numberline {A.1}Tmp}{I}{section.A.1}%

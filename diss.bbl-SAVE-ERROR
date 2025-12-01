@@ -106,22 +106,6 @@
       \verb Appell et al. - 2008 - Funktionelle Anatomie Grundlagen sportlicher Leis.pdf:C\:\\Users\\tsc\\Zotero\\storage\\RKSDWJ6Q\\Appell et al. - 2008 - Funktionelle Anatomie Grundlagen sportlicher Leis.pdf:application/pdf
       \endverb
     \endentry
-    \entry{noauthor_bsnlab_nodate}{misc}{}{}
-      \field{sortinit}{B}
-      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
-      \field{labeltitlesource}{title}
-      \field{title}{{BSNlab} - {IMU} {Wearable} {Sensors} - {Motion} {Capture} {System}}
-      \field{urlday}{28}
-      \field{urlmonth}{5}
-      \field{urlyear}{2025}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://bsnlab.com/en/Apex_IMU_Motion
-      \endverb
-      \verb{url}
-      \verb https://bsnlab.com/en/Apex_IMU_Motion
-      \endverb
-    \endentry
     \entry{caeiro-rodriguez_systematic_2021}{article}{}{}
       \name{author}{4}{}{%
         {{hash=dabc908d5bceef4fa2e47f8bf6fee4ca}{%
@@ -1001,46 +985,6 @@
       \endverb
       \keyw{Magnetic field measurement,Magnetic sensors,Position measurement,Magnetic separation,Navigation,Blood,Coordinate measuring machines,Geometry,Rotation measurement,Vectors}
     \endentry
-    \entry{roetenberg_xsens_2013}{article}{}{}
-      \name{author}{3}{}{%
-        {{hash=09225dbf4948ab98a598b1c2652c2d0d}{%
-           family={Roetenberg},
-           familyi={R\bibinitperiod},
-           given={Daniel},
-           giveni={D\bibinitperiod}}}%
-        {{hash=b71297588ff832c576f748c480b84337}{%
-           family={Luinge},
-           familyi={L\bibinitperiod},
-           given={Henk},
-           giveni={H\bibinitperiod}}}%
-        {{hash=425e6a40a958f248a5d4490e8fa5e27c}{%
-           family={Slycke},
-           familyi={S\bibinitperiod},
-           given={Per},
-           giveni={P\bibinitperiod}}}%
-      }
-      \list{language}{1}{%
-        {en}%
-      }
-      \strng{namehash}{1409d64553251d91723f551daa3a2fd8}
-      \strng{fullhash}{39657aa277dd10f0f4ffa6ba94bd006b}
-      \strng{fullhashraw}{39657aa277dd10f0f4ffa6ba94bd006b}
-      \strng{bibnamehash}{39657aa277dd10f0f4ffa6ba94bd006b}
-      \strng{authorbibnamehash}{39657aa277dd10f0f4ffa6ba94bd006b}
-      \strng{authornamehash}{1409d64553251d91723f551daa3a2fd8}
-      \strng{authorfullhash}{39657aa277dd10f0f4ffa6ba94bd006b}
-      \strng{authorfullhashraw}{39657aa277dd10f0f4ffa6ba94bd006b}
-      \field{sortinit}{R}
-      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{The Xsens MVN motion capture suit is an easy-touse, cost efﬁcient system for full-body human motion capture. MVN is based on unique, state-of-the-art miniature inertial sensors, biomechanical models and sensor fusion algorithms. MVN does not need external cameras, emitters or markers. It can thus be used outdoors as well as indoors, there are no restrictions for lighting, it does not suffer from problems of occlusion or missing markers. In addition, unique for inertial motion capture technology: the sensor-suit captures any type of movement, including running, jumping, crawling and cartwheels.}
-      \field{title}{Xsens {MVN}: {Full} {6DOF} {Human} {Motion} {Tracking} {Using} {Miniature} {Inertial} {Sensors}}
-      \field{year}{2013}
-      \verb{file}
-      \verb Roetenberg et al. - 2013 - Xsens MVN Full 6DOF Human Motion Tracking Using M.pdf:C\:\\Users\\tsc\\Zotero\\storage\\328QMJDP\\Roetenberg et al. - 2013 - Xsens MVN Full 6DOF Human Motion Tracking Using M.pdf:application/pdf
-      \endverb
-    \endentry
     \entry{saggio_quasi-static_2025}{misc}{}{}
       \name{author}{4}{}{%
         {{hash=b468e34ceaa302469991a469f7bcc0de}{%
@@ -1108,6 +1052,59 @@
       \endverb
       \keyw{data glove,Dynamic performance,performance assessment,quasi-static performance,sensory glove}
     \endentry
+    \entry{santoni_magik_2021}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=7b48c00499b4f876bb5ab268c13da454}{%
+           family={Santoni},
+           familyi={S\bibinitperiod},
+           given={Francesco},
+           giveni={F\bibinitperiod}}}%
+        {{hash=de9191fe5e914e0d76acd54697492922}{%
+           family={De\bibnamedelima Angelis},
+           familyi={D\bibinitperiod\bibinitdelim A\bibinitperiod},
+           given={Alessio},
+           giveni={A\bibinitperiod}}}%
+        {{hash=a9f646949b1d3be6e559ca132e8007a8}{%
+           family={Moschitta},
+           familyi={M\bibinitperiod},
+           given={Antonio},
+           giveni={A\bibinitperiod}}}%
+        {{hash=4a2454388e7185da294540671559156b}{%
+           family={Carbone},
+           familyi={C\bibinitperiod},
+           given={Paolo},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{6cf347986493953b21ac0060ed84e096}
+      \strng{fullhash}{59d752442392b3cd8219b8e5e5e305bf}
+      \strng{fullhashraw}{59d752442392b3cd8219b8e5e5e305bf}
+      \strng{bibnamehash}{59d752442392b3cd8219b8e5e5e305bf}
+      \strng{authorbibnamehash}{59d752442392b3cd8219b8e5e5e305bf}
+      \strng{authornamehash}{6cf347986493953b21ac0060ed84e096}
+      \strng{authorfullhash}{59d752442392b3cd8219b8e5e5e305bf}
+      \strng{authorfullhashraw}{59d752442392b3cd8219b8e5e5e305bf}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{In this article, we present a hand-tracking system based on magnetic positioning. A single magnetic node is mounted on each fingertip and two magnetic nodes on the back side of the hand. A fixed array of receiving coils is used to detect the magnetic field, from which it is possible to infer the position and orientation of each magnetic node. A kinematic model of the whole hand has been developed. Starting from the positioning data of each magnetic node, the kinematic model can be used to calculate the position and flexion angle of each finger joint, plus the position and orientation of the hand in space. Relying on magnetic fields, the hand-tracking system can work also in non-line-of-sight conditions. The gesture reconstruction is validated by comparing it with a commercial hand-tracking system based on a depth camera. The system requires a small number of electronics to be mounted on the hand. This would allow building a light and comfortable data glove that could be used for several purposes: human-machine interface, sign language recognition, diagnostics, and rehabilitation.}
+      \field{annotation}{Magnetisches Motion Tracking der Finger 1 Spule auf jedem Finger und auf dem Handrücken. in einem Holzgestell sind Sensoren eingebracht. ein Optimierungsalgorithmus bestimmt dann die Position}
+      \field{journaltitle}{IEEE Transactions on Instrumentation and Measurement}
+      \field{note}{Conference Name: IEEE Transactions on Instrumentation and Measurement}
+      \field{shorttitle}{{MagIK}}
+      \field{title}{{MagIK}: {A} {Hand}-{Tracking} {Magnetic} {Positioning} {System} {Based} on a {Kinematic} {Model} of the {Hand}}
+      \field{volume}{70}
+      \field{year}{2021}
+      \field{pages}{1\bibrangedash 13}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1109/TIM.2021.3065761
+      \endverb
+      \verb{file}
+      \verb IEEE Xplore Abstract Record:C\:\\Users\\tsc\\Zotero\\storage\\8874FAL3\\9376979.html:text/html;IEEE Xplore Full Text PDF:C\:\\Users\\tsc\\Zotero\\storage\\BGTC6P4U\\Santoni et al. - 2021 - MagIK A Hand-Tracking Magnetic Positioning System.pdf:application/pdf
+      \endverb
+      \keyw{Sensors,Bones,Gesture recognition,Kinematics,magnetic fields,Magnetic resonance imaging,man-machine systems,position measurement,Position measurement,Receivers,Voltage measurement}
+    \endentry
     \entry{sarabandi_solution_2023}{article}{}{}
       \name{author}{2}{}{%
         {{hash=6d0ec9871deab28f2c2ea8a73d376169}{%
@@ -1165,45 +1162,6 @@
       \endverb
       \keyw{quaternions,rotation matrices,singular value decomposition}
     \endentry
-    \entry{schepers_xsens_nodate}{article}{}{}
-      \name{author}{3}{}{%
-        {{hash=bf1fe87904bb4edbca34937202ed0bab}{%
-           family={Schepers},
-           familyi={S\bibinitperiod},
-           given={Martin},
-           giveni={M\bibinitperiod}}}%
-        {{hash=1dc603c57997eda3420dc8e3cd380a78}{%
-           family={Giuberti},
-           familyi={G\bibinitperiod},
-           given={Matteo},
-           giveni={M\bibinitperiod}}}%
-        {{hash=a64ca23f870b683be2505d61b5ccfcc4}{%
-           family={Bellusci},
-           familyi={B\bibinitperiod},
-           given={Giovanni},
-           giveni={G\bibinitperiod}}}%
-      }
-      \list{language}{1}{%
-        {en}%
-      }
-      \strng{namehash}{ec866c3fe470d4099180ea61afd7902e}
-      \strng{fullhash}{e0cb002c867ca726b38652c1681d6203}
-      \strng{fullhashraw}{e0cb002c867ca726b38652c1681d6203}
-      \strng{bibnamehash}{e0cb002c867ca726b38652c1681d6203}
-      \strng{authorbibnamehash}{e0cb002c867ca726b38652c1681d6203}
-      \strng{authornamehash}{ec866c3fe470d4099180ea61afd7902e}
-      \strng{authorfullhash}{e0cb002c867ca726b38652c1681d6203}
-      \strng{authorfullhashraw}{e0cb002c867ca726b38652c1681d6203}
-      \field{sortinit}{S}
-      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Xsens MVN is an easy to use, cost efﬁcient system that captures full-body human motion in any environment. It is based on small, unobtrusive inertial and magnetic sensors combined with advanced algorithms and biomechanical models. The newly released motion capture engine is immune to magnetic distortions and is available either as MVN Animate for the 3D character animation market, or as MVN Analyze for the human motion measurement market. This whitepaper describes key characteristics and shows an analysis of the performance of the new engine. The performance analysis includes a comparison with an optical position measurement system in combination with OpenSim for walking data, as well as a consistency analysis for running data. The analysis shows RMS differences of less than 5 degrees for the dominant joint angles during walking and consistent performance over more than 90 minutes of running data. The MVN Analyze and MVN Animate engines enable reliable and consistent tracking of any type of movement including running, jumping, squatting, crawling, cartwheeling, in any type of environment, including severe magnetically distorted environments.}
-      \field{title}{Xsens {MVN}: {Consistent} {Tracking} of {Human} {Motion} {Using} {Inertial} {Sensing}}
-      \verb{file}
-      \verb Schepers et al. - Xsens MVN Consistent Tracking of Human Motion Usi.pdf:C\:\\Users\\tsc\\Zotero\\storage\\GC8M6R7T\\Schepers et al. - Xsens MVN Consistent Tracking of Human Motion Usi.pdf:application/pdf
-      \endverb
-    \endentry
     \entry{schmidt_real-time_nodate}{misc}{}{}
       \name{author}{1}{}{%
         {{hash=310eda54aa8a79cd65e9388fa14b1596}{%
@@ -1243,29 +1201,6 @@
       \verb https://dss-kiel.de/index.php/research/realtime-framework
       \endverb
     \endentry
-    \entry{noauthor_smartgloves_nodate}{misc}{}{}
-      \list{language}{1}{%
-        {en}%
-      }
-      \field{sortinit}{S}
-      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
-      \field{labeltitlesource}{title}
-      \field{abstract}{The best mocap gloves for finger animations on the market, using proprietary IMU and EMF sensor fusion technology for high accuracy. Turn motion into magic.}
-      \field{title}{Smartgloves - affordable quality finger and hand motion capture}
-      \field{urlday}{15}
-      \field{urlmonth}{9}
-      \field{urlyear}{2025}
-      \field{urldateera}{ce}
-      \verb{file}
-      \verb Snapshot:C\:\\Users\\tsc\\Zotero\\storage\\TIL622K7\\smartgloves.html:text/html
-      \endverb
-      \verb{urlraw}
-      \verb https://www.rokoko.com/products/smartgloves
-      \endverb
-      \verb{url}
-      \verb https://www.rokoko.com/products/smartgloves
-      \endverb
-    \endentry
     \entry{noauthor_spherical_nodate}{misc}{}{}
       \list{language}{1}{%
         {en}%
@@ -1288,30 +1223,6 @@
       \endverb
       \verb{url}
       \verb https://www.qualisys.com/accessories/markers/super-spherical-markers/
-      \endverb
-    \endentry
-    \entry{noauthor_welcome_nodate}{misc}{}{}
-      \list{language}{1}{%
-        {en-US}%
-      }
-      \field{sortinit}{W}
-      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
-      \field{labeltitlesource}{title}
-      \field{abstract}{LP-Research develops and manufactures high-precision IMU sensors using advanced sensor fusion technology, and provides industrial solutions for VR/AR and AGV systems.}
-      \field{journaltitle}{LP-Research}
-      \field{title}{Welcome to the {Home} of {LP}-{Research} {Sensor} {Fusion} {Solutions}}
-      \field{urlday}{15}
-      \field{urlmonth}{9}
-      \field{urlyear}{2025}
-      \field{urldateera}{ce}
-      \verb{file}
-      \verb Snapshot:C\:\\Users\\tsc\\Zotero\\storage\\FPKWWAV5\\www.lp-research.com.html:text/html
-      \endverb
-      \verb{urlraw}
-      \verb https://www.lp-research.com/
-      \endverb
-      \verb{url}
-      \verb https://www.lp-research.com/
       \endverb
     \endentry
     \entry{zeidler_springer-taschenbuch_2013}{book}{}{}
