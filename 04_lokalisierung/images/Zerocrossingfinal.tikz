@@ -21,17 +21,17 @@ xmax=1.0,
 xtick = {-1,-0.5,...,1.5},
 tick align=outside,
 xlabel style={font=\color{white!15!black}},
-xlabel={\huge X},
+xlabel={\huge $x$},
 ymin=-0.5,
 ymax=1.5,
 ytick = {-1.5,-1,...,1.5},
 ylabel style={font=\color{white!15!black}},
-ylabel={\huge Y},
+ylabel={\huge $y$},
 zmin=-1.0,
 zmax=1.0,
 ztick = {-1.5,-1,...,1.5},
 zlabel style={font=\color{white!15!black}},
-zlabel={\huge Z},
+zlabel={\huge $z$},
 view={-36.5894032077267}{25.6515788079116},
 axis background/.style={fill=white},
 axis x line*=bottom,
@@ -44,7 +44,7 @@ tick label style={black, font=\huge},
 legend style={font=\small},
 legend cell align=left,
 legend pos=north east]
-\addlegendimage{line legend,mycolor1,line width = 10}\addlegendentry{\huge Sensor}
+\addlegendimage{line legend,mycolor1,line width = 10}\addlegendentry{\huge $\vec{e}_\text{s}$}
 \addlegendimage{line legend,mycolor2, line width = 10}\addlegendentry{\huge $\vec{e}_\text{zc}$}
 \addlegendimage{line legend,mycolor3, line width = 10}\addlegendentry{\huge $\vec{e}_\text{max}$}
 ]

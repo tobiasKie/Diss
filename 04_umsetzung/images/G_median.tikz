@@ -20,10 +20,12 @@ xtick={0,200,...,1000}, % x-achsenskalierung
 ymin=10,
 ymax=25,
 ytick={10,15,...,25}, % x-achsenskalierung
-ylabel={$G$ in $\frac{1}{m^3}$ },
+ylabel={$G$ in $\frac{1}{\text{m}^3}$ },
 axis background/.style={fill=white},
 axis x line*=bottom,
-axis y line*=left
+axis y line*=left,
+xmajorgrids,
+ymajorgrids
 ]
 \addplot [color=mycolor1, line width=2.0pt]
   table[row sep=crcr]{%

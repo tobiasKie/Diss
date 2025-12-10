@@ -28,10 +28,10 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="1.2938725"
-     inkscape:cx="430.87709"
-     inkscape:cy="221.04188"
+     inkscape:cx="872.57438"
+     inkscape:cy="303.73936"
      inkscape:window-width="3440"
-     inkscape:window-height="1377"
+     inkscape:window-height="1369"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
@@ -64,16 +64,19 @@
        height="120.92619"
        x="35.412964"
        y="13.00863" />
-    <path
-       id="path43810-7"
-       style="fill:#ffffff;fill-opacity:1;stroke:#ff0000;stroke-width:0.28984;stroke-linejoin:bevel;paint-order:fill markers stroke;stroke-opacity:1"
-       d="m 103.67572,75.47871 v -6.12434 h 1.68651 v -5.79683 l 13.57893,8.90566 -13.57893,8.81233 v -5.79682 z"
-       sodipodi:nodetypes="cccccccc" />
-    <path
-       id="path43810-2-2"
-       style="fill:#ffffff;fill-opacity:1;stroke:#0000ff;stroke-width:0.28984;stroke-linejoin:bevel;paint-order:fill markers stroke;stroke-opacity:1"
-       d="m 103.67572,94.26066 v -6.12434 h 1.68651 v -5.79683 l 13.57894,8.90566 -13.57894,8.81233 v -5.79682 z"
-       sodipodi:nodetypes="cccccccc" />
+    <g
+       id="g17328">
+      <path
+         id="path43810-7"
+         style="fill:#ffffff;fill-opacity:1;stroke:#ff0000;stroke-width:0.28984;stroke-linejoin:bevel;stroke-opacity:1;paint-order:fill markers stroke"
+         d="m 103.67572,75.47871 v -6.12434 h 1.68651 v -5.79683 l 13.57893,8.90566 -13.57893,8.81233 v -5.79682 z"
+         sodipodi:nodetypes="cccccccc" />
+      <path
+         id="path43810-2-2"
+         style="fill:#ffffff;fill-opacity:1;stroke:#0000ff;stroke-width:0.28984;stroke-linejoin:bevel;stroke-opacity:1;paint-order:fill markers stroke"
+         d="m 103.67572,94.26066 v -6.12434 h 1.68651 v -5.79683 l 13.57894,8.90566 -13.57894,8.81233 v -5.79682 z"
+         sodipodi:nodetypes="cccccccc" />
+    </g>
     <path
        id="path43810-2-2-6"
        style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.28984;stroke-linejoin:bevel;paint-order:fill markers stroke"
@@ -99,21 +102,21 @@
        width="37.351273"
        height="43.141933"
        x="119.74635"
-       y="60.236732" />
+       y="60.236729" />
     <rect
        style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.345971;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:0.50101;paint-order:fill markers stroke"
        id="rect23213-1-7-0"
        width="37.351273"
        height="43.141933"
-       x="173.09854"
-       y="60.414913" />
+       x="172.56938"
+       y="60.236729" />
     <rect
        style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.345971;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:0.50101;paint-order:fill markers stroke"
        id="rect23213-1-7-4"
        width="37.351273"
        height="43.141933"
-       x="228.14319"
-       y="60.236732" />
+       x="225.49739"
+       y="60.236729" />
     <rect
        style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.317039;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:0.50101;paint-order:fill markers stroke"
        id="rect23213-1-4-7"
@@ -121,19 +124,22 @@
        height="29.000465"
        x="220.48515"
        y="15.944781" />
-    <path
-       id="path43810"
-       style="fill:#ffffff;fill-opacity:1;stroke:#ff0000;stroke-width:0.28984;stroke-linejoin:bevel;paint-order:fill markers stroke;stroke-opacity:1"
-       d="m 53.918682,75.47871 v -6.12434 h 1.68651 v -5.79683 l 13.578926,8.90566 -13.578926,8.81233 v -5.79682 z"
-       sodipodi:nodetypes="cccccccc" />
-    <path
-       id="path43810-2"
-       style="fill:#ffffff;fill-opacity:1;stroke:#0000ff;stroke-width:0.28984;stroke-linejoin:bevel;paint-order:fill markers stroke;stroke-opacity:1"
-       d="m 53.918679,94.26066 v -6.12434 h 1.68651 v -5.79683 l 13.578939,8.90566 -13.578939,8.81233 v -5.79682 z"
-       sodipodi:nodetypes="cccccccc" />
+    <g
+       id="g17332">
+      <path
+         id="path43810"
+         style="fill:#ffffff;fill-opacity:1;stroke:#ff0000;stroke-width:0.28984;stroke-linejoin:bevel;stroke-opacity:1;paint-order:fill markers stroke"
+         d="m 53.918682,75.47871 v -6.12434 h 1.68651 v -5.79683 l 13.578926,8.90566 -13.578926,8.81233 v -5.79682 z"
+         sodipodi:nodetypes="cccccccc" />
+      <path
+         id="path43810-2"
+         style="fill:#ffffff;fill-opacity:1;stroke:#0000ff;stroke-width:0.28984;stroke-linejoin:bevel;stroke-opacity:1;paint-order:fill markers stroke"
+         d="m 53.918679,94.26066 v -6.12434 h 1.68651 v -5.79683 l 13.578939,8.90566 -13.578939,8.81233 v -5.79682 z"
+         sodipodi:nodetypes="cccccccc" />
+    </g>
     <g
        id="g13333"
-       transform="translate(-2.6458334,-47.443011)">
+       transform="translate(-2.6458334,-47.443012)">
       <path
          id="path30500-7"
          style="fill:#ffffff;fill-opacity:1;stroke:#ff0000;stroke-width:0.5;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
@@ -146,19 +152,19 @@
          sodipodi:nodetypes="ccccccc" />
     </g>
     <path
-       id="path43810-2-2-6-8"
-       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.28984;stroke-linejoin:bevel;paint-order:fill markers stroke"
-       d="m 265.59796,84.869669 v -6.124304 h 1.68651 v -5.796806 l 13.57894,8.905618 -13.57894,8.812279 v -5.796787 z"
-       sodipodi:nodetypes="cccccccc" />
-    <path
        id="path43810-2-2-6-8-3"
        style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.28984;stroke-linejoin:bevel;paint-order:fill markers stroke"
-       d="m 157.09474,85.192448 v -6.124304 h 1.68651 v -5.796806 l 13.57894,8.905618 -13.57894,8.812279 v -5.796787 z"
+       d="m 157.03649,84.869668 v -6.124304 h 1.68651 v -5.796806 l 13.57894,8.905618 -13.57894,8.812279 v -5.796787 z"
        sodipodi:nodetypes="cccccccc" />
     <path
-       id="path43810-2-2-6-8-0"
+       id="path43810-2-2-6-8-3-6"
        style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.28984;stroke-linejoin:bevel;paint-order:fill markers stroke"
-       d="m 210.64749,84.903256 v -6.124304 h 3.80318 v -5.796806 l 13.57894,8.905618 -13.57894,8.812279 v -5.796787 z"
+       d="m 209.89442,84.869668 v -6.124304 h 1.68651 v -5.796806 l 13.57894,8.905618 -13.57894,8.812279 v -5.796787 z"
+       sodipodi:nodetypes="cccccccc" />
+    <path
+       id="path43810-2-2-6-8-3-6-8"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.28984;stroke-linejoin:bevel;paint-order:fill markers stroke"
+       d="m 262.98314,84.869668 v -6.124304 h 1.68651 v -5.796806 l 13.57894,8.905618 -13.57894,8.812279 v -5.796787 z"
        sodipodi:nodetypes="cccccccc" />
   </g>
 </svg>

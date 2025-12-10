@@ -14,29 +14,28 @@
 \begin{tikzpicture}
 
 \begin{axis}[%
-width=10in,
-height=10in,
+width=1.5in,
+height=2.0in,
 at={(-4in,-1in)},
 scale only axis,
 xmin=-180,
 xmax=0,
-xtick = {-180,-150,...,0},
+xtick = {-150,-120,...,0},
 xlabel style={font=\color{white!15!black}},
-xlabel={$\phi_{\text{max,2}}$ (°)},
+xlabel={$\phi_{\text{max,2}}$ in $^\circ$},
 ymin=0,
 ymax=180,
 ytick={0,20,...,180},
-ylabel style={font=\color{white!15!black}},
-ylabel={$\phi_{\text{s,2}}$ (°)},
+yticklabels ={},
 axis background/.style={fill=white},
 axis x line*=bottom,
 axis y line*=left,
 xmajorgrids,
 ymajorgrids,
-legend style={at={(0.1,0.1)}, anchor=south west, legend cell align=left, align=left, draw=white!15!black}
+legend style={at={(0.1,0.05),font=\tiny}, anchor=south west, legend cell align=left, align=left, draw=white!15!black}
 ]\addlegendimage{white, fill=white} % Dummy entry for legend title
-\addlegendentry{$Qs$\,\,\,\,}
-\addplot [color=mycolor1,line width=5]
+\addlegendentry{$Q$\,\,\,\,}
+\addplot [color=mycolor1,line width=1]
   table[row sep=crcr]{%
 3.50835464926744e-15	0\\
 -0.285711078667713	1\\
@@ -222,7 +221,7 @@ legend style={at={(0.1,0.1)}, anchor=south west, legend cell align=left, align=l
 };
 \addlegendentry{1.1}
 
-\addplot [color=mycolor2,line width=5]
+\addplot [color=mycolor2,line width=1]
   table[row sep=crcr]{%
 3.50835464926744e-15	0\\
 -0.31817995868818	1\\
@@ -408,7 +407,7 @@ legend style={at={(0.1,0.1)}, anchor=south west, legend cell align=left, align=l
 };
 \addlegendentry{1.2}
 
-\addplot [color=mycolor3,line width=5]
+\addplot [color=mycolor3,line width=1]
   table[row sep=crcr]{%
 3.50835464926744e-15	0\\
 -0.347825398519173	1\\
@@ -594,7 +593,7 @@ legend style={at={(0.1,0.1)}, anchor=south west, legend cell align=left, align=l
 };
 \addlegendentry{1.3}
 
-\addplot [color=mycolor4,line width=5]
+\addplot [color=mycolor4,line width=1]
   table[row sep=crcr]{%
 3.50835464926744e-15	0\\
 -0.375000330624849	1\\
@@ -780,7 +779,7 @@ legend style={at={(0.1,0.1)}, anchor=south west, legend cell align=left, align=l
 };
 \addlegendentry{1.4}
 
-\addplot [color=mycolor5,line width=5]
+\addplot [color=mycolor5,line width=1]
   table[row sep=crcr]{%
 3.50835464926744e-15	0\\
 -0.400001218589255	1\\
@@ -966,7 +965,7 @@ legend style={at={(0.1,0.1)}, anchor=south west, legend cell align=left, align=l
 };
 \addlegendentry{1.5}
 
-\addplot [color=mycolor6,line width=5]
+\addplot [color=mycolor6,line width=1]
   table[row sep=crcr]{%
 3.50835464926744e-15	0\\
 -0.423078916331043	1\\
@@ -1155,8 +1154,8 @@ legend style={at={(0.1,0.1)}, anchor=south west, legend cell align=left, align=l
 \end{axis}
 
 \begin{axis}[%
-width=10in,
-height=10in,
+width=1.5in,
+height=1.5in,
 at={(0in,0in)},
 scale only axis,
 xmin=0,

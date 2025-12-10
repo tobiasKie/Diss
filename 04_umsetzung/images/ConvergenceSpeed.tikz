@@ -14,8 +14,8 @@
 \begin{tikzpicture}
 
 \begin{axis}[%
-width=4.521in,
-height=3.474in,
+width=10.0in,
+height=4.0in,
 at={(0.758in,0.573in)},
 scale only axis,
 xmin=1,
@@ -26,13 +26,13 @@ xlabel={Iteration},
 ymin=0,
 ymax=90,
 ylabel style={font=\color{white!15!black}},
-ylabel={Winkelfehler (°)},
+ylabel={Winkelfehler in $^\circ$},
 ytick={0,20,...,90}, % x-achsenskalierung
 grid = major,
 axis background/.style={fill=white},
 legend style={legend cell align=left, align=left, draw=white!15!black}
 ]\addlegendimage{white, fill=white} % Dummy entry for legend title
-\addlegendentry{Qs}
+\addlegendentry{Q}
 \addplot [color=mycolor1,line width=3.0pt]
   table[row sep=crcr]{%
 1	90\\

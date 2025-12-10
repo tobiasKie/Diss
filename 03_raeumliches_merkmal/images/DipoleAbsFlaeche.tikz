@@ -9,21 +9,24 @@
 \begin{tikzpicture}
 
 \begin{axis}[%
-width=3.19in,
-height=3.566in,
-at={(1.424in,0.481in)},
+width=5.0in,
+height=5.0in,
+at={(0.0in,0.0in)},
 scale only axis,
 plot box ratio=1 1 1,
 xmin=-2,
 xmax=2,
-xlabel = {x},
+xlabel = {$x$},
+xtick = {-2,-1,...,2},
 tick align=outside,
 ymin=-2,
 ymax=2,
-ylabel = {y},
+ytick = {-2,-1,...,2},
+ylabel = {$y$},
 zmin=-2,
 zmax=2,
-zlabel={z},
+ztick = {-2,-1,...,2},
+zlabel={$z$},
 view={-37.5}{30},
 axis background/.style={fill=white},
 axis x line*=bottom,
@@ -2536,5 +2539,23 @@ x	y	z\\
 -0.126298836702097	-8.12416079713812e-17	0.999758237201936\\
 6.43249059870655e-16	4.13769353024481e-31	1\\
 };
+\end{axis}
+
+\begin{axis}[%
+width=5.0in,
+height=5.0in,
+at={(0in,0in)},
+scale only axis,
+point meta min=0,
+point meta max=1,
+xmin=0,
+xmax=1,
+ymin=0,
+ymax=1,
+axis line style={draw=none},
+ticks=none,
+axis x line*=bottom,
+axis y line*=left
+]
 \end{axis}
 \end{tikzpicture}%
