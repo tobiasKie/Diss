@@ -9,17 +9,17 @@
 \begin{tikzpicture}
 
 \begin{axis}[%
-width=6.0in,
-height=6.0in,
+width=2.25in,
+height=2.0in,
 at={(0.0in,0.0in)},
 scale only axis,
 xmin=500,
 xmax=1000,
-xtick = {500,550,...,1000},
+xtick = {500,600,...,1000},
 xlabel = {Frequenz in Hz},
 ymin=-8,
 ymax=-3,
-ylabel = {$log\tindex{10}(\bvec{b})$},
+ylabel = {$log\tindex{10}(b)$},
 axis background/.style={fill=white},
 xmajorgrids,
 ymajorgrids
@@ -1030,8 +1030,8 @@ ymajorgrids
 \end{axis}
 
 \begin{axis}[%
-width=6.0in,
-height=6.0in,
+width=2.25in,
+height=2.0in,
 at={(0in,0in)},
 scale only axis,
 xmin=0,

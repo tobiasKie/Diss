@@ -10,27 +10,26 @@
 \begin{tikzpicture}
 
 \begin{axis}[%
-width=4.521in,
-height=3.566in,
+width=2.25in,
+height=2.0in,
 at={(0in,0in)},
 scale only axis,
 xmin=0,
 xmax=15,
 xtick = {0,3,6,9,12,15},
 xlabel style={font=\color{white!15!black}},
-xlabel={\Large \textbf{Zeit in s}},
+xlabel={Zeit in s},
 ymin=-100,
 ymax=100,
 ytick = {-100,-50,...,100},
 ylabel style={font=\color{white!15!black}},
-ylabel={\Large \textbf{Winkel in °}},
+ylabel={Winkel in $^\circ$},
 axis background/.style={fill=white},
 axis x line*=bottom,
 axis y line*=left,
 xmajorgrids,
 ymajorgrids,
-tick label style={black, font=\Large},
-legend style={at={(0.35,0.025)}, anchor=south west, legend cell align=left, align=left, draw=white!15!black}
+tick label style={black}
 ]
 \addplot [color=mycolor1, line width=0.8pt]
   table[row sep=crcr]{%
@@ -1535,7 +1534,7 @@ legend style={at={(0.35,0.025)}, anchor=south west, legend cell align=left, alig
 14.98	17.8718033530983\\
 14.99	18.2829700923949\\
 };
-\addlegendentry{\Large $\hat{\theta}_{mag}$}
+
 
 \addplot [color=red, line width=0.8pt]
   table[row sep=crcr]{%
@@ -3040,7 +3039,7 @@ legend style={at={(0.35,0.025)}, anchor=south west, legend cell align=left, alig
 14.98	-71.1418280453373\\
 14.99	-72.3971440862333\\
 };
-\addlegendentry{\Large $\hat{\phi}_{mag}$}
+
 
 \addplot [color=mycolor2, dashed, line width=2.0pt]
   table[row sep=crcr]{%
@@ -4545,7 +4544,6 @@ legend style={at={(0.35,0.025)}, anchor=south west, legend cell align=left, alig
 14.98	17.6737817120433\\
 14.99	18.1848427758786\\
 };
-\addlegendentry{\Large $\hat{\theta}_{opt}$}
 
 \addplot [color=red, dashed, line width=2.0pt]
   table[row sep=crcr]{%
@@ -6050,13 +6048,13 @@ legend style={at={(0.35,0.025)}, anchor=south west, legend cell align=left, alig
 14.98	-71.2744775936344\\
 14.99	-72.4938087839345\\
 };
-\addlegendentry{\Large $\hat{\phi}_{opt}$}
+
 
 \end{axis}
 
 \begin{axis}[%
-width=5.833in,
-height=4.375in,
+width=2.25in,
+height=2.0in,
 at={(0in,0in)},
 scale only axis,
 xmin=0,

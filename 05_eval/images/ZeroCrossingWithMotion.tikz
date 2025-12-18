@@ -9,24 +9,26 @@
 \begin{tikzpicture}
 
 \begin{axis}[%
-width=6.0in,
-height=6.0in,
+width=2.50in,
+height=2.5in,
 at={(0.0in,0.0in)},
 scale only axis,
 xmin=-1,
 xmax=1,
+xtick = {-1,-0.5,...,1},
 tick align=outside,
 xlabel style={font=\color{white!15!black}},
 xlabel={$x$},
 ymin=-1,
 ymax=1,
+ytick = {-0.5,-0.4,...,0.5},
 ylabel style={font=\color{white!15!black}},
 ylabel={$y$},
 zmin=-0.559678494930267,
 zmax=0.56316888332367,
 zlabel style={font=\color{white!15!black}},
 zlabel={$z$},
-view={-180}{0},
+view={0}{0},
 axis background/.style={fill=white},
 axis x line*=bottom,
 axis y line*=left,
@@ -57,8 +59,8 @@ x	y	z	u	v	w\\
 \end{axis}
 
 \begin{axis}[%
-width=6.0in,
-height=6.0in,
+width=2.5in,
+height=2.5in,
 at={(0in,0in)},
 scale only axis,
 xmin=0,

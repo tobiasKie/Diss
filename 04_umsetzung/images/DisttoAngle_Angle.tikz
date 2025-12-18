@@ -11,8 +11,8 @@
 \begin{tikzpicture}
 
 \begin{axis}[%
-width=4.521in,
-height=3.566in,
+width=4.0in,
+height=3.0in,
 at={(0.0in,0.0in)},
 scale only axis,
 xmin=0,
@@ -20,11 +20,14 @@ xmax=500,
 xlabel={Rahmennummer},
 xtick={0,100,...,500}, % x-achsenskalierung
 ymin=0,
-ymax=120,
-ylabel={Winkel in °},
+ymax=100,
+ytick = {0,20,...,100},
+ylabel={Winkel in $^\circ$},
 axis background/.style={fill=white},
 axis x line*=bottom,
 axis y line*=left,
+xmajorgrids,
+ymajorgrids,
 legend style={legend cell align=left, align=left, draw=white!15!black}
 ]
 \addplot [color=mycolor1,line width = 2.0pt]
@@ -2856,8 +2859,8 @@ legend style={legend cell align=left, align=left, draw=white!15!black}
 \end{axis}
 
 \begin{axis}[%
-width=5.833in,
-height=4.375in,
+width=4.0in,
+height=3.0in,
 at={(0in,0in)},
 scale only axis,
 xmin=0,

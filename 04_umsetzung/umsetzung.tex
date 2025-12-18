@@ -742,7 +742,7 @@ Zu Beginn wird angenommen, dass die Quelle in $y$-Richtung liegt und der Winkel 
     \end{equation}
 
 	\subsubsection{Orientierungsschätzung}
-	Die Orientierung der 3D-Spule und jedes dreidimensionalen Objektes kann mit 3 Eulerwinkeln beschrieben werden. Bei Eulerwinkeln gibt es unterschiedliche Konventionenen, in welcher Reihenfolge und um welche Achsen die Rotationen durchgeführt werden. Hier wird die typische Roll-Nick-Gier-Winkelkonvention verwendet, diese wird besonders häufig in der Luftfahrt und im Automobilbau verwendet und ist nach Din 9300 DIN ISO 8855 genormt. Eine solche Rotation kann mit der resultierenden Drehmatrix $\bvec{R}\tindex{RPY}$ beschrieben werden
+	Die Orientierung der 3D-Spule und jedes dreidimensionalen Objektes kann mit 3 Eulerwinkeln beschrieben werden. Bei Eulerwinkeln gibt es unterschiedliche Konventionenen, in welcher Reihenfolge und um welche Achsen die Rotationen durchgeführt werden. Hier wird die typische Roll-Nick-Gier-Winkelkonvention verwendet, diese wird besonders häufig in der Luftfahrt und im Automobilbau verwendet und ist nach Din 9300 DIN ISO 8855 genormt. Eine solche Rotation kann mit der resultierenden Rotationsmatrix $\bvec{R}\tindex{RPY}$ beschrieben werden
     \begin{equation}
         \bvec{R}\tindex{RPY} = \bvec{R}_{z}(\psi\tindex{Ori}) \, \bvec{R}_{y}(\theta\tindex{Ori})\, \bvec{R}_{x}(\phi\tindex{Ori})= \begin{pmatrix}
             r\tindex{11} & r\tindex{12} & r\tindex{13}\\
@@ -793,32 +793,37 @@ Beide Repräsentationen der MVs sind damit kongruente Vektorsammlungen die mit e
     \label{fig:Kongruent}
 \end{figure}
   
-Die $\vec{e}\tindex{max}^{\,Glob}$ sind unbekannt können aber aus der geschätzten Spulenposition $\vec{r}\tindex{C}$, den bekannten Sensororientierungen $\vec{e}\tindex{s}$ und -positionen $\vec{r}\tindex{s,k}$ bestimmt werden. Dafür wird der Zusammenhang aus Kapitel \ref{sec:maximum_vector} in Gleichung \ref{eq:relMaxS} verwendet. Zunächst wird der Winkel zwischen relativer Position $\vec{r}\tindex{s$\rightarrow$C} = \vec{r}\tindex{s,k}-\vec{r}\tindex{C}$ und Sensororientierung $\phi\tindex{s,r}$ bestimmt
+Die $\vec{e}\tindex{max}^{\,Glob}$ sind unbekannt können aber aus der geschätzten Spulenposition $\vec{r}\tindex{c}$, den bekannten Sensororientierungen $\vec{e}\tindex{s,k}$ und -positionen $\vec{r}\tindex{s,k}$ bestimmt werden.
+
+Dafür wird der Zusammenhang aus Kapitel \ref{sec:maximum_vector} in Gleichung \ref{eq:relMaxS} verwendet. Die Berechnung wird für einen Sensor gezeigt, es wird auf den Index $k$ verzichtet.
+
+Zunächst wird der Winkel zwischen relativer Spulenposition $\vec{r}\tindex{s${\rightarrow}$c} = \vec{r}\tindex{s}-\vec{r}\tindex{C}$, Sensororientierung $\phi\tindex{s,r}$ bestimmt. Dafür wird zunächst $\vec{r}\tindex{s${\rightarrow}$c}$ normiert $\vec{e}\tindex{s${\rightarrow}$c}$
 
 \begin{equation}
-    \phi\tindex{s,r} = \angle(\vec{r}\tindex{s $\rightarrow$ C},\vec{e}\tindex{s}).    
+    \phi\tindex{s,r} = \arccos\bigl(\vec{e}\tindex{s${\rightarrow}$c},\vec{e}\tindex{s}\bigr).    
 \end{equation}
 Daraus wird der Winkel zwischen relativer Position und den MVs $\phi\tindex{max,r,k}$ bestimmt
 \begin{equation}
     \phi\tindex{max,r} = \arctan\bigl( \frac{\tan(\phi\tindex{s,r})}{2}\bigr).
 \end{equation}
-Nun muss nur noch $\vec{r}\tindex{s$\rightarrow$C}$ um den normalen Vektor $\vec{e}\tindex{n,r,s}$ der interessierten Ebene gedreht werden
+Nun wird  $\vec{r}\tindex{s${\rightarrow}$C}$ um den normalen Vektor $\vec{e}\tindex{n,o}$ der interessierten Ebene gedreht
 \begin{equation}
-    \vec{e}\tindex{n,r,s} = \frac{\vec{e}\tindex{s,k} \times \vec{r}\tindex{s$\rightarrow$C}} {|\vec{e}\tindex{s,k} \times \vec{r}\tindex{s$\rightarrow$C}|},
+    \vec{e}\tindex{n,o} = \frac{\vec{e}\tindex{s,k} \times \vec{r}\tindex{s${\rightarrow}$C}} {|\vec{e}\tindex{s,k} \times \vec{r}\tindex{s${\rightarrow}$C}|},
 \end{equation}
 \begin{equation}
-    \vec{e}\tindex{max,k}^{\,Glob} = \cos(\phi\tindex{max,r,k})(\vec{e}\tindex{n,r,s} \times \vec{e}\tindex{s$\rightarrow$C})\times \vec{e}\tindex{n,r,s} + \sin(\phi\tindex{max,r,k}) (\vec{e}\tindex{n,r,s} \times\vec{e}\tindex{s$\rightarrow$C}).
-\end{equation}
-Die MVs werden als Matrix geschrieben und man erhält $\bvec{E}\tindex{max}^{\text{Glob}}$ und $\bvec{E}\tindex{max}^{\text{Lokal}}$. Da für die vorgestellte Lokalisierung mindestens sechs Sensoren verwendet werden, sind dies $6\times 3$ Matrizen. Aus dieser kann die Pseudoinverse\,\cite{penrose_generalized_1955} gebildet und Gleichung \ref{eq:RotMaxvecs} umgestellt werden
+    \vec{e}\tindex{max}^{\,Glob} = \cos(\phi\tindex{max,r})(\vec{e}\tindex{n,o} \times \vec{e}\tindex{s${\rightarrow}$C})\times \vec{e}\tindex{n,o} + \sin(\phi\tindex{max,r}) (\vec{e}\tindex{n,o} \times\vec{e}\tindex{s${\rightarrow}$C}).
+\end{equation} 
+Die Berechnung wird für alle sechs Sensoren wiederholt. Die MVs werden als Matrix geschrieben und man erhält $\bvec{E}\tindex{max}^{\text{Glob}}$ und $\bvec{E}\tindex{max}^{\text{Lokal}}$. 
+Dabei handelt es sich um $6\times 3$ Matrizen. Aus diesen kann die Pseudoinverse\,\cite{penrose_generalized_1955} gebildet und Gleichung \ref{eq:RotMaxvecs} umgestellt werden
 \begin{equation}
-    \bvec{R}\tindex{RPY} =  \bvec{E}\tindex{max}^{\text{Glob}} \, \text{pinv}(\bvec{E}\tindex{max}^{\text{Lokal}}) 
+    \bvec{R}\tindex{RPY} =  \bvec{E}\tindex{max}^{\text{Glob}} \, \text{PINV}\bigl(\bvec{E}\tindex{max}^{\text{Lokal}}\bigr) 
     \label{eq:calcRotMat}
 \end{equation}
 
-An dieser Stelle könnten aus der Matrix die Winkel extrahiert werden, jedoch kann durch kleine Fehler im Modell oder Rauschen im Signal die Orthogonalität der Matrix verloren gehen. Dadurch können einzelne Einträge der Matrix größer werden als eins, und die Winkel in dem Fall unbestimmt sein. Die Orthogonalität von Rotationsmatrizen $\bvec{R}$ ist definiert durch 
+An dieser Stelle könnten aus der Matrix die Winkel extrahiert werden, jedoch kann durch kleine Fehler im Modell oder Rauschen im Signal die Orthogonalität der Matrix verloren gehen. Dadurch können einzelne Einträge der Matrix größer werden als eins, und die Winkel unbestimmt sein. Die Orthogonalität von Rotationsmatrizen $\bvec{R}$ ist definiert durch 
 
 \begin{equation}
-    \bvec{Eye} = \bvec{R}\,\bvec{R}^T. 
+    \bvec{I} = \bvec{R}\,\bvec{R}^T. 
 \end{equation}
 
 Um dieses Problem zu umgehen, soll an dieser Stelle eine korrigierte Matrix $\tilde{\bvec{R}}$ gefunden werden, die zum einen Orthogonalität aufweist und zum anderen möglichst nah an der Ursprungsmatrix ist.
@@ -844,16 +849,16 @@ Dieses Verfahren soll hier nur kurz gezeigt werden, nähere Informationen finden
 Aus der korrigierten $\tilde{\bvec{R}}\tindex{RPY}$ werden dann die Eulerwinkel extrahiert
 
 \begin{equation}
-    \hat{\theta}\tindex{Ori} = \arcsin(-\tilde{r}\tindex{31}),
+    \hat{\theta}\tindex{Ori} = \arcsin\bigl(-\tilde{r}\tindex{31}\bigr),
     \label{eq:ThetaOri}
 \end{equation}
 
 \begin{equation}
-    \hat{\psi}\tindex{Ori} = \arctan(\frac{\tilde{r}\tindex{21}}{\tilde{r}\tindex{11}}),
+    \hat{\psi}\tindex{Ori} = \arctan\bigl(\frac{\tilde{r}\tindex{21}}{\tilde{r}\tindex{11}}\bigr),
     \label{eq:PsiOri}
 \end{equation}
 \begin{equation}
-    \hat{\phi}\tindex{Ori} = \arctan(\frac{\tilde{r}\tindex{32}}{\tilde{r}\tindex{33}}).
+    \hat{\phi}\tindex{Ori} = \arctan\bigl(\frac{\tilde{r}\tindex{32}}{\tilde{r}\tindex{33}}\bigr).
     \label{eq:PhiOri}
 \end{equation}
 
@@ -862,126 +867,144 @@ In diesem Kapitel wurden bisher zwei unterschiedliche Lokalisierungsalgorithmen 
 \begin{figure}[h]
     \centering
     \begin{overpic}[width=\textwidth]{04_umsetzung/images/Uebersicht_Lok.pdf}
-        \put(40,65){\textbf{Lokalisierungsmodul}}
-        \put(5,33){MVs}
+        \put(5,35){MVs}
         \put(32,35){\parbox{.5in}{Positions-schätzung}}
         \put(37,42){$\bold{Z}$}
         \put(37,48){$\bold{Y}$}
         \put(37,55){$\bold{X}$}
         \put(50,57){$\vec{r}\tindex{c}$}
         \put(59,50){\parbox{.5in}{Orien-tierungs-schätzung}}
-        \put(40,22){\parbox{1.5in}{Schätzung kinematischer Ketten}}
-        \put(70,17){$\vec{e}\tindex{k}^\text{\,3DC}$}
-        \put(75,37){\parbox{.5in}{Kombi-nation}}
-        \put(100,37){$\bvec{P}\tindex{$r,\vec{e}\tindex{k}$}$}
+        \put(40,16.5){\parbox{1.5in}{Schätzung kinematischer Ketten}}
+        \put(70,17){$\vec{e}\tindex{kin,k}^\text{\,3DC}$}
+        \put(74,32){\parbox{.5in}{Kombi-nation}}
+        \put(93,31){$\bvec{P}\tindex{$r,\vec{e}\tindex{kin}$}$}
     \end{overpic}
-    \caption{Übersicht des Lokalisierungsmodul: Die Eingangsgröße sind die MVs aller Sensoren. Im oberen Teil ist die absolute Lokalisierung schematische dargestellt. Zunächst wird aus den MVs die Position der 3D-Spule bestimmt. Im Orientierungsschätzungsmodul werden aus der Position und den MVs die Orientierung der Spule bestimmt. Im unteren Teil ist die Schätzung einer kinematischen Kette, dieser schätzt aus den MVs die Haltung dieser. Die absolute Position und die Orientierungen der kinetmatischen Elemente werden dann von einem Kombinationsmodul kombiniert und ausgegeben.}
+    \caption{Übersicht des Lokalisierungsalgorithmus: Die Eingangsgröße sind die MVs aller Sensoren. Im oberen Teil ist die absolute Lokalisierung schematische dargestellt. Zunächst wird aus den MVs die Position der 3D-Spule bestimmt. Im Orientierungsschätzungsmodul werden aus der Position und den MVs die Orientierung der Spule bestimmt. Im unteren Teil ist die Schätzung einer kinematischen Kette, dieser schätzt aus den MVs die Haltung dieser. Die absolute Position und die Orientierungen der kinetmatischen Elemente werden dann von einem Kombinationsmodul kombiniert und ausgegeben.}
     \label{fig:UebersichLok}
 \end{figure} 
 
-Die Schätzung der kinematischen Kette liefert Orientierungen der kinematischen Elemente im Koordinatensystem der 3D-Spule. Zur Visualisierung oder Weiterverwendung ist diese Darstellung etwas umständlich, daher sollen im Kombinationsmodul alle Größen in das selbe Koordinatensystem transformiert. Die $\vec{e}\tindex{k}^\text{Glob}$ Orientierungen der kinematischen Elmente ergeben sich dann durch
+Die Schätzung der kinematischen Kette liefert Orientierungen der kinematischen Elemente im Koordinatensystem der 3D-Spule. Zur Visualisierung oder Weiterverwendung werden alle Größen in das globale Koordiantensystem transformiert. Die Orientierungen der kinematischen Elmente $\vec{e}\tindex{kin,k}^\text{Glob}$ ergeben sich dann durch
 
 \begin{equation}
-    \vec{e}\tindex{k}^{\,\text{Glob}}  = \tilde{\bvec{R}}\tindex{RPY}\,\vec{e}\tindex{k}^\text{\,3DC}.
+    \vec{e}\tindex{kin,k}^{\,\text{Glob}}  = \tilde{\bvec{R}}\tindex{RPY}\,\vec{e}\tindex{k}^\text{\,3DC}.
     \label{eq:UmrechnungLocGlob}
 \end{equation}
 
-Der Ausgang des Kombinationsmodul sind alle Orientierungen der kinematischen Elemente, repräsentiert als Einheitsvektoren, sowie die absolute Positon der Spule im Raum. Diese werden in einem Ergebnisvektor $\bvec{P}\tindex{$r,\vec{e}\tindex{k}$}$ zusammengefasst.
+Der Ausgang des Kombinationsmodul sind $\vec{e}\tindex{kin,k}^{\,\text{Glob}}$, repräsentiert als Einheitsvektoren, sowie die absolute Positon der Spule im Raum. Diese werden in einem Ergebnisvektor $\bvec{P}\tindex{$r,\vec{e}\tindex{kin}$}$ zusammengefasst.
 
 \section{Nachverarbeitung}
 Um die Schätzungen zu verbessern und die Algorithmen robuster gegen Störungen zu machen, wird eine Nachverarbeitung auf die Ergebnisse angewendet.
 
 
 \subsection{Schätzung einer kinematischen Kette}
-In realen Anwendungen wird mit unterschiedlichen Störungsquellen zu rechnen sein. Das kann das Sensorrauschen, in der Nähe befindliche 50-Hz-Leitungen oder andere Quellen sein. Hier soll nun eine Nachverarbeitung vorgestellt werden um den Einfluss auf die Lokalisierung zu verringern. 
+In realen Anwendungen wird mit unterschiedlichen Störungsquellen zu rechnen sein. Das kann das Sensorrauschen, in der Nähe befindliche 50-Hz-Leitungen oder andere Quellen sein. Eine Nachverarbeitung verringert den Einfluss auf das Ergebnis.
 
 \subsubsection{Einbeziehung der Distanzinformation}
-  Im Algorithmus zur Schätzung einer kinematischen Kette wird nur die Richtungsinformation des MV verwendet. Hier soll nun überprüft werden, wie die Distanzinformation verwendet werden kann um die Schätzung zu verbessern/stabilisieren. Der Winkel $\phi\tindex{s,2}$ kann auf zwei Wegen bestimmt werden, zum einen über den vorgestellten Algorithmus und zum anderen über einen Dreieckszusammenhang aus der Distanz.  Dafür wird das Dreieck betrachtet bestehend aus Aktuatorposition, $\vec{r}\tindex{s}$ und $\vec{r}\tindex{j}$. Dieses Dreieck ist einmal in Abbildung \ref{fig:DistToAngle} dargestellt.
+  Im Algorithmus zur Schätzung einer kinematischen Kette wird nur die Richtungsinformation des MV verwendet. Die Distanzinformation wird verworfen, es wurde überprüft ob die Distanzinformation bei der Schätzung unterstützen kann.
+  
+  Der Winkel $\phi\tindex{s,2}$ kann auf zwei Wegen bestimmt werden, zum einen über den vorgestellten Algorithmus und zum anderen über einen Dreieckszusammenhang aus der Distanz.  Dafür wird das Dreieck betrachtet bestehend aus Aktuatorposition, $\vec{r}\tindex{s}$ und $\vec{r}\tindex{j}$. Dieses Dreieck ist in Abbildung \ref{fig:DistToAngle} dargestellt.
 
   \begin{figure}
     \centering
     \begin{overpic}[width=0.75\textwidth,trim = 0 0 0 0]{04_umsetzung/images/Distance_to_angle.png}
-        \put(28,48){$\phi\tindex{s,2}$}
-        \put(42,55){$l\tindex{js}$}
+        \put(32,55){$\phi\tindex{s,2}$}
+        \put(40,58){$l\tindex{js}$}
         \put(24,28){$|\vec{r}\tindex{j}|$}
         \put(42,28){$|\vec{r}\tindex{s}|$}
     \end{overpic}
     \caption{Distanz zu Winkel: Die Abbildung zeigt eine kinematische Kette mit zwei Elementen. Auf dem ersten Element (unten) ist ein Akktuator angebracht, auf dem zweiten ein Sensor(orange). In gelb ist ein Dreieck eingezeichnet mit den zugehörigen Längen.}
     \label{fig:DistToAngle}
   \end{figure}
-  Mit den bekannten Längen lässt sich über den $Kossinussatz$ $\phi\tindex{s,2}$ bestimmen
+  Mit den bekannten Längen lässt sich über den \textit{Kossinussatz} $\phi\tindex{s,2}$ bestimmen
   \begin{equation}
-    \phi\tindex{s,j} = \arccos(\frac{l\tindex{j,s}^2+|\vec{r}\tindex{j}^2|-|\vec{r}\tindex{s}|}{2\,l\tindex{j,s}\,|\vec{r}\tindex{j}|}).
+    \phi\tindex{s,2} = \arccos\bigl(\frac{l\tindex{j,s}^2+|\vec{r}\tindex{j}^2|-|\vec{r}\tindex{s}|}{2\,l\tindex{j,s}\,|\vec{r}\tindex{j}|}\bigr).
     \label{eq:DistToAngle}
   \end{equation} 
-  Ein Problem dabei war, dass zur Berechnung von $|\vec{r}\tindex{s}|$ der Winkel zwischen Sensororientierung und $\vec{r}\tindex{s}$ bekannt sein muss um Gleichung \ref{eq:DistToAngle} anzuwenden. Diesen könnte man aus der kinematischen Kette ableiten, jedoch wurde zunächst eine Simulation mit als bekannt angenommener Sensorposition durchgeführt. Auf Sensorseite wurde weißes Rauschen hinzugefügt, sodass sich am Sensor ein SNR von 10dB ergibt. Es wurde darin der Winkel $\phi\tindex{s,2}$ zum einen über den iterativen Algorithmus $\phi\tindex{s,2}^{kin}$ bestimmt und zum anderen über die Distanzzusammenhänge $\phi\tindex{s,j}^{d}$. 
+  Ein Problem dabei war, dass zur Berechnung von $|\vec{r}\tindex{s}|$ der Winkel zwischen Sensororientierung und $\vec{r}\tindex{s}$ bekannt sein muss um Gleichung \ref{eq:DistToAngle} anzuwenden. Diesen könnte man aus der kinematischen Kette ableiten, jedoch wurde zunächst eine Simulation mit als bekannt angenommener Sensorposition durchgeführt. Auf Sensorseite wurde weißes Rauschen hinzugefügt, sodass sich am Sensor ein SNR von 10\,dB ergibt. Es wurde darin der Winkel $\phi\tindex{s,2}$ zum einen über den iterativen Algorithmus $\phi\tindex{s,2}^{\text{kin}}$ bestimmt und zum anderen über die Distanzzusammenhänge $\phi\tindex{s,2}^{\text{d}}$. 
 
 \begin{figure}[h]
     \centering
-    \scalefont{2}
-    \inputTikZ{0.75}{04_umsetzung/images/DisttoAngle_Angle.tikz}
+    \scalefont{1}
+    \inputTikZ{1}{04_umsetzung/images/DisttoAngle_Angle.tikz}
     \caption{Vergleich der unterschiedlichen Berechnungsmethoden für $\phi\tindex{s,2}$: Gelb zeigt den wahren Wert, Orange den aus dem vorgestellten Algorithmus und Blau den aus der Distanz bestimmten Wert.}
     \label{fig:DistToAngleCompare}
 \end{figure}
 
-  In Abbildung \ref{fig:DistToAngleCompare} ist das Ergebnis dieser Simulation dargestellt. Dabei ist gut zu erkennen, dass der Winkel, der aus der Distanz bestimmt wird stärker variiert und vom wahren Wert abweicht. Da es außerdem zusätzlich größere Ausreißer nach unten gibt, wird für die Schätzung einer kinematischen Kette die Distanzinformation verworfen.
+In Abbildung \ref{fig:DistToAngleCompare} ist das Ergebnis der Simulation dargestellt. Dabei ist gut zu erkennen, dass der Winkel, der aus der Distanz bestimmt wird stärker variiert und vom wahren Wert abweicht. Da es außerdem zusätzlich größere Ausreißer nach unten gibt, wird für die Schätzung einer kinematischen Kette die Distanzinformation verworfen.
 
 
 
 \subsubsection{Glättung und Winkelumrechnung}
 \label{subsubsection:Glattung_kin}
 
-Die vorgestellte Schätzung einer kinematischen Kette liefert für jedes Element einen Vektor $\hat{\vec{e}}\tindex{k} = \left[\begin{array}{c} \hat{x}\tindex{k}\\ \hat{y}\tindex{k} \\ \hat{z}\tindex{k} \end{array}\right]$ (der Länge 1) der die Richtung des jeweiligen Elements angibt. Die Vektoren werden in einer Komponentendarstellung dargestellt. Da die Eingangssignale gestört werden von verschiedenen Umgebungsfaktoren wie zum Beispiel der 50\,Hz-Netzspannung und den zugehörigen Oberschwingungen. Dies führt in der Orientierungsschätzung, abhängig von den gewählten Frequenzen in der Signalgenerierung, zu Störungen. In \cite{hager-ross_quantifying_2000} wurde die Abhängigkeit der Fingerbewegung von den jeweils anderen Fingern untersucht und zu diesem Zweck wuden periodische Fingerbewegungen durchgeführt. Dabei wurde herausgefunden, dass die Teilnehmer der Studie intuitiv eine Frequenz von 2\,Hz auswählen, was Wohlfühlfrequenz genannt wird. Dies ist ein erster Startpunkt um die Grenzfrequenz festzulegen. Diese muss so gelegt werden, dass möglichst viele Störungen gefiltert werden, aber die Frequenzanteile in den die Bewegung stattfindet möglichst unverändert bleiben. Um diese höherfrequenten Anteile in der Bewegung zu filtern wird ein Butterworth-Tiefpassfilter auf die Komponenten angewendet. Dafür wird ein Butterworth Tiefpassfilter 5- Ordnung mit einer Grenzfrequenz von 8\,Hz verwendet. Der Ausgang der Filter ist die jeweilige vektorielle Komponente $\hat{\vec{e}}\tindex{k,filt} = \left[\begin{array}{c} \hat{x}\tindex{k,filt}\\ \hat{y}\tindex{k,filt} \\ \hat{z}\tindex{k,filt} \end{array}\right]$. Die Komponenten werden so normiert, dass der resultierende Vektor die Länge 1 besitzt
+Die vorgestellte Schätzung einer kinematischen Kette liefert für jedes Element einen Vektor 
+\begin{equation}
+    \hat{\vec{e}}\tindex{kin,k} = \left[\begin{array}{c} \hat{x}\tindex{kin,k}\\ \hat{y}\tindex{kin,k} \\ \hat{z}\tindex{kin,k} \end{array}\right]   
+\end{equation}
+,der Länge 1, der die Richtung des jeweiligen Elements angibt. Die Vektoren werden in einer Komponentendarstellung dargestellt. Da die Eingangssignale gestört werden von verschiedenen Umgebungsfaktoren wie zum Beispiel der 50-Hz-Netzspannung und den zugehörigen Oberschwingungen. Dies führt in der Orientierungsschätzung, abhängig von den gewählten Frequenzen in der Signalgenerierung, zu Störungen. In \cite{hager-ross_quantifying_2000} wurde die Abhängigkeit der Fingerbewegung von den jeweils anderen Fingern untersucht und zu diesem Zweck wuden periodische Fingerbewegungen durchgeführt. Dabei wurde herausgefunden, dass die Teilnehmer der Studie intuitiv eine Frequenz von 2\,Hz auswählen, was Wohlfühlfrequenz genannt wird. Dies ist ein erster Startpunkt um die Grenzfrequenz festzulegen. Diese muss so gelegt werden, dass möglichst viele Störungen gefiltert werden, aber die Frequenzanteile in den die Bewegung stattfindet möglichst unverändert bleiben. Um diese höherfrequenten Anteile in der Bewegung zu filtern, wird ein Butterworth-Tiefpassfilter auf die Komponenten angewendet. Dafür wird ein Butterworth Tiefpassfilter fünfter Ordnung mit einer Grenzfrequenz von 8\,Hz verwendet. Der Ausgang der Filter ist die jeweilige vektorielle Komponente
 
 \begin{equation}
-    \hat{x}\tindex{k,filt,Norm} = \frac{\hat{x}\tindex{k,filt}}{\sqrt{\hat{x}\tindex{k,filt}^2 + \hat{y}\tindex{k,filt}^2 + \hat{z}\tindex{k,filt}^2 }},
+    \hat{\vec{e}}\tindex{kin,k,filt} = \left[\begin{array}{c} \hat{x}\tindex{kin,k,filt}\\ \hat{y}\tindex{kin,k,filt} \\ \hat{z}\tindex{kin,k,filt} \end{array}\right].
+\end{equation}
+ Die Komponenten werden so normiert, dass der resultierende Vektor die Länge 1 besitzt
+
+\begin{equation}
+    \hat{x}\tindex{kin,k,filt,norm} = \frac{\hat{x}\tindex{kin,k,filt}}{\sqrt{\hat{x}\tindex{kin,k,filt}^2 + \hat{y}\tindex{kin,k,filt}^2 + \hat{z}\tindex{kin,k,filt}^2 }},
 \end{equation}
 
 \begin{equation}
-    \hat{y}\tindex{k,filt,Norm} = \frac{\hat{y}\tindex{k,filt}}{\sqrt{\hat{x}\tindex{k,filt}^2 + \hat{y}\tindex{k,filt}^2 + \hat{z}\tindex{k,filt}^2 }},
+    \hat{y}\tindex{kin,k,filt,norm} = \frac{\hat{y}\tindex{kin,k,filt}}{\sqrt{\hat{x}\tindex{kin,k,filt}^2 + \hat{y}\tindex{kin,k,filt}^2 + \hat{z}\tindex{kin,k,filt}^2 }},
 \end{equation}
 
 \begin{equation}
-    \hat{z}\tindex{k,filt,Norm} = \frac{\hat{z}\tindex{k,filt}}{\sqrt{\hat{x}\tindex{k,filt}^2 + \hat{y}\tindex{k,filt}^2 + \hat{z}\tindex{k,filt}^2 }}
+    \hat{z}\tindex{kin,k,filt,norm} = \frac{\hat{z}\tindex{kin,k,filt}}{\sqrt{\hat{x}\tindex{kin,k,filt}^2 + \hat{y}\tindex{kin,k,filt}^2 + \hat{z}\tindex{kin,k,filt}^2 }}
 \end{equation}
 
 \begin{figure}
     \centering
-    \scalefont{2}
-    \inputTikZ{0.4}{04_umsetzung/images/FilterPost.tikz}
-
-    \caption{Filter}
+    \scalefont{1}
+    \inputTikZ{1}{04_umsetzung/images/FilterPost.tikz}
+    \caption{Filter für die Nachverarbeitung: Die Abbildung zeigt den Frequenzgang eines Butterworth-Tiefpassfilter fünfter Ordnung mit einer Grenzfrequenz von 8\,Hz.}
     \label{fig:Filterpost}
 \end{figure}
-An dieser Stelle werden die vektoriellen Komponenten und nicht die Winkel gefiltert, da bei der Überschreitung der $z$-Achse der Winkel springt, also von $-180^\circ$ zu $+180^\circ$. Dieser Sprung würde durch einen Tiefpassfilter geglättet werden. Die vektoriellen Komponenten zeigen kein solches Verhalten, sondern haben einen kontinuierlichen Verlauf. Aus der vektoriellen Beschreibung werden nun die Winkel der Gelenke bestimmt, dabei wird jedes Gelenk als Sattelgelenk mit zwei Freiheitsgraden beschrieben (auch wenn diese anatomisch nur einen besitzen. Diese Begrenzung wird später vorgenommen). Die Bewegung kann nun aufgeteilt werden in ein Beugen und ein Spreizen, wobei diese von der jeweiligen Rotationsachse definiert werden. Die $z$-Achse sei immer als die Orientierung des vorherigen Elements definiert, die Ausrichtung der $y$-Achse wird konfiguriert, dabei wird die Ausrichtung in der Nulllage angegeben. Die $x$-Achse ergibt sich dann durch das Kreuzprodukt $\vec{e}\tindex{x} = \vec{e}\tindex{y}\times \vec{e}\tindex{z}$. Zunächst wird die Orientierung in das Koordinatensystem des kinematischen Elements $\hat{\vec{e}}\tindex{k,filt,Norm}^\text{\,Elem}$ transformiert
+An dieser Stelle werden die vektoriellen Komponenten und nicht die Winkel gefiltert, da bei der Überschreitung der $xz$-Ebene der Winkel springt, also von $-180^\circ$ zu $+180^\circ$. Dieser Sprung würde durch einen Tiefpassfilter geglättet werden. Die vektoriellen Komponenten zeigen kein solches Verhalten, sondern haben einen kontinuierlichen Verlauf. Aus der vektoriellen Beschreibung werden nun die Winkel der Gelenke bestimmt, dabei wird jedes Gelenk als Sattelgelenk mit zwei Freiheitsgraden beschrieben. Die Bewegung wird aufgeteilt in ein Beugen und ein Spreizen, wobei diese von der jeweiligen Rotationsachse definiert werden. Die $z$-Achse sei immer als die Orientierung des vorherigen Elements definiert, die Ausrichtung der $y$-Achse wird konfiguriert, dabei wird die Ausrichtung in der Nulllage angegeben und die Bewegungen der vorigen Elemente eingerechnet. Die $x$-Achse ergibt sich durch das Kreuzprodukt $\vec{e}\tindex{x}^{\,\text{Elem}} = \vec{e}\tindex{y}^{\,\text{Elem}}\times \vec{e}\tindex{z}^{\,\text{Elem}}$. Dies ist näher beschrieben in Kapitel\,\ref{subsec:ModellingJoints}. 
+
+Für die Winkelumrechnung wird zunächst die Orientierung in das Koordinatensystem des kinematischen Elements $\hat{\vec{e}}\tindex{kin,k,filt,Norm}^\text{\,Elem}$ transformiert
 
 \begin{equation}
-    \hat{\vec{e}}\tindex{k,filt,Norm}^{\,Elem} = \left[\begin{array}{c} \vec{e}\tindex{x}\cdot\hat{\vec{e}}\tindex{k,filt,Norm} \\ \vec{e}\tindex{y}\cdot\hat{\vec{e}}\tindex{k,filt,Norm} \\ \vec{e}\tindex{z}\cdot\hat{\vec{e}}\tindex{k,filt,Norm} \end{array}\right].
+    \hat{\vec{e}}\tindex{kin,k,filt,norm}^{\,Elem} = \left[\begin{array}{c} \vec{e}\tindex{x}^{\,\text{Elem}}\cdot\hat{\vec{e}}\tindex{kin,k,filt,norm} \\ \vec{e}\tindex{y}^{\,\text{Elem}}\cdot\hat{\vec{e}}\tindex{kin,k,filt,norm} \\ \vec{e}\tindex{z}^{\,\text{Elem}}\cdot\hat{\vec{e}}\tindex{kin,k,filt,Norm} \end{array}\right] = \left[\begin{array}{c}
+        \hat{x}\tindex{kin,k,filt,norm}^{\,\text{Elem}} \\ \hat{y}\tindex{kin,k,filt,norm}^{\,\text{Elem}} \\\hat{z}\tindex{kin,k,filt,norm}^{\,\text{Elem}}
+    \end{array}\right].
 \end{equation}
 
 Das Spreizen $\phi\tindex{j,Sp}$ ist definiert als Rotation um die $x$-Achse,
 \begin{equation}
-    \phi\tindex{j,Sp} = \text{arctan2}(\hat{e}\tindex{k,y,filt,Norm}^\text{\,Elem},\hat{e}\tindex{k,z,filt,Norm}^{\,Elem}),
+    \phi\tindex{k,Sp} = \text{arctan2}\bigl(\hat{y}\tindex{kin,k,filt,norm}^{\,\text{Elem}},\hat{z}\tindex{kin,k,filt,norm}^{\,\text{Elem}}\bigr),
 \end{equation}
 die Beugung $\theta\tindex{j,Beu}$ ist definiert als Rotation um die zuvor rotierte $y$-Achse
 \begin{equation}
-    \theta\tindex{j,Beu} = \arccos(\hat{e}\tindex{k,x,filt,Norm}^\text{\,Elem}) + \frac{\pi}{2}.
+    \theta\tindex{k,Beu} = \arccos\bigl(\hat{x}\tindex{kin,k,filt,norm}^{\,\text{Elem}}\bigr) + \frac{\pi}{2}.
 \end{equation}
+
 Die folgenden Elemente der kinematischen Kette drehen sich dabei mit, daher müssen die Rotationen auch auf die konfigurierten $y$-Achsen der weiteren Elemente angewendet werden.
 
   
   
 \subsubsection{Einbeziehung der Anatomie}
-Die Anatomie der menschlichen Hand erlaubt nicht in allen Richtungen beliebige Bewegungen. Bewegungen die anatomisch nicht möglich sind sollen abgefangen und ausgefiltert werden. Als Basis dafür wird eine Veröffentlichungen \cite{lin_modeling_2000} über die Beschränkungen von Handbewegungen. Darin werden drei unterschiedliche Beschränkungen eingeführt, zum einen Einschränkungen einzelner Gelenke, Kopplung zwischen mehreren Gelenken (zum Beispiel führt eine Beugung des MCP Zeigefinger zu einer Beugung im MCP des Mittelfingers, oder die Bewegung der DIP-Gelenke ist abhängig von den vorherigen Gelenken aufgrund von gemeinsamen Bändern und Sehnen) und zuletzt Eigenarten der einzelnen Person. In dieser Arbeit wurde nur die Beschränkung einzelner Gelenke implementiert, also wenn die geschätzten Winkel außerhalb des möglichen Wertebereich liegen, werden diese auf den größten bzw. kleinsten Wert gesetzt. In \cite{lin_modeling_2000} werden dabei für die MCP-Gelenke für das Spreizen Grenzen bei $\pm 15^\circ$ und in der Flexion wird ein Wertebereich von $0^\circ-90^\circ$ angegeben. Die folgenden Gelenke haben jeweils nur einen Freiheitsgrad, sodass ein Spreizen dieser Gelenke immer auf 0 gesetzt wird. Die PIP-Gelenke haben einen Wertebereich in der Flexion von $0^\circ-110^\circ$. Die DIP-Gelenke haben einen Wertebereich von $0^\circ-90^\circ$. 
+Die Anatomie der menschlichen Hand erlaubt nicht in allen Richtungen beliebige Bewegungen. Bewegungen die anatomisch nicht möglich sind sollen abgefangen und ausgefiltert werden. Als Basis dafür wird eine Veröffentlichungen \cite{lin_modeling_2000} über die Beschränkungen von Handbewegungen. Darin werden drei unterschiedliche Beschränkungen eingeführt, zum einen Einschränkungen einzelner Gelenke, Kopplung zwischen mehreren Gelenken, zum Beispiel führt eine Beugung des MCP Zeigefinger zu einer Beugung im MCP des Mittelfingers, oder die Bewegung der DIP-Gelenke ist abhängig von den vorherigen Gelenken aufgrund von gemeinsamen Bändern und Sehnen, und zuletzt Eigenarten der einzelnen Person. In dieser Arbeit wurde nur die Beschränkung einzelner Gelenke implementiert, also wenn die geschätzten Winkel außerhalb des möglichen Wertebereich liegen, werden diese auf den größten bzw. kleinsten Wert gesetzt. In \cite{lin_modeling_2000} werden dabei für die MCP-Gelenke für das Spreizen Grenzen bei $\pm 15^\circ$ und in der Flexion wird ein Wertebereich von $0^\circ-90^\circ$ angegeben. Die folgenden Gelenke haben jeweils nur einen Freiheitsgrad, sodass ein Spreizen dieser Gelenke immer auf 0 gesetzt wird. Die PIP-Gelenke haben einen Wertebereich in der Flexion von $0^\circ-110^\circ$. Die DIP-Gelenke haben einen Wertebereich von $0^\circ-90^\circ$. 
 
 
 \subsection{Absolut Lokalisierung}
-Die Nachverarbeitung der absolut Lokalisierung wurde einfach gehalten, zum einen wird ein Verfahren um die Schätzung der Rotationsmatrix robuster gegen Rauschen zu machen, zum anderen sollen Hochfrequente Anteile aus den Schätzungen entfernt werden.
+Die Nachverarbeitung der absolut Lokalisierung wurde einfach gehalten, zum einen wird ein Verfahren um die Schätzung der Rotationsmatrix robuster gegen Rauschen zu machen, zum anderen sollen hochfrequente Anteile aus den Schätzungen entfernt werden.
 
 
 
 \subsubsection{Glättung}
-Ähnlich wie bei der Nachverarbeitung zur Schätzung einer kinematischen Kette soll auch hier ein Tiefpassfilter angewendet werden um hochfrequente Signalanteile zu filtern. Hier werden die gleichen Filter wie in Kapitel \ref{subsubsection:Glattung_kin} verwendet. Die Eingangsgrößen sind dabei die drei Positionskomponenten $\hat{\vec{r}}\tindex{C} = \left[\begin{array}{c} \hat{x}\tindex{C}\\ \hat{y}\tindex{C} \\ \hat{z}\tindex{C} \end{array}\right]$. Die Ausgangsgrößen sind die gefilterten Werte $\hat{\vec{r}}\tindex{C,filt}$. Die geschätzten Eulerwinkel müssen nicht gefiltert, da diese bereits in die Orientierungen der kinematischen Elemente eingerechnet wurden (Gleichung\,\ref{eq:UmrechnungLocGlob}) und daher bei der Filterung der Orientierungen gefiltert werden.
+Ähnlich wie bei der Nachverarbeitung zur Schätzung einer kinematischen Kette soll auch hier ein Tiefpassfilter angewendet werden um hochfrequente Signalanteile zu filtern. Hier werden die gleichen Filter wie in Kapitel \ref{subsubsection:Glattung_kin} verwendet. Die Eingangsgrößen sind dabei die drei Positionskomponenten 
+\begin{equation}
+    \hat{\vec{r}}\tindex{c} = \left[\begin{array}{c} \hat{x}\tindex{c}\\ \hat{y}\tindex{c} \\ \hat{z}\tindex{c} \end{array}\right]. 
+\end{equation}
+Die Ausgangsgrößen sind die gefilterten Werte $\hat{\vec{r}}\tindex{c,filt}$. Die geschätzten Eulerwinkel müssen nicht gefiltert, da diese bereits in die Orientierungen der kinematischen Elemente eingerechnet wurden (Gleichung\,\ref{eq:UmrechnungLocGlob}) und daher bei der Filterung der Orientierungen gefiltert werden.
 
 \subsection{Übersicht Nachverarbeitung}
 Die beiden Nachverarbeitungsstränge werden nun zusammengefasst und die absolute Position und die einzelnen Gelenkswinkel zu einer Ergebnisvektor $\bvec{P}\tindex{$r,\phi,\theta$}$ zusammengefasst. Das Echtzeitrahmenwerk nutzt diese dann für eine Visualisierung (siehe Anhang), die es ermöglicht nebeneinander die reale Bewegung und die Schätzung in Echtzeit miteinander zu vergleichen. Eine Übersicht der Nachverarbeitung ist in Abbildung\,\ref{fig:UebersichtPostproc} 
@@ -992,10 +1015,10 @@ Die beiden Nachverarbeitungsstränge werden nun zusammengefasst und die absolute
         \put(100,37){$\bvec{P}\tindex{$r,\phi,\theta$}$}
         \put(5,39){$\bvec{P}\tindex{$r,\vec{e}\tindex{k}$}$}
         \put(32,53){\parbox{1.0in}{Glättung und Winkelumrechnung}}
-        \put(77,57){$\phi\tindex{0-n,Sp},\theta\tindex{0-n,Beu}$}
+        \put(77,57){$\phi\tindex{k,Sp},\theta\tindex{k,Beu}$}
         \put(59,53){\parbox{.5in}{Bewegungs-einschränkung}}
         \put(29,24){\parbox{1.5in}{Glättung von Position und Orientierung}}
-        \put(55,19){$\hat{\vec{r}}\tindex{C,filt}$}
+        \put(55,19){$\hat{\vec{r}}\tindex{c,filt}$}
     \end{overpic}
     \caption{Übersicht des Nachverarbeitungsmodul: Auf der linken Seite sind die ungefilterten Schätzungen als Eingangsdaten dargestellt. Sowohl die absolute Position als auch die Orientierungen der kinematischen Elemente werden mit einem Tiefpass gefiltert. Die Orientierungen werden dann in Winkel umgerechnet und anhand bekannter Anatomie eingeschränkt. Die Ausgangsdaten sind dann die gefilterte Position, sowie die gefilterten Gelenkswinkel.}
     \label{fig:UebersichtPostproc}

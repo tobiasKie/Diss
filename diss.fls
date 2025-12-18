@@ -1288,13 +1288,18 @@ INPUT .\05_eval\images\Kalibrierung.pdf
 INPUT .\05_eval\images\Kalibrierung.pdf
 INPUT .\05_eval\images\Kalibrierung.pdf
 INPUT .\05_eval\images\Kalibrierung.pdf
+INPUT .\05_eval\images\legend.tikz
+INPUT .\05_eval\images\legend.tikz
+INPUT 05_eval\images\legend.tikz
 INPUT .\05_eval\images\FirstElementAnglesRaw.tikz
 INPUT .\05_eval\images\FirstElementAnglesRaw.tikz
 INPUT 05_eval\images\FirstElementAnglesRaw.tikz
-INPUT C:\Users\tsc\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ts1-lmbx12.tfm
 INPUT .\05_eval\images\SecondElementAngleRaw.tikz
 INPUT .\05_eval\images\SecondElementAngleRaw.tikz
 INPUT 05_eval\images\SecondElementAngleRaw.tikz
+INPUT .\05_eval\images\legend.tikz
+INPUT .\05_eval\images\legend.tikz
+INPUT 05_eval\images\legend.tikz
 INPUT .\05_eval\images\FirstElement_Angle.tex
 INPUT .\05_eval\images\FirstElement_Angle.tex
 INPUT .\05_eval\images\FirstElement_Angle.tex
@@ -1305,6 +1310,9 @@ INPUT .\05_eval\images\FirstElement_Error.tex
 INPUT .\05_eval\images\FirstElement_Error.tex
 INPUT .\05_eval\images\FirstElement_Error.tex
 INPUT 05_eval\images\FirstElement_Error.tex
+INPUT .\05_eval\images\legend.tikz
+INPUT .\05_eval\images\legend.tikz
+INPUT 05_eval\images\legend.tikz
 INPUT .\05_eval\images\SecondElement_Angle.tex
 INPUT .\05_eval\images\SecondElement_Angle.tex
 INPUT .\05_eval\images\SecondElement_Angle.tex
@@ -1449,8 +1457,6 @@ INPUT C:\Users\tsc\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmr5.pfb
 INPUT C:\Users\tsc\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmr5.pfb
 INPUT C:\Users\tsc\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmr6.pfb
 INPUT C:\Users\tsc\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmr6.pfb
-INPUT C:\Users\tsc\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmr7.pfb
-INPUT C:\Users\tsc\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmr7.pfb
 INPUT C:\Users\tsc\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmr8.pfb
 INPUT C:\Users\tsc\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmr8.pfb
 INPUT C:\Users\tsc\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmri12.pfb
@@ -1467,7 +1473,5 @@ INPUT C:\Users\tsc\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmsy6.pfb
 INPUT C:\Users\tsc\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmsy6.pfb
 INPUT C:\Users\tsc\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmsy8.pfb
 INPUT C:\Users\tsc\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmsy8.pfb
-INPUT C:\Users\tsc\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\symbols\msam10.pfb
-INPUT C:\Users\tsc\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\symbols\msam10.pfb
 INPUT C:\Users\tsc\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\symbols\msbm10.pfb
 INPUT C:\Users\tsc\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\symbols\msbm10.pfb

@@ -9,8 +9,8 @@
 \begin{tikzpicture}
 
 \begin{axis}[%
-width=6.0in,
-height=6.0in,
+width=2.25in,
+height=2.0in,
 at={(0.0in,0.0in)},
 scale only axis,
 xmin=0,
@@ -5586,8 +5586,8 @@ ymajorgrids
 \end{axis}
 
 \begin{axis}[%
-width=6.0in,
-height=6.0in,
+width=2.25in,
+height=2.0in,
 at={(0in,0in)},
 scale only axis,
 xmin=0,

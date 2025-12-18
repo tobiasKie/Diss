@@ -27,11 +27,11 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="1.2938725"
-     inkscape:cx="677.03735"
-     inkscape:cy="391.84696"
+     inkscape:zoom="7.3192481"
+     inkscape:cx="476.00518"
+     inkscape:cy="180.07314"
      inkscape:window-width="3440"
-     inkscape:window-height="1377"
+     inkscape:window-height="1369"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
@@ -65,8 +65,8 @@
     <circle
        style="fill:none;stroke:#000d00;stroke-width:1.06421;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
        id="path23603"
-       cx="96.82666"
-       cy="170.67578"
+       cx="96.570175"
+       cy="171.97566"
        r="9.1302404" />
     <circle
        style="fill:none;stroke:#000d00;stroke-width:2.03568;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
@@ -95,14 +95,14 @@
        d="m 179.90529,10.644134 9.72938,16.668158"
        id="path24041" />
     <circle
-       style="fill:#ff8000;fill-opacity:1;stroke:#ff8000;stroke-width:1.06899;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.06899;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
        id="path3060-2-2-3"
        cx="130.72978"
        cy="77.805153"
        r="3.2789738"
        transform="rotate(-15)" />
     <path
-       style="fill:#ff8000;fill-opacity:1;stroke:#ff8000;stroke-width:1.06899;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleStart-8-1-2);paint-order:fill markers stroke"
+       style="fill:#ff8000;fill-opacity:1;stroke:#000000;stroke-width:1.069;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleStart-8-1-2);paint-order:fill markers stroke"
        d="m 148.01332,40.519528 11.96841,-6.90997"
        id="path4568-8-5-2" />
     <path
@@ -124,7 +124,7 @@
        sodipodi:open="true" />
     <g
        id="g13420-9"
-       transform="matrix(2.4872086,0,0,2.4872086,-379.08768,-13.572157)">
+       transform="matrix(2.4872086,0,0,2.4872086,-380.46798,-12.958689)">
       <ellipse
          style="fill:none;fill-opacity:1;stroke:#0007ff;stroke-width:0.489471;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
          id="path13287-6"

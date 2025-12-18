@@ -10,9 +10,9 @@
 \begin{tikzpicture}
 
 \begin{axis}[%
-width=14.0in,
-height=2.0in,
-at={(0.9in,0.0in)},
+width=5.0in,
+height=1.5in,
+at={(0.49in,0.0in)},
 scale only axis,
 xmin=1,
 xmax=15,
@@ -2841,8 +2841,8 @@ legend style={legend cell align=left, align=left, draw=white!15!black}
 \end{axis}
 
 \begin{axis}[%
-width=10.0in,
-height=2.0in,
+width=5.0in,
+height=1.5in,
 at={(0in,0in)},
 scale only axis,
 xmin=0,

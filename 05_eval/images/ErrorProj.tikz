@@ -7,8 +7,8 @@
 \begin{tikzpicture}
 
 \begin{axis}[%
-width=4.0in,
-height=4.0in,
+width=1.5in,
+height=1.5in,
 at={(0.0in,0.0in)},
 scale only axis,
 point meta min=0,
@@ -16,10 +16,10 @@ point meta max=68.5242719687529,
 axis on top,
 xmin=0,
 xmax=360,
-xlabel={$\phi\tindex{s,1}$},
+xlabel={$\phi\tindex{s,1}$ in $^\circ$},
 ymin=0,
 ymax=180,
-ylabel={$\phi\tindex{s,2}$},
+ylabel={$\phi\tindex{s,2}$in $^\circ$},
 axis background/.style={fill=white},
 axis x line*=bottom,
 axis y line*=left,
@@ -31,8 +31,8 @@ colorbar style={ylabel = {Winkel in $^\circ$}}
 \end{axis}
 
 \begin{axis}[%
-width=4.0in,
-height=4.0in,
+width=1.5in,
+height=1.5in,
 at={(0in,0in)},
 scale only axis,
 point meta min=0,

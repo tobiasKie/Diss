@@ -11,8 +11,8 @@
 \begin{tikzpicture}
 
 \begin{axis}[%
-width=14.0in,
-height=5.0in,
+width=5.0in,
+height=3.0in,
 at={(0.0in,0.0in)},
 scale only axis,
 xmin=1,
@@ -21,13 +21,15 @@ xtick={1,2,...,15},
 xlabel={Zeit in s},
 ymin=300,
 ymax=900,
-ylabel = {Koordinate in mm},
+ytick = {300,400,...,900},
+yticklabels = {-200,-100,0,100,200,300,400},
+ylabel = {Koordinaten in mm},
 axis background/.style={fill=white},
 axis x line*=bottom,
 axis y line*=left,
 xmajorgrids,
 ymajorgrids,
-legend style={legend cell align=left, align=left, draw=white!15!black}
+legend style={at={(0.25,1.0)},legend cell align=left, align=left, draw=white!15!black}
 ]
 \addplot [color=mycolor1, line width=1.0pt]
   table[row sep=crcr]{%
@@ -8468,8 +8470,8 @@ legend style={legend cell align=left, align=left, draw=white!15!black}
 \end{axis}
 
 \begin{axis}[%
-width=10.0in,
-height=5.0in,
+width=6.0in,
+height=2.50in,
 at={(0in,0in)},
 scale only axis,
 xmin=0,

@@ -11,8 +11,8 @@
 \begin{tikzpicture}
 
 \begin{axis}[%
-width=6.0in,
-height=6.0in,
+width=2.0in,
+height=2.0in,
 at={(0.0in,0.0in)},
 scale only axis,
 plot box ratio=1 1 1,
@@ -21,18 +21,18 @@ xmax=1.5,
 xtick = {-1,0,1},
 tick align=outside,
 xlabel style={font=\color{white!15!black}},
-xlabel={x},
+xlabel={$x$},
 ymin=-1.5,
 ymax=1.5,
 ytick = {-1,0,1},
 ylabel style={font=\color{white!15!black}},
-ylabel={y},
+ylabel={$y$},
 zmin=-1.5,
 zmax=1.5,
 ztick = {-1,0,1},
 zlabel style={font=\color{white!15!black}},
-zlabel={z},
-view={-110.603155497979}{21.2068964122673},
+zlabel={$z$},
+view={30}{21.2068964122673},
 axis background/.style={fill=white},
 axis x line*=bottom,
 axis y line*=left,
@@ -40,22 +40,22 @@ axis z line*=left,
 xmajorgrids,
 ymajorgrids,
 zmajorgrids,
-tick label style={black, font=\huge},
+tick label style={black},
 legend style={font=\small},
 legend cell align=left,
-legend pos=north east]
-\addlegendimage{line legend,mycolor1,line width = 10}\addlegendentry{\huge Sensor}
-\addlegendimage{line legend,mycolor2, line width = 10}\addlegendentry{\huge $\vec{e}_\text{zc}$}
-\addlegendimage{line legend,mycolor3, line width = 10}\addlegendentry{\huge $\vec{e}_\text{max}$}
+legend pos=north west]
+\addlegendimage{line legend,mycolor1,line width = 5}\addlegendentry{$\vec{e}_\text{s}$}
+\addlegendimage{line legend,mycolor2, line width = 5}\addlegendentry{$\vec{e}_\text{zc}$}
+\addlegendimage{line legend,mycolor3, line width = 5}\addlegendentry{$\vec{e}_\text{max}$}
 ]
-\addplot3[-Straight Barb, color=mycolor1, line width=3.0pt, point meta={sqrt((\thisrow{u})^2+(\thisrow{v})^2+(\thisrow{w})^2)}, point meta min=0, quiver={u=\thisrow{u}, v=\thisrow{v}, w=\thisrow{w}, every arrow/.append style={-{Straight Barb[angle'=45, scale={5/1000*\pgfplotspointmetatransformed}]}}}]
+\addplot3[-Straight Barb, color=mycolor1, line width=2.0pt, point meta={sqrt((\thisrow{u})^2+(\thisrow{v})^2+(\thisrow{w})^2)}, point meta min=0, quiver={u=\thisrow{u}, v=\thisrow{v}, w=\thisrow{w}, every arrow/.append style={-{Straight Barb[angle'=45, scale={1/1000*\pgfplotspointmetatransformed}]}}}]
  table[row sep=crcr] {%
 x	y	z	u	v	w\\
 0	0	1	0.282842712474619	0.282842712474619	2.44929359829471e-17\\
 };
 
 
-\addplot3[-Straight Barb, color=mycolor2, line width=2.0pt, point meta={sqrt((\thisrow{u})^2+(\thisrow{v})^2+(\thisrow{w})^2)}, point meta min=0, quiver={u=\thisrow{u}, v=\thisrow{v}, w=\thisrow{w}, every arrow/.append style={-{Straight Barb[angle'=45, scale={5/1000*\pgfplotspointmetatransformed}]}}}]
+\addplot3[-Straight Barb, color=mycolor2, line width=2.0pt, point meta={sqrt((\thisrow{u})^2+(\thisrow{v})^2+(\thisrow{w})^2)}, point meta min=0, quiver={u=\thisrow{u}, v=\thisrow{v}, w=\thisrow{w}, every arrow/.append style={-{Straight Barb[angle'=45, scale={1/1000*\pgfplotspointmetatransformed}]}}}]
  table[row sep=crcr] {%
 x	y	z	u	v	w\\
 -0.0114526914677205	-2.62352375203059e-05	-0.49986881796113	0.022905382935441	5.24704750406118e-05	0.99973763592226\\
@@ -65,7 +65,7 @@ x	y	z	u	v	w\\
 };
 
 
-\addplot3[-Straight Barb, color=mycolor3, line width=3.0pt, point meta={sqrt((\thisrow{u})^2+(\thisrow{v})^2+(\thisrow{w})^2)}, point meta min=0, quiver={u=\thisrow{u}, v=\thisrow{v}, w=\thisrow{w}, every arrow/.append style={-{Straight Barb[angle'=45, scale={5/1000*\pgfplotspointmetatransformed}]}}}]
+\addplot3[-Straight Barb, color=mycolor3, line width=2.0pt, point meta={sqrt((\thisrow{u})^2+(\thisrow{v})^2+(\thisrow{w})^2)}, point meta min=0, quiver={u=\thisrow{u}, v=\thisrow{v}, w=\thisrow{w}, every arrow/.append style={-{Straight Barb[angle'=45, scale={1/1000*\pgfplotspointmetatransformed}]}}}]
  table[row sep=crcr] {%
 x	y	z	u	v	w\\
 0	0	0	-0.409217819099059	-0.287145588520104	0.00939082133008293\\
@@ -74,8 +74,8 @@ x	y	z	u	v	w\\
 \end{axis}
 
 \begin{axis}[%
-width=6.0in,
-height=6.0in,
+width=2.0in,
+height=2.0in,
 at={(0in,0in)},
 scale only axis,
 xmin=0,

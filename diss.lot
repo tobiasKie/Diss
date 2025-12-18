@@ -5,10 +5,10 @@
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {4.1}{\ignorespaces Benötigte Zeit für die Ausführung von einer Million der aufgeführten Operationen. In der rechten Zeile werden die Zeitaufwände auf die Basis Operation Addition/Subtraktion normiert. In Blau ist der Aufwand für eine Iteration des Algorithmus hervorgehoben.}}{45}{table.caption.77}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Ergebnisse der statischen Messung des ersten kinematischen Elements.}}{69}{table.caption.135}%
-\contentsline {table}{\numberline {5.2}{\ignorespaces Ergebnisse der statischen Messung des zweiten kinematischen Elements.}}{70}{table.caption.136}%
-\contentsline {table}{\numberline {5.3}{\ignorespaces Ergebnisse der statischen Positionsschätzung, alle Größen in mm, der mittlere Fehler beträgt 15.2\,mm}}{79}{table.caption.168}%
-\contentsline {table}{\numberline {5.4}{\ignorespaces Ergebnisse der statischen Orientierungsschätzung, der mittlere Fehler beträgt $16.1^\circ $ }}{79}{table.caption.169}%
+\contentsline {table}{\numberline {5.1}{\ignorespaces Ergebnisse der statischen Messung des ersten kinematischen Elements.}}{71}{table.caption.134}%
+\contentsline {table}{\numberline {5.2}{\ignorespaces Ergebnisse der statischen Messung des zweiten kinematischen Elements.}}{72}{table.caption.135}%
+\contentsline {table}{\numberline {5.3}{\ignorespaces Ergebnisse der statischen Positionsschätzung, alle Größen in mm, der mittlere Fehler beträgt 15.2\,mm}}{81}{table.caption.167}%
+\contentsline {table}{\numberline {5.4}{\ignorespaces Ergebnisse der statischen Orientierungsschätzung, der mittlere Fehler beträgt $16.1^\circ $ }}{82}{table.caption.168}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \def \@chapapp {\appendixname }

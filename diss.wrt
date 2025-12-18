@@ -105,99 +105,98 @@
 \@writefile{toc}{\contentsline {subsubsection}{\nonumberline Orientierungsschätzung}{49}{subsubsection*.86}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {4.20}{\ignorespaces Beispiel für eine um 90° um die Z-Achse verdrehte Spule: Abbildung\,(a) zeigt die MVs berechnet anhand der geschätzten Position, in\,(b) sind die aus dem Signal extrahierten MVs dargestellt. Dabei ist gut zu erkennen, dass beide Abbildungen kongruent sind, jedoch um 90° verdreht. In Abbildung\,(c) sind die berechneten MVs mit einer gedrehten Ansicht dargestellt.}}{50}{figure.caption.87}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.3.3}Kombination der Lokalisierungsalgorithmen}{52}{subsection.4.3.3}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4.21}{\ignorespaces Übersicht des Lokalisierungsmodul: Die Eingangsgröße sind die MVs aller Sensoren. Im oberen Teil ist die absolute Lokalisierung schematische dargestellt. Zunächst wird aus den MVs die Position der 3D-Spule bestimmt. Im Orientierungsschätzungsmodul werden aus der Position und den MVs die Orientierung der Spule bestimmt. Im unteren Teil ist die Schätzung einer kinematischen Kette, dieser schätzt aus den MVs die Haltung dieser. Die absolute Position und die Orientierungen der kinetmatischen Elemente werden dann von einem Kombinationsmodul kombiniert und ausgegeben.}}{52}{figure.caption.88}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.21}{\ignorespaces Übersicht des Lokalisierungsalgorithmus: Die Eingangsgröße sind die MVs aller Sensoren. Im oberen Teil ist die absolute Lokalisierung schematische dargestellt. Zunächst wird aus den MVs die Position der 3D-Spule bestimmt. Im Orientierungsschätzungsmodul werden aus der Position und den MVs die Orientierung der Spule bestimmt. Im unteren Teil ist die Schätzung einer kinematischen Kette, dieser schätzt aus den MVs die Haltung dieser. Die absolute Position und die Orientierungen der kinetmatischen Elemente werden dann von einem Kombinationsmodul kombiniert und ausgegeben.}}{53}{figure.caption.88}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {4.4}Nachverarbeitung}{53}{section.4.4}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.4.1}Schätzung einer kinematischen Kette}{53}{subsection.4.4.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Einbeziehung der Distanzinformation}{53}{subsubsection*.90}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {4.22}{\ignorespaces Distanz zu Winkel: Die Abbildung zeigt eine kinematische Kette mit zwei Elementen. Auf dem ersten Element (unten) ist ein Akktuator angebracht, auf dem zweiten ein Sensor(orange). In gelb ist ein Dreieck eingezeichnet mit den zugehörigen Längen.}}{54}{figure.caption.91}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Glättung und Winkelumrechnung}{54}{subsubsection*.94}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Einbeziehung der Distanzinformation}{54}{subsubsection*.90}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {4.23}{\ignorespaces Vergleich der unterschiedlichen Berechnungsmethoden für $\phi _{\textrm {\footnotesize \add@extra@listi {ftns}{s,2}}}$: Gelb zeigt den wahren Wert, Orange den aus dem vorgestellten Algorithmus und Blau den aus der Distanz bestimmten Wert.}}{55}{figure.caption.92}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4.24}{\ignorespaces Filter}}{56}{figure.caption.95}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Einbeziehung der Anatomie}{56}{subsubsection*.97}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Glättung und Winkelumrechnung}{55}{subsubsection*.94}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.24}{\ignorespaces Filter für die Nachverarbeitung: Die Abbildung zeigt den Frequenzgang eines Butterworth-Tiefpassfilter fünfter Ordnung mit einer Grenzfrequenz von 8\,Hz.}}{56}{figure.caption.95}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Einbeziehung der Anatomie}{57}{subsubsection*.97}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.4.2}Absolut Lokalisierung}{57}{subsection.4.4.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\nonumberline Glättung}{57}{subsubsection*.99}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.3}Übersicht Nachverarbeitung}{57}{subsection.4.4.3}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4.25}{\ignorespaces Übersicht des Nachverarbeitungsmodul: Auf der linken Seite sind die ungefilterten Schätzungen als Eingangsdaten dargestellt. Sowohl die absolute Position als auch die Orientierungen der kinematischen Elemente werden mit einem Tiefpass gefiltert. Die Orientierungen werden dann in Winkel umgerechnet und anhand bekannter Anatomie eingeschränkt. Die Ausgangsdaten sind dann die gefilterte Position, sowie die gefilterten Gelenkswinkel.}}{58}{figure.caption.100}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Evaluierung}{59}{chapter.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.3}Übersicht Nachverarbeitung}{58}{subsection.4.4.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.25}{\ignorespaces Übersicht des Nachverarbeitungsmodul: Auf der linken Seite sind die ungefilterten Schätzungen als Eingangsdaten dargestellt. Sowohl die absolute Position als auch die Orientierungen der kinematischen Elemente werden mit einem Tiefpass gefiltert. Die Orientierungen werden dann in Winkel umgerechnet und anhand bekannter Anatomie eingeschränkt. Die Ausgangsdaten sind dann die gefilterte Position, sowie die gefilterten Gelenkswinkel.}}{59}{figure.caption.100}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Evaluierung}{61}{chapter.5}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}Verwendete Hardware}{59}{section.5.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Die Abbildung zeigt die verwendete Hardware bestehend aus einem Labornetzteil (rot), einer 32-Kanal-AD-Wandlerkarte (grün), einer 10-Kanal-DA-Wandlerkarte (blau), einer Stromverstärkereinheit (gelb) und eine AVB-Router mit Interface zum Auswertecomputer (pink).}}{60}{figure.caption.101}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5.2}Relative Lokalisierung}{60}{section.5.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.1}Simulative Evaluierung}{60}{subsection.5.2.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Szenarios und Ergebnisse}{60}{subsubsection*.103}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{\nonumberline Robustheit gegenüber Rauschen}{60}{paragraph*.105}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces Die Abbildung zeigt die Standardabweichung in Abhängigkeit der Gelenksstellung. $\phi _{\textrm {\footnotesize \add@extra@listi {ftns}{s,2}}}$ zeigt dabei wie stark das Gelenk gebeugt ist, $\phi _{\textrm {\footnotesize \add@extra@listi {ftns}{s,1}}}$ zeigt in welche Richtung das Gelenk gebeugt wird.}}{61}{figure.caption.106}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces Die linke Abbildung zeigt den Fehler der Orientierung, nach einer Mittelung von 100 Schätzungen. Die rechte Seite zeigt das Verhältnis zwischen der Standardabweichung des MV und der Standardabweichung der Orientierung.}}{61}{figure.caption.107}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{\nonumberline Einfluss von Fehlerfortpflanzung}{61}{paragraph*.109}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces Der obere Teil der Grafik zeigt, wie die kinematische Kette in der Simulation ausgerichtet ist. Der untere Teil zeigt, wie in der Auswertung das erste kinematische Element angenommen wird. Dieses wird zufällig in einem definiertem Winkelbereich variiert und somit die Position des zweiten Gelenks jeweils leicht falsch bestimmt. Die Orientierung des zweiten Elements wird mit dem beschriebenen Algorithmus bestimmt.}}{62}{figure.caption.110}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{\nonumberline Einfache Bewegung}{62}{paragraph*.113}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces Auf der linken Seite ist die Standardabweichung der Orientierung in Abhängigkeit des falsch angenommenen Winkels und der Länge des mittleren Elements. In der rechten Abbildung sind die Fehler des über 100 Schätzungen gemittelten Werts dargestellt.}}{63}{figure.caption.111}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.6}{\ignorespaces (a) zeigt den zeitlichen Verlauf der einzelnen Komponenten der Orientierung. (b) ist diesselbe Abbildung mit Fokus auf die $y$-Komponente.}}{63}{figure.caption.114}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Diskussion}{63}{subsubsection*.116}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{\nonumberline Robustheit gegenüber Rauschen}{63}{paragraph*.118}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.7}{\ignorespaces (a) zeigt die $\vec {e}_{\textrm {\footnotesize \add@extra@listi {ftns}{zc}}}$s für eine Rahmenlänge 512. (b) zeigt dasselbe für eine Rahmenlänge von 4096.}}{64}{figure.caption.119}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{\nonumberline Fehlerfortpflanzung}{64}{paragraph*.121}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{\nonumberline Einfache Bewegung}{65}{paragraph*.123}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.8}{\ignorespaces Nulldurchgangsvektoren die aus einem der simulierten Rahmen extrahiert wurden. Für einen unbewegten Sensor ohne Rauschen liegen die Vektoren immer in einer Ebene, hier ist gut zu erkennen, dass dies für einen bewegten Sensor nicht gilt.}}{65}{figure.caption.124}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.2}Experimentelle Evaluierung}{65}{subsection.5.2.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.9}{\ignorespaces Demonstrator: Die Abbildung zeigt den Demonstrator, der für die Evaluierung verwendet wird. Die 3D-Spule und die kinematischen Elemente sind mit optischen Markern ausgerüstet. }}{66}{figure.caption.125}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Räumliche Synchronisierung und Schätzung der räumlichen Größen}{66}{subsubsection*.128}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.10}{\ignorespaces Evaluierungsaufbau: Das Foto zeigt den Demonstrator in der Mitte (rot) und im Außenbereich die Kameras (gelb).}}{67}{figure.caption.126}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.11}{\ignorespaces Definition der Koordinatensysteme: Der rote Pfeil ist jeweils die $x$-Achse, grün die $y$-Achse und blau die $z$-Achse. (a) zeigt die Definition des magnetischen Koordiantensystems, (b) zeigt die Definition des optischen Koordinatensystem.}}{67}{figure.caption.129}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.12}{\ignorespaces Kalibrierung der kinematischen Kette: Die Abbildung zeigt eine kinematische Kette bestehend aus drei Elementen. Die roten Pfeile zeigen alle Größen die für den Algorithmus vor der Laufzeit bestimmt werden müssen.}}{68}{figure.caption.132}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Kalibrierung}{68}{subsubsection*.131}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Ergebnisse}{69}{subsubsection*.134}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {5.1}{\ignorespaces Ergebnisse der statischen Messung des ersten kinematischen Elements.}}{69}{table.caption.135}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {5.2}{\ignorespaces Ergebnisse der statischen Messung des zweiten kinematischen Elements.}}{70}{table.caption.136}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.13}{\ignorespaces Die Abbildung zeigt die beiden Gelenkswinkel für das erste(a) und zweite Gelenk(b). Dabei sind die Schätzungen der magnetischen Lokalisierung ohne Nachverarbeitung(gestrichelt), sowie die optischen Schätzungen über der Zeit aufgetragen. }}{70}{figure.caption.137}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Diskussion}{70}{subsubsection*.141}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.14}{\ignorespaces Ergebnisse des ersten Elements: (a) zeigt die Winkelschätzungen im Vergleich. Die optischen sind in gestrichelten Linien und die magnetischen mit durchgezogenen Linien dargestellt. (b) zeigt den Winkelfehler zwischen den beiden Schätzungen.}}{71}{figure.caption.138}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.15}{\ignorespaces Ergebnisse für das zweite Element: Die Darstellung ist wie in Abbildung\,\ref {fig:ResultsFirstElement}.}}{71}{figure.caption.139}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.16}{\ignorespaces Frequenzanalyse der Winkelschätzung und der magnetischen Eingangssignale, es ist jeweils das Signal des ersten Elements dargestellt.}}{72}{figure.caption.142}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5.3}Absolute Lokalisierung}{72}{section.5.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.1}Fehlermaß}{72}{subsection.5.3.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.17}{\ignorespaces Aufbauten für die absolut Lokalisierung: (a) zeigt das Simulationssetup, (b) zeigt den realen Aufbau.}}{73}{figure.caption.143}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.2}Simulative Evaluierung}{74}{subsection.5.3.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Ergebnisse}{74}{subsubsection*.145}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{\nonumberline Robustheit der Positionsschätzung gegen Rauschen}{74}{paragraph*.147}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.18}{\ignorespaces Ergebnisse der Simualtion zur Überprüfung der Rebustheit der Positionsschätzung gegen weißes Rauschen}}{75}{figure.caption.148}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{\nonumberline Einfluss eines Positionsfehler auf die Orientierungsschätzung}{75}{paragraph*.150}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{\nonumberline Einfache Bewegung}{75}{paragraph*.153}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.19}{\ignorespaces Standardabweichung des Orientierungsfehler in Abhängigkeit vom Positionsfehler}}{76}{figure.caption.151}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.20}{\ignorespaces Ergebnisse der Simulation einer einfachen Bewegung}}{76}{figure.caption.154}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Diskussion}{76}{subsubsection*.156}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{\nonumberline Robustheit der Position gegen Rauschen}{76}{paragraph*.158}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{\nonumberline Einfluss eines Positionsfehlers auf die Orientierungsschätzung}{77}{paragraph*.160}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{\nonumberline Einfache Bewegung}{77}{paragraph*.162}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.3}Experimentelle Evaluierung}{77}{subsection.5.3.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Räumliche Synchronisierung}{77}{subsubsection*.164}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.21}{\ignorespaces Aufbau für die Evaluierung der Lokalisierung: An dem Würfel sind PVC-Streben mit jeweils zwei Sensoren und zwei optischen Markern für $x$(rot),$y$(grün) und $z$(blau). Die Sensoren sind mit den helleren Rechtecken gekennzeichnet.}}{78}{figure.caption.165}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Ergebnisse}{78}{subsubsection*.167}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {5.3}{\ignorespaces Ergebnisse der statischen Positionsschätzung, alle Größen in mm, der mittlere Fehler beträgt 15.2\,mm}}{79}{table.caption.168}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {5.4}{\ignorespaces Ergebnisse der statischen Orientierungsschätzung, der mittlere Fehler beträgt $16.1^\circ $ }}{79}{table.caption.169}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Diskussion}{79}{subsubsection*.174}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.22}{\ignorespaces Ergebnis der dynamischen Evaluierung der Positionsschätzung: Es sind die drei Positionskomponenten dargestellt. Die magnetischen Schätzungen sind in durchgezogenen Linien und die optischen in gestrichelten Linien dargestellt.}}{80}{figure.caption.170}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.23}{\ignorespaces Ergebnis der dynamischen Evaluation der Orientierungsschätzung: Die optischen Schätzungen sind }}{80}{figure.caption.171}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.24}{\ignorespaces Fehler der dynamischen Messsung über die Messsequenz}}{81}{figure.caption.172}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {6}Zusammenfassung und Ausblick}{83}{chapter.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Verwendete Hardware}{61}{section.5.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Die Abbildung zeigt die verwendete Hardware bestehend aus einem Labornetzteil (rot), einer 32-Kanal-AD-Wandlerkarte (grün), einer 10-Kanal-DA-Wandlerkarte (blau), einer Stromverstärkereinheit (gelb) und eine AVB-Router mit Interface zum Auswertecomputer (pink).}}{62}{figure.caption.101}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Relative Lokalisierung}{62}{section.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.1}Simulative Evaluierung}{62}{subsection.5.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Szenarios und Ergebnisse}{62}{subsubsection*.103}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Robustheit gegenüber Rauschen}{62}{paragraph*.105}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces Die Unterabbildungen\,(a) und (b) zeigen die Standardabweichung des MV und der Orientierung in Abhängigkeit der Gelenksstellung. $\phi _{\textrm {\footnotesize \add@extra@listi {ftns}{s,2}}}$ zeigt dabei wie stark das Gelenk gebeugt ist, $\phi _{\textrm {\footnotesize \add@extra@listi {ftns}{s,1}}}$ zeigt in welche Richtung das Gelenk gebeugt wird. Die Unterabbildung\,(c) zeigt den Fehler der Orientierung, nach einer Mittelung von 100 Schätzungen. Die Unterabbildung\,(d) zeigt das Verhältnis zwischen der Standardabweichung des MV und der Standardabweichung der Orientierung.}}{63}{figure.caption.106}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Einfluss der Fehlerfortpflanzung}{63}{paragraph*.108}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces Der obere Teil der Grafik zeigt, wie die kinematische Kette in der Simulation ausgerichtet ist. Der untere Teil zeigt, wie in der Auswertung das erste kinematische Element angenommen wird. Dieses wird zufällig in einem definiertem Winkelbereich variiert und somit die Position des zweiten Gelenks jeweils leicht falsch bestimmt. Die Orientierung des zweiten Elements wird mit dem beschriebenen Algorithmus bestimmt.}}{64}{figure.caption.109}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Einfache Bewegung}{64}{paragraph*.112}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Diskussion}{64}{subsubsection*.115}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Robustheit gegenüber Rauschen}{64}{paragraph*.117}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces Auf der linken Seite ist die Standardabweichung der Orientierung in Abhängigkeit des falsch angenommenen Winkels und der Länge des mittleren Elements. In der rechten Abbildung sind die Fehler des über 100 Schätzungen gemittelten Werts dargestellt.}}{65}{figure.caption.110}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces Die obere Abbhildung zeigt den zeitlichen Verlauf der einzelnen Komponenten der Orientierung. Im unteren Teil ist diesselbe Abbildung mit Fokus auf die $y$-Komponente.}}{65}{figure.caption.113}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.6}{\ignorespaces (a) zeigt die $\vec {e}_{\textrm {\footnotesize \add@extra@listi {ftns}{zc}}}$ für eine Rahmenlänge 512. (b) zeigt dasselbe für eine Rahmenlänge von 4096.}}{66}{figure.caption.118}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Fehlerfortpflanzung}{66}{paragraph*.120}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Einfache Bewegung}{67}{paragraph*.122}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.7}{\ignorespaces $\vec {e}_{\textrm {\footnotesize \add@extra@listi {ftns}{zc}}}$ aus einem der simulierten Rahmen: Für einen unbewegten Sensor ohne Rauschen liegen die Vektoren immer in einer Ebene, hier ist gut zu erkennen, dass dies für einen bewegten Sensor nicht gilt.}}{67}{figure.caption.123}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.2}Experimentelle Evaluierung}{67}{subsection.5.2.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.8}{\ignorespaces Demonstrator: Die Abbildung zeigt den Demonstrator, der für die Evaluierung verwendet wird. Die 3D-Spule und die kinematischen Elemente sind mit optischen Markern ausgerüstet. }}{68}{figure.caption.124}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Räumliche Synchronisierung und Schätzung der räumlichen Größen}{68}{subsubsection*.127}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.9}{\ignorespaces Evaluierungsaufbau: Das Foto zeigt den Demonstrator in der Mitte (rot) und im Außenbereich die Kameras (gelb).}}{69}{figure.caption.125}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.10}{\ignorespaces Definition der Koordinatensysteme: Der rote Pfeil ist jeweils die $x$-Achse, grün die $y$-Achse und blau die $z$-Achse. (a) zeigt die Definition des magnetischen Koordiantensystems, (b) zeigt die Definition des optischen Koordinatensystem.}}{69}{figure.caption.128}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.11}{\ignorespaces Kalibrierung der kinematischen Kette: Die Abbildung zeigt eine kinematische Kette bestehend aus drei Elementen. Die roten Pfeile zeigen alle Größen die für den Algorithmus vor der Laufzeit bestimmt werden müssen.}}{70}{figure.caption.131}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Kalibrierung}{70}{subsubsection*.130}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Ergebnisse}{71}{subsubsection*.133}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {5.1}{\ignorespaces Ergebnisse der statischen Messung des ersten kinematischen Elements.}}{71}{table.caption.134}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {5.2}{\ignorespaces Ergebnisse der statischen Messung des zweiten kinematischen Elements.}}{72}{table.caption.135}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.12}{\ignorespaces Die Abbildung zeigt die beiden Gelenkswinkel für das erste(a) und zweite Gelenk(b). Dabei sind die Schätzungen der magnetischen Lokalisierung ohne Nachverarbeitung(gestrichelt), sowie die optischen Schätzungen über der Zeit aufgetragen. }}{72}{figure.caption.136}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Diskussion}{72}{subsubsection*.140}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.13}{\ignorespaces Ergebnisse des ersten Elements: (a) zeigt die Winkelschätzungen im Vergleich. Die optischen sind in gestrichelten Linien und die magnetischen mit durchgezogenen Linien dargestellt. (b) zeigt den Winkelfehler zwischen den beiden Schätzungen.}}{73}{figure.caption.137}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.14}{\ignorespaces Ergebnisse für das zweite Element: Die Darstellung ist wie in Abbildung\,\ref {fig:ResultsFirstElement}.}}{74}{figure.caption.138}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.15}{\ignorespaces Frequenzanalyse der Winkelschätzung und der magnetischen Eingangssignale, es ist jeweils das Signal des ersten Elements dargestellt.}}{75}{figure.caption.141}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}Absolute Lokalisierung}{75}{section.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.1}Fehlermaß}{75}{subsection.5.3.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.16}{\ignorespaces Aufbauten für die absolut Lokalisierung: (a) zeigt das Simulationssetup, (b) zeigt den realen Aufbau.}}{76}{figure.caption.142}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.2}Simulative Evaluierung}{77}{subsection.5.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Ergebnisse}{77}{subsubsection*.144}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Robustheit der Positionsschätzung gegen Rauschen}{77}{paragraph*.146}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Einfluss eines Positionsfehler auf die Orientierungsschätzung}{77}{paragraph*.149}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.17}{\ignorespaces Ergebnisse der Simualtion zur Überprüfung der Robustheit der Positionsschätzung unter Einfluss von weißem Rauschen}}{78}{figure.caption.147}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.18}{\ignorespaces Mittelwert des Orientierungsfehler in Abhängigkeit vom Positionsfehler}}{78}{figure.caption.150}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Einfache Bewegung}{78}{paragraph*.152}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.19}{\ignorespaces Ergebnisse der Simulation einer einfachen Bewegung}}{79}{figure.caption.153}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Diskussion}{79}{subsubsection*.155}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Robustheit der Position gegen Rauschen}{79}{paragraph*.157}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Einfluss eines Positionsfehlers auf die Orientierungsschätzung}{79}{paragraph*.159}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Einfache Bewegung}{79}{paragraph*.161}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.3}Experimentelle Evaluierung}{80}{subsection.5.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Räumliche Synchronisierung}{80}{subsubsection*.163}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Ergebnisse}{80}{subsubsection*.166}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.20}{\ignorespaces Aufbau für die Evaluierung der Lokalisierung: An dem Würfel sind PVC-Streben mit jeweils zwei Sensoren und zwei optischen Markern für $x$(rot),$y$(grün) und $z$(blau). Die Sensoren sind mit den helleren Rechtecken gekennzeichnet.}}{81}{figure.caption.164}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {5.3}{\ignorespaces Ergebnisse der statischen Positionsschätzung, alle Größen in mm, der mittlere Fehler beträgt 15.2\,mm}}{81}{table.caption.167}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {5.4}{\ignorespaces Ergebnisse der statischen Orientierungsschätzung, der mittlere Fehler beträgt $16.1^\circ $ }}{82}{table.caption.168}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Diskussion}{82}{subsubsection*.173}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.21}{\ignorespaces Ergebnis der dynamischen Evaluierung der Positionsschätzung: Es sind die drei Positionskomponenten dargestellt. Die magnetischen Schätzungen sind in durchgezogenen Linien und die optischen in gestrichelten Linien dargestellt.}}{83}{figure.caption.169}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.22}{\ignorespaces Ergebnis der dynamischen Evaluation der Orientierungsschätzung: Die optischen Schätzungen sind }}{84}{figure.caption.170}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.23}{\ignorespaces Fehler der dynamischen Messsung über die Messsequenz}}{85}{figure.caption.171}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Zusammenfassung und Ausblick}{87}{chapter.6}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {6.1}Neuheiten}{83}{section.6.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.1}Veralgemeinerung der Merkmalsextraktion}{83}{subsection.6.1.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {6.1}{\ignorespaces Orthogonalität der einzelnen Vektoren: Rot ist der Stromvektor $i$, blau $\mbox {\boldmath ${i}$}_{\textrm {\footnotesize \add@extra@listi {ftns}{d$\theta $}}}$, grün $\mbox {\boldmath ${i}$}_{\textrm {\footnotesize \add@extra@listi {ftns}{d$\phi $}}}$. Der gelbe Kreis zeigt den Kreis mit Radius $i_0$.}}{85}{figure.caption.175}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.2}Applikationsangepasste Lokalisierung}{86}{subsection.6.1.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.3}Verbesserungspotential}{86}{subsection.6.1.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6.2}Ausblick}{86}{section.6.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6.3}Einordnung der Arbeit}{86}{section.6.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.1}Relative Lokalisierung}{86}{subsection.6.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.2}Absolute Lokalisierung}{86}{subsection.6.3.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6.4}Zusammenfassung}{86}{section.6.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.1}Prototyp}{86}{subsection.6.4.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\nonumberline Literaturverzeichnis}{87}{chapter*.176}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.1}Neuheiten}{87}{section.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.1}Veralgemeinerung der Merkmalsextraktion}{87}{subsection.6.1.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6.1}{\ignorespaces Orthogonalität der einzelnen Vektoren: Rot ist der Stromvektor $i$, blau $\mbox {\boldmath ${i}$}_{\textrm {\footnotesize \add@extra@listi {ftns}{d$\theta $}}}$, grün $\mbox {\boldmath ${i}$}_{\textrm {\footnotesize \add@extra@listi {ftns}{d$\phi $}}}$. Der gelbe Kreis zeigt den Kreis mit Radius $i_0$.}}{89}{figure.caption.174}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.2}Applikationsangepasste Lokalisierung}{90}{subsection.6.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.3}Verbesserungspotential}{90}{subsection.6.1.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.2}Ausblick}{90}{section.6.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.3}Einordnung der Arbeit}{90}{section.6.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.1}Relative Lokalisierung}{90}{subsection.6.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.2}Absolute Lokalisierung}{90}{subsection.6.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.4}Zusammenfassung}{90}{section.6.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.1}Prototyp}{90}{subsection.6.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\nonumberline Literaturverzeichnis}{91}{chapter*.175}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\nonumberline Weitere Literatur}{87}{section*.178}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\nonumberline Weitere Literatur}{91}{section*.177}\protected@file@percent }
 \@writefile{toc}{\def \@chapapp {\appendixname }}
 \@writefile{lof}{\def \@chapapp {\appendixname }}
 \@writefile{lot}{\def \@chapapp {\appendixname }}

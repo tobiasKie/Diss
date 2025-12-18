@@ -1,0 +1,2451 @@
+% This file was created by matlab2tikz.
+%
+%The latest updates can be retrieved from
+%  http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz
+%where you can also make suggestions and rate matlab2tikz.
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=3.512in,
+height=3.566in,
+at={(1.263in,0.481in)},
+scale only axis,
+plot box ratio=1 1 1,
+xmin=-1.5,
+xmax=1.5,
+tick align=outside,
+xlabel style={font=\color{white!15!black}},
+xlabel={$x$ [cm]},
+ymin=-1.5,
+ymax=1.5,
+ylabel style={font=\color{white!15!black}},
+ylabel={$y$ [cm]},
+zmin=-1.5,
+zmax=1.5,
+zlabel style={font=\color{white!15!black}},
+zlabel={$z$ [cm]},
+view={-34.5141970621322}{19.8},
+axis background/.style={fill=white},
+xmajorgrids,
+ymajorgrids,
+zmajorgrids
+]
+\addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.73125	1.5	1.5\\
+-0.73125	-1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	-0.73125	1.5\\
+-1.5	-0.73125	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	1.5	-0.73125\\
+1.5	-1.5	-0.73125\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.73125	-1.5	1.5\\
+-0.73125	-1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	-0.73125	1.5\\
+-1.5	-0.73125	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	-1.5	-0.73125\\
+-1.5	-1.5	-0.73125\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.73125	-1.5	-1.5\\
+-0.73125	1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	-0.73125	-1.5\\
+1.5	-0.73125	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	-1.5	-0.73125\\
+-1.5	1.5	-0.73125\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.73125	1.5	-1.5\\
+-0.73125	1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	-0.73125	-1.5\\
+1.5	-0.73125	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	1.5	-0.73125\\
+1.5	1.5	-0.73125\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.69375	1.5	1.5\\
+-0.69375	-1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	-0.69375	1.5\\
+-1.5	-0.69375	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	1.5	-0.69375\\
+1.5	-1.5	-0.69375\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.69375	-1.5	1.5\\
+-0.69375	-1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	-0.69375	1.5\\
+-1.5	-0.69375	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	-1.5	-0.69375\\
+-1.5	-1.5	-0.69375\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.69375	-1.5	-1.5\\
+-0.69375	1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	-0.69375	-1.5\\
+1.5	-0.69375	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	-1.5	-0.69375\\
+-1.5	1.5	-0.69375\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.69375	1.5	-1.5\\
+-0.69375	1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	-0.69375	-1.5\\
+1.5	-0.69375	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	1.5	-0.69375\\
+1.5	1.5	-0.69375\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.65625	1.5	1.5\\
+-0.65625	-1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	-0.65625	1.5\\
+-1.5	-0.65625	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	1.5	-0.65625\\
+1.5	-1.5	-0.65625\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.65625	-1.5	1.5\\
+-0.65625	-1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	-0.65625	1.5\\
+-1.5	-0.65625	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	-1.5	-0.65625\\
+-1.5	-1.5	-0.65625\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.65625	-1.5	-1.5\\
+-0.65625	1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	-0.65625	-1.5\\
+1.5	-0.65625	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	-1.5	-0.65625\\
+-1.5	1.5	-0.65625\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.65625	1.5	-1.5\\
+-0.65625	1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	-0.65625	-1.5\\
+1.5	-0.65625	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	1.5	-0.65625\\
+1.5	1.5	-0.65625\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.61875	1.5	1.5\\
+-0.61875	-1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	-0.61875	1.5\\
+-1.5	-0.61875	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	1.5	-0.61875\\
+1.5	-1.5	-0.61875\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.61875	-1.5	1.5\\
+-0.61875	-1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	-0.61875	1.5\\
+-1.5	-0.61875	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	-1.5	-0.61875\\
+-1.5	-1.5	-0.61875\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.61875	-1.5	-1.5\\
+-0.61875	1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	-0.61875	-1.5\\
+1.5	-0.61875	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	-1.5	-0.61875\\
+-1.5	1.5	-0.61875\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.61875	1.5	-1.5\\
+-0.61875	1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	-0.61875	-1.5\\
+1.5	-0.61875	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	1.5	-0.61875\\
+1.5	1.5	-0.61875\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.58125	1.5	1.5\\
+-0.58125	-1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	-0.58125	1.5\\
+-1.5	-0.58125	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	1.5	-0.58125\\
+1.5	-1.5	-0.58125\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.58125	-1.5	1.5\\
+-0.58125	-1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	-0.58125	1.5\\
+-1.5	-0.58125	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	-1.5	-0.58125\\
+-1.5	-1.5	-0.58125\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.58125	-1.5	-1.5\\
+-0.58125	1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	-0.58125	-1.5\\
+1.5	-0.58125	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	-1.5	-0.58125\\
+-1.5	1.5	-0.58125\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.58125	1.5	-1.5\\
+-0.58125	1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	-0.58125	-1.5\\
+1.5	-0.58125	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	1.5	-0.58125\\
+1.5	1.5	-0.58125\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.54375	1.5	1.5\\
+-0.54375	-1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	-0.54375	1.5\\
+-1.5	-0.54375	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	1.5	-0.54375\\
+1.5	-1.5	-0.54375\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.54375	-1.5	1.5\\
+-0.54375	-1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	-0.54375	1.5\\
+-1.5	-0.54375	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	-1.5	-0.54375\\
+-1.5	-1.5	-0.54375\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.54375	-1.5	-1.5\\
+-0.54375	1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	-0.54375	-1.5\\
+1.5	-0.54375	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	-1.5	-0.54375\\
+-1.5	1.5	-0.54375\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.54375	1.5	-1.5\\
+-0.54375	1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	-0.54375	-1.5\\
+1.5	-0.54375	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	1.5	-0.54375\\
+1.5	1.5	-0.54375\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.50625	1.5	1.5\\
+-0.50625	-1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	-0.50625	1.5\\
+-1.5	-0.50625	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	1.5	-0.50625\\
+1.5	-1.5	-0.50625\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.50625	-1.5	1.5\\
+-0.50625	-1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	-0.50625	1.5\\
+-1.5	-0.50625	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	-1.5	-0.50625\\
+-1.5	-1.5	-0.50625\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.50625	-1.5	-1.5\\
+-0.50625	1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	-0.50625	-1.5\\
+1.5	-0.50625	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	-1.5	-0.50625\\
+-1.5	1.5	-0.50625\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.50625	1.5	-1.5\\
+-0.50625	1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	-0.50625	-1.5\\
+1.5	-0.50625	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	1.5	-0.50625\\
+1.5	1.5	-0.50625\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.46875	1.5	1.5\\
+-0.46875	-1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	-0.46875	1.5\\
+-1.5	-0.46875	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	1.5	-0.46875\\
+1.5	-1.5	-0.46875\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.46875	-1.5	1.5\\
+-0.46875	-1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	-0.46875	1.5\\
+-1.5	-0.46875	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	-1.5	-0.46875\\
+-1.5	-1.5	-0.46875\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.46875	-1.5	-1.5\\
+-0.46875	1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	-0.46875	-1.5\\
+1.5	-0.46875	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	-1.5	-0.46875\\
+-1.5	1.5	-0.46875\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.46875	1.5	-1.5\\
+-0.46875	1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	-0.46875	-1.5\\
+1.5	-0.46875	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	1.5	-0.46875\\
+1.5	1.5	-0.46875\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.43125	1.5	1.5\\
+-0.43125	-1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	-0.43125	1.5\\
+-1.5	-0.43125	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	1.5	-0.43125\\
+1.5	-1.5	-0.43125\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.43125	-1.5	1.5\\
+-0.43125	-1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	-0.43125	1.5\\
+-1.5	-0.43125	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	-1.5	-0.43125\\
+-1.5	-1.5	-0.43125\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.43125	-1.5	-1.5\\
+-0.43125	1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	-0.43125	-1.5\\
+1.5	-0.43125	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	-1.5	-0.43125\\
+-1.5	1.5	-0.43125\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.43125	1.5	-1.5\\
+-0.43125	1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	-0.43125	-1.5\\
+1.5	-0.43125	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	1.5	-0.43125\\
+1.5	1.5	-0.43125\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.39375	1.5	1.5\\
+-0.39375	-1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	-0.39375	1.5\\
+-1.5	-0.39375	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	1.5	-0.39375\\
+1.5	-1.5	-0.39375\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.39375	-1.5	1.5\\
+-0.39375	-1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	-0.39375	1.5\\
+-1.5	-0.39375	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	-1.5	-0.39375\\
+-1.5	-1.5	-0.39375\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.39375	-1.5	-1.5\\
+-0.39375	1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	-0.39375	-1.5\\
+1.5	-0.39375	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	-1.5	-0.39375\\
+-1.5	1.5	-0.39375\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.39375	1.5	-1.5\\
+-0.39375	1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	-0.39375	-1.5\\
+1.5	-0.39375	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	1.5	-0.39375\\
+1.5	1.5	-0.39375\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.35625	1.5	1.5\\
+-0.35625	-1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	-0.35625	1.5\\
+-1.5	-0.35625	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	1.5	-0.35625\\
+1.5	-1.5	-0.35625\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.35625	-1.5	1.5\\
+-0.35625	-1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	-0.35625	1.5\\
+-1.5	-0.35625	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	-1.5	-0.35625\\
+-1.5	-1.5	-0.35625\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.35625	-1.5	-1.5\\
+-0.35625	1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	-0.35625	-1.5\\
+1.5	-0.35625	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	-1.5	-0.35625\\
+-1.5	1.5	-0.35625\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.35625	1.5	-1.5\\
+-0.35625	1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	-0.35625	-1.5\\
+1.5	-0.35625	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	1.5	-0.35625\\
+1.5	1.5	-0.35625\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.31875	1.5	1.5\\
+-0.31875	-1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	-0.31875	1.5\\
+-1.5	-0.31875	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	1.5	-0.31875\\
+1.5	-1.5	-0.31875\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.31875	-1.5	1.5\\
+-0.31875	-1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	-0.31875	1.5\\
+-1.5	-0.31875	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	-1.5	-0.31875\\
+-1.5	-1.5	-0.31875\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.31875	-1.5	-1.5\\
+-0.31875	1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	-0.31875	-1.5\\
+1.5	-0.31875	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	-1.5	-0.31875\\
+-1.5	1.5	-0.31875\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.31875	1.5	-1.5\\
+-0.31875	1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	-0.31875	-1.5\\
+1.5	-0.31875	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	1.5	-0.31875\\
+1.5	1.5	-0.31875\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.28125	1.5	1.5\\
+-0.28125	-1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	-0.28125	1.5\\
+-1.5	-0.28125	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	1.5	-0.28125\\
+1.5	-1.5	-0.28125\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.28125	-1.5	1.5\\
+-0.28125	-1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	-0.28125	1.5\\
+-1.5	-0.28125	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	-1.5	-0.28125\\
+-1.5	-1.5	-0.28125\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.28125	-1.5	-1.5\\
+-0.28125	1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	-0.28125	-1.5\\
+1.5	-0.28125	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	-1.5	-0.28125\\
+-1.5	1.5	-0.28125\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.28125	1.5	-1.5\\
+-0.28125	1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	-0.28125	-1.5\\
+1.5	-0.28125	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	1.5	-0.28125\\
+1.5	1.5	-0.28125\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.24375	1.5	1.5\\
+-0.24375	-1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	-0.24375	1.5\\
+-1.5	-0.24375	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	1.5	-0.24375\\
+1.5	-1.5	-0.24375\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.24375	-1.5	1.5\\
+-0.24375	-1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	-0.24375	1.5\\
+-1.5	-0.24375	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	-1.5	-0.24375\\
+-1.5	-1.5	-0.24375\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.24375	-1.5	-1.5\\
+-0.24375	1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	-0.24375	-1.5\\
+1.5	-0.24375	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	-1.5	-0.24375\\
+-1.5	1.5	-0.24375\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.24375	1.5	-1.5\\
+-0.24375	1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	-0.24375	-1.5\\
+1.5	-0.24375	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	1.5	-0.24375\\
+1.5	1.5	-0.24375\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.20625	1.5	1.5\\
+-0.20625	-1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	-0.20625	1.5\\
+-1.5	-0.20625	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	1.5	-0.20625\\
+1.5	-1.5	-0.20625\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.20625	-1.5	1.5\\
+-0.20625	-1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	-0.20625	1.5\\
+-1.5	-0.20625	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	-1.5	-0.20625\\
+-1.5	-1.5	-0.20625\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.20625	-1.5	-1.5\\
+-0.20625	1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	-0.20625	-1.5\\
+1.5	-0.20625	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	-1.5	-0.20625\\
+-1.5	1.5	-0.20625\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.20625	1.5	-1.5\\
+-0.20625	1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	-0.20625	-1.5\\
+1.5	-0.20625	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	1.5	-0.20625\\
+1.5	1.5	-0.20625\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.16875	1.5	1.5\\
+-0.16875	-1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	-0.16875	1.5\\
+-1.5	-0.16875	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	1.5	-0.16875\\
+1.5	-1.5	-0.16875\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.16875	-1.5	1.5\\
+-0.16875	-1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	-0.16875	1.5\\
+-1.5	-0.16875	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	-1.5	-0.16875\\
+-1.5	-1.5	-0.16875\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.16875	-1.5	-1.5\\
+-0.16875	1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	-0.16875	-1.5\\
+1.5	-0.16875	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	-1.5	-0.16875\\
+-1.5	1.5	-0.16875\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.16875	1.5	-1.5\\
+-0.16875	1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	-0.16875	-1.5\\
+1.5	-0.16875	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	1.5	-0.16875\\
+1.5	1.5	-0.16875\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.13125	1.5	1.5\\
+-0.13125	-1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	-0.13125	1.5\\
+-1.5	-0.13125	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	1.5	-0.13125\\
+1.5	-1.5	-0.13125\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.13125	-1.5	1.5\\
+-0.13125	-1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	-0.13125	1.5\\
+-1.5	-0.13125	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	-1.5	-0.13125\\
+-1.5	-1.5	-0.13125\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.13125	-1.5	-1.5\\
+-0.13125	1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	-0.13125	-1.5\\
+1.5	-0.13125	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	-1.5	-0.13125\\
+-1.5	1.5	-0.13125\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.13125	1.5	-1.5\\
+-0.13125	1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	-0.13125	-1.5\\
+1.5	-0.13125	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	1.5	-0.13125\\
+1.5	1.5	-0.13125\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.09375	1.5	1.5\\
+-0.09375	-1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	-0.09375	1.5\\
+-1.5	-0.09375	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	1.5	-0.09375\\
+1.5	-1.5	-0.09375\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.09375	-1.5	1.5\\
+-0.09375	-1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	-0.09375	1.5\\
+-1.5	-0.09375	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	-1.5	-0.09375\\
+-1.5	-1.5	-0.09375\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.09375	-1.5	-1.5\\
+-0.09375	1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	-0.09375	-1.5\\
+1.5	-0.09375	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	-1.5	-0.09375\\
+-1.5	1.5	-0.09375\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.09375	1.5	-1.5\\
+-0.09375	1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	-0.09375	-1.5\\
+1.5	-0.09375	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	1.5	-0.09375\\
+1.5	1.5	-0.09375\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.05625	1.5	1.5\\
+-0.05625	-1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	-0.05625	1.5\\
+-1.5	-0.05625	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	1.5	-0.05625\\
+1.5	-1.5	-0.05625\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.05625	-1.5	1.5\\
+-0.05625	-1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	-0.05625	1.5\\
+-1.5	-0.05625	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	-1.5	-0.05625\\
+-1.5	-1.5	-0.05625\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.05625	-1.5	-1.5\\
+-0.05625	1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	-0.05625	-1.5\\
+1.5	-0.05625	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	-1.5	-0.05625\\
+-1.5	1.5	-0.05625\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.05625	1.5	-1.5\\
+-0.05625	1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	-0.05625	-1.5\\
+1.5	-0.05625	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	1.5	-0.05625\\
+1.5	1.5	-0.05625\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.0187499999999999	1.5	1.5\\
+-0.0187499999999999	-1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	-0.0187499999999999	1.5\\
+-1.5	-0.0187499999999999	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	1.5	-0.0187499999999999\\
+1.5	-1.5	-0.0187499999999999\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.0187499999999999	-1.5	1.5\\
+-0.0187499999999999	-1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	-0.0187499999999999	1.5\\
+-1.5	-0.0187499999999999	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	-1.5	-0.0187499999999999\\
+-1.5	-1.5	-0.0187499999999999\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.0187499999999999	-1.5	-1.5\\
+-0.0187499999999999	1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	-0.0187499999999999	-1.5\\
+1.5	-0.0187499999999999	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	-1.5	-0.0187499999999999\\
+-1.5	1.5	-0.0187499999999999\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+-0.0187499999999999	1.5	-1.5\\
+-0.0187499999999999	1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	-0.0187499999999999	-1.5\\
+1.5	-0.0187499999999999	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	1.5	-0.0187499999999999\\
+1.5	1.5	-0.0187499999999999\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.01875	1.5	1.5\\
+0.01875	-1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	0.01875	1.5\\
+-1.5	0.01875	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	1.5	0.01875\\
+1.5	-1.5	0.01875\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.01875	-1.5	1.5\\
+0.01875	-1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	0.01875	1.5\\
+-1.5	0.01875	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	-1.5	0.01875\\
+-1.5	-1.5	0.01875\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.01875	-1.5	-1.5\\
+0.01875	1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	0.01875	-1.5\\
+1.5	0.01875	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	-1.5	0.01875\\
+-1.5	1.5	0.01875\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.01875	1.5	-1.5\\
+0.01875	1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	0.01875	-1.5\\
+1.5	0.01875	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	1.5	0.01875\\
+1.5	1.5	0.01875\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.05625	1.5	1.5\\
+0.05625	-1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	0.05625	1.5\\
+-1.5	0.05625	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	1.5	0.05625\\
+1.5	-1.5	0.05625\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.05625	-1.5	1.5\\
+0.05625	-1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	0.05625	1.5\\
+-1.5	0.05625	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	-1.5	0.05625\\
+-1.5	-1.5	0.05625\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.05625	-1.5	-1.5\\
+0.05625	1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	0.05625	-1.5\\
+1.5	0.05625	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	-1.5	0.05625\\
+-1.5	1.5	0.05625\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.05625	1.5	-1.5\\
+0.05625	1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	0.05625	-1.5\\
+1.5	0.05625	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	1.5	0.05625\\
+1.5	1.5	0.05625\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.09375	1.5	1.5\\
+0.09375	-1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	0.09375	1.5\\
+-1.5	0.09375	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	1.5	0.09375\\
+1.5	-1.5	0.09375\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.09375	-1.5	1.5\\
+0.09375	-1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	0.09375	1.5\\
+-1.5	0.09375	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	-1.5	0.09375\\
+-1.5	-1.5	0.09375\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.09375	-1.5	-1.5\\
+0.09375	1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	0.09375	-1.5\\
+1.5	0.09375	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	-1.5	0.09375\\
+-1.5	1.5	0.09375\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.09375	1.5	-1.5\\
+0.09375	1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	0.09375	-1.5\\
+1.5	0.09375	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	1.5	0.09375\\
+1.5	1.5	0.09375\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.13125	1.5	1.5\\
+0.13125	-1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	0.13125	1.5\\
+-1.5	0.13125	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	1.5	0.13125\\
+1.5	-1.5	0.13125\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.13125	-1.5	1.5\\
+0.13125	-1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	0.13125	1.5\\
+-1.5	0.13125	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	-1.5	0.13125\\
+-1.5	-1.5	0.13125\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.13125	-1.5	-1.5\\
+0.13125	1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	0.13125	-1.5\\
+1.5	0.13125	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	-1.5	0.13125\\
+-1.5	1.5	0.13125\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.13125	1.5	-1.5\\
+0.13125	1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	0.13125	-1.5\\
+1.5	0.13125	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	1.5	0.13125\\
+1.5	1.5	0.13125\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.16875	1.5	1.5\\
+0.16875	-1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	0.16875	1.5\\
+-1.5	0.16875	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	1.5	0.16875\\
+1.5	-1.5	0.16875\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.16875	-1.5	1.5\\
+0.16875	-1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	0.16875	1.5\\
+-1.5	0.16875	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	-1.5	0.16875\\
+-1.5	-1.5	0.16875\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.16875	-1.5	-1.5\\
+0.16875	1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	0.16875	-1.5\\
+1.5	0.16875	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	-1.5	0.16875\\
+-1.5	1.5	0.16875\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.16875	1.5	-1.5\\
+0.16875	1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	0.16875	-1.5\\
+1.5	0.16875	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	1.5	0.16875\\
+1.5	1.5	0.16875\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.20625	1.5	1.5\\
+0.20625	-1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	0.20625	1.5\\
+-1.5	0.20625	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	1.5	0.20625\\
+1.5	-1.5	0.20625\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.20625	-1.5	1.5\\
+0.20625	-1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	0.20625	1.5\\
+-1.5	0.20625	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	-1.5	0.20625\\
+-1.5	-1.5	0.20625\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.20625	-1.5	-1.5\\
+0.20625	1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	0.20625	-1.5\\
+1.5	0.20625	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	-1.5	0.20625\\
+-1.5	1.5	0.20625\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.20625	1.5	-1.5\\
+0.20625	1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	0.20625	-1.5\\
+1.5	0.20625	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	1.5	0.20625\\
+1.5	1.5	0.20625\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.24375	1.5	1.5\\
+0.24375	-1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	0.24375	1.5\\
+-1.5	0.24375	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	1.5	0.24375\\
+1.5	-1.5	0.24375\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.24375	-1.5	1.5\\
+0.24375	-1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	0.24375	1.5\\
+-1.5	0.24375	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	-1.5	0.24375\\
+-1.5	-1.5	0.24375\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.24375	-1.5	-1.5\\
+0.24375	1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	0.24375	-1.5\\
+1.5	0.24375	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	-1.5	0.24375\\
+-1.5	1.5	0.24375\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.24375	1.5	-1.5\\
+0.24375	1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	0.24375	-1.5\\
+1.5	0.24375	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	1.5	0.24375\\
+1.5	1.5	0.24375\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.28125	1.5	1.5\\
+0.28125	-1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	0.28125	1.5\\
+-1.5	0.28125	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	1.5	0.28125\\
+1.5	-1.5	0.28125\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.28125	-1.5	1.5\\
+0.28125	-1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	0.28125	1.5\\
+-1.5	0.28125	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	-1.5	0.28125\\
+-1.5	-1.5	0.28125\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.28125	-1.5	-1.5\\
+0.28125	1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	0.28125	-1.5\\
+1.5	0.28125	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	-1.5	0.28125\\
+-1.5	1.5	0.28125\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.28125	1.5	-1.5\\
+0.28125	1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	0.28125	-1.5\\
+1.5	0.28125	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	1.5	0.28125\\
+1.5	1.5	0.28125\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.31875	1.5	1.5\\
+0.31875	-1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	0.31875	1.5\\
+-1.5	0.31875	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	1.5	0.31875\\
+1.5	-1.5	0.31875\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.31875	-1.5	1.5\\
+0.31875	-1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	0.31875	1.5\\
+-1.5	0.31875	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	-1.5	0.31875\\
+-1.5	-1.5	0.31875\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.31875	-1.5	-1.5\\
+0.31875	1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	0.31875	-1.5\\
+1.5	0.31875	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	-1.5	0.31875\\
+-1.5	1.5	0.31875\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.31875	1.5	-1.5\\
+0.31875	1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	0.31875	-1.5\\
+1.5	0.31875	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	1.5	0.31875\\
+1.5	1.5	0.31875\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.35625	1.5	1.5\\
+0.35625	-1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	0.35625	1.5\\
+-1.5	0.35625	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	1.5	0.35625\\
+1.5	-1.5	0.35625\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.35625	-1.5	1.5\\
+0.35625	-1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	0.35625	1.5\\
+-1.5	0.35625	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	-1.5	0.35625\\
+-1.5	-1.5	0.35625\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.35625	-1.5	-1.5\\
+0.35625	1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	0.35625	-1.5\\
+1.5	0.35625	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	-1.5	0.35625\\
+-1.5	1.5	0.35625\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.35625	1.5	-1.5\\
+0.35625	1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	0.35625	-1.5\\
+1.5	0.35625	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	1.5	0.35625\\
+1.5	1.5	0.35625\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.39375	1.5	1.5\\
+0.39375	-1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	0.39375	1.5\\
+-1.5	0.39375	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	1.5	0.39375\\
+1.5	-1.5	0.39375\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.39375	-1.5	1.5\\
+0.39375	-1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	0.39375	1.5\\
+-1.5	0.39375	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	-1.5	0.39375\\
+-1.5	-1.5	0.39375\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.39375	-1.5	-1.5\\
+0.39375	1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	0.39375	-1.5\\
+1.5	0.39375	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	-1.5	0.39375\\
+-1.5	1.5	0.39375\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.39375	1.5	-1.5\\
+0.39375	1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	0.39375	-1.5\\
+1.5	0.39375	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	1.5	0.39375\\
+1.5	1.5	0.39375\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.43125	1.5	1.5\\
+0.43125	-1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	0.43125	1.5\\
+-1.5	0.43125	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	1.5	0.43125\\
+1.5	-1.5	0.43125\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.43125	-1.5	1.5\\
+0.43125	-1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	0.43125	1.5\\
+-1.5	0.43125	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	-1.5	0.43125\\
+-1.5	-1.5	0.43125\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.43125	-1.5	-1.5\\
+0.43125	1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	0.43125	-1.5\\
+1.5	0.43125	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	-1.5	0.43125\\
+-1.5	1.5	0.43125\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.43125	1.5	-1.5\\
+0.43125	1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	0.43125	-1.5\\
+1.5	0.43125	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	1.5	0.43125\\
+1.5	1.5	0.43125\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.46875	1.5	1.5\\
+0.46875	-1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	0.46875	1.5\\
+-1.5	0.46875	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	1.5	0.46875\\
+1.5	-1.5	0.46875\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.46875	-1.5	1.5\\
+0.46875	-1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	0.46875	1.5\\
+-1.5	0.46875	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	-1.5	0.46875\\
+-1.5	-1.5	0.46875\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.46875	-1.5	-1.5\\
+0.46875	1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	0.46875	-1.5\\
+1.5	0.46875	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	-1.5	0.46875\\
+-1.5	1.5	0.46875\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.46875	1.5	-1.5\\
+0.46875	1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	0.46875	-1.5\\
+1.5	0.46875	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	1.5	0.46875\\
+1.5	1.5	0.46875\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.50625	1.5	1.5\\
+0.50625	-1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	0.50625	1.5\\
+-1.5	0.50625	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	1.5	0.50625\\
+1.5	-1.5	0.50625\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.50625	-1.5	1.5\\
+0.50625	-1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	0.50625	1.5\\
+-1.5	0.50625	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	-1.5	0.50625\\
+-1.5	-1.5	0.50625\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.50625	-1.5	-1.5\\
+0.50625	1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	0.50625	-1.5\\
+1.5	0.50625	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	-1.5	0.50625\\
+-1.5	1.5	0.50625\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.50625	1.5	-1.5\\
+0.50625	1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	0.50625	-1.5\\
+1.5	0.50625	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	1.5	0.50625\\
+1.5	1.5	0.50625\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.54375	1.5	1.5\\
+0.54375	-1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	0.54375	1.5\\
+-1.5	0.54375	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	1.5	0.54375\\
+1.5	-1.5	0.54375\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.54375	-1.5	1.5\\
+0.54375	-1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	0.54375	1.5\\
+-1.5	0.54375	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	-1.5	0.54375\\
+-1.5	-1.5	0.54375\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.54375	-1.5	-1.5\\
+0.54375	1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	0.54375	-1.5\\
+1.5	0.54375	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	-1.5	0.54375\\
+-1.5	1.5	0.54375\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.54375	1.5	-1.5\\
+0.54375	1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	0.54375	-1.5\\
+1.5	0.54375	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	1.5	0.54375\\
+1.5	1.5	0.54375\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.58125	1.5	1.5\\
+0.58125	-1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	0.58125	1.5\\
+-1.5	0.58125	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	1.5	0.58125\\
+1.5	-1.5	0.58125\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.58125	-1.5	1.5\\
+0.58125	-1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	0.58125	1.5\\
+-1.5	0.58125	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	-1.5	0.58125\\
+-1.5	-1.5	0.58125\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.58125	-1.5	-1.5\\
+0.58125	1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	0.58125	-1.5\\
+1.5	0.58125	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	-1.5	0.58125\\
+-1.5	1.5	0.58125\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.58125	1.5	-1.5\\
+0.58125	1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	0.58125	-1.5\\
+1.5	0.58125	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	1.5	0.58125\\
+1.5	1.5	0.58125\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.61875	1.5	1.5\\
+0.61875	-1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	0.61875	1.5\\
+-1.5	0.61875	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	1.5	0.61875\\
+1.5	-1.5	0.61875\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.61875	-1.5	1.5\\
+0.61875	-1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	0.61875	1.5\\
+-1.5	0.61875	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	-1.5	0.61875\\
+-1.5	-1.5	0.61875\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.61875	-1.5	-1.5\\
+0.61875	1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	0.61875	-1.5\\
+1.5	0.61875	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	-1.5	0.61875\\
+-1.5	1.5	0.61875\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.61875	1.5	-1.5\\
+0.61875	1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	0.61875	-1.5\\
+1.5	0.61875	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	1.5	0.61875\\
+1.5	1.5	0.61875\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.65625	1.5	1.5\\
+0.65625	-1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	0.65625	1.5\\
+-1.5	0.65625	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	1.5	0.65625\\
+1.5	-1.5	0.65625\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.65625	-1.5	1.5\\
+0.65625	-1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	0.65625	1.5\\
+-1.5	0.65625	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	-1.5	0.65625\\
+-1.5	-1.5	0.65625\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.65625	-1.5	-1.5\\
+0.65625	1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	0.65625	-1.5\\
+1.5	0.65625	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	-1.5	0.65625\\
+-1.5	1.5	0.65625\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.65625	1.5	-1.5\\
+0.65625	1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	0.65625	-1.5\\
+1.5	0.65625	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	1.5	0.65625\\
+1.5	1.5	0.65625\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.69375	1.5	1.5\\
+0.69375	-1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	0.69375	1.5\\
+-1.5	0.69375	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	1.5	0.69375\\
+1.5	-1.5	0.69375\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.69375	-1.5	1.5\\
+0.69375	-1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	0.69375	1.5\\
+-1.5	0.69375	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	-1.5	0.69375\\
+-1.5	-1.5	0.69375\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.69375	-1.5	-1.5\\
+0.69375	1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	0.69375	-1.5\\
+1.5	0.69375	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	-1.5	0.69375\\
+-1.5	1.5	0.69375\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.69375	1.5	-1.5\\
+0.69375	1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	0.69375	-1.5\\
+1.5	0.69375	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	1.5	0.69375\\
+1.5	1.5	0.69375\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.73125	1.5	1.5\\
+0.73125	-1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	0.73125	1.5\\
+-1.5	0.73125	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	1.5	0.73125\\
+1.5	-1.5	0.73125\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.73125	-1.5	1.5\\
+0.73125	-1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	0.73125	1.5\\
+-1.5	0.73125	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+1.5	-1.5	0.73125\\
+-1.5	-1.5	0.73125\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.73125	-1.5	-1.5\\
+0.73125	1.5	-1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+-1.5	0.73125	-1.5\\
+1.5	0.73125	-1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	-1.5	0.73125\\
+-1.5	1.5	0.73125\\
+};
+ \addplot3 [color=red, mark=*, mark options={solid, red}]
+ table[row sep=crcr] {%
+0.73125	1.5	-1.5\\
+0.73125	1.5	1.5\\
+};
+ \addplot3 [color=green, mark=*, mark options={solid, green}]
+ table[row sep=crcr] {%
+1.5	0.73125	-1.5\\
+1.5	0.73125	1.5\\
+};
+ \addplot3 [color=blue, mark=*, mark options={solid, blue}]
+ table[row sep=crcr] {%
+-1.5	1.5	0.73125\\
+1.5	1.5	0.73125\\
+};
+ \end{axis}
+
+\begin{axis}[%
+width=5.833in,
+height=4.375in,
+at={(0in,0in)},
+scale only axis,
+xmin=0,
+xmax=1,
+ymin=0,
+ymax=1,
+axis line style={draw=none},
+ticks=none,
+axis x line*=bottom,
+axis y line*=left
+]
+\end{axis}
+\end{tikzpicture}%

@@ -10,16 +10,16 @@
 \begin{tikzpicture}
 
 \begin{axis}[%
-width=4.521in,
-height=3.566in,
-at={(0.758in,0.481in)},
+width=2.25in,
+height=2.0in,
+at={(0.0in,0.0in)},
 scale only axis,
-xmin=1.16666666666667,
-xmax=5.83333333333333,
+xmin=0.0,
+xmax=6,
 xlabel style={font=\color{white!15!black}},
 xlabel={Zeit in s},
-ymin=-183.333333333333,
-ymax=283.333333333333,
+ymin=-300,
+ymax=300,
 ylabel style={font=\color{white!15!black}},
 ylabel={x in mm},
 axis background/.style={fill=white},
@@ -3480,13 +3480,13 @@ legend style={legend cell align=right, align=left, draw=white!15!black}
 6.00118748561748	299.583333333333\\
 6.00327082617821	299.791666666667\\
 };
-\addlegendentry{Ground Truth}
+\addlegendentry{Wahrer Wert}
 
 \end{axis}
 
 \begin{axis}[%
-width=6.0in,
-height=6.0in,
+width=2.25in,
+height=2.0in,
 at={(0in,0in)},
 scale only axis,
 xmin=0,

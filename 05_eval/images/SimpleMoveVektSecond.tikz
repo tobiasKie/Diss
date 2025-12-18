@@ -9,18 +9,20 @@
 \begin{tikzpicture}
 
 \begin{axis}[%
-width=4.521in,
-height=3.566in,
-at={(0.758in,0.481in)},
+width=5.0in,
+height=1.0in,
+at={(0.0in,0.0in)},
 scale only axis,
-xmin=0.000768049155145931,
-xmax=1.00076804915515,
+scaled ticks = false,
+ticklabel style = {/pgf/number format/fixed},
+xmin=0.0,
+xmax=1.0,
 xlabel style={font=\color{white!15!black}},
 xlabel={Zeit in s},
 ymin=-0.025,
 ymax=0.025,
-ylabel style={font=\color{white!15!black}},
-ylabel={Vektorielle Komponente},
+%ylabel style={font=\color{white!15!black},xshift = +50pt},
+%ylabel={Vektorielle Komponente},
 axis background/.style={fill=white},
 axis x line*=bottom,
 axis y line*=left,
@@ -124,7 +126,7 @@ legend style={legend cell align=left, align=left, draw=white!15!black}
 0.981333333333333	0.014102337601783\\
 0.992	0.0117347243363128\\
 };
-\addlegendentry{$y$-Schätzung}
+\addlegendentry{$\hat{y}$}
 
 \addplot [color=mycolor1]
   table[row sep=crcr]{%
@@ -603,13 +605,13 @@ legend style={legend cell align=left, align=left, draw=white!15!black}
 0.988687430431587	0\\
 0.990770807518639	0\\
 };
-\addlegendentry{$y$-Ground Truth}
+\addlegendentry{$y$}
 
 \end{axis}
 
 \begin{axis}[%
-width=5.833in,
-height=4.375in,
+width=5.0in,
+height=1.0in,
 at={(0in,0in)},
 scale only axis,
 xmin=0,
