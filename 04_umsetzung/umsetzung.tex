@@ -59,13 +59,13 @@ Um das Tiefpassverhalten des Fluxgatemagnetometer auszugleichen muss zunächst e
 Die Entzerrung kann auf zwei Arten durchgeführt werden. Konventionell wird die Inverse des Filters auf das magnetische Signal angewendet, um die Wirkung des Sensors aufzuheben. Problem daran ist, dass dieser Inverse ein Hochpassfilter wäre und das zuvor gefilterte Ansteuersignal des Fluxgatemagnetometer wieder verstärken würde. Daher wird das nachgebildete Filter auf das Stromsignal angewendet, so wird das Stromsignal möglichst gleich verzerrt wie das magnetische Signal und man erhält $\bvec{u}_{i,\text{TP}}$.
 
 \begin{figure}
-    \scalefont{2}
+    \scalefont{1}
     \subfloat[Tiefpassfilter]{
-        \inputTikZ{0.4}{04_umsetzung/images/Tiefpass.tikz}
+        \inputTikZ{1}{04_umsetzung/images/Tiefpass.tikz}
         \label{fig:Tiefpass}
     }
     \subfloat[Bandpassfilter]{
-        \inputTikZ{0.4}{04_umsetzung/images/Bandpass.tikz}
+        \inputTikZ{1}{04_umsetzung/images/Bandpass.tikz}
         \label{fig:Bandpass}
     }
     \caption{Vorverarbeitungsfilter: Auf der linken Seite ist der Tiefpassfilter zur Entzerrung des Stromsignals, auf der rechten Seite ist der Bandpassfilter zur Filterung von Störungen dargestellt.}
@@ -117,8 +117,8 @@ Die Ansteuerung orientiert sich dabei an der Rücktransformation von Kugelkoordi
 
     \begin{figure}[htb]
         \centering
-        \scalefont{1.3}
-        \inputTikZ{0.6}{04_lokalisierung/images/DipoleTrack.tikz}
+        \scalefont{1}
+        \inputTikZ{1}{04_lokalisierung/images/DipoleTrack.tikz}
         \caption{ Bahn des magnetischen Dipols $\vec m (t)$ mit Startpunkt im Ursprung als Funktion der Zeit. Die Spitze von $\vec m$ bewegt sich auf der Oberfläche einer Kugel mit Radius $m_0$ für $N_\omega=\omega_\theta / \omega_\phi = 10$.}
         \label{fig:DipoleTrack}
     \end{figure}
@@ -163,13 +163,13 @@ In Formel \ref{eq:relMaxS} entspricht die rechte Seite, der rechten Seite von Fo
 
     \begin{figure}[h]
     \centering
-    \scalefont{1.5}
+    \scalefont{1}
     \subfloat[Räumliche Darstellung der Vektoren]{
-        \inputTikZ{0.35}{04_lokalisierung/images/Zerocrossingfinal.tikz}
+        \inputTikZ{1}{04_lokalisierung/images/Zerocrossingfinal.tikz}
         \label{fig:ZeroCrossings}
     }
     \subfloat[Simuliertes Signal]{
-        \inputTikZ{0.35}{04_lokalisierung/images//ZerocrossingSig.tikz}
+        \inputTikZ{1}{04_lokalisierung/images//ZerocrossingSig.tikz}
         \label{fig:ZeroCrossingSignal}
     }
     \caption{ Die linke Abbildung zeigt beispielhaft einen MV im Ursprung (gelb), die Position und Orientierung (orange) des Sensors und die entsprechende Ebene der Nulldurchgangsvektoren (lila). Auf der rechten Seite ist $b(n)$ als Funktion der Zeit dargestellt. Die Zeiten, in denen ein Nulldurchgang erreicht wird, sind mit einem lila Punkt markiert. Die Simulation arbeitet mit einer Quelle, die mit $N_\omega=\omega_\theta / \omega\phi = 10$ angesteuert wird. Die absoluten Werte/Längen sind nicht relevant, da zum einen das relative Verhältnis zwischen den Vektoren und zum anderen die Nulldurchgänge von Interesse sind.}
@@ -259,13 +259,13 @@ Damit lassen sich die einzelnen Übertragungsfaktoren und der Betragswert bestim
 Je nach verwendeter Rahmenlänge und Frequenzen der Spulensignale muss die Anzahl der Nulldurchgänge mindestens zwei sein. Wenn die Anzahl größer ist als zwei, werden die Vektormerkmale miteinander gemittelt. Bei $g$ gab es bei einer ersten Auswertung von Laborsignalen starke einzelne Ausreißer. Eine Mittelung würde zu großen Schwankungen im Ergebnis führen. Dies ist in Abbildung \ref{fig:Ausreisser} dargestellt. Die Ausreißer würden bei einer Umrechnung auf Distanzen zu einer Abweichung von 30\,cm führen, also statt einer realen Distanz von ungefähr 40\,cm zu einem Ausreißer bei 10\,cm.
 
 \begin{figure}
-    \scalefont{3}
+    \scalefont{1}
     \subfloat[Ohne Medianfilter]{
-        \inputTikZ{0.35}{04_umsetzung/images/Ausreisser_G.tikz}
+        \inputTikZ{1}{04_umsetzung/images/Ausreisser_G.tikz}
         \label{fig:AusreisserG}
     }
     \subfloat[Mit Medianfilter]{
-        \inputTikZ{0.35}{04_umsetzung/images/G_median.tikz}
+        \inputTikZ{1}{04_umsetzung/images/G_median.tikz}
         \label{fig:MedianG}
     }
 

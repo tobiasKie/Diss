@@ -7,9 +7,9 @@
 \begin{tikzpicture}
 
 \begin{axis}[%
-width=3.512in,
-height=3.566in,
-at={(1.263in,0.481in)},
+width=1.5in,
+height=1.5in,
+at={(0.0in,0.0in)},
 scale only axis,
 plot box ratio=1 1 1,
 xmin=-1.5,
@@ -2434,8 +2434,8 @@ zmajorgrids
  \end{axis}
 
 \begin{axis}[%
-width=5.833in,
-height=4.375in,
+width=1.5in,
+height=1.5in,
 at={(0in,0in)},
 scale only axis,
 xmin=0,

@@ -10,20 +10,20 @@
 \begin{tikzpicture}
 
 \begin{axis}[%
-width=5in,
-height=5in,
+width=2in,
+height=2in,
 at={(0.0in,0.0in)},
 scale only axis,
 xmin=0,
 xmax=3000,
-xtick={0, 500,...,3000},
+xtick={0, 1000,...,3000},
 separate axis lines,
 every outer y axis line/.append style={mycolor1},
 every y tick label/.append style={font=\color{mycolor1}},
 every y tick/.append style={mycolor1},
 ymin=-200,
 ymax=200,
-ytick={-200,-150,...,200},
+ytick={-200,-100,...,200},
 ylabel={Phase in °},
 axis background/.style={fill=white}
 ]
@@ -99,20 +99,20 @@ axis background/.style={fill=white}
 \end{axis}
 
 \begin{axis}[%
-width=5in,
-height=5in,
+width=2in,
+height=2in,
 at={(0in,0in)},
 scale only axis,
 xmin=0,
 xmax=3000,
-xtick={0, 500,...,3000},
+xtick={0, 1000,...,3000},
 xlabel = {Frequenz in Hz},
 every outer y axis line/.append style={mycolor2},
 every y tick label/.append style={font=\color{mycolor2}},
 every y tick/.append style={mycolor2},
 ymin=0,
 ymax=1,
-ytick={  0, 0.5,   1},
+ytick={  0.25, 0.5,0.75,   1},
 ylabel={Verstärkung},
 axis x line*=bottom,
 axis y line*=right,
@@ -190,8 +190,8 @@ ymajorgrids
 \end{axis}
 
 \begin{axis}[%
-width=6in,
-height=5in,
+width=2in,
+height=2in,
 at={(0in,0in)},
 scale only axis,
 xmin=0,

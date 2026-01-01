@@ -7,11 +7,11 @@
 \begin{tikzpicture}
 
 \begin{axis}[%
-width=5.0in,
-height=5.0in,
+width=3.0in,
+height=3.0in,
 at={(0.0in,0.0in)},
 scale only axis,
-point meta min=-0.252574989159953,
+point meta min=0,
 point meta max=2,
 axis on top,
 xmin=-1,
@@ -36,7 +36,7 @@ legend style={legend cell align=left, align=left, draw=white!15!black},
 legend style={font=\large},
 legend cell align=left,
 legend pos=south east]
-\addlegendimage{line legend,green}\addlegendentry{ \huge $r(b\tindex{dip}=c,\phi)$}
+\addlegendimage{line legend,line width = 10pt,green}\addlegendentry{$r(b\tindex{dip}=c,\phi)$}
 ]
 \addplot [forget plot] graphics [xmin=-1.01, xmax=1.01, ymin=-1.01, ymax=1.01] {03_raeumliches_merkmal/images/DipFieldAbsFarbBild-1.png};
 \addplot[-Straight Barb, color=red, line width=4.0pt, point meta={sqrt((\thisrow{u})^2+(\thisrow{v})^2)}, point meta min=0, quiver={u=\thisrow{u}, v=\thisrow{v}, every arrow/.append style={-{Straight Barb[angle'=18.263, scale={10/1000*\pgfplotspointmetatransformed}]}}}]
@@ -153,8 +153,8 @@ x	y	u	v\\
 \end{axis}
 
 \begin{axis}[%
-width=5.0in,
-height=5.0in,
+width=2.0in,
+height=2.0in,
 at={(0in,0in)},
 scale only axis,
 point meta min=0,

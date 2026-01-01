@@ -9,33 +9,32 @@
 \begin{tikzpicture}
 
 \begin{axis}[%
-width=5in,
-height=5in,
+width=2.0in,
+height=2.0in,
 at={(0in,0in)},
 scale only axis,
 xmin=-1.7,
 xmax=1.7,
 xtick = {-1.5,-1,...,1.5},
 xlabel style={font=\color{white!15!black}},
-xlabel={\huge x},
+xlabel={$x$},
 ymin=-1.7,
 ymax=1.7,
 ylabel style={font=\color{white!15!black}},
-ylabel={\huge y},
+ylabel={$y$},
 ytick = {-1.5,-1,...,1.5},
-tick label style={black, font=\huge},
+tick label style={black},
 grid = major,
 axis background/.style={fill=white},
 axis x line*=bottom,
 axis y line*=left,
-legend style={font=\small},
-legend cell align=left,
-legend pos=south east]
-\addlegendimage{line legend,blue}\addlegendentry{\huge Mögliche Posen}
-\addlegendimage{line legend,mycolor1}\addlegendentry{\huge MV}
+legend style={at={(1.25,1)},font=\small},
+legend cell align=left]
+\addlegendimage{line legend,line width = 5,blue}\addlegendentry{$\vec{p}$}
+\addlegendimage{line legend,line width = 5,mycolor1}\addlegendentry{$\vec{e}\tindex{max}$}
 
 ]
-\addplot[-Straight Barb, color=blue, line width=1.5pt, point meta={sqrt((\thisrow{u})^2+(\thisrow{v})^2)}, point meta min=0, quiver={u=\thisrow{u}, v=\thisrow{v}, every arrow/.append style={-{Straight Barb[angle'=18.263, scale={10/1000*\pgfplotspointmetatransformed}]}}}]
+\addplot[-Straight Barb, color=blue, line width=1.5pt, point meta={sqrt((\thisrow{u})^2+(\thisrow{v})^2)}, point meta min=0, quiver={u=\thisrow{u}, v=\thisrow{v}, every arrow/.append style={-{Straight Barb[angle'=18.263, scale={3/1000*\pgfplotspointmetatransformed}]}}}]
  table[row sep=crcr] {%
 x	y	u	v\\
 0.157598381575138	1.24751964676506	0.149268046494224	0.381288125189986\\
@@ -89,7 +88,7 @@ x	y	u	v\\
 -0.157598381575138	1.24751964676506	-0.149268046494225	0.381288125189985\\
 -3.08591656186426e-16	1.25992104989487	-1.00289999691534e-16	0.409464997423585\\
 };
-\addplot[-Straight Barb, color=mycolor1, line width=2.0pt, point meta={sqrt((\thisrow{u})^2+(\thisrow{v})^2)}, point meta min=0, quiver={u=\thisrow{u}, v=\thisrow{v}, every arrow/.append style={-{Straight Barb[angle'=18.263, scale={10/1000*\pgfplotspointmetatransformed}]}}}]
+\addplot[-Straight Barb, color=mycolor1, line width=1.5pt, point meta={sqrt((\thisrow{u})^2+(\thisrow{v})^2)}, point meta min=0, quiver={u=\thisrow{u}, v=\thisrow{v}, every arrow/.append style={-{Straight Barb[angle'=18.263, scale={3/1000*\pgfplotspointmetatransformed}]}}}]
  table[row sep=crcr] {%
 x	y	u	v\\
 -0	-0.5	0	0.9\\
@@ -97,8 +96,8 @@ x	y	u	v\\
 \end{axis}
 
 \begin{axis}[%
-width=5in,
-height=5in,
+width=2.0in,
+height=2.0in,
 at={(0in,0in)},
 scale only axis,
 xmin=0,

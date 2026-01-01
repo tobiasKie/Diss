@@ -10,28 +10,28 @@
 \begin{tikzpicture}
 
 \begin{axis}[%
-width=6in,
-height=6in,
+width=2.0in,
+height=2.0in,
 at={(0in,0in)},
 scale only axis,
 xmin=0,
 xmax=1,
 xtick={0,0.2,0.4,0.6,0.8,1}, % x-achsenskalierung
 xlabel style={font=\color{white!15!black}},
-xlabel={\huge Zeit in s},
+xlabel={Zeit in w.E.},
 ymin=-1,
 ymax=1,
 ylabel style={font=\color{white!15!black}},
-ylabel={\huge Sensorsignal in w.E.},
+ylabel={Sensorsignal in w.E.},
 axis background/.style={fill=white},
-tick label style={black, font=\huge},
+tick label style={black},
 axis x line*=bottom,
 axis y line*=left,
 xmajorgrids,
 ymajorgrids,
 legend style={legend cell align=left, align=left, draw=white!15!black}
 ]
-\addplot [color=mycolor1,line width=5.0pt]
+\addplot [color=mycolor1,line width=2.0pt]
   table[row sep=crcr]{%
 0	0.5\\
 0.00150225563909774	0.499210625151073\\
@@ -700,9 +700,9 @@ legend style={legend cell align=left, align=left, draw=white!15!black}
 0.997497744360902	0.0116558274408783\\
 0.999	0.0542848376632287\\
 };
-\addlegendentry{\huge $b$}
+\addlegendentry{$b$}
 
-\addplot[only marks, mark=*, mark options={}, mark size=5pt, draw=mycolor2, fill=mycolor2] table[row sep=crcr]{%
+\addplot[only marks, mark=*, mark options={}, mark size=2pt, draw=mycolor2, fill=mycolor2] table[row sep=crcr]{%
 x	y\\
 0.0435	0\\
 0.126	0\\
@@ -719,13 +719,13 @@ x	y\\
 0.9255	0\\
 0.9975	0\\
 };
-\addlegendentry{\huge Nullmarker}
+\addlegendentry{Nulldurchgänge}
 
 \end{axis}
 
 \begin{axis}[%
-width=6in,
-height=6in,
+width=2in,
+height=2in,
 at={(0in,0in)},
 scale only axis,
 xmin=0,
