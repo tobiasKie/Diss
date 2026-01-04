@@ -9,9 +9,9 @@
 \begin{tikzpicture}
 
 \begin{axis}[%
-width=10.0in,
-height=5 .0in,
-at={(0.0,0.883in)},
+width=5.0in,
+height=2.0in,
+at={(0.0,0.0in)},
 xmin=0,
 xmax=100,
 xtick={0,20,...,100}, % x-achsenskalierung
@@ -132,8 +132,8 @@ axis background/.style={fill=white}
 };
 \end{axis}
 \begin{axis}[%
-width=10.0in,
-height=4.0in,
+width=5.0in,
+height=2.0in,
 at={(0in,0in)},
 scale only axis,
 xmin=0,

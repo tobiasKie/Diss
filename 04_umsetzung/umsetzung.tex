@@ -395,8 +395,8 @@ Die Anzahl der benötigten Iterationen hängt dabei vom Verhältnis $Q$ zwischen
 Die absolute Distanz ist dabei irrelevant, da bei der Herleitung der Zusammenhänge bereits das normierte Dipolfeld verwendet wurde(siehe Gleichung \ref{sec:maximum_vector}). Um die Anzahl der benötigten Iterationen genauer zu untersuchen wurden Simulationen durchgeführt mit einer Variation von $Q$. Der Sensor wurde, als in der $z$-Richtung ausgerichtet, angenommen. Die erste Iteration hat mit $\vec{e}\tindex{s}^{\,i=1} = \vec{e}\tindex{y}$ begonnen. Somit beginnt der Algorithmus mit einem Fehler von $90^\circ$. Das Ergebnis dieser Simulation ist in Abbildung \ref{fig:ConvergenceSpeed} dargestellt.
 \begin{figure}
     \centering
-    \scalefont{2}
-    \inputTikZ{0.5}{04_umsetzung/images/ConvergenceSpeed.tikz}
+    \scalefont{1}
+    \inputTikZ{1}{04_umsetzung/images/ConvergenceSpeed.tikz}
     \caption{Winkelfehler in Abhängigkeit der Iteration: Es sind die Verläufe für verschiedene $Q$ dargestellt. Dabei steigt die Konvergenzgeschwindigkeit wenn $Q$ kleiner wird. }
     \label{fig:ConvergenceSpeed}
 \end{figure}
@@ -462,23 +462,23 @@ Im Folgenden wird zunächst ein funktionaler Zusammenhang $\phi\tindex{m,2} = f(
 	
 	
 \begin{figure}
+\centering
 	\begin{subfigure}{0.3\textwidth}
-	\scalefont{0.5}
-		\centering
+	\scalefont{1}
 		\inputTikZ{1}{04_lokalisierung/images/q0_05_Unique.tikz}
 		\caption{$0<Q\leq0.5$}
 		\label{fig:0_05_Unique}
 	\end{subfigure}
+	\hspace{1mm}
 	\begin{subfigure}{0.3\textwidth}
-	\scalefont{0.5}
-		\centering
+	\scalefont{1}
 		\inputTikZ{1}{04_lokalisierung/images/q05_10_Unique.tikz}
 		\caption{$0.5<Q\leq1$}
 		\label{fig:05_10_unique}
 	\end{subfigure}
+		\hspace{1mm}
 	\begin{subfigure}{0.3\textwidth}
-	\scalefont{0.5}
-		\centering
+	\scalefont{1}
 		\inputTikZ{1}{04_lokalisierung/images/q11_16_Unique.tikz}
 		\caption{$1<Q$}
 		\label{fig:bigger1_unique}
@@ -491,8 +491,8 @@ Dieser Zusammenhang ist nicht trivial und nicht einfach umkehrbar. In einem Skri
 
 \begin{figure}[h]
     \centering
-    \scalefont{2}
-    \inputTikZ{0.5}{04_umsetzung/images/noConvergence.tikz}
+    \scalefont{1}
+    \inputTikZ{1}{04_umsetzung/images/noConvergence.tikz}
     \caption{Winkelfehler für $Q=1$: Der Winkelfehler ist in Abhängigkeit der Iteration dargestellt.}
     \label{fig:NoConvergence}
 \end{figure}
