@@ -1,46 +1,51 @@
 \chapter{Bewegungsbeschreibung und Bewegungsanalysesysteme}
 \label{chap:Bewegungsanalyse}
-Im Folgenden Kapitel soll ein Überblick über die Bewegungsbeschreibung und verschiedene kommerziell verwendete Bewegungsanalysesystene vorgestellt werden.
+Im Folgenden Kapitel wird ein Überblick über die Bewegungsbeschreibung und verschiedene kommerziell verwendete Bewegungsanalysesystene vorgestellt werden. Im Anschluss wird das entwickelte System kurz skizziert.
 \section{Bewegungsbeschreibung}
 \label{sec:anatomy}
 Die menschliche Anatomie kann als eine kinematische Kette beschrieben werden. Eine kinematische Kette sind kinematische Elemente, in diesem Fall Knochen, die über Gelenke miteinander verbunden sind. 
-\subsection{Gelenkarten}
-In der Anatomie gibt es verschiedene Gelenkarten zwischen den unterschieden werden. In dieser Arbeit soll ein System für die Analyse von Handbewegungen entwickelt werden, daher werden an dieser nur die benötigten Gelenkarten vorgestellt werden. Dies sind Kugelgelenke, Elipsoidgelenke, Sattelgelenke und Scharniergelenke. 
-\begin{figure}
+
+\subsection{Handanatomie}
+\label{subsec:Gelenkzuordnung}
+In der Anatomie gibt es verschiedene Gelenkarten zwischen den unterschieden werden. In dieser Arbeit soll ein System für die Analyse von Handbewegungen entwickelt werden. Es werden die Gelenke einer Hand vorgestellt. Dies sind Kugelgelenke, Elipsoidgelenke, Sattelgelenke und Scharniergelenke.
+
+\begin{figure}[h]
     \centering
-    \begin{overpic}[width=0.25\textwidth,trim = 0 0 0 0]{02_grundlagen/images/Gelenkarten.png}
+    \begin{overpic}[width=0.75\textwidth,trim = 0 0 0 0]{02_grundlagen/images/Gelenkarten.pdf}
+        \put(15,50){1}
+        \put(60,50){2}
+        \put(15,20){3}
+        \put(60,20){4}
     \end{overpic}
-    \caption{Schematische Darstellung der Gelenke: 1 Elipsoidgelenk, 2 Sattelgelenk, 3 Kugelgelenk, 4 Scharniergelenk.\cite{appell_funktionelle_2008}}
+    \caption{Schematische Darstellung der Gelenke mit den Bewegungsrichtungen: 1 Elipsoidgelenk, 2 Sattelgelenk, 3 Kugelgelenk, 4 Scharniergelenk.(Abbildungen der Gelenke ist aus \cite{appell_funktionelle_2008} übernommen)}
     \label{fig:UebersichtGelenke}
 \end{figure}
-Kugelgelenke besitzen insgesamt drei Freiheitsgrade, Elipsoidgelenke und Sattelgelenke jeweils zwei Freiheitsgrade und Scharniergelenke jeweils einen Freiheitsgrad. Die möglichen Bewegungen sind in Abbildung \ref{fig:UebersichtGelenke} dargestellt.
+
+Kugelgelenke besitzen insgesamt drei Freiheitsgrade, Elipsoidgelenke und Sattelgelenke jeweils zwei Freiheitsgrade und Scharniergelenke einen Freiheitsgrad. Die möglichen Bewegungen sind in Abbildung \ref{fig:UebersichtGelenke} dargestellt.
 
 
-\subsection{Handgelenkszuordnung}
-\label{subsec:Gelenkzuordnung}
-Die Hand kann modellhaft als eine kinematische Kette bestehend aus 21 kinematischen Elemente, die mit unterschiedlichen Gelenken miteinander verbunden sind. Der Unterarm und die Handwurzel sind mit einem Elipsoidgelenk (Handgelenk) verbunden und besitzt 2 Freiheitsgrade. Von der Handwurzel gehen dann fünf Unterketten aus, zu den vier Fingern und dem Daumen. Die Daumenkette führt zu einem Sattelgelenk, die vier Fingerketten führen anatomisch gesehen zu Kugelgelenken. Die Gelenke in dieser Ebene werden in der Medizin \textit{Metakarpophalangealgelenke} (MCP) genannt. Diese Gelenke können Flexion/Extension, also Beugung/Streckung durchführen, sowie eine Abbduktion/Adduktion, also Spreizung/Zusammenführung, durchführen.
-In den fünf Ketten folgen dann jeweils zwei Scharniergelenke. Das erste Scharniergelenk in jeder Kette wird in der Medizin \textit{Proximale Interphalangealgelenk} (PIP) und das letzte Gelenk der Kette wird \textit{Distale Interphalangealgelenk} (DIP) genannt. Die Scharniergelenke können jeweils eine Flexion/Extension durchführen.
-Die MCP Kugelgelenke sind dabei jedoch nur anatomisch Kugelgelenke, in Bezug auf die Bewegungsfähigkeit besitzen diese Gelenke jedoch nur zwei Freiheitsgrade. Die Rotation um die Mittelachse des kinematischen Elements ist aufgrund der Muskulatur nur passiv möglich, also nur durch Krafteinwirkung von außen \cite{appell_funktionelle_2008}. Die kinematische Kette ist in Abbildung \ref{fig:Gelenkszuordnung} dargestellt.
+Die Hand kann modellhaft als eine kinematische Kette bestehend aus 21 kinematischen Elemente, die mit unterschiedlichen Gelenken miteinander verbunden sind. Die Kette beginnt am Unterarm, der über ein Elipsoidgelenk (Handgelenk) mit der Hand verbunden ist. Dieses Gelenk hat zwei Freiheitsgrade. Vom Handgelenk gehen fünf Unterketten aus, eine für jeden Finger. Die Daumenkette führt zu einem Sattelgelenk und ermöglicht Bewegungen in zwei Richtungen. Die vier Fingerketten führen anatomisch gesehen zu Kugelgelenken. Diese können aufgrund der Bänder und Sehnen nur in zwei Richtungen bewegt werden, die Adduktion/Abbduktion und die Flexion/Extension. Die Rotation um die Achse des kinematischen Elements ist nur passiv möglich, also durch Krafteinwirkung von außen \cite{appell_funktionelle_2008}. Diese fünf Gelenke werden in der Medizin \textit{Metakarpophalangealgelenke} (MCP) genannt \cite{appell_funktionelle_2008}. 
 
-\begin{figure}
+In den fünf Ketten folgen dann jeweils zwei Scharniergelenke. Das erste Scharniergelenk in jeder Kette wird in der Medizin \textit{Proximale Interphalangealgelenk} (PIP) und das letzte Gelenk der Kette wird \textit{Distale Interphalangealgelenk} (DIP) genannt. Die Scharniergelenke können jeweils eine Flexion/Extension durchführen. Die kinematische Kette ist in Abbildung \ref{fig:Gelenkszuordnung} dargestellt.
+
+\begin{figure}[h]
     \centering
-    \begin{overpic}[width=0.5\textwidth]{02_grundlagen/images/Gelenkzuordnung.png}
+    \begin{overpic}[width=0.5\textwidth]{02_grundlagen/images/Gelenkzuordnung.pdf}
         \put(38,62){MCP}
-        \put(25,52){PIP}
-        \put(8,41){DIP}
-        \put(80,45){HG}
+        \put(25,20){PIP}
+        \put(8,42.75){DIP}
     \end{overpic}
-    \caption{Zuordnung der schematischen Gelenke zu den realen Gelenken einer Hand. Sattelgelenke sind in blau, Scharniergelenk in gelb, Elipsoidgelenke in rot und Kugelgelenke in grün dargestellt. In Rot hinterlegt ist die erste Ebene der kinematischen Kette, in blau die zweite Ebene und in gelb die dritte Ebene.}
+    \caption{Zuordnung der schematischen Gelenke zu den realen Gelenken einer Hand. Sattelgelenke sind in blau, Scharniergelenk in gelb, Elipsoidgelenke in rot und Kugelgelenke in grün dargestellt.}
     \label{fig:Gelenkszuordnung}
 \end{figure} 
 
 
 \subsection{Modellierung}
 \label{subsec:ModellingJoints}
-Die Anatomie der menschlichen Hand ist teilweise kompliziert zu beschreiben, daher soll eine einfachere Beschreibung als kinematische Kette verwendet werden. Kinematische Ketten sind mehrere kinematische Elemente, die über unterschiedliche Gelenke miteinander verbunden sind. Die kinematischen Elemente sind am Beispiel der Hand die Knochen, in der Modellierung werden diese als Zylinder mit der entsprechenden Dicke angenommen. Die Gelenke werden als Sattelgelenke angenommen, da bei der Hand nur Gelenke mit maximal zwei Freiheitsgraden vorkommen. Die Kugelgelenke in Ebene 2 (Abbildung \ref{fig:Gelenkszuordnung}) haben zwar in der Theorie drei Freiheitsgrade, jedoch kann der dritte nicht aktiv angesteuert werden. Ein solches Modell ist in Abbildung\,\ref{fig:ModellierungBewegung} skizziert.
+Die Anatomie der menschlichen Hand ist teilweise kompliziert zu beschreiben, daher wird eine einfachere Modellierung als kinematische Kette verwendet. Kinematische Ketten bestehen aus kinematischen Elementen, die über unterschiedliche Gelenke miteinander verbunden sind. Die kinematischen Elemente sind am Beispiel der Hand die Knochen, in der Modellierung werden diese als Zylinder mit der entsprechenden Dicke angenommen.
+Die Gelenke werden als Sattelgelenke angenommen, da bei der Hand Gelenke mit maximal zwei Freiheitsgraden vorkommen. Die kinematischen Elemente werden mit der Variable $k$ nummeriert. Das Modell ist in Abbildung\,\ref{fig:ModellierungBewegung} skizziert.
 
-
-\begin{figure}
+\begin{figure}[h]
     \centering
     \begin{overpic}[width=\textwidth]{02_grundlagen/images/Def_ModellDrehung.png}
         \put(55.5,56.25){$\phi\tindex{Sp}$}
@@ -49,45 +54,95 @@ Die Anatomie der menschlichen Hand ist teilweise kompliziert zu beschreiben, dah
         \put(56,65){$y$}
         \put(42,18){$z$}
         \put(41.5,56.25){$z$}
+        \put(80,68){$k$}
+        \put(30,68){$k+1$}
     \end{overpic}
     \caption{Modellierung einer kinematischen Kette: Die Abbildung zeigt eine kinematische Kette aus zwei Perspektiven, oben $yz$-Ebene und unten $xz$-Ebene. In der $yz$-Ebene wird in rot die Drehung um die $x$-Achse angedeutet, die mit dem Winkel $\phi\tindex{Sp}$ beschrieben wird. Im unteren Teil ist die Rotiaion mit dem $\theta\tindex{Beu}$ Winkel dargestellt.}
     \label{fig:ModellierungBewegung}
 \end{figure}
 
-Jedes kinematische Element und Gelenk besitzt ein lokales Koordinatensystem. Dieses ist wie in Abbildung\,\ref{fig:ModellierungBewegung} skizziert. Die Symetrieachse des Elements definiert die $z$-Achse. Die $x$- und $y$- Achsen werden durch die Drehachsen definiert um die das nächste Gelenk dreht. Die Drehung um die $y$-Achse wird mit dem Zenitwinkel $\theta\tindex{Beu}$ beschrieben und hat einen Wertebereich von $-\frac{\pi}{2} < \theta < \frac{\pi}{2}$. Die Drehung um die $x$-Achse wird mit einem Polarwinkel $\phi\tindex{Sp}$ beschrieben und hat einen Wertebereich von $-\pi < \phi < \pi$. Die $z$-Achse des folgenden Elements $\vec{e}\tindex{z,k+1}$ ergibt sich dann 
+Jedes kinematische Element und Gelenk besitzt ein lokales Koordinatensystem. Dieses ist wie in Abbildung\,\ref{fig:ModellierungBewegung} skizziert. Die Symetrieachse des Elements $\vec{e}\tindex{kin,$k$}$ definiert die $z$-Achse. Die $x$- und $y$- Achsen werden durch die Drehachsen des folgenden Gelenks definiert. Die Drehung um die $y$-Achse wird mit dem Zenitwinkel $\theta\tindex{Beu,$k$}$ beschrieben und hat einen Wertebereich von $-\frac{\pi}{2} < \theta\tindex{Beu,$k$} < \frac{\pi}{2}$. Die Drehung um die $x$-Achse wird mit dem Polarwinkel $\phi\tindex{Sp,$k$}$ beschrieben und hat einen Wertebereich von $-\pi < \phi\tindex{Sp,$k$} < \pi$. 
+
+Mit den Winkeln des Gelenks lässt sich das Koordinatensystem des folgenden Elements beschreiben. Die $z$-Achse des folgenden Elements $\vec{e}\tindex{$z,k+1$} = \vec{e}\tindex{kin,$k$}$ ergibt sich dann durch eine Drehung um $\vec{e}\tindex{$x,k$}$ und $\vec{e}\tindex{$y,k$}$. Die Drehung wird mit Quaternionen beschrieben, diese werden aus der Rotationsachse $\vec{e}\tindex{rot}$ und dem Winkel $\phi$ zusammengesetzt 
+
 \begin{equation}
-    \vec{e}\tindex{z,k+1} = \cos(\theta + \frac{\pi}{2}) \, \vec{e}\tindex{x,k} + \sin(\theta + \frac{\pi}{2}) \, \sin(\phi) \, \vec{e}\tindex{y,k} + \sin(\theta + \frac{\pi}{2}) \, \cos(\phi) \, \vec{e}\tindex{z,k}.
+    \bvec{q} = \begin{pmatrix}
+        \cos(\frac{\phi}{2}) \\
+        \sin(\frac{\phi}{2})\,ex\tindex{rot} \\
+        \sin(\frac{\phi}{2})\,ey\tindex{rot} \\
+        \sin(\frac{\phi}{2})\,ez\tindex{rot} 
+    \end{pmatrix}
 \end{equation}
-Daraus ergibt sich eine Nulllage ($\theta\tindex{Beu}=0,\phi\tindex{Sp}=0$), in dieser Stellung stimmen die Symetrieachsen zweier aufeinanderfolgenden Elemente überein.
+Die Beugung und die Spreizung werden mit den folgenden Quaternionen beschrieben
+\begin{equation}
+    \bvec{q}\tindex{Sp,k} = \begin{pmatrix}
+        \cos(\frac{\phi\tindex{Sp,$k$}}{2}) \\
+        \sin(\frac{\phi\tindex{Sp,$k$}}{2})\,ex\tindex{$x,k$} \\
+        \sin(\frac{\phi\tindex{Sp,$k$}}{2})\,ey\tindex{$x,k$} \\
+        \sin(\frac{\phi\tindex{Sp,$k$}}{2})\,ez\tindex{$x,k$} 
+    \end{pmatrix},
+    \bvec{q}\tindex{Beu,k} = \begin{pmatrix}
+        \cos(\frac{\theta\tindex{Beu,$k$}}{2}) \\
+        \sin(\frac{\theta\tindex{Beu,$k$}}{2})\,ex\tindex{$y,k$} \\
+        \sin(\frac{\theta\tindex{Beu,$k$}}{2})\,ey\tindex{$y,k$} \\
+        \sin(\frac{\theta\tindex{Beu,$k$}}{2})\,ez\tindex{$y,k$} 
+    \end{pmatrix}
+\end{equation}
+und aufmultipliziert zur Gesamtbewegung des Gelenks $\bvec{q}\tindex{Gel}$
+\begin{equation}
+    \bvec{q}\tindex{Gel,$k$} = \bvec{q}\tindex{Sp,$k$} \circ \bvec{q}\tindex{Beu,$k$}. 
+\end{equation} 
+Die Achsen des folgenden Elements werden wie folgt bestimmt
+
+\begin{equation}
+    \vec{e}\tindex{$z,k+1$} = \bvec{q}\tindex{Gel,$k$}\, \vec{e}\tindex{$z,k$} \,\bvec{q}\tindex{Gel,k}^{-1}.
+\end{equation}
+
+In der Nulllage, $\theta\tindex{Beu}=0,\phi\tindex{Sp}=0$, ergibt sich, dass die Symmetrieachsen miteinander übereinstimmen und $\vec{e}\tindex{$z,k+1$} = \vec{e}\tindex{$z,k$}$. Die $x$- und $y$-Achsen jedes Elements $\vec{e}\tindex{$x,k,0$},\vec{e}\tindex{$y,k,0$}$ werden vor der Laufzeit bestimmt, die gesamte kinematische Kette ist dafür in der Nulllage. Aus $\bvec{q}\tindex{Gel,$k$}$ und $\vec{e}\tindex{$x,k+1,0$},\vec{e}\tindex{$y,k+1,0$}$, werden die aktuellen $x$- und $y$-Achsen bestimmt
+
+\begin{equation}
+    \vec{e}\tindex{$x,k+1$} = \bvec{q}\tindex{Gel,$k$}\, \vec{e}\tindex{$x,k+1,0$} \,\bvec{q}\tindex{Gel,$k$}^{-1},
+\end{equation}
+
+\begin{equation}
+    \vec{e}\tindex{$y,k+1$} = \bvec{q}\tindex{Gel,$k$}\, \vec{e}\tindex{$y,k+1,0$} \,\bvec{q}\tindex{Gel,$k$}^{-1}.
+\end{equation}
+
+Bei kinematischen Ketten mit mehr als einem Gelenk müssen die Bewegungen aller Gelenke aufmultipliziert werden.
 
 
 \section{Konventionelle Systeme}
 \label{sec:ConventionalSystems}
-In vielen Bereichen, wie der Filmindustrie, im medizinischen Bereich oder vielen anderen Bereichen werden bereits Systeme zur Bewegungsanalyse verwendet. Diese basieren in den meisten Fällen entweder auf optischer Sensorik oder auf Inertialen-Messeinheiten(IMU). Diese sollen in diesem Kapitel kurz vorgestellt werden.
+In der Filmindustrie, im medizinischen oder vielen anderen Bereichen werden bereits Systeme zur Bewegungsanalyse verwendet. Diese basieren in den meisten Fällen auf optischer Sensorik. Für Handbewegungen im speziellen werden in modernen Systemen auch magnetische Sensoren verwendet. Dabei gibt es bereits kommerzielle Systeme, als auch Systeme die in einem sehr frühen Entwicklungsstadium sind. Die Funktionsweise der Systeme wird hier kurz vorgestellt.
 
 \subsection{Optische Systeme}
 \label{subsec:opticalSystems}
 
-Optische Systeme für die Bewegungsanalyse gelten als der Goldstandard. Dabei gibt es unterschiedliche Ansätze, hier soll ein Ansatz, der optische Marker in Kombination mit Infrarotlicht verwendet. Optische Marker sind kugelförmige Objekte, deren Oberfläche so beschichtet ist, dass Infrarotlicht gut reflektiert wird. Die Kameras haben eine ringförmige Infrarotlichtquelle, mit der die Marker angeleuchtet werden. 
+Optische Systeme für die Bewegungsanalyse gelten als der Goldstandard. Dabei gibt es unterschiedliche Ansätze, wir verwenden ein System, der optische Marker in Kombination mit Infrarotlicht verwendet. Optische Marker sind kugelförmige Objekte, deren Oberfläche so beschichtet ist, dass Infrarotlicht gut reflektiert wird. Die Kameras haben eine ringförmige Infrarotlichtquelle, mit der die Marker angeleuchtet werden. Diese beiden Bestandteile sind in Abbildung\,\ref{fig:MaterialOMC} gezeigt.
 
 \begin{figure}[h]
     \centering
-    \subfloat[Kamera \cite{noauthor_miqus_nodate}]{
+    \subfloat[Kamera\,\cite{noauthor_miqus_nodate}]{
         \begin{overpic}[width=0.35\textwidth,trim = 0 0 0 0]{02_grundlagen/images/Optical_camera.jpg}
         \end{overpic}
         \label{fig:Camera}
     }
-    \subfloat[Optischer Marker \cite{noauthor_spherical_nodate}]{
+    \subfloat[Optischer Marker\,\cite{noauthor_spherical_nodate}]{
         \begin{overpic}[width=0.35\textwidth,trim = 0 0 0 0]{02_grundlagen/images/optical_marker.jpg}
         \end{overpic}
         \label{fig:Opticalmarker}
     }
-    \caption{Optisches System: \subref{fig:Camera} zeigt beispielhaft eine Kamera für die Bewegungsanalyse. \subref{fig:Opticalmarker} zeigt einen optischen Marker, dessen Bewegung von einem Kamerasystem aufgenommen werden kann. Referenz}
+    \caption{Optisches System: (a) zeigt beispielhaft eine Kamera für die Bewegungsanalyse. (b) zeigt einen optischen Marker, dessen Bewegung von einem Kamerasystem aufgenommen werden kann.}
     \label{fig:MaterialOMC}
 \end{figure}
 
-Eine beliebige Anzahl Kameras wird im Raum so aufgestellt, dass der interessierte Bereich möglichst von allen Kameras eingesehen werden kann. In einer Kalibrierungsroutine werden mithilfe eines Referenzobjektes, bestehend aus mehreren optischen Markern, die Position und Orientierung der Kameras bestimmt \cite{qualisys_ab_qtm-user-manual_nodate}.
-Während der Laufzeit nehmen die Kameras synchronisiert Bilder auf und die Auswertesoftware bestimmt daraus die Position der Marker. Es gibt zusätzlich die Möglichkeit sogenannte \textit{Rigig-Bodies} RB zu verwenden. Dies sind Konstruktionen, die mehrere (mindestens drei) optische Marker miteinander verbinden. Damit ergibt sich zusätzlich zur Position auch eine Orientierung und bei der Verwendung von mehreren RB kann die Software diese unterscheiden. Die RBs können Körperteilen zugeordnet werden und so kann mit Vorwissen über die menschliche Anatomie die Bewegung rekonstruiert werden \cite{qualisys_ab_qtm-user-manual_nodate}.
+Eine beliebige Anzahl Kameras wird im Raum so aufgestellt, dass der interessierte Bereich möglichst von allen Kameras eingesehen werden kann. Dies ist in Abbildung\,\ref{fig:CameraPositioning} dargestellt.
+
+In einer Kalibrierungsroutine werden mithilfe eines Referenzobjektes, bestehend aus mehreren optischen Markern, die Position und Orientierung der Kameras bestimmt\,\cite{qualisys_ab_qtm-user-manual_nodate}.
+
+Während der Laufzeit nehmen die Kameras synchronisiert Bilder auf und die Auswertesoftware bestimmt daraus die Position der Marker. Es gibt zusätzlich die Möglichkeit sogenannte \textit{Rigid bodies} zu verwenden. Dies sind Konstruktionen, die mehrere (mindestens drei) optische Marker fest miteinander verbinden. Damit ergibt sich zusätzlich zur Position auch eine Orientierung und bei der Verwendung von mehreren \textit{Rigid bodies} kann die Software diese unterscheiden. In Abbildung\,\ref{fig:RigigBody} ist ein solcher beispielhaft dargestellt.
+
+Die \textit{Rigid bodies} können Körperteilen zugeordnet werden und so kann mit Vorwissen über die menschliche Anatomie die Bewegung rekonstruiert werden \cite{qualisys_ab_qtm-user-manual_nodate}.
 
 \begin{figure}[h]
     \centering
@@ -103,10 +158,10 @@ Während der Laufzeit nehmen die Kameras synchronisiert Bilder auf und die Auswe
         \end{overpic}
         \label{fig:RigigBody}
     }
-    \caption{Aufbau OMC: \subref{fig:CameraPositioning} zeigt eine mögliche Kameraanordnung. Der grüne Bereich ist dabei von allen Kameras einsehbar und die Marker können hier optimal lokalisiert werden. In \subref{fig:RigigBody} ist beispielhaft ein Rigidbody dargestellt. Dieser besteht aus einem 3D-Druckteil an dem insgesamt 4 optische Marker angebracht sind.}
+    \caption{Aufbau OMC: (a) zeigt eine mögliche Kameraanordnung. Der grüne Bereich ist dabei von allen Kameras einsehbar und die Marker können hier optimal lokalisiert werden. In (b) ist beispielhaft ein Rigidbody dargestellt. Dieser besteht aus einem 3D-Druckteil an dem insgesamt 4 optische Marker angebracht sind.}
     \label{fig:OMCUse}
 \end{figure}
-In dieser Arbeit wird zur Evaluierung ein Kamerasystem des Herstellers \textit{Qualisys AB} bestehend aus acht Miqus-Kameras \cite{noauthor_miqus_nodate}.
+In dieser Arbeit wird zur Evaluierung ein Kamerasystem des Herstellers \textit{Qualisys AB} bestehend aus acht Miqus-Kameras \cite{noauthor_miqus_nodate} verwendet.
 
 % \subsection{IMU-basierte Systeme}
 % \label{subsec:imubasedSystems}
@@ -128,9 +183,11 @@ In dieser Arbeit wird zur Evaluierung ein Kamerasystem des Herstellers \textit{Q
 \subsection{Stand der Technik}
 \label{subsec:Stateoftheart}
 \subsubsection{Kommerzielle Angebote}
-Im Bereich der Sensorhandschuhe gab es bis Anfang der 2020er Jahre unterschiedliche Ansätze. Dabei wurde auf verschiedene Sensoriken gesetzt, wie zum Beispiel Stretchsensoren, IMUs oder inkrementelle Messysteme. Eine Zusammenstellung verschiedener Ansätze kann hier gefunden werden \cite{caeiro-rodriguez_systematic_2021}. Optische Systeme haben sich bisher nicht durchgesetzt, da zwischen Kamera und Marker zu jedem Zeitpunkt Sichtkontakt vorhanden sein muss. Aufgrund der Gegebenheit der Hand und das Finger sich unter Umständen verdecken können, wird hier schnell eine große Anzahl Kameras benötigt und der finanzielle Aufwand zu groß.
+Im Bereich der Sensorhandschuhe gab es bis Anfang der 2020er Jahre unterschiedliche Ansätze. Dabei wurde auf verschiedene Sensoriken gesetzt, wie zum Beispiel Stretchsensoren, IMUs oder inkrementelle Messysteme. Eine Zusammenstellung verschiedener Ansätze kann hier gefunden werden\,\cite{caeiro-rodriguez_systematic_2021}. 
 
-In den letzen Jahren sind verschiedene magnetische Ansätze im kommerziellen Bereich erschienen. Ein rein magnetischer wird von der Firma \textit{Manus Meta} verfolgt, die in den neusten Versionen einen Aktuator auf dem Handrücken platzieren und jeweils Magnetfeldsensoren in den Fingerspitzen \cite{noauthor_motion_nodate},\cite{saggio_quasi-static_2025}. Laut Hersteller wird eine Endpunktlokalisierung verwendet. Eine zuvor durchgeführte Kalibrierung der Antomie ermöglicht es, aus den Positionen der Fingerspitzen werden dann Gelenkwinkel bestimmt.
+Optische Systeme haben sich bisher nicht durchgesetzt, da zwischen Kamera und Marker zu jedem Zeitpunkt Sichtkontakt vorhanden sein muss. Aufgrund der Anatomie der Hand können sich Finger unter Umständen gegenseitig verdecken und die Anzahl der benötigten Kameras wird zu groß und damit auch der finanzielle Aufwand.
+
+In den letzen Jahren sind verschiedene magnetische Ansätze im kommerziellen Bereich erschienen. Ein rein magnetischer wird von der Firma \textit{Manus Meta} verfolgt, die in den neusten Versionen einen Aktuator auf dem Handrücken platzieren und jeweils Magnetfeldsensoren in den Fingerspitzen \cite{noauthor_motion_nodate},\cite{saggio_quasi-static_2025}. Laut Hersteller wird eine Endpunktlokalisierung verwendet. Eine zuvor durchgeführte Kalibrierung der Antomie ermöglicht es, aus den Positionen der Fingerspitzen Gelenkwinkel zu bestimmen.
 
 \begin{figure}[h]
     \centering 
@@ -138,18 +195,18 @@ In den letzen Jahren sind verschiedene magnetische Ansätze im kommerziellen Ber
     \begin{overpic}[width=0.25\textwidth,trim = 0 0 0 0]{02_grundlagen/images/Manus_Glove.png}
     \end{overpic}
     \label{fig:ManusGlove}
-    \caption{Kommerzieller Sensorhandschuhe: In der Abbildung ist der Sensorhandschuh von \textit{ManusMeta} zu sehen.}
+    \caption{Kommerzieller Sensorhandschuhe: In der Abbildung ist der Sensorhandschuh von \textit{ManusMeta} zu sehen.\cite{noauthor_motion_nodate}}
 
 \end{figure}
-Die kommerziellen Systeme verwenden jeweils ein Sensor pro Finger. Durch Kalibrierung der Handanatomie, kann aus der Sensorposition direkt die Haltung des Fingers bestimmt werden.
+Das kommerzielle System verwendet jeweils ein Sensor pro Finger. Durch Kalibrierung der Handanatomie, kann aus der Sensorposition direkt die Haltung des Fingers bestimmt werden.
 
 \subsubsection{Forschung}
-In der Forschung verschiedene Arbeiten, die sich mit der Rekonstruktion von Handbewegungen basierend auf magnetischen Sensoren. Zum einen gibt es den Ansatz (Magik)ref. In diesem Ansatz werden Sendespulen auf dem Handrücken und den Fingerspitzen angebracht. In einem Holzaufbau sind 24 Sensoren angebracht. Die Sendespulen werden mit einem Optimierungsalgorithmus lokalisiert. Die Hand wird als kinematische Kette beschrieben und mit einer inversen Kinematik werden die Positionen zu Winkeln übersetzt. 
+In der Forschung gibt es verschiedene Arbeiten, die sich mit der Rekonstruktion von Handbewegungen basierend auf magnetischen Sensoren beschäftigen. Zum einen gibt es den Ansatz\,\cite{santoni_magik_2021}. In diesem Ansatz werden Sendespulen auf dem Handrücken und den Fingerspitzen angebracht. In einem Holzaufbau sind 24 Sensoren angebracht. Die Sendespulen werden mit einem Optimierungsalgorithmus lokalisiert. Die Hand wird als kinematische Kette beschrieben und mit einer inversen Kinematik werden die Positionen zu Winkeln übersetzt.
 
-In einem anderen Ansatz [Magnetic Hand Tracking for Human-Computer Interface] werden permanent Magneten an den Fingerspitzen befestigt. Um das Handgelenk ist ein Armband mit sechs 2D-Sensoren angebracht. Dieser Ansatz ist zwei geteilt, zunächst werden die Magneten auf den Fingerspitzen lokalisiert. Dafür werden die Magneten als magnetische Dipole beschrieben und mit einem Optimierungsalgorithmus eine Kostenfunktion minimiert und so die Positionen bestimmt. In einem zweiten Schritt werden mit einem iterativen Verfahren aus den Positionen Gelenkwinkel geschätzt. Dabei wird die Abbduktion/Adduktion der Finger vernachlässigt. 
+In einem anderen Ansatz\,\cite{ma_magnetic_2011} werden permanent Magneten an den Fingerspitzen befestigt. Um das Handgelenk ist ein Armband mit sechs 2D-Sensoren angebracht. Dieser Ansatz ist zwei geteilt, zunächst werden die Magneten auf den Fingerspitzen lokalisiert. Dafür werden die Magneten als magnetische Dipole beschrieben und mit einem Optimierungsalgorithmus eine Kostenfunktion minimiert und so die Positionen bestimmt. In einem zweiten Schritt werden mit einem iterativen Verfahren aus den Positionen Gelenkwinkel geschätzt. Dabei wird die Abbduktion/Adduktion der Finger vernachlässigt. 
 
-\subsubsection{Zusammenfassung und Ausblick}
-Die bisher entwickelten magnetischen Ansätze für das Handbewegungstracking nutzen jeweils ähnliche Ansätze. In allen Ansätzen wird zunächst die Fingerspitze lokalisiert. Mit einer zuvor durchgeführten Kalibrierung wird eine inverse Kinematik angewendet und die Gelenkswinkel bestimmt. In allen Ansätzen wird das Vorwissen über die Anatomie erst nach der Lokalisierung in die Schätzung eingearbeitet. Die Lokalisierung kann unter Umständen sehr aufwändig sein und die nachfolgende Einbeziehung der Anatomie ebenso. In dieser Arbeit soll daher ein Lokalisierungsverfahren entwickelt werden, in dem bereits während der Lokalisierung die Anatomie berücksichtigt wird. So soll die Lokalisierung vereinfacht werden.
+\subsubsection{Zusammenfassung}
+Die entwickelten magnetischen Ansätze für das Handbewegungstracking nutzen jeweils ähnliche Ansätze. In allen Ansätzen wird zunächst die Fingerspitze lokalisiert. Mit einer zuvor durchgeführten Kalibrierung wird eine inverse Kinematik angewendet und die Gelenkswinkel bestimmt. In allen Ansätzen wird das Vorwissen über die Anatomie nach der Lokalisierung in die Schätzung eingearbeitet. Die Lokalisierung kann unter Umständen sehr aufwändig sein. In dieser Arbeit soll daher ein Lokalisierungsverfahren entwickelt werden, in dem bereits während der Lokalisierung die Anatomie berücksichtigt wird.
 
 \section{Überblick des entwickelten System}
 \label{sec:SystemOverview}
@@ -157,25 +214,27 @@ In dieser Arbeit wird die Signalverarbeitung für ein Bewegungsanalysesysteme f�
 
 \subsection{Verwendete Sensorik}
 \label{subsec:Fluxgate}
-In dieser Arbeit werden Fluxgatemagnetometer(auch Förster- oder Magnetkernsonde genannt) der Firma \textit{Stefan Mayer Instruments}\,\cite{noauthor_magnetfeldsensor_nodate} verwendet. Diese zeichnen sich aus, dass sie ohne Schirmung im Erdmagnetfeld verwendet werden können, außderdem ist die Bandbreite von 1\,kHz ausreichend groß. Ein Amplituden- und Phasenverlauf eines solchen Sensors ist in Abbildung \ref{fig:FluxFreq} dargestellt.
+In dieser Arbeit werden Fluxgatemagnetometer(auch Förster- oder Magnetkernsonde genannt) der Firma \textit{Stefan Mayer Instruments}\,\cite{noauthor_magnetfeldsensor_nodate} verwendet, ein Bild ist in Abbildung\,\ref{fig:fluxgate} gezeigt. Diese können außerhalb einer Schirmung im Erdmagnetfeld verwendet werden und die Bandbreite von 1\,kHz ist ausreichend groß.
+
+Ein Amplituden- und Phasenverlauf bis 3\,kHz wurde mit Stützstellen im Abstand von 100\,Hz bzw. im Abstand von 10\,Hz zwischen 500 und 1100\,Hz aufgenommen. Dieser ist in Abbildung \ref{fig:FluxFreq} dargestellt.
     \begin{figure}[h]
         \centering
-        \scalefont{2}
-            \inputTikZ{0.5}{02_grundlagen/images/fluxgate_Frequency.tikz}
+        \scalefont{1}
+            \inputTikZ{1}{02_grundlagen/images/fluxgate_Frequency.tikz}
             \label{fig:Frequenzverlauf}
-        \caption{Verlauf von Sensitivität und Phase in Abhängigkeit der Frequenz. Dafür wurden im Abstand von 100\,Hz, und im Bereich zwischen 500 und 1100\,Hz im Abstand von 10\,Hz, Stützstellen aufgenommen.}
+        \caption{Verlauf von Sensitivität und Phase in Abhängigkeit der Frequenz}
         \label{fig:FluxFreq}
 
     \end{figure}
-Ein Fluxgatemagnetometer besteht aus einem Ferritkern, um den zwei Spule gewickelt sind. Eine der Spulen wird mit einer Sinusansteuerung symetrisch so angesteuert, dass die Magnetisierung des Ferritkerns in beiden Richtungen die Sättigung des Ferritkerns erreicht wird. Das äußere zu messende Magnetfeld verschiebt den Mittelpunkt der Magnetisierung und in einer Richtung wird das Material stärker in die Sättigung getrieben. Mit der zweiten Spule wird die induzierte Spannung gemessen. Die Verzerrung durch die Sättigung ruft höhere harmonische der Anregungsfrequenz hervor. Die zweite Harmonische ist proportional zum äußeren Magnetfeld und wird als Maß für das Magnetfeld verwendet \cite{michalowsky_magnettechnik_2006}. In Abbildung \ref{fig:SensorNoise} ist eine Rauschmessung dargestellt und das Anregungssignal ist gut zu erkennen.
+Ein Fluxgatemagnetometer besteht aus einem Ferritkern, um den zwei Spule gewickelt sind. Eine der Spulen wird mit einer Sinusansteuerung symetrisch so angesteuert, dass die Magnetisierung des Ferritkerns in beiden Richtungen die Sättigung des Ferritkerns erreicht wird. Das äußere zu messende Magnetfeld verschiebt den Mittelpunkt der Magnetisierung und in einer Richtung wird das Material stärker in die Sättigung getrieben. Mit der zweiten Spule wird die induzierte Spannung gemessen. Die Verzerrung durch die Sättigung ruft höhere harmonische der Anregungsfrequenz hervor. Die zweite Harmonische ist proportional zum äußeren Magnetfeld und wird als Maß für das Magnetfeld verwendet \cite{michalowsky_magnettechnik_2006}. In Abbildung \ref{fig:NoiseFluxgate} ist eine Rauschmessung dargestellt. Darin ist zum einen das Ansteuersignal bei ungefähr 14\,kHz zu sehen und außerdem im tieffrequenten Bereich die 50\,Hz Versorgungsnetzspannung, sowie harmonische dieser.
 
 
     
     \begin{figure}[h]
         \centering
         \subfloat[Rauschspektrum]{
-            \scalefont{2} 
-            \inputTikZ{0.5}{02_grundlagen/images/FluxGate_Noise.tikz}
+            \scalefont{1} 
+            \inputTikZ{1}{02_grundlagen/images/FluxGate_Noise.tikz}
             \label{fig:NoiseFluxgate} 
         } 
         \subfloat[Fluxgatemagnetometer FLC100 \cite{noauthor_magnetfeldsensor_nodate}]{
@@ -183,7 +242,7 @@ Ein Fluxgatemagnetometer besteht aus einem Ferritkern, um den zwei Spule gewicke
             \end{overpic}
             \label{fig:fluxgate}
         }
-        \caption{FLC100 mit zugehörigem Rauschspektrum: Auf der rechten Seite ist ein Foto eines FLC100 dargestellt. Dazu gehört zum einen, die Spule (Sensorelement) und die zugehörige Elektronik. Auf der linken Seite ist das Rauschspektrum zu sehen. Dabei ist bei ungefähr 14\,kHz das Anregungssignal zu sehen.}
+        \caption{FLC100 mit zugehörigem Rauschspektrum: Auf der rechten Seite ist ein Foto eines FLC100 dargestellt. Dazu gehört zum einen, die Spule (Sensorelement) und die zugehörige Elektronik. Auf der linken Seite ist das Rauschspektrum zu sehen.}
         \label{fig:SensorNoise}
 
     \end{figure}
@@ -194,13 +253,13 @@ Für einen Prototyp wurden andere Sensoren verwednet, diese sind kleiner und kö
 
 \subsection{Sensor- und Aktuatoranordnung}
 \label{sec:Sensoranordnung}
-Bei der Sensoranordnung unterscheiden wir zwischen der Problemstellung für die sie verwendet werden. Ein Teil der Sensoren wird zum Bewegunstracking von kinematischen Ketten verwendet. Diese werden jeweils an einem kinematischen Element befestigt. Auf dem ersten kinematischen Element werden magnetische Aktuatoren befestigt. Um die Bewegung der kinematischen Kette aufzunehmen muss die relative Position der Sensoren zu den Aktuatoren bestimmt werden. Auf einen Handschuh angewendet, bedeutet dies, dass auf dem Handrücken magnetische Aktuatoren angebracht sind. Auf den folgenden Fingerelementen sind magnetische Sensoren angebracht. Ein Skizze des späteren Aufbaus ist in Abbildung\,\ref{fig:Sensoranordnung} zu sehen.
+Bei der Sensoranordnung wird unterschieden zwischen der Lokalisierung, für die sie verwendet werden. Ein Teil der Sensoren wird zum Bewegunstracking von kinematischen Ketten verwendet. Diese werden jeweils an einem kinematischen Element befestigt. Auf dem ersten kinematischen Element ist ein magnetischer Aktuator befestigt. Um die Bewegung der kinematischen Kette aufzunehmen, wird die relative Position der Sensoren zum Aktuator bestimmt. Auf einen Handschuh angewendet, bedeutet dies, dass auf dem Handrücken magnetische Aktuatoren angebracht sind. Auf den folgenden Fingerelementen sind magnetische Sensoren angebracht.
 
     \begin{figure}[h]
         \centering
         \begin{overpic}[width=\textwidth,trim = 0 0 0 0]{02_grundlagen/images/Übersicht.png}
-            \put(20,12){\parbox{.5in}{AD-Wandler}}
-            \put(45,12){\parbox{.5in}{Signalverarbeitungs-pipeline}}
+            \put(20,11){\parbox{.5in}{\centering AD-Wandler}}
+            \put(47,11){\parbox{1.0in}{\centering Digitale Signalverarbeitung}}
         \end{overpic}
         \label{fig:Overview} 
         \caption{Übersicht des entwickelten Systems: In der Abbildung ist das System mit der Sensoranordnung skizziert. In der Mitte der Abbildung ist eine Hand zu sehen, auf dem Handgelenk ist eine 3D-Spule in angebracht. An der Hand sind an jedem kinematischen Element Magnetfeldsensoren (orange) angebracht. Um das Messvolumen herum ist ein Gerüst an dem insgesamt sechs Sensoren befestigt sind. Diese sind jeweils drei Sensorpaare die gegenüber voneinander angebracht sind. Sowohl die Stromsignale (rot) und die Magnetfeldsignale (blau) werden digitalisiert und verarbeitet.}

@@ -9,18 +9,20 @@
 \begin{tikzpicture}
 
 \begin{axis}[%
-width=5.0in,
-height=5.0in,
+width=2.5in,
+height=2.5in,
 at={(0,0)},
 scale only axis,
-xlabel = {Frequenz in Hz},
+scaled x ticks = false,
+xlabel = {Frequenz in kHz},
 xmin=0,
 xmax=18000,
 xtick={0,3000,...,18000},
+xticklabels = {0,3,6,9,12,15,18},
 ymode=log,
 ymin=1e-16,
 ymax=1e-06,
-ylabel = {Leistungsdichtespektrum in $\frac{\text{V}^2}{\text{Hz}}$},
+ylabel = {Leistungsdichtespektrum in $\text{V}^2/\text{Hz}$},
 yminorticks=true,
 axis background/.style={fill=white},
 axis x line*=bottom,
@@ -3636,8 +3638,8 @@ yminorgrids
 \end{axis}
 
 \begin{axis}[%
-width=5.0in,
-height=5.0in,
+width=2.5in,
+height=2.5in,
 at={(0in,0in)},
 scale only axis,
 xmin=0,

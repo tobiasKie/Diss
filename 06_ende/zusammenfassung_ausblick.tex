@@ -1,9 +1,28 @@
 \chapter{Zusammenfassung und Ausblick}
 \label{chap:ende_zusammenfassung_ausblick}
 
+\section{Einordnung der Ergebnisse}
 
-   \section{Neuheiten}
-   Es soll kurz zurück geschaut werden und betrachtet werden, welche Teile neu waren und was sich für andere Problemstellungen adaptieren lässt. 
+\subsection{Relative Lokalisierung}
+Für kommerzielle Angebote gibt es in diesem Bereich kein einheitliches Qualitätsmerkmal. Die Hersteller geben bei ihren Produkten keine Genauigkeit des Handschuhs. 
+
+Andere Forschungsgruppen haben ihre Prototypen mit einem Kamerasystem verglichen. In \cite{lin_design_2024} wurde ein Sensorhandschuh mit Stretchsensoren aufgebaut und evaluiert. Die Fingerbeugung führt zu einem Stretchen des Sensorelements und zu einer abhängigen Ausgangsspannung. In der Evaluation wurde eine Beugung eines Fingers betrachtet, und im Vergleich mit einem Kamerasystem eine Genauigkeit von $2^\circ$ erreicht. Dabei ist zu beachten, dass ein Spreizen des MCP nicht berücksichtigt wird.
+
+Ein magnetischer Ansatz ist in \cite{parizi_auraring_2020} vorgestellt. Darin wird auf dem Handgelenk eine Platine mit Sensoren platziert. Auf dem ersten Element des Fingers ist ein Ring, im Inneren ist eine Spule aufgewickelt. Die Spule wird als magnetische Quelle verwendet. In einem Vergleich mit einem optischen System wurde eine Abweichung von im Mittel $4.6^\circ$ eermittelt.
+
+Der vorgestellte Ansatz hat in der Evaluierung einen Fehler zwischen $1-5^\circ$ gezeigt. Dieser ist in einem ähnlichen Bereich wie die Ansätze anderer Forschungsgruppen. Dabei muss jedoch beachtet werden, dass in dieser Arbeit bisher nur ein sehr einfacher Prototyp untersucht wurde.
+
+
+\subsection{Absolute Lokalisierung}
+Die absolute Lokalisierung ist sehr einfach gehalten und wird kurz mit anderen Ansätzen verglichen. In \cite{bald_echtzeitlokalisierung_2024} wurde ein flexibler Algorithmus für die magnetische Lokalisierung entwickelt und mit derselben Sensorik wie in dieser Arbeit evaluiert. In dieser Arbeit wurden statische Messungen untersucht und dabei eine Positionsgenauigkeit von im Mittel 2.72\,cm erreicht. Bei der Orientierung wurde eine Genauigkeit von etwa $30^\circ$ erreicht.
+
+Ein zweiter magnetischer Ansatz für eine absolut Lokalisierung ist in \cite{hehn_high-accuracy_2019} vorgestellt. Darin werden 3D-Spulen als Sensoren verwendet und es wird ein Spule im Messbereich lokalisiert. Die Referenz wird dabei von einem Tachymeter bestimmt. Dieser Ansatz verwendet ein Gradientenverfahren um die Position und Orientierung zu bestimmen. Dabei wird für die Position eine Genauigkeit von 10.6\,cm und für die Orientierung eine Genauigkeit von $6.1^\circ$ erreicht.
+
+In dieser Arbeit wurde eine Positionsgenauigkeit zwischen 15.2\,mm und 17.5\,mm erreicht. Im Vergleich mit anderen Arbeiten in diesem Bereich ist die Positionsschätzung dabei ähnlich gut. Anders sieht es bei der Orientierungsschätzung aus, hier liegt der Fehler bei bis zu $26.1^\circ$. Dies ist relativ hoch im Vergleich zu \cite{hehn_high-accuracy_2019}. Die Orientierungsschätzung bei \cite{bald_echtzeitlokalisierung_2024} ist in einer ähnlichen Größenordnung. Daher sollten die Algorithmen mit einer anderen Sensorik geprüft werden. 
+
+
+\section{Neuheiten}
+   Es wird zurück geschaut und betrachtet, welche Teile neu sind und was sich für andere Problemstellungen adaptieren lassen. 
    \subsection{Veralgemeinerung der Merkmalsextraktion}
 
    In dieser Arbeit wurde ein Verfahren zur Schätzung von Übertragungsfaktoren (Spule $\rightarrow$ Sensor) vorgestellt. Vorgestellt wurde das Verfahren mit einer 3D-Spule, die als rotierender Dipol angesteuert. Durch die Detektion von Nulldurchgängen, wird ein Maximalvektor extrahiert. Dieser kann wie in den Gleichungen x-y gezeigt in die Übertragungsfaktoren der einzelnen Spulen umgerechnet werden. Dies soll nun auf verteilte Spulen und auf mehr als drei Spulen erweitert werden.\\
@@ -107,12 +126,7 @@
       |\bvec{g}| = \frac{b(\vec{r},t)}{\biggl(i_1(t) \,i_{1}(\phi\tindex{max},\theta\tindex{max}) + i_2(t) \,i_{2}(\phi\tindex{max},\theta\tindex{max}) + i_3(t) \,i_{3}(\phi\tindex{max},\theta\tindex{max})\biggr)}.
    \end{equation}
 
-   Der Zusammenhang soll nun auf $n$ Aktuatoren erweitert werden. Dafür schauen wir uns die Verallgemeinerung von Kugelkoordinaten für $n$-Dimensionen an, dafür werden $n-1$ Winkel verwendet. Die radiale Komponente für $n$ Dimensionen ist definiert wie folgt Ref
-   
-   On hyperspherical associated Legendre
-   functions: the extension of spherical
-   harmonics to
-   N dimensions
+   Der Zusammenhang soll nun auf $n$ Aktuatoren erweitert werden. Dafür schauen wir uns die Verallgemeinerung von Kugelkoordinaten für $n$-Dimensionen an, dafür werden $n-1$ Winkel verwendet. Die radiale Komponente für $n$ Dimensionen ist definiert wie folgt \cite{campos_hyperspherical_2020}
    
 
    \begin{equation}
@@ -139,27 +153,30 @@
 
    Die Herleitung zeigt außerdem, dass die Ansteuerung nicht unbedingt sein muss wie in Gleichung\,\ref{eq:CoilCurrents} gewählt werden. Es wurde gezeigt, dass die Nulldurchgangsvektoren immer senkrecht zu den Übertragungsfaktoren stehen. Daher ist die Ansteuerung der Spulen nebensächlich, diese müssen nur so angesteuert werden, dass die Nulldurchgangsvektoren sich voneinander unterscheiden. 
 
-   Zusammengefasst wurde ein Verfahren entwickelt, mit dem Übertragungsfaktoren zwischen Sensoren und Aktuatoren bestimmt werden kann. Die einzige Einschränkung dafür ist, dass die Ausbreitung der Feldgröße nahezu ohne Verzögerung geschieht. Es kann also für viele magnetische Lokalisierungen und ähnliche Anwendungen verwendet werden.
+   Zusammengefasst wurde ein Verfahren entwickelt, mit dem Übertragungsfaktoren zwischen Sensoren und Aktuatoren bestimmt werden. Die einzige Einschränkung dafür ist, dass die Ausbreitung der Feldgröße nahezu ohne Verzögerung geschieht. Es kann also für viele magnetische Lokalisierungen und ähnliche Anwendungen verwendet werden.
 
 
    \subsection{Applikationsangepasste Lokalisierung}
-   -iterativer Algorithmus
-   -angepasst an kinematische Kette
+   Die Lokalisierung spaltet sich in zwei Unterthemen. Die absolute Lokalisierung ist in dieser Arbeit einfach gehalten. In der absoluten Lokalisierung wird die Zylindersymmetrie eines Dipolfeldes ausgenutzt. Durch die Anordnung der Sensoren wird die Positions- und Orientierungsschätzung in kleinere Unterprobleme aufgeteilt. Die Unterprobleme sind deutlich weniger komplex und die Position/Orientierung einer 3D-Spule wird effizient bestimmt.
+   Die relative Lokalisierung wird verwendet um die Bewegung von kinematischen Ketten aufzunehmen. Hier wurde ein iterativer Algorithmus entwickelt, dieser erfordert eine 3D-Spule, sowie kinematische Elemente an denen Sensoren angebracht sind. Für diese Applikationen wurde eine sehr effiziente und robuste echtzeitfähige Lokalisierung entwickelt.
+   Für beide Lokalisierungsalgorithmen gilt, dass der Aufbau an die Algorithmik angepasst sein muss und diese nicht flexibel in magnetischen Lokalisierungen eingesetzt werden können.
+
    \subsection{Verbesserungspotential}
-   -Anpassung der Hardware, Sensorik an Aktuator
-   -Verbesserte Nachverarbeitung
-   ->Kalman-Filter optimal
+   In dieser Arbeit wurden Sensoren von \textit{Stefan Mayer}, diese sind einfach in der Handhabung und können in ungeschirmter Umgebung eingesetzt werden. Für erste Versuche und Machbarkeitsanalysen ist dies eine gute Wahl, da sehr schnell Ergebnisse geliefert werden können. Eine Alternative könnte angepasstere Sensorik sein. Die Firma Manus verwendet sowohl auf Senderseite als auch auf Empfängerseite kleine SMD-3D-Spulen\,\cite{saggio_quasi-static_2025}. Diese sind kommerziell verfügbar und kostengünstig. Diese könnten das Ergebnis verbessern, jedoch müssten auf Hardwareseite Anpassungen erfolgen und Leiterplatten daran angepasst werden.
+   Die Nachverarbeitung ist in dieser Arbeit sehr einfach gehalten, die Positions- und Orientierungsschätzungen werden mit einem Butterworth-Tiefpassfilter gefiltert. Dabei wird nur das Wissen über die erwarteten Frequenzen in der menschlichen Bewegung. Eine bessere Lösung wäre ein Kalman-Filter oder ähnliches. Dies wurde aus Zeitgründen in dieser Arbeit nicht untersucht.
+
    \section{Ausblick}
-
-   \section{Einordnung der Arbeit}
-
-   \subsection{Relative Lokalisierung}
-   Ein Vergleich mit anderen Ansätzen ist relativ schwierig, da die Evaluierung von jeder Gruppe unterschiedlich durchgeführt wird. \cite{santoni_magik_2021} verwendet eine Reihe von Gesten (Öfnnen/Schließen der Hand, einzelnes Bewegen der Fingerspitzen zum Daumen \dots), die gleichzeitig von einem Sensorhandschuh und einem 
-
-   \subsection{Absolute Lokalisierung}
-   \section{Zusammenfassung}
-   \label{sec:ende_zusammenfassung}
-   \label{sec:ende_ausblick}
    \subsection{Prototyp}
-   Bild von Prototyp, Schritte in die als nächstes gegangen werden kann
-   Evaluierung des Gesamtsystems, Anbindung an Roboter, Test ..... 
+   Zum Ende dieser Arbeit wurden die Entwicklungen zusammengefügt und ein erster Prototyp aufgebaut. Dafür hat die Firma \textit{Stefan Mayer} eine kleinere Variante der Fluxgate-Magnetometer entwickelt. Bei diesen wurde das Sensorelement von der Elektronik getrennt, so kann wird das Sensorelement klein genug um an einem Fingerelement befestigt zu werden. Die Elektronik ist für insgesamt 15 Sensoren in einer Box zusammengelegt. Für die Sensoren wurden 3D-Sensorhalterungen und Besfestigungen für die 3D-Spule erstellt. Die Halterungen werden an einem Gartenhandschuh festgeklebt. Der Aufbau ist in Abbildung\,\ref{fig:Prototyp} dargestellt.
+
+   \begin{figure}
+      \centering
+      \includegraphics[width = 0.7\textwidth]{06_ende/images/Prototyp.jpeg}
+      \caption{Prototyp: Auf der linken Seite der ist ein Gartenhandschuh mit angebrachten Sensoren und 3D-Spule zu sehen. Auf der rechten Seite ist die Auswerteelektronik.}
+      \label{fig:Prototyp}
+   \end{figure}
+
+   In einem Echtzeitrahmenwerk wurde die Algorithmik implementiert und eine Visualisierung implementiert. So kann in Echtzeit die Bewegung dargestellt werden. In Abbildung XX ist diese Visualisierung mit der zugehörigen Hand dargestellt.
+
+   \subsection{Die nächsten Schritte}
+   In dieser Arbeit wurde ein System für die Bewegungsanalyse von kinematischen Ketten entwickelt. Es gibt an diesem Punkt unterschiedliche Möglichkeiten um anzusetzen. Zum einen kann weiter an der Schätzung gearbeitet werden, durch eine weitere Untersuchung der Sensorik und Adaptierung dieser, oder durch Verbesserung der Nachverarbeitung. Zum anderen ist die Evaluierung bisher einfach gehalten. Hier könnte der Prototyp im nächsten Schritt verwendet werden und erste Evaluierungen des Gesamtsystems vornehmen. Hier könnten Messreihen mit definierten Gesten aufgenommen werden und diese ausgewertet werden.

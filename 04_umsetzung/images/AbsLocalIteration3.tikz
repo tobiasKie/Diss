@@ -14,8 +14,8 @@
 \begin{tikzpicture}
 
 \begin{axis}[%
-width=3.566in,
-height=3.566in,
+width=1.0in,
+height=1.0in,
 at={(0in,0in)},
 scale only axis,
 xmin=-2,
@@ -31,7 +31,7 @@ axis y line*=left,
 xmajorgrids,
 ymajorgrids
 ]
-\addplot [color=mycolor1,opacity=0.5, line width=2.0pt, forget plot]
+\addplot [color=mycolor1,opacity=0.5, line width=1.0pt, forget plot]
   table[row sep=crcr]{%
 0.0690758075781653	1.09792852117736\\
 0.137674867418098	1.08980879278868\\
@@ -135,7 +135,7 @@ ymajorgrids
 7.07987199537589e-16	1.10064241629821\\
 0.0690758075781656	1.09792852117736\\
 };
-\addplot [color=mycolor2,opacity=0.5, line width=2.0pt, forget plot]
+\addplot [color=mycolor2,opacity=0.5, line width=1.0pt, forget plot]
   table[row sep=crcr]{%
 0.0627595362083972	2.99753426264456\\
 0.12508591835043	2.99015699981292\\
@@ -239,21 +239,21 @@ ymajorgrids
 6.43249059870655e-16	3\\
 0.0627595362083975	2.99753426264456\\
 };
-\addplot[-Straight Barb, color=mycolor1,opacity=0.75, line width=2.0pt, point meta={sqrt((\thisrow{u})^2+(\thisrow{v})^2)}, point meta min=0, quiver={u=\thisrow{u}, v=\thisrow{v}, every arrow/.append style={-{Straight Barb[angle'=18.263, scale={2/1000*\pgfplotspointmetatransformed}]}}}]
+\addplot[-Straight Barb, color=mycolor1,opacity=0.75, line width=1.0pt, point meta={sqrt((\thisrow{u})^2+(\thisrow{v})^2)}, point meta min=0, quiver={u=\thisrow{u}, v=\thisrow{v}, every arrow/.append style={-{Straight Barb[angle'=45, scale={0.5/1000*\pgfplotspointmetatransformed}]}}}]
  table[row sep=crcr] {%
 x	y	u	v\\
 0	-0.2	0	0.4\\
 };
-\addplot[-Straight Barb, color=mycolor2,opacity=0.75, line width=2.0pt, point meta={sqrt((\thisrow{u})^2+(\thisrow{v})^2)}, point meta min=0, quiver={u=\thisrow{u}, v=\thisrow{v}, every arrow/.append style={-{Straight Barb[angle'=18.263, scale={2/1000*\pgfplotspointmetatransformed}]}}}]
+\addplot[-Straight Barb, color=mycolor2,opacity=0.75, line width=1.0pt, point meta={sqrt((\thisrow{u})^2+(\thisrow{v})^2)}, point meta min=0, quiver={u=\thisrow{u}, v=\thisrow{v}, every arrow/.append style={-{Straight Barb[angle'=45, scale={0.5/1000*\pgfplotspointmetatransformed}]}}}]
  table[row sep=crcr] {%
 x	y	u	v\\
 0	1.8	0	0.4\\
 };
-\addplot[only marks, mark=*, mark options={}, mark size=5.5000pt, color=mycolor1, fill=mycolor1, forget plot] table[row sep=crcr]{%
+\addplot[only marks, mark=*, mark options={}, mark size=1.5000pt, color=mycolor1, fill=mycolor1, forget plot] table[row sep=crcr]{%
 x	y\\
 0.329609108721522	1.03648101585438\\
 };
-\addplot[only marks, mark=*, mark options={}, mark size=5.5000pt, color=mycolor2, fill=mycolor2, forget plot] table[row sep=crcr]{%
+\addplot[only marks, mark=*, mark options={}, mark size=1.5000pt, color=mycolor2, fill=mycolor2, forget plot] table[row sep=crcr]{%
 x	y\\
 0.319289255268493	1.06664818797581\\
 };

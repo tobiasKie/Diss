@@ -4,26 +4,26 @@
 %  http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz
 %where you can also make suggestions and rate matlab2tikz.
 %
-\definecolor{mycolor1}{rgb}{0.39216,0.83137,0.07451}%
+\definecolor{mycolor1}{rgb}{0.0,1,0.0}%
 %
 \begin{tikzpicture}
 
 \begin{axis}[%
 width=5.0in,
-height=1.5in,
+height=1in,
 at={(0.0in,0.0in)},
 scale only axis,
 xmin=1,
 xmax=15,
-xtick = {1,2,...,15},
+xtick={1,3.8,6.6,9.4,12.2,15},
+xticklabels={0,3,6,9,12,15},
 ymin=-200,
 ymax=200,
 axis background/.style={fill=white},
 axis x line*=bottom,
 axis y line*=left,
 xmajorgrids,
-ymajorgrids,
-legend style={legend cell align=left, align=left, draw=white!15!black}
+ymajorgrids
 ]
 \addplot [color=mycolor1, line width=1.0pt]
   table[row sep=crcr]{%
@@ -1429,7 +1429,6 @@ legend style={legend cell align=left, align=left, draw=white!15!black}
 14.98	137.032110250103\\
 14.99	136.802704884144\\
 };
-\addlegendentry{$\hat{\phi}\tindex{mag}$}
 
 \addplot [color=mycolor1,dashed, line width=4.0pt]
   table[row sep=crcr]{%
@@ -2835,7 +2834,6 @@ legend style={legend cell align=left, align=left, draw=white!15!black}
 14.98	142.857299340487\\
 14.99	142.942200673489\\
 };
-\addlegendentry{$\hat{\phi}\tindex{opt}$}
 
 \end{axis}
 

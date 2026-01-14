@@ -7,8 +7,8 @@
 \begin{tikzpicture}
 
 \begin{axis}[%
-width=5.0in,
-height=5.0in,
+width=3.0in,
+height=3.0in,
 at={(0.0in,0.0in)},
 scale only axis,
 plot box ratio=1 1 1,
@@ -35,8 +35,8 @@ ymajorgrids,
 zmajorgrids,
 legend cell align=left,
 legend pos=south east]
-\addlegendimage{line legend,red}\addlegendentry{$x$-Sensoren}
-\addlegendimage{line legend,green}\addlegendentry{$y$-Sensoren}\addlegendimage{line legend,blue}\addlegendentry{$z$-Sensoren}
+\addlegendimage{line legend,red}\addlegendentry{$x$}
+\addlegendimage{line legend,green}\addlegendentry{$y$}\addlegendimage{line legend,blue}\addlegendentry{$z$}
 ]
 \addplot3[-Straight Barb, color=red, line width=5.0pt, point meta={sqrt((\thisrow{u})^2+(\thisrow{v})^2+(\thisrow{w})^2)}, point meta min=0, quiver={u=\thisrow{u}, v=\thisrow{v}, w=\thisrow{w}, every arrow/.append style={-{Straight Barb[angle'=18.263, scale={1/1000*\pgfplotspointmetatransformed}]}}}]
  table[row sep=crcr] {%
@@ -62,8 +62,8 @@ x	y	z	u	v	w\\
 \end{axis}
 
 \begin{axis}[%
-width=5.0in,
-height=5.0in,
+width=3.0in,
+height=3.0in,
 at={(0in,0in)},
 scale only axis,
 xmin=0,

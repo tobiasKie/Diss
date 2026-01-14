@@ -207,14 +207,14 @@ Die beiden Systeme arbeiten in unterschiedlichen Koordinatensystemen. Das magnet
     \label{fig:CoordSystems}
 \end{figure}
 
-Um die beiden Ergebnisse miteinander vergleichen zu können, müssen diese im gleichen Koordinatensystem sein. Ein Problem ist, dass der Demonstrator aus Abbildung \ref{fig:Demonstrator} nicht reproduzierbar so positionert werden kann, dass beide Koordinatensysteme miteinander ausgerichtet sind. Daher sind an der 3D-Spule optische Marker angebracht, mit deren Hilfe die magnetischen Koordinatenachsen im optischen Koordinatensytem detektiert werden können. Aus den so detektierten Einheitsvektoren ($\vec{e}\tindex{x,Mag},\vec{e}\tindex{y,Mag},\vec{e}\tindex{z,Mag}$) ergibt sich eine Rotationsmatrix $\bvec{R}\tindex{Opt$\rightarrow$Mag}$ zwischen den beiden Koordinatensystemen 
+Um die beiden Ergebnisse miteinander vergleichen zu können, müssen diese im gleichen Koordinatensystem sein. Ein Problem ist, dass der Demonstrator aus Abbildung \ref{fig:Demonstrator} nicht reproduzierbar so positionert werden kann, dass beide Koordinatensysteme miteinander ausgerichtet sind. Daher sind an der 3D-Spule optische Marker angebracht, mit deren Hilfe die magnetischen Koordinatenachsen im optischen Koordinatensytem detektiert werden können. Aus den so detektierten Einheitsvektoren ($\vec{e}\tindex{$x$,Mag},\vec{e}\tindex{$y$,Mag},\vec{e}\tindex{$z$,Mag}$) ergibt sich eine Rotationsmatrix $\bvec{R}\tindex{Opt$\rightarrow$Mag}$ zwischen den beiden Koordinatensystemen 
 
 \begin{equation}
-    \bvec{R}\tindex{Opt${\rightarrow}$Mag} = \left[\begin{array}{c} \vspace{0.2cm} \vec{e}\tindex{x,Mag}^\text{\,T} \\ \vspace{0.2cm}\vec{e}\tindex{y,Mag}^\text{\,T} \\ \vspace{0.2cm}\vec{e}\tindex{z,Mag}^\text{\,T} \end{array}\right].
+    \bvec{R}\tindex{Opt${\rightarrow}$Mag} = \left[\begin{array}{c} \vspace{0.2cm} \vec{e}\tindex{$x$,Mag}^\text{\,T} \\ \vspace{0.2cm}\vec{e}\tindex{$y$,Mag}^\text{\,T} \\ \vspace{0.2cm}\vec{e}\tindex{$z$,Mag}^\text{\,T} \end{array}\right].
     \label{eq:CoordinateTrans}
 \end{equation}
 
-Die optische Orientierung der kinematischen Elemente wird mithilfe der Positionen $\vec{r}\tindex{$i,m$}$ der optischen Marker bestimmt, wobei $i$ die Nummer des Elements ist und $j$ die Nummer des jeweiligen Markers ist. Die Orientierungsschätzung $\hat{\vec{e}}_{\text{opt},i}$ des jeweiligen Elements ergibt sich wie folgt
+Die optische Orientierung der kinematischen Elemente wird mithilfe der Positionen $\vec{r}\tindex{$i,m$}$ der optischen Marker bestimmt, wobei $i$ die Nummer des Elements ist und $m$ die Nummer des jeweiligen Markers ist. Die Orientierungsschätzung $\hat{\vec{e}}_{\text{opt},i}$ des jeweiligen Elements ergibt sich wie folgt
 \begin{equation}
     \hat{\vec{e}}_{\text{opt},i} = \frac{(\vec{r}_{i,1} - \vec{r}_{i,2}) + (\vec{r}_{i,3} - \vec{r}_{i,4}) }{ |(\vec{r}_{i,1} - \vec{r}_{i,2}) + (\vec{r}_{i,3} - \vec{r}_{i,4})|  }.
 \end{equation}
@@ -259,7 +259,7 @@ Die statischen Messungen werden nun verwendet um die händische Kalibrierung zu 
 In einem Bereich von $\pm 2\,\text{cm}$ zu den gemessenen Werten wurden in einem Raster von 0.1\,mm untersucht und die Kombination mit dem geringsten Fehler wurde übernommen. Mit den Werten des ersten Elements wurde dann das zweite Element auf die selbe Art kalibriert, hier mit $N=8$ Aufnahmen. Die Kalibriertenwerte unterscheiden sich leicht zu den händisch gemessenen Werten $\vec{r}_j = (-0.0137\,\text{m},0.0029\,\text{m},0.296\,\text{m})$, $d\tindex{ke,1}=0.008\,\text{m}$, $l\tindex{js,1}=0.063\,\text{m}$, $d\tindex{ke,2}=0.008\,\text{m}$, $l\tindex{js,2}=0.063\,\text{m}$.
 
 \subsubsection{Ergebnisse}
-In den Tabellen\,\ref{tab:Ergebnisse1} und \ref{tab:Ergebnisse2} sind die Ergebnisse der statischen Messungen zu sehen. Darin sind die Gelenkswinkel der magnetischen und der optischen Schätzung aufgetragen. Der mittlere Fehler (\textit{Mean Absolute Error}) für das erste Element beträgt $1.3^\circ$ und für das zweite Element $2.7^\circ$.
+In den Tabellen\,\ref{tab:Ergebnisse1} und \ref{tab:Ergebnisse2} sind die Ergebnisse der statischen Messungen zu sehen. Darin sind die Gelenkswinkel der magnetischen und der optischen Schätzung aufgetragen. Der mittlere Fehler für das erste Element beträgt $1.3^\circ$ und für das zweite Element $2.7^\circ$.
 
 % hier noch Varianz hinzufügen
 \begin{table}[h]
@@ -326,7 +326,7 @@ In den Tabellen\,\ref{tab:Ergebnisse1} und \ref{tab:Ergebnisse2} sind die Ergebn
     \label{tab:Ergebnisse2}
   \end{table} 
   
-  Das Kamerasystem liefert standardmäßig mit einer Abtastrate von 100\,Hz neue Positionen. Um beide System gut miteinander vergleichen zu können, wurde die Rahmenlänge der Signalverarbeitung so angepasst, dass die magnetische Schätzung Werte mit 100\,Hz liefert. In Abbildung\,\ref{fig:RawResults} sind die Ergebnisse der dynamischen Aufnahme ohne Nachverarbeitung dargestellt. 
+  Das Kamerasystem liefert standardmäßig mit einer Abtastrate von 100\,Hz neue Positionen. Um beide System gut miteinander vergleichen zu können, wurde die Rahmenlänge der Signalverarbeitung so angepasst, dass die magnetische Schätzung Werte mit 100\,Hz liefert, die Rahmenlänge beträgt $n\tindex{Frame}=480$. In Abbildung\,\ref{fig:RawResults} sind die Ergebnisse der dynamischen Aufnahme ohne Nachverarbeitung dargestellt. 
   \begin{figure}[h]
     \centering
     \inputTikZ{1}{05_eval/images/legend.tikz} 
@@ -376,17 +376,31 @@ In den Tabellen\,\ref{tab:Ergebnisse1} und \ref{tab:Ergebnisse2} sind die Ergebn
     \caption{Ergebnisse für das zweite Element: Die Darstellung ist wie in Abbildung\,\ref{fig:ResultsFirstElement}.}
     \label{fig:ResultsSecondElement}
   \end{figure}
-  Die Aufnahme der Daten wurde nicht synchronisiert. Bei den statischen Messungen ist dies kein Problem, für die dynamischen Messungen wurden die magnetischen Schätzungen so verschoben, dass diese möglichst gut mit den optischen Daten korrelieren.
+Die dynamischen Daten wurden auch mit einem LookUpTable (siehe Kapitel XX) prozessiert. Die Ergebnisse sind in Abbildung\,\ref{fig:AngelResultLookUp} dargestellt. Der mittlere Fehler für das erste Element beträgt $15.4^\circ$ und für das zweite Element $15.0^\circ$.
 
+  \begin{figure}[h]
+    \centering
+    \subfloat[Gelenkwinkel für das erste Gelenk]{
+      \inputTikZ{1}{05_eval/images/Angle1_lookup.tikz}
+      \label{fig:Angle1LookUp}
+    }
+    \subfloat[Gelenkwinkel für das zweite Gelenk]{
+      \inputTikZ{1}{05_eval/images/Angle2_lookup.tikz}
+      \label{fig:Angle2LookUp}
+    }
+    \caption{Ergebnis der Schätzung für die Verwendung eines LookUpTable }
+    \label{fig:AngelResultLookUp}
+  \end{figure}
+Die Aufnahme der Daten wurde nicht synchronisiert. Bei den statischen Messungen ist dies kein Problem, für die dynamischen Messungen wurden die magnetischen Schätzungen zeitlich so verschoben, dass diese möglichst gut mit den optischen Daten korrelieren.
 \subsubsection{Diskussion}
 
-Das magnetische System wurde mit einem kommerziellen Kamerasystem von \textit{Qualisys} verglichen. 
+Die statischen Messungen zeigen den geringsten Fehler, wohingegen die dynamischen Messungen einen leicht größeren Fehler haben. In der Simulation wurde eine Bewegung mit 2\,Hz geprüft, hier hat die Bewegung zu einem zusätzlichen Fehler von $1^\circ$ geführt. In den Labormessungen beträgt der Fehlerunterschied etwa $0.6^\circ$. Dies entspricht den Erwartungen nach den Simulationen. Das dynamische Ergebnis für das zweite Element zeigt den größten Fehler. In diese Messung fließen zwei Fehlerfaktoren eine, zum einen fließt der Fehler des ersten Elements und zum anderen der zusätzliche Fehler durch die Bewegung. Daher muss hier folgerichtig der größte Fehler gemessen werden. 
 
-Die statischen Messungen zeigen den geringsten Fehler, wohingegen die dynamischen Messungen einen leicht größeren Fehler haben. In der Simulation wurde eine Bewegung mit 2\,Hz geprüft, hier hat die Bewegung zu einem zusätzlichen Fehler von $1^\circ$ geführt. In den Labormessungen beträgt der Fehlerunterschied etwa $0.6^\circ$. Dies entspricht den Erwartungen nach den Simulationen. Das dynamische Ergebnis für das zweite Element zeigt den größten Fehler. In diese Messung fließen zwei Fehlerfaktoren eine, zum einen fließt der Fehler des ersten Elements und zum anderen der zusätzliche Fehler durch die Bewegung. Daher muss hier folgerichtig der größte Fehler gemessen werden.
+Die Prozessierung mit einem LUT zeigt einen deutlich größeren Fehler für beide Elemente. Der Fehler lässt sich aus dem Modell erklären, da hier die Kette als unendlich dünn angenommen wird. Die Schätzung der kinematischen Elemente kann zwar einfacher geschätzt werden, jedoch auf Kosten der Modellierung und auch in der Genauigkeit.
 
 Der mittlere Fehler liegt in allen Szenarien im einstelligen $^\circ$-Bereich und für die statischen Messungen des ersten Elements am niedrigsten bei $1.3^\circ$. Der verbleibende Fehler kann unterschiedliche Gründe haben, in der Modellbildung wurden die Sensoren als in einem Punkt lokalisiert angenommen, die Dipolnäherung ist nicht beliebig genau und die Sensoren haben durch den Ferritkern selbst eine leicht verezerrende Wirkung auf das Magnetfeld. Die quantitativen Messungen haben gezeigt, dass mit dem vorgestellten Verfahren die Bewegung einer kinematischen Kette, mit einem Fehler im niedrigen einstelligen $^\circ$-Bereich, getrackt werden kann.
 
-Es sollen kurz die dynamischen Messungen ohne Nachverarbeitung analysiert werden um auf potentielle Störursachen schließen zu können. Mit einer kürzeren Rahmenlänge von 256 (5.3\,ms) wurden die Daten prozessiert um eine größere Zeitauflösung zu erreichen und eine Frequenzanalyse durchgeführt. Diese ist in Abbildung\,\ref{fig:FFTAngles} dargestellt. 
+Es werden kurz die dynamischen Messungen ohne Nachverarbeitung analysiert um auf potentielle Störursachen schließen zu können. Mit einer kürzeren Rahmenlänge von 256 (5.3\,ms) wurden die Daten prozessiert um eine größere Zeitauflösung zu erreichen und eine Frequenzanalyse durchgeführt. Diese ist in Abbildung\,\ref{fig:FFTAngles} dargestellt. 
 
 \begin{figure}[h]
   \centering
@@ -410,8 +424,8 @@ Darin ist gut zu sehen, dass es tieffrequent (im Bereich bis 5\,Hz) Anteile gibt
 \begin{figure}[h]
   \centering
   \subfloat[Simulationssetup]{
-  \scalefont{2}
-  \inputTikZ{0.6}{05_eval/images/AbsSimSensorSetup.tikz}
+  \scalefont{1}
+  \inputTikZ{1}{05_eval/images/AbsSimSensorSetup.tikz}
   \label{fig:SimAbsSetup}
   }
   \subfloat[Laboraufbau]{
@@ -421,9 +435,10 @@ Darin ist gut zu sehen, dass es tieffrequent (im Bereich bis 5\,Hz) Anteile gibt
   }
   \caption{Aufbauten für die absolut Lokalisierung: (a) zeigt das Simulationssetup, (b) zeigt den realen Aufbau.}
   \label{fig:AbsSetup}
-\end{figure} 
+\end{figure}
+
 \subsection{Fehlermaß}
-Bei der Auswertung der absoluten Lokalisierung müssen zum einen die Position und die Orientierung evaluiert werden. Bei der Position ist dieses naheliegend die euklidische Abstand zwischen der magnetischen Schätzung und dem Ergebnis der optischen Schätzung. Beim Vergleich der Orientierung ist dies komplexer, da bei Eulerwinkeln keine euklidische Distanz existiert. Hier soll ein Skalar eingeführt werden, der ein Maß für die Qualität der Schätzung ist. 
+Bei der Auswertung der absoluten Lokalisierung müssen zum einen die Position und die Orientierung evaluiert werden. Bei der Position ist es naheliegend den euklidischen Abstand zwischen der magnetischen Schätzung und dem Ergebnis der optischen Schätzung zu verwenden. Beim Vergleich der Orientierung ist dies komplexer, da bei Eulerwinkeln keine euklidische Distanz existiert. Hier soll ein Skalar eingeführt werden, der ein Maß für die Qualität der Schätzung ist. 
 
 Die Orientierung der 3D-Spule $\bvec{R}\tindex{RPY}$ ist die Verdrehung des Spulekoordinatensystem im Vergleich zum globalen Koordinatensystem. Die einzelnen Achsen des lokalen Koordinatensystems beschrieben im globalen Koordinatensystem sind die Spalten der Rotationsmatrix
 
@@ -438,30 +453,7 @@ In der Evaluierung werden diese magnetisch und optische geschätzt, also die Koo
 \begin{equation}
     \bvec{R}\tindex{Eval} = \bvec{R}\tindex{RPY,mag} (\bvec{R}\tindex{RPY,opt})^{-1}.
 \end{equation}
-Aus $\bvec{R}\tindex{Eval}$ wird ein äquivalentes Quaternion bestimmt. Quaternionen sind Vektoren mit vier Komponenten, die in der Informatik häufig eingesetzt werden um räumliche Rotationen zu beschreiben. Der Vorteil ist, dass diese weniger Speicherplatz benötigen Referenz. Die Komponenten eines Quaternions $\bvec{q}$ kann mit der Rotationsachse $\vec{e}\tindex{Rot}$ und dem Drehwinkel $\phi$ beschrieben werden, wobei
-
-\begin{equation}
-  \vec{e}\tindex{rot} = \begin{pmatrix}
-    x\tindex{Rot} \\
-    y\tindex{Rot} \\
-    z\tindex{Rot} 
-\end{pmatrix},
-\end{equation}
-
-\begin{equation}
-    \bvec{q} = \begin{pmatrix}
-        \cos(\frac{\phi}{2}) \\
-        \sin(\frac{\phi}{2})\,x\tindex{Rot} \\
-        \sin(\frac{\phi}{2})\,y\tindex{Rot} \\
-        \sin(\frac{\phi}{2})\,z\tindex{Rot} 
-    \end{pmatrix} = \begin{pmatrix}
-      w \\
-      x \\
-      y \\
-      z 
-  \end{pmatrix} .
-\end{equation}
-Aus $\bvec{R}\tindex{Eval}$ wird das zugehörige Quaternion $\bvec{q}\tindex{Eval}$ bestimmt, wobei hier nur die erste Komponente $w$ benötigt wird. Zunächst werden die drei Eulerwinkel $\theta\tindex{Eval},\phi\tindex{Eval},\psi\tindex{Eval}$ wie in den Gleichungen\,\ref{eq:ThetaOri}\,,\ref{eq:PsiOri}\,,\ref{eq:PhiOri} aus $\bvec{R}\tindex{Eval}$ bestimmt. Daraus ergeben sich drei Quaternionen $\bvec{q}\tindex{z},\bvec{q}\tindex{y},\bvec{q}\tindex{x}$
+Aus $\bvec{R}\tindex{Eval}$ wird ein äquivalentes Quaternion bestimmt, wobei hier nur die erste Komponente $w$ benötigt wird. Zunächst werden die drei Eulerwinkel $\theta\tindex{Eval},\phi\tindex{Eval},\psi\tindex{Eval}$ wie in den Gleichungen\,\ref{eq:ThetaOri}\,,\ref{eq:PsiOri}\,,\ref{eq:PhiOri} aus $\bvec{R}\tindex{Eval}$ bestimmt. Daraus ergeben sich drei Quaternionen $\bvec{q}\tindex{z},\bvec{q}\tindex{y},\bvec{q}\tindex{x}$, die jeweils eine Drehung beschreiben
 
 \begin{equation}
   \bvec{q}\tindex{z} = \begin{pmatrix}
@@ -576,7 +568,7 @@ In Abbildung\,\ref{fig:AbsMovement} ist das Ergebnis dargestellt. Bei einer Bewe
 Das Ergebnis ist in Abbildung\,\ref{fig:PosSimEval} dargestellt. Darin ist gut zu sehen, dass in der Mitte des Aufbaus die Schätzung am robustesten ist. Es zeigt außerdem, dass die Positionsschätzung außerdem in der Nähe der Symmetrieachse robuster ist. Das kann zum einen durch das SNR auf Senderseite erklärt werden. Das Sensorrauschen ist unabhängig vom Ort der Spule, jedoch nimmt das Nutzsignal mit $\frac{1}{r^3}$ ab. Somit ist auf der Symmetrieachse der Abstand zu den Sensoren kleiner als in den Ecken und das SNR besser. Außerdem lohnt hier ein Blick auf die Form der Äquipotentialflächen, diese sind in Abbildung\,\ref{fig:AbslocalIterations} dargestellt. Darin ist gut zu erkennen, dass in Richtung der Sensorachse der Verlauf der Kurve senkrecht dazu ist. Die zu schätzende Positionskomponente verändert sich in diesem Fall nur sehr gering. Eine Veränderung der Distanzinformation $g$ eines Sensors hat, daher nur eine kleine Änderung. Je weiter außen man auf der Kurve ist, desto größer wird die Steigung. Hier hat eine Variation von $g$ direkt einen größeren Einfluss.
 
 \paragraph{Einfluss eines Positionsfehlers auf die Orientierungsschätzung}
-In Abbildung\,\ref{fig:stdAbwOrPosVar} ist dargestellt, wie sich im Mittel die Orientierung in Abhängigkeit von einem Positionsfehler verhält. Die extrahierten MV bleiben korrekt, nur die berechneten $\vec{e}^{\,\text{Glob}}\tindex{max}$ sind fehlerhaft. Die Simulation hat ergeben, dass wenn der Positionsfehler im Bereich bis zu 0.1\,m liegt, der mittlere Winkelfehler sich nahezu linear verhält. Der Winkelfehler steigt dabei um etwa $1^\circ$ pro cm Positionsfehler.  
+In Abbildung\,\ref{fig:stdAbwOrPosVar} ist dargestellt, wie sich im Mittel die Orientierung in Abhängigkeit von einem Positionsfehler verhält. Die extrahierten MV bleiben korrekt, nur die berechneten $\vec{e}^{\,\text{Glob}}\tindex{max}$ sind fehlerhaft. Die Simulation hat ergeben, dass wenn der Positionsfehler im Bereich bis zu 0.1\,m liegt, der mittlere Winkelfehler sich nahezu linear verhält. Der Winkelfehler steigt dabei um etwa $1^\circ/\text{cm}$ Positionsfehler.  
 
 \paragraph{Einfache Bewegung}
 Abbildung\,\ref{fig:AbsMovement} zeigt das Ergebnis für eine relativ einfache Bewegung. Dabei ist zum einen die $x$-Komponente über der Zeit dargestellt. Die magnetische Schätzung und die Werte aus der Simulation liegen dabei nahezu übereinander. Der Fehler ist über den gesamten Verlauf sehr gering und bewegt sich im sub-mm-Bereich. Auffällig ist, dass in der Mitte des Aufbaus der Fehler geringer ist. Hier ist wieder zu erkennen, dass die Schätzung in der Mitte des Aufbaus robuster ist.  
@@ -584,17 +576,6 @@ Abbildung\,\ref{fig:AbsMovement} zeigt das Ergebnis für eine relativ einfache B
 \subsection{Experimentelle Evaluierung}
 Für die Experimentelle Synchronisierung wurden statische und dynamische Messungen durchgeführt. Jede Messsequenz hat eine Länge von 15\,s.
 \subsubsection{Räumliche Synchronisierung}
-Die Koordinatenachsen im Lokalisierungssetup sind durch die Ausrichtung der Sensorpaarachsen definiert. Das Setup ist in Abbildung\,\ref{fig:SpatialSyncAbslocal} dargestellt. Die Sensoren sind an PVC-Streben befestigt, die mit der Sensorachse ausgerichtet sind (Rot = $x$,Grün = $y$,Blau = $z$). Die zusammengehörenden Sensoren sind 0.5\,m voneinander entfernt. An den Streben sind ebenfalls an jeder Strebe zwei optische Marker (Rot = $x$,Grün = $y$,Blau = $z$, mit leicht erhöhter Farbhelligkeit), mit denen die magnetischen Koordinatenachsen im optischen System $\vec{e}\tindex{x,mag,opt},\vec{e}\tindex{y,mag,opt},\vec{e}\tindex{z,mag,opt}$ bestimmt werden können. Dafür wird die Position der Marker $\vec{r}\tindex{x,1},\vec{r}\tindex{x,2},\vec{r}\tindex{y,1},\vec{r}\tindex{y,2},\vec{r}\tindex{z,1},\vec{r}\tindex{z,2}$ bestimmt und die Koordinatenachsen berechnet
-
-\begin{equation}
-  \vec{e}\tindex{x,mag,opt} = \frac{\vec{r}\tindex{x,2}-\vec{r}\tindex{x,1}}{|\vec{r}\tindex{x,2}-\vec{r}\tindex{x,1}|},
-\end{equation}
-\begin{equation}
-  \vec{e}\tindex{y,mag,opt} = \frac{\vec{r}\tindex{y,2}-\vec{r}\tindex{y,1}}{|\vec{r}\tindex{y,2}-\vec{r}\tindex{y,1}|},
-\end{equation}
-\begin{equation}
-  \vec{e}\tindex{z,mag,opt} = \frac{\vec{r}\tindex{z,2}-\vec{r}\tindex{z,1}}{|\vec{r}\tindex{z,2}-\vec{r}\tindex{z,1}|}.
-\end{equation}
 
 \begin{figure}[h]
   \centering
@@ -606,9 +587,23 @@ Die Koordinatenachsen im Lokalisierungssetup sind durch die Ausrichtung der Sens
     \put(34.5,24){\textcolor{blue}{$\vec{r}\tindex{z,1}$}}
     \put(33,48){\textcolor{blue}{$\vec{r}\tindex{z,2}$}}
   \end{overpic}
-  \caption{Aufbau für die Evaluierung der Lokalisierung: An dem Würfel sind PVC-Streben mit jeweils zwei Sensoren und zwei optischen Markern für $x$(rot),$y$(grün) und $z$(blau). Die Sensoren sind mit den helleren Rechtecken gekennzeichnet.}
+  \caption{Aufbau für die Evaluierung der Lokalisierung: An dem Würfel sind PVC-Streben mit jeweils zwei Sensoren und zwei optischen Markern für $x$(rot),$y$(grün) und $z$(blau). Die Sensoren sind mit helleren Rechtecken gekennzeichnet.}
   \label{fig:SpatialSyncAbslocal}
 \end{figure}
+
+Die Koordinatenachsen im Lokalisierungssetup sind durch die Ausrichtung der Sensorpaarachsen definiert. Das Setup ist in Abbildung\,\ref{fig:SpatialSyncAbslocal} dargestellt. Die Sensoren sind an PVC-Streben befestigt, die mit der Sensorachse ausgerichtet sind (Rot = $x$,Grün = $y$,Blau = $z$). Durch die Art der Befestigung wird sichergestellt, dass die Sensorpaare auf einer Geraden liegen. Die zusammengehörenden Sensoren sind 0.5\,m voneinander entfernt. An den Streben sind ebenfalls an jeder Strebe zwei optische Marker (Rot = $x$,Grün = $y$,Blau = $z$, mit leicht erhöhter Farbhelligkeit), mit denen die magnetischen Koordinatenachsen im optischen System $\vec{e}\tindex{x,mag,opt},\vec{e}\tindex{y,mag,opt},\vec{e}\tindex{z,mag,opt}$ bestimmt werden können. Dafür wird die Position der Marker $\vec{r}\tindex{x,1},\vec{r}\tindex{x,2},\vec{r}\tindex{y,1},\vec{r}\tindex{y,2},\vec{r}\tindex{z,1},\vec{r}\tindex{z,2}$ bestimmt und die Koordinatenachsen berechnet
+
+\begin{equation}
+  \vec{e}\tindex{x,mag,opt} = \frac{\vec{r}\tindex{x,2}-\vec{r}\tindex{x,1}}{|\vec{r}\tindex{x,2}-\vec{r}\tindex{x,1}|},
+\end{equation}
+\begin{equation}
+  \vec{e}\tindex{y,mag,opt} = \frac{\vec{r}\tindex{y,2}-\vec{r}\tindex{y,1}}{|\vec{r}\tindex{y,2}-\vec{r}\tindex{y,1}|},
+\end{equation}
+\begin{equation}
+  \vec{e}\tindex{z,mag,opt} = \frac{\vec{r}\tindex{z,2}-\vec{r}\tindex{z,1}}{|\vec{r}\tindex{z,2}-\vec{r}\tindex{z,1}|}.
+\end{equation}
+
+
 Wie in Gleichung\,\ref{eq:CoordinateTrans} lässt sich aus den Koordinatenachsen eine Rotationsmatrix zwischen den beiden Systemen bestimmen. Es bleibt bei der absoluten Lokalisierung ein Offset ziwschen den Ursprüngen. Dafür werden die statischen Messungen verwendet und die Differenz zwischen jeweils zwischen magnetischer und optischer Schätzung bestimmt. Diese Differenz wird als Translation auf die optische Schätzung angewendet. Die Koordinatensysteme teilen somit die Ausrichtung und den Ursprung.
 
 \subsubsection{Ergebnisse}
@@ -682,7 +677,7 @@ Es wurde mit einer statischen Evaluierung begonnen, alle Aufnahmen waren hier 10
   \caption{Ergebnisse der statischen Orientierungsschätzung, der mittlere Fehler beträgt $16.1^\circ$ }
   \label{tab:ErgebnisseAbsOri}
 \end{table}
-Für die dynamische Evaluierung wurde eine 3D-Spule im Raum bewegt und gleichzeitig magnetische und optische Signale aufgenommen. Die Ergebnisse der Positionsschätzung sind in Abbildung\,\ref{fig:DynAbsPos} dargestellt. Die erste Sekunde der Aufnahme konnte nicht verwendet werden, da in der optischen Schätzung teilweise keine Position des Rigid-Bodies prozessiert werden konnte. Hier waren die Marker für einige Kameras teilweise verdeckt.
+Für die dynamische Evaluierung wurde eine 3D-Spule im Raum bewegt und gleichzeitig magnetische und optische Signale aufgenommen. Die Ergebnisse der Positionsschätzung sind in Abbildung\,\ref{fig:DynAbsPos} dargestellt. Die erste Sekunde der Aufnahme konnte nicht verwendet werden, da in der optischen Schätzung teilweise keine Position des \textit{Rigid body} prozessiert werden konnte. Hier waren die Marker für einige Kameras teilweise verdeckt.
 
 \begin{figure}[h]
   \centering
@@ -694,19 +689,20 @@ Für die dynamische Evaluierung wurde eine 3D-Spule im Raum bewegt und gleichzei
 Die Orientierungsschätzung ist in Abbildung\,\ref{fig:DynAbsAngle} dargestellt. Darin sind die Eulerwinkel des optischen Systems im Vergleich zu den magnetischen Schätzungen dargestellt.
 \begin{figure}[h]
   \centering
-  \subfloat[$\theta$]{
+  \inputTikZ{1}{05_eval/images/legend_abslocal.tikz} 
+  \subfloat{
     \scalefont{1}
     \inputTikZ{1}{05_eval/images/DynEvalAngleTheta.tikz}
     \label{fig:DynTheta}
   }
   \\
-  \subfloat[$\phi$]{
+  \subfloat{
     \scalefont{1}
     \inputTikZ{1}{05_eval/images/DynEvalAnglePhi.tikz}
     \label{fig:DynPhi}
   } 
   \\
-  \subfloat[$\psi$]{
+  \subfloat{
     \scalefont{1}
     \inputTikZ{1}{05_eval/images/DynEvalAnglePsi.tikz}
     \label{fig:DynPsi}
@@ -718,14 +714,14 @@ Der quantitative Fehler der magnetischen Schätzung ist in Abbildung\,\ref{fig:E
 \begin{figure}[h]
   \centering
   \subfloat[Euklidische Distanz]{
-    \scalefont{2}
-    \inputTikZ{0.45}{05_eval/images/DynEvalPosFehler.tikz}
+    \scalefont{1}
+    \inputTikZ{1}{05_eval/images/DynEvalPosFehler.tikz}
     \label{fig:MovementComponent}
   }
   \\
   \subfloat[$\alpha\tindex{Eval}$]{
-    \scalefont{2}
-    \inputTikZ{0.45}{05_eval/images/DynEvalWinkelfehler.tikz}
+    \scalefont{1}
+    \inputTikZ{1}{05_eval/images/DynEvalWinkelfehler.tikz}
     \label{fig:ErrorMovement}
   } 
   \caption{Fehler der dynamischen Messsung über die Messsequenz}
@@ -733,10 +729,12 @@ Der quantitative Fehler der magnetischen Schätzung ist in Abbildung\,\ref{fig:E
 \end{figure}
   
 \subsubsection{Diskussion}
-Die absolute Lokalisierung zeigt einen gesamten Fehler von 15.2\,mm. Der mittlere Fehler ist über alle drei Koordinaten relativ konstant und beträgt für $x = 7.6\,\text{mm}$, für $y = 8.2\,\text{mm}$ und für $z = 6.3\,\text{mm}$. Aufgrund des Aufbaus war aufgrund der Symmetrie davon auszugehen, dass das Verhalten aller drei Achsen ähnlich ist. Die Orientierungsschätzung hat im statischen Fall einen mittleren Fehler von $16.1^\circ$, 
-- Dynamische Messung korreliert mit Optischen Daten 
-- Orientierungsschätzung nur teilweise, Orte an denen die Abweichungen sehr groß ist
-- Teilweise Aussetzer, 
-- Erhöhte Orientierungsfehler korreliert nicht mit dem Fehler in der Position
+Die absolute Lokalisierung zeigt einen mittleren Fehler von 15.2\,mm. Der mittlere Fehler ist über alle drei Koordinaten relativ konstant und beträgt für $x = 7.6\,\text{mm}$, für $y = 8.2\,\text{mm}$ und für $z = 6.3\,\text{mm}$. Aufgrund des Aufbaus und der Symmetrie war davon auszugehen, dass das Verhalten aller drei Achsen ähnlich ist. Die Orientierungsschätzung hat im statischen Fall einen mittleren Fehler von $16.1^\circ$. 
+
+Die dynamischen Messungen haben einen mittleren Fehler von 17.5\,mm. Dies ist leicht erhöht im Vergleich zu den statischen Messungen. Die Simulationen vorher haben bereits gezeigt, dass die Bewegung zu keinem großen zusätzlichen Fehler führt. Anders sieht es bei der Orientierungsschätzung aus. Der mittlere Fehler der dynamischen Messung ist knapp $10^\circ$ größer als bei den statischen Messungen. Auffällig ist, dass es zusätzlich Ausreißer gibt, die bei fast $180^\circ$ liegen. Es fällt auf, dass diese Ausreißer nicht mit großen Fehlern in der Position korrelieren. 
+
+Es kann verschiedene Gründe für die Fehler geben. Die Sensoren werden weiter als Punktsensoren ohne räumliche Ausdehnung beschrieben. Da das Sensorelement insgesamt eine Länge von 2\,cm hat, führt dieser Modellierungsfehler zu Fehlern im Ergebnis. Der gleiche Fehler liegt auch bei der Modellierung der Quelle vor. Die Vermessung des Aufbaus wurde per Hand durchgeführt. Hier kann es zu Fehlern gekommen sein, Fehler an dieser Stelle sollten mit einer geeigneten automatisierten Routine möglichst ausgeschlossen werden. 
+
+Die Evaluation zeigt, dass die Algorithmen prinzipiell geeignet sind um die Position und auch die Orientierung zu schätzen. Es gibt jedoch Bedarf zur Verbesserung, da besonders die Orientierung teilweise einen sehr großen Fehler zeigen.
 
 

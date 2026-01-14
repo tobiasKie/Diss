@@ -27,9 +27,9 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="2"
-     inkscape:cx="10"
-     inkscape:cy="302.5"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="406.5864"
+     inkscape:cy="150.61374"
      inkscape:window-width="3440"
      inkscape:window-height="1369"
      inkscape:window-x="-8"
@@ -147,7 +147,7 @@
        y="-48.102299"
        transform="rotate(45)" />
     <path
-       style="fill:#000000;fill-opacity:1;stroke:#0000ff;stroke-width:1.20469;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleStart);paint-order:fill markers stroke"
+       style="fill:#ff0000;fill-opacity:1;stroke:#ffb200;stroke-width:1.20469;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleStart);paint-order:fill markers stroke"
        d="m 115.32124,55.695494 10.4287,10.428698"
        id="path11349" />
     <rect
@@ -159,7 +159,7 @@
        y="167.90518"
        transform="rotate(-60)" />
     <path
-       style="fill:#000000;fill-opacity:1;stroke:#0000ff;stroke-width:1.20469;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleStart-6);paint-order:fill markers stroke"
+       style="fill:#000000;fill-opacity:1;stroke:#ffb200;stroke-width:1.20469;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleStart-6);paint-order:fill markers stroke"
        d="m 168.75384,56.699599 7.37421,-12.772494"
        id="path11349-1" />
     <rect
@@ -282,7 +282,7 @@
        cy="46.302082"
        r="23.283333" />
     <circle
-       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:bevel;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+       style="fill:#ffb200;fill-opacity:1;stroke:none;stroke-width:1;stroke-linejoin:bevel;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
        id="path13703"
        cx="242.35834"
        cy="46.302082"
@@ -292,13 +292,13 @@
        d="m 232.59635,82.591783 7.73252,-27.309126"
        id="path13705" />
     <circle
-       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.5;stroke-linejoin:bevel;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+       style="fill:#ffb200;fill-opacity:1;stroke:#ffb200;stroke-width:1.5;stroke-linejoin:bevel;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
        id="path14386"
        cx="113.65636"
        cy="53.881535"
        r="2.6192415" />
     <circle
-       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.5;stroke-linejoin:bevel;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+       style="fill:#ffb200;fill-opacity:1;stroke:#ffb200;stroke-width:1.5;stroke-linejoin:bevel;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
        id="path14386-3"
        cx="167.34897"
        cy="58.869793"

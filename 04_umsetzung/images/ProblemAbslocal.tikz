@@ -10,8 +10,8 @@
 \begin{tikzpicture}
 
 \begin{axis}[%
-width=5in,
-height=5in,
+width=2.5in,
+height=2.5in,
 at={(0.0in,0.0in)},
 scale only axis,
 xmin=-1,
@@ -1044,23 +1044,23 @@ x	y	u	v\\
 -0.0116884225079029	2.92822578033535\\
 -2.27372276321679e-16	2.92831776672256\\
 };
-\addplot[only marks, mark=*, mark options={}, mark size=6.0pt, draw=red, fill=red, forget plot] table[row sep=crcr]{%
+\addplot[only marks, mark=*, mark options={}, mark size=3.0pt, draw=red, fill=red, forget plot] table[row sep=crcr]{%
 x	y\\
 3.53972763115368e-05	0.928317765878982\\
 };
-\addplot[only marks, mark=*, mark options={}, mark size=6.0pt, draw=mycolor1, fill=mycolor1, forget plot] table[row sep=crcr]{%
+\addplot[only marks, mark=*, mark options={}, mark size=3.0pt, draw=mycolor1, fill=mycolor1, forget plot] table[row sep=crcr]{%
 x	y\\
 3.06619982857253e-05	1.07168223391042\\
 };
-\addplot[only marks, mark=*, mark options={}, mark size=6.0pt, draw=mycolor2, fill=mycolor2, forget plot] table[row sep=crcr]{%
+\addplot[only marks, mark=*, mark options={}, mark size=3.0pt, draw=mycolor2, fill=mycolor2, forget plot] table[row sep=crcr]{%
 x	y\\
 3.06619982857253e-05	0.999999999894699\\
 };
 \end{axis}
 
 \begin{axis}[%
-width=5.0in,
-height=5.0in,
+width=2.50in,
+height=2.50in,
 at={(0in,0in)},
 scale only axis,
 xmin=0,

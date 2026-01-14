@@ -6,18 +6,19 @@
 %
 \definecolor{mycolor1}{rgb}{0.00000,0.44700,0.74100}%
 \definecolor{mycolor2}{rgb}{0.00000,0.44706,0.74118}%
-\definecolor{mycolor3}{rgb}{0.39216,0.83137,0.07451}%
+\definecolor{mycolor3}{rgb}{0.0,1,0.0}%
 %
 \begin{tikzpicture}
 
 \begin{axis}[%
 width=5.0in,
-height=3.0in,
+height=2.50in,
 at={(0.0in,0.0in)},
 scale only axis,
 xmin=1,
 xmax=15,
-xtick={1,2,...,15},
+xtick={1,3.8,6.6,9.4,12.2,15},
+xticklabels={0,3,6,9,12,15},
 xlabel={Zeit in s},
 ymin=300,
 ymax=900,
@@ -29,7 +30,7 @@ axis x line*=bottom,
 axis y line*=left,
 xmajorgrids,
 ymajorgrids,
-legend style={at={(0.25,1.0)},legend cell align=left, align=left, draw=white!15!black}
+legend style={at={(0.20,1.0)},legend cell align=left, align=left, draw=white!15!black}
 ]
 \addplot [color=mycolor1, line width=1.0pt]
   table[row sep=crcr]{%
@@ -8470,7 +8471,7 @@ legend style={at={(0.25,1.0)},legend cell align=left, align=left, draw=white!15!
 \end{axis}
 
 \begin{axis}[%
-width=6.0in,
+width=5.0in,
 height=2.50in,
 at={(0in,0in)},
 scale only axis,

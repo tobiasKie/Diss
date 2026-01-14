@@ -1,0 +1,19 @@
+\definecolor{green}{rgb}{0.0,1,0.0}
+\definecolor{red}{rgb}{1,0,0}
+\definecolor{blue}{rgb}{0.00000,0.22656,0.89453}
+
+\begin{tikzpicture}
+\draw (-16,0) rectangle (-3,2);
+\draw[blue,dashed,line width = 2.0] (-15.5,1) -- (-14.5,1);
+\draw (-14,1) node {$\hat{\theta}\tindex{opt}$}; 
+\draw[green,dashed,line width = 2.0] (-13.5,1) -- (-12.5,1);
+\draw (-12,1) node {$\hat{\phi}\tindex{opt}$}; 
+\draw[red,dashed,line width = 2.0] (-11.5,1) -- (-10.5,1);
+\draw (-10,1) node {$\hat{\psi}\tindex{opt}$}; 
+\draw[blue,line width = 2.0] (-9.5,1) -- (-8.5,1);
+\draw (-8,1) node {$\hat{\theta}\tindex{mag}$};
+\draw[green,line width = 2.0] (-7.5,1) -- (-6.5,1);
+\draw (-6,1) node {$\hat{\phi}\tindex{mag}$};
+\draw[red,line width = 2.0] (-5.5,1) -- (-4.5,1);
+\draw (-4,1) node {$\hat{\psi}\tindex{mag}$};
+\end{tikzpicture}
