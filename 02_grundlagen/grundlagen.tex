@@ -42,8 +42,7 @@ In den fünf Ketten folgen dann jeweils zwei Scharniergelenke. Das erste Scharni
 
 \subsection{Modellierung}
 \label{subsec:ModellingJoints}
-Die Anatomie der menschlichen Hand ist teilweise kompliziert zu beschreiben, daher wird eine einfachere Modellierung als kinematische Kette verwendet. Kinematische Ketten bestehen aus kinematischen Elementen, die über unterschiedliche Gelenke miteinander verbunden sind. Die kinematischen Elemente sind am Beispiel der Hand die Knochen, in der Modellierung werden diese als Zylinder mit der entsprechenden Dicke angenommen.
-Die Gelenke werden als Sattelgelenke angenommen, da bei der Hand Gelenke mit maximal zwei Freiheitsgraden vorkommen. Die kinematischen Elemente werden mit der Variable $k$ nummeriert. Das Modell ist in Abbildung\,\ref{fig:ModellierungBewegung} skizziert.
+Die Anatomie der menschlichen Hand wird in dieser Arbeit vereinfacht als kinematische Kette beschrieben. Kinematische Ketten bestehen aus kinematischen Elementen, die über unterschiedliche Gelenke miteinander verbunden sind. Die kinematischen Elemente sind am Beispiel der Hand die Knochen, in der Modellierung werden diese als Zylinder mit der entsprechenden Dicke angenommen. Die Gelenke werden als Sattelgelenke angenommen, da bei der Hand Gelenke mit maximal zwei Freiheitsgraden vorkommen. Die kinematischen Elemente werden mit der Variable $k$ nummeriert, die Gelenkswinkel gehören jeweils zum vorherigen Element. Das Modell ist in Abbildung\,\ref{fig:ModellierungBewegung} skizziert.
 
 \begin{figure}[h]
     \centering
@@ -162,22 +161,6 @@ Die \textit{Rigid bodies} können Körperteilen zugeordnet werden und so kann mi
     \label{fig:OMCUse}
 \end{figure}
 In dieser Arbeit wird zur Evaluierung ein Kamerasystem des Herstellers \textit{Qualisys AB} bestehend aus acht Miqus-Kameras \cite{noauthor_miqus_nodate} verwendet.
-
-% \subsection{IMU-basierte Systeme}
-% \label{subsec:imubasedSystems}
-
-% Checken ob das sinnvoll ist
-
-% Unter dem Begriff Inertial-Messeinheit(IMU) werden Sensorsysteme verstandenen, die aus Beschleunigungssensoren, Gysroskopen und optional Magnetfeldsensoren bestehen. In dieser Richtung gibt es verschiedene Hersteller für Bewegungsanalysesysteme wie z.B. XSens\,\cite{roetenberg_xsens_2013}, Life-Performance Research\,\cite{noauthor_welcome_nodate} oder BSnlab\,\cite{noauthor_bsnlab_nodate}. Diese verwenden IMUs die an charakteristischen Stellen, wie zum Beispiel dem Oberarm oder dem Handgelenk angebracht werden. Die Position und Orientierung des IMUs, in Bezug auf das Körperteil, wird vor der Laufzeit kalibriert\,\cite{schepers_xsens_nodate}. In der Regel werden die Beschleunigungssensoren und Gyroskope verwendet um die Beschleunigung und eine Veränderung der Lage zu detektieren. Durch zweimaliges integrieren kann die Rotation geschätzt werden und so ein Gelenekswinkel zwischen den einzelnen Elementen bestimmt werden \cite{schepers_xsens_nodate}. Ein Beispielsystem des Hersteller XSens ist in Abbildung \ref{fig:IMUSys} zu sehen.
-
-% \begin{figure}[h]
-%     \centering
-%     \begin{overpic}[width=0.35\textwidth,trim = 0 0 0 0]{02_grundlagen/images/IMU-System.png}
-%     \end{overpic}
-%     \caption{IMU-System: In einem Ganzkörperanzug sind bis zu 17 IMUs integriert. Diese sind jeweils einem Körperteil zugeordnet und detektieren die Bewegung.\cite{roetenberg_xsens_2013}}
-%     \label{fig:IMUSys}
-% \end{figure}
-
 
 
 \subsection{Stand der Technik}

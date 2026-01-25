@@ -1069,12 +1069,11 @@ INPUT .\05_eval\eval.tex
 INPUT .\05_eval\eval.tex
 INPUT .\05_eval\eval.tex
 INPUT 05_eval\eval.tex
-INPUT .\05_eval\images\UsedHardware.png
-INPUT .\05_eval\images\UsedHardware.png
-INPUT .\05_eval\images\UsedHardware.png
-INPUT .\05_eval\images\UsedHardware.png
-INPUT .\05_eval\images\UsedHardware.png
-INPUT .\05_eval\images\UsedHardware.png
+INPUT .\05_eval\images\HardwareSetup.pdf
+INPUT .\05_eval\images\HardwareSetup.pdf
+INPUT .\05_eval\images\HardwareSetup.pdf
+INPUT .\05_eval\images\HardwareSetup.pdf
+INPUT .\05_eval\images\HardwareSetup.pdf
 INPUT .\05_eval\images\VarianceMV.tikz
 INPUT .\05_eval\images\VarianceMV.tikz
 INPUT 05_eval\images\VarianceMV.tikz

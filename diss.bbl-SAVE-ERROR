@@ -106,6 +106,48 @@
       \verb Appell et al. - 2008 - Funktionelle Anatomie Grundlagen sportlicher Leis.pdf:C\:\\Users\\tsc\\Zotero\\storage\\RKSDWJ6Q\\Appell et al. - 2008 - Funktionelle Anatomie Grundlagen sportlicher Leis.pdf:application/pdf
       \endverb
     \endentry
+    \entry{bald_echtzeitlokalisierung_2024}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=4bae87ec12e483b5325c9fe5dbbaf25f}{%
+           family={Bald},
+           familyi={B\bibinitperiod},
+           given={Christin},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {de}%
+      }
+      \strng{namehash}{4bae87ec12e483b5325c9fe5dbbaf25f}
+      \strng{fullhash}{4bae87ec12e483b5325c9fe5dbbaf25f}
+      \strng{fullhashraw}{4bae87ec12e483b5325c9fe5dbbaf25f}
+      \strng{bibnamehash}{4bae87ec12e483b5325c9fe5dbbaf25f}
+      \strng{authorbibnamehash}{4bae87ec12e483b5325c9fe5dbbaf25f}
+      \strng{authornamehash}{4bae87ec12e483b5325c9fe5dbbaf25f}
+      \strng{authorfullhash}{4bae87ec12e483b5325c9fe5dbbaf25f}
+      \strng{authorfullhashraw}{4bae87ec12e483b5325c9fe5dbbaf25f}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Die Messung magnetischer Felder in der Medizin gewinnt zunehmend an Bedeutung. Die au{ß}erhalb des Körpers von den Magnetfeldsensoren gemessenen Signale werden genutzt, um auf die Prozesse im Körperinneren zurückzuschlie{ß}en. Dazu wird ein sogenanntes inverses Problem gelöst, welches neben den Signalen auch die Positionen und Orientierungen der messenden Sensoren benötigt. Da die Position und Orientierung relativ zum Messobjekt bei einer magnetischen Messung nicht notwendigerweise fix ist, sollten diese während der Messung kontinuierlich ermittelt werden. Dies geschieht mittels einer magnetischen Ortung. In dieser Arbeit wird eine Signalverarbeitungskette zur Lokalisierung magnetischer Sensoren in Echtzeit vorgestellt. Diese beinhaltet Vorverarbeitungsschritte zur Extraktion der wichtigsten Informationen aus den Sensordaten, die Schätzung der Position und Orientierung des Sensor(array)s und eine Nachverarbeitung der geschätzten Daten. Die entwickelte Signalverarbeitungskette wird zunächst theoretisch beschrieben und im Anschluss simulativ und mittels Messungen evaluiert. Die vorgestellte Signalverarbeitungskette zur Lokalisierung funktioniert prinzipiell für alle magnetischen Sensoren. Der Fokus dieser Arbeit liegt jedoch auf magnetoelektrischen Sensoren. Zu Vergleichszwecken werden zusätzlich kommerziell erhältliche Fluxgate-Magnetometer verwendet. Simulativ werden verschiedene Parameter und mögliche Störquellen untersucht, die einen Einfluss auf die Lokalisierungsgenauigkeit haben können. So wird beispielsweise die Genauigkeit der Lokalisierung bei verschiedenen Signal-zu-Rauschverhältnissen untersucht ebenso wie die Robustheit bei verschiedenen Fehlern im Vorwärtsmodell. Die Messungen werden sowohl mit Einzelsensoren in 2D als auch mit Einzel- und 3D-Sensoren in 3D durchgeführt.}
+      \field{month}{3}
+      \field{note}{Accepted: 2024-03-08}
+      \field{title}{Echtzeitlokalisierung magnetoelektrischer {Sensoren}}
+      \field{urlday}{13}
+      \field{urlmonth}{1}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Full Text PDF:C\:\\Users\\tsc\\Zotero\\storage\\BYQYI7LU\\Bald - 2024 - Echtzeitlokalisierung magnetoelektrischer Sensoren.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://macau.uni-kiel.de/receive/macau_mods_00004595
+      \endverb
+      \verb{url}
+      \verb https://macau.uni-kiel.de/receive/macau_mods_00004595
+      \endverb
+    \endentry
     \entry{caeiro-rodriguez_systematic_2021}{article}{}{}
       \name{author}{4}{}{%
         {{hash=dabc908d5bceef4fa2e47f8bf6fee4ca}{%
@@ -144,7 +186,7 @@
       \field{sortinithash}{4d103a86280481745c9c897c925753c0}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
-      \field{abstract}{Smart gloves have been under development during the last 40 years to support human-computer interaction based on hand and finger movement. Despite the many devoted efforts and the multiple advances in related areas, these devices have not become mainstream yet. Nevertheless, during recent years, new devices with improved features have appeared, being used for research purposes too. This paper provides a review of current commercial smart gloves focusing on three main capabilities: (i) hand and finger pose estimation and motion tracking, (ii) kinesthetic feedback, and (iii) tactile feedback. For the first capability, a detailed reference model of the hand and finger basic movements (known as degrees of freedom) is proposed. Based on the PRISMA guidelines for systematic reviews for the period 2015–2021, 24 commercial smart gloves have been identified, while many others have been discarded because they did not meet the inclusion criteria: currently active commercial and fully portable smart gloves providing some of the three main capabilities for the whole hand. The paper reviews the technologies involved, main applications and it discusses about the current state of development. Reference models to support end users and researchers comparing and selecting the most appropriate devices are identified as a key need.}
+      \field{abstract}{Smart gloves have been under development during the last 40 years to support human-computer interaction based on hand and finger movement. Despite the many devoted efforts and the multiple advances in related areas, these devices have not become mainstream yet. Nevertheless, during recent years, new devices with improved features have appeared, being used for research purposes too. This paper provides a review of current commercial smart gloves focusing on three main capabilities: (i) hand and finger pose estimation and motion tracking, (ii) kinesthetic feedback, and (iii) tactile feedback. For the first capability, a detailed reference model of the hand and finger basic movements (known as degrees of freedom) is proposed. Based on the PRISMA guidelines for systematic reviews for the period 2015{–}2021, 24 commercial smart gloves have been identified, while many others have been discarded because they did not meet the inclusion criteria: currently active commercial and fully portable smart gloves providing some of the three main capabilities for the whole hand. The paper reviews the technologies involved, main applications and it discusses about the current state of development. Reference models to support end users and researchers comparing and selecting the most appropriate devices are identified as a key need.}
       \field{issn}{1424-8220}
       \field{journaltitle}{Sensors}
       \field{month}{1}
@@ -164,7 +206,7 @@
       \verb 10.3390/s21082667
       \endverb
       \verb{file}
-      \verb Full Text PDF:C\:\\Users\\tsc\\Zotero\\storage\\KT2KGCYW\\Caeiro-Rodríguez et al. - 2021 - A Systematic Review of Commercial Smart Gloves Current Status and Applications.pdf:application/pdf
+      \verb Full Text PDF:C\:\\Users\\tsc\\Zotero\\storage\\KT2KGCYW\\Caeiro-Rodr{\'i}guez et al. - 2021 - A Systematic Review of Commercial Smart Gloves Current Status and Applications.pdf:application/pdf
       \endverb
       \verb{urlraw}
       \verb https://www.mdpi.com/1424-8220/21/8/2667
@@ -173,6 +215,58 @@
       \verb https://www.mdpi.com/1424-8220/21/8/2667
       \endverb
       \keyw{extended reality,hand and finger pose estimation and motion tracking,haptic feedback,kinesthetic feedback,smart gloves,tactile feedback}
+    \endentry
+    \entry{campos_hyperspherical_2020}{misc}{}{}
+      \name{author}{2}{}{%
+        {{hash=337c3a125fb0a19de7cce67613589bc9}{%
+           family={Campos},
+           familyi={C\bibinitperiod},
+           given={L.\bibnamedelimi M.\bibnamedelimi B.\bibnamedelimi C.},
+           giveni={L\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim B\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=aefa7af661956d4ccd47bf050ce44578}{%
+           family={Silva},
+           familyi={S\bibinitperiod},
+           given={M.\bibnamedelimi J.\bibnamedelimi S.},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{c83881ad5b9b0148762c5c9c353da050}
+      \strng{fullhash}{16c22b41cd031c577af9cd00ae92ddc1}
+      \strng{fullhashraw}{16c22b41cd031c577af9cd00ae92ddc1}
+      \strng{bibnamehash}{16c22b41cd031c577af9cd00ae92ddc1}
+      \strng{authorbibnamehash}{16c22b41cd031c577af9cd00ae92ddc1}
+      \strng{authornamehash}{c83881ad5b9b0148762c5c9c353da050}
+      \strng{authorfullhash}{16c22b41cd031c577af9cd00ae92ddc1}
+      \strng{authorfullhashraw}{16c22b41cd031c577af9cd00ae92ddc1}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{The solution in hyperspherical coordinates for \$N\$ dimensions is given for a general class of partial differential equations of mathematical physics including the Laplace, wave, heat and Helmholtz, Schrödinger, Klein-Gordon and telegraph equations and their combinations. The starting point is the Laplacian operator specified by the scale factors of hyperspherical coordinates. The general equation of mathematical physics is solved by separation of variables leading to the dependencies: (i) on time by the usual exponential function; (ii) on longitude by the usual sinusoidal function; (iii) on radius by Bessel functions of order generally distinct from cylindrical or spherical Bessel functions; (iv) on one latitude by associated Legendre functions; (v) on the remaining latitudes by an extension, namely the hyperspherical associated Legendre functions. The original associated Legendre functions are a particular case of the Gaussian hypergeometric functions, and the hyperspherical associated Legendre functions are also a more general particular case of the Gaussian hypergeometric functions so that it is not necessary to consider extended Gaussian hypergeometric functions.}
+      \field{month}{5}
+      \field{note}{arXiv:2005.09603 [math-ph]}
+      \field{shorttitle}{On hyperspherical associated {Legendre} functions}
+      \field{title}{On hyperspherical associated {Legendre} functions: the extension of spherical harmonics to \${N}\$ dimensions}
+      \field{urlday}{2}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.48550/arXiv.2005.09603
+      \endverb
+      \verb{file}
+      \verb Preprint PDF:C\:\\Users\\tsc\\Zotero\\storage\\DLNS24LY\\Campos und Silva - 2020 - On hyperspherical associated Legendre functions the extension of spherical harmonics to \$N\$ dimensi.pdf:application/pdf;Snapshot:C\:\\Users\\tsc\\Zotero\\storage\\KR3AS8Z8\\2005.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/2005.09603
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/2005.09603
+      \endverb
+      \keyw{Mathematical Physics,Mathematics - Classical Analysis and ODEs}
     \endentry
     \entry{chan_legendre_2013}{article}{}{}
       \name{author}{3}{}{%
@@ -207,12 +301,12 @@
       \field{sortinithash}{4d103a86280481745c9c897c925753c0}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{We resolve a family of recently observed identities involving 1/π using the theory of modular forms and hypergeometric series. In particular, we resort to a formula of Brafman which relates a generating function of the Legendre polynomials to a product of two Gaussian hypergeometric functions. Using our methods, we also derive some new Ramanujan-type series.}
+      \field{abstract}{We resolve a family of recently observed identities involving 1/$\pi$ using the theory of modular forms and hypergeometric series. In particular, we resort to a formula of Brafman which relates a generating function of the Legendre polynomials to a product of two Gaussian hypergeometric functions. Using our methods, we also derive some new Ramanujan-type series.}
       \field{issn}{1565-8511}
       \field{journaltitle}{Israel Journal of Mathematics}
       \field{month}{3}
       \field{number}{1}
-      \field{title}{Legendre polynomials and {Ramanujan}-type series for 1/π}
+      \field{title}{Legendre polynomials and {Ramanujan}-type series for 1/$\pi$}
       \field{urlday}{27}
       \field{urlmonth}{8}
       \field{urlyear}{2025}
@@ -225,7 +319,7 @@
       \verb 10.1007/s11856-012-0081-5
       \endverb
       \verb{file}
-      \verb Full Text PDF:C\:\\Users\\tsc\\Zotero\\storage\\52JQHCRN\\Chan et al. - 2013 - Legendre polynomials and Ramanujan-type series for 1π.pdf:application/pdf
+      \verb Full Text PDF:C\:\\Users\\tsc\\Zotero\\storage\\52JQHCRN\\Chan et al. - 2013 - Legendre polynomials and Ramanujan-type series for 1$\pi$.pdf:application/pdf
       \endverb
       \verb{urlraw}
       \verb https://doi.org/10.1007/s11856-012-0081-5
@@ -263,7 +357,7 @@
       \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
-      \field{abstract}{To determine whether other digits move when normal humans attempt to move just one digit, we asked 10 right-handed subjects to move one finger at a time while we recorded the motion of all five digits simultaneously with both a video motion analysis system and an instrumented glove. We quantified the independence of the digits to compare (1) the different digits, (2) the right versus the left hand, and (3) movements at a self-paced frequency versus externally paced movements at 3 Hz. We also quantified the degree to which motion occurred at the proximal, middle, or distal joint of each digit. Even when asked to move just one finger, normal human subjects produced motion in other digits. Movements of the thumb, index finger, and little finger typically were more highly individuated than were movements of the middle or ring fingers. Fingers of the dominant hand were not more independent than were those of the nondominant hand. Self-paced movements made at ~2 Hz were more highly individuated than were externally paced movements at 3 Hz. Angular motion tended to be greatest at the middle joint of each digit, with increased angular motion at the proximal and distal joints during 3 Hz movements. Simultaneous motion of noninstructed digits may result in part from passive mechanical connections between the digits, in part from the organization of multitendoned finger muscles, and in part from distributed neural control of the hand.}
+      \field{abstract}{To determine whether other digits move when normal humans attempt to move just one digit, we asked 10 right-handed subjects to move one finger at a time while we recorded the motion of all five digits simultaneously with both a video motion analysis system and an instrumented glove. We quantified the independence of the digits to compare (1) the different digits, (2) the right versus the left hand, and (3) movements at a self-paced frequency versus externally paced movements at 3 Hz. We also quantified the degree to which motion occurred at the proximal, middle, or distal joint of each digit. Even when asked to move just one finger, normal human subjects produced motion in other digits. Movements of the thumb, index finger, and little finger typically were more highly individuated than were movements of the middle or ring fingers. Fingers of the dominant hand were not more independent than were those of the nondominant hand. Self-paced movements made at \~{}2 Hz were more highly individuated than were externally paced movements at 3 Hz. Angular motion tended to be greatest at the middle joint of each digit, with increased angular motion at the proximal and distal joints during 3 Hz movements. Simultaneous motion of noninstructed digits may result in part from passive mechanical connections between the digits, in part from the organization of multitendoned finger muscles, and in part from distributed neural control of the hand.}
       \field{issn}{0270-6474, 1529-2401}
       \field{journaltitle}{Journal of Neuroscience}
       \field{month}{11}
@@ -283,7 +377,7 @@
       \verb 10.1523/JNEUROSCI.20-22-08542.2000
       \endverb
       \verb{file}
-      \verb Full Text PDF:C\:\\Users\\tsc\\Zotero\\storage\\CLH4VBYX\\Häger-Ross und Schieber - 2000 - Quantifying the Independence of Human Finger Movements Comparisons of Digits, Hands, and Movement F.pdf:application/pdf
+      \verb Full Text PDF:C\:\\Users\\tsc\\Zotero\\storage\\CLH4VBYX\\H{\"a}ger-Ross und Schieber - 2000 - Quantifying the Independence of Human Finger Movements Comparisons of Digits, Hands, and Movement F.pdf:application/pdf
       \endverb
       \verb{urlraw}
       \verb https://www.jneurosci.org/content/20/22/8542
@@ -292,6 +386,69 @@
       \verb https://www.jneurosci.org/content/20/22/8542
       \endverb
       \keyw{digits,fingers,hand,handedness,human,independence,individuation,laterality,motor control,movement frequency,movements}
+    \endentry
+    \entry{hehn_high-accuracy_2019}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=5d1325e2f4add5cfb02ed6d609d78cce}{%
+           family={Hehn},
+           familyi={H\bibinitperiod},
+           given={Markus},
+           giveni={M\bibinitperiod}}}%
+        {{hash=c3382b9dc69d80bd504e235d6442f31e}{%
+           family={Sippel},
+           familyi={S\bibinitperiod},
+           given={Erik},
+           giveni={E\bibinitperiod}}}%
+        {{hash=40a073970af864c53df1173d8c016aa1}{%
+           family={Carlowitz},
+           familyi={C\bibinitperiod},
+           given={Christian},
+           giveni={C\bibinitperiod}}}%
+        {{hash=857f332f69272f0dcb3108258a134fd7}{%
+           family={Vossiek},
+           familyi={V\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{10fde828fdeb1d4e98c541a4209ea0f8}
+      \strng{fullhash}{27ebef2e471522ed45d2f3e3762b420c}
+      \strng{fullhashraw}{27ebef2e471522ed45d2f3e3762b420c}
+      \strng{bibnamehash}{27ebef2e471522ed45d2f3e3762b420c}
+      \strng{authorbibnamehash}{27ebef2e471522ed45d2f3e3762b420c}
+      \strng{authornamehash}{10fde828fdeb1d4e98c541a4209ea0f8}
+      \strng{authorfullhash}{27ebef2e471522ed45d2f3e3762b420c}
+      \strng{authorfullhashraw}{27ebef2e471522ed45d2f3e3762b420c}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Magnetic local positioning systems are a well-suited candidate for reliable indoor positioning systems, as they are robust against blocking by dielectric materials like walls or people. The system presented in this paper is implemented with a one-axis magnetic transmitter and several three-axis field sensors connected to a complete sensor network. Unfortunately, the performance of the system is severely impaired by field sensor nonidealities such as magnetic coupling of the sensor coils, coil misalignment, field sensor rotation, and unsynchronized sampling. In this paper, the overall field sensor impairments and an additive Gaussian noise model superposing the magnetic field are mathematically described. Then, a novel calibration scheme for the overall field sensor nonidealities is presented. Furthermore, a statistically optimal localization procedure coping with the field sensor nonidealities is developed. The proposed novel localization and calibration algorithms are demonstrated in a common office environment with a size of 7 m{\texttimes}5 m{\texttimes}3 m. Thereby, the calibration impressively reduces the position root-mean-square error (RMSE) from 46.8 to 10.6 cm and the angle RMSE from 24.8{°} to 6.1{°}.}
+      \field{issn}{1557-9662}
+      \field{journaltitle}{IEEE Transactions on Instrumentation and Measurement}
+      \field{month}{10}
+      \field{number}{10}
+      \field{title}{High-{Accuracy} {Localization} and {Calibration} for 5-{DoF} {Indoor} {Magnetic} {Positioning} {Systems}}
+      \field{urlday}{13}
+      \field{urlmonth}{1}
+      \field{urlyear}{2026}
+      \field{volume}{68}
+      \field{year}{2019}
+      \field{urldateera}{ce}
+      \field{pages}{4135\bibrangedash 4145}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1109/TIM.2018.2884040
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:C\:\\Users\\tsc\\Zotero\\storage\\JFZN67WC\\Hehn et al. - 2019 - High-Accuracy Localization and Calibration for 5-DoF Indoor Magnetic Positioning Systems.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/abstract/document/8574943
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/abstract/document/8574943
+      \endverb
+      \keyw{Calibration,Coils,Couplings,field sensor,indoor navigation,localization,Magnetic domains,magnetic fields,magnetic local positioning,Magnetic resonance,Magnetoacoustic effects,Robot sensing systems}
     \endentry
     \entry{henke_elektromagnetische_nodate}{book}{}{}
       \name{author}{1}{}{%
@@ -356,7 +513,7 @@
       \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Active magnetic motion sensing relies on a combination of magnetic sensors and actuators to indirectly sense a time-varying change in position and orientation. Based on our previous work on a 1D setup with magnetoelectric (ME) sensors, we introduce a concept for a full 6D sensing system, which is positioned as a modular setup for human movement pattern capture with regard to neurodegenerative diseases. In this paper, we implemented an inverse model based on ideal triaxial sensors and coils. We then included results from the previous experiments to estimate the prospective performance in a physical setup. We obtained a spatial error of a few cm and approx. 10° with focus on superimposed sinusoidal movements of 1, 5, and 10 Hz.}
+      \field{abstract}{Active magnetic motion sensing relies on a combination of magnetic sensors and actuators to indirectly sense a time-varying change in position and orientation. Based on our previous work on a 1D setup with magnetoelectric (ME) sensors, we introduce a concept for a full 6D sensing system, which is positioned as a modular setup for human movement pattern capture with regard to neurodegenerative diseases. In this paper, we implemented an inverse model based on ideal triaxial sensors and coils. We then included results from the previous experiments to estimate the prospective performance in a physical setup. We obtained a spatial error of a few cm and approx. 10{°} with focus on superimposed sinusoidal movements of 1, 5, and 10 Hz.}
       \field{issn}{2364-5504}
       \field{journaltitle}{Current Directions in Biomedical Engineering}
       \field{month}{8}
@@ -461,6 +618,7 @@
       \strng{authornamehash}{f925194d8bcb46c09cc3c92507c21532}
       \strng{authorfullhash}{6961702c905c1217eff3d94d4032849b}
       \strng{authorfullhashraw}{6961702c905c1217eff3d94d4032849b}
+      \field{extraname}{1}
       \field{sortinit}{L}
       \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
       \field{labelnamesource}{author}
@@ -489,6 +647,141 @@
       \verb https://ieeexplore.ieee.org/document/897381
       \endverb
       \keyw{Data gloves,Human computer interaction,Costs,Biological system modeling,Fingers,Animation,Image analysis,Image motion analysis,Motion analysis,Motion estimation}
+    \endentry
+    \entry{lin_design_2024}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=b30d47f57311e4afb7c80331fd4d6f10}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={Yuan},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=aa42d31abc7c03eefac003a1de7b0c84}{%
+           family={Shull},
+           familyi={S\bibinitperiod},
+           given={Peter\bibnamedelima B.},
+           giveni={P\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=7996d66bf5707b43f5e3c5e93f050248}{%
+           family={Chossat},
+           familyi={C\bibinitperiod},
+           given={Jean-Baptiste},
+           giveni={J\bibinithyphendelim B\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {EN}%
+      }
+      \strng{namehash}{fd0fbe10f84cd3e6988b3410f2af0a59}
+      \strng{fullhash}{8dd76faf2d477a22a705738b946ace6f}
+      \strng{fullhashraw}{8dd76faf2d477a22a705738b946ace6f}
+      \strng{bibnamehash}{8dd76faf2d477a22a705738b946ace6f}
+      \strng{authorbibnamehash}{8dd76faf2d477a22a705738b946ace6f}
+      \strng{authornamehash}{fd0fbe10f84cd3e6988b3410f2af0a59}
+      \strng{authorfullhash}{8dd76faf2d477a22a705738b946ace6f}
+      \strng{authorfullhashraw}{8dd76faf2d477a22a705738b946ace6f}
+      \field{extraname}{2}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Robust hand motion tracking holds promise for improved human{–}machine interaction in diverse fields, including virtual reality, and automated sign language translation. However, current wearable hand motion tracking approaches are typically limited in detection performance, wearability, and durability. This article presents a hand motion tracking system using multiple soft polymer acoustic waveguides (SPAWs). The innovative use of SPAWs as strain sensors offers several advantages that address the limitations. SPAWs are easily manufactured by casting a soft polymer shaped as a soft acoustic waveguide and containing a commercially available small ceramic piezoelectric transducer. When used as strain sensors, SPAWs demonstrate high stretchability (up to 100\%), high linearity (R2 {>} 0.996 in all quasi-static, dynamic, and durability tensile tests), negligible hysteresis ({<}0.7410\% under strain of up to 100\%), excellent repeatability, and outstanding durability (up to 100,000 cycles). SPAWs also show high accuracy for continuous finger angle estimation (average root-mean-square errors [RMSE] {<}2.00{°}) at various flexion-extension speeds. Finally, a hand-tracking system is designed based on a SPAW array. An example application is developed to demonstrate the performance of SPAWs in real-time hand motion tracking in a three-dimensional (3D) virtual environment. To our knowledge, the system detailed in this article is the first to use soft acoustic waveguides to capture human motion. This work is part of an ongoing effort to develop soft sensors using both time and frequency domains, with the goal of extracting decoupled signals from simple sensing structures. As such, it represents a novel and promising path toward soft, simple, and wearable multimodal sensors.}
+      \field{issn}{2169-5172}
+      \field{journaltitle}{Soft Robotics}
+      \field{month}{4}
+      \field{note}{Publisher: SAGE Publications}
+      \field{number}{2}
+      \field{title}{Design of a {Wearable} {Real}-{Time} {Hand} {Motion} {Tracking} {System} {Using} an {Array} of {Soft} {Polymer} {Acoustic} {Waveguides}}
+      \field{urlday}{13}
+      \field{urlmonth}{1}
+      \field{urlyear}{2026}
+      \field{volume}{11}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \field{pages}{282\bibrangedash 295}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1089/soro.2022.0091
+      \endverb
+      \verb{file}
+      \verb SAGE PDF Full Text:C\:\\Users\\tsc\\Zotero\\storage\\2L3D5EH5\\Lin et al. - 2024 - Design of a Wearable Real-Time Hand Motion Tracking System Using an Array of Soft Polymer Acoustic W.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://journals.sagepub.com/action/showAbstract
+      \endverb
+      \verb{url}
+      \verb https://journals.sagepub.com/action/showAbstract
+      \endverb
+    \endentry
+    \entry{ma_magnetic_2011}{article}{}{}
+      \name{author}{6}{}{%
+        {{hash=622d7fffcfe7fa74fe7d2d0d7c786747}{%
+           family={Ma},
+           familyi={M\bibinitperiod},
+           given={Yinghong},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=2c51913302170474b42f8dbd83929e1e}{%
+           family={Mao},
+           familyi={M\bibinitperiod},
+           given={Zhi-Hong},
+           giveni={Z\bibinithyphendelim H\bibinitperiod}}}%
+        {{hash=dae1008914be89ee68b9662371b6f4f0}{%
+           family={Jia},
+           familyi={J\bibinitperiod},
+           given={Wenyan},
+           giveni={W\bibinitperiod}}}%
+        {{hash=4f2a2f56983b408467c90892043c4267}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Chengliu},
+           giveni={C\bibinitperiod}}}%
+        {{hash=f05a1041b5396a87fd3d4f4d24dab652}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Jiawei},
+           giveni={J\bibinitperiod}}}%
+        {{hash=f8ba64a3aee9e5ed3129a24b8e12a09b}{%
+           family={Sun},
+           familyi={S\bibinitperiod},
+           given={Mingui},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{b2474579aa18ec1b933da1c250eaaa62}
+      \strng{fullhash}{31246d9726f56bc48bf3228ecdbb4ba8}
+      \strng{fullhashraw}{31246d9726f56bc48bf3228ecdbb4ba8}
+      \strng{bibnamehash}{31246d9726f56bc48bf3228ecdbb4ba8}
+      \strng{authorbibnamehash}{31246d9726f56bc48bf3228ecdbb4ba8}
+      \strng{authornamehash}{b2474579aa18ec1b933da1c250eaaa62}
+      \strng{authorfullhash}{31246d9726f56bc48bf3228ecdbb4ba8}
+      \strng{authorfullhashraw}{31246d9726f56bc48bf3228ecdbb4ba8}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Hand motion tracking is useful in human-computer interface and many other applications requiring human-machine interactions. In this work, permanent magnets and contactless magnetic sensors are used to track finger motion. A magnet patch is affixed to each fingernail to mark the location and orientation of the fingertip. When fingers move, the combined magnetic fields produced by the magnets at fingertips are recorded by a set of magnetic sensors around a wristband. The recorded data from the sensors are utilized to calculate the magnets' locations and orientations, which can provide estimate of the hand posture based on a geometric hand model.}
+      \field{issn}{1941-0069}
+      \field{journaltitle}{IEEE Transactions on Magnetics}
+      \field{month}{5}
+      \field{number}{5}
+      \field{title}{Magnetic {Hand} {Tracking} for {Human}-{Computer} {Interface}}
+      \field{urlday}{8}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{volume}{47}
+      \field{year}{2011}
+      \field{urldateera}{ce}
+      \field{pages}{970\bibrangedash 973}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1109/TMAG.2010.2076401
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:C\:\\Users\\tsc\\Zotero\\storage\\ZM8YYYK3\\Ma et al. - 2011 - Magnetic Hand Tracking for Human-Computer Interface.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/abstract/document/5754773
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/abstract/document/5754773
+      \endverb
+      \keyw{Computational modeling,Magnetic sensors,Tracking,Magnetic resonance imaging,Hand tracking,human-computer interface,Indexes,Keyboards,magnetic marker,wireless motion capture}
     \endentry
     \entry{noauthor_magnetfeldsensor_nodate}{misc}{}{}
       \field{sortinit}{M}
@@ -582,7 +875,7 @@
       \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
-      \field{abstract}{Das Buch behandelt die theoretischen Grundlagen des Festkörpermagnetismus in Einheit mit der Technologie der Werkstofferzeugung, der Beschreibung der Gefüge-Eigenschaftsbeziehungen der Werkstoffe, der wichtigsten Anwendungen und spezieller Fragen der magnetischen Meßtechnik. Studenten, Ingenieuren in der Praxis, Wissenschaftlern im universitären und außeruniversitären Bereich gibt es Anleitung bei der Berechnung von Anwendungsbeispielen. Es dient gleichermaßen als Nachschlagewerk zu den Eigenschaften weich- und hartmagnetischer metallischer und anorganisch-nichtmetallischer Werkstoffe. Der Leser erhält eine umfassende Einführung in die Grundlagen der Hystereseerscheinungen, der Magnetisierungsprozesse und zugleich die notwendigen Informationen über die zweckmäßige Werkstoffauswahl für den definierten Anwendungsfall. Inhalt: Grundlagen, magnetische Meßtechnik, magnetische Werkstoffe, Anwendung magnetischer Werkstoffe.}
+      \field{abstract}{Das Buch behandelt die theoretischen Grundlagen des Festkörpermagnetismus in Einheit mit der Technologie der Werkstofferzeugung, der Beschreibung der Gefüge-Eigenschaftsbeziehungen der Werkstoffe, der wichtigsten Anwendungen und spezieller Fragen der magnetischen Me{ß}technik. Studenten, Ingenieuren in der Praxis, Wissenschaftlern im universitären und au{ß}eruniversitären Bereich gibt es Anleitung bei der Berechnung von Anwendungsbeispielen. Es dient gleicherma{ß}en als Nachschlagewerk zu den Eigenschaften weich- und hartmagnetischer metallischer und anorganisch-nichtmetallischer Werkstoffe. Der Leser erhält eine umfassende Einführung in die Grundlagen der Hystereseerscheinungen, der Magnetisierungsprozesse und zugleich die notwendigen Informationen über die zweckmä{ß}ige Werkstoffauswahl für den definierten Anwendungsfall. Inhalt: Grundlagen, magnetische Me{ß}technik, magnetische Werkstoffe, Anwendung magnetischer Werkstoffe.}
       \field{isbn}{978-3-8027-2139-7}
       \field{note}{Google-Books-ID: JjIau682Cy8C}
       \field{shorttitle}{Magnettechnik}
@@ -620,7 +913,7 @@
       \field{sortinit}{M}
       \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
       \field{labeltitlesource}{title}
-      \field{abstract}{Explore MANUS Quantum Metagloves – professional-grade hand capture gloves for animation, VFX, and live performance. Advanced tracking with seamless integration.}
+      \field{abstract}{Explore MANUS Quantum Metagloves {–} professional-grade hand capture gloves for animation, VFX, and live performance. Advanced tracking with seamless integration.}
       \field{title}{Motion {Capture} {Gloves} {|} {Quantum} {Metagloves} by {MANUS}}
       \field{urlday}{15}
       \field{urlmonth}{9}
@@ -800,7 +1093,7 @@
       \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{In this work, we optimize the geometry of a cylindrical induction coil in order to improve the imitation of the ideal dipole field. First, we analyze a single-layer coil and find that for an optimum length-to-diameter ratio (L/D) of 0.86:1 the imitation error, computed for a four radii distance from the coil's center, is reduced by a factor of *12 (from 9.4 down to 0.73\%) relative to a single-turn coil. Second, we analyze two different types of multilayer coils: one having for all the layers the same 0.86:1 optimum L/D (a coil with a trapezoidal cross section of the winding); and another having for each layer a different L/D (a coil with a rectangular cross section of the winding). The imitation error in this case is reduced by a factor of ~22 and ~33, correspondingly. We finally show that optimizing the multilayer coil makes the imitation error practically negligible ({<}0.28\%) even at as short as four radii distances from the coil's center. Employing such optimized coil allows one to use the simple dipole model with a high degree of accuracy. It also relieves the system of having to spend extra time for computing the exact values of the coil field.}
+      \field{abstract}{In this work, we optimize the geometry of a cylindrical induction coil in order to improve the imitation of the ideal dipole field. First, we analyze a single-layer coil and find that for an optimum length-to-diameter ratio (L/D) of 0.86:1 the imitation error, computed for a four radii distance from the coil{’}s center, is reduced by a factor of \~{}12 (from 9.4 down to 0.73\%) relative to a single-turn coil. Second, we analyze two different types of multilayer coils: one having for all the layers the same 0.86:1 optimum L/D (a coil with a trapezoidal cross section of the winding); and another having for each layer a different L/D (a coil with a rectangular cross section of the winding). The imitation error in this case is reduced by a factor of \~{}22 and \~{}33, correspondingly. We finally show that optimizing the multilayer coil makes the imitation error practically negligible ({<}0.28\%) even at as short as four radii distances from the coil{’}s center. Employing such optimized coil allows one to use the simple dipole model with a high degree of accuracy. It also relieves the system of having to spend extra time for computing the exact values of the coil field.}
       \field{issn}{0924-4247}
       \field{journaltitle}{Sensors and Actuators A: Physical}
       \field{number}{2}
@@ -819,6 +1112,63 @@
       \verb https://www.sciencedirect.com/science/article/pii/S0924424704000111
       \endverb
       \keyw{Dipole field imitation,Ideal dipole,Imitation error,Single- and multilayer cylindrical induction coil}
+    \endentry
+    \entry{parizi_auraring_2020}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=9cfd9773a61e0a048ca99ba4ecc345e4}{%
+           family={Parizi},
+           familyi={P\bibinitperiod},
+           given={Farshid\bibnamedelima Salemi},
+           giveni={F\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=4e6406d9684efd62716aa59b86f2bad2}{%
+           family={Whitmire},
+           familyi={W\bibinitperiod},
+           given={Eric},
+           giveni={E\bibinitperiod}}}%
+        {{hash=ebe0c564e6a6dc116ed7f2ddc74788e4}{%
+           family={Patel},
+           familyi={P\bibinitperiod},
+           given={Shwetak},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{6ad534dcc8ed0e362301ae56e78835f8}
+      \strng{fullhash}{1a592909bda6343c90ff7b0b402fead0}
+      \strng{fullhashraw}{1a592909bda6343c90ff7b0b402fead0}
+      \strng{bibnamehash}{1a592909bda6343c90ff7b0b402fead0}
+      \strng{authorbibnamehash}{1a592909bda6343c90ff7b0b402fead0}
+      \strng{authornamehash}{6ad534dcc8ed0e362301ae56e78835f8}
+      \strng{authorfullhash}{1a592909bda6343c90ff7b0b402fead0}
+      \strng{authorfullhashraw}{1a592909bda6343c90ff7b0b402fead0}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Wearable computing platforms, such as smartwatches and head-mounted mixed reality displays, demand new input devices for high-fidelity interaction. We present AuraRing, a wearable magnetic tracking system designed for tracking fine-grained finger movement. The hardware consists of a ring with an embedded electromagnetic transmitter coil and a wristband with multiple sensor coils. By measuring the magnetic fields at different points around the wrist, AuraRing estimates the five degree-of-freedom pose of the ring. We develop two different approaches to pose reconstruction---a first-principles iterative approach and a closed-form neural network approach. Notably, AuraRing requires no runtime supervised training, ensuring user and session independence. AuraRing has a resolution of 0.1 mm and a dynamic accuracy of 4.4 mm, as measured through a user evaluation with optical ground truth. The ring is completely self-contained and consumes just 2.3 mW of power.}
+      \field{journaltitle}{Proc. ACM Interact. Mob. Wearable Ubiquitous Technol.}
+      \field{month}{9}
+      \field{number}{4}
+      \field{shorttitle}{{AuraRing}}
+      \field{title}{{AuraRing}: {Precise} {Electromagnetic} {Finger} {Tracking}}
+      \field{urlday}{12}
+      \field{urlmonth}{11}
+      \field{urlyear}{2025}
+      \field{volume}{3}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \field{pages}{150:1\bibrangedash 150:28}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1145/3369831
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:C\:\\Users\\tsc\\Zotero\\storage\\C4TRT3RJ\\Parizi et al. - 2020 - AuraRing Precise Electromagnetic Finger Tracking.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://dl.acm.org/doi/10.1145/3369831
+      \endverb
+      \verb{url}
+      \verb https://dl.acm.org/doi/10.1145/3369831
+      \endverb
     \endentry
     \entry{penrose_generalized_1955}{article}{}{}
       \name{author}{1}{}{%
@@ -893,13 +1243,13 @@
       \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{This investigation introduces a new variational approach to refining Poisson's equation, enabling the inclusion of a broader spectrum of physical phenomena, particularly in the emerging fields of spintronics and the analysis of resonant structures. The innovative formulation extends the traditional capabilities of Poisson's equation, offering a nonlocal extension to classical theories of gravitation and opening new directions for energy conversion and enhanced communication technologies. By introducing a novel geometric structure, ω˜, into the equation, a deeper understanding of electrostatic potentials is achieved, and the intricate dynamics of the gravitational potential in systems characterized by radial vorticity fluctuations are illuminated. Furthermore, the research elucidates the generation of longitudinal electromagnetic waves and resonant phenomena within dusty plasma media, thereby contributing to the methodological advances in the study of nonequilibrium systems. These theoretical advances have the potential to transform the understanding of complex physical systems and open up opportunities for significant technological achievements across a range of scientific sectors.}
+      \field{abstract}{This investigation introduces a new variational approach to refining Poisson{’}s equation, enabling the inclusion of a broader spectrum of physical phenomena, particularly in the emerging fields of spintronics and the analysis of resonant structures. The innovative formulation extends the traditional capabilities of Poisson{’}s equation, offering a nonlocal extension to classical theories of gravitation and opening new directions for energy conversion and enhanced communication technologies. By introducing a novel geometric structure,~$\omega$\~{}, into the equation, a deeper understanding of electrostatic potentials is achieved, and the intricate dynamics of the gravitational potential in systems characterized by radial vorticity fluctuations are illuminated. Furthermore, the research elucidates the generation of longitudinal electromagnetic waves and resonant phenomena within dusty plasma media, thereby contributing to the methodological advances in the study of nonequilibrium systems. These theoretical advances have the potential to transform the understanding of complex physical systems and open up opportunities for significant technological achievements across a range of scientific sectors.}
       \field{issn}{2076-3417}
       \field{journaltitle}{Applied Sciences}
       \field{month}{1}
       \field{note}{Publisher: Multidisciplinary Digital Publishing Institute}
       \field{number}{5}
-      \field{title}{Extended {Field} {Interactions} in {Poisson}'s {Equation} {Revision}}
+      \field{title}{Extended {Field} {Interactions} in {Poisson}{’}s {Equation} {Revision}}
       \field{urlday}{27}
       \field{urlmonth}{8}
       \field{urlyear}{2025}
@@ -912,7 +1262,7 @@
       \verb 10.3390/app14051833
       \endverb
       \verb{file}
-      \verb Full Text PDF:C\:\\Users\\tsc\\Zotero\\storage\\ABZQJZT2\\Pinheiro - 2024 - Extended Field Interactions in Poisson's Equation Revision.pdf:application/pdf
+      \verb Full Text PDF:C\:\\Users\\tsc\\Zotero\\storage\\ABZQJZT2\\Pinheiro - 2024 - Extended Field Interactions in Poisson{\textquoteright}s Equation Revision.pdf:application/pdf
       \endverb
       \verb{urlraw}
       \verb https://www.mdpi.com/2076-3417/14/5/1833
@@ -985,7 +1335,7 @@
       \endverb
       \keyw{Magnetic field measurement,Magnetic sensors,Position measurement,Magnetic separation,Navigation,Blood,Coordinate measuring machines,Geometry,Rotation measurement,Vectors}
     \endentry
-    \entry{saggio_quasi-static_2025}{misc}{}{}
+    \entry{saggio_quasi-static_2025}{article}{}{}
       \name{author}{4}{}{%
         {{hash=b468e34ceaa302469991a469f7bcc0de}{%
            family={Saggio},
@@ -1011,12 +1361,6 @@
       \list{language}{1}{%
         {en}%
       }
-      \list{location}{1}{%
-        {Rochester, NY}%
-      }
-      \list{publisher}{1}{%
-        {Social Science Research Network}%
-      }
       \strng{namehash}{2eba134012cb9fd9edadc0f473bebf84}
       \strng{fullhash}{15a45240d6bad7e80c492b0aa1a12e4f}
       \strng{fullhashraw}{15a45240d6bad7e80c492b0aa1a12e4f}
@@ -1029,28 +1373,34 @@
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{The sensory glove (also known as data or instrumented glove) plays a key rule for measuring and tracking hand dexterity. It has been adopted in a variety of different domains, including medical, robotics, virtual reality, and human-computer interaction, to assess hand motor skills and to improve control accuracy. However, no particular technology has been established as the favorable for all domains, so that different sensory gloves have been developed adopting different sensors mainly based on optic, electric, magnetic, or mechanical properties. This work investigates the performances of the MANUS Quantum sensory glove that sources an electromagnetic field and measure its changing value at the fingers' tips with fingers' flexion. Its performances are determined in terms of measurement repeatability, reproducibility and reliability occurred during both quasi-static and dynamic hand motor tests.}
-      \field{month}{4}
-      \field{title}{Quasi-{Static} and {Dynamic} {Measurement} {Performances} of an {Electromagnetic} {Field}-{Based} {Sensory} {Glove} {Termed} {Manus} {Quantum} {Metaglove}}
-      \field{type}{{SSRN} {Scholarly} {Paper}}
-      \field{urlday}{28}
-      \field{urlmonth}{5}
+      \field{abstract}{The sensory glove (also known as data or instrumented glove) plays a key role in measuring and tracking hand dexterity. It has been adopted in a variety of different domains, including medical, robotics, virtual reality, and human{–}computer interaction, to assess hand motor skills and to improve control accuracy. However, no particular technology has been established as the most suitable for all domains, so that different sensory gloves have been developed, adopting different sensors mainly based on optic, electric, magnetic, or mechanical properties. This work investigates the performances of the MANUS Quantum sensory glove that sources an electromagnetic field and measures its changing value at the fingertips during fingers{’} flexion. Its performance is determined in terms of measurement repeatability, reproducibility, and reliability during both quasi-static and dynamic hand motor tests.}
+      \field{issn}{2079-6374}
+      \field{journaltitle}{Biosensors}
+      \field{month}{10}
+      \field{note}{Publisher: Multidisciplinary Digital Publishing Institute}
+      \field{number}{10}
+      \field{title}{Quasi-{Static} and {Dynamic} {Measurement} {Capabilities} {Provided} by an {Electromagnetic} {Field}-{Based} {Sensory} {Glove}}
+      \field{urlday}{7}
+      \field{urlmonth}{11}
       \field{urlyear}{2025}
+      \field{volume}{15}
       \field{year}{2025}
       \field{urldateera}{ce}
+      \field{pages}{640}
+      \range{pages}{1}
       \verb{doi}
-      \verb 10.2139/ssrn.5208853
+      \verb 10.3390/bios15100640
       \endverb
       \verb{file}
-      \verb Full Text PDF:C\:\\Users\\tsc\\Zotero\\storage\\9ML5XUAD\\Saggio et al. - 2025 - Quasi-Static and Dynamic Measurement Performances of an Electromagnetic Field-Based Sensory Glove Te.pdf:application/pdf
+      \verb Full Text PDF:C\:\\Users\\tsc\\Zotero\\storage\\7FPZEQ4Y\\Saggio et al. - 2025 - Quasi-Static and Dynamic Measurement Capabilities Provided by an Electromagnetic Field-Based Sensory.pdf:application/pdf
       \endverb
       \verb{urlraw}
-      \verb https://papers.ssrn.com/abstract=5208853
+      \verb https://www.mdpi.com/2079-6374/15/10/640
       \endverb
       \verb{url}
-      \verb https://papers.ssrn.com/abstract=5208853
+      \verb https://www.mdpi.com/2079-6374/15/10/640
       \endverb
-      \keyw{data glove,Dynamic performance,performance assessment,quasi-static performance,sensory glove}
+      \keyw{data glove,performance assessment,quasi-static performance,sensory glove,dynamic performance}
     \endentry
     \entry{santoni_magik_2021}{article}{}{}
       \name{author}{4}{}{%
@@ -1088,7 +1438,6 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{In this article, we present a hand-tracking system based on magnetic positioning. A single magnetic node is mounted on each fingertip and two magnetic nodes on the back side of the hand. A fixed array of receiving coils is used to detect the magnetic field, from which it is possible to infer the position and orientation of each magnetic node. A kinematic model of the whole hand has been developed. Starting from the positioning data of each magnetic node, the kinematic model can be used to calculate the position and flexion angle of each finger joint, plus the position and orientation of the hand in space. Relying on magnetic fields, the hand-tracking system can work also in non-line-of-sight conditions. The gesture reconstruction is validated by comparing it with a commercial hand-tracking system based on a depth camera. The system requires a small number of electronics to be mounted on the hand. This would allow building a light and comfortable data glove that could be used for several purposes: human-machine interface, sign language recognition, diagnostics, and rehabilitation.}
-      \field{annotation}{Magnetisches Motion Tracking der Finger 1 Spule auf jedem Finger und auf dem Handrücken. in einem Holzgestell sind Sensoren eingebracht. ein Optimierungsalgorithmus bestimmt dann die Position}
       \field{journaltitle}{IEEE Transactions on Instrumentation and Measurement}
       \field{note}{Conference Name: IEEE Transactions on Instrumentation and Measurement}
       \field{shorttitle}{{MagIK}}
@@ -1138,8 +1487,8 @@
       \field{journaltitle}{Numerical Linear Algebra with Applications}
       \field{note}{\_eprint: https://onlinelibrary.wiley.com/doi/pdf/10.1002/nla.2492}
       \field{number}{5}
-      \field{shorttitle}{Solution methods to the nearest rotation matrix problem in R3}
-      \field{title}{Solution methods to the nearest rotation matrix problem in R3: {A} comparative survey}
+      \field{shorttitle}{Solution methods to the nearest rotation matrix problem in ?3}
+      \field{title}{Solution methods to the nearest rotation matrix problem in ?3: {A} comparative survey}
       \field{urlday}{4}
       \field{urlmonth}{8}
       \field{urlyear}{2025}
@@ -1152,7 +1501,7 @@
       \verb 10.1002/nla.2492
       \endverb
       \verb{file}
-      \verb Full Text PDF:C\:\\Users\\tsc\\Zotero\\storage\\4B7TYD35\\Sarabandi und Thomas - 2023 - Solution methods to the nearest rotation matrix problem in R3 A comparative survey.pdf:application/pdf;Snapshot:C\:\\Users\\tsc\\Zotero\\storage\\YNT5UTVR\\nla.html:text/html
+      \verb Full Text PDF:C\:\\Users\\tsc\\Zotero\\storage\\4B7TYD35\\Sarabandi und Thomas - 2023 - Solution methods to the nearest rotation matrix problem in ?3 A comparative survey.pdf:application/pdf;Snapshot:C\:\\Users\\tsc\\Zotero\\storage\\YNT5UTVR\\nla.html:text/html
       \endverb
       \verb{urlraw}
       \verb https://onlinelibrary.wiley.com/doi/abs/10.1002/nla.2492
@@ -1185,7 +1534,7 @@
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Real-time Framework						 						 							 			Contents:			 							 										Overview									 							 										Application...}
+      \field{abstract}{Real-time Framework						~						~							~			Contents:			~							~										Overview									~							~										Application...}
       \field{title}{Real-time {Framework}}
       \field{urlday}{19}
       \field{urlmonth}{6}
@@ -1266,7 +1615,7 @@
       \verb 10.1007/978-3-8348-2359-5
       \endverb
       \verb{file}
-      \verb Full Text PDF:C\:\\Users\\tsc\\Zotero\\storage\\9KEXJ88A\\Zeidler - 2013 - Springer-Taschenbuch der Mathematik Begründet von I.N. Bronstein und K.A. Semendjaew Weitergeführt.pdf:application/pdf
+      \verb Full Text PDF:C\:\\Users\\tsc\\Zotero\\storage\\9KEXJ88A\\Zeidler - 2013 - Springer-Taschenbuch der Mathematik Begr{\"u}ndet von I.N. Bronstein und K.A. Semendjaew Weitergef{\"u}hrt.pdf:application/pdf
       \endverb
       \verb{urlraw}
       \verb https://link.springer.com/10.1007/978-3-8348-2359-5

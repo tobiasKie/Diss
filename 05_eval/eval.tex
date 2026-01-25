@@ -1,16 +1,20 @@
 \chapter{Evaluierung}
 \label{chap:Messergebnisse}
-Die entwickelten Algorithmen wurden evaluiert. Dafür werden zunächst simulative Evaluierung durchgeführt, um die Robustheit gegenüber Rauschen und anderem zu überprüfen. Im Anschluss wird das entwickelte System mit einem kommerziell verfügbaren optischen System verglichen. Optische Systeme gelten aktuell als der Goldstandard im Bereich der Bewegungsanalyse. Es wird ein Kamerasystem bestehend aus acht Kameras des Herstellers \textit{Qualisys} verwendet.
+Die entwickelten Algorithmen wurden evaluiert. Dafür werden zunächst simulative Evaluierung durchgeführt, um die Algorithmik in verschiedenen Szenarien zu testen. Im Anschluss wird das entwickelte System mit einem kommerziell verfügbaren optischen System verglichen. Optische Systeme gelten aktuell als der Goldstandard im Bereich der Bewegungsanalyse. Es wird ein Kamerasystem bestehend aus acht Kameras des Herstellers \textit{Qualisys} verwendet. Die Evaluierung wird zunächst für die Schätzung einer kinematischen Kette und im Anschluss für die absolut Lokalisierung durchgeführt.
 
 
 \section{Verwendete Hardware}
-Die Hardware besteht aus drei Komponenten, zum einen ein Auswertecomputer, eine AD/DA-Wandeleinheit und eine Stromverstärkereinheit. Als AD/DA-Einheit werden zwei Soundkarten des Hersteller $RME\,Audio$ eingesetzt, eine M32 AD Pro und eine M1610 Pro. Die Soundkarten sind über MADI(\textit{Multichannel Audio Digital Interface}) miteinander verbunden. So werden die Eingangsdaten der M1610 Pro in Echtzeit an die M32 AD Pro gesendet. Dadurch sind die Eingangsdaten von beiden Soundkarten synchronisiert. Über einen AVB-Router sind die Soundkarten am Auswertecomputer angeschlossen.Der Auswertecomputer generiert die Anregungssignale für die 3D-Spule und sendet diese an die DA-Einheit. Die DA-Einheit erzeugt aus den digitalen Signalfolgen analoge Spannungen. Es wird ein sechskanaliger Verstärker verwendet, von diesem treiben die ersten drei Kanäle die Spulenströme. Der Verstärker wurde in den Projekten B1/B9 des SFB1261 an der CAU Kiel entwickelt. In Abbildung\,\ref{fig:UsedHardware} ist der Aufbau dargestellt.
+Die Hardware besteht aus drei Komponenten, einem Auswertecomputer, einer AD/DA-Wandeleinheit und eine Stromverstärkereinheit. Als AD/DA-Einheit werden zwei Soundkarten des Hersteller \textit{RME\,Audio} eingesetzt, eine M32 AD Pro und eine M1610 Pro. Die Soundkarten sind über MADI(\textit{Multichannel Audio Digital Interface}) miteinander verbunden. So werden die Eingangsdaten der M1610 Pro in Echtzeit an die M32 AD Pro gesendet und die Aufnahmen beider Soundkarten sind synchronisiert. Über einen AVB-Router sind die Soundkarten am Auswertecomputer angeschlossen. Der Auswertecomputer generiert die Anregungssignale für die 3D-Spule und sendet diese an die DA-Einheit. Die DA-Einheit (M1610 Pro) erzeugt aus den digitalen Signalfolgen analoge Spannungen. Es wird ein sechskanaliger Verstärker verwendet, die ersten drei Kanäle treiben die Spulenströme. Der Verstärker wurde in den Projekten B1/B9 des SFB1261 an der CAU Kiel entwickelt. In Abbildung\,\ref{fig:UsedHardware} ist der Aufbau dargestellt.
 
 \begin{figure}[h!]
   \centering
-  \begin{overpic}[width=0.7\textwidth,trim = 0 5cm 0 0]{05_eval/images/UsedHardware.png}
+  \begin{overpic}[width=0.8\textwidth,trim = 0 0 0 0]{05_eval/images/HardwareSetup.pdf}
+    \put(2,15){AD/DA-Wandlereinheit}
+    \put(60,17){Stromverstärkereinheit}
+    \put(40,10){AVB-Router}
+    \put(30,5){AVB-Interface}
   \end{overpic}
-  \caption{Die Abbildung zeigt die verwendete Hardware bestehend aus einem Labornetzteil (rot), einer 32-Kanal-AD-Wandlerkarte (grün), einer 10-Kanal-DA-Wandlerkarte (blau), einer Stromverstärkereinheit (gelb) und eine AVB-Router mit Interface zum Auswertecomputer (pink).}
+  \caption{Die Abbildung zeigt die verwendete Hardware bestehend aus einem Labornetzteil, einer AD/DA-Wandlereinheit, einer Stromverstärkereinheit und einen AVB-Router mit Interface zum Auswertecomputer.}
   \label{fig:UsedHardware}
 \end{figure}
 
@@ -126,7 +130,7 @@ Bei der Untersuchung der Robustheit gegenüber Rauschen fällt auf, dass sowohl 
       \inputTikZ{1}{05_eval/images/EZ_ZC_full_period.tikz}
       \label{fig:LongFrame}
   }
-  \caption{(a) zeigt die $\vec{e}\tindex{zc}$ für eine Rahmenlänge 512. (b) zeigt dasselbe für eine Rahmenlänge von 4096.} 
+  \caption{(a) zeigt die $\vec{e}\tindex{zc}$ für eine Rahmenlänge 512, (b) für eine Rahmenlänge von 4096.} 
   \label{fig:MerkmalUndefined}
 \end{figure}
 Abbhilfe könnte hier eine Anpassung der Ansteuersignale auf Senderseite schaffen. Die Ansteuerung ist in Gleichung\,\ref{eq:rotDipole} eingeführt. Mit einer Rotation der Ansteuerung könnte virtuell die $z$-Achse so gedreht werden, dass die $\vec{e}\tindex{MV}$ in Richtung der resultierenden $z$-Achse steht. Ein solches "Zielen" könnte die Merkmalsextraktion in diesem Bereich verbessern. Dies wurde im Rahmen dieser Arbeit nicht untersucht.
@@ -171,7 +175,7 @@ Die relative Lokalisierung wurde entwickelt um die Bewegung von Fingern aufzuneh
         \put(66,49){$\textcolor{blue}{z}$}
         \put(86,44){$\textcolor{green}{y}$}
     \end{overpic}
-    \caption{Demonstrator: Die Abbildung zeigt den Demonstrator, der für die Evaluierung verwendet wird. Die 3D-Spule und die kinematischen Elemente sind mit optischen Markern ausgerüstet.  }
+    \caption{Demonstrator: Die Abbildung zeigt den Demonstrator, der für die Evaluierung verwendet wird. Die 3D-Spule und die kinematischen Elemente sind mit optischen Markern ausgerüstet.}
     \label{fig:Demonstrator}
 \end{figure}
 Zum Vergleich wird ein optisches System der Firma \textit{Qualisys AB} verwendet, bestehend aus 8 \textit{Miqus}-Kameras. Diese sind um den Demonstrator herum aufgebaut. Für die optische Bewegungsaufnahme wurden optische Marker zum einen auf der 3D-Spule und zum anderen auf den kinematischen Elementen befestigt, diese werden verwendet um die Orientierung der Elemente aufzunehmen und werden als Wahrer Wert verwendet. Der Aufbau ist in Abbildung\,\ref{fig:aufbauEval} zu sehen.
@@ -512,7 +516,7 @@ Die Sensorpaare sind $0.7\,\text{m}$ voneinander entfernt. Das $x$-Sensorpaar is
 \end{pmatrix}$.
 \subsubsection{Ergebnisse}
 \paragraph{Robustheit der Positionsschätzung gegen Rauschen}
-Die Robustheit der Positionsschätzung soll anhand eines Sensorpaares, also in einer Koordinate ($x$), geprüft werden. Da die drei Koordinaten unabhängig voneinander bestimmt werden, ergibt sich jeweils dasselbe Ergebnis. Auf das Sensorsignal wird weißes Rauschen addiert, mit einem konstatnten Rauschteppich von $150\,\frac{\text{pT}}{\sqrt{\text{Hz}}}$ ergibt. Die Spule wird so angesteuert, dass der maximale Strom bei 1\,A liegt. Die Sensoren sind 70\,cm voneinander entfernt. In einem Raster von 1\,cm wird jede Position in der $xy$-Ebene für 100 Rahmen simuliert. Die Untersuchung wird nur in einer Ebene durchgeführt, da aufgrund der Zylindersymmetrie des Dipolfeldes alle anderen Ebenen sich äquivalent ergeben. Es wird zum einen geprüft, wie groß die Standardabweichung innerhalb der 100 Schätzungen ist und ob der Mittelwert möglichst gut zum wahren Wert konvergiert. Das Ergebnis ist in Abbildung\,\ref{fig:PosSimEval} dargestellt.
+Die Robustheit der Positionsschätzung soll anhand eines Sensorpaares, also in einer Koordinate ($x$), geprüft werden. Da die drei Koordinaten unabhängig voneinander bestimmt werden, ergibt sich jeweils dasselbe Ergebnis. Auf das Sensorsignal wird weißes Rauschen addiert, mit einem konstatnten Rauschteppich von $150\,\frac{\text{pT}}{\sqrt{\text{Hz}}}$ ergibt, da die verwendeten Sensoren ungefähr in diesem Bereich liegen. Die Spule wird so angesteuert, dass der maximale Strom bei 1\,A liegt. Die Sensoren sind 70\,cm voneinander entfernt. In einem Raster von 1\,cm wird jede Position in der $xy$-Ebene für 100 Rahmen simuliert. Die Untersuchung wird nur in einer Ebene durchgeführt, da aufgrund der Zylindersymmetrie des Dipolfeldes alle anderen Ebenen sich äquivalent ergeben. Es wird zum einen geprüft, wie groß die Standardabweichung innerhalb der 100 Schätzungen ist und ob der Mittelwert möglichst gut zum wahren Wert konvergiert. Das Ergebnis ist in Abbildung\,\ref{fig:PosSimEval} dargestellt.
 \begin{figure}[h]
   \centering
   \subfloat[Standardabweichung der $x$-Komponente]{

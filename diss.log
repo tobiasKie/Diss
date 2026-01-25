@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.30)  14 JAN 2026 12:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.30)  25 JAN 2026 16:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2259,16 +2259,20 @@ Underfull \hbox (badness 2495) in paragraph at lines 44--44
 
 ]
 chapter 1.
-) (02_grundlagen/grundlagen.tex
+
 
 [1]
 
-[2
+[2]) (02_grundlagen/grundlagen.tex
+
+[3]
+
+[4
 
 
 ]
 chapter 2.
-<02_grundlagen/images/Gelenkarten.pdf, id=707, 845.04686pt x 597.50786pt>
+<02_grundlagen/images/Gelenkarten.pdf, id=740, 845.04686pt x 597.50786pt>
 File: 02_grundlagen/images/Gelenkarten.pdf Graphic file (type pdf)
 <use 02_grundlagen/images/Gelenkarten.pdf>
 Package pdftex.def Info: 02_grundlagen/images/Gelenkarten.pdf  used on input line 14.
@@ -2281,52 +2285,52 @@ Underfull \hbox (badness 2617) in paragraph at lines 20--20
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<02_grundlagen/images/Gelenkzuordnung.pdf, id=714, 845.04686pt x 597.50786pt>
+<02_grundlagen/images/Gelenkzuordnung.pdf, id=747, 845.04686pt x 597.50786pt>
 File: 02_grundlagen/images/Gelenkzuordnung.pdf Graphic file (type pdf)
 <use 02_grundlagen/images/Gelenkzuordnung.pdf>
 Package pdftex.def Info: 02_grundlagen/images/Gelenkzuordnung.pdf  used on input line 33.
 (pdftex.def)             Requested size: 227.62206pt x 160.94635pt.
 
 
-[3]
+[5]
 
-[4 <./02_grundlagen/images/Gelenkarten.pdf> <./02_grundlagen/images/Gelenkzuordnung.pdf
+[6 <./02_grundlagen/images/Gelenkarten.pdf> <./02_grundlagen/images/Gelenkzuordnung.pdf
 
 pdfTeX warning: pdflatex (file ./02_grundlagen/images/Gelenkzuordnung.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<02_grundlagen/images/Def_ModellDrehung.png, id=735, 845.40843pt x 597.73312pt>
+<02_grundlagen/images/Def_ModellDrehung.png, id=769, 845.40843pt x 597.73312pt>
 File: 02_grundlagen/images/Def_ModellDrehung.png Graphic file (type png)
 <use 02_grundlagen/images/Def_ModellDrehung.png>
-Package pdftex.def Info: 02_grundlagen/images/Def_ModellDrehung.png  used on input line 50.
+Package pdftex.def Info: 02_grundlagen/images/Def_ModellDrehung.png  used on input line 49.
 (pdftex.def)             Requested size: 455.24411pt x 321.86813pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 3758) has occurred while \output is active []
 
 
 
-[5 <./02_grundlagen/images/Def_ModellDrehung.png>]
-<02_grundlagen/images/Optical_camera.jpg, id=745, 752.8125pt x 752.8125pt>
+[7 <./02_grundlagen/images/Def_ModellDrehung.png>]
+<02_grundlagen/images/Optical_camera.jpg, id=778, 752.8125pt x 752.8125pt>
 File: 02_grundlagen/images/Optical_camera.jpg Graphic file (type jpg)
 <use 02_grundlagen/images/Optical_camera.jpg>
-Package pdftex.def Info: 02_grundlagen/images/Optical_camera.jpg  used on input line 129.
+Package pdftex.def Info: 02_grundlagen/images/Optical_camera.jpg  used on input line 128.
 (pdftex.def)             Requested size: 159.33821pt x 159.33588pt.
-<02_grundlagen/images/optical_marker.jpg, id=748, 200.75pt x 200.75pt>
+<02_grundlagen/images/optical_marker.jpg, id=781, 200.75pt x 200.75pt>
 File: 02_grundlagen/images/optical_marker.jpg Graphic file (type jpg)
 <use 02_grundlagen/images/optical_marker.jpg>
-Package pdftex.def Info: 02_grundlagen/images/optical_marker.jpg  used on input line 134.
+Package pdftex.def Info: 02_grundlagen/images/optical_marker.jpg  used on input line 133.
 (pdftex.def)             Requested size: 159.33821pt x 159.34735pt.
 
 
-[6{C:/Users/tsc/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}]
-<02_grundlagen/images/Kamerapositionierung.png, id=766, 1476.26532pt x 726.46407pt>
+[8{C:/Users/tsc/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}]
+<02_grundlagen/images/Kamerapositionierung.png, id=799, 1476.26532pt x 726.46407pt>
 File: 02_grundlagen/images/Kamerapositionierung.png Graphic file (type png)
 <use 02_grundlagen/images/Kamerapositionierung.png>
-Package pdftex.def Info: 02_grundlagen/images/Kamerapositionierung.png  used on input line 154.
+Package pdftex.def Info: 02_grundlagen/images/Kamerapositionierung.png  used on input line 153.
 (pdftex.def)             Requested size: 227.62206pt x 112.00218pt.
-<02_grundlagen/images/rigidbody.jpeg, id=769, 462.22687pt x 443.40656pt>
+<02_grundlagen/images/rigidbody.jpeg, id=802, 462.22687pt x 443.40656pt>
 File: 02_grundlagen/images/rigidbody.jpeg Graphic file (type jpg)
 <use 02_grundlagen/images/rigidbody.jpeg>
-Package pdftex.def Info: 02_grundlagen/images/rigidbody.jpeg  used on input line 160.
+Package pdftex.def Info: 02_grundlagen/images/rigidbody.jpeg  used on input line 159.
 (pdftex.def)             Requested size: 136.57462pt x 131.01353pt.
 
 
@@ -2334,43 +2338,43 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 
-[7 <./02_grundlagen/images/Optical_camera.jpg> <./02_grundlagen/images/optical_marker.jpg>]
-<02_grundlagen/images/Manus_Glove.png, id=784, 497.60907pt x 735.49782pt>
+[9 <./02_grundlagen/images/Optical_camera.jpg> <./02_grundlagen/images/optical_marker.jpg>]
+<02_grundlagen/images/Manus_Glove.png, id=817, 497.60907pt x 735.49782pt>
 File: 02_grundlagen/images/Manus_Glove.png Graphic file (type png)
 <use 02_grundlagen/images/Manus_Glove.png>
-Package pdftex.def Info: 02_grundlagen/images/Manus_Glove.png  used on input line 195.
+Package pdftex.def Info: 02_grundlagen/images/Manus_Glove.png  used on input line 178.
 (pdftex.def)             Requested size: 113.81102pt x 168.21823pt.
 
 
-[8 <./02_grundlagen/images/Kamerapositionierung.png> <./02_grundlagen/images/rigidbody.jpeg> <./02_grundlagen/images/Manus_Glove.png>] (02_grundlagen/images/fluxgate_Frequency.tikz)
+[10 <./02_grundlagen/images/Kamerapositionierung.png> <./02_grundlagen/images/rigidbody.jpeg> <./02_grundlagen/images/Manus_Glove.png>] (02_grundlagen/images/fluxgate_Frequency.tikz)
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 
-[9] (02_grundlagen/images/FluxGate_Noise.tikz
+[11] (02_grundlagen/images/FluxGate_Noise.tikz
 Package pgfplots info on input line 33: Using 'lua backend=false' for axis: ymode=log unsupported (yet).
 )
-<02_grundlagen/images/FLC_100.jpg, id=812, 489.32813pt x 237.13594pt>
+<02_grundlagen/images/FLC_100.jpg, id=843, 489.32813pt x 237.13594pt>
 File: 02_grundlagen/images/FLC_100.jpg Graphic file (type jpg)
 <use 02_grundlagen/images/FLC_100.jpg>
-Package pdftex.def Info: 02_grundlagen/images/FLC_100.jpg  used on input line 244.
+Package pdftex.def Info: 02_grundlagen/images/FLC_100.jpg  used on input line 227.
 (pdftex.def)             Requested size: 227.62206pt x 110.31049pt.
 
-Overfull \hbox (50.97302pt too wide) in paragraph at lines 239--245
+Overfull \hbox (50.97302pt too wide) in paragraph at lines 222--228
  [][][] 
  []
 
 
 
-[10 <./02_grundlagen/images/FLC_100.jpg>]
-<02_grundlagen/images/Übersicht.png, id=820, 845.40843pt x 597.73312pt>
+[12 <./02_grundlagen/images/FLC_100.jpg>]
+<02_grundlagen/images/Übersicht.png, id=851, 845.40843pt x 597.73312pt>
 File: 02_grundlagen/images/Übersicht.png Graphic file (type png)
 <use 02_grundlagen/images/Übersicht.png>
-Package pdftex.def Info: 02_grundlagen/images/Übersicht.png  used on input line 260.
+Package pdftex.def Info: 02_grundlagen/images/Übersicht.png  used on input line 243.
 (pdftex.def)             Requested size: 455.24411pt x 321.86813pt.
 
-Overfull \hbox (6.94412pt too wide) in paragraph at lines 261--261
+Overfull \hbox (6.94412pt too wide) in paragraph at lines 244--244
  \OT1/lmr/m/n/12 Wandler 
  []
 
@@ -2379,17 +2383,17 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 ) (03_raeumliches_merkmal/raeumliches_merkmal.tex
 
-[11]
+[13]
 
-[12 <./02_grundlagen/images/Übersicht.png>]
+[14 <./02_grundlagen/images/Übersicht.png>]
 chapter 3.
 
 
-[13
+[15
 
 
 ]
-<03_raeumliches_merkmal/images/BiotSavartDiff.png, id=851, 845.40843pt x 597.73312pt>
+<03_raeumliches_merkmal/images/BiotSavartDiff.png, id=881, 845.40843pt x 597.73312pt>
 File: 03_raeumliches_merkmal/images/BiotSavartDiff.png Graphic file (type png)
 <use 03_raeumliches_merkmal/images/BiotSavartDiff.png>
 Package pdftex.def Info: 03_raeumliches_merkmal/images/BiotSavartDiff.png  used on input line 57.
@@ -2400,11 +2404,11 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 
-[14]
+[16]
 
-[15 <./03_raeumliches_merkmal/images/BiotSavartDiff.png>] (03_raeumliches_merkmal/images/DipFieldAbsFarbBild.tikz
+[17 <./03_raeumliches_merkmal/images/BiotSavartDiff.png>] (03_raeumliches_merkmal/images/DipFieldAbsFarbBild.tikz
 Missing character: There is no ] in font nullfont!
-<03_raeumliches_merkmal/images/DipFieldAbsFarbBild-1.png, id=892, 101.37875pt x 101.37875pt>
+<03_raeumliches_merkmal/images/DipFieldAbsFarbBild-1.png, id=923, 101.37875pt x 101.37875pt>
 File: 03_raeumliches_merkmal/images/DipFieldAbsFarbBild-1.png Graphic file (type png)
 <use 03_raeumliches_merkmal/images/DipFieldAbsFarbBild-1.png>
 Package pdftex.def Info: 03_raeumliches_merkmal/images/DipFieldAbsFarbBild-1.png  used on input line 153.
@@ -2413,60 +2417,60 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <14.4> on input line 153.
 ) (03_raeumliches_merkmal/images/DipoleAbsFlaeche.tikz)
 
-[16]
+[18]
 
-LaTeX Warning: Text page 17 contains only floats.
+LaTeX Warning: Text page 19 contains only floats.
 
 
 
-[17 <./03_raeumliches_merkmal/images/DipFieldAbsFarbBild-1.png>] (03_raeumliches_merkmal/images/3d-coil.tikz)
-<03_raeumliches_merkmal/images/Real_3D_Coil_with_legend.pdf, id=921, 845.04686pt x 597.50786pt>
+[19 <./03_raeumliches_merkmal/images/DipFieldAbsFarbBild-1.png>] (03_raeumliches_merkmal/images/3d-coil.tikz)
+<03_raeumliches_merkmal/images/Real_3D_Coil_with_legend.pdf, id=951, 845.04686pt x 597.50786pt>
 File: 03_raeumliches_merkmal/images/Real_3D_Coil_with_legend.pdf Graphic file (type pdf)
 <use 03_raeumliches_merkmal/images/Real_3D_Coil_with_legend.pdf>
 Package pdftex.def Info: 03_raeumliches_merkmal/images/Real_3D_Coil_with_legend.pdf  used on input line 191.
 (pdftex.def)             Requested size: 227.62206pt x 160.94635pt.
 
 
-[18 <./03_raeumliches_merkmal/images/Real_3D_Coil_with_legend.pdf>] (03_raeumliches_merkmal/images/Freq_Spule.tikz)
+[20 <./03_raeumliches_merkmal/images/Real_3D_Coil_with_legend.pdf>] (03_raeumliches_merkmal/images/Freq_Spule.tikz)
 Overfull \hbox (11.2878pt too wide) in paragraph at lines 217--218
 \OT1/lmr/m/n/12 Der Ma-xi-mal-vek-tor ist ein Si-gnal-merk-mal, das ver-wen-det wer-den kann, wenn 3D-Aktuatoren
  []
 
 
 
-[19]
-<04_lokalisierung/images/Angledescription.pdf, id=944, 845.04686pt x 597.50786pt>
+[21]
+<04_lokalisierung/images/Angledescription.pdf, id=976, 845.04686pt x 597.50786pt>
 File: 04_lokalisierung/images/Angledescription.pdf Graphic file (type pdf)
 <use 04_lokalisierung/images/Angledescription.pdf>
 Package pdftex.def Info: 04_lokalisierung/images/Angledescription.pdf  used on input line 233.
 (pdftex.def)             Requested size: 318.66948pt x 225.32307pt.
 
 
-[20 <./04_lokalisierung/images/Angledescription.pdf>]
+[22 <./04_lokalisierung/images/Angledescription.pdf>]
 
-[21]
-<03_raeumliches_merkmal/images/MaxvectorAngles.png, id=974, 845.40843pt x 597.73312pt>
+[23]
+<03_raeumliches_merkmal/images/MaxvectorAngles.png, id=1007, 845.40843pt x 597.73312pt>
 File: 03_raeumliches_merkmal/images/MaxvectorAngles.png Graphic file (type png)
 <use 03_raeumliches_merkmal/images/MaxvectorAngles.png>
 Package pdftex.def Info: 03_raeumliches_merkmal/images/MaxvectorAngles.png  used on input line 331.
 (pdftex.def)             Requested size: 455.24411pt x 199.29791pt.
 
 
-[22 <./03_raeumliches_merkmal/images/MaxvectorAngles.png>] (04_lokalisierung/images/potentialposes.tikz
+[24 <./03_raeumliches_merkmal/images/MaxvectorAngles.png>] (04_lokalisierung/images/potentialposes.tikz
 Missing character: There is no ] in font nullfont!
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10.95> on input line 96.
 )
 
-LaTeX Warning: Reference `eq:Bvonr' on page 23 undefined on input line 400.
+LaTeX Warning: Reference `eq:Bvonr' on page 25 undefined on input line 400.
 
 
 
-[23]) (04_umsetzung/umsetzung.tex
+[25]) (04_umsetzung/umsetzung.tex
 
-[24]
+[26]
 chapter 4.
-<04_umsetzung/images/Überblick_signalverarbeitung.png, id=1013, 845.40843pt x 597.73312pt>
+<04_umsetzung/images/Überblick_signalverarbeitung.png, id=1045, 845.40843pt x 597.73312pt>
 File: 04_umsetzung/images/Überblick_signalverarbeitung.png Graphic file (type png)
 <use 04_umsetzung/images/Überblick_signalverarbeitung.png>
 Package pdftex.def Info: 04_umsetzung/images/Überblick_signalverarbeitung.png  used on input line 6.
@@ -2518,11 +2522,11 @@ Overfull \hbox (13.14996pt too wide) in paragraph at lines 14--14
 
 
 
-[25
+[27
 
 
  <./04_umsetzung/images/Überblick_signalverarbeitung.png>]
-<04_umsetzung/images/Uebertragunsmechanismus.pdf, id=1021, 845.04686pt x 597.50786pt>
+<04_umsetzung/images/Uebertragunsmechanismus.pdf, id=1053, 845.04686pt x 597.50786pt>
 File: 04_umsetzung/images/Uebertragunsmechanismus.pdf Graphic file (type pdf)
 <use 04_umsetzung/images/Uebertragunsmechanismus.pdf>
 Package pdftex.def Info: 04_umsetzung/images/Uebertragunsmechanismus.pdf  used on input line 24.
@@ -2574,7 +2578,7 @@ Overfull \hbox (6.94412pt too wide) in paragraph at lines 34--34
 
 
 
-[26 <./04_umsetzung/images/Uebertragunsmechanismus.pdf>]
+[28 <./04_umsetzung/images/Uebertragunsmechanismus.pdf>]
 Overfull \hbox (5.77197pt too wide) in paragraph at lines 55--56
 \OT1/lmr/m/n/12 zwei-ter Ord-nung mit den Eck-fre-quen-zen bei 600 und 800Hz ver-wen-det. Um die Verz[]ogerung
  []
@@ -2584,7 +2588,7 @@ Overfull \hbox (55.48895pt too wide) in paragraph at lines 66--71
 [][][] 
  []
 
-<04_umsetzung/images/UebersichtVorverarbeitung.pdf, id=1036, 845.04686pt x 597.50786pt>
+<04_umsetzung/images/UebersichtVorverarbeitung.pdf, id=1068, 845.04686pt x 597.50786pt>
 File: 04_umsetzung/images/UebersichtVorverarbeitung.pdf Graphic file (type pdf)
 <use 04_umsetzung/images/UebersichtVorverarbeitung.pdf>
 Package pdftex.def Info: 04_umsetzung/images/UebersichtVorverarbeitung.pdf  used on input line 87.
@@ -2594,11 +2598,11 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 
-[27]
+[29]
 
-[28 <./04_umsetzung/images/UebersichtVorverarbeitung.pdf>] (04_lokalisierung/images/DipoleTrack.tikz)
+[30 <./04_umsetzung/images/UebersichtVorverarbeitung.pdf>] (04_lokalisierung/images/DipoleTrack.tikz)
 
-[29
+[31
 
 ] (04_lokalisierung/images/Zerocrossingfinal.tikz
 Missing character: There is no ] in font nullfont!
@@ -2608,16 +2612,16 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 
-[30]
+[32]
 
-[31]
+[33]
 Overfull \hbox (33.08397pt too wide) detected at line 209
 [][][]\OML/lmm/m/it/12 b\OT1/lmr/m/n/12 (\OML/lmm/m/it/12 n\OT1/lmr/m/n/12 ) = \OML/lmm/m/it/12 i\OT1/lmr/m/n/12 (\OML/lmm/m/it/12 m[] g[] []\OT1/lmr/m/n/12 (\OML/lmm/m/it/12 ![]T[] n\OT1/lmr/m/n/12 ) [](\OML/lmm/m/it/12 ![]T[] n\OT1/lmr/m/n/12 ) + \OML/lmm/m/it/12 m[] g[] []\OT1/lmr/m/n/12 (\OML/lmm/m/it/12 ![]T[] n\OT1/lmr/m/n/12 ) [](\OML/lmm/m/it/12 ![]T[]\OT1/lmr/m/n/12 ) + \OML/lmm/m/it/12 m[] g[] []\OT1/lmr/m/n/12 (\OML/lmm/m/it/12 ![]T[] n\OT1/lmr/m/n/12 ))\OML/lmm/m/it/12 ;
  []
 
 
 
-[32
+[34
 pdfTeX warning (ext4): destination with the same identifier (name{equation.4.14}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
@@ -2628,7 +2632,7 @@ Overfull \hbox (2.93243pt too wide) detected at line 249
  []
 
 (04_umsetzung/images/Ausreisser_G.tikz) (04_umsetzung/images/G_median.tikz)
-<04_umsetzung/images/Uebersicht_Merkmalsext.pdf, id=1104, 845.04686pt x 597.50786pt>
+<04_umsetzung/images/Uebersicht_Merkmalsext.pdf, id=1136, 845.04686pt x 597.50786pt>
 File: 04_umsetzung/images/Uebersicht_Merkmalsext.pdf Graphic file (type pdf)
 <use 04_umsetzung/images/Uebersicht_Merkmalsext.pdf>
 Package pdftex.def Info: 04_umsetzung/images/Uebersicht_Merkmalsext.pdf  used on input line 279.
@@ -2658,25 +2662,29 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 
-[33]
+[35]
 
-[34 <./04_umsetzung/images/Uebersicht_Merkmalsext.pdf>]
-<04_umsetzung/images/Sensorplacement.pdf, id=1123, 845.04686pt x 597.50786pt>
+[36 <./04_umsetzung/images/Uebersicht_Merkmalsext.pdf>]
+<04_umsetzung/images/Sensorplacement.pdf, id=1157, 845.04686pt x 597.50786pt>
 File: 04_umsetzung/images/Sensorplacement.pdf Graphic file (type pdf)
 <use 04_umsetzung/images/Sensorplacement.pdf>
-Package pdftex.def Info: 04_umsetzung/images/Sensorplacement.pdf  used on input line 307.
+Package pdftex.def Info: 04_umsetzung/images/Sensorplacement.pdf  used on input line 308.
 (pdftex.def)             Requested size: 455.24411pt x 245.25159pt.
 
 
-[35
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
- <./04_umsetzung/images/Sensorplacement.pdf>]
+
+
+[37
+
+]
 
 pdfTeX warning: pdflatex (file ./04_umsetzung/images/Flussdiagramm.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<04_umsetzung/images/Flussdiagramm.pdf, id=1135, 845.07718pt x 597.19106pt>
+<04_umsetzung/images/Flussdiagramm.pdf, id=1170, 845.07718pt x 597.19106pt>
 File: 04_umsetzung/images/Flussdiagramm.pdf Graphic file (type pdf)
 <use 04_umsetzung/images/Flussdiagramm.pdf>
-Package pdftex.def Info: 04_umsetzung/images/Flussdiagramm.pdf  used on input line 353.
+Package pdftex.def Info: 04_umsetzung/images/Flussdiagramm.pdf  used on input line 354.
 (pdftex.def)             Requested size: 318.66948pt x 359.86913pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -2697,47 +2705,50 @@ Overfull \hbox (13.27773pt too wide) in paragraph at lines 14--14
  []
 
 )
-<04_lokalisierung/images/PotentialPoses_for_Inkscape_Setup_grid.png, id=1137, 787.44188pt x 619.56468pt>
+<04_lokalisierung/images/PotentialPoses_for_Inkscape_Setup_grid.png, id=1172, 787.44188pt x 619.56468pt>
 File: 04_lokalisierung/images/PotentialPoses_for_Inkscape_Setup_grid.png Graphic file (type png)
 <use 04_lokalisierung/images/PotentialPoses_for_Inkscape_Setup_grid.png>
-Package pdftex.def Info: 04_lokalisierung/images/PotentialPoses_for_Inkscape_Setup_grid.png  used on input line 371.
+Package pdftex.def Info: 04_lokalisierung/images/PotentialPoses_for_Inkscape_Setup_grid.png  used on input line 372.
 (pdftex.def)             Requested size: 95.1681pt x 105.3246pt.
-<04_lokalisierung/images/PotentialPoses_for_Inkscape_Setup_Iteration1_grid.png, id=1138, 787.44188pt x 619.56468pt>
+<04_lokalisierung/images/PotentialPoses_for_Inkscape_Setup_Iteration1_grid.png, id=1173, 787.44188pt x 619.56468pt>
 File: 04_lokalisierung/images/PotentialPoses_for_Inkscape_Setup_Iteration1_grid.png Graphic file (type png)
 <use 04_lokalisierung/images/PotentialPoses_for_Inkscape_Setup_Iteration1_grid.png>
-Package pdftex.def Info: 04_lokalisierung/images/PotentialPoses_for_Inkscape_Setup_Iteration1_grid.png  used on input line 376.
+Package pdftex.def Info: 04_lokalisierung/images/PotentialPoses_for_Inkscape_Setup_Iteration1_grid.png  used on input line 377.
 (pdftex.def)             Requested size: 95.1681pt x 105.3246pt.
-<04_lokalisierung/images/PotentialPoses_for_Inkscape_Setup_Iteration2_grid.png, id=1139, 787.44188pt x 619.56468pt>
+<04_lokalisierung/images/PotentialPoses_for_Inkscape_Setup_Iteration2_grid.png, id=1174, 787.44188pt x 619.56468pt>
 File: 04_lokalisierung/images/PotentialPoses_for_Inkscape_Setup_Iteration2_grid.png Graphic file (type png)
 <use 04_lokalisierung/images/PotentialPoses_for_Inkscape_Setup_Iteration2_grid.png>
-Package pdftex.def Info: 04_lokalisierung/images/PotentialPoses_for_Inkscape_Setup_Iteration2_grid.png  used on input line 381.
+Package pdftex.def Info: 04_lokalisierung/images/PotentialPoses_for_Inkscape_Setup_Iteration2_grid.png  used on input line 382.
 (pdftex.def)             Requested size: 95.1681pt x 105.3246pt.
-<04_lokalisierung/images/PotentialPoses_for_Inkscape_Setup_Iteration4_grid.png, id=1140, 787.44188pt x 619.56468pt>
+<04_lokalisierung/images/PotentialPoses_for_Inkscape_Setup_Iteration4_grid.png, id=1175, 787.44188pt x 619.56468pt>
 File: 04_lokalisierung/images/PotentialPoses_for_Inkscape_Setup_Iteration4_grid.png Graphic file (type png)
 <use 04_lokalisierung/images/PotentialPoses_for_Inkscape_Setup_Iteration4_grid.png>
-Package pdftex.def Info: 04_lokalisierung/images/PotentialPoses_for_Inkscape_Setup_Iteration4_grid.png  used on input line 386.
+Package pdftex.def Info: 04_lokalisierung/images/PotentialPoses_for_Inkscape_Setup_Iteration4_grid.png  used on input line 387.
 (pdftex.def)             Requested size: 95.1681pt x 105.3246pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 (04_umsetzung/images/ConvergenceSpeed.tikz)
+Underfull \vbox (badness 1371) has occurred while \output is active []
 
-[36]
 
-[37 <./04_umsetzung/images/Flussdiagramm.pdf>]
-<04_lokalisierung/images/Visualisierung_Uniqueness_gedreht.pdf, id=1182, 845.04686pt x 597.50786pt>
+
+[38 <./04_umsetzung/images/Sensorplacement.pdf>]
+
+[39 <./04_umsetzung/images/Flussdiagramm.pdf>]
+<04_lokalisierung/images/Visualisierung_Uniqueness_gedreht.pdf, id=1214, 845.04686pt x 597.50786pt>
 File: 04_lokalisierung/images/Visualisierung_Uniqueness_gedreht.pdf Graphic file (type pdf)
 <use 04_lokalisierung/images/Visualisierung_Uniqueness_gedreht.pdf>
-Package pdftex.def Info: 04_lokalisierung/images/Visualisierung_Uniqueness_gedreht.pdf  used on input line 429.
+Package pdftex.def Info: 04_lokalisierung/images/Visualisierung_Uniqueness_gedreht.pdf  used on input line 430.
 (pdftex.def)             Requested size: 227.62206pt x 160.94635pt.
-<04_lokalisierung/images/Eindeutigkeit_Ebene.pdf, id=1183, 845.04686pt x 597.50786pt>
+<04_lokalisierung/images/Eindeutigkeit_Ebene.pdf, id=1215, 845.04686pt x 597.50786pt>
 File: 04_lokalisierung/images/Eindeutigkeit_Ebene.pdf Graphic file (type pdf)
 <use 04_lokalisierung/images/Eindeutigkeit_Ebene.pdf>
-Package pdftex.def Info: 04_lokalisierung/images/Eindeutigkeit_Ebene.pdf  used on input line 439.
+Package pdftex.def Info: 04_lokalisierung/images/Eindeutigkeit_Ebene.pdf  used on input line 440.
 (pdftex.def)             Requested size: 227.62206pt x 160.94635pt.
 
-Overfull \hbox (23.49847pt too wide) in paragraph at lines 429--440
+Overfull \hbox (23.49847pt too wide) in paragraph at lines 430--441
  [][][] 
  []
 
@@ -2745,16 +2756,13 @@ Overfull \hbox (23.49847pt too wide) in paragraph at lines 429--440
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \vbox (badness 1173) has occurred while \output is active []
+
+[40 <./04_lokalisierung/images/PotentialPoses_for_Inkscape_Setup_grid.png> <./04_lokalisierung/images/PotentialPoses_for_Inkscape_Setup_Iteration1_grid.png> <./04_lokalisierung/images/PotentialPoses_for_Inkscape_Setup_Iteration2_grid.png> <./04_lokalisierung/images/PotentialPoses_for_Inkscape_Setup_Iteration4_grid.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[38 <./04_lokalisierung/images/PotentialPoses_for_Inkscape_Setup_grid.png> <./04_lokalisierung/images/PotentialPoses_for_Inkscape_Setup_Iteration1_grid.png> <./04_lokalisierung/images/PotentialPoses_for_Inkscape_Setup_Iteration2_grid.png> <./04_lokalisierung/images/PotentialPoses_for_Inkscape_Setup_Iteration4_grid.png>]
-Underfull \vbox (badness 1540) has occurred while \output is active []
-
-
-
-[39 <./04_lokalisierung/images/Visualisierung_Uniqueness_gedreht.pdf> <./04_lokalisierung/images/Eindeutigkeit_Ebene.pdf
+[41 <./04_lokalisierung/images/Visualisierung_Uniqueness_gedreht.pdf> <./04_lokalisierung/images/Eindeutigkeit_Ebene.pdf
 
 pdfTeX warning: pdflatex (file ./04_lokalisierung/images/Eindeutigkeit_Ebene.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >] (04_lokalisierung/images/q0_05_Unique.tikz
@@ -2765,7 +2773,7 @@ Missing character: There is no n in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no = in font nullfont!
 )
-Overfull \hbox (378.55836pt too wide) in paragraph at lines 468--469
+Overfull \hbox (378.55836pt too wide) in paragraph at lines 469--470
 [][] 
  []
 
@@ -2784,34 +2792,29 @@ Missing character: There is no n in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no = in font nullfont!
 )
-Overfull \hbox (268.94228pt too wide) in paragraph at lines 482--483
+Overfull \hbox (268.94228pt too wide) in paragraph at lines 483--484
 [][] 
  []
 
-(04_umsetzung/images/noConvergence.tikz)
-
-LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (4.69589pt too wide) in paragraph at lines 500--501
+[42] (04_umsetzung/images/noConvergence.tikz)
+Overfull \hbox (4.69589pt too wide) in paragraph at lines 501--502
 []\OT1/lmr/m/n/12 In der sp[]ateren An-wen-dung muss dies be-ach-tet wer-den, wo-bei bei ei-ner Sensorhandschuh-
  []
 
-
-
-[40]
-<04_umsetzung/images/Fingerdicke_zusatzlaenge.png, id=1221, 845.40843pt x 597.73312pt>
+<04_umsetzung/images/Fingerdicke_zusatzlaenge.png, id=1255, 845.40843pt x 597.73312pt>
 File: 04_umsetzung/images/Fingerdicke_zusatzlaenge.png Graphic file (type png)
 <use 04_umsetzung/images/Fingerdicke_zusatzlaenge.png>
-Package pdftex.def Info: 04_umsetzung/images/Fingerdicke_zusatzlaenge.png  used on input line 543.
+Package pdftex.def Info: 04_umsetzung/images/Fingerdicke_zusatzlaenge.png  used on input line 544.
 (pdftex.def)             Requested size: 227.62206pt x 160.93407pt.
-<04_umsetzung/images/Winkel_DickeKorr.png, id=1222, 845.40843pt x 597.73312pt>
+<04_umsetzung/images/Winkel_DickeKorr.png, id=1256, 845.40843pt x 597.73312pt>
 File: 04_umsetzung/images/Winkel_DickeKorr.png Graphic file (type png)
 <use 04_umsetzung/images/Winkel_DickeKorr.png>
-Package pdftex.def Info: 04_umsetzung/images/Winkel_DickeKorr.png  used on input line 552.
+Package pdftex.def Info: 04_umsetzung/images/Winkel_DickeKorr.png  used on input line 553.
 (pdftex.def)             Requested size: 227.62206pt x 160.93407pt.
 
-Overfull \hbox (31.3317pt too wide) in paragraph at lines 543--553
+Overfull \hbox (31.3317pt too wide) in paragraph at lines 544--554
  [][][] 
  []
 
@@ -2820,19 +2823,19 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 
-[41]
-
-LaTeX Warning: Command \l invalid in math mode on input line 575.
-
-
-
-[42 <./04_umsetzung/images/Fingerdicke_zusatzlaenge.png> <./04_umsetzung/images/Winkel_DickeKorr.png>]
-
 [43]
-<04_umsetzung/images/Abs_Flache_curve.png, id=1262, 421.575pt x 316.18124pt>
+
+LaTeX Warning: Command \l invalid in math mode on input line 576.
+
+
+
+[44 <./04_umsetzung/images/Fingerdicke_zusatzlaenge.png> <./04_umsetzung/images/Winkel_DickeKorr.png>]
+
+[45]
+<04_umsetzung/images/Abs_Flache_curve.png, id=1294, 421.575pt x 316.18124pt>
 File: 04_umsetzung/images/Abs_Flache_curve.png Graphic file (type png)
 <use 04_umsetzung/images/Abs_Flache_curve.png>
-Package pdftex.def Info: 04_umsetzung/images/Abs_Flache_curve.png  used on input line 657.
+Package pdftex.def Info: 04_umsetzung/images/Abs_Flache_curve.png  used on input line 658.
 (pdftex.def)             Requested size: 318.66948pt x 239.00726pt.
 
 
@@ -2840,9 +2843,9 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 
-[44]
+[46]
 
-[45 <./04_umsetzung/images/Abs_Flache_curve.png (PNG copy)>] (04_lokalisierung/images/legend_abslocal.tikz
+[47 <./04_umsetzung/images/Abs_Flache_curve.png (PNG copy)>] (04_lokalisierung/images/legend_abslocal.tikz
 Overfull \hbox (23.6387pt too wide) in paragraph at lines 13--13
 [][][]\OT1/lmr/m/n/12 Aquibetrags- 
  []
@@ -2853,67 +2856,67 @@ Overfull \hbox (2.4278pt too wide) in paragraph at lines 17--17
  []
 
 ) (04_umsetzung/images/AbsLocalIteration1.tikz) (04_umsetzung/images/AbsLocalIteration2.tikz) (04_umsetzung/images/AbsLocalIteration3.tikz) (04_umsetzung/images/AbsLocalIteration7.tikz)
-Overfull \hbox (17.02972pt too wide) in paragraph at lines 702--721
+Overfull \hbox (17.02972pt too wide) in paragraph at lines 703--722
  [] [][][][] 
  []
 
-(04_umsetzung/images/ProblemAbslocal.tikz)
-
-[46]
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
+[48] (04_umsetzung/images/ProblemAbslocal.tikz)
+Underfull \vbox (badness 2189) has occurred while \output is active []
 
-[47] (04_umsetzung/images/MaxvectorsGlob.tikz) (04_umsetzung/images/MaxvectorsLocal.tikz) (04_umsetzung/images/MaxvectorsGlob_AnsichtGedreht.tikz)
-Underfull \hbox (badness 2781) in paragraph at lines 794--794
+
+
+[49] (04_umsetzung/images/MaxvectorsGlob.tikz) (04_umsetzung/images/MaxvectorsLocal.tikz) (04_umsetzung/images/MaxvectorsGlob_AnsichtGedreht.tikz)
+Underfull \hbox (badness 2781) in paragraph at lines 795--795
 [][][]|\OT1/lmr/m/n/10.95 Glo-ba-les Ko-or-di-na-ten-sys-tem mit
  []
 
 
 
-[48
+[50
 pdfTeX warning (ext4): destination with the same identifier (name{equation.4.53}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.827 
+l.828 
       ]
 
-[49]
-<04_umsetzung/images/Uebersicht_Lok.pdf, id=1324, 845.04686pt x 597.50786pt>
+[51]
+<04_umsetzung/images/Uebersicht_Lok.pdf, id=1357, 845.04686pt x 597.50786pt>
 File: 04_umsetzung/images/Uebersicht_Lok.pdf Graphic file (type pdf)
 <use 04_umsetzung/images/Uebersicht_Lok.pdf>
-Package pdftex.def Info: 04_umsetzung/images/Uebersicht_Lok.pdf  used on input line 872.
+Package pdftex.def Info: 04_umsetzung/images/Uebersicht_Lok.pdf  used on input line 873.
 (pdftex.def)             Requested size: 455.24411pt x 321.8927pt.
 
-Overfull \hbox (14.0944pt too wide) in paragraph at lines 874--874
+Overfull \hbox (14.0944pt too wide) in paragraph at lines 875--875
 []\OT1/lmr/m/n/12 Positions-
  []
 
 
-Overfull \hbox (14.52051pt too wide) in paragraph at lines 874--874
+Overfull \hbox (14.52051pt too wide) in paragraph at lines 875--875
 \OT1/lmr/m/n/12 sch[]atzung 
  []
 
 
-Package amsfonts Warning: Obsolete command \bold; \mathbf should be used instead on input line 875.
+Package amsfonts Warning: Obsolete command \bold; \mathbf should be used instead on input line 876.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 879--879
+Underfull \hbox (badness 10000) in paragraph at lines 880--880
 []\OT1/lmr/m/n/12 Orien-
  []
 
 
-Overfull \hbox (8.97195pt too wide) in paragraph at lines 879--879
+Overfull \hbox (8.97195pt too wide) in paragraph at lines 880--880
 \OT1/lmr/m/n/12 tierungs-
  []
 
 
-Overfull \hbox (14.52051pt too wide) in paragraph at lines 879--879
+Overfull \hbox (14.52051pt too wide) in paragraph at lines 880--880
 \OT1/lmr/m/n/12 sch[]atzung 
  []
 
 
-Overfull \hbox (1.72284pt too wide) in paragraph at lines 882--882
+Overfull \hbox (1.72284pt too wide) in paragraph at lines 883--883
 []\OT1/lmr/m/n/12 Kombi-
  []
 
@@ -2922,45 +2925,45 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 
-[50]
+[52]
 
-[51 <./04_umsetzung/images/Uebersicht_Lok.pdf>]
-<04_umsetzung/images/Distance_to_angle.png, id=1346, 845.40843pt x 597.73312pt>
+[53 <./04_umsetzung/images/Uebersicht_Lok.pdf>]
+<04_umsetzung/images/Distance_to_angle.png, id=1380, 845.40843pt x 597.73312pt>
 File: 04_umsetzung/images/Distance_to_angle.png Graphic file (type png)
 <use 04_umsetzung/images/Distance_to_angle.png>
-Package pdftex.def Info: 04_umsetzung/images/Distance_to_angle.png  used on input line 912.
+Package pdftex.def Info: 04_umsetzung/images/Distance_to_angle.png  used on input line 913.
 (pdftex.def)             Requested size: 341.43307pt x 241.39653pt.
  (04_umsetzung/images/DisttoAngle_Angle.tikz)
 
-[52 <./04_umsetzung/images/Distance_to_angle.png>]
-Overfull \hbox (8.0643pt too wide) in paragraph at lines 946--948
-\OT1/lmr/m/n/12 gew[]ahlten Fre-quen-zen in der Si-gnal-ge-ne-rie-rung, zu St[]orungen. In [[][]7[]] wur-de die Abh[]angigkeit
+[54 <./04_umsetzung/images/Distance_to_angle.png>]
+Overfull \hbox (8.0643pt too wide) in paragraph at lines 947--949
+\OT1/lmr/m/n/12 gew[]ahlten Fre-quen-zen in der Si-gnal-ge-ne-rie-rung, zu St[]orungen. In [[][]9[]] wur-de die Abh[]angigkeit
  []
 
 
 
-[53] (04_umsetzung/images/FilterPost.tikz)
+[55] (04_umsetzung/images/FilterPost.tikz)
 
-[54]
+[56]
 
-[55]
-<04_umsetzung/images/Uebersicht_Postprocessing.pdf, id=1391, 845.04686pt x 597.50786pt>
+[57]
+<04_umsetzung/images/Uebersicht_Postprocessing.pdf, id=1424, 845.04686pt x 597.50786pt>
 File: 04_umsetzung/images/Uebersicht_Postprocessing.pdf Graphic file (type pdf)
 <use 04_umsetzung/images/Uebersicht_Postprocessing.pdf>
-Package pdftex.def Info: 04_umsetzung/images/Uebersicht_Postprocessing.pdf  used on input line 1016.
+Package pdftex.def Info: 04_umsetzung/images/Uebersicht_Postprocessing.pdf  used on input line 1017.
 (pdftex.def)             Requested size: 455.24411pt x 321.8927pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1020--1020
+Underfull \hbox (badness 10000) in paragraph at lines 1021--1021
 \OT1/lmr/m/n/12 Win-ke-lum-
  []
 
 
-Overfull \hbox (24.14684pt too wide) in paragraph at lines 1022--1022
+Overfull \hbox (24.14684pt too wide) in paragraph at lines 1023--1023
 []\OT1/lmr/m/n/12 Bewegungs-
  []
 
 
-Overfull \hbox (37.04198pt too wide) in paragraph at lines 1022--1022
+Overfull \hbox (37.04198pt too wide) in paragraph at lines 1023--1023
 \OT1/lmr/m/n/12 einschr[]ankung 
  []
 
@@ -2970,53 +2973,53 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 (05_eval/eval.tex
 
-[56]
+[58]
 
-[57 <./04_umsetzung/images/Uebersicht_Postprocessing.pdf>]
+[59 <./04_umsetzung/images/Uebersicht_Postprocessing.pdf>]
 
-[58
+[60
 
 
 ]
 chapter 5.
-<05_eval/images/UsedHardware.png, id=1410, 845.40843pt x 597.73312pt>
-File: 05_eval/images/UsedHardware.png Graphic file (type png)
-<use 05_eval/images/UsedHardware.png>
-Package pdftex.def Info: 05_eval/images/UsedHardware.png  used on input line 11.
-(pdftex.def)             Requested size: 318.66948pt x 171.68321pt.
+<05_eval/images/HardwareSetup.pdf, id=1444, 845.04686pt x 597.50786pt>
+File: 05_eval/images/HardwareSetup.pdf Graphic file (type pdf)
+<use 05_eval/images/HardwareSetup.pdf>
+Package pdftex.def Info: 05_eval/images/HardwareSetup.pdf  used on input line 11.
+(pdftex.def)             Requested size: 364.19667pt x 257.51599pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 
-[59] (05_eval/images/VarianceMV.tikz
-<05_eval/images/VarianceMV-1.png, id=1418, 90.3375pt x 90.3375pt>
+[61] (05_eval/images/VarianceMV.tikz
+<05_eval/images/VarianceMV-1.png, id=1451, 90.3375pt x 90.3375pt>
 File: 05_eval/images/VarianceMV-1.png Graphic file (type png)
 <use 05_eval/images/VarianceMV-1.png>
 Package pdftex.def Info: 05_eval/images/VarianceMV-1.png  used on input line 31.
 (pdftex.def)             Requested size: 109.6216pt x 109.62436pt.
 Package pgfplots info on input line 31: Using 'lua backend=false' for axis: ymode=log unsupported (yet).
 ) (05_eval/images/VarianceProj.tikz
-<05_eval/images/VarianceProj-1.png, id=1421, 90.3375pt x 90.3375pt>
+<05_eval/images/VarianceProj-1.png, id=1454, 90.3375pt x 90.3375pt>
 File: 05_eval/images/VarianceProj-1.png Graphic file (type png)
 <use 05_eval/images/VarianceProj-1.png>
 Package pdftex.def Info: 05_eval/images/VarianceProj-1.png  used on input line 31.
 (pdftex.def)             Requested size: 109.6216pt x 109.62436pt.
 Package pgfplots info on input line 31: Using 'lua backend=false' for axis: ymode=log unsupported (yet).
 ) (05_eval/images/ErrorProj.tikz
-<05_eval/images/ErrorProj-1.png, id=1424, 90.3375pt x 90.3375pt>
+<05_eval/images/ErrorProj-1.png, id=1457, 90.3375pt x 90.3375pt>
 File: 05_eval/images/ErrorProj-1.png Graphic file (type png)
 <use 05_eval/images/ErrorProj-1.png>
 Package pdftex.def Info: 05_eval/images/ErrorProj-1.png  used on input line 31.
 (pdftex.def)             Requested size: 109.6216pt x 109.62436pt.
 ) (05_eval/images/FaktorVar.tikz
-<05_eval/images/FaktorVar-1.png, id=1427, 90.3375pt x 90.3375pt>
+<05_eval/images/FaktorVar-1.png, id=1460, 90.3375pt x 90.3375pt>
 File: 05_eval/images/FaktorVar-1.png Graphic file (type png)
 <use 05_eval/images/FaktorVar-1.png>
 Package pdftex.def Info: 05_eval/images/FaktorVar-1.png  used on input line 31.
 (pdftex.def)             Requested size: 109.6216pt x 109.62436pt.
 )
-Overfull \hbox (30.86533pt too wide) in paragraph at lines 33--52
+Overfull \hbox (30.86533pt too wide) in paragraph at lines 37--56
  [][][] 
  []
 
@@ -3025,35 +3028,32 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 
-[60 <./05_eval/images/UsedHardware.png>]
-<05_eval/images/FehlerFort.pdf, id=1442, 845.04686pt x 597.50786pt>
+[62 <./05_eval/images/HardwareSetup.pdf>]
+<05_eval/images/FehlerFort.pdf, id=1478, 845.04686pt x 597.50786pt>
 File: 05_eval/images/FehlerFort.pdf Graphic file (type pdf)
 <use 05_eval/images/FehlerFort.pdf>
-Package pdftex.def Info: 05_eval/images/FehlerFort.pdf  used on input line 66.
+Package pdftex.def Info: 05_eval/images/FehlerFort.pdf  used on input line 70.
 (pdftex.def)             Requested size: 318.66948pt x 225.32307pt.
  (05_eval/images/FehlerfortStdAb.tikz
-<05_eval/images/FehlerfortStdAb-1.png, id=1443, 10.0375pt x 10.0375pt>
+<05_eval/images/FehlerfortStdAb-1.png, id=1479, 10.0375pt x 10.0375pt>
 File: 05_eval/images/FehlerfortStdAb-1.png Graphic file (type png)
 <use 05_eval/images/FehlerfortStdAb-1.png>
 Package pdftex.def Info: 05_eval/images/FehlerfortStdAb-1.png  used on input line 31.
 (pdftex.def)             Requested size: 120.52396pt x 114.49774pt.
 ) (05_eval/images/MeanErrorFort.tikz
-<05_eval/images/MeanErrorFort-1.png, id=1446, 10.0375pt x 10.0375pt>
+<05_eval/images/MeanErrorFort-1.png, id=1482, 10.0375pt x 10.0375pt>
 File: 05_eval/images/MeanErrorFort-1.png Graphic file (type png)
 <use 05_eval/images/MeanErrorFort-1.png>
 Package pdftex.def Info: 05_eval/images/MeanErrorFort-1.png  used on input line 31.
 (pdftex.def)             Requested size: 120.52396pt x 114.49774pt.
 )
-Overfull \hbox (10.45087pt too wide) in paragraph at lines 78--84
+Overfull \hbox (10.45087pt too wide) in paragraph at lines 82--88
  [][][] 
  []
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-
-[61 <./05_eval/images/VarianceMV-1.png> <./05_eval/images/VarianceProj-1.png> <./05_eval/images/ErrorProj-1.png> <./05_eval/images/FaktorVar-1.png>]
+[63 <./05_eval/images/VarianceMV-1.png> <./05_eval/images/VarianceProj-1.png> <./05_eval/images/ErrorProj-1.png> <./05_eval/images/FaktorVar-1.png>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -3063,58 +3063,358 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 
-[62 <./05_eval/images/FehlerFort.pdf>]
+[64 <./05_eval/images/FehlerFort.pdf>]
 
-[63 <./05_eval/images/FehlerfortStdAb-1.png> <./05_eval/images/MeanErrorFort-1.png>] (05_eval/images/EZ_ZC.tikz
+[65 <./05_eval/images/FehlerfortStdAb-1.png> <./05_eval/images/MeanErrorFort-1.png>] (05_eval/images/EZ_ZC.tikz
 Missing character: There is no ] in font nullfont!
 ) (05_eval/images/EZ_ZC_full_period.tikz
 Missing character: There is no ] in font nullfont!
 )
-Overfull \hbox (13.66518pt too wide) in paragraph at lines 136--137
+Overfull \hbox (13.66518pt too wide) in paragraph at lines 140--141
 \OT1/lmr/m/n/12 Stel-lung der Ket-te. Je n[]aher $\OML/lmm/m/it/12 ^^^[]$ \OT1/lmr/m/n/12 bei 0 liegt, de-sto gr[]o^^Yer ist die Stan-dard-ab-wei-chung/geringer
  []
 
-(05_eval/images/ZeroCrossingWithMotion.tikz)
 
-[64]
-<05_eval/images/demonstrator.png, id=1498, 845.40843pt x 597.73312pt>
+
+[66] (05_eval/images/ZeroCrossingWithMotion.tikz)
+<05_eval/images/demonstrator.png, id=1535, 845.40843pt x 597.73312pt>
 File: 05_eval/images/demonstrator.png Graphic file (type png)
 <use 05_eval/images/demonstrator.png>
-Package pdftex.def Info: 05_eval/images/demonstrator.png  used on input line 158.
+Package pdftex.def Info: 05_eval/images/demonstrator.png  used on input line 162.
 (pdftex.def)             Requested size: 341.43307pt x 241.39653pt.
 
-Overfull \hbox (82.1787pt too wide) in paragraph at lines 160--160
+Overfull \hbox (82.1787pt too wide) in paragraph at lines 164--164
 []\OT1/lmr/m/n/12 Fluxgatemagnetometer 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<05_eval/images/EvalAufbau_Pic.png, id=1500, 845.40843pt x 597.73312pt>
+
+
+[67]
+<05_eval/images/EvalAufbau_Pic.png, id=1543, 845.40843pt x 597.73312pt>
 File: 05_eval/images/EvalAufbau_Pic.png Graphic file (type png)
 <use 05_eval/images/EvalAufbau_Pic.png>
-Package pdftex.def Info: 05_eval/images/EvalAufbau_Pic.png  used on input line 181.
+Package pdftex.def Info: 05_eval/images/EvalAufbau_Pic.png  used on input line 185.
 (pdftex.def)             Requested size: 341.43307pt x 241.39653pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<05_eval/images/Coordinate_transformation.png, id=1546, 845.40843pt x 597.73312pt>
+File: 05_eval/images/Coordinate_transformation.png Graphic file (type png)
+<use 05_eval/images/Coordinate_transformation.png>
+Package pdftex.def Info: 05_eval/images/Coordinate_transformation.png  used on input line 202.
+(pdftex.def)             Requested size: 227.62206pt x 160.93407pt.
+<05_eval/images/OptischesKoord.png, id=1547, 845.40843pt x 597.73312pt>
+File: 05_eval/images/OptischesKoord.png Graphic file (type png)
+<use 05_eval/images/OptischesKoord.png>
+Package pdftex.def Info: 05_eval/images/OptischesKoord.png  used on input line 209.
+(pdftex.def)             Requested size: 227.62206pt x 160.93407pt.
+
+Overfull \hbox (31.3317pt too wide) in paragraph at lines 202--210
+ [][][] 
+ []
+
+
+
+[68 <./05_eval/images/demonstrator.png>]
+
+[69 <./05_eval/images/EvalAufbau_Pic.png> <./05_eval/images/Coordinate_transformation.png> <./05_eval/images/OptischesKoord.png>]
+<05_eval/images/Kalibrierung.pdf, id=1564, 845.04686pt x 597.50786pt>
+File: 05_eval/images/Kalibrierung.pdf Graphic file (type pdf)
+<use 05_eval/images/Kalibrierung.pdf>
+Package pdftex.def Info: 05_eval/images/Kalibrierung.pdf  used on input line 238.
+(pdftex.def)             Requested size: 341.43307pt x 241.41496pt.
+
+
+[70 <./05_eval/images/Kalibrierung.pdf>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+(05_eval/images/legend.tikz) (05_eval/images/FirstElementAnglesRaw.tikz) (05_eval/images/SecondElementAngleRaw.tikz) (05_eval/images/legend.tikz) (05_eval/images/FirstElement_Angle.tex) (05_eval/images/FirstElement_Error.tex)
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 
-[65]
-<05_eval/images/Coordinate_transformation.png, id=1510, 845.40843pt x 597.73312pt>
-File: 05_eval/images/Coordinate_transformation.png Graphic file (type png)
-<use 05_eval/images/Coordinate_transformation.png>
-Package pdftex.def Info: 05_eval/images/Coordinate_transformation.png  used on input line 198.
-(pdftex.def)             Requested size: 227.62206pt x 160.93407pt.
-<05_eval/images/OptischesKoord.png, id=1511, 845.40843pt x 597.73312pt>
-File: 05_eval/images/OptischesKoord.png Graphic file (type png)
-<use 05_eval/images/OptischesKoord.png>
-Package pdftex.def Info: 05_eval/images/OptischesKoord.png  used on input line 205.
-(pdftex.def)             Requested size: 227.62206pt x 160.93407pt.
+[71]
 
-Overfull \hbox (31.3317pt too wide) in paragraph at lines 198--206
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+(05_eval/images/legend.tikz) (05_eval/images/SecondElement_Angle.tex) (05_eval/images/SecondElement_Error.tex)
+Overfull \hbox (0.6572pt too wide) in paragraph at lines 370--380
+ [][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+(05_eval/images/Angle1_lookup.tikz) (05_eval/images/Angle2_lookup.tikz)
+Overfull \hbox (15.86554pt too wide) in paragraph at lines 390--395
  [][][] 
  []
 
 
-Underfull \vbox (badness 3118) has occurred while \out
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+[72]
+
+[73] (05_eval/images/FFTAngles.tikz) (05_eval/images/FFTMag.tikz)
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+[74] (05_eval/images/AbsSimSensorSetup.tikz
+Missing character: There is no ] in font nullfont!
+)
+<05_eval/images/AufbauAbslocal.png, id=1609, 597.73312pt x 845.40843pt>
+File: 05_eval/images/AufbauAbslocal.png Graphic file (type png)
+<use 05_eval/images/AufbauAbslocal.png>
+Package pdftex.def Info: 05_eval/images/AufbauAbslocal.png  used on input line 439.
+(pdftex.def)             Requested size: 182.09486pt x 257.54604pt.
+
+Overfull \hbox (46.96194pt too wide) in paragraph at lines 434--440
+ [][][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+[75]
+
+[76 <./05_eval/images/AufbauAbslocal.png>] (05_eval/images/StdAbweichung_Pos.tikz
+<05_eval/images/StdAbweichung_Pos-1.png, id=1626, 50.1875pt x 50.1875pt>
+File: 05_eval/images/StdAbweichung_Pos-1.png Graphic file (type png)
+<use 05_eval/images/StdAbweichung_Pos-1.png>
+Package pdftex.def Info: 05_eval/images/StdAbweichung_Pos-1.png  used on input line 31.
+(pdftex.def)             Requested size: 110.62723pt x 110.63182pt.
+) (05_eval/images/absoluterFehler_Pos.tikz
+<05_eval/images/absoluterFehler_Pos-1.png, id=1629, 50.1875pt x 50.1875pt>
+File: 05_eval/images/absoluterFehler_Pos-1.png Graphic file (type png)
+<use 05_eval/images/absoluterFehler_Pos-1.png>
+Package pdftex.def Info: 05_eval/images/absoluterFehler_Pos-1.png  used on input line 31.
+(pdftex.def)             Requested size: 110.62723pt x 110.63182pt.
+)
+Overfull \hbox (35.28445pt too wide) in paragraph at lines 525--530
+ [][][] 
+ []
+
+
+Overfull \hbox (27.59993pt too wide) in paragraph at lines 519--534
+[] []\OT1/lmss/bx/n/12 Robustheit der Po-si-ti-onssch^^?atzung ge-gen Rau-schen[][] \OT1/lmr/m/n/12 Die Ro-bust-heit der Po-si-ti-onssch[]atzung
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+[77] (05_eval/images/Abhängigkeit_or_Pos.tikz)
+Overfull \hbox (25.99734pt too wide) in paragraph at lines 541--542
+ [][] 
+ []
+
+(05_eval/images/MovementComponent.tikz)
+Underfull \hbox (badness 1648) in paragraph at lines 559--559
+[][][]|\OT1/lmr/m/n/10.95 Ver-gleich $\OML/lmm/m/it/10.95 x$\OT1/lmr/m/n/10.95 -Komponente mit dem wah-ren
+ []
+
+(05_eval/images/FehlerBewegung.tikz)
+Overfull \hbox (33.56593pt too wide) in paragraph at lines 559--565
+ [][][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+[78 <./05_eval/images/StdAbweichung_Pos-1.png> <./05_eval/images/absoluterFehler_Pos-1.png>]
+
+[79]
+<05_eval/images/SpatialSync_Abslocal.png, id=1673, 845.40843pt x 597.73312pt>
+File: 05_eval/images/SpatialSync_Abslocal.png Graphic file (type png)
+<use 05_eval/images/SpatialSync_Abslocal.png>
+Package pdftex.def Info: 05_eval/images/SpatialSync_Abslocal.png  used on input line 586.
+(pdftex.def)             Requested size: 318.66948pt x 225.3077pt.
+
+
+[80 <./05_eval/images/SpatialSync_Abslocal.png>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+(05_eval/images/DynEvalCompsPos.tikz)
+Underfull \hbox (badness 1436) in paragraph at lines 690--690
+[][][]|\OT1/lmr/m/n/12 Er-geb-nis der dy-na-mi-schen Eva-lu-ie-rung der Po-si-ti-onssch[]atzung: Es
+ []
+
+
+Underfull \hbox (badness 2057) in paragraph at lines 690--690
+\OT1/lmr/m/n/12 sind die drei Po-si-ti-ons-kom-po-nen-ten dar-ge-stellt. Die ma-gne-ti-schen
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+(05_eval/images/legend_abslocal.tikz) (05_eval/images/DynEvalAngleTheta.tikz) (05_eval/images/DynEvalAnglePhi.tikz) (05_eval/images/DynEvalAnglePsi.tikz) (05_eval/images/DynEvalPosFehler.tikz) (05_eval/images/DynEvalWinkelfehler.tikz)
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+[81]
+
+[82]
+Underfull \vbox (badness 3302) has occurred while \output is active []
+
+
+
+[83]) (06_ende/zusammenfassung_ausblick.tex
+
+[84]
+chapter 6.
+
+
+[85
+
+
+]
+
+[86]
+Overfull \hbox (14.3045pt too wide) in paragraph at lines 81--82
+[]\OT1/lmr/m/n/12 An den Glei-chun-gen[]6.6[] und []6.7[] ist zu er-ken-nen, dass wenn die Spu-len mit $[][](\OML/lmm/m/it/12 ^^^[]; ^^R[]\OT1/lmr/m/n/12 )$,
+ []
+
+<06_ende/images/Verdeutlichung_orthogonaleVektoren.pdf, id=1738, 845.04686pt x 597.50786pt>
+File: 06_ende/images/Verdeutlichung_orthogonaleVektoren.pdf Graphic file (type pdf)
+<use 06_ende/images/Verdeutlichung_orthogonaleVektoren.pdf>
+Package pdftex.def Info: 06_ende/images/Verdeutlichung_orthogonaleVektoren.pdf  used on input line 99.
+(pdftex.def)             Requested size: 341.43307pt x 241.41496pt.
+
+
+[87]
+
+[88 <./06_ende/images/Verdeutlichung_orthogonaleVektoren.pdf>]
+
+[89]
+<06_ende/images/Prototyp.jpeg, id=1775, 873.2625pt x 542.025pt>
+File: 06_ende/images/Prototyp.jpeg Graphic file (type jpg)
+<use 06_ende/images/Prototyp.jpeg>
+Package pdftex.def Info: 06_ende/images/Prototyp.jpeg  used on input line 176.
+(pdftex.def)             Requested size: 318.66948pt x 197.79198pt.
+)
+
+[90 <./06_ende/images/Prototyp.jpeg>]
+chapter without number
+
+Package biblatex Warning: Keyword 'own' not found on input line 261.
+
+
+LaTeX Warning: Empty bibliography on input line 261.
+
+
+Overfull \hbox (8.12898pt too wide) in paragraph at lines 262--262
+[]\OT1/lmr/m/n/12 Manuel Caeiro-Rodr^^S^^Pguez, Iv^^San Otero-Gonz^^Salez, Fer-n-an-do A. Mikic-Fonte und Mart^^S^^Pn
+ []
+
+
+
+[91
+
+
+]
+
+[92]
+Overfull \hbox (41.63858pt too wide) in paragraph at lines 262--262
+\OT1/lmr/m/it/12 Ap-p-li-ca-ti-ons \OT1/lmr/m/n/12 30.5 (2023). []eprint: htt-ps://onlinelibrary.wiley.com/doi/pdf/10.1002/nla.2492,
+ []
+
+
+Overfull \hbox (2.19225pt too wide) in paragraph at lines 262--262
+[]\OT1/lmr/m/n/12 Jiawen Yi, Jiao-jiao Liu, Chu-an-long Zhang und Xiong Lu. []  Ma-gne-tic Mo-ti-on Tracking
+ []
+
+
+
+[93] (07_appendix/appendix_a.tex
+
+[94]
+chapter A.
+) (07_appendix/appendix_b.tex
+
+[1
+
+
+]
+
+[2
+
+
+]
+chapter B.
+)
+
+[3
+runsystem(makeindex -s diss.ist -t diss.glg -o diss.gls diss.glo)...executed safely (allowed).
+
+runsystem(makeindex -s diss.ist -t diss.slg -o diss.sls diss.slo)...executed safely (allowed).
+
+runsystem(makeindex -s diss.ist -t diss.olg -o diss.ols diss.olo)...executed safely (allowed).
+
+runsystem(makeindex -s diss.ist -t diss.alg -o diss.als diss.alo)...executed safely (allowed).
+
+runsystem(makeindex -s diss.ist -t diss.plg -o diss.pls diss.plo)...executed safely (allowed).
+
+]
+\openout2 = `diss.wrt'.
+
+ (diss.aux)
+\openout2 = `diss.toc'.
+
+ (diss.wrt)
+\openout2 = `diss.lof'.
+
+ (diss.wrt)
+\openout2 = `diss.lot'.
+
+ (diss.wrt)
+ ***********
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-09-02>
+ ***********
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package logreq Info: Writing requests to 'diss.run.xml'.
+\openout1 = `diss.run.xml'.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 70152 strings out of 468130
+ 1633612 string characters out of 5431601
+ 4801325 words of memory out of 5000000
+ 96870 multiletter control sequences out of 15000+600000
+ 724505 words of font info for 142 fonts, out of 8000000 for 9000
+ 1146 hyphenation exceptions out of 8191
+ 108i,25n,131p,11228b,3352s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/tsc/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/tsc/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/tsc/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/tsc/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/tsc/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/tsc/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/tsc/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmib10.pfb><C:/Users/tsc/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/tsc/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/tsc/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/tsc/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/tsc/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/tsc/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/tsc/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmro12.pfb><C:/Users/tsc/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/tsc/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/tsc/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/Users/tsc/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/tsc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on diss.pdf (123 pages, 11330074 bytes).
+PDF statistics:
+ 2299 PDF objects out of 2487 (max. 8388607)
+ 612 named destinations out of 1000 (max. 500000)
+ 895 words of extra memory for PDF output out of 10000 (max. 10000000)
+
