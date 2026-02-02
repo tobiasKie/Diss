@@ -27,9 +27,9 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="7.3192481"
-     inkscape:cx="476.00518"
-     inkscape:cy="180.07314"
+     inkscape:zoom="1.2938725"
+     inkscape:cx="-105.88369"
+     inkscape:cy="275.14303"
      inkscape:window-width="3440"
      inkscape:window-height="1369"
      inkscape:window-x="-8"
@@ -95,18 +95,18 @@
        d="m 179.90529,10.644134 9.72938,16.668158"
        id="path24041" />
     <circle
-       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.06899;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       style="fill:#ffb200;fill-opacity:1;stroke:#ffb200;stroke-width:1.06899;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
        id="path3060-2-2-3"
        cx="130.72978"
        cy="77.805153"
        r="3.2789738"
        transform="rotate(-15)" />
     <path
-       style="fill:#ff8000;fill-opacity:1;stroke:#000000;stroke-width:1.069;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleStart-8-1-2);paint-order:fill markers stroke"
+       style="fill:#ff8000;fill-opacity:1;stroke:#ffb200;stroke-width:1.069;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleStart-8-1-2);paint-order:fill markers stroke"
        d="m 148.01332,40.519528 11.96841,-6.90997"
        id="path4568-8-5-2" />
     <path
-       style="fill:none;stroke:#fffc00;stroke-width:1.5;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       style="fill:none;stroke:#fb00ff;stroke-width:1.5;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
        d="M 96.928021,171.56669 V 69.321938 l 48.649619,-28.08787 z"
        id="path24869" />
     <path

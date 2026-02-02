@@ -970,7 +970,7 @@ legend style={legend cell align=left, align=left, draw=white!15!black}
 936	39.6406258099395\\
 937	0\\
 };
-\addlegendentry{$\phi_\text{s,j}^\text{d}$}
+\addlegendentry{$\phi_\text{s,2}^\text{d}$}
 
 \addplot [color=mycolor2,line width = 2.0pt]
   table[row sep=crcr]{%
@@ -1912,7 +1912,7 @@ legend style={legend cell align=left, align=left, draw=white!15!black}
 936	45.4841616087543\\
 937	38.5721543851197\\
 };
-\addlegendentry{$\phi_\text{s,j}^\text{kin}$}
+\addlegendentry{$\phi_\text{s,2}^\text{kin}$}
 
 \addplot [color=mycolor3, line width = 4.0pt]
   table[row sep=crcr]{%
@@ -2854,7 +2854,7 @@ legend style={legend cell align=left, align=left, draw=white!15!black}
 936	45\\
 937	45\\
 };
-\addlegendentry{$\phi_\text{s,j}$}
+\addlegendentry{$\phi_\text{s,2}$}
 
 \end{axis}
 

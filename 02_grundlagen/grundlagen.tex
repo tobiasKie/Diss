@@ -1,6 +1,7 @@
 \chapter{Bewegungsbeschreibung und Bewegungsanalysesysteme}
 \label{chap:Bewegungsanalyse}
-Im Folgenden Kapitel wird ein Überblick über die Bewegungsbeschreibung und verschiedene kommerziell verwendete Bewegungsanalysesystene vorgestellt werden. Im Anschluss wird das entwickelte System kurz skizziert.
+Im Folgenden Kapitel wird ein Überblick über die Bewegungsbeschreibung und Modellierung gegeben und optische Bewegungsanalysesysteme vorgestellt. Am Ende des Kapitels wird das zu entwickelnde System kurz skizziert.
+
 \section{Bewegungsbeschreibung}
 \label{sec:anatomy}
 Die menschliche Anatomie kann als eine kinematische Kette beschrieben werden. Eine kinematische Kette sind kinematische Elemente, in diesem Fall Knochen, die über Gelenke miteinander verbunden sind. 
@@ -94,17 +95,17 @@ und aufmultipliziert zur Gesamtbewegung des Gelenks $\bvec{q}\tindex{Gel}$
 Die Achsen des folgenden Elements werden wie folgt bestimmt
 
 \begin{equation}
-    \vec{e}\tindex{$z,k+1$} = \bvec{q}\tindex{Gel,$k$}\, \vec{e}\tindex{$z,k$} \,\bvec{q}\tindex{Gel,k}^{-1}.
+    \vec{e}\tindex{$z,k+1$} = \bvec{q}\tindex{Gel,$k$}\,\cdot \vec{e}\tindex{$z,k$} \cdot \,\bvec{q}\tindex{Gel,k}^{-1}.
 \end{equation}
 
 In der Nulllage, $\theta\tindex{Beu}=0,\phi\tindex{Sp}=0$, ergibt sich, dass die Symmetrieachsen miteinander übereinstimmen und $\vec{e}\tindex{$z,k+1$} = \vec{e}\tindex{$z,k$}$. Die $x$- und $y$-Achsen jedes Elements $\vec{e}\tindex{$x,k,0$},\vec{e}\tindex{$y,k,0$}$ werden vor der Laufzeit bestimmt, die gesamte kinematische Kette ist dafür in der Nulllage. Aus $\bvec{q}\tindex{Gel,$k$}$ und $\vec{e}\tindex{$x,k+1,0$},\vec{e}\tindex{$y,k+1,0$}$, werden die aktuellen $x$- und $y$-Achsen bestimmt
 
 \begin{equation}
-    \vec{e}\tindex{$x,k+1$} = \bvec{q}\tindex{Gel,$k$}\, \vec{e}\tindex{$x,k+1,0$} \,\bvec{q}\tindex{Gel,$k$}^{-1},
+    \vec{e}\tindex{$x,k+1$} = \bvec{q}\tindex{Gel,$k$}\,\cdot \vec{e}\tindex{$x,k+1,0$} \cdot \,\bvec{q}\tindex{Gel,$k$}^{-1},
 \end{equation}
 
 \begin{equation}
-    \vec{e}\tindex{$y,k+1$} = \bvec{q}\tindex{Gel,$k$}\, \vec{e}\tindex{$y,k+1,0$} \,\bvec{q}\tindex{Gel,$k$}^{-1}.
+    \vec{e}\tindex{$y,k+1$} = \bvec{q}\tindex{Gel,$k$}\cdot\, \vec{e}\tindex{$y,k+1,0$} \cdot \,\bvec{q}\tindex{Gel,$k$}^{-1}.
 \end{equation}
 
 Bei kinematischen Ketten mit mehr als einem Gelenk müssen die Bewegungen aller Gelenke aufmultipliziert werden.
@@ -164,6 +165,7 @@ In dieser Arbeit wird zur Evaluierung ein Kamerasystem des Herstellers \textit{Q
 
 
 \subsection{Stand der Technik}
+\textcolor{red}{Nicht sicher ob dieser Teil notwendig ist, vom Gefühl her eher nein.}
 \label{subsec:Stateoftheart}
 \subsubsection{Kommerzielle Angebote}
 Im Bereich der Sensorhandschuhe gab es bis Anfang der 2020er Jahre unterschiedliche Ansätze. Dabei wurde auf verschiedene Sensoriken gesetzt, wie zum Beispiel Stretchsensoren, IMUs oder inkrementelle Messysteme. Eine Zusammenstellung verschiedener Ansätze kann hier gefunden werden\,\cite{caeiro-rodriguez_systematic_2021}. 
@@ -199,7 +201,7 @@ In dieser Arbeit wird die Signalverarbeitung für ein Bewegungsanalysesysteme f�
 \label{subsec:Fluxgate}
 In dieser Arbeit werden Fluxgatemagnetometer(auch Förster- oder Magnetkernsonde genannt) der Firma \textit{Stefan Mayer Instruments}\,\cite{noauthor_magnetfeldsensor_nodate} verwendet, ein Bild ist in Abbildung\,\ref{fig:fluxgate} gezeigt. Diese können außerhalb einer Schirmung im Erdmagnetfeld verwendet werden und die Bandbreite von 1\,kHz ist ausreichend groß.
 
-Ein Amplituden- und Phasenverlauf bis 3\,kHz wurde mit Stützstellen im Abstand von 100\,Hz bzw. im Abstand von 10\,Hz zwischen 500 und 1100\,Hz aufgenommen. Dieser ist in Abbildung \ref{fig:FluxFreq} dargestellt.
+Ein Amplituden- und Phasenverlauf bis 3\,kHz wurde mit Stützstellen im Abstand von 100\,Hz bzw. im Abstand von 10\,Hz zwischen 500 und 1100\,Hz aufgenommen. Dieser Bereich ist höher aufgelöst, dies ist der spätere Arbeitsbereich. Der Amplituden- und Phasenverlauf ist in Abbildung \ref{fig:FluxFreq} dargestellt.
     \begin{figure}[h]
         \centering
         \scalefont{1}

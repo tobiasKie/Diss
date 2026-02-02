@@ -2,66 +2,46 @@
 % Abkürzungen
 %========================================================================================
 \newglossaryentry{wE}{type=abk,sort={wE},name={w.E.},description={willkürliche Einheit}}
-\newglossaryentry{Engl}{type=abk,sort={Engl},name={engl.},description={englisch}}
-
 \newglossaryentry{AD}{type=abk,sort={AD},name={\AD},description={Analog-Digital}}
 \newglossaryentry{DA}{type=abk,sort={DA},name={\DA},description={Digital-Analog}}
-
+\newglossaryentry{MCP}{type=abk,sort={MCP},name={MCP},description={Metacarpophalangealgelenk}}
+\newglossaryentry{PIP}{type=abk,sort={PIP},name={PIP},description={Proximales Interphalangealgelenk}}
+\newglossaryentry{DIP}{type=abk,sort={DIP},name={DIP},description={Distales Interphalangealgelenk}}
 \newglossaryentry{EBASNR}{type=abk,sort={EBASNR},name={\EBASNR},description={geschätztes, biomagnetisches und gemitteltes \SNR{}  (\engl{}: \textit{Estimated Biomagnetic Averaged Signal-to-Noise Ratio})}}
 \newglossaryentry{SNR}{type=abk,sort={SNR},name={\SNR},description={Signal-zu-Rausch-Verhältnis (\engl{}: \textit{Signal-to-Noise Ratio})}}
-\newglossaryentry{DNR}{type=abk,sort={DNR},name={\DNR},description={Störungs-zu-Rausch-Verhältnis (\engl{}: \textit{Distortion-to-Noise Ratio})}}
-\newglossaryentry{LOD}{type=abk,sort={LOD},name={\LOD},description={Detektionslimit (\engl{}: \textit{Limit of Detection})}}
 
-\newglossaryentry{MEMS}{type=abk,sort={MEMS},name={\MEMS},description={mikro-elektromechanische Systeme (\engl{}: \textit{Microelectromechanical Systems})}}
-
-\newglossaryentry{MVDR}{type=abk,sort={MVDR},name={\MVDR},description={Minimum Variance Distortionless Beamformer (\engl{}: \textit{Minimum Variance Distortionless Beamformer })}}
-
-\newglossaryentry{NLMS}{type=abk,sort={NLMS},name={\NLMS{}-Algorithmus},description={normalisierter stochastischer Gradientenalgorithmus (\engl{}: \textit{Normalized Least Mean Square Algorithm})}}
-\newglossaryentry{LMS}{type=abk,sort={LMS},name={\LMS{}-Algorithmus},description={stochastischer Gradientenalgorithmus (\engl{}: \textit{Least Mean Square Algorithm})}}
-\newglossaryentry{AP}{type=abk,sort={AP},name={\AP},description={Affine Projektion (\engl{}: \textit{Affine Projection})}}
-\newglossaryentry{RLS}{type=abk,sort={RLS},name={\RLS{}-Algorithmus},description={rekursives stochastisches Gradientenverfahren (\engl{}: \textit{Recursive Least Squares Algorithm})}}
-
-\newglossaryentry{AlN}{type=abk,sort={AlN},name={AlN},description={Aliminiumnitrid}}
-\newglossaryentry{FeCoSiB}{type=abk,sort={FeCoSiB},name={FeCoSiB},description={metallisches Glas (Eisen-Cobalt-Silizium-Bor)}}
-\newglossaryentry{PZT}{type=abk,sort={PZT},name={PZT},description={Blei-Zirkonat-Titanat}}
-\newglossaryentry{Au}{type=abk,sort={Au},name={Au},description={Gold}}
-\newglossaryentry{Cr}{type=abk,sort={Cr},name={Cr},description={Chrom}}
-\newglossaryentry{Cu}{type=abk,sort={Cu},name={Cu},description={Kupfer}}
-\newglossaryentry{Ta}{type=abk,sort={Ta},name={Ta},description={Tantal}}
-\newglossaryentry{MnIr}{type=abk,sort={MnIr},name={MnIr},description={Mangan-Iridium}}
-
-%========================================================================================
+%======================================================================================== 
 % Notation
 %========================================================================================
-\newglossaryentry{nE}{type=notation,sort={g},name={$\E{x(n)}$},description={Erwartungswert von $x(n)$} }
 
+\setglossarypreamble[notation]{Die Lesbarkeit der Arbeit wird sichergestellt durch eine stringente Notation. Skalare Werte werden klein geschrieben und nicht fettgedruckt. Räumliche Vektoren (Dimension = 3) werden klein geschrieben mit einem Pfeil darüber, wenn ein räumlicher Vektor eine normierte Länge besitzt wird dieser als Einheitsvektor $\vec{e}$ mit einem zugehörigem Index beschrieben. Vektoren ohne räumlichen Bezug werden klein geschrieben und fettgedruckt. Matrizen werden groß geschrieben und fettgedruckt. In dieser Arbeit wird in unterschiedlichen Koordinatensystemen gearbeitet. In den meisten Kapiteln gibt es nur ein verwendetes Koordinatensystem, wenn es mehr als eins gibt, wird die zugehörige Bezeichnung bei den Vektoren oder Matrizen hochgestellt. In dieser Arbeit werden zwei iterative Algorithmen vorgestellt, die Nummer der Iterationen wird immer mit $i$ bezeichnet und diese wird bei der zugehörigen Größe hochgestellt.\\
+\\}
+
+
+\newglossaryentry{rV}{type=notation,sort={a},name={$\vec{r}$},description={räumlicher Vektor }}
+\newglossaryentry{er}{type=notation,sort={a},name={$\vec{e}\tindex{r}$},description={$\vec{r}$ normiert auf die Länge 1} }
 \newglossaryentry{nvec}{type=notation,sort={a},name={\ensuremath{\bvec{x}}},description={Vektor (fettgedruckt, klein)} }
 \newglossaryentry{nmat}{type=notation,sort={a},name={$\bvec{X}$},description={Matrix (fettgedruckt, groß)} }
 \newglossaryentry{nskalar}{type=notation,sort={a},name={$x$},description={Skalar, zumeist zeitabhängig (nicht fettgedruckt, klein)} }
 \newglossaryentry{nSkalar}{type=notation,sort={a},name={$X$},description={Skalar, zumeist frequenzabhängig (nicht fettgedruckt, groß)} }
 
 \newglossaryentry{nj}{type=notation,sort={b},name={$j$},description={imaginäre Einheit, $j^2=-1$} }
-\newglossaryentry{njRe}{type=notation,sort={b},name={$\Re{\left\{ z \right\} }$},description={Realteil der komplexen Zahl $z$} }
-\newglossaryentry{njIm}{type=notation,sort={b},name={$\Im{\left\{ z \right\} }$},description={Imaginärteil der komplexen Zahl $z$} }
-\newglossaryentry{njAbs}{type=notation,sort={b},name={$\absx{z}$},description={Betrag der komplexen Zahl $z$} }
-\newglossaryentry{njArg}{type=notation,sort={b},name={$\argx{z}$},description={Argument der komplexen Zahl $z$} }
-\newglossaryentry{njKonj}{type=notation,sort={b},name={$z^{*}$},description={konjugierte komplexe Zahl zur komplexen Zahl $z$} }
+
+\newglossaryentry{erKoord}{type=notation,sort={c},name={$\vec{e}\tindex{r}^\text{\,W}$},description={normierter räumlicher Vektor im Weltkoordinatensystem} }
 
 \newglossaryentry{nbvecTransp}{type=notation,sort={c},name={$\bvec{x}\transp{}, \bvec{X}\transp{}$},description={transponierter Vektor/Matrix} }
-\newglossaryentry{nbvecHerm}{type=notation,sort={c},name={$\bvec{x}\herm{}, \bvec{X}\herm{}$},description={hermitischer Vektor/Matrix, $ \bvec{X}\herm{} = \left(\bvec{X}^{*} \right)\transp{}$} }
+
 
 \newglossaryentry{nlog10}{type=notation,sort={d},name={$\lgx{z}$},description={Logarithmus der reellen Zahl $z$ zur Basis 10} }
 
-\newglossaryentry{nhadamard}{type=notation,sort={e},name={$\bvec{x} \circ \bvec{y}$},description={Hadamard-Produkt, elementweise Multiplikation} }
+\newglossaryentry{SkalarProd}{type=notation,sort={e},name={$\vec{x} \cdot \vec{y}$},description={Skalarprodukt} }
+
+\newglossaryentry{CrossProd}{type=notation,sort={e},name={$\vec{x} \times \vec{y}$},description={Skalarprodukt} }
 
 \newglossaryentry{nnorm}{type=notation,sort={e},name={$\normx{\bvec{x}}$},description={Norm des Vektors} }
 
-%\newglossaryentry{nDFT}{type=notation,sort={f},name={$\DFTmath{}\left\{ \cdot{} \right\}$},description={\DFT{} der Ordnung \Ndft{}} }
-%\newglossaryentry{nDSTFT}{type=notation,sort={f},name={$\DSTFTmath{}\left\{ \cdot{} \right\}$},description={\DSTFT{} der Ordnung \Ndft{}} }
 
 
-\newglossaryentry{nmax}{type=notation,sort={h},name={$\maxx{x(n)}$},description={Maximum von $x(n)$} }
-\newglossaryentry{nmin}{type=notation,sort={h},name={$\minx{x(n)}$},description={Minimum von $x(n)$} }
 
 %========================================================================================
 % Symbols
@@ -73,6 +53,215 @@
 \newglossaryentry{fri}{type=lat,sort={ka},name={\fri},description={Blockindex}  }
 
 \newglossaryentry{fs}{type=lat,sort={fas},name={\fs},description={Abtastrate}  }
+
+\newglossaryentry{a}{type=lat,sort={avek},name={$\vec{a}$},description={magnetisches Vektorpotential}}
+
+\newglossaryentry{avekdip}{type=lat,sort={avekdip},name={$\vec{a}\tindex{dip}$},description={magnetisches Vektorpotential eines magnetischen Dipols}}
+
+\newglossaryentry{kind}{type=lat,sort={kind},name={$k$},description={Zählvariable für kinematische Ketten}}
+
+\newglossaryentry{quat}{type=lat,sort={quat},name={$\bvec{q}$},description={Quaternion}}
+\newglossaryentry{quatSp}{type=lat,sort={quatSp},name={$\bvec{q}\tindex{Sp}$},description={Quaternion zur Beschreibung der Spreizbewegung eines Gelenks}}
+
+\newglossaryentry{quatBeu}{type=lat,sort={quatBeu},name={$\bvec{q}\tindex{Beu}$},description={Quaternion zur Beschreibung der Beugebewegung eines Gelenks}}
+
+\newglossaryentry{quatGel}{type=lat,sort={quatGel},name={$\bvec{q}\tindex{Gel}$},description={Quaternion zur Beschreibung der Gesamtbewegung eines Gelenks}}
+
+\newglossaryentry{thetaBeu}{type=gre,sort={thetaBeu},name={$\theta\tindex{Beu}$},description={Beugewinkel eines Gelenks}}
+
+\newglossaryentry{phiSp}{type=gre,sort={phiSp},name={$\phi\tindex{Sp}$},description={Spreizwinkel eines Gelenks}}
+
+\newglossaryentry{es}{type=lat,sort={es},name={$\vec{e}\tindex{s}$},description={Einheitsvektor in Richtung der sensitiven Achse eines magnetischen Sensors}}
+
+\newglossaryentry{em}{type=lat,sort={em},name={$\vec{e}\tindex{m}$},description={Einheitsvektor in Richtung des magnetischen Dipols}}
+
+\newglossaryentry{ex}{type=lat,sort={ex},name={$\vec{e}\tindex{$x$}$},description={Einheitsvektor in $x$-Richtung}}
+
+\newglossaryentry{ey}{type=lat,sort={ey},name={$\vec{e}\tindex{$y$}$},description={Einheitsvektor in $y$-Richtung}}
+
+\newglossaryentry{ez}{type=lat,sort={ez},name={$\vec{e}\tindex{$z$}$},description={Einheitsvektor in $z$-Richtung}}
+
+\newglossaryentry{erot}{type=lat,sort={erot},name={$\vec{e}\tindex{rot}$},description={Einheitsvektor einer Rotationsachse}}
+
+\newglossaryentry{esc}{type=lat,sort={esc},name={$\vec{e}\tindex{s$\rightarrow$c}$},description={Normierter Richtungsvektor zwischen Sensor und 3D-Spule}}
+
+\newglossaryentry{ekinfilt}{type=lat,sort={ekinfilt},name={$\vec{e}\tindex{kin,$k$,filt}$},description={Gefilterte Schätzung der Ausrichtung des kinemaitschen Elements}}
+
+\newglossaryentry{EMAX}{type=lat,sort={EMAX},name={$\bvec{E}\tindex{max}$},description={Maximalvektoren von mehr als einem Sensor zusammengefasst als Matrix}}
+
+\newglossaryentry{RRPY}{type=lat,sort={RRPY},name={$\bvec{R}\tindex{RPY}$},description={Rotationsmatrix, Roll-Pitch-Yaw}}
+
+\newglossaryentry{rsc}{type=lat,sort={rsc},name={$\vec{r}\tindex{s$\rightarrow$c}$},description={Richtungsvektor zwischen Sensor und 3D-Spule}}
+
+\newglossaryentry{bmag}{type=lat,sort={bvek},name={$\vec{b}$},description={Magnetfeldvektor}}
+
+\newglossaryentry{bmagdip}{type=lat,sort={bvekdip},name={$\vec{b}\tindex{Dip}$},description={Magnetfeld eines magnetischen Dipols}}
+
+\newglossaryentry{bmagdipabs}{type=lat,sort={bvekdipabs},name={$b\tindex{Dip}$},description={Betrag des magnetischen Feldes}}
+
+\newglossaryentry{mu}{type=gre,sort={mu},name={$\mu$},description={magnetische Permeabilität}}
+
+\newglossaryentry{r}{type=lat,sort={r},name={$\vec{r}$},description={Ortsvektor}}
+
+\newglossaryentry{rc}{type=lat,sort={rc},name={$\vec{r}\tindex{c}$},description={Ortsvektor der 3D-Spule}}
+
+\newglossaryentry{rcfilt}{type=lat,sort={rcfilt},name={$\vec{r}\tindex{c,filt}$},description={Ortsvektor der 3D-Spule, zeitlich gefiltert}}
+
+\newglossaryentry{nframe}{type=lat,sort={nframe},name={$n\tindex{Frame}$},description={Rahmenlänge}}
+
+
+
+\newglossaryentry{rjdens}{type=lat,sort={rjdens},name={$\vec{r'}$},description={Ortsvektor einer Stromdichteverteilung}}
+
+\newglossaryentry{jdens}{type=lat,sort={jdens},name={$\vec{j}$},description={Stromdichte}}
+
+\newglossaryentry{mdip}{type=lat,sort={mdip},name={$\vec{m}$},description={magnetisches Dipolmoment}}
+
+\newglossaryentry{mdipabs}{type=lat,sort={mdipabs},name={$m\tindex{0}$},description={Betrag des magnetischen Dipols}}
+
+\newglossaryentry{mdipx}{type=lat,sort={mdip},name={$\vec{m}\tindex{x}$},description={magnetisches Dipolmoment der $x$-Spule einer 3D-Spule}}
+
+\newglossaryentry{mdipy}{type=lat,sort={mdip},name={$\vec{m}\tindex{y}$},description={magnetisches Dipolmoment der $y$-Spule einer 3D-Spule}}
+
+\newglossaryentry{mdipz}{type=lat,sort={mdip},name={$\vec{m}\tindex{z}$},description={magnetisches Dipolmoment der $z$-Spule einer 3D-Spule}}
+
+\newglossaryentry{bnorm}{type=lat,sort={bnorm},name={$\vec{b}\tindex{norm}$},description={Distanz- und quellennormiertes Feld eines magnetischen Dipols}}
+
+\newglossaryentry{phis}{type=gre,sort={phis},name={$\phi\tindex{s}$},description={Azimutwinkel der Sensorachse}}
+
+\newglossaryentry{alphaeval}{type=gre,sort={alphaeval},name={$\alpha\tindex{Eval}$},description={Evaluierungswinkel, Fehlermaß für die Orientierungsschätzung}}
+
+\newglossaryentry{phic}{type=gre,sort={phic},name={$\phi\tindex{c}$},description={Verdrehung der 3D-Spule}}
+
+\newglossaryentry{phim}{type=gre,sort={phim},name={$\phi\tindex{m}$},description={Azimutwinkel des magentischen Dipolmoments}}
+
+\newglossaryentry{thetam}{type=gre,sort={thetam},name={$\theta\tindex{m}$},description={Polarwinkel des magentischen Dipolmoments}}
+
+\newglossaryentry{phimax}{type=gre,sort={phimax},name={$\phi\tindex{max}$},description={Azimutwinkel des Maximalvektors in der interessierten Ebene}}
+
+\newglossaryentry{thetamax}{type=gre,sort={thetamax},name={$\theta\tindex{max}$},description={Polarwinkel des Maximalvektors}}
+
+\newglossaryentry{phizero}{type=gre,sort={phizero},name={$\phi\tindex{zero}$},description={Azimutwinkel des Nulldurchgangsvektor in der interessierten Ebene}}
+
+\newglossaryentry{phiiter}{type=gre,sort={phiiter},name={$\phi\tindex{Iter}$},description={Änderung der Sensororientierung zwischen zwei Iterationen}}
+
+\newglossaryentry{phischwell}{type=gre,sort={phischwell},name={$\phi\tindex{Schwell}$},description={Winkelschwellwert, iterativer Algorithmus wird abgebrochen wenn $\phi\tindex{Iter} < \phi\tindex{Schwell}$}}
+
+\newglossaryentry{phis1}{type=gre,sort={phis1},name={$\phi\tindex{s,1}$},description={Ausgangsgröße 1 bei Schätzung der Sensororientierung mit LUT}}
+
+\newglossaryentry{phis2}{type=gre,sort={phis2},name={$\phi\tindex{s,2}$},description={Ausgangsgröße 2 bei Schätzung der Sensororientierung mit LUT}}
+
+\newglossaryentry{phimax1}{type=gre,sort={phimax1},name={$\phi\tindex{max,1}$},description={Eingangsgröße 1 bei Schätzung der Sensororientierung mit LUT}}
+
+\newglossaryentry{phimax2}{type=gre,sort={phimax2},name={$\phi\tindex{max,2}$},description={Eingangsgröße 2 bei Schätzung der Sensororientierung mit LUT}}
+
+\newglossaryentry{phirs2}{type=gre,sort={phirs2},name={$\phi\tindex{r,s2}$},description={Winkel zwischen Spulenposition und sensitiver Sensorachse von Sensor\,2}}
+
+\newglossaryentry{phirs1}{type=gre,sort={phirs1},name={$\phi\tindex{r,s2}$},description={Winkel zwischen Spulenposition und sensitiver Sensorachse von Sensor\,1}}
+
+\newglossaryentry{phisr}{type=gre,sort={phisr},name={$\phi\tindex{s,r}$},description={Winkel zwischen Spulenposition und sensitiver Sensorachse von Sensor}}
+
+\newglossaryentry{phimaxr}{type=gre,sort={phimaxr},name={$\phi\tindex{max,r}$},description={Winkel zwischen Spulenposition und Maximalvektor}}
+
+\newglossaryentry{thetaori}{type=gre,sort={thetaori},name={$\theta\tindex{Ori}$},description={Rollwinkel}}
+
+\newglossaryentry{psiori}{type=gre,sort={psiori},name={$\psi\tindex{Ori}$},description={Nickwinkel}}
+
+\newglossaryentry{phiori}{type=gre,sort={phiori},name={$\phi\tindex{Ori}$},description={Gierwinkel}}
+
+\newglossaryentry{emax}{type=lat,sort={emax},name={$\vec{e}\tindex{max}$},description={Maximalvektor}}
+
+\newglossaryentry{ezc}{type=lat,sort={ezc},name={$\vec{e}\tindex{zc}$},description={Nulldurchgangsvektor}}
+
+\newglossaryentry{en}{type=lat,sort={en},name={$\vec{e}\tindex{n}$},description={Normalenvektor, in der Regel für eine Rotation in der entsprechenden Ebene}}
+
+\newglossaryentry{m0}{type=lat,sort={m0},name={$\vec{m}\tindex{$b=0$}$},description={Dipolmoment für den das Magnetfeldsignal zu 0 wird}}
+
+\newglossaryentry{ui}{type=lat,sort={ui},name={$\bvec{u}\tindex{$i$}$},description={Digitalisiertes Stromsignal}}
+
+\newglossaryentry{ub}{type=lat,sort={ub},name={$\bvec{u}\tindex{$b$}$},description={Digitalisiertes Magnetfeldsignal}}
+
+\newglossaryentry{uiTP}{type=lat,sort={uiTP},name={$\bvec{u}\tindex{$i$,TP}$},description={Digitalisierte Stromsignal, nach der Tiefpassfilterung}}
+
+\newglossaryentry{ubBP}{type=lat,sort={ubBP},name={$\bvec{u}\tindex{$b$,BP}$},description={Digitalisiertes Magnetfeldsignal, nach der Bandpassfilterung}}
+
+\newglossaryentry{uiBP}{type=lat,sort={uiBP},name={$\bvec{u}\tindex{$i$,BP}$},description={Digitalisiertes Stromsignal, nach der Bandpassfilterung}}
+
+\newglossaryentry{idig}{type=lat,sort={idig},name={$\bvec{i}$},description={Digitalisiertes Stromsignal in A}}
+
+\newglossaryentry{bdig}{type=lat,sort={bdig},name={$\bvec{b}$},description={Digitalisiertes Magnetfeldsignal in T}}
+
+\newglossaryentry{rs}{type=lat,sort={rs},name={$R\tindex{S}$},description={Shunt-Widerstand}}
+
+\newglossaryentry{etaFlux}{type=gre,sort={etaFlux},name={$\eta\tindex{Flux}$},description={Sensitivität des Fluxgatemagnetometer}}
+
+\newglossaryentry{omphi}{type=gre,sort={omphi},name={$\Omega\tindex{$\phi$}$},description={Langsame Ansteuerfrequenz des rotierenden magnetischen Dipol}}
+
+\newglossaryentry{omthe}{type=gre,sort={omthe},name={$\Omega\tindex{$\theta$}$},description={Schnelle Ansteuerfrequenz des rotierenden magnetischen Dipol}}
+
+
+\newglossaryentry{tsr}{type=lat,sort={tsr},name={$T\tindex{SR}$},description={Periodendauer der Abtastfrequenz }}
+
+\newglossaryentry{fsr}{type=lat,sort={fsr},name={$f\tindex{SR}$},description={Abtastfrequenz }}
+
+\newglossaryentry{gx}{type=lat,sort={gx},name={$g\tindex{x}$},description={Übertragungsfaktor zwischen $x$-Spule und Sensor}}
+
+\newglossaryentry{gy}{type=lat,sort={gy},name={$g\tindex{y}$},description={Übertragungsfaktor zwischen $y$-Spule und Sensor}}
+
+\newglossaryentry{gz}{type=lat,sort={gz},name={$g\tindex{z}$},description={Übertragungsfaktor zwischen $z$-Spule und Sensor}}
+
+\newglossaryentry{g}{type=lat,sort={g},name={$g$},description={Betrag der Übertragungsfaktoren}}
+
+\newglossaryentry{fxy}{type=lat,sort={fxy},name={$f\tindex{$xy$}$},description={Verhältnis zwischen $g\tindex{y}$ und $g\tindex{x}$}}
+
+\newglossaryentry{fxz}{type=lat,sort={fxz},name={$f\tindex{$xz$}$},description={Verhältnis zwischen $g\tindex{z}$ und $g\tindex{x}$}}
+
+\newglossaryentry{rsens}{type=lat,sort={rsens},name={$\vec{r}\tindex{s}$},description={Sensorposition}}
+
+\newglossaryentry{rj}{type=lat,sort={rj},name={$\vec{r}\tindex{j}$},description={Gelenksposition}}
+
+\newglossaryentry{Q}{type=lat,sort={Q},name={$Q$},description={Verhältnis zwischen $l\tindex{js}$ und $|\vec{r\tindex{j}}|$}}
+
+\newglossaryentry{ljs}{type=lat,sort={ljs},name={$l\tindex{js}$},description={Distanz zwischen Gelenk und Sensor}}
+
+\newglossaryentry{lz}{type=lat,sort={lz},name={$l\tindex{z}$},description={Zusätzliche Distanz zwischen Gelenk und Sensor, die sich durch Beugung des Gelenks ergibt}}
+
+\newglossaryentry{de}{type=lat,sort={de},name={$d\tindex{e}$},description={Dicke eines kinematischen Elements}}
+
+\newglossaryentry{erj}{type=lat,sort={erj},name={$\vec{e}\tindex{rj}$},description={Normierte Gelenksposition}}
+
+\newglossaryentry{rs1}{type=lat,sort={rs1},name={$\vec{r}\tindex{s1}$},description={Absolute Lokalisierung, Position von Sensor 1 eines Sensorpaares}}
+
+\newglossaryentry{rs2}{type=lat,sort={rs2},name={$\vec{r}\tindex{s2}$},description={Absolute Lokalisierung, Position von Sensor 2 eines Sensorpaares}}
+
+\newglossaryentry{rsx}{type=lat,sort={rsx},name={$\vec{r}\tindex{s,x}$},description={Position $x$-Sensorpaar}}
+
+\newglossaryentry{rsy}{type=lat,sort={rsy},name={$\vec{r}\tindex{s,y}$},description={Position $y$-Sensorpaar}}
+
+\newglossaryentry{rsz}{type=lat,sort={rsz},name={$\vec{r}\tindex{s,z}$},description={Position $z$-Sensorpaar}}
+
+\newglossaryentry{dsp}{type=lat,sort={dsp},name={$d\tindex{sp}$},description={Abstand zwischen den zwei Sensoren eines Sensorpaares}}
+
+\newglossaryentry{dc1}{type=lat,sort={dc1},name={$d\tindex{c1}$},description={Abstand zwischen Sensor\,1 und der 3D-Spule}}
+
+\newglossaryentry{dc2}{type=lat,sort={dc2},name={$d\tindex{c2}$},description={Abstand zwischen Sensor\,2 und der 3D-Spule}}
+
+\newglossaryentry{rc1}{type=lat,sort={rc1},name={$\vec{r}\tindex{c,1}$},description={Position der 3D-Spule berechnet aus den Signalen von Sensor\,1}}
+
+\newglossaryentry{rc2}{type=lat,sort={rc2},name={$\vec{r}\tindex{c,2}$},description={Position der 3D-Spule berechnet aus den Signalen von Sensor\,2}}
+
+\newglossaryentry{rc21}{type=lat,sort={rc21},name={$\vec{r}\tindex{c,2$\rightarrow$s1}$},description={Position der 3D-Spule berechnet aus den Signalen von Sensor\,2, relativ zu Sensor\,1}}
+
+\newglossaryentry{galg}{type=lat,sort={galg},name={$\bvec{g}$},description={Übertragungsfaktoren zwischen Sensoren und Spulen, beliebig viele Sender}}
+
+\newglossaryentry{idtheta}{type=lat,sort={idtheta},name={$\bvec{i}\tindex{d$\theta$}$},description={Stromvektor abgeleitet nach $\theta$}}
+
+\newglossaryentry{idphi}{type=lat,sort={idphi},name={$\bvec{i}\tindex{d$\phi$}$},description={Stromvektor abgeleitet nach $\phi$}}
+
+
+
+
+
 
 
 

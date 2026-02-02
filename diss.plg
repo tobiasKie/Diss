@@ -1,7 +1,7 @@
 This is makeindex, version 2.16 [MiKTeX 25.4].
 Scanning style file ./diss.ist...........................done (27 attributes redefined, 0 ignored).
-Scanning input file diss.plo....done (18 entries accepted, 0 rejected).
-Sorting entries....done (83 comparisons).
-Generating output file diss.pls....done (46 lines written, 0 warnings).
+Scanning input file diss.plo....done (13 entries accepted, 0 rejected).
+Sorting entries....done (48 comparisons).
+Generating output file diss.pls....done (34 lines written, 0 warnings).
 Output written in diss.pls.
 Transcript written in diss.plg.

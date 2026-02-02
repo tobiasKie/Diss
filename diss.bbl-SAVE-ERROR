@@ -55,6 +55,103 @@
       \verb https://cdn-content.qualisys.com/2024/10/QTM-user-manual.pdf
       \endverb
     \endentry
+    \entry{anvari_impact_2005}{article}{}{}
+      \name{author}{10}{}{%
+        {{hash=57488e1eedfd3f21bb46a8559b6239ca}{%
+           family={Anvari},
+           familyi={A\bibinitperiod},
+           given={Mehran},
+           giveni={M\bibinitperiod}}}%
+        {{hash=98b2c619d2d9e8b48fb7c39ebbce7ecf}{%
+           family={Broderick},
+           familyi={B\bibinitperiod},
+           given={Tim},
+           giveni={T\bibinitperiod}}}%
+        {{hash=b674581530c61f77875e327ca06f0dea}{%
+           family={Stein},
+           familyi={S\bibinitperiod},
+           given={Harvey},
+           giveni={H\bibinitperiod}}}%
+        {{hash=627281600804bb939a15b3ef0cbc7d90}{%
+           family={Chapman},
+           familyi={C\bibinitperiod},
+           given={Trevor},
+           giveni={T\bibinitperiod}}}%
+        {{hash=a99772e2ca12aabb14c9f025e907fc76}{%
+           family={Ghodoussi},
+           familyi={G\bibinitperiod},
+           given={Moji},
+           giveni={M\bibinitperiod}}}%
+        {{hash=08cf117d737a8fcd0ce6d0d9cb7518d5}{%
+           family={Birch},
+           familyi={B\bibinitperiod},
+           given={Daniel\bibnamedelima W.},
+           giveni={D\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=22d13728804d38d61926143bc7949491}{%
+           family={Mckinley},
+           familyi={M\bibinitperiod},
+           given={Craig},
+           giveni={C\bibinitperiod}}}%
+        {{hash=6032a74b08d7dddfa196cdf23ef3f001}{%
+           family={Trudeau},
+           familyi={T\bibinitperiod},
+           given={Patrick},
+           giveni={P\bibinitperiod}}}%
+        {{hash=0de1a1f75d82f543bf759b77aafee7d4}{%
+           family={Dutta},
+           familyi={D\bibinitperiod},
+           given={Sanjeev},
+           giveni={S\bibinitperiod}}}%
+        {{hash=52a03c71df7570acef7f44591d940460}{%
+           family={Goldsmith},
+           familyi={G\bibinitperiod},
+           given={Charles\bibnamedelima H.},
+           giveni={C\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Taylor \& Francis}%
+      }
+      \strng{namehash}{10a8923a1c0f0317ab75e57a056bf8b0}
+      \strng{fullhash}{7907d4d823fa1c56e844202896a2eb78}
+      \strng{fullhashraw}{7907d4d823fa1c56e844202896a2eb78}
+      \strng{bibnamehash}{7907d4d823fa1c56e844202896a2eb78}
+      \strng{authorbibnamehash}{7907d4d823fa1c56e844202896a2eb78}
+      \strng{authornamehash}{10a8923a1c0f0317ab75e57a056bf8b0}
+      \strng{authorfullhash}{7907d4d823fa1c56e844202896a2eb78}
+      \strng{authorfullhashraw}{7907d4d823fa1c56e844202896a2eb78}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Objective: It has been suggested that robotic-assisted remote telepresence surgery with a signal transmission latency of greater than 300 ms may not be possible. Methods: We evaluated the impact of four different latencies of up to 500 ms on task completion and error rate in five surgeons after completion of three different surgical tasks. Results: The surgeons were able to complete all tasks with a latency of 500 ms. However, higher latency was associated with higher error rates and task completion time (TCT). There were significant variations between surgeons and different tasks. Conclusion: Surgeons are able to complete tasks with a signal transmission latency of up to 500 ms. The clinical impact of slower TCT and increased error rates encountered at higher latency needs to be established.}
+      \field{issn}{1092-9088}
+      \field{journaltitle}{Computer Aided Surgery}
+      \field{month}{1}
+      \field{note}{\_eprint: https://doi.org/10.3109/10929080500228654}
+      \field{number}{2}
+      \field{title}{The impact of latency on surgical precision and task completion during robotic-assisted remote telepresence surgery}
+      \field{urlday}{17}
+      \field{urlmonth}{1}
+      \field{urlyear}{2026}
+      \field{volume}{10}
+      \field{year}{2005}
+      \field{urldateera}{ce}
+      \field{pages}{93\bibrangedash 99}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.3109/10929080500228654
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:C\:\\Users\\tsc\\Zotero\\storage\\W5NQDWIK\\Anvari et al. - 2005 - The impact of latency on surgical precision and task completion during robotic-assisted remote telep.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.3109/10929080500228654
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.3109/10929080500228654
+      \endverb
+      \keyw{ATM,IP{–}VPN,latency,Robotic-assisted remote telepresence surgery,telerobotic surgery}
+    \endentry
     \entry{appell_funktionelle_2008}{book}{}{}
       \name{author}{3}{}{%
         {{hash=d91172b9ff77039dc539a9def2581838}{%
@@ -174,6 +271,9 @@
       \list{language}{1}{%
         {en}%
       }
+      \list{publisher}{1}{%
+        {Multidisciplinary Digital Publishing Institute}%
+      }
       \strng{namehash}{e7d43d40b31cd98a309be69cac87ed4c}
       \strng{fullhash}{93d5f5801b739c4c6ba49b69845ae3dd}
       \strng{fullhashraw}{93d5f5801b739c4c6ba49b69845ae3dd}
@@ -190,7 +290,7 @@
       \field{issn}{1424-8220}
       \field{journaltitle}{Sensors}
       \field{month}{1}
-      \field{note}{Number: 8 Publisher: Multidisciplinary Digital Publishing Institute}
+      \field{note}{Number: 8}
       \field{number}{8}
       \field{shorttitle}{A {Systematic} {Review} of {Commercial} {Smart} {Gloves}}
       \field{title}{A {Systematic} {Review} of {Commercial} {Smart} {Gloves}: {Current} {Status} and {Applications}}
@@ -329,6 +429,92 @@
       \endverb
       \keyw{Algebraic Number,Eisenstein Series,Elliptic Function,Legendre Polynomial,Modular Form}
     \endentry
+    \entry{noauthor_da_nodate}{misc}{}{}
+      \list{language}{1}{%
+        {en-us}%
+      }
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Experience precision beyond the limits of the human hand with da Vinci surgical instruments. Explore our portfolio of multi-functional instruments.}
+      \field{title}{Da {Vinci} {Surgical} {Instruments} {|} {Intuitive}}
+      \field{urlday}{31}
+      \field{urlmonth}{1}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Snapshot:C\:\\Users\\tsc\\Zotero\\storage\\8AUUKEQA\\instruments.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.intuitive.com/en-us/products-and-services/da-vinci/instruments
+      \endverb
+      \verb{url}
+      \verb https://www.intuitive.com/en-us/products-and-services/da-vinci/instruments
+      \endverb
+    \endentry
+    \entry{elbamby_toward_2018}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=40bf097cff76cf47ad15fb02487cd3f2}{%
+           family={Elbamby},
+           familyi={E\bibinitperiod},
+           given={Mohammed\bibnamedelima S.},
+           giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=980c0751f247130469d8e17e600804eb}{%
+           family={Perfecto},
+           familyi={P\bibinitperiod},
+           given={Cristina},
+           giveni={C\bibinitperiod}}}%
+        {{hash=eaf666d93aee903b2bbd8a40853a4243}{%
+           family={Bennis},
+           familyi={B\bibinitperiod},
+           given={Mehdi},
+           giveni={M\bibinitperiod}}}%
+        {{hash=07ead129c98a886ee832acd20c8fdaff}{%
+           family={Doppler},
+           familyi={D\bibinitperiod},
+           given={Klaus},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{ea10c1eca44de3e90b397acfd78080d9}
+      \strng{fullhash}{68d601ce5a24d2f5bc657c8cee9c9598}
+      \strng{fullhashraw}{68d601ce5a24d2f5bc657c8cee9c9598}
+      \strng{bibnamehash}{68d601ce5a24d2f5bc657c8cee9c9598}
+      \strng{authorbibnamehash}{68d601ce5a24d2f5bc657c8cee9c9598}
+      \strng{authornamehash}{ea10c1eca44de3e90b397acfd78080d9}
+      \strng{authorfullhash}{68d601ce5a24d2f5bc657c8cee9c9598}
+      \strng{authorfullhashraw}{68d601ce5a24d2f5bc657c8cee9c9598}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{VR is expected to be one of the killer applications in 5G networks. However, many technical bottlenecks and challenges need to be overcome to facilitate its wide adoption. In particular, VR requirements in terms of high throughput, low latency, and reliable communication call for innovative solutions and fundamental research cutting across several disciplines. In view of the above, this article discusses the challenges and enablers for ultra-reliable and low-latency VR. Furthermore, in an interactive VR gaming arcade case study, we show that a smart network design that leverages the use of mmWave communication, edge computing, and proactive caching can achieve the future vision of VR over wireless.}
+      \field{issn}{1558-156X}
+      \field{journaltitle}{IEEE Network}
+      \field{month}{3}
+      \field{number}{2}
+      \field{title}{Toward {Low}-{Latency} and {Ultra}-{Reliable} {Virtual} {Reality}}
+      \field{urlday}{17}
+      \field{urlmonth}{1}
+      \field{urlyear}{2026}
+      \field{volume}{32}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \field{pages}{78\bibrangedash 84}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1109/MNET.2018.1700268
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:C\:\\Users\\tsc\\Zotero\\storage\\C7T9HLT5\\Elbamby et al. - 2018 - Toward Low-Latency and Ultra-Reliable Virtual Reality.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/document/8329628
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/document/8329628
+      \endverb
+      \keyw{Delays,Headphones,Reliability,Servers,Streaming media,Virtual reality,Wireless communication}
+    \endentry
     \entry{hager-ross_quantifying_2000}{article}{}{}
       \name{author}{2}{}{%
         {{hash=01c5b8368096d02729e0a6d465d594d4}{%
@@ -345,6 +531,9 @@
       \list{language}{1}{%
         {en}%
       }
+      \list{publisher}{1}{%
+        {Society for Neuroscience}%
+      }
       \strng{namehash}{7ea07a8b7f44abea8d66c7c582917e8a}
       \strng{fullhash}{0810da1b0b79c3ba73dcd258c6bac9a9}
       \strng{fullhashraw}{0810da1b0b79c3ba73dcd258c6bac9a9}
@@ -358,10 +547,10 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{To determine whether other digits move when normal humans attempt to move just one digit, we asked 10 right-handed subjects to move one finger at a time while we recorded the motion of all five digits simultaneously with both a video motion analysis system and an instrumented glove. We quantified the independence of the digits to compare (1) the different digits, (2) the right versus the left hand, and (3) movements at a self-paced frequency versus externally paced movements at 3 Hz. We also quantified the degree to which motion occurred at the proximal, middle, or distal joint of each digit. Even when asked to move just one finger, normal human subjects produced motion in other digits. Movements of the thumb, index finger, and little finger typically were more highly individuated than were movements of the middle or ring fingers. Fingers of the dominant hand were not more independent than were those of the nondominant hand. Self-paced movements made at \~{}2 Hz were more highly individuated than were externally paced movements at 3 Hz. Angular motion tended to be greatest at the middle joint of each digit, with increased angular motion at the proximal and distal joints during 3 Hz movements. Simultaneous motion of noninstructed digits may result in part from passive mechanical connections between the digits, in part from the organization of multitendoned finger muscles, and in part from distributed neural control of the hand.}
+      \field{chapter}{ARTICLE}
       \field{issn}{0270-6474, 1529-2401}
       \field{journaltitle}{Journal of Neuroscience}
       \field{month}{11}
-      \field{note}{Publisher: Society for Neuroscience Section: ARTICLE}
       \field{number}{22}
       \field{shorttitle}{Quantifying the {Independence} of {Human} {Finger} {Movements}}
       \field{title}{Quantifying the {Independence} of {Human} {Finger} {Movements}: {Comparisons} of {Digits}, {Hands}, and {Movement} {Frequencies}}
@@ -448,7 +637,7 @@
       \verb{url}
       \verb https://ieeexplore.ieee.org/abstract/document/8574943
       \endverb
-      \keyw{Calibration,Coils,Couplings,field sensor,indoor navigation,localization,Magnetic domains,magnetic fields,magnetic local positioning,Magnetic resonance,Magnetoacoustic effects,Robot sensing systems}
+      \keyw{Coils,Magnetic domains,Calibration,magnetic fields,Robot sensing systems,localization,Couplings,Magnetic resonance,field sensor,indoor navigation,magnetic local positioning,Magnetoacoustic effects}
     \endentry
     \entry{henke_elektromagnetische_nodate}{book}{}{}
       \name{author}{1}{}{%
@@ -501,6 +690,9 @@
       \list{language}{1}{%
         {en}%
       }
+      \list{publisher}{1}{%
+        {De Gruyter}%
+      }
       \strng{namehash}{74891257a5fb31790028182d7bbdca9f}
       \strng{fullhash}{288e95cc7fb122a73ebfea5035993ef0}
       \strng{fullhashraw}{288e95cc7fb122a73ebfea5035993ef0}
@@ -517,7 +709,6 @@
       \field{issn}{2364-5504}
       \field{journaltitle}{Current Directions in Biomedical Engineering}
       \field{month}{8}
-      \field{note}{Publisher: De Gruyter}
       \field{number}{2}
       \field{title}{A {Concept} for {6D} {Motion} {Sensing} with {Magnetoelectric} {Sensors}}
       \field{urlday}{20}
@@ -540,7 +731,109 @@
       \verb{url}
       \verb https://www.degruyterbrill.com/document/doi/10.1515/cdbme-2022-1115/html
       \endverb
-      \keyw{magnetic fields,AC magnetic fields,artificial fields,magnetoelectric sensors,motion sensing,motion tracking}
+      \keyw{AC magnetic fields,artificial fields,magnetic fields,magnetoelectric sensors,motion sensing,motion tracking}
+    \endentry
+    \entry{hu_fiber_2023}{article}{}{}
+      \name{author}{7}{}{%
+        {{hash=485b027cfa0c8d2a2b85d3fdc76c237a}{%
+           family={Hu},
+           familyi={H\bibinitperiod},
+           given={Xinyao},
+           giveni={X\bibinitperiod}}}%
+        {{hash=9eda43a644030ac3eceaf837cb2489ac}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Yang},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=7870c259d05c3adfae9bd1498012ea8e}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Haoxi},
+           giveni={H\bibinitperiod}}}%
+        {{hash=7be0be1ac0ed47fb7976fa04d7b34cf3}{%
+           family={Xie},
+           familyi={X\bibinitperiod},
+           given={Jianhao},
+           giveni={J\bibinitperiod}}}%
+        {{hash=6392bc20c04ced39e96e7ce6c983a012}{%
+           family={Niu},
+           familyi={N\bibinitperiod},
+           given={Dengqiang},
+           giveni={D\bibinitperiod}}}%
+        {{hash=184588e8c9cdaa646f8a1d563f012d01}{%
+           family={Zhao},
+           familyi={Z\bibinitperiod},
+           given={Zhong},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=0a2d1b749b718c0e57153fc4bd29d836}{%
+           family={Qu},
+           familyi={Q\bibinitperiod},
+           given={Xingda},
+           giveni={X\bibinitperiod}}}%
+      }
+      \strng{namehash}{a3f22c37e64fce24f9a069ec116088a3}
+      \strng{fullhash}{7e1235e4bdd54b0e20d9569898fd0a49}
+      \strng{fullhashraw}{7e1235e4bdd54b0e20d9569898fd0a49}
+      \strng{bibnamehash}{7e1235e4bdd54b0e20d9569898fd0a49}
+      \strng{authorbibnamehash}{7e1235e4bdd54b0e20d9569898fd0a49}
+      \strng{authornamehash}{a3f22c37e64fce24f9a069ec116088a3}
+      \strng{authorfullhash}{7e1235e4bdd54b0e20d9569898fd0a49}
+      \strng{authorfullhashraw}{7e1235e4bdd54b0e20d9569898fd0a49}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{The fiber Bragg grating (FBG) sensors, which have unique advantages such as small size, biocompatibility, and high sensitivity, have received much attention in hand motion tracking applications. Despite the reported good performance and potential benefits of existing FBG sensing gloves, they still face challenges in terms of glove design, wearability, motion-sensing algorithms, and system accuracy and reliability. This article aims to provide a comprehensive survey of FBG sensing gloves, focusing on the topics of sensing characteristics, functionality, performance, system design, structure, and motion tracking algorithms. Through this survey, we have identified challenges and research gaps for FBG sensing gloves, including the need for innovation in system and structure design, the development of more advanced models that can better accommodate individual differences, and the improvement of multiplexing sensing capabilities. This survey can serve as a guide for future research in this exciting field.}
+      \field{issn}{1558-1748}
+      \field{journaltitle}{IEEE Sensors Journal}
+      \field{month}{6}
+      \field{number}{11}
+      \field{shorttitle}{The {Fiber} {Bragg} {Grating} ({FBG}) {Sensing} {Glove}}
+      \field{title}{The {Fiber} {Bragg} {Grating} ({FBG}) {Sensing} {Glove}: {A} {Review}}
+      \field{urlday}{15}
+      \field{urlmonth}{1}
+      \field{urlyear}{2026}
+      \field{volume}{23}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \field{pages}{11374\bibrangedash 11382}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1109/JSEN.2023.3266766
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:C\:\\Users\\tsc\\Zotero\\storage\\RAY7RII8\\Hu et al. - 2023 - The Fiber Bragg Grating (FBG) Sensing Glove A Review.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/abstract/document/10105209
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/abstract/document/10105209
+      \endverb
+      \keyw{Fiber Bragg grating (FBG),Fiber gratings,motion sensing glove,Optical fiber sensors,Optical fibers,Sensors,Strain,survey,Thumb,Tracking,wearable sensors}
+    \endentry
+    \entry{noauthor_intuitive_nodate}{misc}{}{}
+      \list{language}{1}{%
+        {en}%
+      }
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Empowering 3D digital creators with high quality sensor based motion capture systems for body, finger and face animations}
+      \field{title}{Intuitive and affordable motion capture tools for character animation}
+      \field{urlday}{28}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Snapshot:C\:\\Users\\tsc\\Zotero\\storage\\VZ6MZRMH\\www.rokoko.com.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.rokoko.com/
+      \endverb
+      \verb{url}
+      \verb https://www.rokoko.com/
+      \endverb
     \endentry
     \entry{john_david_jackson_klassische_nodate}{book}{}{}
       \name{author}{1}{}{%
@@ -565,6 +858,118 @@
       \field{title}{Klassische {Elektrodynamik}}
       \verb{file}
       \verb John David Jackson - Klassische Elektrodynamik.pdf:C\:\\Users\\tsc\\Zotero\\storage\\8U8IV5SR\\John David Jackson - Klassische Elektrodynamik.pdf:application/pdf
+      \endverb
+    \endentry
+    \entry{king_development_2009}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=3fa82bc0a9e7428f33126bec1b96b007}{%
+           family={King},
+           familyi={K\bibinitperiod},
+           given={Rachel\bibnamedelima C.},
+           giveni={R\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=73ff655ec8aec2a424ffb017551ae3e9}{%
+           family={Atallah},
+           familyi={A\bibinitperiod},
+           given={Louis},
+           giveni={L\bibinitperiod}}}%
+        {{hash=65fc12419a481222711c3a13036ab261}{%
+           family={Lo},
+           familyi={L\bibinitperiod},
+           given={Benny\bibnamedelimb P.\bibnamedelimi L.},
+           giveni={B\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=fcdeef628f31c9c5305ee39311f1fcc6}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Guang-Zhong},
+           giveni={G\bibinithyphendelim Z\bibinitperiod}}}%
+      }
+      \strng{namehash}{445b2447f7cbcf312781185c47127604}
+      \strng{fullhash}{115928689f9ddc33fda9867acda58267}
+      \strng{fullhashraw}{115928689f9ddc33fda9867acda58267}
+      \strng{bibnamehash}{115928689f9ddc33fda9867acda58267}
+      \strng{authorbibnamehash}{115928689f9ddc33fda9867acda58267}
+      \strng{authornamehash}{445b2447f7cbcf312781185c47127604}
+      \strng{authorfullhash}{115928689f9ddc33fda9867acda58267}
+      \strng{authorfullhashraw}{115928689f9ddc33fda9867acda58267}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Laparoscopic surgery is a challenging task in minimally invasive surgery, which involves complex instrument control, extensive manual dexterity, and hand{–}eye coordination. This requires a greater attention to training and skills evaluation. In order to provide a more objective skills assessment method, this paper presents a wireless sensor platform for the capture of laparoscopic hand gesture data and a hidden-Markov-model-based analysis framework for optimal sensor selection and placement. Detailed experimental validation is provided to illustrate how the proposed method can be used to assess surgical performance improvement over repeated training.}
+      \field{issn}{1558-0032}
+      \field{journaltitle}{IEEE Transactions on Information Technology in Biomedicine}
+      \field{month}{9}
+      \field{number}{5}
+      \field{title}{Development of a {Wireless} {Sensor} {Glove} for {Surgical} {Skills} {Assessment}}
+      \field{urlday}{16}
+      \field{urlmonth}{1}
+      \field{urlyear}{2026}
+      \field{volume}{13}
+      \field{year}{2009}
+      \field{urldateera}{ce}
+      \field{pages}{673\bibrangedash 679}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1109/TITB.2009.2029614
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:C\:\\Users\\tsc\\Zotero\\storage\\QN8BK2MX\\King et al. - 2009 - Development of a Wireless Sensor Glove for Surgical Skills Assessment.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/abstract/document/5230366
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/abstract/document/5230366
+      \endverb
+      \keyw{Abdomen,Biosensors,Body sensor networks,Body sensor networks (BSNs),Cameras,Hidden Markov models,hidden Markov models (HMMs),Laparoscopes,Minimally invasive surgery,minimally invasive surgery (MIS),sensor selection,skills analysis,Surges,Surgical instruments,Wireless sensor networks}
+    \endentry
+    \entry{kuroda_consumer_2004}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=3fe1d5e1e9f9222ccf422e8cb665ed4c}{%
+           family={Kuroda},
+           familyi={K\bibinitperiod},
+           given={Tomohiro},
+           giveni={T\bibinitperiod}}}%
+        {{hash=6e3563f3c6f9555a1152daa2f0f564a7}{%
+           family={Tabata},
+           familyi={T\bibinitperiod},
+           given={Y},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=27fff1d608501cb25ed876c6d44217ce}{%
+           family={Goto},
+           familyi={G\bibinitperiod},
+           given={A},
+           giveni={A\bibinitperiod}}}%
+        {{hash=4f2c89756dc7e1d48f98f856df3c9a0f}{%
+           family={Ikuta},
+           familyi={I\bibinitperiod},
+           given={H},
+           giveni={H\bibinitperiod}}}%
+        {{hash=3f7b26cead053ea1cefc168f95cd74d0}{%
+           family={Murakami},
+           familyi={M\bibinitperiod},
+           given={M},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{6afd50034f55ea99d686f5c92ac2cee5}
+      \strng{fullhash}{066c6440976c8480614f473260d6a611}
+      \strng{fullhashraw}{066c6440976c8480614f473260d6a611}
+      \strng{bibnamehash}{066c6440976c8480614f473260d6a611}
+      \strng{authorbibnamehash}{066c6440976c8480614f473260d6a611}
+      \strng{authornamehash}{6afd50034f55ea99d686f5c92ac2cee5}
+      \strng{authorfullhash}{066c6440976c8480614f473260d6a611}
+      \strng{authorfullhashraw}{066c6440976c8480614f473260d6a611}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A data-glove available for full degrees of freedom of a human hand is a key device to handle sign language on information systems. This paper presents an innovative intelligent data-glove named StrinGlove. StrinGlove obtains full degrees of freedom of human hand using 24 Inductcoders and 9 contact sensors, and encodes hand postures into posture codes on its own DSP. Additionally, the simple structure of the glove decreases the price. Several sign experts tried the prototype and the results show that the prototype has sufficient recognition rate as a sensor unit and sufficient comfortableness as a glove to wear.}
+      \field{journaltitle}{Virtual Reality \& Assoc. Tech}
+      \field{month}{1}
+      \field{title}{Consumer price data-glove for sign language recognition}
+      \field{year}{2004}
+      \verb{file}
+      \verb Full Text PDF:C\:\\Users\\tsc\\Zotero\\storage\\TMQXJA6Z\\Kuroda et al. - 2004 - Consumer price data-glove for sign language recognition.pdf:application/pdf
       \endverb
     \endentry
     \entry{marco_leone_theoretische_nodate}{book}{}{}
@@ -669,6 +1074,9 @@
       \list{language}{1}{%
         {EN}%
       }
+      \list{publisher}{1}{%
+        {SAGE Publications}%
+      }
       \strng{namehash}{fd0fbe10f84cd3e6988b3410f2af0a59}
       \strng{fullhash}{8dd76faf2d477a22a705738b946ace6f}
       \strng{fullhashraw}{8dd76faf2d477a22a705738b946ace6f}
@@ -686,7 +1094,6 @@
       \field{issn}{2169-5172}
       \field{journaltitle}{Soft Robotics}
       \field{month}{4}
-      \field{note}{Publisher: SAGE Publications}
       \field{number}{2}
       \field{title}{Design of a {Wearable} {Real}-{Time} {Hand} {Motion} {Tracking} {System} {Using} an {Array} of {Soft} {Polymer} {Acoustic} {Waveguides}}
       \field{urlday}{13}
@@ -708,6 +1115,73 @@
       \endverb
       \verb{url}
       \verb https://journals.sagepub.com/action/showAbstract
+      \endverb
+    \endentry
+    \entry{lugo_virtual_2017}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{hash=02007f5367ddebfc42979efd6798e129}{%
+           family={Lugo},
+           familyi={L\bibinitperiod},
+           given={Gabriel},
+           giveni={G\bibinitperiod}}}%
+        {{hash=66a4cfb1fc5d49cea02ac5346ce3d7e8}{%
+           family={Ibarra-Manzano},
+           familyi={I\bibinithyphendelim M\bibinitperiod},
+           given={Mario},
+           giveni={M\bibinitperiod}}}%
+        {{hash=242ec795aa2b8b1cf9a6eebc5f65d3e5}{%
+           family={Ba},
+           familyi={B\bibinitperiod},
+           given={Fang},
+           giveni={F\bibinitperiod}}}%
+        {{hash=69903b4e198bfee3f11f43f22a8917df}{%
+           family={Cheng},
+           familyi={C\bibinitperiod},
+           given={Irene},
+           giveni={I\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York, NY, USA}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{07efc894743c3fd4f91717884d74e89b}
+      \strng{fullhash}{8b5e2073fb0c72e872c830f7bb4b18c2}
+      \strng{fullhashraw}{8b5e2073fb0c72e872c830f7bb4b18c2}
+      \strng{bibnamehash}{8b5e2073fb0c72e872c830f7bb4b18c2}
+      \strng{authorbibnamehash}{8b5e2073fb0c72e872c830f7bb4b18c2}
+      \strng{authornamehash}{07efc894743c3fd4f91717884d74e89b}
+      \strng{authorfullhash}{8b5e2073fb0c72e872c830f7bb4b18c2}
+      \strng{authorfullhashraw}{8b5e2073fb0c72e872c830f7bb4b18c2}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In this paper, we take advantage of the free hand interaction technology as a medical tool, either in rehabilitation centers or at home, that allows the evaluation of patients with Parkinson's. We have created a virtual reality scene to engage the patient to feel in an activity that can be found in daily life, and use the Leap Motion controller tracking to evaluate and classify the tremor in the hands. A sample of 33 patients diagnosed with Parkinson's disease (PD) participated in the study. Three tests were performed per patient, the first two to evaluate the amplitude of the postural tremor in each hand, and the third to measure the time to complete a specific task. Analysis shows that our tool can be used effectively to classify the stage of Parkinson's disease.}
+      \field{booktitle}{Proceedings of the 11th {EAI} {International} {Conference} on {Pervasive} {Computing} {Technologies} for {Healthcare}}
+      \field{isbn}{978-1-4503-6363-1}
+      \field{month}{5}
+      \field{series}{{PervasiveHealth} '17}
+      \field{title}{Virtual reality and hand tracking system as a medical tool to evaluate patients with parkinson's}
+      \field{urlday}{14}
+      \field{urlmonth}{1}
+      \field{urlyear}{2026}
+      \field{year}{2017}
+      \field{urldateera}{ce}
+      \field{pages}{405\bibrangedash 408}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1145/3154862.3154924
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:C\:\\Users\\tsc\\Zotero\\storage\\WQC3QYSP\\Lugo et al. - 2017 - Virtual reality and hand tracking system as a medical tool to evaluate patients with parkinson's.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://dl.acm.org/doi/10.1145/3154862.3154924
+      \endverb
+      \verb{url}
+      \verb https://dl.acm.org/doi/10.1145/3154862.3154924
       \endverb
     \endentry
     \entry{ma_magnetic_2011}{article}{}{}
@@ -847,6 +1321,25 @@
       \endverb
       \verb{url}
       \verb https://www.sciencedirect.com/science/article/pii/089812218690194X
+      \endverb
+    \endentry
+    \entry{noauthor_medizinische_nodate}{misc}{}{}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labeltitlesource}{title}
+      \field{title}{Medizinische {Hochschule} {Hannover} : {Roboterassistierte} {Chirurgie}}
+      \field{urlday}{31}
+      \field{urlmonth}{1}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Medizinische Hochschule Hannover \: Roboterassistierte Chirurgie:C\:\\Users\\tsc\\Zotero\\storage\\V7J7E3D2\\roboterassistierte-chirurgie.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.mhh.de/urologie/kompetenzen/roboterassistierte-chirurgie
+      \endverb
+      \verb{url}
+      \verb https://www.mhh.de/urologie/kompetenzen/roboterassistierte-chirurgie
       \endverb
     \endentry
     \entry{michalowsky_magnettechnik_2006}{book}{}{}
@@ -1231,6 +1724,9 @@
       \list{language}{1}{%
         {en}%
       }
+      \list{publisher}{1}{%
+        {Multidisciplinary Digital Publishing Institute}%
+      }
       \strng{namehash}{aa5f788477b09ed196fd846f117a07a5}
       \strng{fullhash}{aa5f788477b09ed196fd846f117a07a5}
       \strng{fullhashraw}{aa5f788477b09ed196fd846f117a07a5}
@@ -1247,7 +1743,6 @@
       \field{issn}{2076-3417}
       \field{journaltitle}{Applied Sciences}
       \field{month}{1}
-      \field{note}{Publisher: Multidisciplinary Digital Publishing Institute}
       \field{number}{5}
       \field{title}{Extended {Field} {Interactions} in {Poisson}{’}s {Equation} {Revision}}
       \field{urlday}{27}
@@ -1335,6 +1830,66 @@
       \endverb
       \keyw{Magnetic field measurement,Magnetic sensors,Position measurement,Magnetic separation,Navigation,Blood,Coordinate measuring machines,Geometry,Rotation measurement,Vectors}
     \endentry
+    \entry{ruppel_elastic_2024}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=746939bedf8de43148af99a4036f094f}{%
+           family={Ruppel},
+           familyi={R\bibinitperiod},
+           given={Philipp},
+           giveni={P\bibinitperiod}}}%
+        {{hash=701b522e82b25750a7fbeaa90161cfa6}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Jianwei},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{publisher}{1}{%
+        {Multidisciplinary Digital Publishing Institute}%
+      }
+      \strng{namehash}{0262a39c7269fb9a9243d9ae1c407e81}
+      \strng{fullhash}{68d56cb3f693ed7a033751063afc890b}
+      \strng{fullhashraw}{68d56cb3f693ed7a033751063afc890b}
+      \strng{bibnamehash}{68d56cb3f693ed7a033751063afc890b}
+      \strng{authorbibnamehash}{68d56cb3f693ed7a033751063afc890b}
+      \strng{authornamehash}{0262a39c7269fb9a9243d9ae1c407e81}
+      \strng{authorfullhash}{68d56cb3f693ed7a033751063afc890b}
+      \strng{authorfullhashraw}{68d56cb3f693ed7a033751063afc890b}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We present a thin and elastic tactile sensor glove for teaching dexterous manipulation tasks to robots through human demonstration. The entire glove, including the sensor cells, base layer, and electrical connections, is made from soft and stretchable silicone rubber, adapting to deformations under bending and contact while preserving human dexterity. We develop a glove design with five fingers and a palm sensor, revise material formulations for reduced thickness, faster processing and lower cost, adapt manufacturing processes for reduced layer thickness, and design readout electronics for improved sensitivity and battery operation. We further address integration with a multi-camera system and motion reconstruction, wireless communication, and data processing to obtain multimodal reconstructions of human manipulation skills.}
+      \field{issn}{1424-8220}
+      \field{journaltitle}{Sensors}
+      \field{month}{1}
+      \field{note}{Number: 6}
+      \field{number}{6}
+      \field{title}{Elastic {Tactile} {Sensor} {Glove} for {Dexterous} {Teaching} by {Demonstration}}
+      \field{urlday}{27}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{volume}{24}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \field{pages}{1912}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3390/s24061912
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:C\:\\Users\\tsc\\Zotero\\storage\\9K5G2P2K\\Ruppel und Zhang - 2024 - Elastic Tactile Sensor Glove for Dexterous Teachin.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.mdpi.com/1424-8220/24/6/1912
+      \endverb
+      \verb{url}
+      \verb https://www.mdpi.com/1424-8220/24/6/1912
+      \endverb
+      \keyw{imitation learning,robot learning,sensor gloves,stretchable electronics,stretchable sensors,tactile sensing,teaching by demonstration}
+    \endentry
     \entry{saggio_quasi-static_2025}{article}{}{}
       \name{author}{4}{}{%
         {{hash=b468e34ceaa302469991a469f7bcc0de}{%
@@ -1361,6 +1916,9 @@
       \list{language}{1}{%
         {en}%
       }
+      \list{publisher}{1}{%
+        {Multidisciplinary Digital Publishing Institute}%
+      }
       \strng{namehash}{2eba134012cb9fd9edadc0f473bebf84}
       \strng{fullhash}{15a45240d6bad7e80c492b0aa1a12e4f}
       \strng{fullhashraw}{15a45240d6bad7e80c492b0aa1a12e4f}
@@ -1377,7 +1935,6 @@
       \field{issn}{2079-6374}
       \field{journaltitle}{Biosensors}
       \field{month}{10}
-      \field{note}{Publisher: Multidisciplinary Digital Publishing Institute}
       \field{number}{10}
       \field{title}{Quasi-{Static} and {Dynamic} {Measurement} {Capabilities} {Provided} by an {Electromagnetic} {Field}-{Based} {Sensory} {Glove}}
       \field{urlday}{7}
@@ -1400,7 +1957,7 @@
       \verb{url}
       \verb https://www.mdpi.com/2079-6374/15/10/640
       \endverb
-      \keyw{data glove,performance assessment,quasi-static performance,sensory glove,dynamic performance}
+      \keyw{data glove,dynamic performance,performance assessment,quasi-static performance,sensory glove}
     \endentry
     \entry{santoni_magik_2021}{article}{}{}
       \name{author}{4}{}{%
@@ -1550,6 +2107,83 @@
       \verb https://dss-kiel.de/index.php/research/realtime-framework
       \endverb
     \endentry
+    \entry{schmidt_new_2024}{article}{}{}
+      \name{author}{6}{}{%
+        {{hash=b30253c75a6934483ba798b3afe56cd3}{%
+           family={Schmidt},
+           familyi={S\bibinitperiod},
+           given={Tobias},
+           giveni={T\bibinitperiod}}}%
+        {{hash=c9e16d7d1f96da6b228fdb5d897b59de}{%
+           family={Hoffmann},
+           familyi={H\bibinitperiod},
+           given={Johannes},
+           giveni={J\bibinitperiod}}}%
+        {{hash=bb2ad01ba798232233204863dc0ae481}{%
+           family={Boueke},
+           familyi={B\bibinitperiod},
+           given={Moritz},
+           giveni={M\bibinitperiod}}}%
+        {{hash=5c97c33415302b70871cb4d4b4dd3563}{%
+           family={Bergholz},
+           familyi={B\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+        {{hash=da63fc26f2f213b5011912ff1d2f4216}{%
+           family={Klinkenbusch},
+           familyi={K\bibinitperiod},
+           given={Ludger},
+           giveni={L\bibinitperiod}}}%
+        {{hash=310eda54aa8a79cd65e9388fa14b1596}{%
+           family={Schmidt},
+           familyi={S\bibinitperiod},
+           given={Gerhard},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{publisher}{1}{%
+        {publisher}%
+      }
+      \strng{namehash}{4386a85b899053e884dbf6dc8c48d1c8}
+      \strng{fullhash}{d742529f0af96e1670a535b82b3ca78a}
+      \strng{fullhashraw}{d742529f0af96e1670a535b82b3ca78a}
+      \strng{bibnamehash}{d742529f0af96e1670a535b82b3ca78a}
+      \strng{authorbibnamehash}{d742529f0af96e1670a535b82b3ca78a}
+      \strng{authornamehash}{4386a85b899053e884dbf6dc8c48d1c8}
+      \strng{authorfullhash}{d742529f0af96e1670a535b82b3ca78a}
+      \strng{authorfullhashraw}{d742529f0af96e1670a535b82b3ca78a}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Motion analysis is of great interest to a variety of applications, such as virtual and augmented reality and medical diagnostics. Hand movement tracki...}
+      \field{issn}{1424-8220}
+      \field{journaltitle}{Sensors}
+      \field{month}{10}
+      \field{number}{21}
+      \field{title}{A {New} {Iterative} {Algorithm} for {Magnetic} {Motion} {Tracking}}
+      \field{urlday}{25}
+      \field{urlmonth}{1}
+      \field{urlyear}{2026}
+      \field{volume}{24}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.3390/s24216947
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:C\:\\Users\\tsc\\Zotero\\storage\\V7AUYBVU\\Schmidt et al. - 2024 - A New Iterative Algorithm for Magnetic Motion Tracking.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.mdpi.com/1424-8220/24/21/6947
+      \endverb
+      \verb{url}
+      \verb https://www.mdpi.com/1424-8220/24/21/6947
+      \endverb
+      \keyw{human{–}machine interface,iterative algorithms,localization,magnetic motion tracking,rotating magnetic dipole}
+    \endentry
     \entry{noauthor_spherical_nodate}{misc}{}{}
       \list{language}{1}{%
         {en}%
@@ -1573,6 +2207,197 @@
       \verb{url}
       \verb https://www.qualisys.com/accessories/markers/super-spherical-markers/
       \endverb
+    \endentry
+    \entry{noauthor_ultraleap_nodate}{misc}{}{}
+      \list{language}{1}{%
+        {de}%
+      }
+      \field{sortinit}{U}
+      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Präzises Handtracking Geeignet für: Verschiedene VR-Headsets, Windows VR-Controller}
+      \field{title}{Ultraleap {Leap} {Motion} {Controller} 2 {XR} {Unternehmensedition}}
+      \field{urlday}{25}
+      \field{urlmonth}{1}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Snapshot:C\:\\Users\\tsc\\Zotero\\storage\\Q7888ZUC\\leap-motion-2-xr-bundle.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://unboundxr.de/b2b/leap-motion-2-xr-bundle
+      \endverb
+      \verb{url}
+      \verb https://unboundxr.de/b2b/leap-motion-2-xr-bundle
+      \endverb
+    \endentry
+    \entry{wang_influence_2025}{article}{}{}
+      \name{author}{14}{}{%
+        {{hash=33f1f8102ae8d032fb301ab80a09459d}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Ye},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=c69a6b096c2a01b1cd402b59b354a250}{%
+           family={Ai},
+           familyi={A\bibinitperiod},
+           given={Qing},
+           giveni={Q\bibinitperiod}}}%
+        {{hash=b746f6270bef0ffde6638a37eeb15309}{%
+           family={Shi},
+           familyi={S\bibinitperiod},
+           given={Taoping},
+           giveni={T\bibinitperiod}}}%
+        {{hash=2c77663ba135caa9dfff35b526185da9}{%
+           family={Gao},
+           familyi={G\bibinitperiod},
+           given={Yu},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=afd6de30ce9fde696cfacd1c50bf1dd8}{%
+           family={Jiang},
+           familyi={J\bibinitperiod},
+           given={Bin},
+           giveni={B\bibinitperiod}}}%
+        {{hash=14b878671eb13bdbf9a31880cbdbc958}{%
+           family={Zhao},
+           familyi={Z\bibinitperiod},
+           given={Wuyi},
+           giveni={W\bibinitperiod}}}%
+        {{hash=68a52275b5aaa874a96f8d179ba97629}{%
+           family={Jiang},
+           familyi={J\bibinitperiod},
+           given={Chengjun},
+           giveni={C\bibinitperiod}}}%
+        {{hash=a221e2d41cfc486548fa4662225c2d83}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Guojun},
+           giveni={G\bibinitperiod}}}%
+        {{hash=7045b694006805850548dafcfc3bd3e3}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Lifeng},
+           giveni={L\bibinitperiod}}}%
+        {{hash=2cbb073e42ae160bc4c4415b934e41e6}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Huaikang},
+           giveni={H\bibinitperiod}}}%
+        {{hash=b6ad9773fc8bf525ad572cffe69cf7e8}{%
+           family={Gao},
+           familyi={G\bibinitperiod},
+           given={Fan},
+           giveni={F\bibinitperiod}}}%
+        {{hash=05a29da82f542676c561ef683d8e2ce8}{%
+           family={Ma},
+           familyi={M\bibinitperiod},
+           given={Xin},
+           giveni={X\bibinitperiod}}}%
+        {{hash=f12f940e55b2c06f8d1a9543702fe4a1}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Hongzhao},
+           giveni={H\bibinitperiod}}}%
+        {{hash=1e623f79370754172ef56c2cf87e1cf5}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Xu},
+           giveni={X\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \strng{namehash}{a38aafbfec64b02903488b4bf7a6bb7f}
+      \strng{fullhash}{929142c2a7bfcd485119d21172be1f48}
+      \strng{fullhashraw}{929142c2a7bfcd485119d21172be1f48}
+      \strng{bibnamehash}{929142c2a7bfcd485119d21172be1f48}
+      \strng{authorbibnamehash}{929142c2a7bfcd485119d21172be1f48}
+      \strng{authornamehash}{a38aafbfec64b02903488b4bf7a6bb7f}
+      \strng{authorfullhash}{929142c2a7bfcd485119d21172be1f48}
+      \strng{authorfullhashraw}{929142c2a7bfcd485119d21172be1f48}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{BACKGROUND: Telesurgery has the potential to overcome spatial limitations for surgeons, which depends on surgical robot and the quality of network communication. However, the influence of network latency and bandwidth on telesurgery is not well understood. METHODS: A telesurgery system capable of dynamically adjusting image compression ratios in response to bandwidth changes was established between Beijing and Sanya (Hainan province), covering a distance of 3000~km. In total, 108 animal operations, including 12 surgical procedures, were performed. Total latency ranging from 170~ms to 320~ms and bandwidth from 15-20~Mbps to less than 1 Mbps were explored using designed surgical tasks and hemostasis models for renal vein and internal iliac artery rupture bleeding. Network latency, jitter, frame loss, and bit rate code were systemically measured during these operations. National Aeronautics and Space Administration Task Load Index (NASA-TLX) and a self-designed scale measured the workload and subjective perception of surgeons. RESULTS: All 108 animal telesurgeries, conducted from January 2023 to June 2023, were performed effectively over a total duration of 3866~min. The operations were completed with latency up to 320~ms and bandwidths as low as 1-5~Mbps. Hemostasis for vein and artery rupture bleeding models was effectively achieved under these low bandwidth conditions. The NASA-TLX results indicated that latency significantly impacted surgical performance more than bandwidth and image clarity reductions. CONCLUSIONS: This telesurgery system demonstrated safety and reliability. A total of 320~ms latency is acceptable for telesurgery operations. Reducing image clarity can effectively mitigate the potential latency increase caused by decreased bandwidth, offering a new method to reduce the impact of latency on telesurgery.}
+      \field{issn}{2542-5641}
+      \field{journaltitle}{Chinese Medical Journal}
+      \field{month}{2}
+      \field{number}{3}
+      \field{shorttitle}{Influence of network latency and bandwidth on robot-assisted laparoscopic telesurgery}
+      \field{title}{Influence of network latency and bandwidth on robot-assisted laparoscopic telesurgery: {A} pre-clinical experiment}
+      \field{volume}{138}
+      \field{year}{2025}
+      \field{pages}{325\bibrangedash 331}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1097/CM9.0000000000003257
+      \endverb
+      \keyw{Animals,Laparoscopy,Robotic Surgical Procedures}
+    \endentry
+    \entry{yi_magnetic_2022}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=b0a149072605db7d15b945adf845d642}{%
+           family={Yi},
+           familyi={Y\bibinitperiod},
+           given={Jiawen},
+           giveni={J\bibinitperiod}}}%
+        {{hash=8b9a7af68e781d678a3bdeb370547125}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Jiaojiao},
+           giveni={J\bibinitperiod}}}%
+        {{hash=a54ccd7ea34e17d5e4ee21fcd121f0ce}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Chuanlong},
+           giveni={C\bibinitperiod}}}%
+        {{hash=c59f7a7166da1c59e76aa2b4573f2fef}{%
+           family={Lu},
+           familyi={L\bibinitperiod},
+           given={Xiong},
+           giveni={X\bibinitperiod}}}%
+      }
+      \strng{namehash}{acd5480e005ed1cf50d7d19362bbb7fa}
+      \strng{fullhash}{98538e0f6cda0abd5758139d9d57eb8b}
+      \strng{fullhashraw}{98538e0f6cda0abd5758139d9d57eb8b}
+      \strng{bibnamehash}{98538e0f6cda0abd5758139d9d57eb8b}
+      \strng{authorbibnamehash}{98538e0f6cda0abd5758139d9d57eb8b}
+      \strng{authornamehash}{acd5480e005ed1cf50d7d19362bbb7fa}
+      \strng{authorfullhash}{98538e0f6cda0abd5758139d9d57eb8b}
+      \strng{authorfullhashraw}{98538e0f6cda0abd5758139d9d57eb8b}
+      \field{sortinit}{Y}
+      \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{In the field of multimodal human{–}computer interaction (HCI), hand (and finger) motion tracking remains a critical challenge because it is the input means of visual reproduction and provides the necessary parameters for real-time modeling of the haptic model. Among motion tracking methods including optical tracking methods, inertial tracking methods, and magnetic motion tracking (MMT) methods, the MMT method has a great development prospect as a marker-based method because of its advantages of no line-of-sight problem, being natural-oriented, and high accuracy. In this article, we first discuss the performance and application scenarios under different configurations of electromagnet-based MMT (EMMT) and permanent-magnet-based MMT (PMMT) systems. And then, the MMT algorithms are reviewed, which can be divided into two broad categories: The model-based algorithms include linear algorithm, nonlinear optimization algorithm, and recursive Bayesian algorithm, and the offline-data-based algorithms include neural network algorithm and lookup table (LUT) algorithm. In addition, a state-of-the-art comparison of MMT algorithms is given. In the end, we have an insightful discussion and give the expected future outlook of MMT.}
+      \field{issn}{1558-1748}
+      \field{journaltitle}{IEEE Sensors Journal}
+      \field{month}{12}
+      \field{number}{23}
+      \field{shorttitle}{Magnetic {Motion} {Tracking} for {Natural} {Human} {Computer} {Interaction}}
+      \field{title}{Magnetic {Motion} {Tracking} for {Natural} {Human} {Computer} {Interaction}: {A} {Review}}
+      \field{urlday}{8}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{volume}{22}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \field{pages}{22356\bibrangedash 22367}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1109/JSEN.2022.3215285
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:C\:\\Users\\tsc\\Zotero\\storage\\YNV6YYNP\\Yi et al. - 2022 - Magnetic Motion Tracking for Natural Human Computer Interaction A Review.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/abstract/document/9928060
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/abstract/document/9928060
+      \endverb
+      \keyw{Sensors,Magnetic sensors,Permanent magnets,Human computer interaction,Tracking,Sensor arrays,Magnetic hand motion tracking,Magnetic resonance,marker-based magnetic tracking algorithm,multimodal human-computer interaction (HCI)}
     \endentry
     \entry{zeidler_springer-taschenbuch_2013}{book}{}{}
       \name{editor}{1}{}{%
@@ -1623,7 +2448,7 @@
       \verb{url}
       \verb https://link.springer.com/10.1007/978-3-8348-2359-5
       \endverb
-      \keyw{Numerik,Algebra,Algorithmik,Analysis,Geometrie,Stochastik,Wirtschaftsmathematik}
+      \keyw{Algebra,Algorithmik,Analysis,Geometrie,Numerik,Stochastik,Wirtschaftsmathematik}
     \endentry
   \enddatalist
 \endrefsection

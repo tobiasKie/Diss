@@ -1,6 +1,6 @@
 \chapter{Magnetisches räumliches Signalmerkmal}
 \label{chap:raeumliches_merkmal} 
-Ziel dieser Arbeit ist es, Orientierungen und Positionen von kinematischen Elementen zu schätzen. Die Orientierungen lassen sich mit räumlichen Vektoren beschreiben. Die Merkmale für die Signalverarbeitung sollen sich daran orientieren. In diesem Kapitel werden zunächst Verfahren beschrieben mit denen magnetische Felder analytisch beschrieben werden. Daraus abgeleitet wird ein räumliches Signalverarbeitungsmerkmal und dessen Zusammenhänge zwischen Position und Orientierung vorgestellt und diskutiert.
+Ziel dieser Arbeit ist es, Orientierungen und Positionen von kinematischen Elementen zu schätzen. Die Orientierungen lassen sich mit räumlichen Vektoren beschreiben. Die Merkmale für die Signalverarbeitung orientieren sich daran und sind ebenfalls räumliche Vektoren. In diesem Kapitel werden zunächst Verfahren beschrieben mit denen magnetische Felder analytisch beschrieben werden. Daraus abgeleitet wird ein räumliches Signalverarbeitungsmerkmal und dessen Zusammenhänge zwischen Position und Orientierung vorgestellt und diskutiert.
 
 \section{Modellierung magnetischer Felder}
 \label{sec:modMagFeld}
@@ -21,22 +21,22 @@ Das Vektorpotential ist angelehnt an das elektrostatische Potential und kann ana
 Im freien Raum  ergibt sich die Lösung dieser Differentialgleichung wie folgt, wobei $v'$ das Volumen und $\vec{r'}$ den Ort der Stromverteilung beschreibt,\cite{henke_elektromagnetische_nodate} 
 
 \begin{eqnarray}
-    a_{x} = \frac{\mu}{4 \pi} \iiint_{V'} \frac{j_x(\vec{r'})}{|\vec{r}-\vec{r'}|} dv',
+    a_{x} = \frac{\mu}{4 \pi} \iiint_{v'} \frac{j_x(\vec{r'})}{|\vec{r}-\vec{r'}|} dv',
     \label{eq:VekPotX}\\
-    a_{y} = \frac{\mu}{4 \pi} \iiint_{V'} \frac{j_y(\vec{r'})}{|\vec{r}-\vec{r'}|} dv',
+    a_{y} = \frac{\mu}{4 \pi} \iiint_{v'} \frac{j_y(\vec{r'})}{|\vec{r}-\vec{r'}|} dv',
     \label{eq:VekPotY}\\
-    a_{z} = \frac{\mu}{4 \pi} \iiint_{V'} \frac{j_z(\vec{r'})}{|\vec{r}-\vec{r'}|} dv'.
+    a_{z} = \frac{\mu}{4 \pi} \iiint_{v'} \frac{j_z(\vec{r'})}{|\vec{r}-\vec{r'}|} dv'.
     \label{eq:VekPotZ}
 \end{eqnarray}
 
 Durch einsetzen der Gleichungen \ref{eq:VekPotX} bis \ref{eq:VekPotZ} in Gleichung \ref{eq:VekPot} ergibt sich eine Beschreibung des Magnetfeldes in Abhängigkeit der Stromdichte
 \begin{equation}
-    \vec{b}(\vec{r}) = \frac{\mu}{4 \pi} \iiint_{V'} \text{rot}\biggr(\frac{\vec{j}(\vec{r'})}{|\vec{r}-\vec{r'}|}\biggl) dv'
+    \vec{b}(\vec{r}) = \frac{\mu}{4 \pi} \iiint_{v'} \text{rot}\biggr(\frac{\vec{j}(\vec{r'})}{|\vec{r}-\vec{r'}|}\biggl) dv'
     \label{eq:BiotSavartRot}
 \end{equation}
 mit Auswerten des Rotationsoperator
 \begin{equation}
-    \vec{b}(\vec{r}) = \frac{\mu}{4 \pi} \iiint_{V'} \vec{j}(\vec{r'}) \times \frac{\vec{r}-\vec{r'}}{|\vec{r}-\vec{r'}|} dv'.
+    \vec{b}(\vec{r}) = \frac{\mu}{4 \pi} \iiint_{v'} \vec{j}(\vec{r'}) \times \frac{\vec{r}-\vec{r'}}{|\vec{r}-\vec{r'}|} dv'.
     \label{eq:BiotSavart}
 \end{equation}
 
@@ -84,9 +84,9 @@ Das Dipolmoment $\vec{m}$ einer Stromdichteverteilung wird definiert als \cite{w
     \vec{m} = \frac{1}{2} \iiint \vec{r'} \times \vec{J}(\vec{r'})dv',
     \label{eq:Dipolemoment}
 \end{equation}
-wobei bei einer Spule vereinfacht das magnetische Dipolmoment mit der Anzahl der Windungen $K$, der Querschnittsfläche $A$, dem Strom $I$ und der Öffnungsrichtung der Spule $\vec{e}\tindex{Spule}$ beschrieben wird
+wobei bei einer Spule vereinfacht das magnetische Dipolmoment mit der Anzahl der Windungen $N\tindex{W}$, der Querschnittsfläche $a\tindex{F}$, dem Strom $i$ und der Öffnungsrichtung der Spule $\vec{e}\tindex{Spule}$ beschrieben wird
 \begin{equation}
-    \vec{m} = I\,A\,K\, \vec{e}\tindex{Spule}.
+    \vec{m} = i\,a\tindex{F}\,N\tindex{W}\, \vec{e}\tindex{Spule}.
 \end{equation}
 Das Vektorpotential eines magnetischen Dipols lautet \cite{wolfgang_nolting_grundkurs_nodate}
 \begin{equation}
@@ -99,18 +99,18 @@ und daraus ergibt sich für das Magnetfeld \cite{wolfgang_nolting_grundkurs_noda
     \label{eq:MagDipoleFeld}
 \end{equation}
 
-Diese Beschreibung wird in Kugelkoordinaten transformiert. Der Dipol sei angenommen als in der $z$-Richtung polarisiert $\vec{m}= m\, \vec{e}_z$ und im Ursprung lokalisiert. Die Komponenten $b_r, b_\phi, b_\theta$ ergeben sich wie folgt\,\cite{henke_elektromagnetische_nodate}
+Diese Beschreibung wird in Kugelkoordinaten transformiert. Der Dipol sei angenommen als in der $z$-Richtung polarisiert $\vec{m}= m\, \vec{e}_z$ und im Ursprung lokalisiert. Die Komponenten $b\tindex{Dip,$r$}, b\tindex{Dip,$\phi$}, b\tindex{Dip,$\theta$}$ ergeben sich wie folgt\,\cite{henke_elektromagnetische_nodate}
 
 \begin{equation}
-    b_{r} = \frac{\mu\,m}{4 \pi r^3} (3-\cos(\theta)),
+    b\tindex{Dip,$r$} = \frac{\mu\,m}{4 \pi r^3} (3-\cos(\theta)),
     \label{eq:radialeDip}
 \end{equation}
 \begin{equation}
-    b_{\phi} = 0,
+    b\tindex{Dip,$\phi$} = 0,
     \label{eq:phiDip}
 \end{equation}
 \begin{equation}
-    b_{\theta} = \frac{\mu\,m}{4 \pi r^3} \sin(\theta).
+    b\tindex{Dip,$\theta$} = \frac{\mu\,m}{4 \pi r^3} \sin(\theta).
 \end{equation}
 Die Beschreibung in Kugelkoordinaten zeigt, dass ein Dipolfeld keine azimutale Komponente hat und das Feld nicht vom Azimutwinkel abhängt. Dipolfelder sind daher rotationssysmetrisch, mit $\vec{m}$ als Rotationsachse.
 
@@ -168,7 +168,7 @@ Aufgrund der Zylindersymetrie des Dipolfeldes lassen sich die Kurven durch eine 
 \subsection{Quasistationäre Felder}
 \label{subsec:Quasistationairy}
 Bei Lokalisierungsanwendungen macht es Sinn zeitveränderliche Signale zu verwenden, um die verwendeten Signale z.B. vom Erdmagnetfeld trennen zu können. Bei der Beschreibung von Magnetfeldern wird bei statischen Fällen der Verschiebungsstrom $\frac{d \vec{D}}{d t}$ vernachlässigt. An dieser Stelle führen wir den Begriff der Quasistationärität ein. Dies bedeutet, dass zeitveränderliche Felder wie stationäre Felder beschrieben werden. Dies kann angenähert werden, wenn die Abmessungen der Applikation deutlich kleiner als die kleinste vorkommende Wellenlänge ist. \cite{wolfgang_nolting_grundkurs_nodate}. 
-Es wird zunächst die Ausbreitungszeit $t$ von Licht($c = 3\,\cdot 10^8 \frac{\text{m}}{\text{s}}$) bestimmt, die für die Abmessungslänge $d$ benötigt wird. Die bestimmte Zeit wird mit der Periodendauer der höchsten verwendeten Frequenz verglichen. In dieser Arbeit ist der Aufbau im Durchmesser ca. 1\,m groß und die Frequenzen sind aufgrund der verwendeten Sensorik auf 1000\,Hz beschränkt. Daher ist die kleinste Periodendauer 1\,ms und die Ausbreitungzeit ca. 3\,ns. Zwischen den beiden Werten liegen 6 Größenordnungen, die Quasistationärität wird im weiteren angenommen.
+Es wird zunächst die Ausbreitungszeit $t$ von Licht($c = 3\,\cdot 10^8 \frac{\text{m}}{\text{s}}$) bestimmt, die für die Abmessungslänge $d$ benötigt wird. Die bestimmte Zeit wird mit der Periodendauer der höchsten verwendeten Frequenz verglichen. In dieser Arbeit ist der Aufbau im Durchmesser ca. 1\,m groß und die verwendeten Frequenzen sind aufgrund der Sensorik auf 1\,kHz beschränkt. Daher ist die kleinste Periodendauer 1\,ms und die Ausbreitungzeit ca. 3\,ns. Zwischen den beiden Werten liegen 6 Größenordnungen, die Quasistationärität wird im weiteren angenommen.
 
 \section{3D-Spule}
 \label{sec:3d_Spule}
@@ -208,7 +208,7 @@ Die Spule kann unterschiedlich angesteuert werden. Zum einen gibt es die Möglic
 In diesem Kapitel werden Zusammenhänge zwischen magnetischen Aktuatoren und magnetischen Sensoren hergeleitet. Um die Herleitung möglichst einfach zu halten wird der Sensor als ideal angenommen. „Ideal“ bedeutet, dass der Sensor keine räumliche Ausdehnung besitzt und das Ausgangssignal des Sensors eine ungestörte Projektion des Dipolfeldes auf die sensitive Achse des Sensors ist. Der Sensorausgang $b\tindex{sens}(\vec{r},\vec{e}\tindex{s})$ ergibt sich dann als
 
 \begin{equation}
-    b\tindex{sens}(\vec{r},\vec{e}_s) =  \vec{b}\tindex{dip}(\vec{r}) \vec{e}\tindex{s}.
+    b\tindex{sens}(\vec{r},\vec{e}\tindex{s}) =  \vec{b}\tindex{Dip}(\vec{r})\,\cdot \, \vec{e}\tindex{s}.
     \label{eq:Sensorprojektion}
  \end{equation}
 
@@ -219,7 +219,7 @@ Der Maximalvektor ist ein Signalmerkmal, das verwendet werden kann, wenn 3D-Aktu
 \subsection{Lokalisierungszusammenhänge}
 \label{subsec:Lokalisierungszusammenhänge}
     \subsubsection{Orientierung und normierte Position}
-Im Folgenden soll der Zusammenhang zwischen dem Maximalvektor (MV) $\vec{e}\tindex{max}$, dem normierten Positionsvektor $\vec{e}\tindex{r}$ und der Sensororientierung $\vec{e}\tindex{s}$ hergeleitet werden. 
+Im Folgenden soll der Zusammenhang zwischen dem Maximalvektor (MV) $\vec{e}\tindex{max}$, dem normierten Positionsvektor $\vec{e}\tindex{$r$}$ und der Sensororientierung $\vec{e}\tindex{s}$ hergeleitet werden. 
 
 Da ein Zusammenhang zwischen den einzelnen normierten Vektoren gesucht wird, wird eine normierte Beschreibung des  Dipolfeldes $\vec{b}\tindex{norm}$ genutzt
 \begin{equation}
@@ -247,10 +247,10 @@ Da ein Zusammenhang zwischen den einzelnen normierten Vektoren gesucht wird, wir
     \label{fig:Winkelbeschreibung}
 \end{figure}
 
-Für die Herleitung werden zunächst einige Annahmen getroffen. Zwei nicht kolineare Vektoren spannen immer eine Ebene auf. Daher kann das Koordinatensystem so gelegt werden, dass $\vec{e}\tindex{r}$ und $\vec{e}\tindex{s}$ in der $xy$-Ebene liegen. Die beiden Vektoren seien wie folgt definiert
+Für die Herleitung werden zunächst einige Annahmen getroffen. Zwei nicht kolineare Vektoren spannen immer eine Ebene auf. Daher kann das Koordinatensystem so gelegt werden, dass $\vec{e}\tindex{$r$}$ und $\vec{e}\tindex{s}$ in der $xy$-Ebene liegen. Die beiden Vektoren seien wie folgt definiert
 \begin{equation}
     \vec{e}_r = \left[\begin{array}{c} \cos(\phi)\\ \sin(\phi) \\ 0\end{array}\right] \quad \textrm{und} \quad
-    \vec{e}_s = \left[\begin{array}{c} \cos(\phi\tindex{s})\\ \sin(\phi\tindex{s}) \\ 0\end{array}\right].
+    \vec{e}\tindex{s} = \left[\begin{array}{c} \cos(\phi\tindex{s})\\ \sin(\phi\tindex{s}) \\ 0\end{array}\right].
     \label{eq:defErEs}
 \end{equation}
 
@@ -296,12 +296,12 @@ Dies führt zu $b\tindex{norm}$ für die einzelnen Komponenten
 \end{eqnarray}
 Die Projektion auf die Sensorachse führt zu
 \begin{equation}
-    b\tindex{sensor}(\phi\tindex{s},\phi\tindex{m})= \frac{ m }{4 \pi r^3} \big( 2  \cos(\phi\tindex{m})  \cos(\phi\tindex{s}) - \sin(\phi\tindex{m})  \sin(\phi\tindex{s}) \big).
+    b\tindex{sens}(\phi\tindex{s},\phi\tindex{m})= \frac{ m }{4 \pi r^3} \big( 2  \cos(\phi\tindex{m})  \cos(\phi\tindex{s}) - \sin(\phi\tindex{m})  \sin(\phi\tindex{s}) \big).
     \label{eq:formel12}
 \end{equation}
-Es wird der Wert $\phi\tindex{m}$ gesucht, für den $b\tindex{sensor}$ maximal wird, dieser Winkel wird als $\phi\tindex{max}$ bezeichnet. Dafür wird Gleichung \ref{eq:formel12} nach $\phi\tindex{m}$ differenziert
+Es wird der Wert $\phi\tindex{m}$ gesucht, für den $b\tindex{sens}$ maximal wird, dieser Winkel wird als $\phi\tindex{max}$ bezeichnet. Dafür wird Gleichung \ref{eq:formel12} nach $\phi\tindex{m}$ differenziert
 \begin{equation}
-    \frac{d\,b\tindex{sensor}(\phi\tindex{m})}{d\,\phi\tindex{m}}=\frac{ m }{4 \pi r^3} \bigl( -2 \sin(\phi\tindex{m})\cos(\phi\tindex{s})-\sin(\phi\tindex{s})  \cos(\phi\tindex{m})\bigr),
+    \frac{d\,b\tindex{sens}(\phi\tindex{m})}{d\,\phi\tindex{m}}=\frac{ m }{4 \pi r^3} \bigl( -2 \sin(\phi\tindex{m})\cos(\phi\tindex{s})-\sin(\phi\tindex{s})  \cos(\phi\tindex{m})\bigr),
     \label{eq:formel13}
 \end{equation}
 zu Null gesetzt
@@ -320,7 +320,7 @@ und es ergibt sich ein Zusammenhang zwischen $\phi\tindex{max}$ und $\phi\tindex
 \end{equation}
 Es muss noch geprüft werden, ob es sich bei dem gefundenen Extremum um ein Minimum oder ein Maximum handelt. Dafür wird die zweite Ableitung nach $\phi\tindex{m}$ gebildet
 \begin{equation}
-    \frac{d^2\,b\tindex{sensor}(\phi\tindex{m})}{d\,\phi\tindex{m}^2}=\frac{ m }{4 \pi r^3}\bigl( -2 \cos(\phi\tindex{m})\cos(\phi\tindex{s})+\sin(\phi\tindex{s})  \sin(\phi\tindex{m})\bigr)
+    \frac{d^2\,b\tindex{sens}(\phi\tindex{m})}{d\,\phi\tindex{m}^2}=\frac{ m }{4 \pi r^3}\bigl( -2 \cos(\phi\tindex{m})\cos(\phi\tindex{s})+\sin(\phi\tindex{s})  \sin(\phi\tindex{m})\bigr)
 \end{equation}
 und die Werte für $\phi\tindex{s}$ und $\phi\tindex{max}$ eingesetzt. Wenn der Wert der zweiten Ableitung negativ ist, handelt es sich um ein Maxima, wenn dieser positiv ist um ein Minima. Wenn ein Minima gefunden wurde, muss eine Anpassung vorgenommen werden. Aufgrund der Periodizität der $\sin$- und $\cos$-Funktionen sind die Nullstellen von Gleichung\,\ref{eq:formel13} immer um $\pi$ voneinander entfernt, daher ist $\phi\tindex{s}\pm\pi$ ebenfalls eine Lösung für Gleichung\,\ref{eq:DiffToZero}. Das Maxima liegt dann um $\pi$ verschoben.
     
@@ -332,7 +332,7 @@ Gleichung \ref{eq:relMaxS} zeigt einen Zusammenhang zwischen $\vec{e}\tindex{max
     \put(78,26){$\phi\tindex{s}$}
     \put(80,21.5){$\phi\tindex{max}$}
     \put(90,2){$x$}
-    \put(44,2){$x$}
+    \put(46,2){$x$}
     \put(48,20){$y$}
     \put(0,20){$y$}
     \put(20,2){$\vec{r}$}
@@ -349,7 +349,7 @@ Gleichung \ref{eq:relMaxS} zeigt einen Zusammenhang zwischen $\vec{e}\tindex{max
     \put(75,16){$\vec{e}\tindex{max}$}
     \put(28,1){$\vec{e}\tindex{max}$}
 \end{overpic}
-\caption{ Die Beziehung aus Gleichung\,\ref{eq:relMaxS} ist unabhängig vom Winkel $\phi$. Außerdem wird die eindeutige Beziehung zwischen den drei Einheitsvektoren gezeigt. Auf der linken Seite ist der Sensor auf der $x$-Achse lokalisiert, wie in der Herleitung. Auf der rechten Seite ist das Ganze Setup gedreht. $\phi\tindex{s}$ und $\phi\tindex{max}$ bleiben gleich, nur die Bezugsachse dreht sich mit.}
+\caption{ Die Beziehung aus Gleichung\,\ref{eq:relMaxS} ist unabhängig vom Winkel $\phi$. Außerdem wird die eindeutige Beziehung zwischen den drei Einheitsvektoren gezeigt. Auf der linken Seite ist der Sensor auf der $x$-Achse lokalisiert, wie in der Herleitung. Auf der rechten Seite ist der Aufbau gedreht. $\phi\tindex{s}$ und $\phi\tindex{max}$ bleiben gleich, nur die Bezugsachse dreht sich mit.}
 \label{fig:maxvectorAcngles}
 \end{figure}
 
@@ -361,18 +361,18 @@ Mit dem beschriebenen Zusammenhang kann jeweils einer der drei Vektoren $\vec{e}
     \item Zunächst wird die Rotationsachse $\vec{e}\tindex{n}$ bestimmt:
     %
     \begin{equation}
-        \vec{e}\tindex{n} = \frac{\vec{e}\tindex{max} \times \vec{e}_r }{\|\vec{e}\tindex{max} \times \vec{e}\tindex{r}\|}.
+        \vec{e}\tindex{n} = \frac{\vec{e}\tindex{max} \times \vec{e}_r }{\|\vec{e}\tindex{max} \times \vec{e}\tindex{$r$}\|}.
         \label{eq:formel15}
     \end{equation}
     
     \item Im zweiten Schritt wird der Winkel zwischen MV und dem normierten Positionsvektor bestimmt:
     %
     \begin{equation}
-        \phi\tindex{max} = \arccos(\vec{e}\tindex{max} \cdot \vec{e}\tindex{r}).
+        \phi\tindex{max} = \arccos(\vec{e}\tindex{max} \cdot \vec{e}\tindex{$r$}).
         \label{eq:formel16}
     \end{equation}
     
-    \item Anschließend wird der Winkel zwischen dem Positionseinheitsvektor und der Sensorausrichtung aus Gl. \ref{eq:relMaxS}:
+    \item Anschließend wird der Winkel zwischen dem Positionseinheitsvektor und der Sensorausrichtung aus Gl.\,\ref{eq:relMaxS}:
     %
     \begin{equation}
         \phi\tindex{s} = \arctan\big(-2\tan(\phi\tindex{max})\big).
@@ -382,12 +382,12 @@ Mit dem beschriebenen Zusammenhang kann jeweils einer der drei Vektoren $\vec{e}
     \item  Abschließend kann für jeden $\vec e_r$ die Sensororientierung $\vec e\tindex{s}$ wie folgt berechnet werden:
     %m
     \begin{equation}
-        \vec{e}\tindex{s} = \cos(\phi\tindex{s})(\vec{e}\tindex{n} \times \vec{e}\tindex{r})\times \vec{e}\tindex{n} + \sin(\phi\tindex{s}) (\vec{e}\tindex{n} \times\vec{e}\tindex{r}).
+        \vec{e}\tindex{s} = \cos(\phi\tindex{s})(\vec{e}\tindex{n} \times \vec{e}\tindex{$r$})\times \vec{e}\tindex{n} + \sin(\phi\tindex{s}) (\vec{e}\tindex{n} \times\vec{e}\tindex{$r$}).
         \label{eq:formel18}
     \end{equation}
-    \end{enumerate}
+    \end{enumerate} 
 
-Daraus ergibt sich, dass mit dem MV für jede relative Position eine Sensororientierung bestimmt werden kann. Die Verteilung der möglichen Positions- Orientierungspaare (Posen) sind in Abbildung\,\ref{fig:PotentialPoses} dargestellt.
+Daraus ergibt sich, dass mit dem MV für jede relative Position eine Sensororientierung bestimmt werden kann. Die Verteilung der möglichen Positions- Orientierungspaare $\vec{p}$ sind in Abbildung\,\ref{fig:PotentialPoses} dargestellt.
     
     \begin{figure}[h]
         \centering
@@ -397,36 +397,36 @@ Daraus ergibt sich, dass mit dem MV für jede relative Position eine Sensororien
     \end{figure} 
 
 \subsubsection{Distanz zwischen Sensor und Quelle}
-Mit einem Setup aus einer 3D-Spule und einem 1D-Sensor lassen sich drei Informationen über die Lage zueinander übertragen. Der MV ist ein Einheitsvektor und enthält daher zwei Informationen und beschreibt den Zusammenhang zwischen $\vec{e}\tindex{r}$ und $\vec{e}\tindex{s}$. Als dritte Information definieren wir die Länge $g$ des Maximalvektors. $g$ soll ein Maß für die Distanz zwischen Sensor und Quelle sein, ähnlich wie in Gleichung \ref{eq:Bvonr}. Dort wurde gezeigt, wie sich der Magnetfeldbetrag in Bezug auf die Distanz zwischen Sensor und Spule und die Richtugnsabhängigkeit verhält.
+Mit einem Setup aus einer 3D-Spule und einem 1D-Sensor lassen sich drei Informationen über die Lage zueinander übertragen. Der MV ist ein Einheitsvektor und enthält daher zwei Informationen und beschreibt den Zusammenhang zwischen $\vec{e}\tindex{$r$}$ und $\vec{e}\tindex{s}$. Als dritte Information definieren wir die Länge $g$ des Maximalvektors. $g$ soll ein Maß für die Distanz zwischen Sensor und Quelle sein, ähnlich wie in Gleichung\,\ref{eq:rvonb}. Dort wurde gezeigt, wie sich der Magnetfeldbetrag in Bezug auf die Distanz und die Richtugnsabhängigkeit zwischen Sensor und Spule verhält.
         
 Im Folgenden wird gezeigt, dass sich der Betrag des Magnetfeldes bei einem Setup aus 3D-Spule und 1D-Sensor genau wie bei einer 1D-Spule und einem 3D-Sensor verhält. Da bereits im vorigen Kapitel gezeigt wurde, dass die orthogonale Komponente keinen Beitrag zum Sensorsignal liefert, wird die Herleitung im zweidimensionalen durchgeführt, ohne die Allgemeingültigkeit einzuschränken. Aus der 3D-Spule wird für die Herleitung daher eine 2D-Spule. Dafür wird die Position der 2D-Spule $\vec{r}\tindex{c}$, die Ausrichtung des Sensors $\vec{e}\tindex{s}$, und die Ausrichtung der $x$- und $y$-Spule $\vec{m}\tindex{x}$, $\vec{m}\tindex{y}$ definiert:
 
     \begin{equation}
         \vec{r}\tindex{c} = r \left[\begin{array}{c} \cos(\phi)\\ \sin(\phi) \end{array}\right],\quad
-        \vec{m}\tindex{x} = m  \left[\begin{array}{c} \cos(\alpha) \\ \sin(\alpha) \end{array}\right],\quad
-        \vec{m}\tindex{y} = m \left[\begin{array}{c} -\sin(\alpha) \\ \cos(\alpha) \end{array}\right],\quad
+        \vec{m}\tindex{x} = m  \left[\begin{array}{c} \cos(\phi\tindex{c}) \\ \sin(\phi\tindex{c}) \end{array}\right],\quad
+        \vec{m}\tindex{y} = m \left[\begin{array}{c} -\sin(\phi\tindex{c}) \\ \cos(\phi\tindex{c}) \end{array}\right],\quad
         \vec{e}\tindex{s} = \left[\begin{array}{c} 1\\ 0\end{array}\right].
         \label{eq:def_Vec_Abs}
     \end{equation}
 Der Sensor sei im Ursprung des Koordinatensystems lokalisiert. Das Feld der beiden Spulen am Sensor ergibt sich wie folgt:
 
 \begin{equation}
-    b\tindex{x} = \frac{m}{4 \pi r^3} \bigl(3 \cos(\phi) (cos(\alpha)\cos(\phi) + \sin(\phi) \sin(\alpha)) -\cos(\alpha)\bigr),
+    b\tindex{Dip,x} = \frac{m}{4 \pi r^3} \bigl(3 \cos(\phi) (\cos(\phi\tindex{c})\cos(\phi) + \sin(\phi) \sin(\phi\tindex{c})) -\cos(\phi\tindex{c})\bigr),
     \label{eq:B_XX}
 \end{equation}
 \begin{equation}
-    b\tindex{y} = \frac{m}{4 \pi r^3} \bigl(3 \cos(\phi) (-sin(\alpha)\cos(\phi) + \sin(\phi) \cos(\alpha)) +\sin(\alpha)\bigr).
+    b\tindex{Dip,y} = \frac{m}{4 \pi r^3} \bigl(3 \cos(\phi) (-\sin(\phi\tindex{c})\cos(\phi) + \sin(\phi) \cos(\phi\tindex{c})) +\sin(\phi\tindex{c})\bigr).
     \label{eq:B_YX}
 \end{equation}
 Es muss nun gezeigt werden, dass eine Betragsbildung der Komponenten zum selben Ergebnis wie Gleichung \ref{eq:BetragErgebnis} kommt. Dafür wird mit den beiden Komponenten eine Betragsbildung vorgenommen (eine detailliertere Berechnung kann im Anhang nachgesehen werden)
 
 \begin{equation}
-    b = \sqrt{b\tindex{x}^2 + b\tindex{y}^2} =\frac{m}{4 \pi r^3} \sqrt{1+3 \cos^2(\phi)}.
+    b\tindex{Dip} = \sqrt{b\tindex{Dip,x}^2 + b\tindex{Dip,y}^2} =\frac{m}{4 \pi r^3} \sqrt{1+3 \cos^2(\phi)}.
     \label{eq:BBetrag1DSen}
 \end{equation}
 Das Ergebnis führt zum gleichen Ergebnis wie Gleichung \ref{eq:BetragErgebnis}. Der Betrag ist hier wieder abhängig vom Abstand zwischen Spule und Sensor, sowie vom Winkel $\phi$. $\phi$ beschreibt den Polarwinkel der Spulenposition. Verallgemeinert ist dieser Winkel, der Winkel zwischen der Sensorachse und dem Positionsvektor von Sensor zu Spule. Aufgrund der Zylindersymetrie können wieder Äquibetragsflächen definiert werden. Dem Merkmal $g$ wird eine direkte Distanzabhängigkeit zugeordnet, daher wird $b$ mit $m$ normiert
 \begin{equation}
-    g = b \, \frac{4 \pi}{m}.
+    g = b\tindex{Dip} \, \frac{4 \pi}{m}.
     \label{eq:defG}
 \end{equation}
 

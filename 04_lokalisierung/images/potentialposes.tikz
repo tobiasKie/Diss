@@ -9,8 +9,8 @@
 \begin{tikzpicture}
 
 \begin{axis}[%
-width=2.0in,
-height=2.0in,
+width=3.0in,
+height=3.0in,
 at={(0in,0in)},
 scale only axis,
 xmin=-1.7,
@@ -96,8 +96,8 @@ x	y	u	v\\
 \end{axis}
 
 \begin{axis}[%
-width=2.0in,
-height=2.0in,
+width=3.0in,
+height=3.0in,
 at={(0in,0in)},
 scale only axis,
 xmin=0,
