@@ -48,16 +48,12 @@ Die Anatomie der menschlichen Hand wird in dieser Arbeit vereinfacht als kinemat
 \begin{figure}[h]
     \centering
     \begin{overpic}[width=\textwidth]{02_grundlagen/images/Def_ModellDrehung.png}
-        \put(55.5,56.25){$\phi\tindex{Sp}$}
-        \put(56,18){$\theta\tindex{Beu}$}
-        \put(56,28){$x$}
         \put(56,65){$y$}
-        \put(42,18){$z$}
         \put(41.5,56.25){$z$}
         \put(80,68){$k$}
-        \put(30,68){$k+1$}
+        \put(20,68){$k+1$}
     \end{overpic}
-    \caption{Modellierung einer kinematischen Kette: Die Abbildung zeigt eine kinematische Kette aus zwei Perspektiven, oben $yz$-Ebene und unten $xz$-Ebene. In der $yz$-Ebene wird in rot die Drehung um die $x$-Achse angedeutet, die mit dem Winkel $\phi\tindex{Sp}$ beschrieben wird. Im unteren Teil ist die Rotiaion mit dem $\theta\tindex{Beu}$ Winkel dargestellt.}
+    \caption{Modellierung einer kinematischen Kette: Die Abbildung zeigt eine kinematische Kette bestehend aus zwei Elementen mit dem zugehörigen Koordinatensystem. Unten ist exemplarisch ein Finger mit der zugehörigen Modellierung dargestellt.}
     \label{fig:ModellierungBewegung}
 \end{figure}
 
@@ -231,7 +227,7 @@ Ein Fluxgatemagnetometer besteht aus einem Ferritkern, um den zwei Spule gewicke
         \label{fig:SensorNoise}
 
     \end{figure}
-Für einen Prototyp wurden andere Sensoren verwednet, diese sind kleiner und können auch auf kleineren kinematischen Elementen befestigt werden. Da diese nicht zur Auswertung und Evaluieurng verwendet werden, wird hier auf eine nähere Beschreibung verzichtet.
+Für einen Prototyp wurden andere Sensoren verewndet, diese sind kleiner und können auch auf kleineren kinematischen Elementen befestigt werden. Da diese nicht zur Auswertung und Evaluieurng verwendet werden, wird hier auf eine nähere Beschreibung verzichtet.
 
     
 
@@ -247,7 +243,7 @@ Bei der Sensoranordnung wird unterschieden zwischen der Lokalisierung, für die 
             \put(47,11){\parbox{1.0in}{\centering Digitale Signalverarbeitung}}
         \end{overpic}
         \label{fig:Overview} 
-        \caption{Übersicht des entwickelten Systems: In der Abbildung ist das System mit der Sensoranordnung skizziert. In der Mitte der Abbildung ist eine Hand zu sehen, auf dem Handgelenk ist eine 3D-Spule in angebracht. An der Hand sind an jedem kinematischen Element Magnetfeldsensoren (orange) angebracht. Um das Messvolumen herum ist ein Gerüst an dem insgesamt sechs Sensoren befestigt sind. Diese sind jeweils drei Sensorpaare die gegenüber voneinander angebracht sind. Sowohl die Stromsignale (rot) und die Magnetfeldsignale (blau) werden digitalisiert und verarbeitet.}
+        \caption{Übersicht des entwickelten Systems: In der Abbildung ist das System mit der Sensoranordnung skizziert. In der Mitte der Abbildung ist eine Hand zu sehen, auf dem Handgelenk ist eine 3D-Spule in angebracht. An der Hand sind an jedem kinematischen Element Magnetfeldsensoren (orange) angebracht. Um das Messvolumen herum ist ein Gerüst an dem insgesamt sechs Sensoren befestigt sind, jeweils ein Sensorpaar pro Dimension $x,y,z$.  Sowohl die Stromsignale (rot) und die Magnetfeldsignale (blau) werden digitalisiert und verarbeitet.}
         \label{fig:Sensoranordnung}
     \end{figure}
 

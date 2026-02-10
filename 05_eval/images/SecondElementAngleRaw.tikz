@@ -3036,7 +3036,7 @@ ymajorgrids
 14.99	-69.1317322945751\\
 };
 
-\addplot [color=mycolor2, line width=2.0pt]
+\addplot [color=mycolor2, line width=1.0pt]
   table[row sep=crcr]{%
 0	-12.2441749802908\\
 0.01	-12.2168852521324\\
@@ -4540,7 +4540,7 @@ ymajorgrids
 14.99	-2.54684428880384\\
 };
 
-\addplot [color=red, line width=2.0pt]
+\addplot [color=red, line width=1.0pt]
   table[row sep=crcr]{%
 0	-35.0667513410194\\
 0.01	-35.1147485756938\\

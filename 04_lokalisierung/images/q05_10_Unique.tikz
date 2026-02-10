@@ -16,11 +16,11 @@
 \begin{axis}[%
 width=1.5in,
 height=2.0in,
-at={(-0in,0in)},
+at={(0.35in,0in)},
 scale only axis,
 xmin=-20,
 xmax=180,
-xtick = {0,30,...,180},
+xtick = {0,50,...,150},
 xlabel style={font=\color{white!15!black}},
 xlabel={$\phi_{\text{max,2}}$ in $^\circ$},
 ymin=0,

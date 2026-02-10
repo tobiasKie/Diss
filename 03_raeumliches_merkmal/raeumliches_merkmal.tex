@@ -1,6 +1,6 @@
 \chapter{Magnetisches räumliches Signalmerkmal}
 \label{chap:raeumliches_merkmal} 
-Ziel dieser Arbeit ist es, Orientierungen und Positionen von kinematischen Elementen zu schätzen. Die Orientierungen lassen sich mit räumlichen Vektoren beschreiben. Die Merkmale für die Signalverarbeitung orientieren sich daran und sind ebenfalls räumliche Vektoren. In diesem Kapitel werden zunächst Verfahren beschrieben mit denen magnetische Felder analytisch beschrieben werden. Daraus abgeleitet wird ein räumliches Signalverarbeitungsmerkmal und dessen Zusammenhänge zwischen Position und Orientierung vorgestellt und diskutiert.
+Ziel dieser Arbeit ist es, Orientierungen und Positionen von kinematischen Elementen zu schätzen. Die Orientierungen lassen sich mit räumlichen Vektoren beschreiben. Die Merkmale für die Signalverarbeitung orientieren sich daran und sind ebenfalls räumliche Vektoren. In diesem Kapitel werden zunächst Modellierungen beschrieben mit denen magnetische Felder analytisch beschrieben werden. Daraus abgeleitet wird ein räumliches Signalverarbeitungsmerkmal und dessen Zusammenhänge zwischen Position und Orientierung vorgestellt und diskutiert.
 
 \section{Modellierung magnetischer Felder}
 \label{sec:modMagFeld}
@@ -57,7 +57,7 @@ Mit diesen Zusammenhängen lassen sich die Magnetfelder beliebiger Stromdichteve
     \begin{overpic}[width=0.7\textwidth,trim = 0 0 0 0]{03_raeumliches_merkmal/images/BiotSavartDiff.png}
         \put(95,8){$x$}
         \put(8,65){$y$} 
-        \put(34,60){$d\,\vec{b}$}
+        \put(34,60){$d\vec{b}$}
         \put(20,32){$\vec{r}$}
         \put(50,47){$\vec{r}-\vec{r'}$}
         \put(63,33){\textcolor{red}{$d\vec{s}$}}
@@ -142,7 +142,7 @@ Durch eine Betragsbildung erhält man den Magnetfeldbetrag $b_{Dip}$
     b\tindex{Dip}(r,\phi) = \frac{\mu}{4\pi r^3} \sqrt{1+3\cos^2(\phi)}.
     \label{eq:BetragErgebnis}
 \end{equation}
-Der Magnetfeldbetrag ist abhängig vom Abstand $r$ und vom Winkel $\phi$. In der Herleitung ist $\phi$ der Winkel zwischen $\vec{r}$ und der $x$-Achse, kann aber verallgemeinert werden, zum Winkel zwischen $\vec{r}$ und $\vec{m}$.Der Betrag wird nun nach dem Abstand umgestellt
+Der Magnetfeldbetrag ist abhängig vom Abstand $r$ und vom Winkel $\phi$. In der Herleitung ist $\phi$ der Winkel zwischen $\vec{r}$ und der $x$-Achse, kann aber verallgemeinert werden, zum Winkel zwischen $\vec{r}$ und $\vec{m}$. Der Betrag wird nun nach dem Abstand umgestellt
 \begin{equation}
     r(b\tindex{Dip},\phi) = \sqrt[3]{\frac{\mu}{4\pi b\tindex{Dip}}\sqrt{1+3\cos^2(\phi)}}.
     \label{eq:rvonb}
@@ -286,7 +286,7 @@ Um einen Zusammenhang zwischen den drei Vektoren zu erhalten wird nun angenommen
     \vec{e}\tindex{s} = \left[\begin{array}{c} \cos(\phi\tindex{s})\\ \sin(\phi\tindex{s})\end{array}\right].
     \label{eq:defErEmEs}
 \end{equation}
-Dies führt zu $b\tindex{norm}$ für die einzelnen Komponenten  
+Dies führt zu $\vec{b}\tindex{norm}$ für die einzelnen Komponenten  
 
 \begin{eqnarray}
     b\tindex{norm,x}(\phi\tindex{m}) &=& 2  \cos(\phi\tindex{m}),
@@ -324,7 +324,7 @@ Es muss noch geprüft werden, ob es sich bei dem gefundenen Extremum um ein Mini
 \end{equation}
 und die Werte für $\phi\tindex{s}$ und $\phi\tindex{max}$ eingesetzt. Wenn der Wert der zweiten Ableitung negativ ist, handelt es sich um ein Maxima, wenn dieser positiv ist um ein Minima. Wenn ein Minima gefunden wurde, muss eine Anpassung vorgenommen werden. Aufgrund der Periodizität der $\sin$- und $\cos$-Funktionen sind die Nullstellen von Gleichung\,\ref{eq:formel13} immer um $\pi$ voneinander entfernt, daher ist $\phi\tindex{s}\pm\pi$ ebenfalls eine Lösung für Gleichung\,\ref{eq:DiffToZero}. Das Maxima liegt dann um $\pi$ verschoben.
     
-Gleichung \ref{eq:relMaxS} zeigt einen Zusammenhang zwischen $\vec{e}\tindex{max}$, $\vec{e}\tindex{r}$ und $\vec{e}\tindex{s}$. Dieser Zusammenhang gilt nicht nur für $\phi = 0$, sondern gilt auch wenn der Sensor nicht auf der $x$-Achse lokalisiert ist, da in diesem Fall $\vec{e}\tindex{r}=\vec{e}\tindex{x}$ ist, lässt sich der Zusammenhang verallgemeinern. Die Winkeldefinitionen werden verallgemeinert, indem diese in Bezug auf $\vec{e}\tindex{r}$ beschrieben werden. In Abbildung \ref{fig:maxvectorAcngles} ist diese Verallgemeinerung dargestellt. 
+Gleichung \ref{eq:relMaxS} zeigt einen Zusammenhang zwischen $\vec{e}\tindex{max}$, $\vec{e}\tindex{r}$ und $\vec{e}\tindex{s}$. Dieser Zusammenhang gilt nicht nur für $\phi = 0$, sondern gilt auch wenn der Sensor nicht auf der $x$-Achse lokalisiert ist, da in diesem Fall $\vec{e}\tindex{$r$}=\vec{e}\tindex{$x$}$ ist, lässt sich der Zusammenhang verallgemeinern. Die Winkeldefinitionen werden verallgemeinert, indem diese in Bezug auf $\vec{e}\tindex{$r$}$ beschrieben werden. In Abbildung \ref{fig:maxvectorAcngles} ist diese Verallgemeinerung dargestellt. 
     
     \begin{figure}[h!]
 \centering
@@ -353,7 +353,7 @@ Gleichung \ref{eq:relMaxS} zeigt einen Zusammenhang zwischen $\vec{e}\tindex{max
 \label{fig:maxvectorAcngles}
 \end{figure}
 
-Mit dem beschriebenen Zusammenhang kann jeweils einer der drei Vektoren $\vec{e}\tindex{max},\vec{e}\tindex{s},\vec{e}\tindex{r}$ mithilfe einer Rotation aus den anderen beiden berechnet werden. Die zugehörige Berechnungsvorschrift für $\vec{e}\tindex{s}$ wird im Folgenden einmal gezeigt. 
+Mit dem beschriebenen Zusammenhang kann jeweils einer der drei Vektoren $\vec{e}\tindex{max},\vec{e}\tindex{s},\vec{e}\tindex{$r$}$ mithilfe einer Rotation aus den anderen beiden berechnet werden. Die zugehörige Berechnungsvorschrift für $\vec{e}\tindex{s}$ wird im Folgenden einmal gezeigt. 
 
 
 \begin{enumerate}
@@ -432,5 +432,5 @@ Das Ergebnis führt zum gleichen Ergebnis wie Gleichung \ref{eq:BetragErgebnis}.
 
 \section{Zusammenfassung und Ausblick}
 \label{sec:Summary_Kap3}
-In diesem Kapitel wurden die benötigten Grundlagen der Beschreibung von magnetischen Feldern eingeführt. Im Anschluss wurde der Maximalvektor eingeführt. Dieser hat zum einen, einen vektoriellen Anteil mit dem der Zusammenhang zwischen relativer Position und der Orientierung der Sensoren beschrieben wird. Zum anderen wurde die Länge dieses Vektors definiert, die einen direkten Bezug zum Abstand zwischen Sensor und 3D-Spule hat. Mit den vorgestellten Merkmalen lassen sich mögliche Positionen und Orientierungen und ein Zusammenhang zwischen beidem beschreiben. Generell hat die Position und Orientierung eines 1D-Sensors fünf Freiheitsgrade, durch den Zusammenhang zwischen Position und Orientierung wird die Anzahl auf zwei reduziert. Dies wird bei der weiteren Entwicklung von Lokalisierungsalgorithmen angewendet.
+In diesem Kapitel wurden die benötigten Grundlagen der Beschreibung von magnetischen Feldern eingeführt. Im Anschluss wurde der Maximalvektor eingeführt. Dieser hat zum einen, einen vektoriellen Teil mit dem der Zusammenhang zwischen relativer Position und der Orientierung der Sensoren beschrieben wird. Zum anderen wurde die Länge dieses Vektors definiert, die einen direkten Bezug zum Abstand zwischen Sensor und 3D-Spule hat. Mit den vorgestellten Merkmalen lassen sich mögliche Positionen und Orientierungen und ein Zusammenhang zwischen beidem beschreiben. Generell hat die Position und Orientierung eines 1D-Sensors fünf Freiheitsgrade, durch den Zusammenhang zwischen Position und Orientierung wird die Anzahl auf zwei reduziert. Dies wird bei der weiteren Entwicklung von Lokalisierungsalgorithmen angewendet.
  

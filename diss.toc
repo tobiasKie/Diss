@@ -100,7 +100,7 @@
 \contentsline {subsection}{\numberline {6.1.1}Relative Lokalisierung}{87}{subsection.6.1.1}%
 \contentsline {subsection}{\numberline {6.1.2}Absolute Lokalisierung}{87}{subsection.6.1.2}%
 \contentsline {section}{\numberline {6.2}Neuheiten}{88}{section.6.2}%
-\contentsline {subsection}{\numberline {6.2.1}Veralgemeinerung der Merkmalsextraktion}{88}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.1}Verallgemeinerung der Merkmalsextraktion}{88}{subsection.6.2.1}%
 \contentsline {subsection}{\numberline {6.2.2}Applikationsangepasste Lokalisierung}{91}{subsection.6.2.2}%
 \contentsline {subsection}{\numberline {6.2.3}Verbesserungspotential}{91}{subsection.6.2.3}%
 \contentsline {section}{\numberline {6.3}Ausblick}{92}{section.6.3}%

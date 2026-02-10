@@ -25,9 +25,9 @@ In dieser Arbeit wurde eine Positionsgenauigkeit zwischen 15.2\,mm und 17.5\,mm 
 \section{Neuheiten}
    Es wird zurück geschaut und betrachtet, welche Teile neu sind und welche sich für andere Problemstellungen adaptieren lassen. 
    
-   \subsection{Veralgemeinerung der Merkmalsextraktion}
+   \subsection{Verallgemeinerung der Merkmalsextraktion}
 
-   In dieser Arbeit wurde ein Verfahren zur Schätzung von Übertragungsfaktoren (Spule $\rightarrow$ Sensor) vorgestellt. Vorgestellt wurde das Verfahren mit einer 3D-Spule, die als rotierender Dipol angesteuert. Durch die Detektion von Nulldurchgängen, wird ein Maximalvektor extrahiert. Dieser kann wie in den Gleichungen x-y gezeigt in die Übertragungsfaktoren der einzelnen Spulen umgerechnet werden. Dies soll auf verteilte Spulen und auf mehr als drei Spulen erweitert werden.\\
+   In dieser Arbeit wurde ein Verfahren zur Schätzung von Übertragungsfaktoren (Spule $\rightarrow$ Sensor) vorgestellt. Vorgestellt wurde das Verfahren mit einer 3D-Spule, die als rotierender Dipol angesteuert. Durch die Detektion von Nulldurchgängen, wird ein Maximalvektor extrahiert. Dieser kann wie in Kapitel\,\ref{sec:featext} gezeigt in die Übertragungsfaktoren der einzelnen Spulen umgerechnet werden. Dies soll auf verteilte Spulen und mehr als drei erweitert werden.\\
    Zunächst soll gezeigt werden, dass die Orthogonalität zwischen Nulldurchgängen und Maxima auch für verteilte Spulen gilt. Dies wird mit drei Spulen begonnen, aber später erweitert auf beliebig viele Aktuatoren. Die drei Spulen seien an beliebigen Orten mit beliebiger Orientierung positioniert. Mit Gleichung\,\ref{eq:Sensorprojektion} und \ref{eq:MagDipoleFeld} ergeben sich für die drei Spulen Übertragungsfaktoren $\bvec{g}$, diese werden mit den zugehörigen Strömen $\bvec{i}$ 
    
    
@@ -39,7 +39,7 @@ In dieser Arbeit wurde eine Positionsgenauigkeit zwischen 15.2\,mm und 17.5\,mm 
    multipliziert und ergeben das Sensorsignal
 
    \begin{equation}
-      b = \bvec{g}\,\bvec{i} = g_{1}  i_{1}(t) + g_{2}  i_{2}(t) + g_{3}  i_{3}(t).
+      b = \bvec{g}\,\cdot\bvec{i} = g_{1}  i_{1}(t) + g_{2}  i_{2}(t) + g_{3}  i_{3}(t).
       \label{eq:SensorSigDependent}
    \end{equation}
 
@@ -52,7 +52,7 @@ In dieser Arbeit wurde eine Positionsgenauigkeit zwischen 15.2\,mm und 17.5\,mm 
    
    Es muss nun gezeigt werden, dass die Stromvektoren $\bvec{i}(\phi\tindex{max},\theta\tindex{max})$ für das maximale Sensorsignal $b\tindex{max}$ orthogonal zu den Stromvektoren $\bvec{i}(\phi\tindex{0},\theta\tindex{0})$, für kein Signal am Sensor $b\tindex{0}$, stehen. 
 
-   An der Stelle des Maximums müssen die Ableitungen nach der $\phi$ und $\theta$ jeweils 0 sein. Der Stromvektor wird nun nach den beiden Variablen abgeleitet
+   An der Stelle des Maximums müssen die Ableitungen nach $\phi$ und $\theta$ jeweils 0 sein. Der Stromvektor wird nun nach den beiden Variablen abgeleitet
    \begin{equation}
       \frac{\text{d}\bvec{i}}{\text{d}\phi}  = i_0 \left[\begin{array}{c} -\sin(\phi) \sin(\theta)\\ \cos(\phi)\sin(\theta )\\ 0 \end{array}\right] = \bvec{i}\tindex{d$\phi$},
       \label{eq:DiffPhiCurr}
@@ -65,14 +65,14 @@ In dieser Arbeit wurde eine Positionsgenauigkeit zwischen 15.2\,mm und 17.5\,mm 
    Es wird nun $\phi\tindex{max}$ und $\theta\tindex{max}$ eingesetzt
    \begin{equation}
       \begin{split}
-         0 &=\bvec{g} \,\bvec{i}\tindex{d$\phi$}(\phi\tindex{max},\theta\tindex{max}) \\ &= g_{1}  i_0 (-\sin(\phi\tindex{max})) \sin(\theta\tindex{max}) + g_{2}  \cos(\phi\tindex{max})\sin(\theta\tindex{max}) + g_{3} \, 0,
+         0 &=\bvec{g} \,\cdot\bvec{i}\tindex{d$\phi$}(\phi\tindex{max},\theta\tindex{max}) \\ &= g_{1}  i_0 (-\sin(\phi\tindex{max})) \sin(\theta\tindex{max}) + g_{2}  \cos(\phi\tindex{max})\sin(\theta\tindex{max}) + g_{3} \, 0,
          \label{eq:DiffPhieq0}
       \end{split}
    \end{equation}
 
    \begin{equation}
       \begin{split}
-         0 &=\bvec{g} \,\bvec{i}\tindex{d$\theta$}(\phi\tindex{max},\theta\tindex{max}) \\ &= g_{1}  i_0 \cos(\phi\tindex{max}) \cos(\theta\tindex{max}) + g_{2}  \sin(\phi\tindex{max})\cos(\theta\tindex{max}) - g_{3} \, sin(\theta\tindex{max}).
+         0 &=\bvec{g} \,\cdot\bvec{i}\tindex{d$\theta$}(\phi\tindex{max},\theta\tindex{max}) \\ &= g_{1}  i_0 \cos(\phi\tindex{max}) \cos(\theta\tindex{max}) + g_{2}  \sin(\phi\tindex{max})\cos(\theta\tindex{max}) - g_{3} \, sin(\theta\tindex{max}).
          \label{eq:DiffThetaeq0}
       \end{split}
    \end{equation}
@@ -124,12 +124,12 @@ In dieser Arbeit wurde eine Positionsgenauigkeit zwischen 15.2\,mm und 17.5\,mm 
    Gleichung\,\ref{eq:SensorSigDependent} lässt sich somit umschreiben
 
    \begin{equation}
-      b = |\bvec{g}|  \biggl(i_1(t) \,i_{1}(\phi\tindex{max},\theta\tindex{max}) + i_2(t) \,i_{2}(\phi\tindex{max},\theta\tindex{max}) + i_3(t) \,i_{3}(\phi\tindex{max},\theta\tindex{max})\biggr),
+      b(t) = |\bvec{g}|  \biggl(i_1(t) \,i_{1}(\phi\tindex{max},\theta\tindex{max}) + i_2(t) \,i_{2}(\phi\tindex{max},\theta\tindex{max}) + i_3(t) \,i_{3}(\phi\tindex{max},\theta\tindex{max})\biggr),
    \end{equation}
    und lässt sich einfach nach $|\bvec{g}|$ umstellen 
 
    \begin{equation}
-      |\bvec{g}| = \frac{b(\vec{r},t)}{\biggl(i_1(t) \,i_{1}(\phi\tindex{max},\theta\tindex{max}) + i_2(t) \,i_{2}(\phi\tindex{max},\theta\tindex{max}) + i_3(t) \,i_{3}(\phi\tindex{max},\theta\tindex{max})\biggr)}.
+      |\bvec{g}| = \frac{b(t)}{\biggl(i_1(t) \,i_{1}(\phi\tindex{max},\theta\tindex{max}) + i_2(t) \,i_{2}(\phi\tindex{max},\theta\tindex{max}) + i_3(t) \,i_{3}(\phi\tindex{max},\theta\tindex{max})\biggr)}.
    \end{equation}
 
    Der Zusammenhang soll nun auf $n$ Aktuatoren erweitert werden. Dafür schauen wir uns die Verallgemeinerung von Kugelkoordinaten für $n$-Dimensionen an, dafür werden $n-1$ Winkel verwendet. Die radiale Komponente für $n$ Dimensionen ist definiert wie folgt \cite{campos_hyperspherical_2020}
@@ -141,7 +141,7 @@ In dieser Arbeit wurde eine Positionsgenauigkeit zwischen 15.2\,mm und 17.5\,mm 
 
    Die Richtung ist dabei konstant und die Winkel geben die Richtung des Vektors an. In $n$-Dimensionen lässt sich ebenfalls die Ableitung nach jedem Winkel bilden, aus welchen dann die Einheitsvektoren in der jeweiligen Richtung entstehen. Die Herleitung lässt sich daher für beliebige $n$ wie oben wiederholen. 
 
-   Die Bestimmung des Kreuzprodukts ändert sich, zum einen werden $n-1$ Nulldurchgangsvektoren benötigt, die eine Hyperebene aufspannen und das Kreuzprodukt ist in $\mathbb {R} ^{n}$ ist definiert als \cite{fischer_bilinearformen_2025}
+   Die Bestimmung des Kreuzprodukts ändert sich, zum einen werden $n-1$ Nulldurchgangsvektoren benötigt, die eine Hyperebene aufspannen und das Kreuzprodukt ist in $\mathbb {R} ^{n}$ über das Spatprodukt definiert als \cite{fischer_bilinearformen_2025}
    
    \begin{equation}
       \vec{v} \, (\vec{a}_1 , \times \vec{a}_2 \dots \times \vec{a}_{n-1}) = \text{det}\begin{pmatrix}
@@ -157,15 +157,15 @@ In dieser Arbeit wurde eine Positionsgenauigkeit zwischen 15.2\,mm und 17.5\,mm 
          \end{pmatrix}.
    \end{equation}
 
-   Die Herleitung zeigt außerdem, dass die Ansteuerung nicht unbedingt sein muss wie in Gleichung\,\ref{eq:CoilCurrents} gewählt werden. Es wurde gezeigt, dass die Nulldurchgangsvektoren immer senkrecht zu den Übertragungsfaktoren stehen. Daher ist die Ansteuerung der Spulen nebensächlich, diese müssen nur so angesteuert werden, dass die Nulldurchgangsvektoren sich voneinander unterscheiden. 
+   Die Herleitung zeigt außerdem, dass die Ansteuerung nicht unbedingt an Kugelkoordinaten angelehnt sein muss wie in Gleichung\,\ref{eq:CoilCurrents}. Es wurde gezeigt, dass die Nulldurchgangsvektoren immer senkrecht zu den Übertragungsfaktoren stehen. Daher ist die Ansteuerung der Spulen nebensächlich, diese müssen nur so angesteuert werden, dass die Nulldurchgangsvektoren sich voneinander unterscheiden. 
 
    Zusammengefasst wurde ein Verfahren entwickelt, mit dem Übertragungsfaktoren zwischen Sensoren und Aktuatoren bestimmt werden. Die einzige Einschränkung dafür ist, dass die Ausbreitung der Feldgröße nahezu ohne Verzögerung geschieht. Es kann also für viele magnetische Lokalisierungen und ähnliche Anwendungen verwendet werden.
 
 
    \subsection{Applikationsangepasste Lokalisierung}
-   Die Lokalisierung spaltet sich in zwei Unterthemen. Die absolute Lokalisierung ist in dieser Arbeit einfach gehalten. In der absoluten Lokalisierung wird die Zylindersymmetrie eines Dipolfeldes ausgenutzt. Durch die Anordnung der Sensoren wird die Positions- und Orientierungsschätzung in kleinere Unterprobleme aufgeteilt. Die Unterprobleme sind deutlich weniger komplex und die Position/Orientierung einer 3D-Spule wird effizient bestimmt.
-   Die relative Lokalisierung wird verwendet um die Bewegung von kinematischen Ketten aufzunehmen. Hier wurde ein iterativer Algorithmus entwickelt, dieser erfordert eine 3D-Spule, sowie kinematische Elemente an denen Sensoren angebracht sind. Für diese Applikationen wurde eine sehr effiziente und robuste echtzeitfähige Lokalisierung entwickelt.
-   Für beide Lokalisierungsalgorithmen gilt, dass der Aufbau an die Algorithmik angepasst sein muss und diese nicht flexibel in magnetischen Lokalisierungen eingesetzt werden können.
+   Die Lokalisierung gliedert sich in zwei Unterthemen. Die absolute Lokalisierung ist in dieser Arbeit einfach gehalten. In der absoluten Lokalisierung wird die Zylindersymmetrie eines Dipolfeldes ausgenutzt. Durch die Anordnung der Sensoren wird die Positions- und Orientierungsschätzung in kleinere Unterprobleme aufgeteilt. Die Unterprobleme werden so deutlich weniger komplex und die Position/Orientierung einer 3D-Spule wird effizient bestimmt.
+   Die relative Lokalisierung wird verwendet um die Bewegung von kinematischen Ketten aufzunehmen. Hier wurde ein iterativer Algorithmus entwickelt, dieser erfordert eine 3D-Spule, sowie kinematische Elemente an denen Sensoren angebracht sind. Für diese Applikationen wurde eine effiziente und robuste echtzeitfähige Lokalisierung entwickelt.
+   Für beide Lokalisierungsalgorithmen gilt, dass der Aufbau an die Algorithmik angepasst wurde und diese nicht flexibel in magnetischen Lokalisierungen eingesetzt werden können.
 
    \subsection{Verbesserungspotential}
    In dieser Arbeit wurden Sensoren von \textit{Stefan Mayer}, diese sind einfach in der Handhabung und können in ungeschirmter Umgebung eingesetzt werden. Für erste Versuche und Machbarkeitsanalysen ist dies eine gute Wahl, da sehr schnell Ergebnisse geliefert werden können. Eine Alternative könnte angepasstere Sensorik sein. Die Firma Manus verwendet sowohl auf Senderseite als auch auf Empfängerseite kleine SMD-3D-Spulen\,\cite{saggio_quasi-static_2025}. Diese sind kommerziell verfügbar und kostengünstig. Diese könnten das Ergebnis verbessern, jedoch müssten auf Hardwareseite Anpassungen erfolgen und Leiterplatten daran angepasst werden.
@@ -187,7 +187,7 @@ In dieser Arbeit wurde eine Positionsgenauigkeit zwischen 15.2\,mm und 17.5\,mm 
    \begin{figure}[h]
       \centering
       \includegraphics[width = 0.7\textwidth]{06_ende/images/Prototyp_Visualisierung.pdf}
-      \caption{Linke Seite: Visualisierung der Schätzung. Rechte Seite: zugehörige Hand.}
+      \caption{Die linke Seite zeigt die Visualisierung der Schätzung, auf der rechten Seite ist die zugehörige Hand mit Prototyp zu sehen.}
       \label{fig:PrototypVis}
    \end{figure}
 
