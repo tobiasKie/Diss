@@ -107,7 +107,8 @@
 \contentsline {subsection}{\numberline {6.3.1}Prototyp}{92}{subsection.6.3.1}%
 \contentsline {subsection}{\numberline {6.3.2}Die nächsten Schritte}{92}{subsection.6.3.2}%
 \contentsline {chapter}{\nonumberline Literaturverzeichnis}{95}{chapter*.177}%
-\contentsline {section}{\nonumberline Weitere Literatur}{95}{section*.179}%
+\contentsline {section}{\nonumberline Publikationen mit Eigenbeteiligung}{95}{section*.179}%
+\contentsline {section}{\nonumberline Weitere Literatur}{95}{section*.181}%
 \def \@chapapp {\appendixname }
 \contentsline {chapter}{\numberline {A}Weitere Messdaten}{I}{appendix.A}%
 \contentsline {section}{\numberline {A.1}Tmp}{I}{section.A.1}%

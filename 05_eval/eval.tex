@@ -231,7 +231,7 @@ und kann mit der magnetischen Schätzung verglichen werden.
 
 
 \subsubsection{Kalibrierung}
-Der Algorithmus für die Schätzung einer kinematischen Kette benötigt als Vorwissen die Abmessungen der kinematischen Kette. Die benötigten Parameter sind zum einen die Position des ersten Gelenks $\vec{r}\tindex{j}$, sowie für jedes Element der Abstand von Gelenk zu Sensor $l\tindex{js,$k$}$, die Länge der Elemente $l\tindex{kin,$k$}$ und die Dicke der Elemente $d\tindex{kin,$k$}$.
+Der Algorithmus für die Schätzung einer kinematischen Kette benötigt als Vorwissen die Abmessungen der kinematischen Kette. Die benötigten Parameter sind zum einen die Position des ersten Gelenks $\vec{r}\tindex{j}$, sowie für jedes Element der Abstand von Gelenk zu Sensor $l\tindex{js,$k$}$, die Länge der Elemente $l\tindex{kin,$k$}$ und die Dicke der Elemente $d\tindex{kin,$k$}$, dargestellt in Abbildung\,\ref{fig:TBCalibrated}.
 
 \begin{figure}
     \centering
@@ -420,7 +420,7 @@ Es werden kurz die dynamischen Messungen ohne Nachverarbeitung analysiert um auf
   \label{fig:FFTAngles}
 \end{figure}
 
-Darin ist gut zu sehen, dass es tieffrequent (im Bereich bis 5\,Hz) Anteile gibt. Diese sind Teil der Bewegung. Desweiteren gibt es Spitzen bei 20\,Hz, 70\,Hz und 80\,Hz. Die Spitzen bei 20\,Hz und 80\,Hz lassen sich mit Harmonischen der Netzspannung erklären. Diese liegen bei 550\,Hz, 650\,Hz, 750\,Hz und 850\,Hz (siehe Abbildung\,\ref{fig:FFTAngles}). Die Anregungssignale liegen bei 630\,Hz,  700\,Hz und 770\,Hz, und eine Bewegung führt zu einer Amplitudenmodulation, also zu frequenzanteilen bei den Anregungssignalen $\pm$ den Frequenzanteilen der Bewegung. Die Netzspannung bei 650\,Hz und 750\,Hz sind jeweils 20\,Hz von den Anregungssignalen entfernt, die bei 550\,Hz und 850\,Hz jeweils 80\,Hz und sorgen so für Artefakte in der Schätzung. Der Ursprung der Störungen bei 70\,Hz können unterschiedliche Ursachen haben, zum einen hat die Spule in diesem Bereich ein leichtes frequenzabhängiges Verhalten, zum Anderen zeigt auch die verwendete Sensorik ein frequenzabhängiges Verhalten. Diese verbliebenen Modellfehler können zu diesen Artefakten führen. In der Nachverarbeitung wird ein Tiefpassfilter angewendet und dieses Rauschen wird stark reduziert. Der mittlere Fehler wirkt relativ gering und wie in Abbildung\,\ref{fig:ResultsFirstElement} und \ref{fig:ResultsSecondElement} korrelieren beide Winkel gut mit den optischen Schätzungen. 
+Darin ist gut zu sehen, dass es tieffrequent (im Bereich bis 5\,Hz) Anteile gibt, diese sind die durchgeführte Bewegung. Desweiteren gibt es Spitzen bei 20\,Hz, 70\,Hz und 80\,Hz. Die Spitzen bei 20\,Hz und 80\,Hz lassen sich mit Harmonischen der Netzspannung erklären. Diese liegen bei 550\,Hz, 650\,Hz, 750\,Hz und 850\,Hz (siehe Abbildung\,\ref{fig:FFTAngles}). Die Anregungssignale liegen bei 630\,Hz,  700\,Hz und 770\,Hz, und eine Bewegung führt zu einer Amplitudenmodulation, also zu frequenzanteilen bei den Anregungssignalen $\pm$ den Frequenzanteilen der Bewegung. Die Netzspannung bei 650\,Hz und 750\,Hz sind jeweils 20\,Hz von den Anregungssignalen entfernt, die bei 550\,Hz und 850\,Hz jeweils 80\,Hz und sorgen so für Artefakte in der Schätzung. Der Ursprung der Störungen bei 70\,Hz kann unterschiedliche Ursachen haben, zum einen hat die Spule in diesem Bereich ein leichtes frequenzabhängiges Verhalten, zum Anderen zeigt auch die verwendete Sensorik ein frequenzabhängiges Verhalten. Diese verbliebenen Modellfehler führen zu diesen Artefakten. In der Nachverarbeitung wird ein Tiefpassfilter angewendet und dieses Rauschen wird stark reduziert. Der mittlere Fehler wirkt relativ gering und wie in Abbildung\,\ref{fig:ResultsFirstElement} und \ref{fig:ResultsSecondElement} korrelieren beide Winkel gut mit den optischen Schätzungen. 
 
   
 \section{Absolute Lokalisierung}
@@ -452,7 +452,7 @@ Die Orientierung der 3D-Spule $\bvec{R}\tindex{RPY}$ ist die Verdrehung des Spul
     \end{pmatrix}.
 \end{equation}
 
-In der Evaluierung werden diese magnetisch und optische geschätzt, also die Koordinatenachsen der magnetischen und optischen Schätzung. Als Maß wird der absolute Winkel verwendet um den die beiden Koordinatensysteme zueinander verdreht sind. Dafür wird zunächst Die Rotationsmatrix $\bvec{R}\tindex{Eval}$ zwischen den beiden Koordinatensystemen bestimmt
+In der Evaluierung werden diese magnetisch und optisch geschätzt, also die Koordinatenachsen der magnetischen und optischen Systeme. Als Maß wird der absolute Winkel verwendet um den die beiden Koordinatensysteme zueinander verdreht sind. Dafür wird zunächst Die Rotationsmatrix $\bvec{R}\tindex{Eval}$ zwischen den beiden Koordinatensystemen bestimmt
 
 \begin{equation}
     \bvec{R}\tindex{Eval} = \bvec{R}\tindex{RPY,mag} (\bvec{R}\tindex{RPY,opt})^{-1}.
@@ -597,17 +597,17 @@ Für die Experimentelle Synchronisierung wurden statische und dynamische Messung
 Für die Evaluierung wird diesselbe 3D-Spule wie in Abbildung\,\ref{fig:Demonstrator} verwendet. Die Koordinatenachsen im Lokalisierungssetup sind durch die Ausrichtung der Sensorpaarachsen definiert. Das Setup ist in Abbildung\,\ref{fig:SpatialSyncAbslocal} dargestellt. Die Sensoren sind an PVC-Streben befestigt, die mit der Sensorachse ausgerichtet sind (Rot = $x$,Grün = $y$,Blau = $z$). Durch die Art der Befestigung wird sichergestellt, dass die Sensorpaare auf einer Geraden liegen. Die zusammengehörenden Sensoren sind 0.5\,m voneinander entfernt. An den Streben sind ebenfalls an jeder Strebe zwei optische Marker (Rot = $x$,Grün = $y$,Blau = $z$, mit leicht erhöhter Farbhelligkeit), mit denen die magnetischen Koordinatenachsen im optischen System $\vec{e}\tindex{x,mag}^\text{\,opt},\vec{e}\tindex{y,mag}^\text{\,opt},\vec{e}\tindex{z,mag}^\text{\,opt}$ bestimmt werden können. Dafür wird die Position der Marker $\vec{r}\tindex{x,1m},\vec{r}\tindex{x,2m},\vec{r}\tindex{y,1m},\vec{r}\tindex{y,2m},\vec{r}\tindex{z,1m},\vec{r}\tindex{z,2m}$ bestimmt und die Koordinatenachsen berechnet
 
 \begin{equation}
-  \vec{e}\tindex{x,mag}^\text{opt} = \frac{\vec{r}\tindex{x,2m}-\vec{r}\tindex{x,1m}}{\|\vec{r}\tindex{x,2m}-\vec{r}\tindex{x,1m}\|},
+  \vec{e}\tindex{x,mag}^\text{\,opt} = \frac{\vec{r}\tindex{x,2m}-\vec{r}\tindex{x,1m}}{\|\vec{r}\tindex{x,2m}-\vec{r}\tindex{x,1m}\|},
 \end{equation}
 \begin{equation}
-  \vec{e}\tindex{y,mag}^\text{opt} = \frac{\vec{r}\tindex{y,2m}-\vec{r}\tindex{y,1m}}{\|\vec{r}\tindex{y,2m}-\vec{r}\tindex{y,1m}\|},
+  \vec{e}\tindex{y,mag}^\text{\,opt} = \frac{\vec{r}\tindex{y,2m}-\vec{r}\tindex{y,1m}}{\|\vec{r}\tindex{y,2m}-\vec{r}\tindex{y,1m}\|},
 \end{equation}
 \begin{equation}
-  \vec{e}\tindex{z,mag}^\text{opt} = \frac{\vec{r}\tindex{z,2m}-\vec{r}\tindex{z,1m}}{\|\vec{r}\tindex{z,2m}-\vec{r}\tindex{z,1m}\|}.
+  \vec{e}\tindex{z,mag}^\text{\,opt} = \frac{\vec{r}\tindex{z,2m}-\vec{r}\tindex{z,1m}}{\|\vec{r}\tindex{z,2m}-\vec{r}\tindex{z,1m}\|}.
 \end{equation}
 
 
-Wie in Gleichung\,\ref{eq:CoordinateTrans} lässt sich aus den Koordinatenachsen eine Rotationsmatrix zwischen den beiden Systemen bestimmen. Es bleibt bei der absoluten Lokalisierung ein Offset ziwschen den Ursprüngen. Dafür werden die statischen Messungen verwendet und die Differenz zwischen jeweils zwischen magnetischer und optischer Schätzung bestimmt. Diese Differenz wird als Translation auf die optische Schätzung angewendet. Die Koordinatensysteme teilen somit die Ausrichtung und den Ursprung.
+Wie in Gleichung\,\ref{eq:CoordinateTrans} lässt sich aus den Koordinatenachsen eine Rotationsmatrix zwischen den beiden Systemen bestimmen. Es bleibt bei der absoluten Lokalisierung ein Offset ziwschen den Ursprüngen. Dafür werden die statischen Messungen verwendet und die Differenz jeweils zwischen magnetischer und optischer Schätzung bestimmt. Diese Differenz wird als Translation auf die optische Schätzung angewendet. Die Koordinatensysteme teilen somit die Ausrichtung und den Ursprung.
 
 \subsubsection{Ergebnisse}
 Es wurde mit einer statischen Evaluierung begonnen, alle Aufnahmen waren hier 10\,s lang. Es wurden zwölf Testpostionen ausgewählt, in drei unterschiedlichen Höhen ($z$-Komponente). In jeder der drei Höhen wurden vier Messungen durchgeführt, in jedem Quadrant eine. Die Ergebnisse der statischen Evaluierung sind in Tabelle\,\ref{tab:ErgebnisseAbsPos} und \ref{tab:ErgebnisseAbsOri} zu sehen. Der mittlere Fehler der Positionsschätzung beträgt 15.2\,mm und der mittlere Fehler der Orientierungsschätzung beträgt $16.1^\circ$.

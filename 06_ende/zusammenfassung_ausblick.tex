@@ -124,12 +124,12 @@ In dieser Arbeit wurde eine Positionsgenauigkeit zwischen 15.2\,mm und 17.5\,mm 
    Gleichung\,\ref{eq:SensorSigDependent} lässt sich somit umschreiben
 
    \begin{equation}
-      b(t) = |\bvec{g}|  \biggl(i_1(t) \,i_{1}(\phi\tindex{max},\theta\tindex{max}) + i_2(t) \,i_{2}(\phi\tindex{max},\theta\tindex{max}) + i_3(t) \,i_{3}(\phi\tindex{max},\theta\tindex{max})\biggr),
+      b(t) = \frac{\|\bvec{g}\|}{i_0}  \biggl(i_1(t) \,i_{1}(\phi\tindex{max},\theta\tindex{max}) + i_2(t) \,i_{2}(\phi\tindex{max},\theta\tindex{max}) + i_3(t) \,i_{3}(\phi\tindex{max},\theta\tindex{max})\biggr),
    \end{equation}
    und lässt sich einfach nach $|\bvec{g}|$ umstellen 
 
    \begin{equation}
-      |\bvec{g}| = \frac{b(t)}{\biggl(i_1(t) \,i_{1}(\phi\tindex{max},\theta\tindex{max}) + i_2(t) \,i_{2}(\phi\tindex{max},\theta\tindex{max}) + i_3(t) \,i_{3}(\phi\tindex{max},\theta\tindex{max})\biggr)}.
+      |\bvec{g}| = \frac{b(t)}{\biggl(i_1(t) \,i_{1}(\phi\tindex{max},\theta\tindex{max}) + i_2(t) \,i_{2}(\phi\tindex{max},\theta\tindex{max}) + i_3(t) \,i_{3}(\phi\tindex{max},\theta\tindex{max})\biggr)\,i_0}.
    \end{equation}
 
    Der Zusammenhang soll nun auf $n$ Aktuatoren erweitert werden. Dafür schauen wir uns die Verallgemeinerung von Kugelkoordinaten für $n$-Dimensionen an, dafür werden $n-1$ Winkel verwendet. Die radiale Komponente für $n$ Dimensionen ist definiert wie folgt \cite{campos_hyperspherical_2020}
