@@ -116,7 +116,7 @@ In dieser Arbeit wurde eine Positionsgenauigkeit zwischen 15.2\,mm und 17.5\,mm 
    Kugelkoordinaten sind ein Orthonormalsystem, sodass diese Vektoren senkrecht zueinander stehen. Damit ist gezeigt, dass $\bvec{i}$ immer orthogonal zu $\bvec{i}\tindex{d$\theta$}$ und $\bvec{i}\tindex{d$\phi$}$ steht. Für den Fall, dass $\bvec{i}$ das maximale Signal am Sensor erzeugt, sind $\bvec{i}\tindex{d$\theta$}$ und $\bvec{i}\tindex{d$\phi$}$ und Kombinationen daraus die Nulldurchgangsvektoren 
    
    \begin{equation}
-      0 = \bvec{g} \,\cdot \, \bigl( a\,\bvec{i}\tindex{d$\theta$} + b \,\bvec{i}\tindex{d$\phi$} \bigr).
+      0 = \bvec{g} \,\cdot \, \bigl( c\,\bvec{i}\tindex{d$\theta$} + d \,\bvec{i}\tindex{d$\phi$} \bigr).
    \end{equation}
 
    Es zeigt sich bei dieser Betrachtung außerdem, dass die einzelnen Komponenten des MV den relativen Übertragungsfaktoren entsprechen. Aus den Gleichungen\,\ref{eq:DiffPhieq0} und \ref{eq:DiffThetaeq0} ist ersichtlich, dass $\bvec{g}$ orthogonal zu den Nulldurchgangsvektoren ist. Das zeigt, dass $\bvec{g}$ und $\bvec{i}(\phi\tindex{max},\theta\tindex{max})$ in diesselbe Richtung zeigen.
@@ -126,13 +126,13 @@ In dieser Arbeit wurde eine Positionsgenauigkeit zwischen 15.2\,mm und 17.5\,mm 
    \begin{equation}
       b(t) = \frac{\|\bvec{g}\|}{i_0}  \biggl(i_1(t) \,i_{1}(\phi\tindex{max},\theta\tindex{max}) + i_2(t) \,i_{2}(\phi\tindex{max},\theta\tindex{max}) + i_3(t) \,i_{3}(\phi\tindex{max},\theta\tindex{max})\biggr),
    \end{equation}
-   und lässt sich einfach nach $|\bvec{g}|$ umstellen 
+   und lässt sich einfach nach $\|\bvec{g}\|$ umstellen 
 
    \begin{equation}
-      |\bvec{g}| = \frac{b(t)}{\biggl(i_1(t) \,i_{1}(\phi\tindex{max},\theta\tindex{max}) + i_2(t) \,i_{2}(\phi\tindex{max},\theta\tindex{max}) + i_3(t) \,i_{3}(\phi\tindex{max},\theta\tindex{max})\biggr)\,i_0}.
+      \|\bvec{g}\| = \frac{b(t)}{\biggl(i_1(t) \,i_{1}(\phi\tindex{max},\theta\tindex{max}) + i_2(t) \,i_{2}(\phi\tindex{max},\theta\tindex{max}) + i_3(t) \,i_{3}(\phi\tindex{max},\theta\tindex{max})\biggr)\,i_0}.
    \end{equation}
 
-   Der Zusammenhang soll nun auf $n$ Aktuatoren erweitert werden. Dafür schauen wir uns die Verallgemeinerung von Kugelkoordinaten für $n$-Dimensionen an, dafür werden $n-1$ Winkel verwendet. Die radiale Komponente für $n$ Dimensionen ist definiert wie folgt \cite{campos_hyperspherical_2020}
+   Der Zusammenhang soll nun auf $n$ Aktuatoren erweitert werden. Dafür schauen wir uns die Verallgemeinerung von Kugelkoordinaten für $n$-Dimensionen an, dafür werden $n-1$ Winkel verwendet. Der radiale Einheitsvektor für $n$ Dimensionen ist definiert wie folgt \cite{campos_hyperspherical_2020}
    
 
    \begin{equation}
@@ -144,7 +144,7 @@ In dieser Arbeit wurde eine Positionsgenauigkeit zwischen 15.2\,mm und 17.5\,mm 
    Die Bestimmung des Kreuzprodukts ändert sich, zum einen werden $n-1$ Nulldurchgangsvektoren benötigt, die eine Hyperebene aufspannen und das Kreuzprodukt ist in $\mathbb {R} ^{n}$ über das Spatprodukt definiert als \cite{fischer_bilinearformen_2025}
    
    \begin{equation}
-      \vec{v} \, (\vec{a}_1 , \times \vec{a}_2 \dots \times \vec{a}_{n-1}) = \text{det}\begin{pmatrix}
+      \vec{v} \, (\vec{a}_1 \, \times \vec{a}_2 \dots \times \vec{a}_{n-1}) = \text{det}\begin{pmatrix}
          \vec{v},\,\vec{a}_1,\,\vec{a}_2,\,\dots\vec{a}_{n-1}
          \end{pmatrix},
    \end{equation}
@@ -153,7 +153,7 @@ In dieser Arbeit wurde eine Positionsgenauigkeit zwischen 15.2\,mm und 17.5\,mm 
 
    \begin{equation}
       x\tindex{$j$,MV} = \text{det}\begin{pmatrix}
-         \vec{e}\tindex{$k$},\,\vec{e}\tindex{zc,1},\,\vec{e}\tindex{zc,2},\,\dots\vec{e}\tindex{zc,$n-1$}
+         \vec{e}\tindex{$j$},\,\vec{e}\tindex{zc,1},\,\vec{e}\tindex{zc,2},\,\dots\vec{e}\tindex{zc,$n-1$}
          \end{pmatrix}.
    \end{equation}
 

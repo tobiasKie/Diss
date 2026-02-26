@@ -16,9 +16,10 @@ Im Laufe dieser Arbeit wurde eine Signalverarbeitungspipeline entworfen. Diese b
     \caption{Überblick der Signalverarbeitungspipeline: Auf der linken Seite kommen die Strom- und Magnetfeldsignale als Spannungen an und werden mit einem AD-Wandler mit einer konstanten Abtastrate digitalisiert. Diese Signale werden zunächst in der Vorverarbeitung entzerrt und gefiltert. Die gefilterten Signale werden genutzt um spezifische Merkmale zu extrahieren. Die Merkmale werden an die Lokalisierung gegeben. Diese schätzen Positionen und Orientierungen und geben diese an die Nachverarbeitung weiter. Die geschätzten Positionen und Orientierungen können dann von beliebigen Anwendungen verwendet werden.}
     \label{fig:OverviewSigPipe}
 \end{figure}
-Die gesamte Signalverarbeitungspipeline wurde in einer rahmenbasierten Echtzeitsignalverarbeitungssoftware implementiert KiRAT (Kiel Realtime Application Toolkit)\cite{schmidt_real-time_nodate}. Die Signale werden von einem AD-Wandler mit einer konstanten Abtastrate gewandelt  ($f\tindex{SR} = 48\,\text{kHz}$, und somit einer konstanten Zeit $ T\tindex{SR} = \frac{1}{f\tindex{SR}}$ zwischen den Datenpunkten). In einem Rahmen wird eine definierte Anzahlt an Abtastungen zusammengefasst. In jedem Rahmen wird für jedes kinematische Element(Sensor) eine Position und eine Orientierung bestimmt. 
+Die gesamte Signalverarbeitungspipeline wurde in einer rahmenbasierten Echtzeitsignalverarbeitungssoftware implementiert KiRAT (Kiel Realtime Application Toolkit)\cite{schmidt_real-time_nodate}. Die Signale werden von einem AD-Wandler mit einer konstanten Abtastrate gewandelt  ($f\tindex{SR} = 48\,\text{kHz}$, und somit einer konstanten Zeit $ T\tindex{SR} = \frac{1}{f\tindex{SR}}$ zwischen den Datenpunkten). In einem Rahmen wird eine definierte Anzahl an Abtastungen zusammengefasst. In jedem Rahmen wird für jedes kinematische Element(Sensor) eine Position und eine Orientierung bestimmt. In diesem Kapitel werden Algorithmen vorgestellt mit denen 
+
 \section{Vorverarbeitung}
-Die Vorverarbeitung ist auf die verwendete Sensorart und die entwickelte Algorithmik abestimmt. In dieser Arbeit werden Algorithmen verwendet, die Stromsignale und Magnetfeldsignale verarbeiten. Die Signale werden auf unterschiedliche Arten vom Sender (Spule, Stromquelle) zum Empfänger (Magnetometer, Shunt-Widerstand) übertragen.
+Die Vorverarbeitung ist auf die verwendete Sensorart und die entwickelte Algorithmik abgestimmt. In dieser Arbeit werden Algorithmen verwendet, die Stromsignale und Magnetfeldsignale verarbeiten. Die Signale werden auf unterschiedliche Arten vom Sender (Spule, Stromquelle) zum Empfänger (Magnetometer, Shunt-Widerstand) übertragen.
 \begin{figure}[h]
     \centering
     \begin{overpic}[width=0.9\textwidth]{04_umsetzung/images/Uebertragunsmechanismus.pdf}
@@ -866,7 +867,7 @@ In diesem Kapitel wurden bisher zwei unterschiedliche Lokalisierungsalgorithmen 
     \label{fig:UebersichLok}
 \end{figure} 
 
-Die Schätzung der kinematischen Kette liefert Orientierungen der kinematischen Elemente im Koordinatensystem der 3D-Spule. Zur Visualisierung oder Weiterverwendung werden alle Größen in das globale Koordiantensystem transformiert. Die Orientierungen der kinematischen Elmente $\vec{e}\tindex{kin,k}^\text{\,W}$ ergeben sich dann durch
+Die Schätzung der kinematischen Kette liefert Orientierungen der kinematischen Elemente im Koordinatensystem der 3D-Spule. Zur Visualisierung oder Weiterverwendung werden alle Größen in das globale Koordiantensystem transformiert. Die Orientierungen der kinematischen Elmente $\vec{e}\tindex{kin,$k$}^\text{\,W}$ ergeben sich dann durch
 
 \begin{equation}
     \vec{e}\tindex{kin,$k$}^{\,\text{W}}  = \tilde{\bvec{R}}\tindex{RPY}\,\vec{e}\tindex{$k$}^\text{\,3DC}.
@@ -903,7 +904,7 @@ In realen Anwendungen wird mit unterschiedlichen Störungsquellen zu rechnen sei
     \phi\tindex{s,2} = \arccos\biggl(\frac{l\tindex{js}^2+\|\vec{r}\tindex{j}\|^2-\|\vec{r}\tindex{s}\|}{2\,l\tindex{js}\,\|\vec{r}\tindex{j}\|}\biggr).
     \label{eq:DistToAngle}
   \end{equation} 
-  Ein Problem dabei war, dass zur Berechnung von $|\vec{r}\tindex{s}|$ der Winkel zwischen Sensororientierung und $\vec{r}\tindex{s}$ bekannt sein muss um Gleichung\,\ref{eq:DistToAngle} anzuwenden. Diesen könnte man aus der kinematischen Kette ableiten, jedoch wurde zunächst eine Simulation mit als bekannt angenommener Sensorposition durchgeführt. Auf Sensorseite wurde weißes Rauschen hinzugefügt, sodass sich am Sensor ein SNR von 10\,dB ergibt. Es wurde darin der Winkel $\phi\tindex{s,2}$ zum einen über den iterativen Algorithmus $\phi\tindex{s,2}^{\text{kin}}$ bestimmt und zum anderen über die Distanzzusammenhänge $\phi\tindex{s,2}^{\text{d}}$. 
+  Ein Problem dabei ist, dass zur Berechnung von $|\vec{r}\tindex{s}|$ der Winkel zwischen Sensororientierung und $\vec{r}\tindex{s}$ bekannt sein muss um Gleichung\,\ref{eq:DistToAngle} anzuwenden. Diesen könnte man aus der kinematischen Kette ableiten, jedoch wurde zunächst eine Simulation mit als bekannt angenommener Sensorposition durchgeführt. Auf Sensorseite wurde weißes Rauschen hinzugefügt, sodass sich am Sensor ein SNR von 10\,dB ergibt. Es wurde darin der Winkel $\phi\tindex{s,2}$ zum einen über den iterativen Algorithmus $\phi\tindex{s,2}^{\text{kin}}$ bestimmt und zum anderen über die Distanzzusammenhänge $\phi\tindex{s,2}^{\text{d}}$. 
 
 \begin{figure}[h]
     \centering

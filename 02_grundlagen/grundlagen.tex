@@ -1,14 +1,14 @@
 \chapter{Bewegungsbeschreibung und Bewegungsanalysesysteme}
 \label{chap:Bewegungsanalyse}
-Im Folgenden Kapitel wird ein Überblick über die Bewegungsbeschreibung und Modellierung gegeben und optische Bewegungsanalysesysteme vorgestellt. Am Ende des Kapitels wird das zu entwickelnde System kurz skizziert.
+Im Folgenden Kapitel wird ein Überblick über die Bewegungsbeschreibung und Modellierung gegeben und optische Bewegungsanalysesysteme vorgestellt. Am Ende des Kapitels wird das entwickelte System kurz skizziert.
 
 \section{Bewegungsbeschreibung}
 \label{sec:anatomy}
-Die menschliche Anatomie kann als eine kinematische Kette beschrieben werden. Eine kinematische Kette sind kinematische Elemente, in diesem Fall Knochen, die über Gelenke miteinander verbunden sind. 
+In diesem Kapitel wird kurz erklärt wie menschliche Bewegungen beschrieben und wie diese modelliert werden.
 
 \subsection{Handanatomie}
 \label{subsec:Gelenkzuordnung}
-In der Anatomie gibt es verschiedene Gelenkarten zwischen den unterschieden werden. In dieser Arbeit soll ein System für die Analyse von Handbewegungen entwickelt werden. Es werden die Gelenke einer Hand vorgestellt. Dies sind Kugelgelenke, Elipsoidgelenke, Sattelgelenke und Scharniergelenke.
+In der Anatomie gibt es verschiedene Gelenkarten zwischen denen unterschieden wird. In dieser Arbeit soll ein System für die Analyse von Handbewegungen entwickelt werden. Es werden die Gelenke einer Hand vorgestellt. Dies sind Kugelgelenke, Elipsoidgelenke, Sattelgelenke und Scharniergelenke.
 
 \begin{figure}[h]
     \centering
@@ -57,7 +57,7 @@ Die Anatomie der menschlichen Hand wird in dieser Arbeit vereinfacht als kinemat
     \label{fig:ModellierungBewegung}
 \end{figure}
 
-Jedes kinematische Element und Gelenk besitzt ein lokales Koordinatensystem. Dieses ist wie in Abbildung\,\ref{fig:ModellierungBewegung} skizziert. Die Symetrieachse des Elements $\vec{e}\tindex{kin,$k$}$ definiert die $z$-Achse. Die $x$- und $y$- Achsen werden durch die Drehachsen des folgenden Gelenks definiert. Die Drehung um die $y$-Achse wird mit dem Zenitwinkel $\theta\tindex{Beu,$k$}$ beschrieben und hat einen Wertebereich von $-\frac{\pi}{2} < \theta\tindex{Beu,$k$} < \frac{\pi}{2}$. Die Drehung um die $x$-Achse wird mit dem Polarwinkel $\phi\tindex{Sp,$k$}$ beschrieben und hat einen Wertebereich von $-\pi < \phi\tindex{Sp,$k$} < \pi$. 
+Jedes kinematische Element und Gelenk besitzt ein lokales Koordinatensystem. Dies ist in Abbildung\,\ref{fig:ModellierungBewegung} skizziert. Die Symetrieachse des Elements $\vec{e}\tindex{kin,$k$}$ definiert die $z$-Achse. Die $x$- und $y$- Achsen werden durch die Drehachsen des in der Kette folgenden Gelenks definiert. Die Drehung um die $y$-Achse wird mit dem Zenitwinkel $\theta\tindex{Beu,$k$}$ beschrieben und hat einen Wertebereich von $-\frac{\pi}{2} < \theta\tindex{Beu,$k$} < \frac{\pi}{2}$. Die Drehung um die $x$-Achse wird mit dem Polarwinkel $\phi\tindex{Sp,$k$}$ beschrieben und hat einen Wertebereich von $-\pi < \phi\tindex{Sp,$k$} < \pi$. 
 
 Mit den Winkeln des Gelenks lässt sich das Koordinatensystem des folgenden Elements beschreiben. Die $z$-Achse des folgenden Elements $\vec{e}\tindex{$z,k+1$} = \vec{e}\tindex{kin,$k$}$ ergibt sich dann durch eine Drehung um $\vec{e}\tindex{$x,k$}$ und $\vec{e}\tindex{$y,k$}$. Die Drehung wird mit Quaternionen beschrieben, diese werden aus der Rotationsachse $\vec{e}\tindex{rot}$ und dem Winkel $\phi$ zusammengesetzt 
 
@@ -107,12 +107,8 @@ In der Nulllage, $\theta\tindex{Beu}=0,\phi\tindex{Sp}=0$, ergibt sich, dass die
 Bei kinematischen Ketten mit mehr als einem Gelenk müssen die Bewegungen aller Gelenke aufmultipliziert werden.
 
 
-\section{Konventionelle Systeme}
+\section{Optische Systeme}
 \label{sec:ConventionalSystems}
-In der Filmindustrie, im medizinischen oder vielen anderen Bereichen werden bereits Systeme zur Bewegungsanalyse verwendet. Diese basieren in den meisten Fällen auf optischer Sensorik. Für Handbewegungen im speziellen werden in modernen Systemen auch magnetische Sensoren verwendet. Dabei gibt es bereits kommerzielle Systeme, als auch Systeme die in einem sehr frühen Entwicklungsstadium sind. Die Funktionsweise der Systeme wird hier kurz vorgestellt.
-
-\subsection{Optische Systeme}
-\label{subsec:opticalSystems}
 
 Optische Systeme für die Bewegungsanalyse gelten als der Goldstandard. Dabei gibt es unterschiedliche Ansätze, wir verwenden ein System, der optische Marker in Kombination mit Infrarotlicht verwendet. Optische Marker sind kugelförmige Objekte, deren Oberfläche so beschichtet ist, dass Infrarotlicht gut reflektiert wird. Die Kameras haben eine ringförmige Infrarotlichtquelle, mit der die Marker angeleuchtet werden. Diese beiden Bestandteile sind in Abbildung\,\ref{fig:MaterialOMC} gezeigt.
 
@@ -134,11 +130,11 @@ Optische Systeme für die Bewegungsanalyse gelten als der Goldstandard. Dabei gi
 
 Eine beliebige Anzahl Kameras wird im Raum so aufgestellt, dass der interessierte Bereich möglichst von allen Kameras eingesehen werden kann. Dies ist in Abbildung\,\ref{fig:CameraPositioning} dargestellt.
 
-In einer Kalibrierungsroutine werden mithilfe eines Referenzobjektes, bestehend aus mehreren optischen Markern, die Position und Orientierung der Kameras bestimmt\,\cite{qualisys_ab_qtm-user-manual_nodate}.
+In einer Kalibrierungsroutine wird mithilfe eines Referenzobjekts, das aus mehreren optischen Markern besteht, die Position und Orientierung der Kameras bestimmt\,\cite{qualisys_ab_qtm-user-manual_nodate}.
 
-Während der Laufzeit nehmen die Kameras synchronisiert Bilder auf und die Auswertesoftware bestimmt daraus die Position der Marker. Es gibt zusätzlich die Möglichkeit sogenannte \textit{Rigid bodies} zu verwenden. Dies sind Konstruktionen, die mehrere (mindestens drei) optische Marker fest miteinander verbinden. Damit ergibt sich zusätzlich zur Position auch eine Orientierung und bei der Verwendung von mehreren \textit{Rigid bodies} kann die Software diese unterscheiden. In Abbildung\,\ref{fig:RigigBody} ist ein solcher beispielhaft dargestellt.
+Während der Laufzeit nehmen die Kameras synchronisiert Bilder auf, aus denen die Auswertesoftware die Position der Marker bestimmt.. Es gibt zusätzlich die Möglichkeit sogenannte \textit{Rigid bodies} zu verwenden. Dies sind Konstruktionen, die mehrere (mindestens drei) optische Marker fest miteinander verbinden. Damit ergibt sich zusätzlich zur Position auch eine Orientierung. Bei der Verwendung mehrerer \textit{Rigid bodies} kann die Software diese unterscheiden. In Abbildung\,\ref{fig:RigigBody} ist ein solcher beispielhaft dargestellt.
 
-Die \textit{Rigid bodies} können Körperteilen zugeordnet werden und so kann mit Vorwissen über die menschliche Anatomie die Bewegung rekonstruiert werden \cite{qualisys_ab_qtm-user-manual_nodate}.
+Die \textit{Rigid bodies} können Körperteilen zugeordnet werden. So kann mittels Vorwissen über die menschliche Anatomie die Bewegung rekonstruiert werden \cite{qualisys_ab_qtm-user-manual_nodate}.
 
 \begin{figure}[h]
     \centering
@@ -160,34 +156,34 @@ Die \textit{Rigid bodies} können Körperteilen zugeordnet werden und so kann mi
 In dieser Arbeit wird zur Evaluierung ein Kamerasystem des Herstellers \textit{Qualisys AB} bestehend aus acht Miqus-Kameras \cite{noauthor_miqus_nodate} verwendet.
 
 
-\subsection{Stand der Technik}
-\textcolor{red}{Nicht sicher ob dieser Teil notwendig ist, vom Gefühl her eher nein.}
-\label{subsec:Stateoftheart}
-\subsubsection{Kommerzielle Angebote}
-Im Bereich der Sensorhandschuhe gab es bis Anfang der 2020er Jahre unterschiedliche Ansätze. Dabei wurde auf verschiedene Sensoriken gesetzt, wie zum Beispiel Stretchsensoren, IMUs oder inkrementelle Messysteme. Eine Zusammenstellung verschiedener Ansätze kann hier gefunden werden\,\cite{caeiro-rodriguez_systematic_2021}. 
+% \subsection{Stand der Technik}
+% \textcolor{red}{Nicht sicher ob dieser Teil notwendig ist, vom Gefühl her eher nein.}
+% \label{subsec:Stateoftheart}
+% \subsubsection{Kommerzielle Angebote}
+% Im Bereich der Sensorhandschuhe gab es bis Anfang der 2020er Jahre unterschiedliche Ansätze. Dabei wurde auf verschiedene Sensoriken gesetzt, wie zum Beispiel Stretchsensoren, IMUs oder inkrementelle Messysteme. Eine Zusammenstellung verschiedener Ansätze kann hier gefunden werden\,\cite{caeiro-rodriguez_systematic_2021}. 
 
-Optische Systeme haben sich bisher nicht durchgesetzt, da zwischen Kamera und Marker zu jedem Zeitpunkt Sichtkontakt vorhanden sein muss. Aufgrund der Anatomie der Hand können sich Finger unter Umständen gegenseitig verdecken und die Anzahl der benötigten Kameras wird zu groß und damit auch der finanzielle Aufwand.
+% Optische Systeme haben sich bisher nicht durchgesetzt, da zwischen Kamera und Marker zu jedem Zeitpunkt Sichtkontakt vorhanden sein muss. Aufgrund der Anatomie der Hand können sich Finger unter Umständen gegenseitig verdecken und die Anzahl der benötigten Kameras wird zu groß und damit auch der finanzielle Aufwand.
 
-In den letzen Jahren sind verschiedene magnetische Ansätze im kommerziellen Bereich erschienen. Ein rein magnetischer wird von der Firma \textit{Manus Meta} verfolgt, die in den neusten Versionen einen Aktuator auf dem Handrücken platzieren und jeweils Magnetfeldsensoren in den Fingerspitzen \cite{noauthor_motion_nodate},\cite{saggio_quasi-static_2025}. Laut Hersteller wird eine Endpunktlokalisierung verwendet. Eine zuvor durchgeführte Kalibrierung der Antomie ermöglicht es, aus den Positionen der Fingerspitzen Gelenkwinkel zu bestimmen.
+% In den letzen Jahren sind verschiedene magnetische Ansätze im kommerziellen Bereich erschienen. Ein rein magnetischer wird von der Firma \textit{Manus Meta} verfolgt, die in den neusten Versionen einen Aktuator auf dem Handrücken platzieren und jeweils Magnetfeldsensoren in den Fingerspitzen \cite{noauthor_motion_nodate},\cite{saggio_quasi-static_2025}. Laut Hersteller wird eine Endpunktlokalisierung verwendet. Eine zuvor durchgeführte Kalibrierung der Antomie ermöglicht es, aus den Positionen der Fingerspitzen Gelenkwinkel zu bestimmen.
 
-\begin{figure}[h]
-    \centering 
+% \begin{figure}[h]
+%     \centering 
 
-    \begin{overpic}[width=0.25\textwidth,trim = 0 0 0 0]{02_grundlagen/images/Manus_Glove.png}
-    \end{overpic}
-    \label{fig:ManusGlove}
-    \caption{Kommerzieller Sensorhandschuhe: In der Abbildung ist der Sensorhandschuh von \textit{ManusMeta} zu sehen.\cite{noauthor_motion_nodate}}
+%     \begin{overpic}[width=0.25\textwidth,trim = 0 0 0 0]{02_grundlagen/images/Manus_Glove.png}
+%     \end{overpic}
+%     \label{fig:ManusGlove}
+%     \caption{Kommerzieller Sensorhandschuhe: In der Abbildung ist der Sensorhandschuh von \textit{ManusMeta} zu sehen.\cite{noauthor_motion_nodate}}
 
-\end{figure}
-Das kommerzielle System verwendet jeweils ein Sensor pro Finger. Durch Kalibrierung der Handanatomie, kann aus der Sensorposition direkt die Haltung des Fingers bestimmt werden.
+% \end{figure}
+% Das kommerzielle System verwendet jeweils ein Sensor pro Finger. Durch Kalibrierung der Handanatomie, kann aus der Sensorposition direkt die Haltung des Fingers bestimmt werden.
 
-\subsubsection{Forschung}
-In der Forschung gibt es verschiedene Arbeiten, die sich mit der Rekonstruktion von Handbewegungen basierend auf magnetischen Sensoren beschäftigen. Zum einen gibt es den Ansatz\,\cite{santoni_magik_2021}. In diesem Ansatz werden Sendespulen auf dem Handrücken und den Fingerspitzen angebracht. In einem Holzaufbau sind 24 Sensoren angebracht. Die Sendespulen werden mit einem Optimierungsalgorithmus lokalisiert. Die Hand wird als kinematische Kette beschrieben und mit einer inversen Kinematik werden die Positionen zu Winkeln übersetzt.
+% \subsubsection{Forschung}
+% In der Forschung gibt es verschiedene Arbeiten, die sich mit der Rekonstruktion von Handbewegungen basierend auf magnetischen Sensoren beschäftigen. Zum einen gibt es den Ansatz\,\cite{santoni_magik_2021}. In diesem Ansatz werden Sendespulen auf dem Handrücken und den Fingerspitzen angebracht. In einem Holzaufbau sind 24 Sensoren angebracht. Die Sendespulen werden mit einem Optimierungsalgorithmus lokalisiert. Die Hand wird als kinematische Kette beschrieben und mit einer inversen Kinematik werden die Positionen zu Winkeln übersetzt.
 
-In einem anderen Ansatz\,\cite{ma_magnetic_2011} werden permanent Magneten an den Fingerspitzen befestigt. Um das Handgelenk ist ein Armband mit sechs 2D-Sensoren angebracht. Dieser Ansatz ist zwei geteilt, zunächst werden die Magneten auf den Fingerspitzen lokalisiert. Dafür werden die Magneten als magnetische Dipole beschrieben und mit einem Optimierungsalgorithmus eine Kostenfunktion minimiert und so die Positionen bestimmt. In einem zweiten Schritt werden mit einem iterativen Verfahren aus den Positionen Gelenkwinkel geschätzt. Dabei wird die Abbduktion/Adduktion der Finger vernachlässigt. 
+% In einem anderen Ansatz\,\cite{ma_magnetic_2011} werden permanent Magneten an den Fingerspitzen befestigt. Um das Handgelenk ist ein Armband mit sechs 2D-Sensoren angebracht. Dieser Ansatz ist zwei geteilt, zunächst werden die Magneten auf den Fingerspitzen lokalisiert. Dafür werden die Magneten als magnetische Dipole beschrieben und mit einem Optimierungsalgorithmus eine Kostenfunktion minimiert und so die Positionen bestimmt. In einem zweiten Schritt werden mit einem iterativen Verfahren aus den Positionen Gelenkwinkel geschätzt. Dabei wird die Abbduktion/Adduktion der Finger vernachlässigt. 
 
-\subsubsection{Zusammenfassung}
-Die entwickelten magnetischen Ansätze für das Handbewegungstracking nutzen jeweils ähnliche Ansätze. In allen Ansätzen wird zunächst die Fingerspitze lokalisiert. Mit einer zuvor durchgeführten Kalibrierung wird eine inverse Kinematik angewendet und die Gelenkswinkel bestimmt. In allen Ansätzen wird das Vorwissen über die Anatomie nach der Lokalisierung in die Schätzung eingearbeitet. Die Lokalisierung kann unter Umständen sehr aufwändig sein. In dieser Arbeit soll daher ein Lokalisierungsverfahren entwickelt werden, in dem bereits während der Lokalisierung die Anatomie berücksichtigt wird.
+% \subsubsection{Zusammenfassung}
+% Die entwickelten magnetischen Ansätze für das Handbewegungstracking nutzen jeweils ähnliche Ansätze. In allen Ansätzen wird zunächst die Fingerspitze lokalisiert. Mit einer zuvor durchgeführten Kalibrierung wird eine inverse Kinematik angewendet und die Gelenkswinkel bestimmt. In allen Ansätzen wird das Vorwissen über die Anatomie nach der Lokalisierung in die Schätzung eingearbeitet. Die Lokalisierung kann unter Umständen sehr aufwändig sein. In dieser Arbeit soll daher ein Lokalisierungsverfahren entwickelt werden, in dem bereits während der Lokalisierung die Anatomie berücksichtigt wird.
 
 \section{Überblick des entwickelten System}
 \label{sec:SystemOverview}
@@ -234,7 +230,7 @@ Für einen Prototyp wurden andere Sensoren verewndet, diese sind kleiner und kö
 
 \subsection{Sensor- und Aktuatoranordnung}
 \label{sec:Sensoranordnung}
-Bei der Sensoranordnung wird unterschieden zwischen der Lokalisierung, für die sie verwendet werden. Ein Teil der Sensoren wird zum Bewegunstracking von kinematischen Ketten verwendet. Diese werden jeweils an einem kinematischen Element befestigt. Auf dem ersten kinematischen Element ist ein magnetischer Aktuator befestigt. Um die Bewegung der kinematischen Kette aufzunehmen, wird die relative Position der Sensoren zum Aktuator bestimmt. Auf einen Handschuh angewendet, bedeutet dies, dass auf dem Handrücken magnetische Aktuatoren angebracht sind. Auf den folgenden Fingerelementen sind magnetische Sensoren angebracht.
+Bei der Sensoranordnung wird unterschieden zwischen der Lokalisierung, für die sie verwendet werden. Ein Teil der Sensoren wird zum Bewegunstracking von kinematischen Ketten verwendet. Diese werden jeweils an einem kinematischen Element befestigt. Auf dem ersten kinematischen Element ist ein magnetischer Aktuator befestigt. Um die Bewegung der kinematischen Kette aufzunehmen, wird die relative Position der Sensoren zum Aktuator bestimmt. Auf einen Handschuh angewendet bedeutet dies, dass auf dem Handrücken magnetische Aktuatoren angebracht sind ,auf den folgenden Fingerelementen sind magnetische Sensoren angebracht.
 
     \begin{figure}[h]
         \centering

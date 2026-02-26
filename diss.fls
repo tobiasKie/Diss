@@ -686,7 +686,6 @@ INPUT C:\Users\tsc\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmro12.t
 INPUT .\diss.lof
 INPUT .\diss.lof
 INPUT diss.lof
-INPUT C:\Users\tsc\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmri12.tfm
 INPUT C:\Users\tsc\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr10.tfm
 INPUT C:\Users\tsc\AppData\Local\Programs\MiKTeX\tex\latex\lm\ts1lmr.fd
 INPUT C:\Users\tsc\AppData\Local\Programs\MiKTeX\tex\latex\lm\ts1lmr.fd
@@ -731,6 +730,7 @@ INPUT diss.lot
 INPUT .\diss.als
 INPUT .\diss.als
 INPUT diss.als
+INPUT C:\Users\tsc\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmri12.tfm
 INPUT .\diss.pls
 INPUT .\diss.pls
 INPUT diss.pls
@@ -773,6 +773,7 @@ INPUT .\02_grundlagen\images\Def_ModellDrehung.png
 INPUT .\02_grundlagen\images\Def_ModellDrehung.png
 INPUT .\02_grundlagen\images\Def_ModellDrehung.png
 INPUT .\02_grundlagen\images\Def_ModellDrehung.png
+INPUT C:\Users\tsc\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathex.enc
 INPUT .\02_grundlagen\images\Optical_camera.jpg
 INPUT .\02_grundlagen\images\Optical_camera.jpg
 INPUT .\02_grundlagen\images\Optical_camera.jpg
@@ -786,7 +787,6 @@ INPUT .\02_grundlagen\images\optical_marker.jpg
 INPUT .\02_grundlagen\images\optical_marker.jpg
 INPUT .\02_grundlagen\images\optical_marker.jpg
 INPUT .\02_grundlagen\images\optical_marker.jpg
-INPUT C:\Users\tsc\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathex.enc
 INPUT .\02_grundlagen\images\Kamerapositionierung.png
 INPUT .\02_grundlagen\images\Kamerapositionierung.png
 INPUT .\02_grundlagen\images\Kamerapositionierung.png
@@ -799,12 +799,6 @@ INPUT .\02_grundlagen\images\rigidbody.jpeg
 INPUT .\02_grundlagen\images\rigidbody.jpeg
 INPUT .\02_grundlagen\images\rigidbody.jpeg
 INPUT .\02_grundlagen\images\rigidbody.jpeg
-INPUT .\02_grundlagen\images\Manus_Glove.png
-INPUT .\02_grundlagen\images\Manus_Glove.png
-INPUT .\02_grundlagen\images\Manus_Glove.png
-INPUT .\02_grundlagen\images\Manus_Glove.png
-INPUT .\02_grundlagen\images\Manus_Glove.png
-INPUT .\02_grundlagen\images\Manus_Glove.png
 INPUT .\02_grundlagen\images\fluxgate_Frequency.tikz
 INPUT .\02_grundlagen\images\fluxgate_Frequency.tikz
 INPUT 02_grundlagen\images\fluxgate_Frequency.tikz

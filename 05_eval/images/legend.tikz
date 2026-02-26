@@ -1,6 +1,6 @@
 \definecolor{green}{rgb}{0.0,1,0.0}
 \definecolor{red}{rgb}{1,0,0}
-\definecolor{blue}{rgb}{0.00000,0.22656,0.89453}
+\definecolor{blue}{rgb}{0.00000,0.44700,0.74100}
 
 \begin{tikzpicture}
 \draw (-16,0) rectangle (-7,2);
