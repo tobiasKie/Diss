@@ -2373,122 +2373,48 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">literatur.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="4" intorder="1">lugo_virtual_2017</bcf:citekey>
-    <bcf:citekey order="5" intorder="1">noauthor_intuitive_nodate</bcf:citekey>
-    <bcf:citekey order="6" intorder="1">yi_magnetic_2022</bcf:citekey>
-    <bcf:citekey order="7" intorder="1">fan_advantages_2025</bcf:citekey>
-    <bcf:citekey order="8" intorder="1">king_development_2009</bcf:citekey>
-    <bcf:citekey order="9" intorder="1">noauthor_da_nodate</bcf:citekey>
-    <bcf:citekey order="10" intorder="1">noauthor_medizinische_nodate</bcf:citekey>
-    <bcf:citekey order="11" intorder="1">noauthor_da_nodate</bcf:citekey>
-    <bcf:citekey order="12" intorder="1">noauthor_medizinische_nodate</bcf:citekey>
-    <bcf:citekey order="13" intorder="1">anvari_impact_2005</bcf:citekey>
-    <bcf:citekey order="14" intorder="1">elbamby_toward_2018</bcf:citekey>
-    <bcf:citekey order="15" intorder="1">wang_influence_2025</bcf:citekey>
-    <bcf:citekey order="16" intorder="1">ruppel_elastic_2024</bcf:citekey>
-    <bcf:citekey order="17" intorder="1">kuroda_consumer_2004</bcf:citekey>
-    <bcf:citekey order="18" intorder="1">hu_fiber_2023</bcf:citekey>
-    <bcf:citekey order="19" intorder="1">noauthor_ultraleap_nodate</bcf:citekey>
-    <bcf:citekey order="20" intorder="1">arnold_messmethoden_2026</bcf:citekey>
-    <bcf:citekey order="21" intorder="1">santoni_magik_2021</bcf:citekey>
-    <bcf:citekey order="22" intorder="1">ma_magnetic_2011</bcf:citekey>
-    <bcf:citekey order="23" intorder="1">saggio_quasi-static_2025</bcf:citekey>
+    <bcf:citekey order="1" intorder="1">lugo_virtual_2017</bcf:citekey>
+    <bcf:citekey order="2" intorder="1">noauthor_intuitive_nodate</bcf:citekey>
+    <bcf:citekey order="3" intorder="1">yi_magnetic_2022</bcf:citekey>
+    <bcf:citekey order="4" intorder="1">fan_advantages_2025</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">king_development_2009</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">noauthor_da_nodate</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">noauthor_medizinische_nodate</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">noauthor_da_nodate</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">noauthor_medizinische_nodate</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">anvari_impact_2005</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">elbamby_toward_2018</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">wang_influence_2025</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">ruppel_elastic_2024</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">kuroda_consumer_2004</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">hu_fiber_2023</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">noauthor_ultraleap_nodate</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">arnold_messmethoden_2026</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">santoni_magik_2021</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">ma_magnetic_2011</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">saggio_quasi-static_2025</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">appell_funktionelle_2008</bcf:citekey>
+    <bcf:citekey order="22" intorder="1">appell_funktionelle_2008</bcf:citekey>
+    <bcf:citekey order="23" intorder="1">appell_funktionelle_2008</bcf:citekey>
     <bcf:citekey order="24" intorder="1">appell_funktionelle_2008</bcf:citekey>
-    <bcf:citekey order="25" intorder="1">appell_funktionelle_2008</bcf:citekey>
-    <bcf:citekey order="26" intorder="1">appell_funktionelle_2008</bcf:citekey>
-    <bcf:citekey order="27" intorder="1">appell_funktionelle_2008</bcf:citekey>
-    <bcf:citekey order="28" intorder="1">noauthor_miqus_nodate</bcf:citekey>
-    <bcf:citekey order="29" intorder="1">noauthor_miqus_nodate</bcf:citekey>
-    <bcf:citekey order="30" intorder="1">noauthor_spherical_nodate</bcf:citekey>
-    <bcf:citekey order="31" intorder="1">noauthor_spherical_nodate</bcf:citekey>
-    <bcf:citekey order="32" intorder="1">qualisys_ab_qtm-user-manual_nodate</bcf:citekey>
-    <bcf:citekey order="33" intorder="1">qualisys_ab_qtm-user-manual_nodate</bcf:citekey>
-    <bcf:citekey order="34" intorder="1">noauthor_miqus_nodate</bcf:citekey>
-    <bcf:citekey order="35" intorder="1">noauthor_miqus_nodate</bcf:citekey>
-    <bcf:citekey order="36" intorder="1">noauthor_miqus_nodate</bcf:citekey>
+    <bcf:citekey order="25" intorder="1">noauthor_miqus_nodate</bcf:citekey>
+    <bcf:citekey order="26" intorder="1">noauthor_miqus_nodate</bcf:citekey>
+    <bcf:citekey order="27" intorder="1">noauthor_spherical_nodate</bcf:citekey>
+    <bcf:citekey order="28" intorder="1">noauthor_spherical_nodate</bcf:citekey>
+    <bcf:citekey order="29" intorder="1">qualisys_ab_qtm-user-manual_nodate</bcf:citekey>
+    <bcf:citekey order="30" intorder="1">qualisys_ab_qtm-user-manual_nodate</bcf:citekey>
+    <bcf:citekey order="31" intorder="1">noauthor_miqus_nodate</bcf:citekey>
+    <bcf:citekey order="32" intorder="1">noauthor_miqus_nodate</bcf:citekey>
+    <bcf:citekey order="33" intorder="1">noauthor_miqus_nodate</bcf:citekey>
+    <bcf:citekey order="34" intorder="1">noauthor_magnetfeldsensor_nodate</bcf:citekey>
+    <bcf:citekey order="35" intorder="1">michalowsky_magnettechnik_2006</bcf:citekey>
+    <bcf:citekey order="36" intorder="1">noauthor_magnetfeldsensor_nodate</bcf:citekey>
     <bcf:citekey order="37" intorder="1">noauthor_magnetfeldsensor_nodate</bcf:citekey>
-    <bcf:citekey order="38" intorder="1">michalowsky_magnettechnik_2006</bcf:citekey>
-    <bcf:citekey order="39" intorder="1">noauthor_magnetfeldsensor_nodate</bcf:citekey>
-    <bcf:citekey order="40" intorder="1">noauthor_magnetfeldsensor_nodate</bcf:citekey>
-    <bcf:citekey order="41" intorder="1">wolfgang_nolting_grundkurs_nodate</bcf:citekey>
-    <bcf:citekey order="42" intorder="1">pinheiro_extended_2024</bcf:citekey>
-    <bcf:citekey order="43" intorder="1">wolfgang_nolting_grundkurs_nodate</bcf:citekey>
-    <bcf:citekey order="44" intorder="1">henke_elektromagnetische_nodate</bcf:citekey>
-    <bcf:citekey order="45" intorder="1">marco_leone_theoretische_nodate</bcf:citekey>
-    <bcf:citekey order="46" intorder="1">john_david_jackson_klassische_nodate</bcf:citekey>
-    <bcf:citekey order="47" intorder="1">wolfgang_nolting_grundkurs_nodate</bcf:citekey>
-    <bcf:citekey order="47" intorder="2">paperno_cylindrical_2004</bcf:citekey>
-    <bcf:citekey order="48" intorder="1">zeidler_springer-taschenbuch_2013</bcf:citekey>
-    <bcf:citekey order="49" intorder="1">chan_legendre_2013</bcf:citekey>
-    <bcf:citekey order="50" intorder="1">john_david_jackson_klassische_nodate</bcf:citekey>
-    <bcf:citekey order="51" intorder="1">wolfgang_nolting_grundkurs_nodate</bcf:citekey>
-    <bcf:citekey order="52" intorder="1">wolfgang_nolting_grundkurs_nodate</bcf:citekey>
-    <bcf:citekey order="53" intorder="1">wolfgang_nolting_grundkurs_nodate</bcf:citekey>
-    <bcf:citekey order="54" intorder="1">henke_elektromagnetische_nodate</bcf:citekey>
-    <bcf:citekey order="55" intorder="1">wolfgang_nolting_grundkurs_nodate</bcf:citekey>
-    <bcf:citekey order="56" intorder="1">hoffmann_concept_2022</bcf:citekey>
-    <bcf:citekey order="57" intorder="1">raab_magnetic_1979</bcf:citekey>
-    <bcf:citekey order="58" intorder="1">paperno_new_2001</bcf:citekey>
-    <bcf:citekey order="59" intorder="1">paperno_three-dimensional_2004</bcf:citekey>
-    <bcf:citekey order="60" intorder="1">schmidt_new_2024</bcf:citekey>
-    <bcf:citekey order="61" intorder="1">schmidt_real-time_nodate</bcf:citekey>
-    <bcf:citekey order="62" intorder="1">schmidt_new_2024</bcf:citekey>
-    <bcf:citekey order="63" intorder="1">penrose_generalized_1955</bcf:citekey>
-    <bcf:citekey order="64" intorder="1">sarabandi_solution_2023</bcf:citekey>
-    <bcf:citekey order="65" intorder="1">mao_optimal_1986</bcf:citekey>
-    <bcf:citekey order="66" intorder="1">hager-ross_quantifying_2000</bcf:citekey>
-    <bcf:citekey order="67" intorder="1">lin_modeling_2000</bcf:citekey>
-    <bcf:citekey order="68" intorder="1">lin_modeling_2000</bcf:citekey>
-    <bcf:citekey order="69" intorder="1">hager-ross_quantifying_2000</bcf:citekey>
-    <bcf:citekey order="70" intorder="1">lin_modeling_2000</bcf:citekey>
-    <bcf:citekey order="71" intorder="1">lin_design_2024</bcf:citekey>
-    <bcf:citekey order="72" intorder="1">parizi_auraring_2020</bcf:citekey>
-    <bcf:citekey order="73" intorder="1">bald_echtzeitlokalisierung_2024</bcf:citekey>
-    <bcf:citekey order="74" intorder="1">hehn_high-accuracy_2019</bcf:citekey>
-    <bcf:citekey order="75" intorder="1">hehn_high-accuracy_2019</bcf:citekey>
-    <bcf:citekey order="76" intorder="1">bald_echtzeitlokalisierung_2024</bcf:citekey>
-    <bcf:citekey order="77" intorder="1">campos_hyperspherical_2020</bcf:citekey>
-    <bcf:citekey order="78" intorder="1">fischer_bilinearformen_2025</bcf:citekey>
-    <bcf:citekey order="79" intorder="1">saggio_quasi-static_2025</bcf:citekey>
-  </bcf:section>
-  <!-- SORTING TEMPLATES -->
-  <bcf:sortingtemplate name="nty">
-    <bcf:sort order="1">
-      <bcf:sortitem order="1">presort</bcf:sortitem>
-    </bcf:sort>
-    <bcf:sort order="2" final="1">
-      <bcf:sortitem order="1">sortkey</bcf:sortitem>
-    </bcf:sort>
-    <bcf:sort order="3">
-      <bcf:sortitem order="1">sortname</bcf:sortitem>
-      <bcf:sortitem order="2">author</bcf:sortitem>
-      <bcf:sortitem order="3">editor</bcf:sortitem>
-      <bcf:sortitem order="4">translator</bcf:sortitem>
-      <bcf:sortitem order="5">sorttitle</bcf:sortitem>
-      <bcf:sortitem order="6">title</bcf:sortitem>
-    </bcf:sort>
-    <bcf:sort order="4">
-      <bcf:sortitem order="1">sorttitle</bcf:sortitem>
-      <bcf:sortitem order="2">title</bcf:sortitem>
-    </bcf:sort>
-    <bcf:sort order="5">
-      <bcf:sortitem order="1">sortyear</bcf:sortitem>
-      <bcf:sortitem order="2">year</bcf:sortitem>
-    </bcf:sort>
-    <bcf:sort order="6">
-      <bcf:sortitem order="1">volume</bcf:sortitem>
-      <bcf:sortitem literal="1" order="2">0</bcf:sortitem>
-    </bcf:sort>
-  </bcf:sortingtemplate>
-  <!-- DATALISTS -->
-  <bcf:datalist section="0"
-                name="nty/global//global/global/global"
-                type="entry"
-                sortingtemplatename="nty"
-                sortingnamekeytemplatename="global"
-                labelprefix=""
-                uniquenametemplatename="global"
-                labelalphanametemplatename="global"
-                namehashtemplatename="global">
-  </bcf:datalist>
-</bcf:controlfile>
+    <bcf:citekey order="38" intorder="1">wolfgang_nolting_grundkurs_nodate</bcf:citekey>
+    <bcf:citekey order="39" intorder="1">pinheiro_extended_2024</bcf:citekey>
+    <bcf:citekey order="40" intorder="1">wolfgang_nolting_grundkurs_nodate</bcf:citekey>
+    <bcf:citekey order="41" intorder="1">henke_elektromagnetische_nodate</bcf:citekey>
+    <bcf:citekey order="42" intorder="1">marco_leone_theoretische_nodate</bcf:citekey>
+    <bcf:citekey order="43" intorder="1">john_david_jackson_klassische_nodate</bcf:citekey>
+    <bcf:citekey order="44" intorder="1">wolfgang_nolting_grundkurs_nodate</bcf:citekey>
+    <bcf:citekey order="44" intorder="2">paperno_cylindrical_2004

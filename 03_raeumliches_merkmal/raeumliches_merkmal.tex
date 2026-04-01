@@ -11,7 +11,7 @@ Zur Beschreibung von Magnetfeldern $\vec{b}(\vec{r})$ kann das Vektorpotential $
     \vec{b}(\vec{r}) = \text{rot}\bigr(\vec{a}(\vec{r})\bigl).
     \label{eq:VekPot}
 \end{equation}
-Das Vektorpotential ist angelehnt an das elektrostatische Potential und kann analog zur Poisson-Gleichung \cite{pinheiro_extended_2024} mithilfe einer gegebenen Stromdichteverteilung $\vec{j}(\vec{r})$ in einem homogenen Medium mit der magnetischen Permeabilität $\mu$ geschrieben werden \cite{wolfgang_nolting_grundkurs_nodate} 
+Das Vektorpotential ist angelehnt an das elektrostatische Potential. Es kann analog zur Poisson-Gleichung \cite{pinheiro_extended_2024} mithilfe einer gegebenen Stromdichteverteilung $\vec{j}(\vec{r})$ in einem homogenen Medium mit der magnetischen Permeabilität $\mu$ geschrieben werden \cite{wolfgang_nolting_grundkurs_nodate} 
 
 \begin{equation}
     \Laplace \vec{a}(\vec{r}) = -\mu \,\vec{j}(\vec{r}).
@@ -40,13 +40,13 @@ mit Auswerten des Rotationsoperator
     \label{eq:BiotSavart}
 \end{equation}
 
-Ein Sonderfall ist eine linienförmige Stromverteilung(Leiterschleife) und kann vereinfacht beschrieben werden. Dafür wird eine Beschreibung der Leiterschleife $\vec{s}$ und die Stromstärke $I$ benötigt. Das Magnetfeld ergibt sich dann wie folgt \cite{marco_leone_theoretische_nodate}
+Ein Sonderfall ist eine linienförmige Stromverteilung (Leiterschleife) und kann vereinfacht beschrieben werden. Dafür wird eine Beschreibung der Leiterschleife $\vec{s}$ und die Stromstärke $I$ benötigt. Das Magnetfeld ergibt sich dann wie folgt \cite{marco_leone_theoretische_nodate}
 
 \begin{equation}
     \vec{b}(\vec{r}) = \frac{\mu I}{4 \pi} \int_{\vec{s}} \frac{\vec{ds} \times (\vec{r}-\vec{r'})}{|\vec{r}-\vec{r'}|^3}.
     \label{eq:BiotFaden}
 \end{equation}
-Mit diesen Zusammenhängen lassen sich die Magnetfelder beliebiger Stromdichteverteilung im freien Raum bestimmen. Anschaulich kann dieses Gesetz durch die Betrachtung eines infinitisimal kleinen Leiterstücks beschrieben werden
+Mit diesen Zusammenhängen lassen sich die Magnetfelder beliebiger Stromdichteverteilungen im freien Raum bestimmen. Anschaulich kann dieses Gesetz durch die Betrachtung eines infinitisimal kleinen Leiterstücks beschrieben werden
 \begin{equation}
     d\vec{b} = \frac{\mu I}{4 \pi} \frac{d\vec{s} \times (\vec{r}-\vec{r'})}{|\vec{r}-\vec{r'}|^3}.
     \label{eq:DiffBiot}
@@ -67,14 +67,14 @@ Mit diesen Zusammenhängen lassen sich die Magnetfelder beliebiger Stromdichteve
     \label{fig:BiotSavartDiffI}
 \end{figure}
 
-Gleichung \ref{eq:BiotSavart} wird auch als Gesetz von \textit{Biot-Savart} \cite{john_david_jackson_klassische_nodate} bezeichnet mit dem Spezialfall für linienförmige Ströme. Problem an dieser Beschreibung ist, dass die Auswertung des Integrals nur bei einfachen Leiterschleifen zu analytischen Beschreibungen für den gesamten Raum führt. Bei komplexeren Leiterschleifen führt die Auswertung des Integrals nicht zu einer analytischen Beschreibung für den gesamten Raum. Im schlechtesten Fall muss das Integral numerisch für jeden Ort im Raum gelöst werden und die Modellierung wird sehr aufwändig.
+Gleichung \ref{eq:BiotSavart} wird auch als Gesetz von \textit{Biot-Savart} \cite{john_david_jackson_klassische_nodate} bezeichnet mit dem Spezialfall für linienförmige Ströme. Das Problem an dieser Beschreibung ist, dass die Auswertung des Integrals nur bei einfachen Leiterschleifen zu analytischen Beschreibungen für den gesamten Raum führt. Bei komplexeren Leiterschleifen führt die Auswertung des Integrals nicht zu einer analytischen Beschreibung und das Feld muss für jeden Ort im Raum einzeln numerisch bestimmt werden.
 
 \subsection{Magnetischer Dipol}
 \label{subsec:Mag_Dipol}
 Das Magnetgfeld einer lokalisierten Stromverteilung kann in ausreichend großer Distanz als magnetischer Dipol beschrieben werden \cite{wolfgang_nolting_grundkurs_nodate,paperno_cylindrical_2004}.
 
 \subsubsection{Herleitung des Dipolfeldes}
-Der magnetische Dipol wird abgeleitet vom magnetischen Vektorpotential $\vec{a}$ einer lokalisierten Stromverteilung $\vec{j}(\vec{r})$. Das Vektorpotential wird wie in den Gleichungen \ref{eq:VekPotX},\ref{eq:VekPotY} und \ref{eq:VekPotZ} beschrieben. Mit einer Reihenentwicklung wird der Term $\frac{1}{|\vec{r}-\vec{r'}|}$ ersetzt \cite{zeidler_springer-taschenbuch_2013}. Dieser Term ist die generierende Funktion der Legendre-Polynome\,\cite{chan_legendre_2013}, und wird nach dem zweiten Element abgebrochen\,\cite{john_david_jackson_klassische_nodate}. Das Vektorpotential ergibt sich zu 
+Der magnetische Dipol wird abgeleitet vom magnetischen Vektorpotential $\vec{a}$ einer lokalisierten Stromverteilung $\vec{j}(\vec{r})$. Das Vektorpotential wird wie in den Gleichungen \ref{eq:VekPotX}, \ref{eq:VekPotY} und \ref{eq:VekPotZ} beschrieben. Mit einer Reihenentwicklung wird der Term $\frac{1}{|\vec{r}-\vec{r'}|}$ ersetzt \cite{zeidler_springer-taschenbuch_2013}. Dieser Term ist die generierende Funktion der Legendre-Polynome\,\cite{chan_legendre_2013}, und wird nach dem zweiten Element abgebrochen\,\cite{john_david_jackson_klassische_nodate}. Das Vektorpotential ergibt sich zu 
 \begin{equation}
     \vec{a}\tindex{Dip} = \frac{\mu}{8 \pi} \frac{1}{r^3} \iiint \vec{r'} \times \vec{j}(\vec{r'})dv' \times \vec{r}.
     \label{eq:VekPotDipol}
@@ -115,7 +115,7 @@ Diese Beschreibung wird in Kugelkoordinaten transformiert. Der Dipol sei angenom
 Die Beschreibung in Kugelkoordinaten zeigt, dass ein Dipolfeld keine azimutale Komponente hat und das Feld nicht vom Azimutwinkel abhängt. Dipolfelder sind daher rotationssysmetrisch, mit $\vec{m}$ als Rotationsachse.
 
 \subsubsection{Betrag eines Dipolfeldes}
-In diesem Abschnitt wird eine Beschreibung des Magnetfeldbetrages hergeleitet. Diese wird bei der Bestimmung der absoluten Handposition in nachfolgenden Abschnitten wiederverwendet.
+In diesem Abschnitt wird die Beschreibung des Magnetfeldbetrags hergeleitet. Diese wird bei der Bestimmung der absoluten Handposition in nachfolgenden Abschnitten wiederverwendet.
 Der Betrag des Magnetfeldes $b\tindex{Dip}$ sei definiert durch 
 \begin{equation}
     b\tindex{Dip} = \sqrt{b\tindex{Dip,x}^2+b\tindex{Dip,y}^2+b\tindex{Dip,z}^2}.
@@ -167,8 +167,8 @@ Aufgrund der Zylindersymetrie des Dipolfeldes lassen sich die Kurven durch eine 
  
 \subsection{Quasistationäre Felder}
 \label{subsec:Quasistationairy}
-Bei Lokalisierungsanwendungen macht es Sinn zeitveränderliche Signale zu verwenden, um die verwendeten Signale z.B. vom Erdmagnetfeld trennen zu können. Bei der Beschreibung von Magnetfeldern wird bei statischen Fällen der Verschiebungsstrom $\frac{d \vec{D}}{d t}$ vernachlässigt. An dieser Stelle führen wir den Begriff der Quasistationärität ein. Dies bedeutet, dass zeitveränderliche Felder wie stationäre Felder beschrieben werden können. Dies kann angenähert werden, wenn die Abmessungen der Applikation deutlich kleiner als die kleinste vorkommende Wellenlänge ist \cite{wolfgang_nolting_grundkurs_nodate}. 
-Es wird zunächst die Ausbreitungszeit $t$ von Licht($c = 3\,\cdot 10^8 \frac{\text{m}}{\text{s}}$) bestimmt, die für die Abmessungslänge $d$ benötigt wird. Die bestimmte Zeit wird mit der Periodendauer der höchsten verwendeten Frequenz verglichen. In dieser Arbeit ist der Aufbau im Durchmesser ca. 1\,m groß und die verwendeten Frequenzen sind aufgrund der Sensorik auf 1\,kHz beschränkt. Daher ist die kleinste Periodendauer 1\,ms und die Ausbreitungzeit ca. 3\,ns. Zwischen den beiden Werten liegen 6 Größenordnungen, die Quasistationärität wird im weiteren angenommen.
+Bei Lokalisierungsanwendungen ergibt es Sinn zeitveränderliche Signale zu verwenden, um die verwendeten Signale z.B. vom Erdmagnetfeld trennen zu können. Bei der Beschreibung von Magnetfeldern wird bei statischen Fällen der Verschiebungsstrom $\frac{d \vec{D}}{d t}$ vernachlässigt. An dieser Stelle führen wir den Begriff der Quasistationärität ein. Dies bedeutet, dass zeitveränderliche Felder wie stationäre Felder beschrieben werden können. Die Quasistationärität kann verwendet werden, wenn die Abmessungen der Applikation deutlich kleiner als die kleinste vorkommende Wellenlänge ist\,\cite{wolfgang_nolting_grundkurs_nodate}. 
+Es wird zunächst die Ausbreitungszeit $t$ von Licht ($c = 3\,\cdot 10^8 \frac{\text{m}}{\text{s}}$) bestimmt, die für die Abmessungslänge $d$ benötigt wird. Die bestimmte Zeit wird mit der Periodendauer der höchsten verwendeten Frequenz verglichen. In dieser Arbeit ist der Aufbau im Durchmesser ca. 1\,m groß und die verwendeten Frequenzen sind aufgrund der Sensorik auf 1\,kHz beschränkt. Daraus ergibt sich die kleinste Periodendauer 1\,ms und die Ausbreitungzeit ca. 3\,ns. Zwischen den beiden Werten liegen 6 Größenordnungen, die Quasistationärität wird im Weiteren angenommen.
 
 \section{3D-Spule}
 \label{sec:3d_Spule}
@@ -278,7 +278,7 @@ Mit Gl. \ref{eq:Sensorprojektion} kommt man zum Sensorsignal $b\tindex{sensor}$
 
 Bezüglich der Variation von $\theta\tindex{m}$, wird das Sensorsignal maximal wenn $\theta\tindex{m} = \frac{\pi}{2}$. Dies zeigt außerdem, dass die Komponente des Dipols, die senkrecht zur von $\vec{e}\tindex{r}$ und $\vec{e}\tindex{s}$ aufgespannten Ebene liegt, keinen Einfluss auf das Sensorsignal hat. Diese Beobachtung zeigt, dass der MV in dieser aufgespannten Ebene liegen muss. Diese Erkenntnis vereinfacht die Problemstellung zu einem 2D-Problem und kann daher in einer Ebene weiter betrachtet werden.
 
-Um einen Zusammenhang zwischen den drei Vektoren zu erhalten wird nun angenommen, dass der Sensor auf $x$-Achse lokalisiert sei. Dies wird vorgenommen um die Herleitung zu vereinfachen, danach wird der Zusammenhang auf beliebige Positionen erweitert. Die Vektoren sind in kartesischen Koordinaten wie folgt definiert
+Um einen Zusammenhang zwischen den drei Vektoren zu erhalten wird nun angenommen, dass der Sensor auf der $x$-Achse lokalisiert sei. Dies wird angenommen um die Herleitung zu vereinfachen, danach wird der Zusammenhang auf beliebige Positionen erweitert. Die Vektoren sind in kartesischen Koordinaten wie folgt definiert
 
 \begin{equation}
     \vec{e}_r = \left[\begin{array}{c} 1\\ 0 \end{array}\right],\qquad
@@ -286,7 +286,7 @@ Um einen Zusammenhang zwischen den drei Vektoren zu erhalten wird nun angenommen
     \vec{e}\tindex{s} = \left[\begin{array}{c} \cos(\phi\tindex{s})\\ \sin(\phi\tindex{s})\end{array}\right].
     \label{eq:defErEmEs}
 \end{equation}
-Dies führt zu $\vec{b}\tindex{norm}$ für die einzelnen Komponenten  
+Dies führt zu $\vec{b}\tindex{norm}$ mit den einzelnen Komponenten  
 
 \begin{eqnarray}
     b\tindex{norm,x}(\phi\tindex{m}) &=& 2  \cos(\phi\tindex{m}),
@@ -397,7 +397,7 @@ Daraus ergibt sich, dass mit dem MV für jede relative Position eine Sensororien
     \end{figure} 
 
 \subsubsection{Distanz zwischen Sensor und Quelle}
-Mit einem Setup aus einer 3D-Spule und einem 1D-Sensor lassen sich drei Informationen über die Lage zueinander übertragen. Der MV ist ein Einheitsvektor und enthält daher zwei Informationen und beschreibt den Zusammenhang zwischen $\vec{e}\tindex{$r$}$ und $\vec{e}\tindex{s}$. Als dritte Information definieren wir die Länge $g$ des Maximalvektors. $g$ soll ein Maß für die Distanz zwischen Sensor und Quelle sein, ähnlich wie in Gleichung\,\ref{eq:rvonb}. Dort wurde gezeigt, wie sich der Magnetfeldbetrag in Bezug auf die Distanz und die Richtugnsabhängigkeit zwischen Sensor und Spule verhält.
+Mit einem Setup aus einer 3D-Spule und einem 1D-Sensor lassen sich drei Informationen über die Lage zueinander übertragen. Der MV ist ein Einheitsvektor und enthält daher zwei Informationen und beschreibt den Zusammenhang zwischen $\vec{e}\tindex{$r$}$ und $\vec{e}\tindex{s}$. Als dritte Information definieren wir die Länge $g$ des Maximalvektors. $g$ soll ein Maß für die Distanz zwischen Sensor und Quelle sein, ähnlich wie in Gleichung\,\ref{eq:rvonb}. Dort wurde gezeigt, wie sich der Magnetfeldbetrag in Bezug auf die Distanz und die Richtungsabhängigkeit zwischen Sensor und Spule verhält.
         
 Im Folgenden wird gezeigt, dass sich der Betrag des Magnetfeldes bei einem Setup aus 3D-Spule und 1D-Sensor genau wie bei einer 1D-Spule und einem 3D-Sensor verhält. Da bereits im vorigen Kapitel gezeigt wurde, dass die orthogonale Komponente keinen Beitrag zum Sensorsignal liefert, wird die Herleitung im zweidimensionalen durchgeführt, ohne die Allgemeingültigkeit einzuschränken. Aus der 3D-Spule wird für die Herleitung daher eine 2D-Spule. Dafür wird die Position der 2D-Spule $\vec{r}\tindex{c}$, die Ausrichtung des Sensors $\vec{e}\tindex{s}$, und die Ausrichtung der $x$- und $y$-Spule $\vec{m}\tindex{x}$, $\vec{m}\tindex{y}$ definiert:
 

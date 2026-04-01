@@ -16,7 +16,7 @@ Im Laufe dieser Arbeit wurde eine Signalverarbeitungspipeline entworfen. Diese b
     \caption{Überblick der Signalverarbeitungspipeline: Auf der linken Seite kommen die Strom- und Magnetfeldsignale als Spannungen an und werden mit einem AD-Wandler mit einer konstanten Abtastrate digitalisiert. Diese Signale werden zunächst in der Vorverarbeitung entzerrt und gefiltert. Die gefilterten Signale werden genutzt um spezifische Merkmale zu extrahieren. Die Merkmale werden an die Lokalisierung gegeben. Diese schätzen Positionen und Orientierungen und geben diese an die Nachverarbeitung weiter. Die geschätzten Positionen und Orientierungen können dann von beliebigen Anwendungen verwendet werden.}
     \label{fig:OverviewSigPipe}
 \end{figure}
-Die gesamte Signalverarbeitungspipeline wurde in einer rahmenbasierten Echtzeitsignalverarbeitungssoftware implementiert KiRAT (Kiel Realtime Application Toolkit)\cite{schmidt_real-time_nodate}. Die Signale werden von einem AD-Wandler mit einer konstanten Abtastrate gewandelt  ($f\tindex{SR} = 48\,\text{kHz}$, und somit einer konstanten Zeit $ T\tindex{SR} = \frac{1}{f\tindex{SR}}$ zwischen den Datenpunkten). In einem Rahmen wird eine definierte Anzahl an Abtastungen zusammengefasst. In jedem Rahmen wird für jedes kinematische Element(Sensor) eine Position und eine Orientierung bestimmt. In diesem Kapitel werden Algorithmen vorgestellt mit denen 
+Die gesamte Signalverarbeitungspipeline wurde in einer rahmenbasierten Echtzeitsignalverarbeitungssoftware implementiert KiRAT (Kiel Realtime Application Toolkit)\,\cite{schmidt_real-time_nodate}. Die Signale werden von einem AD-Wandler mit einer konstanten Abtastrate gewandelt  ($f\tindex{SR} = 48\,\text{kHz}$, und somit einer konstanten Zeit $ T\tindex{SR} = \frac{1}{f\tindex{SR}}$ zwischen den Datenpunkten). In einem Rahmen wird eine definierte Anzahl an Abtastungen zusammengefasst. In jedem Rahmen wird für jedes kinematische Element (Sensor) eine Position und eine Orientierung bestimmt. In diesem Kapitel werden Algorithmen vorgestellt mit denen 
 
 \section{Vorverarbeitung}
 Die Vorverarbeitung ist auf die verwendete Sensorart und die entwickelte Algorithmik abgestimmt. In dieser Arbeit werden Algorithmen verwendet, die Stromsignale und Magnetfeldsignale verarbeiten. Die Signale werden auf unterschiedliche Arten vom Sender (Spule, Stromquelle) zum Empfänger (Magnetometer, Shunt-Widerstand) übertragen.
@@ -53,11 +53,11 @@ Die Spule erzeugt durch den Strom ein Magnetfeld, das abhängig von Ort und Orie
 
 In der Vorverarbeitung werden die beiden Signalarten so aufbereitet, dass diese zusammen prozessiert werden können. So können im weiteren die Zusammenhänge aus Kapitel\,\ref{subsec:Lokalisierungszusammenhänge}, zwischen Dipolmoment und Magnetfeld, auf die Signalfolgen angewendet werden.
 
-Um Störungssignale zu filtern wird ein Bandpassfilter verwendet. Dieser soll möglichst die Frequenzbereiche in denen Nutzsignale ausgesendet werden, unverändert lassen und alle anderen möglichst stark dämpfen. Dafür wird ein Butterworth-Bandpassfilter $h\tindex{BW,BP}$ zweiter Ordnung mit den Eckfrequenzen bei 600 und 800\,Hz verwendet. Um die Verzögerung im Nutzsingal sowohl im magnetischen Signal, als auch im Stromsignal zu haben, wird das Filter auf beide Signalarten angewendet. Der Ausgang der Filter sind die gefilterten Strom- und Magnetfeldsignale $\bvec{u}_{i,\text{BP}}$ und $\bvec{u}_{b,\text{BP}}$.
+Um Störungssignale zu filtern wird ein Bandpassfilter verwendet. Dieser soll die Frequenzbereiche, in denen Nutzsignale ausgesendet werden, möglichst unverändert lassen und alle anderen möglichst stark dämpfen. Dafür wird ein Butterworth-Bandpassfilter $h\tindex{BW,BP}$ zweiter Ordnung mit den Eckfrequenzen bei 600 und 800\,Hz verwendet. Um die Verzögerung im Nutzsignal sowohl im magnetischen Signal, als auch im Stromsignal zu haben, wird das Filter auf beide Signalarten angewendet. Der Ausgang der Filter sind die gefilterten Strom- und Magnetfeldsignale $\bvec{u}_{i,\text{BP}}$ und $\bvec{u}_{b,\text{BP}}$.
 
-Um das Tiefpassverhalten des Fluxgatemagnetometer auszugleichen muss zunächst ein Filter designt werden, der möglichst genau das Sensorverhalten nachbildet. Als geeignetes Filter hat sich ein Butterworth-Tiefpassfilter $h\tindex{TP}$ dritter Ordnung mit einer Eckfrequenz von 1200\,Hz herausgestellt, ein Frequenz-und Phasengang ist in Abbildung\,\ref{fig:FilterPre} dargestellt.
+Um das Tiefpassverhalten des Fluxgatemagnetometer auszugleichen muss zunächst ein Filter designt werden, der möglichst genau das Sensorverhalten nachbildet. Als geeignetes Filter hat sich ein Butterworth-Tiefpassfilter $h\tindex{TP}$ dritter Ordnung mit einer Eckfrequenz von 1200\,Hz herausgestellt. Ein Frequenz-und Phasengang ist in Abbildung\,\ref{fig:FilterPre} dargestellt.
 
-Die Entzerrung kann auf zwei Arten durchgeführt werden. Konventionell wird die Inverse des Filters auf das magnetische Signal angewendet, um die Wirkung des Sensors aufzuheben. Problem daran ist, dass dieser Inverse ein Hochpassfilter wäre und das zuvor gefilterte Ansteuersignal des Fluxgatemagnetometer wieder verstärken würde. Daher wird das nachgebildete Filter auf das Stromsignal angewendet, so wird das Stromsignal möglichst gleich verzerrt wie das magnetische Signal und man erhält $\bvec{u}_{i,\text{TP}}$.
+Die Entzerrung kann auf zwei Arten durchgeführt werden. Konventionell wird die Inverse des Filters auf das magnetische Signal angewendet, um die Wirkung des Sensors aufzuheben. Das Problem daran ist, dass diese Inverse ein Hochpassfilter wäre und das zuvor gefilterte Ansteuersignal des Fluxgatemagnetometer wieder verstärken würde. Daher wird das nachgebildete Filter auf das Stromsignal angewendet, sodass das Stromsignal möglichst gleich verzerrt wird wie das magnetische Signal. Auf diese Weise erhält man $\bvec{u}_{i,\text{TP}}$.
 
 \begin{figure}
     \scalefont{1}
@@ -73,7 +73,7 @@ Die Entzerrung kann auf zwei Arten durchgeführt werden. Konventionell wird die 
     \label{fig:FilterPre}
 \end{figure}
 
-Die Zusammenhänge bezüglich der Distanz zwischen Sensor und Quelle, bezieht sich auf physikalische Werte. Daher werden die Signalfolgen noch mit der Sensitivität der jeweiligen Sensorik verrechnet. Bei der Strommessung ist diese $\frac{1}{R\tindex{s}}$ und die Sensitivität der Fluxgatemagnetometer $\eta\tindex{Flux}$
+Die Zusammenhänge bezüglich der Distanz zwischen Sensor und Quelle beziehen sich auf physikalische Werte. Daher werden die Signalfolgen noch mit der Sensitivität der jeweiligen Sensorik verrechnet. Bei der Strommessung ist diese $\frac{1}{R\tindex{s}}$ und die Sensitivität der Fluxgatemagnetometer $\eta\tindex{Flux}$
 
 \begin{equation}
     \bvec{i}(n) = \bvec{u}_{i,\text{TP}}(n) \, \frac{1}{R\tindex{s}},
@@ -130,15 +130,15 @@ Um einen magnetischen Dipol zu erzeugen wie in Gleichung\,\ref{eq:rotDipole} mus
     \bvec{u}\tindex{c} = \text{u}_0 \left[\begin{array}{c} \cos(\omega_\phi  T\tindex{SR}\,n) \sin(\omega_\theta\, T\tindex{SR}  \,n)\\ \sin(\omega_\phi  T\tindex{SR}\,n)\sin(\omega_\theta  T\tindex{SR}\,n)\\ \cos(\omega_\theta  T\tindex{SR}\,n) \end{array}\right].
     \label{eq:rotDipole}
   \end{equation}
-Die Frequenzen müssen so gewählt werden, dass diese im nutzbaren Frequenzbereich der Magnetfeldsensorik liegen. Diese wurden in diese Fall auf $\omega_\theta = 700\,\text{Hz}$ und $\omega_\phi = 70\,\text{Hz}$. Somit ergibt sich ein Frequenzbereich des Nutzsignals von ungefähr 630\,Hz bis 770\,Hz, wie bei einer Amplitudenmodulation. Der Frequenzbereich ist bei einem bewegten Sensor leicht größer, da das Anregungssignal mit der Bewegung moduliert wird.
+Die Frequenzen müssen so gewählt werden, dass diese im nutzbaren Frequenzbereich der Magnetfeldsensorik liegen. In diesem Fall wurden diese auf $\omega_\theta = 700\,\text{Hz}$ und $\omega_\phi = 70\,\text{Hz}$. Somit ergibt sich ein Frequenzbereich des Nutzsignals von ungefähr 630\,Hz bis 770\,Hz, wie bei einer Amplitudenmodulation. Der Frequenzbereich ist bei einem bewegten Sensor leicht größer, da das Anregungssignal mit der Bewegung moduliert wird.
 
 
 \subsection{Merkmalsextraktion}
 \label{sec:featext}
-Die Eingagnssignale der Merkmalsextraktion sind $\bvec{b}$ und $\bvec{i}$. In diesem Kapitel soll gezeigt werden, wie aus $\bvec{b}$ und $\bvec{i}$ der in Kapitel\,\ref{sec:maximum_vector} eingeführte MV extrahiert werden kann. Bei der Erläuterung soll nur ein Kanal $b$ von $\bvec{b}$ verwendet werden. In der Implementierung wird das Verfahren auf alle Sensorsignale angewendet. 
+Die Eingangssignale der Merkmalsextraktion sind $\bvec{b}$ und $\bvec{i}$. In diesem Kapitel soll gezeigt werden, wie aus $\bvec{b}$ und $\bvec{i}$ der in Kapitel\,\ref{sec:maximum_vector} eingeführte MV extrahiert werden kann. Bei der Erläuterung soll nur ein Kanal $b$ von $\bvec{b}$ verwendet werden. In der Implementierung wird das Verfahren auf alle Sensorsignale angewendet. 
 
 \subsubsection{Vektormerkmal}
-Das triviale Verfahren der Richtungsbestimmung des MV wäre es, eine Periode der langsameren Frequenz abzuwarten und den Zeitpunkt des maximalen Wertes zu speichern und die zugehörigen Stromwerte zu normieren und als MV zu verwenden. An diesem Verfahren gibt es ein Problem, in einer begrenzten Zeit kann der Raum nur quantisiert abgetastet werden. In Abbildung \ref{fig:DipoleTrack} ist ein Verlauf des Dipolmoments über die Zeit zu sehen, dabei wird abhängig vom Verhältnis $N_\omega=\omega_\theta / \omega_\phi$ nur ein Bruchteil aller möglichen Richtungen abgetastet. Es kann auf diese Wiese daher nur näherungsweise und mit begrenzter Auflösung das Maximum bestimmt werden.
+Das triviale Verfahren der Richtungsbestimmung des MV wäre es, eine Periode der langsameren Frequenz abzuwarten und den Zeitpunkt des maximalen Wertes zu speichern und die zugehörigen Stromwerte zu normieren und als MV zu verwenden. Bei diesem Verfahren gibt es jedoch ein Problem: In einer begrenzten Zeit kann der Raum nur quantisiert abgetastet werden. In Abbildung \ref{fig:DipoleTrack} ist ein Verlauf des Dipolmoments über die Zeit zu sehen, dabei wird abhängig vom Verhältnis $N_\omega=\omega_\theta / \omega_\phi$ nur ein Bruchteil aller möglichen Richtungen abgetastet. Das Maximum kann auf diese Weise daher nur näherungsweise und mit begrenzter Auflösung das Maximum bestimmt werden.
 
 Die alternative Idee ist, die Nulldurchgänge des Signals zu detektieren. Es wird angenommen, dass die Nulldurchgangsvektoren $\vec{e}\tindex{zc}$ (Dipolrichtungen in denen das detektierte Feld 0 ist) räumlich orthogonal zum MV sind, was zunächst bewiesen werden muss. Dies würde bedeuten, dass nach zwei Nulldurchgängen aus den beiden Nulldurchgangsvektoren eine Ebene bestimmt werden kann, deren Normalvektor der MV ist. Dafür wird ausgegangen von Formel\,\ref{eq:formel12}, die zu Null gesetzt wird. Dabei führen wir den Nullfeldwinkel $\phi\tindex{zero}$ ein
 
@@ -161,7 +161,7 @@ In Formel \ref{eq:relMaxS} entspricht die rechte Seite, der rechten Seite von Fo
         \label{eq:resultZeroMax}
     \end{eqnarray}
     
-    Die Gleichungen \ref{eq:equateMaxAndZero}-\ref{eq:resultZeroMax} zeigen, dass in der relevanten Ebene die $\vec{e}\tindex{zc}$ orthogonal zum $\vec{e}\tindex{max}$ stehen. Aufgrund der Zylindersymmetrie ergibt sich so eine  Nulldurchgangsebene mit dem MV als Normalenvektor. Eine Beispielsimulation wurde durchgeführt, die Ergebnisse sind in Abbildung \ref{fig:ZeroCrossingVis} dargestellt. Darin ist gut zu sehen, dass die $\vec{e}\tindex{zc}$s eine Ebene aufspannen und der MV orthogonal dazu steht. 
+    Die Gleichungen \ref{eq:equateMaxAndZero}-\ref{eq:resultZeroMax} zeigen, dass in der relevanten Ebene die $\vec{e}\tindex{zc}$ orthogonal zum $\vec{e}\tindex{max}$ stehen. Aufgrund der Zylindersymmetrie ergibt sich so eine  Nulldurchgangsebene mit dem MV als Normalenvektor. Eine Beispielsimulation wurde durchgeführt, die Ergebnisse sind in Abbildung \ref{fig:ZeroCrossingVis} dargestellt. Darin ist gut zu sehen, dass die $\vec{e}\tindex{zc}$ eine Ebene aufspannen und der MV orthogonal dazu steht. 
 
 
     \begin{figure}[h]
@@ -191,7 +191,7 @@ $\vec{e}\tindex{zc}$ ist ein Einheitsvektor, daher wird $\vec{m}_{b=0}$ normiert
 \end{equation}
 
 
-Es bleibt die Polarität von $\vec{e}\tindex{max}$ zu bestimmen. Als Beispiel hat die $xy$-Ebene die $z$-Achse, aber auch die $-z$-Achse als Normalenvektor. Die $\vec{e}\tindex{zc,$k$}$ werden dafür mit dem Index $k$ nummeriert. Jedem Vektor $\vec{e}\tindex{zc}$ wird eine Polarität zugeordnet, diese sagt aus, ob der Verlauf von positiv nach negativ (${z}+$) oder von negativ nach positiv (${z}-$). Des weiteren wird der zugehörige Strom durch die $z$-Spule betrachtet. Je nach Polarität wird nun die Reihenfolge des Kreuzproduktes getauscht. Dies erfolgt nach der folgenden Regel:
+Es bleibt die Polarität von $\vec{e}\tindex{max}$ zu bestimmen. Als Beispiel hat die $xy$-Ebene die $z$-Achse, aber auch die $-z$-Achse als Normalenvektor. Die $\vec{e}\tindex{zc,$k$}$ werden dafür mit dem Index $k$ nummeriert. Jedem Vektor $\vec{e}\tindex{zc}$ wird eine Polarität zugeordnet. Diese sagt aus, ob der Verlauf von positiv nach negativ (${z}+$) oder von negativ nach positiv (${z}-$). Des Weiteren wird der zugehörige Strom durch die $z$-Spule betrachtet. Je nach Polarität wird nun die Reihenfolge des Kreuzproduktes getauscht. Die Berechnung erfolgt nach der folgenden Regel:
 
 \begin{numcases}
 {\vec{e}_\text{max} = }
@@ -200,19 +200,19 @@ Es bleibt die Polarität von $\vec{e}\tindex{max}$ zu bestimmen. Als Beispiel ha
     \frac{\vec{e}\tindex{zc,k-1}\times\vec{e}\tindex{zc,k}}{\|\vec{e}\tindex{zc,k-1}\times\vec{e}\tindex{zc,k}\|} & , sonst \nonumber.
 \end{numcases}
 \subsubsection{Distanzmerkmal}
-Die Richtung des MV ist nun eindeutig definiert. Es fehlt die Bestimmung des Betrages. Der Betrag wurde in Gleichung \ref{eq:defG} definiert. Der Sensor detektiert eine gewichtete Überlagerung der Spulensignale. Die Gewichtung ergibt sich nach den Gleichungen\,\ref{eq:MagDipoleFeld} und \ref{eq:Sensorprojektion} abhängig von Position und Orientierung des Sensors. Um dies hier zu vereinfachen schreiben wir diese Gewichtungen als $g\tindex{x}$ für die $x$-Spule, $g\tindex{y}$ für die $y$-Spule und $g\tindex{z}$ für die $z$-Spule. Dies führt zu folgender Sensorsignalbeschreibung
+Die Richtung des MV ist nun eindeutig definiert. Es fehlt die Bestimmung des Betrags. Der Betrag wurde in Gleichung \ref{eq:defG} definiert. Der Sensor detektiert eine gewichtete Überlagerung der Spulensignale. Die Gewichtung ergibt sich nach den Gleichungen\,\ref{eq:MagDipoleFeld} und \ref{eq:Sensorprojektion} abhängig von Position und Orientierung des Sensors. Um dies hier zu vereinfachen werden diese Gewichtungen als $g\tindex{$x$}$ für die $x$-Spule, $g\tindex{$y$}$ für die $y$-Spule und $g\tindex{$z$}$ für die $z$-Spule geschrieben. Dies führt zu folgender Sensorsignalbeschreibung
 
 \begin{equation}
-    b(n) =   m\tindex{x}\,i_x(n) \,g\tindex{x}  + m\tindex{y}\,i_y(n)\,g\tindex{y}  + m\tindex{z}\,i_z(n)\,g\tindex{z}.
+    b(n) =   m\tindex{$x$}\,i_x(n) \,g\tindex{$x$}  + m\tindex{$y$}\,i_y(n)\,g\tindex{$y$}  + m\tindex{$z$}\,i_z(n)\,g\tindex{$z$}.
 \end{equation}
 Die Amplitude des Stroms $i$ ist aufgrund der symetrischen Ansteuerung in den drei Spulen gleich und es ergibt sich 
 \begin{equation}
-     b(n) =  i ( m\tindex{x}\,g\tindex{x} \cos(\omega_\phi T\tindex{SR}\,n) \sin(\omega_\theta T\tindex{SR}\,n) + m\tindex{y}\,g\tindex{y} \sin(\omega_\phi T\tindex{SR}\,n)\sin(\omega_\theta T\tindex{SR}) + m\tindex{z}\,g\tindex{z} \cos(\omega_\theta T\tindex{SR}\,n)),
+     b(n) =  i ( m\tindex{$x$}\,g\tindex{$x$} \cos(\omega_\phi T\tindex{SR}\,n) \sin(\omega_\theta T\tindex{SR}\,n) + m\tindex{$y$}\,g\tindex{$y$} \sin(\omega_\phi T\tindex{SR}\,n)\sin(\omega_\theta T\tindex{SR}) + m\tindex{$z$}\,g\tindex{$z$} \cos(\omega_\theta T\tindex{SR}\,n)),
     \label{eq:Richtungssignal}
 \end{equation}
 mit $\omega_\phi \Delta t\,n = \phi(n)$ und $\omega_\theta T\tindex{SR}\,n = \theta(n)$ schreiben wir:
 \begin{equation}
-     b(n,\vec{r}) = i\,( m\tindex{x}\,g\tindex{x} \cos(\phi(n) ) \sin(\theta(n) ) + m\tindex{y}\,g\tindex{y} \sin(\phi(n))\sin(\theta(n)) + m\tindex{z}\,g\tindex{z} \cos(\theta(n))).
+     b(n,\vec{r}) = i\,( m\tindex{$x$}\,g\tindex{$x$} \cos(\phi(n) ) \sin(\theta(n) ) + m\tindex{$y$}\,g\tindex{$y$} \sin(\phi(n))\sin(\theta(n)) + m\tindex{$z$}\,g\tindex{$z$} \cos(\theta(n))).
      \label{eq:Richtungssignal_Angle}
 \end{equation}
 Der MV wurde bereits bekannt und lässt sich in  kartesischen Koordinaten schreiben als
@@ -223,40 +223,40 @@ Der MV wurde bereits bekannt und lässt sich in  kartesischen Koordinaten schrei
 Am Sensor wird das maximale Feld detektiert, wenn der Dipol in Richtung von $\vec{e}\tindex{max}$ polarisiert ist, daher sind die Ableitungen $\frac{d\,b(n)}{d\, \phi }$ und $\frac{d\,b(n)}{d\, \theta }$ für diese Richtung 0. Gleichung\,\ref{eq:Richtungssignal_Angle} wird nach $\phi$ und $\theta$ differenziert, zu Null gesetzt und $\vec{e}\tindex{max}$ eingesetzt
 \begin{equation}
     \begin{split}
-    0 &=  \biggl( m\tindex{x}\,g\tindex{x} \bigl(-\sin(\phi\tindex{max} )\bigr) \sin(\theta\tindex{max} ) \\+ &m\tindex{y}\,g\tindex{y} \cos(\phi\tindex{max})\sin(\theta\tindex{max})\biggr)\\ &= \frac{d\,b(n)}{d\, \phi } ,
+    0 &=  \biggl( m\tindex{$x$}\,g\tindex{$x$} \bigl(-\sin(\phi\tindex{max} )\bigr) \sin(\theta\tindex{max} ) \\+ &m\tindex{$y$}\,g\tindex{$y$} \cos(\phi\tindex{max})\sin(\theta\tindex{max})\biggr)\\ &= \frac{d\,b(n)}{d\, \phi } ,
     \label{eq:diffPhi}
     \end{split}
 \end{equation}
 \begin{equation}
     \begin{split}
-    0 &=   m\tindex{x}g\tindex{x} (\cos(\phi\tindex{max} )) \cos(\theta\tindex{max} ) \\  &+m\tindex{y}\,g\tindex{y} \sin(\phi\tindex{max})\cos(\theta\tindex{max}) \\ &- m\tindex{z}\,g\tindex{z}\sin(\theta\tindex{max} )\\ &= \frac{d\,b(n)}{d\, \theta }.
+    0 &=   m\tindex{$x$}g\tindex{$x$} (\cos(\phi\tindex{max} )) \cos(\theta\tindex{max} ) \\  &+m\tindex{$y$}\,g\tindex{$y$} \sin(\phi\tindex{max})\cos(\theta\tindex{max}) \\ &- m\tindex{$z$}\,g\tindex{$z$}\sin(\theta\tindex{max} )\\ &= \frac{d\,b(n)}{d\, \theta }.
     \label{eq:diffTheta}
     \end{split}
 \end{equation}
 Aus den Gleichungen \ref{eq:diffPhi} und \ref{eq:diffTheta} lassen sich Faktoren $f\tindex{$xy$},f\tindex{$xz$}$ zwischen den einzelnen Übertragungsfaktoren ableiten:
 \begin{equation}
-    g\tindex{y} = m\tindex{x}\,g\tindex{x} \frac{\sin(\phi\tindex{max})}{m\tindex{y}\,\cos(\phi\tindex{max})} = f\tindex{$xy$} g\tindex{x},
+    g\tindex{$y$} = m\tindex{$x$}\,g\tindex{$x$} \frac{\sin(\phi\tindex{max})}{m\tindex{$y$}\,\cos(\phi\tindex{max})} = f\tindex{$xy$} g\tindex{$x$},
     \label{eq:FaktorYX}
 \end{equation}
 \begin{equation}
-    g\tindex{z} = g\tindex{x} \frac{m\tindex{x}\cos(\theta\tindex{max})}{m\tindex{z}\sin(\theta\tindex{max})} (\cos(\phi\tindex{max})+\frac{\sin^2(\phi\tindex{max})}{\cos(\phi\tindex{max})}) = f\tindex{$xz$}g\tindex{x}.
+    g\tindex{$z$} = g\tindex{$x$} \frac{m\tindex{$x$}\cos(\theta\tindex{max})}{m\tindex{$z$}\sin(\theta\tindex{max})} (\cos(\phi\tindex{max})+\frac{\sin^2(\phi\tindex{max})}{\cos(\phi\tindex{max})}) = f\tindex{$xz$}g\tindex{$x$}.
     \label{eq:FaktorXZ}
 \end{equation}
 Somit schreibt sich Gleichung \ref{eq:Richtungssignal} um 
 \begin{equation}
-    b(n) =  \bigl( i_x\,m\tindex{x}\,g\tindex{x} + i_x\,m\tindex{y}\,f\tindex{$xy$}g\tindex{x} + i_x\,m\tindex{z}f\tindex{$xz$}g\tindex{x} \bigr).
+    b(n) =  \bigl( i_x\,m\tindex{$x$}\,g\tindex{$x$} + i_x\,m\tindex{$y$}\,f\tindex{$xy$}g\tindex{$x$} + i_x\,m\tindex{$z$}f\tindex{$xz$}g\tindex{$x$} \bigr).
 \end{equation}
 Um die einzelnen Übertragungsfaktoren zu bestimmen kann ein beliebiger Zeitpunkt aus dem Signal verwendet, der Einfachheit wird der Zeitpunkt $n\tindex{max}$ zwischen den Nulldurchgängen verwendet. Die einzelnen Werte werden eingesetzt und nach $g\tindex{x}$ umgestellt:
 \begin{equation}
     \begin{split}
-        g\tindex{x} = b(n\tindex{max})\,\frac{1}{i_x(n\tindex{max})\,m\tindex{x}+i_x(n\tindex{max})\,m\tindex{y}f\tindex{$xy$}+i_x(n\tindex{max})<\,m\tindex{z}f\tindex{$xz$}} . 
+        g\tindex{$x$} = b(n\tindex{max})\,\frac{1}{i_x(n\tindex{max})\,m\tindex{$x$}+i_x(n\tindex{max})\,m\tindex{$y$}f\tindex{$xy$}+i_x(n\tindex{max})\,m\tindex{$z$}f\tindex{$xz$}} . 
     \end{split}
 \end{equation}
 
 Damit lassen sich die einzelnen Übertragungsfaktoren und der Betragswert bestimmen
 
 \begin{equation}
-    g = \sqrt{g\tindex{x}^2 + g\tindex{y}^2 + g\tindex{z}^2 }.
+    g = \sqrt{g\tindex{$x$}^2 + g\tindex{$y$}^2 + g\tindex{$z$}^2 }.
     \label{eq:merkmalAbsval}
 \end{equation}
 
@@ -277,7 +277,7 @@ Je nach verwendeter Rahmenlänge und Frequenzen der Spulensignale muss die Anzah
     \caption{Auswertung des Distanzmerkmal anhand eines Laborsignals: In (a) ist der Verlauf des Distanzmerkmals ohne Medianfilter dargestellt, zum Vergleich dazu ist in (b) der Verlauf mit Medianfilter dargestellt. Die Rahmenlänge beträgt 512.}
     \label{fig:Ausreisser}
 \end{figure}
-Dabei handelt es sich nur um einzelne Ausreißer, daher  wird ein Medianfilter angewendet. Dafür werden alle $g$ sortiert und das untere und obere Drittel eines Rahmens verworfen. Die verbliebenen Werte werden gemittelt und als Distanzinformation des jeweiligen Rahmens verwendet. 
+Dabei handelt es sich nur um einzelne Ausreißer. Daher  wird ein Medianfilter angewendet. Dafür werden alle $g$ sortiert und das untere und obere Drittel eines Rahmens verworfen. Die verbliebenen Werte werden gemittelt und als Distanzinformation des jeweiligen Rahmens verwendet. 
 
 \begin{figure}[h]
     \centering
@@ -300,14 +300,14 @@ Dabei handelt es sich nur um einzelne Ausreißer, daher  wird ein Medianfilter a
 
 
 \section{Lokalisierung}
-Die Lokalisierung ist unterteilt in zwei Submodule. Zum einen wird ein Verfahren, um die Haltung einer kinematischen Kette zu schätzen vorgestellt. In dieser relativen Lokalisierung werden die Orientierungen der kinematischen Elemente, relativ zur Quelle, geschätzt. Zum anderen wird ein Verfahren für die Schätzung der absoluten Position und Orientierung einer 3D-Spule vorgestellt.
+Die Lokalisierung ist unterteilt in zwei Submodule. Zum einen wird ein Verfahren, um die Haltung einer kinematischen Kette zu schätzen vorgestellt. In dieser relativen Lokalisierung werden die Orientierungen der kinematischen Elemente, relativ zur Quelle, geschätzt. Zum anderen wird ein Verfahren zur Schätzung der absoluten Position und Orientierung einer 3D-Spule vorgestellt.
 
 
 
 \subsection{Schätzung einer kinematischen Kette}
 \label{subsec:kinchainest}
-In diesem Kapitel wird ein Ansatz, für das Schätzen einer kinematischen Kette, aufbauend auf den theoretischen Grundlagen von Kapitel\,\ref{chap:raeumliches_merkmal} vorgestellt. Diese wurde in Grundzügen bereits in \cite{schmidt_new_2024} vorgestellt.
-Zunächst wird die Sensor- und Aktuatorpositionierung definiert. Es wird eine 3D-Spule auf dem ersten kinematischen Element einer Kette platziert. Die folgenden kinematischen Elemente werden mit jeweils einem Magnetfeldsensor ausgestattet. Diese werden zunächst in der Mitte, also innerhalb des Elements angebracht. Die Elemente und Gelenke werden mit der Variablen $k$ nummeriert, beginnend an der Quelle. Diese Annahme gilt nur für die Herleitung, um diese zu vereinfachen und wird im weiteren korrigiert. Außerdem sei die sensitive Achse des Sensors mit der Symetrieachse des kinematischen Elements $\vec{e}\tindex{kin,$k$} = \vec{e}\tindex{s,$k$}$ ausgerichtet. Die Sensor- und Quellenanordnung ist in Abbildung \ref{fig:Sensorplacement} dargestellt.  
+In diesem Kapitel wird ein Ansatz zum Schätzen einer kinematischen Kette vorgestellt, der auf den theoretischen Grundlagen aus Kapitel\,\ref{chap:raeumliches_merkmal} aufbaut. Diese wurde in Grundzügen bereits in \cite{schmidt_new_2024} vorgestellt.
+Zunächst wird die Sensor- und Aktuatorpositionierung definiert. Es wird eine 3D-Spule auf dem ersten kinematischen Element einer Kette platziert. Die folgenden kinematischen Elemente werden mit jeweils einem Magnetfeldsensor ausgestattet. Diese werden zunächst in der Mitte, also innerhalb des Elements angebracht. Die Elemente und Gelenke werden mit der Variablen $k$ nummeriert, beginnend an der Quelle. Diese Annahme gilt nur für die Herleitung, um diese zu vereinfachen und wird im weiteren Verlauf korrigiert. Außerdem sei die sensitive Achse des Sensors mit der Symmetrieachse des kinematischen Elements $\vec{e}\tindex{kin,$k$} = \vec{e}\tindex{s,$k$}$ ausgerichtet. Die Sensor- und Quellenanordnung ist in Abbildung \ref{fig:Sensorplacement} dargestellt.  
 
 \begin{figure}[h!]
     \centering
@@ -328,11 +328,11 @@ Zunächst wird die Sensor- und Aktuatorpositionierung definiert. Es wird eine 3D
 
 \subsubsection{Iterativer Algorithmus}
 
-    Der Algorithmus kombiniert die magnetischen Zusammenhänge und das Vorwissen über die Anatomie. Die Prämisse des Algorithmus ist, dass bei korrekt angenommener Sensororientierung, mit der Anatomie die korrekte Position des Sensors berechnet werden kann. Mit der korrekten Position kann mithilfe der magnetischen Zusammenhänge die korrekte Sensororientierung bestimmt werden. Diese Selbstkonsistenz wird nun ausgenutzt.
+Der Algorithmus kombiniert die magnetischen Zusammenhänge und das Vorwissen über die Anatomie. Die Prämisse des Algorithmus ist, dass bei korrekt angenommener Sensororientierung, mit der Anatomie die korrekte Position des Sensors berechnet werden kann. Mit der korrekten Position kann mithilfe der magnetischen Zusammenhänge die korrekte Sensororientierung bestimmt werden. Diese Selbstkonsistenz wird ausgenutzt.
 
-    Für den Algorithmus werden die Position des ersten Gelenks $\vec{r}\tindex{j,1}$ und die Distanz zwischen Gelenk und Sensor $l\tindex{js,$k$}$ benötigt (siehe Abbildung\,\ref{fig:Sensorplacement}). Nacheinander wird für jedes Element die Orientierung des jeweiligen Sensors bestimmt und damit die Position des folgenden Gelenks $\vec{r}\tindex{j,$k$}$. 
+Für den Algorithmus werden die Position des ersten Gelenks $\vec{r}\tindex{j,1}$ und die Distanz zwischen Gelenk und Sensor $l\tindex{js,$k$}$ benötigt (siehe Abbildung\,\ref{fig:Sensorplacement}). Nacheinander wird für jedes Element die Orientierung des jeweiligen Sensors bestimmt und damit die Position des folgenden Gelenks $\vec{r}\tindex{j,$k$}$. 
     
-    In der ersten Iteration wird eine zufällige Orientierung $\vec{\hat{e}}\tindex{s,$k$}^{\,i=1}$ für die erste Iteration des Sensors angenommen. Die Iterationsnummer wird mit der Variable $i$ bezeichnet.  Mit der Anatomie wird die zugehörige Sensorposition $\hat{\vec{r}}\tindex{s,$k$}^{\,i}$ bestimmt
+In der ersten Iteration wird eine zufällige Orientierung $\vec{\hat{e}}\tindex{s,$k$}^{\,i=1}$ für die erste Iteration des Sensors angenommen. Die Iterationsnummer wird mit der Variable $i$ bezeichnet.  Mit der Anatomie wird die zugehörige Sensorposition $\hat{\vec{r}}\tindex{s,$k$}^{\,i}$ bestimmt
 
     \begin{equation}
         \hat{\vec{r}}\tindex{s,$k$}^{\,i} = \vec{r}\tindex{j,$k$} + l\tindex{js,$k$} \, \hat{\vec{e}}\tindex{s,$k$}^{\,i} .
@@ -358,11 +358,11 @@ Der Ablauf des Algorithmus ist in Abbildung\,\ref{fig:Flussdiagramm} zu sehen.
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.7\textwidth,trim = 0 1cm 12cm 0]{04_umsetzung/images/Flussdiagramm.pdf} 
-    \caption{Flussdiagramm des iterativen Algorithmus: Der Algorithmus startet mit einer zufällig ausgewählten Sensororientierung. Im ersten Schritt wird die relative Sensorposition bestimmt. Daraus wird die zugehörige Sensororientierung bestimmt. Diese Prozedur wird wiederholt, bis die Veränderung zwischen den Iterationen kleiner ist als ein definierter Schwellenwert und Konvergenz erreicht ist. Diese Orientierung ist dann die geschätzte Lösung.}
+    \caption{Flussdiagramm des iterativen Algorithmus: Der Algorithmus startet mit einer zufällig ausgewählten Sensororientierung. Im ersten Schritt wird die relative Sensorposition bestimmt. Daraus wird die zugehörige Sensororientierung bestimmt. Diese Prozedur wird wiederholt, bis die Veränderung zwischen den Iterationen kleiner als ein definierter Schwellenwert ist und somit Konvergenz erreicht ist. }
     \label{fig:Flussdiagramm}
 \end{figure}
 
-Eine Visualisierung dieser Prozedur ist in Abbildung\,\ref{fig:Concept_Algorithm}. Dabei werden die Orientierungen und Positionen für einzelne Iterationen gezeigt und wie diese sich den möglichen Posen annähert und nach etwa 15 Iterationen übereinstimmt.
+Eine Visualisierung dieser Prozedur ist in Abbildung\,\ref{fig:Concept_Algorithm}. Dabei werden die Positions-Orientierungspaare für die einzelnen Iterationen gezeigt und wie diese sich den möglichen Posen annähert und nach etwa 15 Iterationen übereinstimmt.
 
 \begin{figure}[h]
     \centering
@@ -399,7 +399,7 @@ Die Anzahl der benötigten Iterationen hängt dabei vom Verhältnis $Q$ zwischen
 \begin{equation}
     Q = \frac{l\tindex{js}}{\|\vec{r}\tindex{j}\|}.
 \end{equation}
-Die absolute Distanz ist dabei irrelevant, da bei der Herleitung der Zusammenhänge bereits das normierte Dipolfeld verwendet wurde(siehe Gleichung \ref{sec:maximum_vector}). Um die Anzahl der benötigten Iterationen genauer zu untersuchen wurden Simulationen durchgeführt mit einer Variation von $Q$. Der Sensor wurde, als in der $z$-Richtung ausgerichtet, angenommen. Die erste Iteration hat mit $\vec{e}\tindex{s}^{\,i=0} = \vec{e}\tindex{y}$ begonnen. Somit beginnt der Algorithmus mit einem Fehler von $90^\circ$. Das Ergebnis dieser Simulation ist in Abbildung \ref{fig:ConvergenceSpeed} dargestellt.
+Die absolute Distanz ist dabei irrelevant, da bei der Herleitung der Zusammenhänge bereits das normierte Dipolfeld verwendet wurde (siehe Gleichung \ref{sec:maximum_vector}). Um die Anzahl der benötigten Iterationen genauer zu untersuchen wurden Simulationen durchgeführt mit einer Variation von $Q$. Der Sensor wurde, als in der $z$-Richtung ausgerichtet angenommen. Die erste Iteration hat mit $\vec{e}\tindex{s}^{\,i=0} = \vec{e}\tindex{y}$ begonnen. Somit beginnt der Algorithmus mit einem Fehler von $90^\circ$. Das Ergebnis dieser Simulation ist in Abbildung \ref{fig:ConvergenceSpeed} dargestellt.
 \begin{figure}
     \centering
     \scalefont{1}
@@ -410,11 +410,11 @@ Die absolute Distanz ist dabei irrelevant, da bei der Herleitung der Zusammenhä
 
 \subsubsection{Eindeutigkeit der Lösung}
 \label{subsubsection:eindeutigkeit}
-	Im Folgenden wird die die Eindeutigkeit des vorgestellten iterativen Algorithmus geprüft. Der Algorithmus ist eindeutig, wenn jedem möglichen Eingangsvektor $\vec{e}\tindex{max}$ eine Sensororientierung $\vec{e}\tindex{s}$ zugeordnet werden kann. Die Eingangs- und Ausgangsvektoren werden dafür in jeweils zwei Winkel aufgeteilt. 
+	Im Folgenden wird die Eindeutigkeit des vorgestellten iterativen Algorithmus geprüft. Der Algorithmus ist eindeutig, wenn jedem möglichen Eingangsvektor $\vec{e}\tindex{max}$ eine Sensororientierung $\vec{e}\tindex{s}$ zugeordnet werden kann. Die Eingangs- und Ausgangsvektoren werden dafür in jeweils zwei Winkel aufgeteilt. 
 
     Der Eingangsvektor besitzt zwei Freiheitsgrade, die die Richtung definieren und mit zwei Winkeln beschrieben werden können. Die Orientierung des Sensors wird ebenfalls über zwei Winkel (Freiheitsgrade) definiert. Im folgenden wird zunächst eine Entkopplung der Ein- und Ausgangsgrößen vorgenommen, also jede Eingangsgröße hat nur Einfluss auf eine Ausgangsgröße. 
 
-    Zunächst wird der Zusammenhang aus Kapitel\,\ref{subsec:Lokalisierungszusammenhänge}, dass $\vec{e}\tindex{max}$, $\vec{e}\tindex{s}$ und $\vec{e}\tindex{r}$ in einer Ebene liegen, verwendet. Dies bedeutet gleichzeitig auch, dass die Gelenkspostion $\vec{r}\tindex{j}$ in dieser Ebene liegen muss. Dies ist der Fall, da diese von der Sensorposition in Richtung der Sensororientierung liegt, also eine Verschiebung in der Ebene. Der normalen Vektor $\vec{e}\tindex{n}$ dieser Ebene wird wie folgt bestimmt
+    Zunächst wird der in Kapitel \ref{subsec:Lokalisierungszusammenhänge} hergeleitete Zusammenhang genutzt, dass die Vektoren $\vec{e}{max}$, $\vec{e}{s}$ und $\vec{e}{r}$ in einer gemeinsamen Ebene liegen. Daraus folgt unmittelbar, dass auch die Gelenksposition $\vec{r}{j}$ in dieser Ebene liegen muss. Dies ergibt sich daraus, dass sich die Gelenksposition ausgehend von der Sensorposition entlang der Sensororientierung ergibt und somit eine Verschiebung innerhalb dieser Ebene darstellt. Der normalen Vektor $\vec{e}\tindex{n}$ dieser Ebene wird wie folgt bestimmt
     \begin{equation}
         \vec{e}\tindex{n} = \frac{\vec{e}\tindex{max}\times \vec{r}\tindex{j}}{\|\vec{e}\tindex{max}\times \vec{r}\tindex{j}\|}.
     \end{equation}
@@ -449,7 +449,7 @@ Die absolute Distanz ist dabei irrelevant, da bei der Herleitung der Zusammenhä
 	\end{figure}
 Die Lösung ist auf einen Freiheitsgrad eingeschränkt. Der zweite Freiheitsgrad, ist der Winkel der um den Normalenvektor dreht. Als Bezugsachse wird im Folgenden $\vec{r}\tindex{j}$ verwendet. Die Eingangsgröße ist dann der Winkel $\phi\tindex{max,2}$ zwischen $\vec{e}\tindex{max}$ und $\vec{r}\tindex{j}$ und die Ausgangsgröße $\phi\tindex{s,2}$ ist der Winkel zwischen $\vec{e}\tindex{s}$ und $\vec{r}\tindex{j}$.
 
-Im Folgenden wird zunächst ein funktionaler Zusammenhang $\phi\tindex{max,2} = f(\phi\tindex{s,2})$ aufgestellt. Zu nächst sei die Gelenksposition $\vec{r}\tindex{j}$ wie folgt definiert, wobei die Distanz zwischen Quelle und Gelenk auf eins normiert wird 
+Im Folgenden wird zunächst ein funktionaler Zusammenhang $\phi\tindex{max,2} = f(\phi\tindex{s,2})$ aufgestellt. Zunächst sei die Gelenksposition $\vec{r}\tindex{j}$ wie folgt definiert, wobei die Distanz zwischen Quelle und Gelenk auf eins normiert wird 
 	\begin{equation}
 		\vec{r}\tindex{j} = \left[\begin{array}{c} 1\\ 0 \end{array}\right] .
 	\end{equation}
@@ -504,12 +504,12 @@ Dieser Zusammenhang ist nicht trivial und nicht einfach umkehrbar. In einem Skri
     \label{fig:NoConvergence}
 \end{figure}
 
-In der späteren Anwendung muss dies beachtet werden, wobei bei einer Sensorhandschuh-Anwendung die kinematischen Elemente relativ klein sind. Dies führt zu einem kleinen $l\tindex{js}$ und somit zu einem kleinerem $Q$.
+In der späteren Anwendung muss dies beachtet werden, wobei bei einer Sensorhandschuh-Anwendung die kinematischen Elemente relativ klein sind. Dies führt zu einem kleinen $l\tindex{js}$ und somit zu einem kleineren $Q$.
 
 \subsubsection{Korrektur der Elementdicke}
-Bisher wurde ein Algorithmus zur Bewegungsschätzung von kinematischen Ketten vorgestellt. Dabei wurden Annahmen zur Sensorpositionierung getroffen, die Sensoren sind in der Mitte des kinematischen Elements und mit der Mittelachse des Elements ausgerichtet. In der Realität können Sensoren nicht in den Finger eingebracht werden, sondern nur an der Oberfläche. Die Sensorposition wird für einen Sensor in der Mitte des Elements nach Gleichung \ref{eq:formelIter1} bestimmt. Für die Korrektur wird zunächst die Geometrie betrachtet. Es wird ein Gelenk betrachtet, die Überlegungen können auf beliebige Ketten erweitert werden.
+Bisher wurde ein Algorithmus zur Bewegungsschätzung von kinematischen Ketten vorgestellt. Dabei wurden Annahmen zur Sensorpositionierung getroffen. Die Sensoren sind in der Mitte des kinematischen Elements und mit der Mittelachse des Elements ausgerichtet. In der Realität können Sensoren nicht in den Finger eingebracht werden, sondern nur an der Oberfläche. Die Sensorposition wird für einen Sensor in der Mitte des Elements nach Gleichung \ref{eq:formelIter1} bestimmt. Für die Korrektur wird zunächst die Geometrie betrachtet. Es wird ein Gelenk betrachtet. Die Überlegungen können auf beliebige Ketten erweitert werden.
 
-Die Position des Gelenksmittelpunkt wird zunächst auf die Oberfläche der kinematischen Kette verschoben. Es wird eine Zusatzlänge $l\tindex{z}$ eingeführt, die Länge um die die Distanz von Sensor zu Gelenk durch die Bewegung verlängert/verkürzt ist und um die sich die Position des Gelenks verschiebt. Beispielhaft ist das in Abbildung \ref{fig:zusatzlaenge} dargestellt.
+Die Position des Gelenksmittelpunkt wird zunächst auf die Oberfläche der kinematischen Kette verschoben. Es wird eine Zusatzlänge $l\tindex{z}$ eingeführt, die der Länge entspricht, um die sich die Distanz von Sensor zu Gelenk durch die Bewegung verlängert/verkürzt und um die sich die Position des Gelenks verschiebt. Beispielhaft ist das in Abbildung \ref{fig:zusatzlaenge} dargestellt.
 
 \begin{figure}[h!]
     \centering
@@ -553,7 +553,7 @@ Daraus wird der Beugewinkel $\theta\tindex{Beu}$ in dieser Ebene bestimmt
     \theta\tindex{Beu} = \arccos\bigl(\vec{e}\tindex{kin,2,p} \cdot\, \vec{e}\tindex{k,1}\bigr).
 \end{equation}
 
-In Abbildung \ref{fig:BestimmungZusatz} sind zwei kongruente Dreiecke zu sehen. Der Winkel, dargestellt in der Mitte des Gelenks, ist dabei $\theta\tindex{Beu}$. Da alle Größen der Dreiecke, außer $l\tindex{z}$ bekannt sind, lässt sich nun $\l\tindex{z}$ bestimmen
+In Abbildung \ref{fig:BestimmungZusatz} sind zwei kongruente Dreiecke zu sehen. Der Winkel, dargestellt in der Mitte des Gelenks, ist dabei $\theta\tindex{Beu}$. Da alle Größen der Dreiecke außer $l\tindex{z}$ bekannt sind, lässt sich nun $\l\tindex{z}$ bestimmen
 
 \begin{equation}
     l\tindex{z} = d\tindex{e} \tan\biggl({\frac{\theta\tindex{Beu}}{2}}\biggr).
@@ -611,7 +611,7 @@ Die Laufzeit des Algorithmus und die Effizienz spielt insbesondere bei der Laten
 
 Die Analyse zeigt, dass eine Iteration des vorgestellten Algorithmus die Komplexität von ungefähr 212 Additionen/Subtraktionen beträgt. In den meisten Fällen sind 15 Iterationen ausreichend um die Orientierung eines kinematischen Elements zu schätzen (siehe Abbildung\,\ref{fig:ConvergenceSpeed}). Dies entspricht auf dem verwendeten Prozessor einer Rechenzeit von etwa 3\,{\textmu}s pro Gelenk. Eine Hand besitzt 15 Gelenke, dies führt zu einer Rechenzeit etwa 45\,{\textmu}s pro Hand. 
 
-Nach den Betrachtungen der Eindeutigkeit  ergibt sich eine naheliegende Alternative, um die Berechnung zu vereinfachen. Das Problem wurde in zwei Unterprobleme eingeteilt. Es wird zunächst die Ebene bestimmt in der der MV und $\vec{r}\tindex{j}$ liegen. Dafür wird der Normalenvektor $\vec{e}\tindex{n}$ gebildet
+Nach Betrachtung der Eindeutigkeit ergibt sich eine naheliegende Alternative, um die Berechnung zu vereinfachen. Das Problem wurde in zwei Unterprobleme unterteilt. Es wird zunächst die Ebene bestimmt in der der MV und $\vec{r}\tindex{j}$ liegen. Dafür wird der Normalenvektor $\vec{e}\tindex{n}$ gebildet
     
     \begin{equation}
         \vec{e}\tindex{n} = \frac{\vec{e}\tindex{max} \times \vec{r}\tindex{j}}{\|\vec{e}\tindex{max} \times \vec{r}\tindex{j}\|}.
@@ -621,17 +621,17 @@ Für den zweiten Freiheitsgrad wurde ein Zusammenhang aufgestellt, wie in Abbild
     \begin{equation}
         \vec{e}\tindex{s} = \cos(\phi\tindex{s,2})(\vec{e}\tindex{n} \times \vec{e}\tindex{rj})\times \vec{e}\tindex{n} + \sin(\phi\tindex{s,2}) (\vec{e}\tindex{n} \times\vec{e}\tindex{rj}).
     \end{equation}
-So lässt sich direkt $\vec{e}\tindex{s}$ bestimmen. Diese einfachere Berechnung hat den Vorteil, dass sehr effizient die Orientierung bestimmt werden kann. Die Rechenleistung kann so reduziert werden. Mit Tabelle\,\ref{Tab:efficiency} wird eine Normierte Dauer von 209 für die Prozessierung mit LUT. Damit ist der LUT ähnlich komplex wie eine Iteration, wobei der LUT nur einmal durchgeführt werden muss. Ein Nachteil dieser Umsetzung ist, dass die Korrektur der Dicke eine Elements nicht mit einbezogen wird. Problem hier ist, dass durch diese Modellanpassung, die Symmetrie mit der der erste Freiheitsgrad bestimmt wird, verloren geht.
+So lässt sich direkt $\vec{e}\tindex{s}$ bestimmen. Diese einfachere Berechnung hat den Vorteil,  dass die Orientierung sehr effizient bestimmt werden kann. Die Rechenleistung kann so reduziert werden. Mit Tabelle\,\ref{Tab:efficiency} wird eine normierte Dauer von 209 für die Prozessierung mit LUT. Damit ist der LUT ähnlich komplex wie eine Iteration, wobei der LUT nur einmal durchgeführt werden muss. Ein Nachteil dieser Umsetzung ist, dass die Korrektur der Dicke eines Elements nicht mit einbezogen wird. Problem hier ist, dass durch diese Modellanpassung, die Symmetrie mit der der erste Freiheitsgrad bestimmt wird, verloren geht.
 
 \subsection{Lokalisierung einer 3D-Spule}
 	
-Die Position der einzelnen kinematischen Elemente ist relativ zur Quelle auf dem ersten Element bekannt. Um die absolute Position und Orientierung im Raum (Weltkoordinatensystem) zu bestimmten werden magnetische Sensoren an einem Gerüst angebracht, die das Magnetfeld der Quelle auf dem ersten Element detektierten und den MV extrahieren. Um die Position möglichst effizient zu bestimmen wurde ein Algorithmus entwickelt der die Symmetrie magnetischer Dipolfelder nutzt. Im Folgenden wird zunächst die Positionsschätzung vorgestellt und darauf aufbauend die Orientierungsschätzung.
+Die Position der einzelnen kinematischen Elemente ist relativ zur Quelle auf dem ersten Element bekannt. Um die absolute Position und Orientierung im Raum (Weltkoordinatensystem) zu bestimmen, werden magnetische Sensoren an einem Gerüst angebracht. Die magnetischen Sensoren detektieren das Magnetfeld auf dem ersten Element und extrahieren den MV. Um die Position möglichst effizient zu bestimmen, wurde ein Algorithmus entwickelt, der die Symmetrie magnetischer Dipolfelder nutzt. Im Folgenden wird zunächst die Positionsschätzung vorgestellt und darauf aufbauend die Orientierungsschätzung.
 	
 \subsubsection{Positionsschätzung}
     
-Die Sensoranordnung ist wie in Kapitel\,\ref{sec:Sensoranordnung} beschrieben. Es werden Sensorpaare gebildet, deren Sensorachsen auf einer Gerade liegen. Also jeweils ein Sensorpaar liegt auf einer parallelen zur $x$-Achse, zur $y$-Achse und zur $z$-Achse. Die einzelnen Sensorpaare werden verwendet, um jeweils eine Koordinate zu schätzen. Für die einzelnen Sensoren werden die Längen der MV wie in Gleichung\,\ref{eq:merkmalAbsval} aus dem Signal extrahiert. Das Merkmal $g$ hat dabei einen direkten Bezug zu den Äquibetragsflächen, die in Kapitel\,\ref{subsec:Lokalisierungszusammenhänge} vorgestellt wurden und in Abbildung\,\ref{fig:Aequibetragsflaeche} dargestellt sind.
+Die Sensoranordnung ist wie in Kapitel\,\ref{sec:Sensoranordnung} beschrieben. Es werden Sensorpaare gebildet, deren Sensorachsen auf einer Geraden liegen. Jeweils ein Sensorpaar liegt auf einer parallelen zur $x$-Achse, zur $y$-Achse und zur $z$-Achse. Die einzelnen Sensorpaare werden verwendet, um jeweils eine Koordinate zu schätzen. Für die einzelnen Sensoren werden die Längen der MV wie in Gleichung\,\ref{eq:merkmalAbsval} aus dem Signal extrahiert. Das Merkmal $g$ hat dabei einen direkten Bezug zu den Äquibetragsflächen, die in Kapitel\,\ref{subsec:Lokalisierungszusammenhänge} vorgestellt wurden und in Abbildung\,\ref{fig:Aequibetragsflaeche} dargestellt sind.
 
-Das führt für ein Sensorpaar, deren sensitive Achsen auf einer Geraden liegen, zu zwei rotationssysmetrischen Oberflächen, die diesselbe Symetrieachse besitzen. Diese zwei Oberflächen schneiden sich, wobei die Schnittkurve ein Kreis ist. Dies ist einmal exemplarisch in Abbildung\,\ref{fig:BetragsflaechemitSchnitt} dargestellt.
+Das führt für ein Sensorpaar, dessen sensitive Achsen auf einer Geraden liegen, zu zwei rotationssymmetrischen Oberflächen mit derselben Symmetrieachse. Diese zwei Oberflächen schneiden sich, wobei die Schnittkurve ein Kreis ist. Dies ist einmal exemplarisch in Abbildung\,\ref{fig:BetragsflaechemitSchnitt} dargestellt.
     \begin{figure}[h!]
 		\centering
         \begin{overpic}[width=0.7\textwidth]{04_umsetzung/images/Abs_Flache_curve.png}
@@ -640,7 +640,7 @@ Das führt für ein Sensorpaar, deren sensitive Achsen auf einer Geraden liegen,
 		\caption{Äquibetragsflächen mit zugehöriger Schnittkurve: Die Abbildung zeigt zwei Äquibetragsflächen, diese sind in rot/blau dargestellt. Die gelbe Kurve zeigt die Schnittkurve beider Flächen.}
 		\label{fig:BetragsflaechemitSchnitt}
 	\end{figure}
-Es wird einmal die Herleitung am Beispiel eines Sensorpaares auf der $x$-Achse gezeigt werden. Diese kann für die anderen Koordinaten erweitert werden. Die Zylindersymetrie hat den Vorteil, dass die $x$-Koordinate der Schnittkurve konstant ist und die weiteren Betrachtungen in der $xy$-Ebene durchgeführt werden können. In der $xy$-Ebene werden die äquibetragsoberflächen dann zu Kurven, deren Schnittpunkt gefunden werden muss. Die Beschreibung der Kurven liegt in Polarkoordinaten (Gleichung\,\ref{eq:rvonb}) vor. Da aber ein Sensor verschoben ist, würde diese in Polarkoordinaten sehr unhandlich werden und eine analytische Bestimmung des Schnittpunkts wurde daher verworfen. Die Berechnung wird daher in kartesischen Koordinaten durchgeführt. Um den Schnittpunkt zu finden wurde ein iteratives Verfahren erdacht.
+Es wird einmal die Herleitung am Beispiel eines Sensorpaares auf der $x$-Achse gezeigt werden. Diese kann für die anderen Koordinaten erweitert werden. Die Zylindersymetrie hat den Vorteil, dass die $x$-Koordinate der Schnittkurve konstant ist und die weiteren Betrachtungen in der $xy$-Ebene durchgeführt werden können. In der $xy$-Ebene werden die Äquibetragsoberflächen dann zu Kurven, deren Schnittpunkt gefunden werden muss. Die Beschreibung der Kurven liegt in Polarkoordinaten (Gleichung\,\ref{eq:rvonb}) vor. Da aber ein Sensor verschoben ist, würde die Kurve in Polarkoordinaten sehr unhandlich werden und eine analytische Bestimmung des Schnittpunkts wurde daher verworfen. Die Berechnung wird daher in kartesischen Koordinaten durchgeführt. Um den Schnittpunkt zu finden wurde ein iteratives Verfahren erdacht.
     
 Zunächst werden die Positionen des ersten $\vec{r}\tindex{s1}$ und zweiten Sensors $\vec{r}\tindex{s2}$ mit dem Abstand $d\tindex{sp}$ der Sensoren zueinander definiert
     \begin{equation}
@@ -708,7 +708,7 @@ In der ersten Iteration wird angenommen, dass die Quelle in $y$-Richtung liegt u
         \hat{x}\tindex{c} = \hat{\vec{r}}\tindex{c,1}(x).
     \end{equation} 
 
-    Ein Problem dieses Verfahrens ist, dass wenn die Spulenposition in der nähe der Symetrieachse liegt hier schon leichte Modellungenauigkeiten oder Signalstörungen ausreichen, damit kein Schnittpunkt gefunden werden kann.  In diesem Fall landen $\hat{\vec{r}}\tindex{c,1}^{\, i}$ und $\hat{\vec{r}}\tindex{c,2}^{\, i}$ auf der Symetrieachse. Der Algorithmus kann hier zu keinem Ergebnis kommen, mit einem genügend kleinen Fehler. Es wird abgebrochen und und der Mittelwert aus $\hat{\vec{r}}\tindex{c,1}^{\, i}$ und $\hat{\vec{r}}\tindex{c,2}^{\, i}$ als Ergebnis verwendet. Dies ist einmal in Abbildung \ref{fig:Exception} dargestellt.
+    Ein Problem dieses Verfahrens ist, dass wenn die Spulenposition in der nähe der Symetrieachse liegt hier schon leichte Modellungenauigkeiten oder Signalstörungen ausreichen, damit kein Schnittpunkt gefunden werden kann.  In diesem Fall landen $\hat{\vec{r}}\tindex{c,1}^{\, i}$ und $\hat{\vec{r}}\tindex{c,2}^{\, i}$ auf der Symmetrieachse. Der Fehler konvergiert hier nicht gegen 0, sondern wird zum Abstand der Kurven. Es wird abgebrochen und und der Mittelwert aus $\hat{\vec{r}}\tindex{c,1}^{\, i}$ und $\hat{\vec{r}}\tindex{c,2}^{\, i}$ als Ergebnis verwendet. Dies ist einmal in Abbildung \ref{fig:Exception} dargestellt.
     
     \begin{figure}
         \centering
@@ -726,7 +726,7 @@ In der ersten Iteration wird angenommen, dass die Quelle in $y$-Richtung liegt u
     \end{equation}
 
 	\subsubsection{Orientierungsschätzung}
-	Die Orientierung der 3D-Spule und jedes dreidimensionalen Objektes kann mit 3 Eulerwinkeln beschrieben werden. Bei Eulerwinkeln gibt es unterschiedliche Konventionenen, in welcher Reihenfolge und um welche Achsen die Rotationen durchgeführt werden. Hier wird die typische Roll-Nick-Gier-Winkelkonvention verwendet, diese wird besonders häufig in der Luftfahrt und im Automobilbau verwendet und ist nach Din 9300 DIN ISO 8855 genormt. Die Transformation sind drei Rotation mit intrinsicher Reihenfolge um die $z-y'-x''$-Achsen, wobei mit $\psi\tindex{Ori}$ um die $z$-Achse, mit $\theta\tindex{Ori}$ um die resultierende $y'$-Achse und mit $\phi\tindex{Ori}$ um die $x''$-Achse gedreht. Die komplette Rotation kann mit der resultierenden Rotationsmatrix $\bvec{R}\tindex{RPY}$ beschrieben werden
+	Die Orientierung der 3D-Spule und jedes dreidimensionalen Objektes kann mit 3 Eulerwinkeln beschrieben werden. Bei Eulerwinkeln gibt es unterschiedliche Konventionenen, in welcher Reihenfolge und um welche Achsen die Rotationen durchgeführt werden. Hier wird die typische Roll-Nick-Gier-Winkelkonvention verwendet. Sie wird besonders häufig in der Luftfahrt und im Automobilbau verwendet und ist nach Din 9300 DIN ISO 8855 genormt. Die Transformationen sind drei Rotation mit intrinsicher Reihenfolge um die $z-y'-x''$-Achsen, wobei mit $\psi\tindex{Ori}$ um die $z$-Achse, mit $\theta\tindex{Ori}$ um die resultierende $y'$-Achse und mit $\phi\tindex{Ori}$ um die $x''$-Achse gedreht. Die komplette Rotation kann mit der resultierenden Rotationsmatrix $\bvec{R}\tindex{RPY}$ beschrieben werden
     \begin{equation}
         \bvec{R}\tindex{RPY} = \bvec{R}_{z}(\psi\tindex{Ori}) \, \bvec{R}_{y}(\theta\tindex{Ori})\, \bvec{R}_{x}(\phi\tindex{Ori})= \begin{pmatrix}
             r\tindex{11} & r\tindex{12} & r\tindex{13}\\
@@ -746,7 +746,7 @@ In der ersten Iteration wird angenommen, dass die Quelle in $y$-Richtung liegt u
         r\tindex{32} &=& \cos(\theta\tindex{Ori})\,\sin(\phi\tindex{Ori}),\nonumber\\
         r\tindex{33} &=& \cos(\theta\tindex{Ori})\,\cos(\phi\tindex{Ori}).\nonumber
     \end{eqnarray}
-Die 3D-Spule spannt ein eigenes lokales Koordinatensystem auf, wobei die einzelnen Spulen die Koordinatenachsen definieren, dieses wird mit 3DC bezeichnet. Die im Kapitel\,\ref{sec:featureExtract} vorgestellten MVs $\vec{e}\tindex{max}^{\,\text{3DC}}$ sind die Repräsentation dieser Vektoren im Koordiantensystem der Spule, da auch die Ströme in diesem Koordinatensystem gemessen werden. $\bvec{R}\tindex{RPY}$ transformiert das globale Koordinatensystem in das lokale Koordinatensystem der 3D-Spule. $\bvec{R}\tindex{RPY}$ überführt demnach die MVs aus dem Weltkoordinatensystem $\vec{e}\tindex{max}^{\,\text{W}}$ in $\vec{e}\tindex{max}^{\,\text{3DC}}$ 
+Die 3D-Spule spannt ein eigenes lokales Koordinatensystem auf, wobei die einzelnen Spulen die Koordinatenachsen definieren. Es wird mit 3DC bezeichnet. Die im Kapitel\,\ref{sec:featureExtract} vorgestellten MVs $\vec{e}\tindex{max}^{\,\text{3DC}}$ sind die Repräsentation dieser Vektoren im Koordiantensystem der Spule, da auch die Ströme in diesem Koordinatensystem gemessen werden. $\bvec{R}\tindex{RPY}$ transformiert das globale Koordinatensystem in das lokale Koordinatensystem der 3D-Spule. $\bvec{R}\tindex{RPY}$ überführt demnach die MVs aus dem Weltkoordinatensystem $\vec{e}\tindex{max}^{\,\text{W}}$ in $\vec{e}\tindex{max}^{\,\text{3DC}}$ 
 \begin{equation}
     \vec{e}\tindex{max}^{\,\text{W}} = \bvec{R}\tindex{RPY} \, \vec{e}\tindex{max}^{\,\text{3DC}}.
     \label{eq:RotMaxvecs}
@@ -804,7 +804,7 @@ Dabei handelt es sich um $6\times 3$ Matrizen. Aus diesen kann die Pseudoinverse
     \label{eq:calcRotMat}
 \end{equation}
 
-An dieser Stelle könnten aus der Matrix die Winkel extrahiert werden, jedoch kann durch kleine Fehler im Modell oder Rauschen im Signal die Orthogonalität der Matrix verloren gehen. Dadurch können einzelne Einträge der Matrix größer werden als eins, und die Winkel unbestimmt sein. Die Orthogonalität von Rotationsmatrizen $\bvec{R}$ ist definiert durch 
+An dieser Stelle könnten aus der Matrix die Winkel extrahiert werden. Jedoch kann durch kleine Fehler im Modell oder Rauschen im Signal die Orthogonalität der Matrix verloren gehen. Dadurch können einzelne Einträge der Matrix größer werden als eins, und die Winkel unbestimmt sein. Die Orthogonalität von Rotationsmatrizen $\bvec{R}$ ist definiert durch 
 
 \begin{equation}
     \bvec{I} = \bvec{R}\,\bvec{R}^T. 
@@ -851,7 +851,7 @@ In diesem Kapitel wurden bisher zwei unterschiedliche Lokalisierungsalgorithmen 
 \begin{figure}[h]
     \centering
     \begin{overpic}[width=\textwidth]{04_umsetzung/images/Uebersicht_Lok.pdf}
-        \put(5,35){MV}
+        \put(5,35){\textcolor{MVCol}{$\vec{e}\tindex{max},g$}}
         \put(32,35){\parbox{.5in}{Positions-schätzung}}
         \put(37,42){$\bold{Z}$}
         \put(37,48){$\bold{Y}$}
@@ -874,7 +874,7 @@ Die Schätzung der kinematischen Kette liefert Orientierungen der kinematischen 
     \label{eq:UmrechnungLocGlob}
 \end{equation}
 
-Der Ausgang des Kombinationsmodul sind $\vec{e}\tindex{kin,$k$}^{\,\text{W}}$, repräsentiert als Einheitsvektoren, sowie die absolute Positon der Spule im Raum. 
+Der Ausgang des Kombinationsmoduls sind $\vec{e}\tindex{kin,$k$}^{\,\text{W}}$, repräsentiert als Einheitsvektoren, sowie die absolute Positon der Spule im Raum. 
 
 \section{Nachverarbeitung}
 Um die Schätzungen zu verbessern und die Algorithmen robuster gegen Störungen zu machen, wird eine Nachverarbeitung auf die Ergebnisse angewendet.
@@ -904,7 +904,7 @@ In realen Anwendungen wird mit unterschiedlichen Störungsquellen zu rechnen sei
     \phi\tindex{s,2} = \arccos\biggl(\frac{l\tindex{js}^2+\|\vec{r}\tindex{j}\|^2-\|\vec{r}\tindex{s}\|}{2\,l\tindex{js}\,\|\vec{r}\tindex{j}\|}\biggr).
     \label{eq:DistToAngle}
   \end{equation} 
-  Ein Problem dabei ist, dass zur Berechnung von $|\vec{r}\tindex{s}|$ der Winkel zwischen Sensororientierung und $\vec{r}\tindex{s}$ bekannt sein muss um Gleichung\,\ref{eq:DistToAngle} anzuwenden. Diesen könnte man aus der kinematischen Kette ableiten, jedoch wurde zunächst eine Simulation mit als bekannt angenommener Sensorposition durchgeführt. Auf Sensorseite wurde weißes Rauschen hinzugefügt, sodass sich am Sensor ein SNR von 10\,dB ergibt. Es wurde darin der Winkel $\phi\tindex{s,2}$ zum einen über den iterativen Algorithmus $\phi\tindex{s,2}^{\text{kin}}$ bestimmt und zum anderen über die Distanzzusammenhänge $\phi\tindex{s,2}^{\text{d}}$. 
+  Ein Problem dabei ist, dass zur Berechnung von $|\vec{r}\tindex{s}|$ der Winkel zwischen Sensororientierung und $\vec{r}\tindex{s}$ bekannt sein muss um Gleichung\,\ref{eq:DistToAngle} anzuwenden. Diesen könnte man aus der kinematischen Kette ableiten, jedoch wurde zunächst eine Simulation mit als bekannt angenommener Sensorposition durchgeführt. Auf Sensorseite wurde weißes Rauschen hinzugefügt, sodass sich am Sensor ein \textit{Signal-to-Noise-Ratio} SNR von 10\,dB ergibt. Es wurde darin der Winkel $\phi\tindex{s,2}$ zum einen über den iterativen Algorithmus $\phi\tindex{s,2}^{\text{kin}}$ bestimmt und zum anderen über die Distanzzusammenhänge $\phi\tindex{s,2}^{\text{d}}$. 
 
 \begin{figure}[h]
     \centering
@@ -914,7 +914,7 @@ In realen Anwendungen wird mit unterschiedlichen Störungsquellen zu rechnen sei
     \label{fig:DistToAngleCompare}
 \end{figure}
 
-In Abbildung \ref{fig:DistToAngleCompare} ist das Ergebnis der Simulation dargestellt. Dabei ist gut zu erkennen, dass der Winkel, der aus der Distanz bestimmt wird stärker variiert und vom wahren Wert abweicht. Da es außerdem zusätzlich größere Ausreißer nach unten gibt, wird für die Schätzung einer kinematischen Kette die Distanzinformation verworfen.
+In Abbildung \ref{fig:DistToAngleCompare} ist das Ergebnis der Simulation dargestellt. Dabei ist gut erkennbar, dass der Winkel, der aus der Distanz bestimmt wird stärker variiert und vom wahren Wert abweicht. Da es außerdem zusätzlich größere Ausreißer nach unten gibt, wird für die Schätzung einer kinematischen Kette die Distanzinformation verworfen.
 
 
 
@@ -923,9 +923,10 @@ In Abbildung \ref{fig:DistToAngleCompare} ist das Ergebnis der Simulation darges
 
 Die vorgestellte Schätzung einer kinematischen Kette liefert für jedes Element einen Vektor 
 \begin{equation}
-    \hat{\vec{e}}\tindex{kin,$k$} = \left[\begin{array}{c} \hat{x}\tindex{kin,$k$}\\ \hat{y}\tindex{kin,$k$} \\ \hat{z}\tindex{kin,$k$} \end{array}\right]   
+    \hat{\vec{e}}\tindex{kin,$k$} = \left[\begin{array}{c} \hat{x}\tindex{kin,$k$}\\ \hat{y}\tindex{kin,$k$} \\ \hat{z}\tindex{kin,$k$} \end{array}\right], 
 \end{equation}
-,der Länge 1, der die Richtung des jeweiligen Elements angibt. Die Vektoren werden in einer Komponentendarstellung dargestellt. Da die Eingangssignale gestört werden von verschiedenen Umgebungsfaktoren wie zum Beispiel der 50-Hz-Netzspannung und den zugehörigen Oberschwingungen. Dies führt in der Orientierungsschätzung, abhängig von den gewählten Frequenzen in der Signalgenerierung, zu Störungen. In \cite{hager-ross_quantifying_2000} wurde die Abhängigkeit der Fingerbewegung von den jeweils anderen Fingern untersucht und zu diesem Zweck wuden periodische Fingerbewegungen durchgeführt. Dabei wurde herausgefunden, dass die Teilnehmer der Studie intuitiv eine Frequenz von 2\,Hz auswählen, was Wohlfühlfrequenz genannt wird. Dies ist ein erster Startpunkt um die Grenzfrequenz festzulegen. Diese muss so gelegt werden, dass möglichst viele Störungen gefiltert werden, aber die Frequenzanteile in den die Bewegung stattfindet möglichst unverändert bleiben. Um diese höherfrequenten Anteile in der Bewegung zu filtern, wird ein Butterworth-Tiefpassfilter auf die Komponenten angewendet. Dafür wird ein Butterworth Tiefpassfilter fünfter Ordnung mit einer Grenzfrequenz von 8\,Hz verwendet. Der Ausgang der Filter ist die jeweilige vektorielle Komponente
+der Länge 1, der die Richtung des jeweiligen Elements angibt. 
+Da die Eingangssignale gestört werden von verschiedenen Umgebungsfaktoren wie zum Beispiel der 50-Hz-Netzspannung und den zugehörigen Oberschwingungen. Dies führt in der Orientierungsschätzung, abhängig von den gewählten Frequenzen in der Signalgenerierung, zu Störungen. In \cite{hager-ross_quantifying_2000} wurde die Abhängigkeit der Fingerbewegung von den jeweils anderen Fingern untersucht und zu diesem Zweck wuden periodische Fingerbewegungen durchgeführt. Dabei wurde herausgefunden, dass die Teilnehmer der Studie intuitiv eine Frequenz von 2\,Hz auswählen, was Wohlfühlfrequenz genannt wird. Dies ist ein erster Startpunkt, um die Grenzfrequenz festzulegen. Diese muss so gelegt werden, dass möglichst viele Störungen gefiltert werden, aber die Frequenzanteile, in denen die Bewegung stattfindet, aber möglichst unverändert bleiben. Um diese höherfrequenten Anteile in der Bewegung zu filtern, wird ein Butterworth-Tiefpassfilter auf die Komponenten angewendet. Dafür wird ein Butterworth Tiefpassfilter fünfter Ordnung mit einer Grenzfrequenz von 8\,Hz verwendet. Der Ausgang der Filter ist die jeweilige vektorielle Komponente
 
 \begin{equation}
     \hat{\vec{s}}\tindex{kin,$k$,filt} = \left[\begin{array}{c} \hat{x}\tindex{kin,$k$,filt}\\ \hat{y}\tindex{kin,$k$,filt} \\ \hat{z}\tindex{kin,$k$,filt} \end{array}\right].
@@ -951,7 +952,7 @@ Die vorgestellte Schätzung einer kinematischen Kette liefert für jedes Element
     \caption{Filter für die Nachverarbeitung: Die Abbildung zeigt den Frequenzgang eines Butterworth-Tiefpassfilter fünfter Ordnung mit einer Grenzfrequenz von 8\,Hz.}
     \label{fig:Filterpost}
 \end{figure}
-An dieser Stelle werden die vektoriellen Komponenten und nicht die Winkel gefiltert, da bei der Überschreitung der $xz$-Ebene der Winkel springt, also von $-180^\circ$ zu $+180^\circ$. Dieser Sprung würde durch einen Tiefpassfilter geglättet werden. Die vektoriellen Komponenten zeigen kein solches Verhalten, sondern haben einen kontinuierlichen Verlauf. Aus der vektoriellen Beschreibung werden nun die Winkel der Gelenke bestimmt, dabei wird jedes Gelenk als Sattelgelenk mit zwei Freiheitsgraden beschrieben. Die Bewegung wird aufgeteilt in ein Beugen und ein Spreizen, wobei diese von der jeweiligen Rotationsachse definiert werden. Die $z$-Achse sei immer als die Orientierung des vorherigen Elements definiert, die Ausrichtung der $y$-Achse wird konfiguriert, dabei wird die Ausrichtung in der Nulllage angegeben und die Bewegungen der vorigen Elemente eingerechnet. Die $x$-Achse ergibt sich durch das Kreuzprodukt $\vec{e}\tindex{$x,k$} = \vec{e}\tindex{$y,k$}\times \vec{e}\tindex{$z,k$}$. Dies ist näher beschrieben in Kapitel\,\ref{subsec:ModellingJoints}. 
+An dieser Stelle werden die vektoriellen Komponenten und nicht die Winkel gefiltert, da bei der Überschreitung der $xz$-Ebene der Winkel springt, also von $-180^\circ$ zu $+180^\circ$. Dieser Sprung würde durch einen Tiefpassfilter geglättet werden. Die vektoriellen Komponenten zeigen kein solches Verhalten, sondern haben einen kontinuierlichen Verlauf. Aus der vektoriellen Beschreibung werden nun die Winkel der Gelenke bestimmt, dabei wird jedes Gelenk als Sattelgelenk mit zwei Freiheitsgraden beschrieben. Die Bewegung wird aufgeteilt in ein Beugen und ein Spreizen, wobei diese von der jeweiligen Rotationsachse definiert werden. Die $z$-Achse sei immer als die Orientierung des vorherigen Elements definiert, die Ausrichtung der $y$-Achse wird konfiguriert. Dabei wird die Ausrichtung in der Nulllage angegeben und die Bewegungen der vorigen Elemente eingerechnet. Die $x$-Achse ergibt sich durch das Kreuzprodukt $\vec{e}\tindex{$x,k$} = \vec{e}\tindex{$y,k$}\times \vec{e}\tindex{$z,k$}$. Dies ist näher beschrieben in Kapitel\,\ref{subsec:ModellingJoints}. 
 
 Für die Winkelumrechnung wird zunächst die Orientierung in das Koordinatensystem des kinematischen Elements $\hat{\vec{e}}\tindex{kin,k,filt,Norm}^\text{\,Elem}$ transformiert
 
@@ -970,16 +971,16 @@ die Beugung $\theta\tindex{Beu}$ ist definiert als Rotation um die zuvor rotiert
     \theta\tindex{Beu,$k$} = \arccos\bigl(\hat{x}\tindex{kin,$k$,filt,norm}^{\,\text{Elem}}\bigr) + \frac{\pi}{2}.
 \end{equation}
 
-Die folgenden Elemente der kinematischen Kette drehen sich dabei mit, daher müssen die Rotationen auch auf die konfigurierten $y$-Achsen der weiteren Elemente angewendet werden.
+Die folgenden Elemente der kinematischen Kette drehen sich dabei mit. Daher müssen die Rotationen auch auf die konfigurierten $y$-Achsen der weiteren Elemente angewendet werden.
 
   
   
 \subsubsection{Einbeziehung der Anatomie}
-Die Anatomie der menschlichen Hand erlaubt nicht in allen Richtungen beliebige Bewegungen. Bewegungen die anatomisch nicht möglich sind sollen abgefangen und ausgefiltert werden. Als Basis dafür wird eine Veröffentlichungen \cite{lin_modeling_2000} über die Beschränkungen von Handbewegungen. Darin werden drei unterschiedliche Beschränkungen eingeführt, zum einen Einschränkungen einzelner Gelenke, Kopplung zwischen mehreren Gelenken, zum Beispiel führt eine Beugung des MCP Zeigefinger zu einer Beugung im MCP des Mittelfingers, oder die Bewegung der DIP-Gelenke ist abhängig von den vorherigen Gelenken aufgrund von gemeinsamen Bändern und Sehnen, und zuletzt Eigenarten der einzelnen Person. In dieser Arbeit wurde nur die Beschränkung einzelner Gelenke implementiert, also wenn die geschätzten Winkel außerhalb des möglichen Wertebereich liegen, werden diese auf den größten bzw. kleinsten Wert gesetzt. In \cite{lin_modeling_2000} werden dabei für die MCP-Gelenke für das Spreizen Grenzen bei $\pm 15^\circ$ und in der Flexion wird ein Wertebereich von $0^\circ-90^\circ$ angegeben. Die folgenden Gelenke haben jeweils nur einen Freiheitsgrad, sodass ein Spreizen dieser Gelenke immer auf 0 gesetzt wird. Die PIP-Gelenke haben einen Wertebereich in der Flexion von $0^\circ-110^\circ$. Die DIP-Gelenke haben einen Wertebereich von $0^\circ-90^\circ$. 
+Die Anatomie der menschlichen Hand erlaubt nicht in alle Richtungen beliebige Bewegungen. Bewegungen die anatomisch nicht möglich sind sollen abgefangen und ausgefiltert werden. Als Basis dafür wird eine Veröffentlichung \cite{lin_modeling_2000} über die Beschränkungen von Handbewegungen. Darin werden drei unterschiedliche Beschränkungen eingeführt. Die erste Einschränkung sind die Beschränkungen einzelner Gelenke, wie zum Beispiel die MCP Gelenke die nicht beliebig nach oben gebeugt werden können. Die zweite Einschränkung sind Kopplungen zwischen den Gelenken. Zum Beispiel führt eine Beugung des MCP des Zeigefingers zu einer Beugung des MCP des Mittelfingers. Die dritte Einschränkung sind Eigenarten des Probandens. In dieser Arbeit wurde nur die Beschränkung einzelner Gelenke implementiert, also wenn die geschätzten Winkel außerhalb des möglichen Wertebereich liegen, werden diese auf den größten bzw. kleinsten Wert gesetzt. In \cite{lin_modeling_2000} werden dabei für die MCP-Gelenke für das Spreizen Grenzen von $\pm 15^\circ$, in der Flexion wird ein Wertebereich von $0^\circ-90^\circ$ angegeben. Die folgenden Gelenke haben jeweils nur einen Freiheitsgrad, sodass ein Spreizen dieser Gelenke immer auf $0^\circ$ gesetzt wird. Die PIP-Gelenke haben einen Wertebereich in der Flexion von $0^\circ-110^\circ$. Die DIP-Gelenke haben einen Wertebereich von $0^\circ-90^\circ$. 
 
 
 \subsection{Absolut Lokalisierung}
-Die Nachverarbeitung der absolut Lokalisierung wurde einfach gehalten, es werden die Positionskomponenten mit einem Tiefpassfilter gefiltert.
+Die Nachverarbeitung der Absolutlokalisierung wurde einfach gehalten. Die Positionskomponenten werden mit einem Tiefpassfilter gefiltert.
 
 
 
@@ -988,7 +989,7 @@ Die Nachverarbeitung der absolut Lokalisierung wurde einfach gehalten, es werden
 \begin{equation}
     \hat{\vec{r}}\tindex{c} = \left[\begin{array}{c} \hat{x}\tindex{c}\\ \hat{y}\tindex{c} \\ \hat{z}\tindex{c} \end{array}\right]. 
 \end{equation}
-Die Ausgangsgrößen sind die gefilterten Werte $\hat{\vec{r}}\tindex{c,filt}$. Die geschätzten Eulerwinkel werden nicht gefiltert, da diese bereits in die Orientierungen der kinematischen Elemente eingerechnet wurden (Gleichung\,\ref{eq:UmrechnungLocGlob}) und daher bei der Filterung der Orientierungen gefiltert werden.
+Die Ausgangsgrößen sind die gefilterten Werte $\hat{\vec{r}}\tindex{c,filt}$. Die geschätzten Eulerwinkel werden nicht gefiltert, da diese bereits in die Orientierungen der kinematischen Elemente eingerechnet wurden (Gleichung\,\ref{eq:UmrechnungLocGlob}).
 
 \subsection{Übersicht Nachverarbeitung}
 Die Ausgänge der Nachverarbeitung sind die Gelenkswinkel sowie die gefilterte Position.  Das Echtzeitrahmenwerk nutzt diese dann für eine Visualisierung, die es ermöglicht nebeneinander die reale Bewegung und die Schätzung in Echtzeit miteinander zu vergleichen. Eine Übersicht der Nachverarbeitung ist in Abbildung\,\ref{fig:UebersichtPostproc} 
