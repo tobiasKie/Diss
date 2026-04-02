@@ -535,7 +535,10 @@ Die Position des Gelenksmittelpunkt wird zunächst auf die Oberfläche der kinem
     \label{fig:KorrDicke}
 \end{figure}
 
-Die Berechnung von $l\tindex{z}$ wird über einen Dreieckszusammenhang hergeleitet. In Abbildung \ref{fig:BestimmungZusatz} ist dieses Dreieck eingezeichnet. Es ergeben sich zwei Dreiecke, die an der mittleren Kante gespiegelt sind. Die Dicke des Elements $2\,d\tindex{e}$ muss vor der Laufzeit bestimmt werden. Die Ausrichtung des zweiten Elements $\vec{e}\tindex{kin,2}$ ist entweder aus der vorigen Iteration oder in der ersten Iteration zufällig angenommen, bekannt. Dabei muss zunächst berücksichtigt werden, in welche Richtung sich das Element bewegt. Eine Bewegung in $y$-Richtung würde in Abbildung\,\ref{fig:KorrDicke} zu keiner Veränderung führen. Es wird daher zunächst die Nullstellung betrachtet und notiert in welcher Richtung $\vec{e}\tindex{M${\rightarrow}$S}$ der Sensor vom Mittelpunkt des kinematischen Elements positioniert ist. Für die Bestimmung von $l\tindex{z}$ ist nur die Bewegung in der von $\vec{e}\tindex{M${\rightarrow}$S}$ und der Ausrichtung des vorigen Elements $\vec{e}\tindex{kin,1}$ aufgespannten Ebene von Interesse. Der Normalenvektor $\vec{e}\tindex{n,p}$ wird bestimmt
+Die Berechnung von $l\tindex{z}$ wird über einen Dreieckszusammenhang hergeleitet. In Abbildung \ref{fig:BestimmungZusatz} ist dieses Dreieck eingezeichnet. Es ergeben sich zwei Dreiecke, die an der mittleren Kante gespiegelt sind. Die Dicke des Elements $2\,d\tindex{e}$ muss vor der Laufzeit bestimmt werden. Die Ausrichtung des zweiten Elements $\vec{e}\tindex{kin,2}$ ist entweder aus der vorigen Iteration oder in der ersten Iteration zufällig angenommen, bekannt. Dabei muss zunächst berücksichtigt werden, in welche Richtung sich das Element bewegt. 
+Es wird zunächst die Nullstellung betrachtet und notiert in welcher Richtung $\vec{e}\tindex{M${\rightarrow}$S}$ der Sensor vom Mittelpunkt des kinematischen Elements positioniert ist. Eine Bewegung senkrecht zu $\vec{e}\tindex{M${\rightarrow}$S}$, in Abbildung\,\ref{fig:KorrDicke} in die Zeichenebene hinein oder heraus, führt zu keiner Veränderung der Längen.
+
+Für die Bestimmung von $l\tindex{z}$ ist nur die Bewegung in der von $\vec{e}\tindex{M${\rightarrow}$S}$ und der Ausrichtung des vorigen Elements $\vec{e}\tindex{kin,1}$ aufgespannten Ebene von Interesse. Der Normalenvektor $\vec{e}\tindex{n,p}$ wird bestimmt
 
 \begin{equation}
     \vec{e}\tindex{n,p} = \frac{\vec{e}\tindex{kin,1} \times \vec{e}\tindex{M${\rightarrow}$S}}{\|\vec{e}\tindex{kin,1} \times \vec{e}\tindex{M${\rightarrow}$S}\|},
@@ -567,7 +570,7 @@ Die Korrekturlänge wird auf die Gelenksposition angewendet, und diese wird zur 
 \end{equation}
 Die korrigierte Gelenksposition ist  
 \begin{equation}
-    \vec{r}\tindex{j,korr}  = \vec{r}\tindex{j} + \vec{e}\tindex{k2,p,a}\,l\tindex{z}.
+    \vec{r}\tindex{j,korr}  = \vec{r}\tindex{j} + \vec{e}\tindex{kin2,p,a}\,l\tindex{z}.
     \label{eq:korrJointpos}
 \end{equation}
 Die Sensorposition wird entlang $\vec{e}\tindex{kin,2}$ verschoben und Gleichung \ref{eq:formelIter1} korrigiert sich  
@@ -926,7 +929,7 @@ Die vorgestellte Schätzung einer kinematischen Kette liefert für jedes Element
     \hat{\vec{e}}\tindex{kin,$k$} = \left[\begin{array}{c} \hat{x}\tindex{kin,$k$}\\ \hat{y}\tindex{kin,$k$} \\ \hat{z}\tindex{kin,$k$} \end{array}\right], 
 \end{equation}
 der Länge 1, der die Richtung des jeweiligen Elements angibt. 
-Da die Eingangssignale gestört werden von verschiedenen Umgebungsfaktoren wie zum Beispiel der 50-Hz-Netzspannung und den zugehörigen Oberschwingungen. Dies führt in der Orientierungsschätzung, abhängig von den gewählten Frequenzen in der Signalgenerierung, zu Störungen. In \cite{hager-ross_quantifying_2000} wurde die Abhängigkeit der Fingerbewegung von den jeweils anderen Fingern untersucht und zu diesem Zweck wuden periodische Fingerbewegungen durchgeführt. Dabei wurde herausgefunden, dass die Teilnehmer der Studie intuitiv eine Frequenz von 2\,Hz auswählen, was Wohlfühlfrequenz genannt wird. Dies ist ein erster Startpunkt, um die Grenzfrequenz festzulegen. Diese muss so gelegt werden, dass möglichst viele Störungen gefiltert werden, aber die Frequenzanteile, in denen die Bewegung stattfindet, aber möglichst unverändert bleiben. Um diese höherfrequenten Anteile in der Bewegung zu filtern, wird ein Butterworth-Tiefpassfilter auf die Komponenten angewendet. Dafür wird ein Butterworth Tiefpassfilter fünfter Ordnung mit einer Grenzfrequenz von 8\,Hz verwendet. Der Ausgang der Filter ist die jeweilige vektorielle Komponente
+Da die Eingangssignale gestört werden von verschiedenen Umgebungsfaktoren wie zum Beispiel der 50-Hz-Netzspannung und den zugehörigen Oberschwingungen. Dies führt in der Orientierungs- schätzung, abhängig von den gewählten Frequenzen in der Signalgenerierung, zu Störungen. In \cite{hager-ross_quantifying_2000} wurde die Abhängigkeit der Fingerbewegung von den jeweils anderen Fingern untersucht und zu diesem Zweck wuden periodische Fingerbewegungen durchgeführt. Dabei wurde herausgefunden, dass die Teilnehmer der Studie intuitiv eine Frequenz von 2\,Hz auswählen, was Wohlfühlfrequenz genannt wird. Dies ist ein erster Startpunkt, um die Grenzfrequenz festzulegen. Diese muss so gelegt werden, dass möglichst viele Störungen gefiltert werden, aber die Frequenzanteile, in denen die Bewegung stattfindet, aber möglichst unverändert bleiben. Um diese höherfrequenten Anteile in der Bewegung zu filtern, wird ein Butterworth-Tiefpassfilter auf die Komponenten angewendet. Dafür wird ein Butterworth Tiefpassfilter fünfter Ordnung mit einer Grenzfrequenz von 8\,Hz verwendet. Der Ausgang der Filter ist die jeweilige vektorielle Komponente
 
 \begin{equation}
     \hat{\vec{s}}\tindex{kin,$k$,filt} = \left[\begin{array}{c} \hat{x}\tindex{kin,$k$,filt}\\ \hat{y}\tindex{kin,$k$,filt} \\ \hat{z}\tindex{kin,$k$,filt} \end{array}\right].
@@ -997,10 +1000,10 @@ Die Ausgänge der Nachverarbeitung sind die Gelenkswinkel sowie die gefilterte P
     \centering
     \begin{overpic}[width=\textwidth]{04_umsetzung/images/Uebersicht_Postprocessing.pdf}
         \put(40,69){\textbf{Nachverarbeitung}}
-        \put(100,37){\parbox{1.0in}{$\phi\tindex{Beu},\theta\tindex{Sp},\vec{r}\tindex{c,filt}$}}
-        \put(5,39){$\hat{\vec{e}}\tindex{kin}^{\,W},\hat{\vec{r}}\tindex{c}$}
+        \put(100,37){\parbox{1.0in}{$\hat{\phi}\tindex{Beu},\hat{\theta}\tindex{Sp},\\ \hat{\vec{r}}\tindex{c,filt}$}}
+        \put(5,38.5){$\hat{\vec{e}}\tindex{kin}^{\,W},\hat{\vec{r}}\tindex{c}$}
         \put(32,53){\parbox{1.0in}{Glättung und Winkelumrechnung}}
-        \put(77,57){$\phi\tindex{Sp},\theta\tindex{Beu}$}
+        \put(77,57){$\hat{\phi}\tindex{Sp},\hat{\theta}\tindex{Beu}$}
         \put(59,53){\parbox{.5in}{Bewegungs-einschränkung}}
         \put(29,24){\parbox{1.5in}{Glättung von Position und Orientierung}}
         \put(55,19){$\hat{\vec{r}}\tindex{c,filt}$}

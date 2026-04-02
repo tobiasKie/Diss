@@ -194,17 +194,6 @@
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{toc}{\contentsline {section}{\nonumberline Publikationen mit Eigenbeteiligung}{93}{section*.172}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\nonumberline Weitere Literatur}{93}{section*.174}\protected@file@percent }
-\@writefile{toc}{\def \@chapapp {\appendixname }}
-\@writefile{lof}{\def \@chapapp {\appendixname }}
-\@writefile{lot}{\def \@chapapp {\appendixname }}
-\@writefile{toc}{\contentsline {chapter}{\numberline {A}Weitere Messdaten}{I}{appendix.A}\protected@file@percent }
-\@writefile{lof}{\addvspace {10\p@ }}
-\@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {A.1}Tmp}{I}{section.A.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {B}Herleitung XXX}{III}{appendix.B}\protected@file@percent }
-\@writefile{lof}{\addvspace {10\p@ }}
-\@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {B.1}Tmp}{III}{section.B.1}\protected@file@percent }
 \@writefile{toc}{\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file }
 \@writefile{lof}{\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file }
 \@writefile{lot}{\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file }

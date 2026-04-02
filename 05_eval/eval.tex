@@ -218,14 +218,14 @@ Um die beiden Ergebnisse miteinander vergleichen zu können, müssen diese im gl
     \label{eq:CoordinateTrans}
 \end{equation}
 
-Die optische Orientierung der kinematischen Elemente wird mithilfe der Positionen $\vec{r}\tindex{$i,m$}$ der optischen Marker bestimmt, wobei $i$ die Nummer des Elements ist und $m$ die Nummer des jeweiligen Markers ist. Die Orientierungsschätzung $\hat{\vec{e}}_{\text{opt},i}$ des jeweiligen Elements ergibt sich wie folgt
+Die optische Orientierung der kinematischen Elemente wird mithilfe der Positionen $\vec{r}\tindex{$i,m$}$ der optischen Marker bestimmt, wobei $i$ die Nummer des Elements ist und $m$ die Nummer des jeweiligen Markers ist. Die Orientierungsschätzung $\hat{\vec{e}}_{\text{Opt},i}$ des jeweiligen Elements ergibt sich wie folgt
 \begin{equation}
     \hat{\vec{e}}_{\text{Opt},i}^\text{\,Opt} = \frac{(\vec{r}_{i,1} - \vec{r}_{i,2}) + (\vec{r}_{i,3} - \vec{r}_{i,4}) }{ \|(\vec{r}_{i,1} - \vec{r}_{i,2}) + (\vec{r}_{i,3} - \vec{r}_{i,4})\|  }.
 \end{equation}
 Durch Anwendung von $\bvec{R}\tindex{Opt$\rightarrow$Mag}$ wird diese in das magnetische Koordinatensystem transformiert
 
 \begin{equation}
-    \hat{\vec{e}}\tindex{opt,$i$}^\text{\,Mag} =  \bvec{R}\tindex{Opt$\rightarrow$ Mag}\,\hat{\vec{e}}_{\text{Opt},i}^\text{\,Opt},
+    \hat{\vec{e}}\tindex{Opt,$i$}^\text{\,Mag} =  \bvec{R}\tindex{Opt$\rightarrow$ Mag}\,\hat{\vec{e}}_{\text{Opt},i}^\text{\,Opt},
 \end{equation}
 und kann mit der magnetischen Schätzung verglichen werden.
 
@@ -252,7 +252,7 @@ Der Algorithmus für die Schätzung einer kinematischen Kette benötigt als Vorw
 
 Für die Kalibrierung wurden zunächst alle Größen händisch mit einem Lineal ausgemessen. Zwei Schwierigkeiten ergeben sich bei der Vermessung. Einerseits ist es schwierig von der Mitte der Quelle aus zu messen, andererseits besitzt das Sensorelement eine Ausdehnung von etwa 2\,cm. Hier ist es schwierig, an welcher Stelle die Position eines äquivalenten Punktsensors wäre, weshalb bis zur Mitte des Sensorelements gemessen wurde. Die gemessenen Initialwerte waren $\vec{r}\tindex{j} = (-0.02\,\text{m},0.00\,\text{m},0.29\,\text{m})$, $d\tindex{ke,1}=0.015\,\text{m}$, $l\tindex{js,1}=0.065\,\text{m}$, $d\tindex{ke,2}=0.015\,\text{m}$, $l\tindex{js,2}=0.065\,\text{m}$.
 
-Die statischen Messungen werden nun verwendet um die händische Kalibrierung zu verbessern. Begonnen wurde mit dem ersten Element. Dafür wurden $N=13$ Aufnahmen in unterschiedlichen Ausrichtungen verwendet. Für die optimale Kalibrierung gilt, dass die Differenz zwischen optischer Schätzung $\hat{\vec{e}}\tindex{opt,$i$}^{\,(j),\text{Mag}}$ und magnetischer Schätzung $\hat{\vec{e}}\tindex{mag,$i$}^{\,(j)\text{Mag}}$ möglichst klein wird. Als Differenz zwischen den jeweiligen Schätzungen wird der Winkel zwischen diesen verwendet. $j$ ist die Zählvariable über die Aufnahmen
+Die statischen Messungen werden nun verwendet um die händische Kalibrierung zu verbessern. Begonnen wurde mit dem ersten Element. Dafür wurden $N=13$ Aufnahmen in unterschiedlichen Ausrichtungen verwendet. Für die optimale Kalibrierung gilt, dass die Differenz zwischen optischer Schätzung $\hat{\vec{e}}\tindex{Opt,$i$}^{\,(j),\text{Mag}}$ und magnetischer Schätzung $\hat{\vec{e}}\tindex{mag,$i$}^{\,(j)\text{Mag}}$ möglichst klein wird. Als Differenz zwischen den jeweiligen Schätzungen wird der Winkel zwischen diesen verwendet. $j$ ist die Zählvariable über die Aufnahmen
 
 \begin{equation}
     e_{k} = \frac{1}{N} \sum_{j=1}^{N} \arccos \bigl(\hat{\vec{e}}\tindex{Opt,$k$}^{\,(j),\text{Mag}}\cdot\hat{\vec{e}}\tindex{Mag,$k$}^{\,(j),\text{Mag}}\bigr).
@@ -457,7 +457,7 @@ Die Orientierung der 3D-Spule $\bvec{R}\tindex{RPY}$ ist die Verdrehung des Spul
 In der Evaluierung werden diese magnetisch und optisch geschätzt, also die Koordinatenachsen der magnetischen und optischen Systeme. Als Maß wird der absolute Winkel verwendet, um den die beiden Koordinatensysteme zueinander verdreht sind. Dafür wird zunächst Die Rotationsmatrix $\bvec{R}\tindex{Eval}$ zwischen den beiden Koordinatensystemen bestimmt
 
 \begin{equation}
-    \bvec{R}\tindex{Eval} = \bvec{R}\tindex{RPY,mag} (\bvec{R}\tindex{RPY,opt})^{-1}.
+    \bvec{R}\tindex{Eval} = \bvec{R}\tindex{RPY,Mag} (\bvec{R}\tindex{RPY,Opt})^{-1}.
 \end{equation}
 Aus $\bvec{R}\tindex{Eval}$ wird ein äquivalentes Quaternion bestimmt, wobei hier nur die erste Komponente $w$ benötigt wird. Zunächst werden die drei Eulerwinkel $\theta\tindex{Eval},\phi\tindex{Eval},\psi\tindex{Eval}$ wie in den Gleichungen\,\ref{eq:ThetaOri},\,\ref{eq:PsiOri},\,\ref{eq:PhiOri} aus $\bvec{R}\tindex{Eval}$ bestimmt. Daraus ergeben sich drei Quaternionen $\bvec{q}\tindex{z},\bvec{q}\tindex{y},\bvec{q}\tindex{x}$, die jeweils eine Drehung beschreiben
 
@@ -494,7 +494,7 @@ Die drei einzelnen Quaternionen werden ausmultipliziert und man erhält
   \bvec{q}\tindex{Eval} = \bvec{q}\tindex{z} \circ \bvec{q}\tindex{y} \circ \bvec{q}\tindex{x}.
   \label{eq:QuatEval}
 \end{equation}
-Die Komponenten zwei bis vier von $\bvec{q}\tindex{Eval}$ werden verworfen, da die Richtung der Verdrehung nicht interessiert, und aus der ersten Komponente wird die effektive Verdrehung $\alpha\tindex{Eval}$ bestimmt
+Die Komponenten zwei bis vier von $\bvec{q}\tindex{Eval}$ werden verworfen, da die Richtung des Fehlers nicht interessiert, und aus der ersten Komponente wird die effektive Verdrehung $\alpha\tindex{Eval}$ bestimmt
 \begin{equation}
   \alpha\tindex{Eval} = 2\,\arccos(q\tindex{Eval,w}).
   \label{eq:EffVerd}
@@ -596,16 +596,16 @@ Für die Experimentelle Synchronisierung wurden statische und dynamische Messung
   \caption{Aufbau für die Evaluierung der Lokalisierung: An dem Würfel sind PVC-Streben mit jeweils zwei Sensoren und zwei optischen Markern für $x$ (rot),$y$ (grün) und $z$ (blau). Die Sensoren sind mit helleren Rechtecken gekennzeichnet.}
   \label{fig:SpatialSyncAbslocal}
 \end{figure}
-Für die Evaluierung wird diesselbe 3D-Spule verwendet, die in Abbildung\,\ref{fig:Demonstrator} dargestellt ist. Die Koordinatenachsen im Lokalisierungsaufbaus sind durch die Ausrichtung der Achsen der Sensorpaare definiert. Das Setup ist in Abbildung\,\ref{fig:SpatialSyncAbslocal} dargestellt. Die Sensoren sind an PVC-Streben befestigt, die mit der Sensorachse ausgerichtet sind (Rot = $x$,Grün = $y$,Blau = $z$). Durch die Art der Befestigung wird sichergestellt, dass die Sensorpaare auf einer Geraden liegen. Die zusammengehörenden Sensoren sind 0.5\,m voneinander entfernt. An den Streben sind ebenfalls an jeder Strebe zwei optische Marker (Rot = $x$,Grün = $y$,Blau = $z$, mit leicht erhöhter Farbhelligkeit), mit denen die magnetischen Koordinatenachsen im optischen System $\vec{e}\tindex{x,mag}^\text{\,opt},\vec{e}\tindex{y,mag}^\text{\,opt},\vec{e}\tindex{z,mag}^\text{\,opt}$ bestimmt werden können. Dafür wird die Position der Marker $\vec{r}\tindex{x,1m},\vec{r}\tindex{x,2m},\vec{r}\tindex{y,1m},\vec{r}\tindex{y,2m},\vec{r}\tindex{z,1m},\vec{r}\tindex{z,2m}$ bestimmt und die Koordinatenachsen berechnet
+Für die Evaluierung wird diesselbe 3D-Spule verwendet, die in Abbildung\,\ref{fig:Demonstrator} dargestellt ist. Die Koordinatenachsen im Lokalisierungsaufbaus sind durch die Ausrichtung der Achsen der Sensorpaare definiert. Das Setup ist in Abbildung\,\ref{fig:SpatialSyncAbslocal} dargestellt. Die Sensoren sind an PVC-Streben befestigt, die mit der Sensorachse ausgerichtet sind (Rot = $x$,Grün = $y$,Blau = $z$). Durch die Art der Befestigung wird sichergestellt, dass die Sensorpaare auf einer Geraden liegen. Die zusammengehörenden Sensoren sind 0.5\,m voneinander entfernt. An den Streben sind ebenfalls an jeder Strebe zwei optische Marker (Rot = $x$,Grün = $y$,Blau = $z$, mit leicht erhöhter Farbhelligkeit), mit denen die magnetischen Koordinatenachsen im optischen System $\vec{e}\tindex{x,Mag}^\text{\,opt},\vec{e}\tindex{y,Mag}^\text{\,Opt},\vec{e}\tindex{z,Mag}^\text{\,Opt}$ bestimmt werden können. Dafür wird die Position der Marker $\vec{r}\tindex{x,1m},\vec{r}\tindex{x,2m},\vec{r}\tindex{y,1m},\vec{r}\tindex{y,2m},\vec{r}\tindex{z,1m},\vec{r}\tindex{z,2m}$ bestimmt und die Koordinatenachsen berechnet
 
 \begin{equation}
-  \vec{e}\tindex{x,mag}^\text{\,opt} = \frac{\vec{r}\tindex{x,2m}-\vec{r}\tindex{x,1m}}{\|\vec{r}\tindex{x,2m}-\vec{r}\tindex{x,1m}\|},
+  \vec{e}\tindex{x,Mag}^\text{\,Opt} = \frac{\vec{r}\tindex{x,2m}-\vec{r}\tindex{x,1m}}{\|\vec{r}\tindex{x,2m}-\vec{r}\tindex{x,1m}\|},
 \end{equation}
 \begin{equation}
-  \vec{e}\tindex{y,mag}^\text{\,opt} = \frac{\vec{r}\tindex{y,2m}-\vec{r}\tindex{y,1m}}{\|\vec{r}\tindex{y,2m}-\vec{r}\tindex{y,1m}\|},
+  \vec{e}\tindex{y,Mag}^\text{\,Opt} = \frac{\vec{r}\tindex{y,2m}-\vec{r}\tindex{y,1m}}{\|\vec{r}\tindex{y,2m}-\vec{r}\tindex{y,1m}\|},
 \end{equation}
 \begin{equation}
-  \vec{e}\tindex{z,mag}^\text{\,opt} = \frac{\vec{r}\tindex{z,2m}-\vec{r}\tindex{z,1m}}{\|\vec{r}\tindex{z,2m}-\vec{r}\tindex{z,1m}\|}.
+  \vec{e}\tindex{z,Mag}^\text{\,Opt} = \frac{\vec{r}\tindex{z,2m}-\vec{r}\tindex{z,1m}}{\|\vec{r}\tindex{z,2m}-\vec{r}\tindex{z,1m}\|}.
 \end{equation}
 
 
@@ -617,7 +617,7 @@ Es wurde mit einer statischen Evaluierung begonnen. Alle Aufnahmen hatten eine L
   \centering
   \begin{tabular}{|c| c| c| c| c| c| c|}
   \hline 
-   \rowcolor{gray}$\hat{x}\tindex{opt}$ & $\hat{x}\tindex{mag}$ & $\hat{y}\tindex{opt}$ & $\hat{y}\tindex{mag}$ & $\hat{z}\tindex{opt}$ & $\hat{z}\tindex{mag}$ & Fehler \\ 
+   \rowcolor{gray}$\hat{x}\tindex{Opt}$ & $\hat{x}\tindex{Mag}$ & $\hat{y}\tindex{Opt}$ & $\hat{y}\tindex{Mag}$ & $\hat{z}\tindex{Opt}$ & $\hat{z}\tindex{Mag}$ & Fehler \\ 
    \hline
    -70.6 & -70.5 & -58.8  & -47.4 & 37.1& 29.6  & 13.6 \\ 
    \hline
@@ -652,7 +652,7 @@ Es wurde mit einer statischen Evaluierung begonnen. Alle Aufnahmen hatten eine L
   \centering
   \begin{tabular}{|c| c| c| c| c| c| c|}
   \hline 
-  \rowcolor{gray}$\hat{\phi}\tindex{opt}$ & $\hat{\phi}\tindex{mag}$ & $\hat{\theta}\tindex{opt}$ & $\hat{\theta}\tindex{mag}$ & $\hat{\psi}\tindex{opt}$ & $\hat{\psi}\tindex{mag}$ & Fehler \\ 
+  \rowcolor{gray}$\hat{\phi}\tindex{Opt}$ & $\hat{\phi}\tindex{Mag}$ & $\hat{\theta}\tindex{Opt}$ & $\hat{\theta}\tindex{Mag}$ & $\hat{\psi}\tindex{Opt}$ & $\hat{\psi}\tindex{Mag}$ & Fehler \\ 
   \hline
   $84.4^\circ$ & $99.6^\circ$ & $87.5^\circ$  & $85.8^\circ$ & $82.6^\circ$ & $106.2^\circ$ & $8.6^\circ$ \\ 
   \hline
