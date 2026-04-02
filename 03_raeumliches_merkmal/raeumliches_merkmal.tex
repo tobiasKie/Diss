@@ -139,12 +139,12 @@ Daraus ergeben sich die folgenden Ausdrücke für die Magnetfeldkomponenten
 \end{equation}
 Durch eine Betragsbildung erhält man den Magnetfeldbetrag $b_{Dip}$
 \begin{equation}
-    b\tindex{Dip}(r,\phi) = \frac{\mu}{4\pi r^3} \sqrt{1+3\cos^2(\phi)}.
+    b\tindex{Dip}(r,\phi) = \frac{\mu\,m}{4\pi r^3} \sqrt{1+3\cos^2(\phi)}.
     \label{eq:BetragErgebnis}
 \end{equation}
 Der Magnetfeldbetrag ist abhängig vom Abstand $r$ und vom Winkel $\phi$. In der Herleitung ist $\phi$ der Winkel zwischen $\vec{r}$ und der $x$-Achse, kann aber verallgemeinert werden, zum Winkel zwischen $\vec{r}$ und $\vec{m}$. Der Betrag wird nun nach dem Abstand umgestellt
 \begin{equation}
-    r(b\tindex{Dip},\phi) = \sqrt[3]{\frac{\mu}{4\pi b\tindex{Dip}}\sqrt{1+3\cos^2(\phi)}}.
+    r(b\tindex{Dip},\phi) = \sqrt[3]{\frac{\mu\,m}{4\pi b\tindex{Dip}}\sqrt{1+3\cos^2(\phi)}}.
     \label{eq:rvonb}
 \end{equation}
 \begin{figure}[!htb] 
@@ -214,12 +214,12 @@ In diesem Kapitel werden Zusammenhänge zwischen magnetischen Aktuatoren und mag
 
 \section{Maximalvektor}
 \label{sec:maximum_vector}
-Der Maximalvektor ist ein Signalmerkmal, das verwendet werden kann, wenn 3D-Aktuatoren und 1D-Sensoren eingesetzt werden. Dabei sei angenommen, dass der Aktuator im Ursprung und der Sensor am Ort $\vec{r}$ mit der Sensorachse $\vec{e}\tindex{s}$ lokalisiert ist. Der Maximalvektor beschreibt die Polarisierungsrichtung des magnetischen Dipols in welcher das Sensorausgangssignal maximal wird. Der Maximalvektor wurde bereits in einer Publikation \cite{schmidt_new_2024} teilweise vorgestellt.
+Der Maximalvektor (MV) ist ein Signalmerkmal, das verwendet werden kann, wenn 3D-Aktuatoren und 1D-Sensoren eingesetzt werden. Dabei sei angenommen, dass der Aktuator im Ursprung und der Sensor am Ort $\vec{r}$ mit der Sensorachse $\vec{e}\tindex{s}$ lokalisiert ist. Der MV beschreibt die Polarisierungsrichtung des magnetischen Dipols in welcher das Sensorausgangssignal maximal wird. Der MV wurde bereits in einer Publikation \cite{schmidt_new_2024} teilweise vorgestellt.
 
 \subsection{Lokalisierungszusammenhänge}
 \label{subsec:Lokalisierungszusammenhänge}
     \subsubsection{Orientierung und normierte Position}
-Im Folgenden soll der Zusammenhang zwischen dem Maximalvektor (MV) $\vec{e}\tindex{max}$, dem normierten Positionsvektor $\vec{e}\tindex{$r$}$ und der Sensororientierung $\vec{e}\tindex{s}$ hergeleitet werden. 
+Im Folgenden soll der Zusammenhang zwischen dem MV  $\vec{e}\tindex{max}$, dem normierten Positionsvektor $\vec{e}\tindex{$r$}$ und der Sensororientierung $\vec{e}\tindex{s}$ hergeleitet werden. 
 
 Da ein Zusammenhang zwischen den einzelnen normierten Vektoren gesucht wird, wird eine normierte Beschreibung des  Dipolfeldes $\vec{b}\tindex{norm}$ genutzt
 \begin{equation}
@@ -397,7 +397,7 @@ Daraus ergibt sich, dass mit dem MV für jede relative Position eine Sensororien
     \end{figure} 
 
 \subsubsection{Distanz zwischen Sensor und Quelle}
-Mit einem Setup aus einer 3D-Spule und einem 1D-Sensor lassen sich drei Informationen über die Lage zueinander übertragen. Der MV ist ein Einheitsvektor und enthält daher zwei Informationen und beschreibt den Zusammenhang zwischen $\vec{e}\tindex{$r$}$ und $\vec{e}\tindex{s}$. Als dritte Information definieren wir die Länge $g$ des Maximalvektors. $g$ soll ein Maß für die Distanz zwischen Sensor und Quelle sein, ähnlich wie in Gleichung\,\ref{eq:rvonb}. Dort wurde gezeigt, wie sich der Magnetfeldbetrag in Bezug auf die Distanz und die Richtungsabhängigkeit zwischen Sensor und Spule verhält.
+Mit einem Setup aus einer 3D-Spule und einem 1D-Sensor lassen sich drei Informationen über die Lage zueinander übertragen. Der MV ist ein Einheitsvektor und enthält daher zwei Informationen und beschreibt den Zusammenhang zwischen $\vec{e}\tindex{$r$}$ und $\vec{e}\tindex{s}$. Als dritte Information definieren wir die Länge $g$ des MV. $g$ soll ein Maß für die Distanz zwischen Sensor und Quelle sein, ähnlich wie in Gleichung\,\ref{eq:rvonb}. Dort wurde gezeigt, wie sich der Magnetfeldbetrag in Bezug auf die Distanz und die Richtungsabhängigkeit zwischen Sensor und Spule verhält.
         
 Im Folgenden wird gezeigt, dass sich der Betrag des Magnetfeldes bei einem Setup aus 3D-Spule und 1D-Sensor genau wie bei einer 1D-Spule und einem 3D-Sensor verhält. Da bereits im vorigen Kapitel gezeigt wurde, dass die orthogonale Komponente keinen Beitrag zum Sensorsignal liefert, wird die Herleitung im zweidimensionalen durchgeführt, ohne die Allgemeingültigkeit einzuschränken. Aus der 3D-Spule wird für die Herleitung daher eine 2D-Spule. Dafür wird die Position der 2D-Spule $\vec{r}\tindex{c}$, die Ausrichtung des Sensors $\vec{e}\tindex{s}$, und die Ausrichtung der $x$- und $y$-Spule $\vec{m}\tindex{x}$, $\vec{m}\tindex{y}$ definiert:
 
@@ -411,26 +411,26 @@ Im Folgenden wird gezeigt, dass sich der Betrag des Magnetfeldes bei einem Setup
 Der Sensor sei im Ursprung des Koordinatensystems lokalisiert. Das Feld der beiden Spulen am Sensor ergibt sich wie folgt:
 
 \begin{equation}
-    b\tindex{Dip,x} = \frac{m}{4 \pi r^3} \bigl(3 \cos(\phi) (\cos(\phi\tindex{c})\cos(\phi) + \sin(\phi) \sin(\phi\tindex{c})) -\cos(\phi\tindex{c})\bigr),
+    b\tindex{Dip,x} = \frac{\mu\,m}{4 \pi r^3} \bigl(3 \cos(\phi) (\cos(\phi\tindex{c})\cos(\phi) + \sin(\phi) \sin(\phi\tindex{c})) -\cos(\phi\tindex{c})\bigr),
     \label{eq:B_XX}
 \end{equation}
 \begin{equation}
-    b\tindex{Dip,y} = \frac{m}{4 \pi r^3} \bigl(3 \cos(\phi) (-\sin(\phi\tindex{c})\cos(\phi) + \sin(\phi) \cos(\phi\tindex{c})) +\sin(\phi\tindex{c})\bigr).
+    b\tindex{Dip,y} = \frac{\mu\,m}{4 \pi r^3} \bigl(3 \cos(\phi) (-\sin(\phi\tindex{c})\cos(\phi) + \sin(\phi) \cos(\phi\tindex{c})) +\sin(\phi\tindex{c})\bigr).
     \label{eq:B_YX}
 \end{equation}
 Es muss nun gezeigt werden, dass eine Betragsbildung der Komponenten zum selben Ergebnis wie Gleichung \ref{eq:BetragErgebnis} kommt. Dafür wird mit den beiden Komponenten eine Betragsbildung vorgenommen
 
 \begin{equation}
-    b\tindex{Dip} = \sqrt{b\tindex{Dip,x}^2 + b\tindex{Dip,y}^2} =\frac{m}{4 \pi r^3} \sqrt{1+3 \cos^2(\phi)}.
+    b\tindex{Dip} = \sqrt{b\tindex{Dip,x}^2 + b\tindex{Dip,y}^2} =\frac{\mu\,m}{4 \pi r^3} \sqrt{1+3 \cos^2(\phi)}.
     \label{eq:BBetrag1DSen}
 \end{equation}
 Das Ergebnis führt zum gleichen Ergebnis wie Gleichung \ref{eq:BetragErgebnis}. Der Betrag ist hier wieder abhängig vom Abstand zwischen Spule und Sensor, sowie vom Winkel $\phi$. $\phi$ beschreibt den Polarwinkel der Spulenposition. Verallgemeinert ist dieser Winkel, der Winkel zwischen der Sensorachse und dem Positionsvektor von Sensor zu Spule. Aufgrund der Zylindersymetrie können wieder Äquibetragsflächen definiert werden. Dem Merkmal $g$ wird eine direkte Distanzabhängigkeit zugeordnet, daher wird $b$ mit $m$ normiert
 \begin{equation}
-    g = b\tindex{Dip} \, \frac{4 \pi}{m}.
+    g = b\tindex{Dip} \, \frac{4 \pi}{\mu\,m}.
     \label{eq:defG}
 \end{equation}
 
 \section{Zusammenfassung und Ausblick}
 \label{sec:Summary_Kap3}
-In diesem Kapitel wurden die benötigten Grundlagen der Beschreibung von magnetischen Feldern eingeführt. Im Anschluss wurde der Maximalvektor eingeführt. Dieser hat zum einen, einen vektoriellen Teil mit dem der Zusammenhang zwischen relativer Position und der Orientierung der Sensoren beschrieben wird. Zum anderen wurde die Länge dieses Vektors definiert, die einen direkten Bezug zum Abstand zwischen Sensor und 3D-Spule hat. Mit den vorgestellten Merkmalen lassen sich mögliche Positionen und Orientierungen und ein Zusammenhang zwischen beidem beschreiben. Generell hat die Position und Orientierung eines 1D-Sensors fünf Freiheitsgrade, durch den Zusammenhang zwischen Position und Orientierung wird die Anzahl auf zwei reduziert. Dies wird bei der weiteren Entwicklung von Lokalisierungsalgorithmen angewendet.
+In diesem Kapitel wurden die benötigten Grundlagen der Beschreibung von magnetischen Feldern eingeführt. Im Anschluss wurde der MV eingeführt. Dieser hat zum einen, einen vektoriellen Teil mit dem der Zusammenhang zwischen relativer Position und der Orientierung der Sensoren beschrieben wird. Zum anderen wurde die Länge dieses Vektors definiert, die einen direkten Bezug zum Abstand zwischen Sensor und 3D-Spule hat. Mit den vorgestellten Merkmalen lassen sich mögliche Positionen und Orientierungen und ein Zusammenhang zwischen beidem beschreiben. Generell hat die Position und Orientierung eines 1D-Sensors fünf Freiheitsgrade, durch den Zusammenhang zwischen Position und Orientierung wird die Anzahl auf zwei reduziert. Dies wird bei der weiteren Entwicklung von Lokalisierungsalgorithmen angewendet.
  

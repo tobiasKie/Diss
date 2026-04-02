@@ -7,7 +7,7 @@ Zum Abschluss dieser Arbeit werden die Ergebnisse eingeordnet, mit vergleichbare
 \subsection{Relative Lokalisierung}
 Für kommerzielle Angebote gibt es in diesem Bereich kein einheitliches Qualitätsmerkmal. Die Hersteller geben bei ihren Produkten keine Genauigkeit der Handschuhe an. In diesem Bereich gibt es noch keine genormte Genauigkeitsmessung. Andere Forschungsgruppen haben ihre Prototypen ebenfalls mit einem Kamerasystem verglichen. Es werden zwei Ansätze die ebenfalls die Haltung mit Winkeln beschreiben.
 
-In \cite{lin_design_2024} wurde ein Sensorhandschuh mit Stretchsensoren aufgebaut und evaluiert. Die Fingerbeugung führt zu einem Stretchen des Sensorelements und zu einer abhängigen Ausgangsspannung. In der Evaluation wurde die Beugung eines Fingers untersucht und im Vergleich mit einem Kamerasystem eine Genauigkeit von $2^\circ$ erreicht. Dabei ist zu beachten, dass ein Spreizen des MCP nicht berücksichtigt wird.
+In \cite{lin_design_2024} wurde ein Sensorhandschuh mit Stretchsensoren aufgebaut und evaluiert. Die Fingerbeugung führt zu einem dehnen des Sensorelements und zu einer abhängigen Ausgangsspannung. In der Evaluation wurde die Beugung eines Fingers untersucht und im Vergleich mit einem Kamerasystem eine Genauigkeit von $2^\circ$ erreicht. Dabei ist zu beachten, dass ein Spreizen des MCP nicht berücksichtigt wird.
 
 Ein magnetischer Ansatz ist in \cite{parizi_auraring_2020} vorgestellt. Darin wird auf dem Handgelenk eine Platine mit Sensoren platziert. Auf dem ersten Element des Fingers befindet sich ein Ring, im Inneren ist eine Spule aufgewickelt. Die Spule wird als magnetische Quelle verwendet. In einem Vergleich mit einem optischen System wurde eine Abweichung von im Mittel $4.6^\circ$ ermittelt.
 
@@ -23,7 +23,7 @@ In dieser Arbeit wurde eine Positionsgenauigkeit zwischen 15.2\,mm und 17.5\,mm 
 
 
 \section{Neuheiten}
-   Es wird zurück geschaut und betrachtet, welche Teile neu sind und welche sich für andere Problemstellungen adaptieren lassen. 
+   Es wird zurückgeschaut und betrachtet, welche Teile neu sind und welche sich für andere Problemstellungen adaptieren lassen. 
    
    \subsection{Verallgemeinerung der Merkmalsextraktion}
 
@@ -43,7 +43,7 @@ In dieser Arbeit wurde eine Positionsgenauigkeit zwischen 15.2\,mm und 17.5\,mm 
       \label{eq:SensorSigDependent}
    \end{equation}
 
-   Die Spulen werden so angesteuert wie in Kapitel\,\ref{sec:featureExtract} gezeigt, wobei $\theta = \omega\tindex{$\theta$}\, t$ und $\phi = \omega\tindex{$\phi$}\,t$
+   Die Spulen werden so angesteuert wie in Kapitel\,\ref{sec:featureExtract} gezeigt, wobei $\theta = \omega\tindex{$\theta$}\,t$ und $\phi = \omega\tindex{$\phi$}\,t$
 
    \begin{equation}
       \bvec{i}(t) = i_0 \left[\begin{array}{c} \cos(\omega_\phi t) \sin(\omega_\theta t)\\ \sin(\omega_\phi t)\sin(\omega_\theta t)\\ \cos(\omega_\theta t) \end{array}\right] = i_0 \left[\begin{array}{c} \cos(\phi) \sin(\theta)\\ \sin(\phi)\sin(\theta )\\ \cos(\theta ) \end{array}\right].
@@ -148,7 +148,7 @@ In dieser Arbeit wurde eine Positionsgenauigkeit zwischen 15.2\,mm und 17.5\,mm 
          \end{pmatrix},
    \end{equation}
 
-   die $j$-te Vektorkomponente $x\tindex{$j$,MV}$ des Maximalvektor lassen sich dann wie folgt bestimmen, wobei $\vec{e}\tindex{$j$}$ der Einheitsvektor in der entsprechenden Richtung ist
+   die $j$-te Vektorkomponente $x\tindex{$j$,MV}$ des MV lassen sich dann wie folgt bestimmen, wobei $\vec{e}\tindex{$j$}$ der Einheitsvektor in der entsprechenden Richtung ist
 
    \begin{equation}
       x\tindex{$j$,MV} = \text{det}\begin{pmatrix}
